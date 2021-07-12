@@ -6,15 +6,15 @@
           v-for="card in cards"
           :key="card.title"
           v-hover
+          class="column"
           cols="12"
           md="3"
-          sm="8"
+          sm="12"
           ><v-hover v-slot="{ hover }">
             <v-card
               :elevation="hover ? 12 : 2"
               shaped
               class="pa-md-4 mx-lg-auto"
-              width="250px"
             >
               <nuxt-link class="category" exact :to="card.link">
                 <v-row no-gutters>
@@ -83,7 +83,7 @@ export default {
 .category {
   text-decoration: none;
   color: black;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
 }
 </style>

@@ -27,13 +27,14 @@
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
-              <h3
-                class="text-h4 text-center font-weight-black black--text pt-2"
+              <h4
+                class="text-uppercase text-center mt-10 mb-3 pt-10 pl-5 pr-5"
+                style="letter-spacing: 0.15em"
                 v-text="plan.name"
-              ></h3>
+              ></h4>
               <img :src="plan.mainImg" width="250" />
               <v-card-text
-                class="text-center subtitle-1 black--text py-2"
+                class="subtitle-1 black--text py-2"
                 v-text="plan.intro"
               ></v-card-text>
               <v-list>
