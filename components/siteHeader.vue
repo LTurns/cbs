@@ -34,14 +34,6 @@
           {{ name.title }}
         </v-tab>
       </v-tabs>
-      <v-btn icon href="https://github.com/staticdesigner/modevue">
-        <v-icon>mdi-github</v-icon>
-      </v-btn>
-      <v-btn icon @click="changeThemeColor">
-        <v-icon>{{
-          $vuetify.theme.dark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
-        }}</v-icon>
-      </v-btn>
     </v-app-bar>
   </div>
 </template>
@@ -59,23 +51,23 @@ export default {
           to: '/',
         },
         {
+          icon: 'mdi-tools',
+          title: 'Products',
+          to: '/products',
+        },
+        {
           icon: 'mdi-account',
           title: 'About',
           to: '/about',
         },
         {
-          icon: 'mdi-tools',
-          title: 'Services',
-          to: '/services',
-        },
-        {
           icon: 'mdi-cash-usd',
-          title: 'Pricing',
+          title: 'Where To Buy',
           to: '/pricing',
         },
         {
           icon: 'mdi-folder-image',
-          title: 'Gallery',
+          title: 'Download Catalogue',
           to: '/gallery',
         },
         {
@@ -92,13 +84,13 @@ export default {
     }
   },
   methods: {
-    changeThemeColor() {
-      if (this.$vuetify.theme.dark === true) {
-        this.$vuetify.theme.dark = false
-      } else {
-        this.$vuetify.theme.dark = true
-      }
-    },
+    // changeThemeColor() {
+    //   if (this.$vuetify.theme.dark === true) {
+    //     this.$vuetify.theme.dark = false
+    //   } else {
+    //     this.$vuetify.theme.dark = true
+    //   }
+    // },
   },
 }
 </script>

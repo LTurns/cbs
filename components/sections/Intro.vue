@@ -1,41 +1,39 @@
 <template>
-  <section id="intro" class="py-16">
+  <section id="intro" class="py-10">
     <v-container>
-      <v-responsive class="max-auto mx-auto text-center" max-width="600">
-        <v-avatar color="primary" size="70" class="mb-8">
-          <v-icon x-large dark>mdi-web</v-icon>
-        </v-avatar>
-        <h2 class="text-h4 text-md-h3 text-center font-weight-black mb-7">
-          The Perfect Theme for Beginners or Professionals
-        </h2>
-        <p class="text-center">
-          Lorem ipsum amore amatum amatus dolor sit amet, consectetur adipiscing
-          elit. Aenean eu ornare ante. Proin aliquam odio id lorem finibus, a
-          ullamcorper arcu posuere. Pellentesque nec neque ac lorem malesuada.
-        </p>
-      </v-responsive>
-      <v-row class="pt-12">
-        <v-col v-for="card in cards" :key="card.title" cols="12" md="4">
-          <v-row no-gutters>
-            <v-col :cols="card.callout ? 9 : 12">
-              <div class="pr-2">
-                <div class="text--disabled" v-text="card.subtitle"></div>
-                <h4
-                  class="text-uppercase mt-1 mb-4"
-                  style="letter-spacing: 0.15em"
-                  v-text="card.title"
-                ></h4>
-                <p v-text="card.text"></p>
-              </div>
-            </v-col>
-            <v-col v-if="card.callout" cols="2">
-              <span
-                class="text-h3 grey--text font-weight-bold pr-8"
-                style="opacity: 0.1"
-                >{{ card.callout }}</span
-              >
-            </v-col>
-          </v-row>
+      <v-row>
+        <v-col
+          v-for="card in cards"
+          :key="card.title"
+          v-hover
+          cols="12"
+          md="3"
+          sm="8"
+          ><v-hover v-slot="{ hover }">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              shaped
+              class="pa-md-4 mx-lg-auto"
+              width="250px"
+            >
+              <nuxt-link class="category" exact :to="card.link">
+                <v-row no-gutters>
+                  <v-col>
+                    <div class="pr-2">
+                      <img :src="card.image" />
+                      <h4
+                        class="text-uppercase mt-1 mb-3"
+                        style="letter-spacing: 0.15em"
+                        v-text="card.title"
+                      ></h4>
+                      <div class="text--disabled" v-text="card.subtitle"></div>
+                      <p v-text="card.text"></p>
+                    </div>
+                  </v-col>
+                </v-row>
+              </nuxt-link>
+            </v-card>
+          </v-hover>
         </v-col>
       </v-row>
     </v-container>
@@ -48,28 +46,44 @@ export default {
     return {
       cards: [
         {
-          title: 'Grow your Revenue',
-          subtitle: 'Best Productivity',
+          title: 'UTILITIES',
+          image: 'icon-cal.svg',
           text:
             'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          callout: '01',
+          link: '/utilities',
         },
         {
-          title: 'Affordable Prices',
-          subtitle: 'Special Offers',
+          title: 'FIBRE BLOWING',
+          image: 'icon-package.svg',
           text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          callout: '02',
+            'Our Fibre Blowing products contain Tornados, Jet Streams, Air Streams and more. We can even boast having some of the best Tornados in the industry.',
+          link: '/fibreblowing',
         },
         {
-          title: 'Target Setting',
-          subtitle: 'Income Flow',
+          title: 'CLIENT TOOLS',
+          image: 'icon-package.svg',
           text:
             'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          callout: '03',
+          link: '/clienttools',
+        },
+        {
+          title: 'TELECOMS',
+          image: 'icon-package.svg',
+          text:
+            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
+          link: '/telecoms',
         },
       ],
     }
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.category {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}
+</style>

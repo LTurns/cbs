@@ -2,7 +2,6 @@
   <section id="hero">
     <v-carousel
       height="calc(100vh - 64px)"
-      dark
       cycle
       show-arrows-on-hover
       draggable="true"
@@ -21,7 +20,7 @@
             </div>
             <p class="mb-5">{{ carousel.subHeading }}</p>
             <v-btn :x-large="$vuetify.breakpoint.smAndUp" class="my-3 primary"
-              >Get Started</v-btn
+              >With a new battery powered range</v-btn
             >
             <span class="mx-2 my-4"></span>
             <v-btn
@@ -29,8 +28,11 @@
               text
               class="my-3"
               outlined
-              ><v-icon left large color="primary">mdi-play</v-icon>Learn
-              More</v-btn
+              white
+              ><v-icon left large color="primary">mdi-play</v-icon
+              ><nuxt-link exact to="/about" class="learn"
+                >Learn More</nuxt-link
+              ></v-btn
             >
           </div>
         </v-container>
@@ -45,28 +47,28 @@ export default {
     return {
       carouselsData: [
         {
-          src: 'pexels-andrea-piacquadio-3884440.jpg',
-          heading: ' PROMOTE YOUR BUSINESS WITH US ',
+          src: 'wires.jpeg',
+          heading: 'LEADERS IN ADVANCED CABLE INSTALLATION',
           subHeading:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem ',
-        },
-        {
-          src: 'pexels-peter-olexa-4012966.jpg',
-          heading: ' LOREM IPSUM DOLOR SIT AMET CONSEETU',
-          subHeading:
-            'Litora a interdum primis. Lectus facilisi sit cum arcu aliquam velit imperdiet sapien suspendisse at vel facilisis. Facilisis metus, curae; nibh mi orci et. Fringilla sociis magna rutrum bibendum arcu.',
+            'CBS Products is at the forefront of cabling technology, the design and manufacture of installation equipment for HV Transmission towers, LV Distribution lines, Railway Tracksides and underground CATV / Telecommunication networks, including the handling of Fibre Optic Cables, for projects around the world. We also offer a comprehensive range of standard equipment.',
         },
         {
           src: 'pexels-thirdman-5961072.jpg',
-          heading: ' Build your website with this Theme ',
+          heading: 'CELEBRATING OUR 50TH ANNIVERSARY THIS YEAR',
           subHeading:
-            'Tellus cum turpis natoque id justo interdum tincidunt faucibus aptent congue pellentesque. Proin luctus orci netus! Scelerisque parturient cursus donec parturient et, luctus aptent habitant aliquet felis. Sapien placerat ultricies.',
+            "CBS Products has been going for 50 years - and what a ride it's been! Visit the About section to view more about our incredible team and it's history.",
         },
         {
-          src: 'pexels-andrea-piacquadio-3830745.jpg',
-          heading: ' URNA TINCIDUNT MATTIS TORTOR ',
+          src: 'cable-image.jpg',
+          heading: 'WITH A MULTITUDE OF PRODUCTS AND SERVICES',
           subHeading:
-            'Dapibus cras, ligula suspendisse potenti himenaeos mus volutpat pulvinar est facilisi. Vehicula malesuada parturient euismod litora mollis penatibus. Penatibus cum nullam facilisi enim nisi ac suspendisse. Ullamcorper ad amet netus.',
+            'CBS Products currently offers a large selection of services. These include Fibre Blowing, Telecoms, Client Tools and Utilities. Scroll down or visit the Products tab to view more information.',
+        },
+        {
+          src: 'sigmund-rVRvR9VUIoQ-unsplash.jpg',
+          heading: 'INTRODUCING BATTERY POWERED PRODUCTS',
+          subHeading:
+            'This year is not only exciting for our anniversary, it is also the year we reveal our latest product addition - and it is battery powered!',
         },
       ],
     }
@@ -76,11 +78,17 @@ export default {
 
 <style>
 .gradient-fill .v-responsive__content {
-  background: rgb(0, 0, 0);
+  background: rgb(223, 219, 219);
   background: linear-gradient(
     to right,
     rgba(3, 12, 41, 0.75),
     rgba(5, 11, 31, 0.65)
   );
+  color: white;
+  text-decoration: none;
+}
+.learn {
+  color: white;
+  text-decoration: none;
 }
 </style>

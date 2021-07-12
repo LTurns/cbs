@@ -37,11 +37,11 @@ export default {
 
 <style>
 .gradient-fill .v-responsive__content {
-  background: rgb(0, 0, 0);
+  background: rgb(97, 91, 91);
   background: linear-gradient(
     to right,
-    rgba(3, 12, 41, 0.7),
-    rgba(5, 11, 31, 0.7)
+    rgba(58, 58, 58, 0.7),
+    rgba(0, 0, 0, 0.7)
   );
 }
 </style>
