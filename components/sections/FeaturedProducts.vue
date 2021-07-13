@@ -13,9 +13,9 @@
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
-              <nuxt-link :to="`/product/${plan.id}`">
+              <nuxt-link class="link" :to="`/product/${plan.id}`">
                 <h4
-                  class="text-uppercase text-center mt-10 mb-3 pt-10 pl-5 pr-5"
+                  class="text-uppercase text-center black--text grey lighten-3 mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
                   style="letter-spacing: 0.15em"
                   v-text="plan.name"
                 ></h4>
@@ -81,5 +81,9 @@ export default {
 
 .card h3 {
   font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
 }
 </style>

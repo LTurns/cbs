@@ -5,7 +5,7 @@
         <SectionsHeroAlt :hero-alt="heroAlt" />
       </v-col>
     </v-row>
-    <v-container>
+    <!-- <v-container>
       <v-row>
         <v-col cols="12" xl="10" lg="9" md="8" sm="8" class="py-16">
           <v-row>
@@ -163,7 +163,7 @@
           </aside>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
   </section>
 </template>
 
@@ -173,7 +173,7 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-andrea-piacquadio-3884440.jpg',
+          src: 'accelair.jpg',
           heading: ' Blog ',
         },
       ],
