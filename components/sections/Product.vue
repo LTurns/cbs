@@ -5,13 +5,7 @@
     >
       {{ data.name.toUpperCase() }}
     </div>
-    <v-carousel
-      height="calc(100vh - 64px)"
-      cycle
-      show-arrows-on-hover
-      draggable="true"
-      light
-    >
+    <v-carousel cycle show-arrows-on-hover draggable="true" light>
       <v-carousel-item
         v-for="image in data.img"
         :key="image.id"
@@ -226,5 +220,9 @@ table tbody tr:nth-child(2n) td {
   table tbody tr:nth-child(2n) td {
     background: rgb(243, 239, 239);
   }
+
+  /* .carousel {
+    height: 80vh;
+  } */
 }
 </style>
