@@ -7,7 +7,6 @@
       height="30vh"
       :src="item.src"
       class="gradient-fill"
-      dark
     >
       <v-container fill-height>
         <v-row>

@@ -10,9 +10,9 @@
             Our Core Team
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.
+            We would be nowhere without our amazing team. Please feel free to
+            reach out to any of the below people and they will be happy to
+            assist you.
           </p>
         </v-col>
       </v-row>

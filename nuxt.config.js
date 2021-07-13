@@ -1,8 +1,19 @@
 import colors from 'vuetify/es5/util/colors'
 
+import productitems from './static/products.json'
+
+const dynamicRoutes = () => {
+  return new Promise((resolve) => {
+    resolve(productitems.map((el) => `product/${el.id}`))
+  })
+}
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+  server: {
+    host: '0', // default: localhost
+  },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -25,6 +36,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
       { rel: 'manifest', href: '/site.webmanifest' },
     ],
+  },
+  generate: {
+    routes: dynamicRoutes,
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

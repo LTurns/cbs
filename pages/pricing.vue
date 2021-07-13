@@ -3,9 +3,9 @@
     <v-row no-gutters>
       <v-col cols="12">
         <SectionsHeroAlt :hero-alt="heroAlt" />
-        <SectionsPricing />
+        <!-- <SectionsPricing />
         <SectionsBrands />
-        <SectionsTestimonials />
+        <SectionsTestimonials /> -->
       </v-col>
     </v-row>
   </section>
@@ -17,8 +17,8 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-andrea-piacquadio-3884440.jpg',
-          heading: ' Pricing ',
+          src: 'Cable-Seal-Plugs.jpg',
+          heading: ' Where To Buy ',
         },
       ],
     }

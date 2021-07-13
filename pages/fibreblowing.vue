@@ -11,44 +11,12 @@
             aria-label="search"
             placeholder="enter your search"
           />
-          <app-product-list :data="filteredList" />
           <button class="search__btn" aria-label="submit search">
             <img src="/loupe.png" alt="" />
           </button>
         </div>
 
         <SectionsFeaturedProducts :data="filteredList" />
-        <v-container class="py-16">
-          <v-row>
-            <v-col
-              v-for="n in 120"
-              :key="n"
-              class="d-flex child-flex"
-              cols="4"
-              xl="3"
-            >
-              <v-img
-                :src="`https://picsum.photos/700?image=${n * 5 + 10}`"
-                :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                aspect-ratio="1"
-                class="grey lighten-2 rounded-lg"
-              >
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular
-                      indeterminate
-                      color="grey lighten-5"
-                    ></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-            </v-col>
-          </v-row>
-        </v-container>
       </v-col>
     </v-row>
   </section>
@@ -60,8 +28,8 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-andrea-piacquadio-3830745.jpg',
-          heading: ' UTILITIES ',
+          src: 'W1-TEW-50.jpeg',
+          heading: ' FIBRE BLOWING ',
         },
       ],
       search: '',

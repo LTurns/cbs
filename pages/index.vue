@@ -11,6 +11,13 @@
           </h2>
         </v-responsive>
         <SectionsIntro />
+        <v-responsive class="max-auto mx-auto text-center" max-width="600">
+          <h2
+            class="text-h4 text-md-h3 text-center font-weight-black mt-10 mb-5"
+          >
+            Featured Products
+          </h2>
+        </v-responsive>
         <SectionsFeaturedProducts :data="featuredProducts" />
       </v-col>
     </v-row>

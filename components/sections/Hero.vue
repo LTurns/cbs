@@ -53,7 +53,7 @@ export default {
             'CBS Products is at the forefront of cabling technology, the design and manufacture of installation equipment for HV Transmission towers, LV Distribution lines, Railway Tracksides and underground CATV / Telecommunication networks, including the handling of Fibre Optic Cables, for projects around the world. We also offer a comprehensive range of standard equipment.',
         },
         {
-          src: 'pexels-thirdman-5961072.jpg',
+          src: 'DSC_1491-1.jpeg',
           heading: 'CELEBRATING OUR 50TH ANNIVERSARY THIS YEAR',
           subHeading:
             "CBS Products has been going for 50 years - and what a ride it's been! Visit the About section to view more about our incredible team and it's history.",

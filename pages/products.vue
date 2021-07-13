@@ -15,7 +15,7 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'pexels-ekaterina-bolovtsova-4048767.jpg',
+          src: 'DSC_1421-1.jpeg',
           heading: ' Product Categories ',
         },
       ],

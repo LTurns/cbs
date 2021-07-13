@@ -16,10 +16,11 @@
             </v-col>
             <v-col cols="12">
               <p class="mt-8 text-justify" style="max-width: 400px">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
-                pariatur quidem, quis modi iure nihil commodi suscipit, corporis
-                dicta adipisci, voluptatum quia cupiditate. Nulla minus
-                voluptatum nostrum deleniti, asperiores facere.
+                CBS Products was established in 1971 in Oakham, Rutland,
+                England. Since entering the field of telecommunications, the
+                company has continued to be an important cornerstone in the
+                industry, with large companies including BT making use of its
+                services and expertise.
               </p>
             </v-col>
             <v-col cols="12">
@@ -32,8 +33,12 @@
                   <v-list-item-content>
                     <v-list-item-title>ADDRESS</v-list-item-title>
                     <v-list-item-subtitle
-                      >1400 Main Street, Orlando, FL 79938</v-list-item-subtitle
-                    >
+                      >CBS Products (KT),
+                    </v-list-item-subtitle>
+                    <v-list-item-subtitle> Pillings Road </v-list-item-subtitle>
+                    <v-list-item-subtitle> Rutland </v-list-item-subtitle>
+                    <v-list-item-subtitle>LE15 6QF</v-list-item-subtitle>
+                    <v-list-item-subtitle>UK</v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
                 <v-divider></v-divider>
@@ -45,10 +50,7 @@
                   <v-list-item-content>
                     <v-list-item-title>EMAIL</v-list-item-title>
                     <v-list-item-subtitle
-                      >info@example.com</v-list-item-subtitle
-                    >
-                    <v-list-item-subtitle
-                      >support@example.com</v-list-item-subtitle
+                      >sales@cbsproducts.com</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>
@@ -62,8 +64,9 @@
 
                   <v-list-item-content>
                     <v-list-item-title>PHONE</v-list-item-title>
-                    <v-list-item-subtitle>(323) 555-6789</v-list-item-subtitle>
-                    <v-list-item-subtitle>(650) 555-1234</v-list-item-subtitle>
+                    <v-list-item-subtitle>
+                      +44 (0) 1572 723 665</v-list-item-subtitle
+                    >
                   </v-list-item-content>
                 </v-list-item>
                 <v-divider></v-divider>
