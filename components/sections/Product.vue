@@ -1,11 +1,17 @@
 <template>
   <section id="hero">
     <div
-      class="text-md-h2 mt-15 text-sm-h3 text-h5 font-weight-black text-center"
+      class="text-md-h2 mt-5 text-sm-h3 text-h5 font-weight-black text-center"
     >
       {{ data.name.toUpperCase() }}
     </div>
-    <v-carousel cycle show-arrows-on-hover draggable="true" light>
+    <v-carousel
+      class="carousel"
+      cycle
+      show-arrows-on-hover
+      draggable="true"
+      light
+    >
       <v-carousel-item
         v-for="image in data.img"
         :key="image.id"
@@ -31,7 +37,7 @@
         <v-tab href="#features"> Features </v-tab>
         <v-tab href="#accessories"> Accessories </v-tab>
         <v-tab href="#config"> Configuration </v-tab>
-        <v-tab href="#config"> Video Tutorials </v-tab>
+        <v-tab href="#video"> Video Tutorials </v-tab>
         <v-tab href="#more"> More </v-tab>
       </v-tabs>
 
@@ -81,21 +87,38 @@
         </v-tab-item>
         <v-tab-item :key="3" value="config">
           <v-card flat>
-            <div
-              v-for="table in data.tables"
-              :key="table.id"
-              class="configInfo"
-            >
-              <div class="table">
+            <v-img
+              max-height="800"
+              :src="`/${data.configImage}`"
+              max-width="500"
+              class="mx-auto mt-10"
+              :lazy-src="`/${data.configImage}`"
+            />
+            ></v-card
+          >
+          <v-row
+            v-for="table in data.tables"
+            :key="table.id"
+            no-gutters
+            class="flex-row pt-10 pb-10 mr-10 ml-10"
+          >
+            <v-col cols="12" md="6" align-self="center">
+              <v-img
+                max-height="800"
+                :src="`/${table.image}`"
+                max-width="300"
+                class="mx-auto"
+                :lazy-src="`/${table.image}`"
+              >
+              </v-img>
+            </v-col>
+            <v-col cols="12" md="6" align-self="center">
+              <div class="pa-lg-1 pa-md-0 mt-10">
                 <table>
                   <thead>
                     <tr>
                       <th v-for="(column, index) in table.columns" :key="index">
-                        <h4
-                          class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
-                          style="letter-spacing: 0.15em"
-                          v-text="column"
-                        ></h4>
+                        {{ column }}
                       </th>
                       <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
                     </tr>
@@ -111,13 +134,47 @@
                     </tr>
                   </tbody>
                 </table>
+                <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                </h3>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum. Sed ut perspiciatis unde omnis
+                  iste natus error sit voluptatem accusantium. Doloremque
+                  laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                  inventore veritatis et quasi architecto beatae vitae dicta
+                  sunt explicabo. emo enim ipsam voluptatem quia voluptas sit
+                  aspernatur aut odit aut fugit, sed quia consequuntur magni
+                  dolores eos
+                </p> -->
               </div>
-            </div>
-          </v-card>
+            </v-col>
+          </v-row>
+          <!-- </v-card> -->
         </v-tab-item>
-        <v-tab-item :key="4" value="more">
+        <v-tab-item :key="4" value="video">
           <v-card flat>
-            <v-card-text>More</v-card-text>
+            <div>
+              <iframe
+                class="video"
+                style="background-color: white"
+                :src="`${data.video}`"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe></div
+          ></v-card>
+        </v-tab-item>
+        <v-tab-item :key="5" value="more">
+          <v-card flat>
+            <v-card-text class="text-center px-10 py-10">{{
+              data.description
+            }}</v-card-text>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
@@ -145,6 +202,9 @@ export default {
 </script>
 
 <style>
+.carousel {
+  height: '70vh';
+}
 .image {
   display: block;
   margin-left: auto;
@@ -161,22 +221,28 @@ export default {
   margin: 5%;
 }
 
-table th {
-  text-transform: uppercase;
-  text-align: left;
-  background: rgb(252, 234, 152);
-  /* color: $backgroundColor; */
-  font-weight: 500;
-  padding: 5px;
-  padding-left: 40px;
-  padding-right: 40px;
-  min-width: 30px;
-  text-align: center;
-  font-size: 13px;
+.table {
+  margin: 2%;
+  margin-bottom: 5%;
 }
 
-table td {
-  text-align: left;
+th {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(255, 210, 128);
+  font-size: 14px;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+table tbody tr:nth-child(2n) td {
+  background: rgb(243, 239, 239);
+}
+
+td {
+  padding: 10px;
+} /* table td { */
+/* text-align: left;
   padding: 15px;
   font-size: 14px;
   border-right: 2px solid #ddd120;
@@ -186,39 +252,45 @@ table td:last-child {
 }
 table tbody tr:nth-child(2n) td {
   background: rgb(243, 239, 239);
+} */
+
+.video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 5%;
 }
 
 @media screen and (max-width: 600px) {
   .table {
-    padding: 5%;
+    margin: 2%;
     margin-bottom: 5%;
   }
 
-  table th {
-    text-transform: uppercase;
-    text-align: left;
-    background: rgb(252, 234, 152);
-    /* color: $backgroundColor; */
-    font-weight: 500;
-    padding: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    min-width: 30px;
-    text-align: center;
-    font-size: 11px;
+  th {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 210, 128);
+    font-size: 14px;
   }
 
   table td {
     text-align: left;
-    padding: 10px;
     font-size: 11px;
-    border-right: 2px solid #ddd120;
+    padding: 10px;
   }
   table td:last-child {
     border-right: none;
   }
   table tbody tr:nth-child(2n) td {
     background: rgb(243, 239, 239);
+  }
+  .video {
+    max-width: 300px;
+    max-height: 200px;
   }
 
   /* .carousel {

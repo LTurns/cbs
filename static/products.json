@@ -6,9 +6,13 @@
   "description": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation. The system installs fibre optic cable of 6mm (0.25”) to 32mm (1.25”) overall diameter, at speeds up to 90m/min (300ft/min), into pre-installed ducts. The system operates on the viscous drag principle employing compressed air to install the cable, controlled and assisted by the belt drive system. The cable is propelled by compressed air, fed into the duct via a venturi principle, while the hydraulically powered belt drive system controls the fibre optic cable. The electronic monitoring system provides read out of speed and distance, gives protection against duct obstructions and includes an emergency stop facility. The system is mounted on an anti-corrosion treated, sturdy, height adjustable, wheeled, tubular steel trolley. This allows the unit to be wheeled around on site. The C-1203 hydraulic petrol driven power pack provides power. The unit is CE approved.",
   "img": [
     { "image" :"tornado.jpg" },
-    { "image" :"airstream.jpg" },
-    { "image" :"tornado.jpg" },
-    { "image" :"jetstream.jpg" }
+    { "image" :"tornado/tornado-1.jpeg" },
+    { "image" :"tornado/tornado-2.jpeg" },
+    { "image" :"tornado/tornado-3.jpeg" },
+    { "image" :"tornado/tornado-4.jpeg" },
+    { "image" :"tornado/tornado-5.jpeg" },
+    { "image" :"tornado/tornado-6.jpeg" },
+    { "image" :"tornado/tornado-7.jpeg" }
   ],
   "mainImg": "tornado.jpg",
   "category": "Fibre Blowing",
@@ -91,7 +95,7 @@
   "video" : "https://www.youtube.com/embed/JMxLzd_RYDI",
   "configurationTitle": "TORNADO Configuration for Cable Blowing",
   "configurationIntro": "In order to customise your new “Tornado” to your application, we ask that you pick one of each from the list below, the Duct Clamp Collet (A), the Duct Seal Collet (B), the Cable Collet Assy (C) and the In Feed Cable Collet (D), the Cable Seals (E) and the Cable Seal Plug (F). When ordering, please have Tube and Cable dimensions available. All imperial sizes are available on request.",
-  "configImage": "tornados/tornadoconfig.jpg",
+  "configImage": "tornado/tornadoconfig.jpg",
   "tables" : [
     {
       "items": [
@@ -117,7 +121,7 @@
         }
     ],
     "columns": [ "Duct O.D", "Part No for A) Duct Clamp Collet"],
-    "image" : "tornados/duct-clamp-collet.jpg"
+    "image" : "tornado/duct-clamp-collet.jpg"
     },
     {
       "items": [
@@ -143,7 +147,7 @@
         }
     ],
     "columns": [ "Duct O.D", "Part No for B) Duct Seal Collet"],
-    "image" : "tornados/duct-seal-collet.jpg"
+    "image" : "tornado/duct-seal-collet.jpg"
     },
     {
       "items": [
@@ -184,7 +188,7 @@
         }
         ],
         "columns": [ "Cable Diameter", "Part No for Cable Collet Assy (C)", "Part No for In-Feed Cable Collet (D)"],
-        "image" : "tornados/cable-collet-assy.jpg"
+        "image" : "tornado/cable-collet-assy.jpg"
       },
       {
         "items": [
@@ -246,7 +250,7 @@
           }
           ],
           "columns": [ "Cable Diameter", "Part No for E) Cable Seals (Supplied in packs of 10)"],
-          "image" : "tornados/cable-seals.jpg"
+          "image" : "tornado/cable-seals.jpg"
         },
         {
           "items": [
@@ -308,7 +312,7 @@
             }
             ],
             "columns": [ "Cable Diameter", "Part No for F) Cable Seal Plugs"],
-            "image" : "tornados/cable-seals-plugs.jpg"
+            "image" : "tornado/cable-seals-plugs.jpg"
           }
     ]
   },

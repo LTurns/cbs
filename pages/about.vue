@@ -70,8 +70,8 @@
             </v-col>
           </v-row>
         </v-container>
-        <!-- <SectionsTeam :our-team="ourTeam" /> -->
-        <!-- <v-row no-gutters class="flex-row-reverse">
+        <SectionsTeam :our-team="ourTeam" />
+        <v-row no-gutters class="flex-row-reverse">
           <v-col cols="12" md="6" align-self="center">
             <v-img
               max-height="800"
@@ -79,10 +79,10 @@
               lazy-src="pexels-rfstudio-3810792.jpg"
             >
             </v-img>
-          </v-col> -->
-        <!-- <v-col cols="12" md="6" align-self="center">
-            <div class="pa-lg-16 pa-md-10 px-4 py-16"> -->
-        <!-- <h2 class="text-h3 text-center font-weight-black">Our Mission</h2>
+          </v-col>
+          <v-col cols="12" md="6" align-self="center">
+            <div class="pa-lg-16 pa-md-10 px-4 py-16">
+              <h2 class="text-h3 text-center font-weight-black">Our Mission</h2>
               <h3
                 class="text-h5 text-uppercase font-weight-thin text-center my-8"
               >
@@ -102,8 +102,8 @@
                 quia consequuntur magni dolores eos
               </p>
             </div>
-          </v-col> -->
-        <!-- </v-row> -->
+          </v-col>
+        </v-row>
 
         <!-- <SectionsTimeline /> -->
       </v-col>
