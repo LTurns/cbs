@@ -22,10 +22,9 @@
           <div>
             <v-img
               :src="`../${image.image}`"
-              class="mx-auto mt-10"
+              class="mx-auto"
               max-height="500"
               max-width="400"
-              mb="10"
             />
           </div>
         </v-container>
@@ -101,7 +100,7 @@
               max-height="800"
               :src="`/${data.configImage}`"
               max-width="500"
-              class="mx-auto mt-10 pl-10 pr-10 ml-10 mr-10"
+              class="mx-auto mt-10 ml-10 mr-10"
               :lazy-src="`/${data.configImage}`"
             />
           </v-card>

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :style="{ background: $vuetify.theme.themes['dark'].accent }">
     <v-row no-gutters>
       <v-col cols="12">
         <SectionsHeroAlt :hero-alt="heroAlt" />
@@ -77,8 +77,8 @@
             </v-col>
           </v-row>
         </v-container>
-        <SectionsTeam :our-team="ourTeam" />
-        <v-row no-gutters class="flex-row-reverse">
+        <!-- <SectionsTeam :our-team="ourTeam" /> -->
+        <!-- <v-row no-gutters class="flex-row-reverse">
           <v-col cols="12" md="6" align-self="center">
             <v-img
               max-height="800"
@@ -89,7 +89,9 @@
           </v-col>
           <v-col cols="12" md="6" align-self="center">
             <div class="pa-lg-16 pa-md-10 px-4 py-16">
-              <h2 class="text-h3 text-center font-weight-black">Our Mission</h2>
+              <h2 class="text-h3 text-center white--text font-weight-black">
+                Our Mission
+              </h2>
               <h3
                 class="text-h5 text-uppercase font-weight-thin text-center my-8"
               >
@@ -110,9 +112,9 @@
               </p>
             </div>
           </v-col>
-        </v-row>
+        </v-row> -->
 
-        <!-- <SectionsTimeline /> -->
+        <SectionsTimeline />
       </v-col>
     </v-row>
   </section>

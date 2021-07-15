@@ -351,10 +351,11 @@
      "productId":"C-1900",
      "description": "The C-1900 has been designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive. The profiled double drive belt system is driven by single 32cc hydraulic motor, powered by the proven C-1203-F power pack. The electronic monitoring system provides read-out of speed and distance, gives protection against duct obstructions and includes emergency stop facility. The C-1900 is adjustable to suit a wide range of cable diameters 4-20mm, and duct diameters 12-50mm o/d.",
      "img": [
-      { "image" :"jetstream.jpg" },
-      { "image" :"jetstream.jpg" },
-      { "image" :"tornado.jpg" },
-      { "image" :"jetstream.jpg" }
+        { "image" :"jetstream.jpg" },
+        { "image" :"jetstream/jet-stream-2.jpeg" },
+        { "image" :"jetstream/jet-stream-3.jpeg" },
+        { "image" :"jetstream/jet-stream-4.jpeg" },
+        { "image" :"jetstream/jet-stream-5.jpeg" }
     ],
      "mainImg": "jetstream.jpg",
      "category": "Fibre Blowing",
@@ -619,7 +620,36 @@
                "columns": [ "Cable Diameter", "Part No for F) Cable Seal Plugs"],
                "image" : "tornados/cable-seals-plugs.jpg"
              }
-       ]
+       ],
+       "accessories": [
+        {
+          "name": "Tornado Plus",
+          "elevation": 4,
+          "color": "white",
+          "id": "1",
+          "productId": "C-1250-08",
+          "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
+          "mainImg": "../tornado.jpg"
+       },
+       {
+          "name": "Tornado Plus",
+          "elevation": 4,
+          "color": "white",
+          "id": "1",
+          "productId": "C-1250-08",
+          "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
+          "mainImg": "../tornado.jpg"
+       },
+       {
+          "name": "Tornado Plus",
+          "elevation": 4,
+          "color": "white",
+          "id": "1",
+          "productId": "C-1250-08",
+          "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
+          "mainImg": "../tornado.jpg"
+       }
+      ]
      },
      {
       "id": "3",
