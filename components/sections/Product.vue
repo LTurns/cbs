@@ -6,7 +6,7 @@
       {{ data.name.toUpperCase() }}
     </div>
     <v-carousel
-      height="calc(100vh - 180px)"
+      height="calc(100vh - 147px)"
       class="carousel"
       cycle
       show-arrows-on-hover
@@ -28,8 +28,18 @@
             />
           </div>
         </v-container>
-      </v-carousel-item>
-    </v-carousel>
+      </v-carousel-item> </v-carousel
+    ><v-btn
+      :x-large="$vuetify.breakpoint.smAndUp"
+      text
+      class="my-3"
+      outlined
+      white
+      ><v-icon left large color="primary">mdi-play</v-icon
+      ><nuxt-link exact :to="`/enquiry/${data.id}`" class="learn"
+        >Enquire Now</nuxt-link
+      ></v-btn
+    >
 
     <v-card>
       <v-tabs v-model="tab" black--text centered dark>
@@ -94,55 +104,68 @@
             <SectionsFeaturedProducts :data="data.accessories" />
           </v-card>
         </v-tab-item>
-        <v-tab-item :key="3" value="config">
-          <v-card flat>
+        <v-tab-item
+          :key="3"
+          value="config"
+          :style="{ background: $vuetify.theme.themes['dark'].accent }"
+        >
+          <v-card
+            min-height="600"
+            class="mx-auto transition-swing mt-10 ml-5 mr-5 mb-10"
+            :elevation="hover ? 24 : 6"
+          >
+            <v-card-text class="black--text mt-10 pl-10 pr-10">
+              {{ data.configurationIntro }}
+            </v-card-text>
             <v-img
               max-height="800"
               :src="`/${data.configImage}`"
-              max-width="500"
-              class="mx-auto mt-10 ml-10 mr-10"
+              max-width="700"
+              class="mx-auto mt-10"
               :lazy-src="`/${data.configImage}`"
             />
-          </v-card>
-          <v-row
-            v-for="table in data.tables"
-            :key="table.id"
-            no-gutters
-            class="flex-row pt-10 pb-10 mr-10 ml-10"
-          >
-            <v-col cols="12" md="6" align-self="center">
-              <v-img
-                max-height="800"
-                :src="`/${table.image}`"
-                max-width="300"
-                class="mx-auto"
-                :lazy-src="`/${table.image}`"
-              >
-              </v-img>
-            </v-col>
-            <v-col cols="12" md="6" align-self="center">
-              <div class="pa-lg-1 pa-md-0 mt-10">
-                <table>
-                  <thead>
-                    <tr>
-                      <th v-for="(column, index) in table.columns" :key="index">
-                        {{ column }}
-                      </th>
-                      <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(item, index) in table.items" :key="index">
-                      <td
-                        v-for="(column, columnIndex) in table.columns"
-                        :key="columnIndex"
-                      >
-                        {{ item[column] }}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
+            <v-row
+              v-for="table in data.tables"
+              :key="table.id"
+              no-gutters
+              class="flex-row pt-10 pb-10 mr-10 ml-10"
+            >
+              <v-col cols="12" md="6" align-self="center">
+                <v-img
+                  max-height="800"
+                  :src="`/${table.image}`"
+                  max-width="300"
+                  class="mx-auto"
+                  :lazy-src="`/${table.image}`"
+                >
+                </v-img>
+              </v-col>
+              <v-col cols="12" md="6" align-self="center">
+                <div class="pa-lg-1 pa-md-0 mt-10">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th
+                          v-for="(column, index) in table.columns"
+                          :key="index"
+                        >
+                          {{ column }}
+                        </th>
+                        <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(item, index) in table.items" :key="index">
+                        <td
+                          v-for="(column, columnIndex) in table.columns"
+                          :key="columnIndex"
+                        >
+                          {{ item[column] }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 </h3>
                 <p>
@@ -159,10 +182,10 @@
                   aspernatur aut odit aut fugit, sed quia consequuntur magni
                   dolores eos
                 </p> -->
-              </div>
-            </v-col>
-          </v-row>
-          <!-- </v-card> -->
+                </div>
+              </v-col>
+            </v-row>
+          </v-card>
         </v-tab-item>
         <v-tab-item
           :key="4"
@@ -185,13 +208,18 @@
               ></iframe></div
           ></v-card>
         </v-tab-item>
-        <v-tab-item :key="5" value="more">
+        <v-tab-item
+          :key="5"
+          value="more"
+          :style="{ background: $vuetify.theme.themes['dark'].accent }"
+        >
           <v-card
-            flat
-            :style="{ background: $vuetify.theme.themes['dark'].accent }"
+            min-height="600"
+            class="mx-auto transition-swing mt-10 ml-5 mr-5 mb-10"
+            :elevation="hover ? 24 : 6"
           >
             <v-card-text
-              class="subtitle-1 text-center white--text px-10 py-10"
+              class="subtitle-1 text-center black--text px-10 py-10"
               >{{ data.description }}</v-card-text
             >
           </v-card>
