@@ -1,8 +1,11 @@
 /* eslint-disable vue/require-prop-types */
 <template>
-  <section :class="$vuetify.theme.dark ? 'black' : 'white'" class="py-1">
+  <section
+    class="py-5"
+    :style="{ background: $vuetify.theme.themes['dark'].accent }"
+  >
     <v-container fluid>
-      <v-row class="mx-auto" style="max-width: 1200px">
+      <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
         <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
           <v-hover v-slot="{ hover }" class="card">
             <v-card
@@ -15,7 +18,7 @@
             >
               <nuxt-link class="link" :to="`/product/${plan.id}`">
                 <h4
-                  class="text-uppercase text-center black--text grey lighten-3 mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
+                  class="text-uppercase text-center black--text grey lighten-3 mt-5 mb-5 pt-5 pl-5 pr-5 pb-5"
                   style="letter-spacing: 0.15em"
                   v-text="plan.name"
                 ></h4>

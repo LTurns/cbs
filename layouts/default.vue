@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <siteHeader />
+    <site-header />
     <v-main>
       <nuxt />
       <footerTop />

@@ -7,12 +7,17 @@
           <v-row class="py-16">
             <v-col cols="12">
               <h2
-                class="text-h4 text-md-h3 text-center font-weight-black text-capitalize"
+                class="text-h4 text-md-h3 text-center white--text font-weight-black text-capitalize"
               >
                 Who we are?
               </h2>
+              <v-divider
+                inset
+                width="50"
+                class="text-center yellow--text"
+              ></v-divider>
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" class="white--text">
               <p>
                 CBS Products (KT), Ltd. is a leading provider of specialised
                 equipment solutions for the construction of power transmission
@@ -27,13 +32,15 @@
                 develop and build a line of pullers, tensioners and running out
                 blocks for high production cable placing.
               </p>
-              <blockquote class="text-h4 pa-5 my-4 font-weight-thin">
+              <blockquote
+                class="text-h4 pa-5 my-4 font-weight-thin yellow--text"
+              >
                 CBS has become the partner of choice in a number of high
                 profile, international fibre optic cable projects around the
                 globe
               </blockquote>
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" class="white--text">
               <p>
                 Our success in the UK telecoms market meant that the company’s
                 expertise and know-how rapidly came to the attention of the

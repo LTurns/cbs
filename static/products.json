@@ -314,6 +314,35 @@
             "columns": [ "Cable Diameter", "Part No for F) Cable Seal Plugs"],
             "image" : "tornado/cable-seals-plugs.jpg"
           }
+    ],
+    "accessories": [
+      {
+        "name": "Tornado Plus",
+        "elevation": 4,
+        "color": "white",
+        "id": "1",
+        "productId": "C-1250-08",
+        "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
+        "mainImg": "../tornado.jpg"
+     },
+     {
+        "name": "Tornado Plus",
+        "elevation": 4,
+        "color": "white",
+        "id": "1",
+        "productId": "C-1250-08",
+        "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
+        "mainImg": "../tornado.jpg"
+     },
+     {
+        "name": "Tornado Plus",
+        "elevation": 4,
+        "color": "white",
+        "id": "1",
+        "productId": "C-1250-08",
+        "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
+        "mainImg": "../tornado.jpg"
+     }
     ]
   },
   {

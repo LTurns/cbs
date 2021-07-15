@@ -1,7 +1,11 @@
 <template>
   <section>
     <v-row no-gutters>
-      <v-col cols="12" align="center">
+      <v-col
+        cols="12"
+        align="center"
+        :style="{ background: $vuetify.theme.themes['dark'].primary }"
+      >
         <SectionsHeroAlt :hero-alt="heroAlt" />
         <div class="search">
           <input
@@ -76,6 +80,7 @@ $brandColor: #fde36d;
   // heigth: 60px;
   padding: 3px;
   margin-top: 3%;
+  margin-bottom: 3%;
   width: 50%;
   position: relative;
   transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);

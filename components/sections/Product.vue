@@ -6,6 +6,7 @@
       {{ data.name.toUpperCase() }}
     </div>
     <v-carousel
+      height="calc(100vh - 180px)"
       class="carousel"
       cycle
       show-arrows-on-hover
@@ -21,9 +22,10 @@
           <div>
             <v-img
               :src="`../${image.image}`"
-              class="mx-auto"
+              class="mx-auto mt-10"
               max-height="500"
               max-width="400"
+              mb="10"
             />
           </div>
         </v-container>
@@ -31,7 +33,7 @@
     </v-carousel>
 
     <v-card>
-      <v-tabs v-model="tab" background-color="orange accent-3" centered dark>
+      <v-tabs v-model="tab" black--text centered dark>
         <v-tabs-slider></v-tabs-slider>
 
         <v-tab href="#features"> Features </v-tab>
@@ -42,9 +44,13 @@
       </v-tabs>
 
       <v-tabs-items v-model="tab">
-        <v-tab-item :key="1" value="features">
-          <v-container fluid>
-            <v-row class="mx-auto" style="max-width: 1200px">
+        <v-tab-item :key="1" value="features" mt="10">
+          <v-container
+            fluid
+            mt="10"
+            :style="{ background: $vuetify.theme.themes['dark'].accent }"
+          >
+            <v-row class="mx-auto mt-7" style="max-width: 1200px">
               <v-col
                 v-for="feature in data.item"
                 :key="feature.id"
@@ -80,9 +86,13 @@
             </v-row>
           </v-container>
         </v-tab-item>
-        <v-tab-item :key="2" value="accessories">
+        <v-tab-item
+          :key="2"
+          value="accessories"
+          :style="{ background: $vuetify.theme.themes['dark'].accent }"
+        >
           <v-card flat>
-            <SectionsFeaturedProducts :data="featuredProducts" />
+            <SectionsFeaturedProducts :data="data.accessories" />
           </v-card>
         </v-tab-item>
         <v-tab-item :key="3" value="config">
@@ -91,11 +101,10 @@
               max-height="800"
               :src="`/${data.configImage}`"
               max-width="500"
-              class="mx-auto mt-10"
+              class="mx-auto mt-10 pl-10 pr-10 ml-10 mr-10"
               :lazy-src="`/${data.configImage}`"
             />
-            ></v-card
-          >
+          </v-card>
           <v-row
             v-for="table in data.tables"
             :key="table.id"
@@ -156,8 +165,15 @@
           </v-row>
           <!-- </v-card> -->
         </v-tab-item>
-        <v-tab-item :key="4" value="video">
-          <v-card flat>
+        <v-tab-item
+          :key="4"
+          value="video"
+          :style="{ background: $vuetify.theme.themes['dark'].accent }"
+        >
+          <v-card
+            flat
+            :style="{ background: $vuetify.theme.themes['dark'].accent }"
+          >
             <div>
               <iframe
                 class="video"
@@ -171,10 +187,14 @@
           ></v-card>
         </v-tab-item>
         <v-tab-item :key="5" value="more">
-          <v-card flat>
-            <v-card-text class="text-center px-10 py-10">{{
-              data.description
-            }}</v-card-text>
+          <v-card
+            flat
+            :style="{ background: $vuetify.theme.themes['dark'].accent }"
+          >
+            <v-card-text
+              class="subtitle-1 text-center white--text px-10 py-10"
+              >{{ data.description }}</v-card-text
+            >
           </v-card>
         </v-tab-item>
       </v-tabs-items>

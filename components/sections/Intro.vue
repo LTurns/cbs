@@ -1,5 +1,9 @@
 <template>
-  <section id="intro" class="py-10">
+  <section
+    id="intro"
+    class="py-10"
+    :style="{ background: $vuetify.theme.themes['dark'].accent }"
+  >
     <v-container>
       <v-row>
         <v-col
@@ -10,23 +14,24 @@
           cols="12"
           md="3"
           sm="12"
-          ><v-hover v-slot="{ hover }">
+          ><v-hover v-slot="{ hover }" class="card">
             <v-card
               :elevation="hover ? 12 : 2"
               shaped
               class="pa-md-4 mx-lg-auto"
+              :class="hover ? 'zoom' : 'notzoom'"
             >
               <nuxt-link class="category" exact :to="card.link">
                 <v-row no-gutters>
                   <v-col>
                     <div class="pr-2">
                       <img :src="card.image" />
-                      <h4
+                      <h3
                         class="text-uppercase mt-1 mb-3"
                         style="letter-spacing: 0.15em"
                         v-text="card.title"
-                      ></h4>
-                      <div class="text--disabled" v-text="card.subtitle"></div>
+                      ></h3>
+                      <div class="yellow" v-text="card.subtitle"></div>
                       <p v-text="card.text"></p>
                     </div>
                   </v-col>
@@ -85,5 +90,13 @@ export default {
   color: black;
   font-size: 13px;
   text-align: center;
+}
+
+.zoom {
+  transform: scale(1.025) translate(0, -10px);
+  transition: transform 0.2s;
+}
+.notzoom {
+  transition: transform 0.2s;
 }
 </style>
