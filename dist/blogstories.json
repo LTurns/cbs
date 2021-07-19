@@ -1,0 +1,105 @@
+[
+ { 
+ "id": 1,
+ "img":"Fill-Ratio.png",
+  "heading": "We're 50!",
+  "subheading": "Join us as we reminisce!",
+  "description": "CBS Products is celebrating it's 50th anniversary this year, and what a ride it's been! Click below to see some of the best highlights.",
+  "author" : "by Admin",
+  "date": "Dec 23, 2020",
+  "categoryUrl" : "category/duct-rods/",
+  "categoryName" : "Duct Rods"
+ },
+ { 
+   "id": 3,
+   "img":"DSC_1219-2-980x849.jpeg",
+    "heading": "C-1270-KIT",
+    "author" : "by Admin",
+    "date": "Dec 23, 2020",
+    "categoryUrl" : "category/duct-rods/",
+    "categoryName" : "Duct Rods",
+    "subheading": "",
+    "description": "The CBS Duct Rod Pusher is now available in a kit, complete with powerpack and 14 x 300mm duct rod. What takes a team of engineers hours to do will take minutes with this kit and just one engineer..."
+ },{
+  "id": 4,
+  "img":"Fill-Ratio.png",
+    "heading": "Coronavirus Update",
+    "subheading": "OPEN FOR BUSINESS CORONAVIRUS UPDATE",
+    "categoryUrl" : "",
+    "categoryName" : "",
+    "author" : "by Admin",
+    "date": "April 6, 2020",
+    "description": "CBS remains open and are working hard to provide essential services to our telecommunications and electricity industries during these difficult and uncertain times. We want to assure you that we are taking the current situation..." 
+ },
+ { 
+   "id": 5,
+   "img":"Fill-Ratio.png",
+     "heading": "The Perfect Fill Ratio for Cable Blowing",
+     "author" : "by Admin",
+     "date": "Feb 28, 2020",
+     "categoryUrl" : "category/cable-blowing/",
+     "categoryName" : "Cable Blowing",
+     "subheading": "",
+     "description": "Fibre optic cable blowing isn’t a new technique for cable installation and, in fact, it has been in use since the late 1990’s. However, the cable blowing technique may be new to some installers..."
+ },
+ {
+  "id": 6,
+   "img":"d-710-1-2.jpeg",
+  "heading": "CBS Pole Bogie",
+  "subheading": "",
+  "categoryUrl" : "category/overhead-line/",
+  "categoryName" : "Overhead Line",
+  "secondCategoryName" : "Pole Handling",
+  "secondCategoryUrl": "category/pole-handling/",
+  "author" : "by Admin",
+  "date": "Jan 24, 2020",
+  "description": "D-710 Pole Bogie. Designed to be ideally suited for transporting poles across rough terrain or soft ground, the poles are secured with quick action retaining straps to hold poles in place during transport. Available with low pressure tyres for use when keeping damage..." 
+ },
+ { 
+   "id": 7,
+   "img":"tornado.jpg",
+   "heading": "CBS Tornado Cable Blowing Machine",
+   "author" : "by Admin",
+   "date": " Jan 3, 2020",
+   "categoryUrl" : "category/cable-blowing/",
+   "categoryName" : "Cable Blowing",
+   "subheading": "",
+   "description": "We are the only company here in the UK that manufacture and produce our own range of cable blowing machines, the largest of which is the Tornado. This machine has been designed to to provide a safe and effective method of installing..."
+ },{
+  "id": 7,
+  "img":"Airstream-1080x675.jpeg",
+  "heading": "CBS Airstream",
+  "subheading": "",
+  "categoryUrl" : "category/cable-blowing/",
+  "categoryName" : "Cable Blowing",
+  "secondCategoryName" : "",
+  "secondCategoryUrl": "",
+  "author" : "by Admin",
+  "date": "Feb 17, 2020",
+  "description": "The C-1700 Air Stream has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls to provide precise control of torque and speed..." 
+ },
+ {
+ "id": 8,
+ "img":"D-685-400x250.jpeg",
+   "heading": "CBS Running Out Blocks",
+   "author" : "by Admin",
+   "date": "Nov 22, 2019",
+   "categoryName" : " Overhead Line",
+   "categoryUrl" : "category/running-out-blocks/",
+   "categoryNameTwo" : "Running Out Blocks",
+   "subheading": "",
+   "description": "The CBS range of running out blocks have been designed to suit almost every application when it comes to working at height with poles, cross arms and conductors of any size"
+ },{
+  "id": 9,
+ "img":"Airstream-1080x675.jpeg",
+  "heading": "CBS Airstream",
+  "subheading": "",
+  "categoryUrl" : "category/cable-blowing/",
+  "categoryName" : "Cable Blowing",
+  "secondCategoryName" : "",
+  "secondCategoryUrl": "",
+  "author" : "by Admin",
+  "date": "Feb 17, 2020",
+  "description": "The C-1700 Air Stream has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology..." 
+}
+]
