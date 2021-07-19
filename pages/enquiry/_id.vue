@@ -6,94 +6,89 @@
         <v-container>
           <v-row class="py-16">
             <v-col md="5" cols="12">
-              <div class="text-h6 font-weight-bold mb-5">Our Office</div>
               <v-list two-line class="transparent">
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="primary"> mdi-map-marker </v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title>ADDRESS</v-list-item-title>
-                    <v-list-item-subtitle
-                      >CBS Products (KT),
-                    </v-list-item-subtitle>
-                    <v-list-item-subtitle> Pillings Road </v-list-item-subtitle>
-                    <v-list-item-subtitle> Rutland </v-list-item-subtitle>
-                    <v-list-item-subtitle>LE15 6QF</v-list-item-subtitle>
-                    <v-list-item-subtitle>UK</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="primary"> mdi-email </v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title>EMAIL</v-list-item-title>
-                    <v-list-item-subtitle
-                      >sales@cbsproducts.com</v-list-item-subtitle
-                    >
-                  </v-list-item-content>
-                </v-list-item>
-
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="primary"> mdi-phone </v-icon>
-                  </v-list-item-icon>
-
-                  <v-list-item-content>
-                    <v-list-item-title>PHONE</v-list-item-title>
-                    <v-list-item-subtitle
-                      >+44 (0) 1572 723 665</v-list-item-subtitle
-                    >
-                  </v-list-item-content>
-                </v-list-item>
+                <v-img
+                  max-height="300"
+                  :src="`/${product.mainImg}`"
+                  max-width="300"
+                  class="mx-auto"
+                  :lazy-src="`/${product.mainImg}`"
+                />
               </v-list>
-              <div class="text-h6 font-weight-bold mt-12 mb-5">
-                Business Hours
+              <div class="text-h6 font-weight-bold mt-12 mb-10">
+                Contact our Team
               </div>
-              <v-list two-line class="transparent">
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="primary"> mdi-clock </v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>MONDAY to THURDAY </v-list-item-title>
-                    <v-list-item-subtitle>8.30am to 5pm</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="primary"> mdi-clock </v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>FRIDAY</v-list-item-title>
-                    <v-list-item-subtitle
-                      >8.30am to 3.45pm</v-list-item-subtitle
-                    >
-                  </v-list-item-content>
-                </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon> mdi-email </v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <v-list-item-title>EMAIL</v-list-item-title>
+                  <v-list-item-subtitle
+                    >sales@cbsproducts.com</v-list-item-subtitle
+                  >
+                </v-list-item-content>
+              </v-list-item>
 
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon color="primary"> mdi-clock </v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>SATURDAY & SUNDAY</v-list-item-title>
-                    <v-list-item-subtitle>CLOSED</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
+              <v-divider></v-divider>
+
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon> mdi-phone </v-icon>
+                </v-list-item-icon>
+
+                <v-list-item-content>
+                  <v-list-item-title>PHONE</v-list-item-title>
+                  <v-list-item-subtitle>
+                    +44 (0) 1572 723 665</v-list-item-subtitle
+                  >
+                </v-list-item-content>
+              </v-list-item>
+              <!-- <SectionsTeam :our-team="ourTeam" /> -->
             </v-col>
+
             <v-col md="7" cols="12">
-              <div class="text-h4 font-weight-black mb-8">Contact Us</div>
+              <div class="text-h4 font-weight-black mb-8">
+                {{ product.name }}
+              </div>
               <p class="mb-10">
                 Please do not hesitate to get in touch. One of our team members
                 will get back to you shortly with your enquiry.
               </p>
-              <contactForm />
+              <v-form>
+                <v-row class="mb-n6">
+                  <v-col
+                    ><v-text-field label="Name" dense outlined></v-text-field
+                  ></v-col>
+                  <v-col
+                    ><v-text-field label="Email" dense outlined></v-text-field
+                  ></v-col>
+                </v-row>
+
+                <v-row class="mb-n6">
+                  <v-col
+                    ><v-text-field label="Subject" dense outlined></v-text-field
+                  ></v-col>
+                </v-row>
+                <v-row class="mb-n6">
+                  <v-col>
+                    <v-textarea
+                      dense
+                      label="Your Message"
+                      auto-grow
+                      outlined
+                      rows="8"
+                      row-height="20"
+                    ></v-textarea>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col
+                    ><v-btn class="my-2" color="primary">SEND MESSAGE</v-btn
+                    ><v-btn class="my-2 ml-3">clear</v-btn></v-col
+                  >
+                </v-row>
+              </v-form>
             </v-col>
           </v-row>
         </v-container>
@@ -113,20 +108,60 @@
 </template>
 
 <script>
-import contactForm from '~/components/sections/contactForm.vue'
+import { mapState } from 'vuex'
+
 export default {
-  components: {
-    contactForm,
-  },
+  components: {},
   data() {
     return {
       heroAlt: [
         {
-          src: 'C-1350-2.jpeg',
-          heading: ' Contact Us ',
+          src: '../tornado.jpg',
+          heading: ' Enquire Now',
+        },
+      ],
+      id: this.$route.params.id,
+      item: '',
+      ourTeam: [
+        {
+          name: 'John Churchill',
+          position: 'Marketing Director',
+          phone: '+1 (987) 1625346',
+          email: 'john@example.com',
+          photo: 'person-1.jpg',
+        },
+        {
+          name: 'Fiona	Ross',
+          position: 'Project Manager',
+          phone: '+1 (987) 5894684',
+          email: 'fiona@example.com',
+          photo: 'person-2.jpg',
+        },
+        {
+          name: 'Justin	Rees',
+          position: 'VP Marketing',
+          phone: '+1 (987) 6982456',
+          email: 'justin@example.com',
+          photo: 'person-3.jpg',
+        },
+        {
+          name: 'Amelia	Ogden',
+          position: 'Communication Manager',
+          phone: '+1 (987) 6982456',
+          email: 'amelia@example.com',
+          photo: 'person-4.jpg',
         },
       ],
     }
+  },
+  computed: {
+    ...mapState(['productItems']),
+    product() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.item = this.productItems.find((el) => el.id === this.id)
+
+      return this.item
+    },
   },
   head() {
     return {

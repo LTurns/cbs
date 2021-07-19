@@ -12,13 +12,13 @@
               :elevation="hover ? 24 : plan.elevation"
               :color="plan.color"
               max-width="400"
-              min-height="600"
+              min-height="450"
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
               <nuxt-link class="link" :to="`/product/${plan.id}`">
                 <h4
-                  class="text-uppercase text-center black--text grey lighten-3 mt-5 mb-5 pt-5 pl-5 pr-5 pb-5"
+                  class="text-uppercase text-center black--text grey lighten-3 mt-5 pt-5 pl-5 pr-5 pb-5"
                   style="letter-spacing: 0.15em"
                   v-text="plan.name"
                 ></h4>
@@ -34,9 +34,19 @@
                   class="subtitle-1 black--text"
                   v-text="plan.intro"
                 ></v-card-text>
-                <v-list>
-                  <v-list-item>
-                    <v-btn
+                <!-- <v-list>
+                  <v-list-item> -->
+                <div class="text mt-10 mx-auto text-right">
+                  <div
+                    class="d-inline pa-2 mt-5 orange accent-4 white--text mb-5"
+                  >
+                    Product ID
+                  </div>
+                  <div class="d-inline pa-2 mt-5 black white--text mb-5">
+                    {{ plan.productId }}
+                  </div>
+                </div>
+                <!-- <v-btn
                       color="primary"
                       large
                       block
@@ -44,9 +54,9 @@
                       class="mx-auto my-3"
                     >
                       View Now
-                    </v-btn>
-                  </v-list-item>
-                </v-list>
+                    </v-btn> -->
+                <!-- </v-list-item>
+                </v-list> -->
               </nuxt-link>
             </v-card></v-hover
           >

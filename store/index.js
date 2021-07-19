@@ -1,9 +1,11 @@
 import products from '~/static/products.json'
 import featuredProducts from '~/static/featuredProducts.json'
+import blogStories from '~/static/blogstories.json'
 
 export const state = () => ({
   productItems: products,
   featuredProducts,
+  blogStories,
 })
 
 export const getters = {
@@ -16,4 +18,5 @@ export const getters = {
   clientTools: (state) =>
     state.productItems.filter((el) => el.category === 'Client Tools'),
   featuredItems: (state) => state.featuredProducts,
+  BlogStories: (state) => state.blogStories,
 }

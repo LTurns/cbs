@@ -1,7 +1,7 @@
 <template>
   <section
     id="intro"
-    class="py-10"
+    class="py-10 mb-20"
     :style="{ background: $vuetify.theme.themes['dark'].accent }"
   >
     <v-container>
@@ -18,14 +18,17 @@
             <v-card
               :elevation="hover ? 12 : 2"
               shaped
-              class="pa-md-4 mx-lg-auto"
+              class="pa-md-10 mx-lg-auto"
               :class="hover ? 'zoom' : 'notzoom'"
             >
               <nuxt-link class="category" exact :to="card.link">
                 <v-row no-gutters>
                   <v-col>
                     <div class="pr-2">
-                      <img :src="card.image" />
+                      <img
+                        :src="card.image"
+                        style="max-width: 100px; height: auto"
+                      />
                       <h3
                         class="text-uppercase mt-1 mb-3"
                         style="letter-spacing: 0.15em"

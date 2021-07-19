@@ -5,8 +5,8 @@
   "productId":"C-1250-08",
   "description": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation. The system installs fibre optic cable of 6mm (0.25”) to 32mm (1.25”) overall diameter, at speeds up to 90m/min (300ft/min), into pre-installed ducts. The system operates on the viscous drag principle employing compressed air to install the cable, controlled and assisted by the belt drive system. The cable is propelled by compressed air, fed into the duct via a venturi principle, while the hydraulically powered belt drive system controls the fibre optic cable. The electronic monitoring system provides read out of speed and distance, gives protection against duct obstructions and includes an emergency stop facility. The system is mounted on an anti-corrosion treated, sturdy, height adjustable, wheeled, tubular steel trolley. This allows the unit to be wheeled around on site. The C-1203 hydraulic petrol driven power pack provides power. The unit is CE approved.",
   "img": [
-    { "image" :"tornado.jpg" },
     { "image" :"tornado/tornado-1.jpeg" },
+    { "image" :"tornado.jpg" },
     { "image" :"tornado/tornado-2.jpeg" },
     { "image" :"tornado/tornado-3.jpeg" },
     { "image" :"tornado/tornado-4.jpeg" },
@@ -188,7 +188,7 @@
         }
         ],
         "columns": [ "Cable Diameter", "Part No for Cable Collet Assy (C)", "Part No for In-Feed Cable Collet (D)"],
-        "image" : "tornado/cable-collet-assy.jpg"
+        "image" : "tornado/collet-assy.jpg"
       },
       {
         "items": [
@@ -317,32 +317,41 @@
     ],
     "accessories": [
       {
-        "name": "Tornado Plus",
+        "name": "Tube Blowing Conversion Kits",
         "elevation": 4,
         "color": "white",
-        "id": "1",
+        "id": "4",
         "productId": "C-1250-08",
-        "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
-        "mainImg": "../tornado.jpg"
+        "intro": "The tube blowing conversion kits are initially used to convert an existing Tornado Cable Blowing Machine into a Tube Blowing Machine for installing micro tubes into ducts.",
+        "mainImg": "../tornado/tornado_accessory_1.png"
      },
      {
-        "name": "Tornado Plus",
+        "name": "Compressed Air Cooler",
         "elevation": 4,
         "color": "white",
         "id": "1",
         "productId": "C-1250-08",
-        "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
-        "mainImg": "../tornado.jpg"
+        "intro": "The Compressor Aftercooler has been designed to cool compressed air and remove water droplets prior to entering a CBS Tornado Cable Blowing Machine.",
+        "mainImg": "../tornado/tornado_accessory_2.jpeg"
      },
      {
-        "name": "Tornado Plus",
+        "name": "Hydraulic Power Pack",
         "elevation": 4,
         "color": "white",
-        "id": "1",
-        "productId": "C-1250-08",
-        "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
-        "mainImg": "../tornado.jpg"
-     }
+        "id": "15",
+        "productId": "C-1203-F",
+        "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
+        "mainImg": "../tornado/tornado_accessory_3.jpeg"
+     },
+     {
+      "name": "Cable Floating Water Pump",
+      "elevation": 4,
+      "color": "white",
+      "id": "1",
+      "productId": "C-1203-F",
+      "intro": "The CBS C-1240-F Cable Floating Water Pump has been designed to work in conjunction with the C-1250 Tornado to install fibre cables using water instead of air.",
+      "mainImg": "../tornado/tornado_accessory_4.jpeg"
+   }
     ]
   },
   {
@@ -602,31 +611,13 @@
        ],
        "accessories": [
         {
-          "name": "Tornado Plus",
+          "name": "Hydraulic Power Pack",
           "elevation": 4,
           "color": "white",
-          "id": "1",
-          "productId": "C-1250-08",
-          "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
-          "mainImg": "../tornado.jpg"
-       },
-       {
-          "name": "Tornado Plus",
-          "elevation": 4,
-          "color": "white",
-          "id": "1",
-          "productId": "C-1250-08",
-          "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
-          "mainImg": "../tornado.jpg"
-       },
-       {
-          "name": "Tornado Plus",
-          "elevation": 4,
-          "color": "white",
-          "id": "1",
-          "productId": "C-1250-08",
-          "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
-          "mainImg": "../tornado.jpg"
+          "id": "15",
+          "productId": "C-1203-F",
+          "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
+          "mainImg": "../tornado/tornado_accessory_3.jpeg"
        }
       ]
      },
@@ -782,7 +773,7 @@
              }
              ],
              "columns": [ "Cable Diameter", "Part No for Cable Collet Assy (C)", "Part No for In-Feed Cable Collet (D)"],
-             "image" : "hurricane/hurricane-config-3"
+             "image" : "hurricane/hurricane-config-3.jpeg"
            },
            {
              "items": [
@@ -906,7 +897,7 @@
                  }
                  ],
                  "columns": [ "Cable Diameter", "Part No for F) Cable Seal Plugs"],
-                 "image" : "hurricane/hurricane-config-5.jpeg"
+                 "image" : "hurricane/hurricane-config-6.jpeg"
                }
               ],
                "accessories": [
@@ -944,7 +935,16 @@
          "name": "AirStream Cable Blowing Machine",
          "productId":"C-1700",
          "description": "The C-1700 AirStream cable blowing machine has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
-         "img": [ "jetstream/jetstream.jpg", "background1.jpg", "jetstream/jetstream.jpg", "jetstream/jetstream.jpg"],
+         "img": [
+          { "image" : "airstream/airstream-1.jpeg"},
+          { "image" :"airstream/airstream-2.jpeg" },
+          { "image" :"airstream/airstream-3.jpeg" },
+          { "image" :"airstream/airstream-4.jpeg" },
+          { "image" :"airstream/airstream-5.jpeg" },
+          { "image" :"airstream/airstream-6.jpeg"},
+          { "image" :"airstream/airstream-7.jpeg" },
+          { "image" :"airstream/airstream-8.jpeg" }
+        ],
          "mainImg": "airstream.jpg",
          "category": "Fibre Blowing",
          "item": [
@@ -987,227 +987,190 @@
         ],
          "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
          "video" : "https://www.youtube.com/embed/JMxLzd_RYDI",
-         "configurationTitle": "TORNADO Configuration for Cable Blowing",
-         "configurationIntro": "In order to customise your new “Tornado” to your application, we ask that you pick one of each from the list below, the Duct Clamp Collet (A), the Duct Seal Collet (B), the Cable Collet Assy (C) and the In Feed Cable Collet (D), the Cable Seals (E) and the Cable Seal Plug (F). When ordering, please have Tube and Cable dimensions available. All imperial sizes are available on request.",
-         "configImage": "tornados/tornadoconfig.jpg",
+         "configurationTitle": "AirStream Configuration for Cable Blowing",
+         "configurationIntro": "In order to customise your AirStream to your application, please select one of each from the list below, the Tube Collet Assembly, the Cable Guide Assembly and the Cable Collet Assembly. When ordering, please have Tube and Cable dimensions available.",
+         "configImage": "",
          "tables" : [
            {
              "items": [
                {
-                   "Duct O.D": "25mm",
-                   "Part No for A) Duct Clamp Collet": "C-1258-0200-25"
+                   "Product No": "C-1700-TBC-05",
+                   "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 05mm o/d"
                },
                {
-                 "Duct O.D":"32mm",
-                 "Part No for A) Duct Clamp Collet":  "C-1258-0200-32"
+                 "Product No":"C-1700-TBC-07",
+                 "Tube Collet & Clamp Assemblies":  "Tube Collet Assy - 07mm o/d"
                },
                { 
-                 "Duct O.D":  "38mm",
-               "Part No for A) Duct Clamp Collet": "C-1258-0200-38"
+                "Product No":  "C-1700-TBC-08",
+                 "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 08mm o/d"
                },
                { 
-                 "Duct O.D":  "40mm",
-               "Part No for A) Duct Clamp Collet": "C-1258-0200-40"
+                "Product No":  "C-1700-TBC-10",
+                 "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 10mm o/d"
                },
                { 
-                 "Duct O.D":  "50mm",
-               "Part No for A) Duct Clamp Collet": "C-1258-0200-50"
+                "Product No":  "C-1700-TBC-12",
+                 "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 12mm o/d"
+               },
+               { 
+                "Product No":  "C-1700-TBC-14",
+                 "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 14mm o/d"
+               },
+               { 
+                "Product No":  "C-1700-TBC-16",
+                 "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 16mm o/d"
+               },
+               { 
+                "Product No":  "C-1700-TBC-18",
+                 "Tube Collet & Clamp Assemblies": "Tube Collet Assy - 18mm o/d"
                }
            ],
-           "columns": [ "Duct O.D", "Part No for A) Duct Clamp Collet"],
-           "image" : "tornados/duct-clamp-collet.jpg"
+           "columns": [ "Product No", "Tube Collet & Clamp Assemblies"],
+           "image" : "airstream/airstream-config-1.jpeg"
            },
            {
              "items": [
                {
-                   "Duct O.D": "25mm",
-                   "Part No for B) Duct Seal Collet": "C-1257-0202-25"
+                   "Product No": "C-1700-CG-02025",
+                   "Cable Guide Assemblies": "Cable Guide, 2.5mm Dia"
                },
                {
-                   "Duct O.D": "32mm",
-                   "Part No for B) Duct Seal Collet": "C-1257-0202-32"
+                   "Product No": "C-1700-CG-02503",
+                   "Cable  Guide Assemblies": "Cable Guide, 2.6 - 3.5mm Dia"
                },
                {
-                 "Duct O.D": "38mm",
-                 "Part No for B) Duct Seal Collet": "C-1257-0202-38"
+                 "Product No": "C-1700-CG-0306",
+                 "Cable  Guide Assemblies": "Cable Guide, 3.0 - 6.4mm Dia"
                },
                {
-               "Duct O.D": "40mm",
-               "Part No for B) Duct Seal Collet": "C-1257-0202-40"
+               "Product No": "C-1700-CG-0685",
+               "Cable  Guide Assemblies": "Cable Guide, 6.0 - 8.5mm Dia"
                },
                {
-                 "Duct O.D": "50mm",
-                 "Part No for B) Duct Seal Collet": "C-1257-0202-50"
+                 "Product No": "C-1700-CG-8511",
+                 "Cable  Guide Assemblies": "Cable Guide, 8.5 - 11.0mm Dia"
                }
            ],
-           "columns": [ "Duct O.D", "Part No for B) Duct Seal Collet"],
-           "image" : "tornados/duct-seal-collet.jpg"
+           "columns": [ "Product No", "Cable Guide Assemblies"],
+           "image" : "airstream/airstream-config-2.jpeg"
            },
            {
              "items": [
                {
-                 "Cable Diameter": "6-9mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-06-09",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0104-06-09"
+                 "Product No": "C-1700-CBL-2530",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 2.5 - 3.0mm"
                },
                {
-                 "Cable Diameter": "9-12mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-09-12",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0104-09-12"
+                 "Product No": "C-1700-CBL-3038",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 3.0 - 3.8mm"
                },
                {
-                 "Cable Diameter": "12-16mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-12-16",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0103-12-16"
+                 "Product No": "C-1700-CBL-3850",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 3.8 - 5.0mm"
                },
                {
-                 "Cable Diameter": "16-20mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-16-20",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0103-16-20"
+                 "Product No": "C-1700-CBL-5064",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 5.0 - 6.4mm"
                },
                {
-                 "Cable Diameter": "20-24mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-20-24",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0103-20-24"
+                 "Product No": "C-1700-CBL-6480",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 6.4 - 8.0mm"
                },
                {
-                 "Cable Diameter": "24-28mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-24-28",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0103-24-28"
+                 "Product No": "C-1700-CBL-8095",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 8.0 - 9.5mm"
                },
                {
-                 "Cable Diameter": "28-32mm",
-                 "Part No for Cable Collet Assy (C)": "C-1256-0103-28-32",
-                 "Part No for In-Feed Cable Collet (D)" : "C-1256-0103-28-32"
+                 "Product No": "C-1700-CBL-9511",
+                 "Cable Seal Collet Assemblies": "Cable Seal Collet 9.5 - 11.0mm"
                }
                ],
-               "columns": [ "Cable Diameter", "Part No for Cable Collet Assy (C)", "Part No for In-Feed Cable Collet (D)"],
-               "image" : "tornados/cable-collet-assy.jpg"
+               "columns": [ "Product No", "Cable Seal Collet Assemblies"],
+               "image" : "airstream/airstream-config-3.jpeg"
              },
              {
                "items": [
                  {
-                   "Cable Diameter": "6-7.5mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-06-07.5"
+                   "Product No": "C-1300-CS-2530-5",
+                   "Cable Seals (supplied in packs of 5)": "Cable Seals 2.5 – 3.0mm"
                  },
                  {
-                   "Cable Diameter": "7.5-9mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-07.5-09"
+                   "Product No": "C-1300-CS-3038-5",
+                   "Cable Seals (supplied in packs of 5)": "Cable Seals 3.0 – 3.8mm"
                  },
                  {
-                   "Cable Diameter": "9-10.5mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-09-10.5"
+                   "Product No": "C-1300-CS-3850-5",
+                   "Cable Seals (supplied in packs of 5)": "Cable Seals 3.8 – 5.0mm"
                  },
                  {
-                   "Cable Diameter": "10.5-12mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-10.5-12"
+                   "Product No": "C-1300-CS-5064-5",
+                   "Cable Seals (supplied in packs of 5)": "Cable Seals 5.0 – 6.4mm"
                  },
                  {
-                   "Cable Diameter": "12-14mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-12-14-F"
+                   "Product No": "C-1300-CS-6480-5",
+                   "Cable Seals (supplied in packs of 5)": "Cable Seals 6.4 – 8.0mm"
                  },
                  {
-                   "Cable Diameter": "14-16mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-14-16-F"
-                 },
-                 {
-                   "Cable Diameter": "16-18mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-16-18-F"
-                 },
-                 {
-                   "Cable Diameter": "18-20mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-18-20-F"
-                 },
-                 {
-                   "Cable Diameter": "20-22mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-20-22-F"
-                 },
-                 {
-                   "Cable Diameter": "22-24mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-22-24-F"
-                 },
-                 {
-                   "Cable Diameter": "24-26mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-24-26-F"
-                 },
-                 {
-                   "Cable Diameter": "26-28mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-26-28-F"
-                 },
-                 {
-                   "Cable Diameter": "28-30mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-28-30-F"
-                 },
-                 {
-                   "Cable Diameter": "30-32mm",
-                   "Part No for E) Cable Seals (Supplied in packs of 10)": "C-1255-0208-30-32-F"
-                 }
+                  "Product No": "C-1300-CS-8095-5",
+                  "Cable Seals (supplied in packs of 5)": "Cable Seals 8.0 – 9.5mm"
+                },
+                {
+                  "Product No": "C-1300-CS-9511-5",
+                  "Cable Seals (supplied in packs of 5)": "Cable Seals 9.5 – 11.0mm"
+                }
                  ],
-                 "columns": [ "Cable Diameter", "Part No for E) Cable Seals (Supplied in packs of 10)"],
-                 "image" : "tornados/cable-seals.jpg"
+                 "columns": [ "Product No", "Cable Seals (supplied in packs of 5)"],
+                 "image" : "airstream/airstream-config-4.jpeg"
                },
                {
                  "items": [
                    {
-                     "Cable Diameter": "6-7.5mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-07.5"
+                     "Product No": "C-1700-TBC-05",
+                     "Tube Seal O Ring": "Tube Seal O Ring 05mm Dia"
                    },
                    {
-                     "Cable Diameter": "7.5-9mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-09"
+                     "Product No": "C-1700-TBC-07",
+                     "Tube Seal O Ring": "Tube Seal O Ring 07mm Dia"
                    },
                    {
-                     "Cable Diameter": "9-10.5mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-10.5"
+                     "Product No": "C-1700-TBC-08",
+                     "Tube Seal O Ring": "Tube Seal O Ring 08mm Dia"
                    },
                    {
-                     "Cable Diameter": "10.5-12mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-12"
+                     "Product No": "C-1700-TBC-10",
+                     "Tube Seal O Ring": "Tube Collet Assy - 10mm o/d"
                    },
                    {
-                     "Cable Diameter": "12-14mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-14"
+                     "Product No": "C-1700-TBC-12",
+                     "Tube Seal O Ring": "Tube Collet Assy - 12mm o/d"
                    },
                    {
-                     "Cable Diameter": "14-16mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-16"
+                     "Product No": "C-1700-TBC-14",
+                     "Tube Seal O Ring": "Tube Collet Assy - 14mm o/d"
                    },
                    {
-                     "Cable Diameter": "16-18mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-18"
+                     "Product No": "C-1700-TBC-16",
+                     "Tube Seal O Ring": "Tube Collet Assy - 16mm o/d"
                    },
                    {
-                     "Cable Diameter": "18-20mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-20"
-                   },
-                   {
-                     "Cable Diameter": "20-22mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-22"
-                   },
-                   {
-                     "Cable Diameter": "22-24mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-24"
-                   },
-                   {
-                     "Cable Diameter": "24-26mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-26"
-                   },
-                   {
-                     "Cable Diameter": "26-28mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-28"
-                   },
-                   {
-                     "Cable Diameter": "28-30mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-30"
-                   },
-                   {
-                     "Cable Diameter": "30-32mm",
-                     "Part No for F) Cable Seal Plugs": "C-1256-0206-32"
-                   }
+                    "Product No": "C-1700-TBC-18",
+                    "Tube Seal O Ring": "Tube Collet Assy - 18mm o/d"
+                  }
                    ],
-                   "columns": [ "Cable Diameter", "Part No for F) Cable Seal Plugs"],
-                   "image" : "tornados/cable-seals-plugs.jpg"
-                 }
+                   "columns": [ "Product No", "Tube Seal O Ring"],
+                   "image" : "airstream/airstream-config-5.jpeg"
+                 },
+                 {
+                  "items": [
+                    {
+                     "Product No": "C-1700-DB-0311",
+                     "Replacement Drive Belts (Supplied in pairs)": "Drive Belt, 2.5 - 11mm Cable Dia"
+                   }
+                    ],
+                    "columns": [ "Product No", "Replacement Drive Belts (Supplied in pairs)"],
+                    "image" : "airstream/airstream-config-6.jpeg"
+                  }
            ]
          },
          {
