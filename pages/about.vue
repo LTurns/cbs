@@ -4,12 +4,12 @@
       <v-col cols="12">
         <SectionsHeroAlt :hero-alt="heroAlt" />
         <v-container>
-          <v-row class="py-16">
+          <v-row class="py-5">
             <v-col cols="12">
               <h2
-                class="text-h4 text-md-h3 text-center white--text font-weight-black text-capitalize"
+                class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
               >
-                Who we are?
+                WHO ARE WE?
               </h2>
               <v-divider
                 inset
@@ -77,7 +77,6 @@
             </v-col>
           </v-row>
         </v-container>
-        <!-- <SectionsTeam :our-team="ourTeam" /> -->
         <!-- <v-row no-gutters class="flex-row-reverse">
           <v-col cols="12" md="6" align-self="center">
             <v-img
@@ -113,8 +112,18 @@
             </div>
           </v-col>
         </v-row> -->
-
+        <h2
+          class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
+        >
+          OUR JOURNEY
+        </h2>
         <SectionsTimeline />
+        <h2
+          class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
+        >
+          MEET THE TEAM
+        </h2>
+        <SectionsTeam :our-team="ourTeam" class="mb-10" />
       </v-col>
     </v-row>
   </section>
@@ -132,32 +141,39 @@ export default {
       ],
       ourTeam: [
         {
-          name: 'John Churchill',
-          position: 'Marketing Director',
-          phone: '+1 (987) 1625346',
-          email: 'john@example.com',
-          photo: 'person-1.jpg',
+          name: 'Andy Sibun',
+          position: 'Technical Manager',
+          phone: 'Tel: +44 (0) 1572 898515',
+          email: 'andy.sibun@cbsproducts.com',
+          photo: '',
         },
         {
-          name: 'Fiona	Ross',
-          position: 'Project Manager',
-          phone: '+1 (987) 5894684',
-          email: 'fiona@example.com',
-          photo: 'person-2.jpg',
+          name: 'Carolyn Winn',
+          position: 'Logistics Manager',
+          phone: 'Tel: +44 (0) 1572 898512',
+          email: 'carolyn.winn@cbsproducts.com',
+          photo: '',
         },
         {
-          name: 'Justin	Rees',
-          position: 'VP Marketing',
-          phone: '+1 (987) 6982456',
-          email: 'justin@example.com',
-          photo: 'person-3.jpg',
+          name: 'Lawrence Green',
+          position: 'Production Manager',
+          phone: 'Tel: +44 (0) 1572 898513',
+          email: 'lawrence.green@cbsproducts.com',
+          photo: '',
         },
         {
-          name: 'Amelia	Ogden',
-          position: 'Communication Manager',
-          phone: '+1 (987) 6982456',
-          email: 'amelia@example.com',
-          photo: 'person-4.jpg',
+          name: 'Robert Davidson',
+          position: 'Managing Director',
+          phone: 'Tel: +44 (0) 1572 898501',
+          email: 'robert.davidson@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Mike Turney',
+          position: 'Finance Director',
+          phone: 'Tel: +44 (0) 1572 898522',
+          email: 'mike.turney@cbsproducts.com',
+          photo: '',
         },
       ],
     }

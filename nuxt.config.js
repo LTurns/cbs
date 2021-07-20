@@ -17,7 +17,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - ModeVue',
+    titleTemplate: '%s - CBS Products',
     title: 'Home',
     htmlAttrs: {
       lang: 'en',
@@ -29,7 +29,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'ModeVue — is a carefully crafted multi-purpose, responsive, and gorgeous theme. Built with Vue.js and Nuxt.js, it comes with the features you need to quickly start developing your application.',
+          'CBS Products is at the forefront of cabling technology, the design and manufacture of installation equipment for HV Transmission towers, LV Distribution lines, Railway Tracksides and underground CATV / Telecommunication networks, including the handling of Fibre Optic Cables, for projects around the world. We also offer a comprehensive range of standard equipment.',
       },
     ],
     link: [

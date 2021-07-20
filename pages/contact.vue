@@ -88,7 +88,14 @@
               </v-list>
             </v-col>
             <v-col md="7" cols="12">
-              <div class="text-h4 font-weight-black mb-8">Contact Us</div>
+              <div class="text mx-auto text-left mb-8">
+                <div class="d-inline text-h4 font-weight-black">
+                  Contact Us or
+                </div>
+                <div class="d-inline text-h4 font-weight-black">
+                  <a href="#team">Speak to the our team</a>
+                </div>
+              </div>
               <p class="mb-10">
                 Please do not hesitate to get in touch. One of our team members
                 will get back to you shortly with your enquiry.
@@ -97,6 +104,7 @@
             </v-col>
           </v-row>
         </v-container>
+        <SectionsSalesTeam id="team" :our-team="ourTeam" class="mb-10" />
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2418.8700203174435!2d-0.7338425846941268!3d52.68038493208387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487780f4ac1c42a7%3A0xa65da3dcfdd6588d!2sC%20B%20S%20Products%20(KT)%20Ltd!5e0!3m2!1sen!2suk!4v1626176078725!5m2!1sen!2suk"
           width="100%"
@@ -124,6 +132,43 @@ export default {
         {
           src: 'C-1350-2.jpeg',
           heading: ' Contact Us ',
+        },
+      ],
+      ourTeam: [
+        {
+          name: 'Andy Sibun',
+          position: 'Technical Manager',
+          phone: 'Tel: +44 (0) 1572 898515',
+          email: 'andy.sibun@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Carolyn Winn',
+          position: 'Logistics Manager',
+          phone: 'Tel: +44 (0) 1572 898512',
+          email: 'carolyn.winn@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Lawrence Green',
+          position: 'Production Manager',
+          phone: 'Tel: +44 (0) 1572 898513',
+          email: 'lawrence.green@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Robert Davidson',
+          position: 'Managing Director',
+          phone: 'Tel: +44 (0) 1572 898501',
+          email: 'robert.davidson@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Mike Turney',
+          position: 'Finance Director',
+          phone: 'Tel: +44 (0) 1572 898522',
+          email: 'mike.turney@cbsproducts.com',
+          photo: '',
         },
       ],
     }

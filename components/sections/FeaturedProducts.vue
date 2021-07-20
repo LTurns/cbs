@@ -12,7 +12,7 @@
               :elevation="hover ? 24 : plan.elevation"
               :color="plan.color"
               max-width="400"
-              min-height="450"
+              min-height="550"
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
@@ -36,13 +36,16 @@
                 ></v-card-text>
                 <!-- <v-list>
                   <v-list-item> -->
-                <div class="text mt-10 mx-auto text-right">
+                <div
+                  class="text mx-auto text-right"
+                  style="position: absolute; bottom: 0; text-align: center"
+                >
                   <div
-                    class="d-inline pa-2 mt-5 orange accent-4 white--text mb-5"
+                    class="d-inline pa-2 mt-5 yellow accent-4 black--text mb-5"
                   >
                     Product ID
                   </div>
-                  <div class="d-inline pa-2 mt-5 black white--text mb-5">
+                  <div class="d-inline black white--text pa-2">
                     {{ plan.productId }}
                   </div>
                 </div>

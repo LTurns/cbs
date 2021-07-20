@@ -8,16 +8,16 @@
             {{ data.intro }}
           </p>
           <a href="#about" class="btn">Read More</a>
-          <v-btn
-            :x-large="$vuetify.breakpoint.smAndUp"
-            text
-            class="my-3"
-            outlined
-            white
-            ><v-icon left large color="primary">mdi-play</v-icon
-            ><nuxt-link exact :to="`/enquiry/${data.id}`" class="learn"
-              >Enquire Now</nuxt-link
-            ></v-btn
+          <nuxt-link exact :to="`/enquiry`" class="learn">
+            <v-btn
+              :x-large="$vuetify.breakpoint.smAndUp"
+              text
+              class="my-3"
+              outlined
+              white
+              ><v-icon left large color="primary">mdi-play</v-icon>Enquire
+              Now</v-btn
+            ></nuxt-link
           >
         </div>
         <img :src="`/${data.mainImg}`" alt="" />

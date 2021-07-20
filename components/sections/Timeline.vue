@@ -1,9 +1,6 @@
 <template>
   <section id="timeline" class="py-16">
     <v-container>
-      <h2 class="text-h3 text-center white--text font-weight-black mb-8">
-        Our Journey
-      </h2>
       <template>
         <v-timeline>
           <v-timeline-item
@@ -22,13 +19,10 @@
               <h2
                 :class="`headline font-weight-light mb-4 ${year.color}--text`"
               >
-                Lorem ipsum
+                {{ year.title }}
               </h2>
-              <div>
-                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
-                scaevola imperdiet nec ut, sed euismod convenire principes at.
-                Est et nobis iisque percipit, an vim zril disputando
-                voluptatibus, vix an salutandi sententiae.
+              <div class="white--text">
+                {{ year.info }}
               </div>
             </div>
           </v-timeline-item>
@@ -44,28 +38,32 @@ export default {
     return {
       years: [
         {
-          color: 'cyan',
-          year: '1960',
+          color: 'yellow',
+          year: '1971',
+          title: 'CBS Is Established',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
-          color: 'green',
-          year: '1970',
-        },
-        {
-          color: 'pink',
+          color: 'orange',
           year: '1980',
+          title: 'CBS Diversifies',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
-          color: 'amber',
+          color: 'yellow',
           year: '1990',
+          title: 'CBS gains big clients',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
           color: 'orange',
           year: '2000',
-        },
-        {
-          color: 'teal',
-          year: '2020',
+          title: 'Where we are Now',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
       ],
     }
