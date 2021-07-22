@@ -1,105 +1,278 @@
 [
  { 
- "id": 1,
- "img":"Fill-Ratio.png",
-  "heading": "We're 50!",
-  "subheading": "Join us as we reminisce!",
-  "description": "CBS Products is celebrating it's 50th anniversary this year, and what a ride it's been! Click below to see some of the best highlights.",
-  "author" : "by Admin",
-  "date": "Dec 23, 2020",
-  "categoryUrl" : "category/duct-rods/",
-  "categoryName" : "Duct Rods"
- },
+ "id": "1",
+  "heading": "C-1270-KIT",
+  "subheading": "The CBS Duct Rod Pusher is now available in a kit",
+  "description": [
+    { "paragraph" : "The CBS Duct Rod Pusher is now available in a kit, complete with powerpack and 14 x 300mm duct rod. What takes a team of engineers hours to do will take minutes with this kit and just one engineer, saving time, money and pain in their back. The Pusher will work in forward and reverse, is fitted with a counter, and will help identify any blockages in the route." }],
+  "info" : "by Admin, Dec 23, 2020",
+  "categories" : ["Duct Rods", "Underground"],
+  "img": [
+    { "image" : "ductrodpusher.jpeg" },
+    { "image" :"ductpusher2.jpeg" }]
+  },
  { 
-   "id": 3,
-   "img":"DSC_1219-2-980x849.jpeg",
-    "heading": "C-1270-KIT",
-    "author" : "by Admin",
-    "date": "Dec 23, 2020",
-    "categoryUrl" : "category/duct-rods/",
-    "categoryName" : "Duct Rods",
-    "subheading": "",
-    "description": "The CBS Duct Rod Pusher is now available in a kit, complete with powerpack and 14 x 300mm duct rod. What takes a team of engineers hours to do will take minutes with this kit and just one engineer..."
- },{
-  "id": 4,
-  "img":"Fill-Ratio.png",
-    "heading": "Coronavirus Update",
-    "subheading": "OPEN FOR BUSINESS CORONAVIRUS UPDATE",
-    "categoryUrl" : "",
-    "categoryName" : "",
-    "author" : "by Admin",
-    "date": "April 6, 2020",
-    "description": "CBS remains open and are working hard to provide essential services to our telecommunications and electricity industries during these difficult and uncertain times. We want to assure you that we are taking the current situation..." 
- },
- { 
-   "id": 5,
-   "img":"Fill-Ratio.png",
-     "heading": "The Perfect Fill Ratio for Cable Blowing",
-     "author" : "by Admin",
-     "date": "Feb 28, 2020",
-     "categoryUrl" : "category/cable-blowing/",
-     "categoryName" : "Cable Blowing",
-     "subheading": "",
-     "description": "Fibre optic cable blowing isn’t a new technique for cable installation and, in fact, it has been in use since the late 1990’s. However, the cable blowing technique may be new to some installers..."
- },
- {
-  "id": 6,
-   "img":"d-710-1-2.jpeg",
-  "heading": "CBS Pole Bogie",
-  "subheading": "",
-  "categoryUrl" : "category/overhead-line/",
-  "categoryName" : "Overhead Line",
-  "secondCategoryName" : "Pole Handling",
-  "secondCategoryUrl": "category/pole-handling/",
-  "author" : "by Admin",
-  "date": "Jan 24, 2020",
-  "description": "D-710 Pole Bogie. Designed to be ideally suited for transporting poles across rough terrain or soft ground, the poles are secured with quick action retaining straps to hold poles in place during transport. Available with low pressure tyres for use when keeping damage..." 
- },
- { 
-   "id": 7,
-   "img":"tornado.jpg",
-   "heading": "CBS Tornado Cable Blowing Machine",
-   "author" : "by Admin",
-   "date": " Jan 3, 2020",
-   "categoryUrl" : "category/cable-blowing/",
-   "categoryName" : "Cable Blowing",
-   "subheading": "",
-   "description": "We are the only company here in the UK that manufacture and produce our own range of cable blowing machines, the largest of which is the Tornado. This machine has been designed to to provide a safe and effective method of installing..."
- },{
-  "id": 7,
-  "img":"Airstream-1080x675.jpeg",
-  "heading": "CBS Airstream",
-  "subheading": "",
-  "categoryUrl" : "category/cable-blowing/",
-  "categoryName" : "Cable Blowing",
-  "secondCategoryName" : "",
-  "secondCategoryUrl": "",
-  "author" : "by Admin",
-  "date": "Feb 17, 2020",
-  "description": "The C-1700 Air Stream has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls to provide precise control of torque and speed..." 
- },
- {
- "id": 8,
- "img":"D-685-400x250.jpeg",
-   "heading": "CBS Running Out Blocks",
-   "author" : "by Admin",
-   "date": "Nov 22, 2019",
-   "categoryName" : " Overhead Line",
-   "categoryUrl" : "category/running-out-blocks/",
-   "categoryNameTwo" : "Running Out Blocks",
-   "subheading": "",
-   "description": "The CBS range of running out blocks have been designed to suit almost every application when it comes to working at height with poles, cross arms and conductors of any size"
- },{
-  "id": 9,
- "img":"Airstream-1080x675.jpeg",
-  "heading": "CBS Airstream",
-  "subheading": "",
-  "categoryUrl" : "category/cable-blowing/",
-  "categoryName" : "Cable Blowing",
-  "secondCategoryName" : "",
-  "secondCategoryUrl": "",
-  "author" : "by Admin",
-  "date": "Feb 17, 2020",
-  "description": "The C-1700 Air Stream has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology..." 
-}
+  "id": "2",
+   "heading": "The Perfect Fill Ratio for Cable Blowing",
+   "subheading": "one of the key parameters to a successful installation",
+   "description": [
+    { "paragraph" : "Fibre optic cable blowing isn’t a new technique for cable installation and, in fact, it has been in use since the late 1990’s. However, the cable blowing technique may be new to some installers. A range of CBS cable and fibre blowing machines  help get the job done with ease for both the seasoned installer or the novice. In this article, we discuss one of the key parameters to a successful installation, the fill ratio." },
+    { "paragraph" :"The fill ratio can be calculated for a single fibre optic cable installed in an innerduct or microduct as: d² ÷ D² < 65% or d²  < 65% D². The lowercase “d” stands for the outer diameter of the cable, while the uppercase “D” stands for innerduct’s inside diameter." },
+    { "paragraph" :"The lowercase “d” stands for the outer diameter of the cable, while the uppercase “D” stands for innerduct’s inside diameter." },
+    { "paragraph": "This means that when the cable outer diameter squared is divided by the innerduct inside diameter squared, the outcome should be less than 65% (or .65) for the most effective cable blowing. Also, the fill ratio should not fall below 35%, as the cable may have more of a tendency to “kink” in the innerduct due to excessive turbulence. Likewise, when the fill ratio is greater than 80% it becomes increasingly likely that there is insufficient space around the cable for the viscous drag principle of the air to act on the cable jacket."},
+    {"paragraph": "The fill ratio is one of the parameters determining how far a fibre cable can be blown. A larger fill ratio is preferred when the cables are relatively stiff and the duct run is straight. A smaller fill ratio is typically preferred when there are multiple bends in the duct run, allowing more room in the innerduct for the cable to navigate the route."},
+    {"paragraph": "The installer doesn’t specify the innerduct or the cable, but the installer can easily calculate the fill ratio and determine if the ratio is in the “sweet spot” or not. A fill ratio out of range may explain why the cable installation didn’t proceed as planned."}
+  ],
+  "img": [
+    { "image" : "fill-ratio.png" }],
+   "info" : "by Admin, 28 February, 2020",
+   "categories" : ["Fibre Blowing"]
+  },
+  { 
+    "id": "3",
+     "heading": "D-710 Pole Bogie",
+     "subheading": "for transporting poles across rough terrain",
+     "description": [
+      { "paragraph" : 
+        "The AirStream Cable Blowing Machine is powered by the newest servo control technology making it a top-tier cable placement tool. This powerful, single operator machine is easily operated to allow for safe and easy cable threading. Highly reliable and requiring little maintenance the AirStream Cable Blowing Machine is suited to reach a wide selection of cables ranging from diameters of 2.5mm to 11mm to make a wide array of jobs easy to complete. " },{ "paragraph" : "This machine features a tabletop design giving it such user-friendly ergonomics. It also comes with variable torque and speed controls allowing you to adapt to what each job requires. And it engages a double belt drive that is powered by the latest servo technology giving the machine precise torque and speed controls to suit each job. Digital monitors allow for simple monitor readings of the cable speed and length, while an auto-stop facility can be employed with air stone fitting."},
+        { "paragraph" : "An integral air valve and pressure gauge make cable threading easy. The AirStream is lightweight and compact making it able to be used in both outdoor and indoor work environments. It is a low maintenance machine that emits low noise levels making it a tool users will want to work with. The machine also comes with a polycarbonate safety guarding and a travel case for simple transportation."},
+        {"paragraph": "The AirStream Cable Blowing Machine was designed to make all jobs easy to complete for users."}
+    ],
+    "img": [
+      { "image" : "polebogie.jpeg" },
+      { "image" : "polebogie2.jpeg" },
+      { "image" : "polebogie3.jpeg" },
+      { "image" : "polebogie4.jpeg" }
+    ],
+     "info" : "by Admin 24, January, 2020",
+     "categories" : ["Overhead Line", "Pole Handling"]
+    },
+    { 
+      "id": "4",
+       "heading": "Airstream",
+       "subheading": "for transporting poles across rough terrain",
+       "description": [
+        { "paragraph" : 
+          "Designed to be ideally suited for transporting poles across rough terrain or soft ground, the poles are secured with quick action retaining straps to hold poles in place during transport. Available with low pressure tyres for use when keeping damage to the land is required. Narrow versions available for when access is restricted as well as a towing eye and strap for when being towed by a vehicle (off-road towing only)." }
+      ],
+      "img": [
+        { "image" : "airstream.jpeg" },
+        { "image" : "airstream1.jpeg" }
+      ],
+       "info" : "by Admin | 17, February, 2020 ",
+       "categories" : ["Fibre Blowing"]
+    },
+    { 
+      "id": "5",
+       "heading": "Tornado Cable Blowing Machine",
+       "subheading": "CBS is the only UK company to manufacture and sell our own range of cable blowing machines",
+       "description": [
+        { "paragraph" : 
+          "We are the only company here in the UK that manufacture and produce our own range of cable blowing machines, the largest of which is the Tornado. This machine has been designed to to provide a safe and effective method of installing cables ranging from 6-32mm (0.25-1.25″) into a pre-installed duct. The Tornado is fast and will install the cable at a speed of 90m/min (300 ft/min) to maximise job efficiency." },
+          {"paragraph": "An aluminium air box and cable pusher are the backbones allowing the Tornado Cable Blowing Machine to install the cable with or without an existing missile. While the machine is operating, hydraulically powered caterpillar belts controls the way the fibre optic cables are driven into the air ducts. An electronic monitoring system generates read-outs of the speed and distance of the cable, while also protecting the cable from any obstructions that may arise and being able to facilitate an emergency stop."},
+          {"paragraph": "An aluminium air box and cable pusher are the backbones allowing the Tornado Cable Blowing Machine to install the cable with or without an existing missile. While the machine is operating, hydraulically powered caterpillar belts controls the way the fibre optic cables are driven into the air ducts. An electronic monitoring system generates read-outs of the speed and distance of the cable, while also protecting the cable from any obstructions that may arise and being able to facilitate an emergency stop."}
+      ],
+      "img": [
+        { "image" : "tornado.jpeg" },
+        { "image" : "tornado1.jpeg" }
+      ],
+       "info" : "by Admin | 3, January, 2020 ",
+       "categories" : ["Fibre Blowing"]
+    },
+    { 
+      "id": "6",
+       "heading": "Running Out Blocks",
+       "subheading": "CBS is the only UK company to manufacture and sell our own range of cable blowing machines",
+       "description": [
+        { "paragraph" : 
+          "The CBS range of running out blocks have been designed to suit almost every application when it comes to working at height with poles, cross arms and conductors of any size." },
+          {"paragraph": "D-687 Double Sheave Running Out Block" },
+          {"paragraph" : "Designed to be strong but light, the D-687 is ideally suited for pole work. The aluminium sheaves are mounted on sealed ball bearings for low resistance. 500kg SWL."},
+          {"paragraph": "D-685 Single Offset Sheave Running Out Block"},
+          {"paragraph" : "The D-686 has a split frame and hooks to locate on to brackets. The aluminium sheave is mounted on sealed ball bearings while guide rings protect the conductor from damage. 300kg SWL."},
+          {"paragraph": "D-686 Intermediate Running Out Block"},
+          {"paragraph" : "The D-686 has a split frame and hooks to locate on to brackets. The aluminium sheave is mounted on sealed ball bearings while guide rings protect the conductor from damage. 300kg SWL."},
+          {"paragraph": "D-793 Rear Pole Roller Block"},
+          {"paragraph" : "The D-793 has been designed to be suitable for stringing conductors at the rear of an angle pole. 600kg SWL."},
+          {"paragraph": "D-798 Pole Traversing Block"},
+          {"paragraph" : "The D-798 block allows the stringing operation to be fed up or down poles, when access at the rear of the pole is not available. The block has a 260mm sheave with quick acting ratchet fixing and a conductor side gate. 1,200kg SWL."},
+          {"paragraph": "D-694-2 Straight Crossarm Running Out Block"},
+          {"paragraph" : "The D-694-2 has been designed to mount onto crossarms upto 100mm angle. Sheaves are fitted with sleeve bearings. Unit comes complete with uplift roller to prevent conductor lifting out. 350kg SWL."},
+          {"paragraph": "D-807 Crossarm Running Out Block"},
+          {"paragraph" : "The D-807 has been designed to mount onto angle crossarms up to 100mm. Sheaves are fitted with sleeve bearings. This design allows conductors to be strung around route deviations. 300kg SWL."},
+          {"paragraph": "D-861 Angle Crossarm Running Out Block"},
+          {"paragraph" : "TThe dual pin on the D-861 allows the nylon top roller to be opened from either side when inserting conductor. Suitable for crossarms up to 150mm angle. 300kg SWL."},
+          {"paragraph": "D-862-1 Crossarm Angle Roller"},
+          {"paragraph" : "The adjustable angle facility of the D-862-1 allows the sheave to position through 180º in 45º increments. Fits crossarms up to 150mm angle. Nylon roller fitted. 400kg SWL."},
+          {"paragraph": "D-683 Running Out Block"},
+          {"paragraph" : "The D-683 is ideally suited for mounting onto crossarms up to 150mm angle, conductor-retaining pin is provided. 300kg SWL."},
+          {"paragraph": "D-733 & D-917 Insulator Mounted Running Out Block"},
+          {"paragraph" : "The D-717 blocks are suitable for 33kV insulator, while smaller the D-917 is suitable for 11kV insulator. Each has two sheaves for stringing, which are lowered for making off onto insulator. The D-733 is designed to fit insulators from 115 – 135mm, whilst the D-917 is designed to fit insulators from 70 – 90mm. 150kg SWL."},
+          {"paragraph": "Single Sheave Aluminium Suspension Block"},
+          {"paragraph" : "TSingle sheave aluminium suspension blocks with spring-loaded safety gate & steel zinc plated side frames. Neoprene lining of groove is available on request. Available with either a Rotating Oval Eye or a Tongue Mounting (Clevis). There are 2 sizes available depending on what diameter conductor is being used, both 2,400kg SWL."},
+          {"paragraph": "Hole Mounted Single Sheave Suspension Block"},
+          {"paragraph" : "These aluminium suspension blocks have an automatic safety gate and steel side frames. They are hole mounted to fit insulator clevis with 2,400kg SWL. The D-691 is the smallest in the range, The D-736 will accommodate larger conductors, D-1061 comes with a shackle in the hole mounting."},
+          {"paragraph": "Sagging Blocks"},
+          {"paragraph" : "Designed to fit tower cross arm to accept wire rope for sagging conductor. The D-668 swivel block comes in 3 different sizes with SWL of 2,000kg, 3,500kg or 5,000kg. The D-670 straight block has 2,000kg SWL."},
+          {"paragraph": "D-717 Tandem Sheave Suspension Block"},
+          {"paragraph" : "The D-717 comes with an automatic safety gate and steel side frames. There is the option to add a slip ring for earthwire earthing. 4,000kg SWL."}
+      ],
+      "img": [
+        { "image" : "rollingoutblocks.jpeg" },
+        { "image" : "rollingoutblocks2.jpeg" },
+        { "image" : "rollingoutblocks3.jpeg" },
+        { "image" : "rollingoutblocks4.jpeg" },
+        { "image" : "rollingoutblocks5.jpeg" }
+      ],
+       "info" : "by Admin | 22, November, 2019",
+       "categories" : ["Overhead Line", "Running Out Blocks"]
+    },
+    { 
+      "id": "7",
+       "heading": "Winches and Pushing Machines",
+       "subheading": "Including trailer mounted winches and portable, lightweight capstans",
+       "description": [
+        { "paragraph" : 
+          "Our range of winches are designed to offer reliable, efficient performance, enabling your team to install a wide range of cabling both overhead and underground. Each designed to suit specific requirements, including trailer mounted winches and portable, lightweight capstans." },
+          {"paragraph" : "C-1045 Pull & Assist Winch"},
+          {"paragraph": "The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable. The single capstan allows the winch to be placed at the mid point of a section to assist in the pull, thus enabling longer pulls to be achieved. The winch has a rope take up drum, which is driven independently via a hydraulic motor, and has a detachable side which allows the rope on the drum to be removed in a tidy coil. Maximum pulling capacity of 500kg. " },
+          {"paragraph" : "C-680 Bulldog Overhead Line Winch"},
+          {"paragraph": "The CBS 680 Bulldog winch has been designed to provide a compact, transportable unit for overhead line stringing work. The self-contained winch is powered by an 11hp petrol engine and the precise control required is provided by the hydraulic circuit. There are drums for various applications and these are easily interchanged. The C-680 is a British Universal winch designed to meet the needs of overhead line engineers. The various options permit use on aerial bundle (ABC), Copper, Aluminium and ACSR Conductors."},
+          {"paragraph" : "C-821 Hydraulic Universal Winch"},
+          {"paragraph": "The CBS 821 Universal Winch offers the constant pulling tension of a double capstan drive and the flexibility of a direct drive drum in one machine. The winch employs a powerful petrol engine mounted with associated hydraulics on a sturdy trailer unit. The precise hydraulic controls allow easy operation through one fail-safe lever. Ideally suited for ABC erection, 11/33kV stringing work conductor recovery and underground cable handling."},
+          {"paragraph" : "C-825 Portable Hydraulic Winch"},
+          {"paragraph": "The CBS 825 is designed to provide a fully portable winching system, by breaking down into easily transportable modules. Ideally suited for overhead line stringing work such as ABC conductors, bare conductors or re-conductoring projects, it provides a flexible system suitable where access is restricted and ground disturbance is undesirable."},
+          {"paragraph" : "C-780 Overhead Line Construction Winch"},
+          {"paragraph": "The C-780 has been designed to give a reliable, flexible winching system to meet all 11/33kV work, together with some 66kV and 132kV maintenance requirements. The system employs a range of drums to suit particular applications. The powered hydraulic drum lifting device, together with hydraulic stabilising jacks provides safe drum handling. Hydraulic layering device fitted as standard. Available in 3 tonne or 4 tonne lifting capacity."},
+          {"paragraph" : "W1-TEW25H-01 Tower Erection Winch"},
+          {"paragraph": "The TEW25H-01 is a hydraulically driven self-powered drum winch, popular with power line and telecommunications contractors. The TEW25 winch has been designed to comply with all the relevant safety requirements for lifting loads. Two fully automatic, fail safe braking systems are incorporated into the unit. In the unlikely event that the chain fails the second braking system would automatically apply, holding the load securely. The winch has a maximum lifting capacity of 2.5 tonne."},
+          {"paragraph" : "W1-TEW50H-01 Tower Erection Winch"},
+          {"paragraph": "The TEW50 is a hydraulic winch designed to provide reliable and safe lifting operations for tower and mast erection for the electricity or telecommunications industries. Winching is controlled via a proportional hydraulic valve giving the operator precise control over the load when needed or high speed if necessary. The winch has a maximum lifting capacity of 5 tonne."},
+          {"paragraph" : "C-1210 Single Capstan Winch"},
+          {"paragraph": "The C-1210 Single Capstan Winch has been designed to provide a light and powerful universal winch. Ideally suited for hoisting loads up poles or transmission towers or for pulling cables and conductors. The rope locking device eliminates the need to tie off the rope. A remote foot control switch operates the 115 volt electrically powered winch. Has a maximum lifting capacity of 450kg."},
+          {"paragraph" : "C-1210-500-1 Petrol Capstan Winch"},
+          {"paragraph": "The C-1035 Lightweight Capstan is a highly reliable, low maintenance winch designed for use over manholes. Powered by a Honda Engine through a right angle gearbox. The C-1035 has a 5.5HP Engine. The C-1035-10 has an 8HP Honda Engine. The units have a pulling capacity of 500kg and 1000kg respectively."},
+          {"paragraph" : "C-1350 Cable Pusher"},
+          {"paragraph": "The C-1350 Cable Pusher has been designed to assist the laying of electrical cables or cylindrical elements. The unit has a profiled drive system to grip the cable, with a load applicator of adjustable upper rollers. The drive system is hydraulic, and is powered by a the lightweight C-1203-F portable trolley mounted hydraulic power pack, with pre-set internal system protection relief valve and quick release connections."}
+      ],
+      "img": [
+        { "image" : "winchesandpushingmachine.jpeg" },
+        { "image" : "winches2.jpeg" },
+        { "image" : "winches3.jpeg" },
+        { "image" : "winches4.jpeg" },
+        { "image" : "winches5.jpeg" },
+        { "image" : "winches6.jpeg" },
+        { "image" : "winches7.jpeg" }
+      ],
+       "info" : "by Admin | 18, November, 2019",
+       "categories" : ["Overhead Line", "Underground", " Winches"]
+    },
+    { 
+      "id": "8",
+       "heading": "Drum Handling Equipment",
+       "subheading": "A range of drum trailers and stands that offer robust and reliable solutions",
+       "description": [
+        { "paragraph" : 
+          "Designed to make your life on site easier our range of drum trailers and stands offer robust and reliable solutions to a wide range of tasks, from trailers for transporting larger drums to the work site or stands of various sizes for smaller drums." },
+          {"paragraph" : "C-751 Drum Trailer"},
+          {"paragraph": "The C-751 Drum Trailer has been designed to be a compact and manoeuverable drum trailer, capable of handling cable drums from 1800mm to 2185mm in diameter and a maximum drum weight of 1000kg to 1630kg. Manufactured in strong steel sections, it incorporates manually operated hydraulic lifting of drums. There is also an optional drum braking arrangement, this is particularly useful when pulling the conductor during conductor stringing operations. Trailer braking is of the over-run type and is supplied to EC specification. All versions are IVA approved." },
+          {"paragraph" : "C-1290 Triple Braked Drum Trailer"},
+          {"paragraph": "The C-1290 Triple Braked Drum Trailer is a uniquely versatile tool, a single operator can independently control the tension of all three conductors. Ideally suited to the needs of cost conscious installation crews who require fast turnarounds and maximum productivity. Supplied with a full set of detachable stabilisers to maximise trailer stability during tensioning. Fitted with smooth operating disk brake for conductor control."},
+          {"paragraph" : "D-684 Braked Drum Stand"},
+          {"paragraph": "The CBS D-684 drum stand is compact in size and is available in up to either 2 or 4 tonne capacity. Each side is fitted with wheels to allow for easy transportation. Drum lifting is achieved with two hand operated hydraulic jacks. An adjustable band brake provides safe, controlled cable tensioning."},
+          {"paragraph" : "D-711 Braked Drum Stand"},
+          {"paragraph": "The CBS D-711 Braked Drum Stand has been designed in sections for ease of transportation and is simple to assemble without instructions. Accommodates drum weights of up to 1500kg. The stands incorporate a band brake to provide safe and smooth cable tensioning. Two hydraulic pumps provide drum lifting to the desired working height."},
+          {"paragraph" : "D-1156-01 Cable Drum Stand"},
+          {"paragraph": "The D-1156-01 Drum Stand has been designed in sections for ease of transportation and simply slots together to form a rigid and stable drum stand. Accommodates drum weights of up to 500kg. The shaft is fitted with bearings and drum location collars are also included. Two hydraulic jacks provide drum lifting."},
+          {"paragraph" : "Roll on Drum Stands"},
+          {"paragraph": "D-496-01 Roll on Drum Stand allows a range of drums up to 1500kg in weight to be accommodated to suit the majority of applications. Manufactured in steel, with ball bearings in the rollers, the stand is suitable for pulling off cable from the drum."},
+          {"paragraph" : "Drum Jacks"},
+          {"paragraph": "The CBS range of cable drum jacks are maunfactured in a sturdy steel construction with heavy duty Acme screw threads to provide safe lifting. Available in 3 different sizes to accommodate up to 3, 6 or 8 tonne capacity – 2 x stands required – with a variety of spindles available to suit different drum sizes. Jack steady bases are also available to provide extra stability."},
+          {"paragraph" : "D-536 Hydraulic Drum Jacks, which are lightweight and almost indispensable for use in the cable yard. Versatile and easily adjustable within seconds to accommodate a vast range of drums. Excellent all-round stability, fitted with wheels to be easily moved by one person. Complete with spindle and collars. Available in 3 different sizes to accommodate up to 3, 6 or 10 tonne capacity."}
+      ],
+      "img": [
+        { "image" : "drumhandling.jpeg" },
+        { "image" : "drumhandling1.jpeg" },
+        { "image" : "drumhandling2.jpeg" },
+        { "image" : "drumhandling3.jpeg" },
+        { "image" : "drumhandling4.jpeg" },
+        { "image" : "drumhandling5.jpeg" },
+        { "image" : "drumhandling6.jpeg" }
+      ],
+       "info" : "by Admin | 18, November, 2019",
+       "categories" : ["Fibre Blowing", "Cable Drum Handling", "Drum Trailers", "Underground"]
+    },
+    { 
+      "id": "9",
+       "heading": "Klein Tools Pole Climbing Irons",
+       "subheading": "A range of drum trailers and stands that offer robust and reliable solutions",
+       "description": [
+        { "paragraph" : 
+          " Klein Tools has been providing occupational protective equipment to linemen since the first telegraph poles were strung. Klein’s spur type adjustable climbers make easy work of pole climbing." },
+          {"paragraph" : "Klein Tools has been providing occupational protective equipment to linemen since the first telegraph poles were strung. Klein’s Pole Climber set includes the pads, steel sleeves, leg irons, 1-1/2” gaffs, split rings and nylon calf and ankle straps. The secure sleeve and leg iron connections are adjustable in 1/4” (6 mm) increments. Contoured leg irons help position gaffs securely and comfortably. The replaceable gaffs firmly attach to the leg iron with a centre pin and two TORX® screws. High-grade leather climber pads are cushioned for maximum comfort. A complete range of spare parts and sharpening equipment are available. Klein components should not be interchanged with components made from other manufacturers."}
+      ],
+      "img": [
+        { "image" : "keintools.jpeg" },
+        { "image" : "kleintools1.jpeg" },
+        { "image" : "kleintools2.jpeg" }
+      ],
+       "info" : "by Admin | 5, November, 2019",
+       "categories" : ["Klein Tools", "Overhead Line", "Tools"]
+    },
+    { 
+      "id": "10",
+       "heading": "Klein Canvas Lineman Tool Buckets",
+       "subheading": "A range of drum trailers and stands that offer robust and reliable solutions",
+       "description": [
+        { "paragraph" : 
+          "CBS offer a range of Klein Canvas Lineman Tool Buckets. Klein canvas buckets and accessories have been recognised for decades for their durability and dependability, they are built for strength to withstand even the harshest of conditions and handle professional wear and tear. Available in a wide range of sizes and and load ratings, with a choice of pockets, round or oval body or top closing for added security, Klein are bound to have the perfect bucket to suit your needs." },
+          {"paragraph" : "Klein Tools has been providing occupational protective equipment to linemen since the first telegraph poles were strung. Klein’s Pole Climber set includes the pads, steel sleeves, leg irons, 1-1/2” gaffs, split rings and nylon calf and ankle straps. The secure sleeve and leg iron connections are adjustable in 1/4” (6 mm) increments. Contoured leg irons help position gaffs securely and comfortably. The replaceable gaffs firmly attach to the leg iron with a centre pin and two TORX® screws. High-grade leather climber pads are cushioned for maximum comfort. A complete range of spare parts and sharpening equipment are available. Klein components should not be interchanged with components made from other manufacturers."}
+      ],
+      "img": [
+        { "image" : "kleincanvas.jpeg" },
+        { "image" : "kleincanvas1.jpeg" }
+      ],
+       "info" : "by Admin | 27, September, 2019 ",
+       "categories" : ["Klein Tools", "Overhead Line", "Storage", "Tools"]
+    },
+    { 
+      "id": "11",
+       "heading": "Klein Tools Insulated Tool Range",
+       "subheading": "A range of drum trailers and stands that offer robust and reliable solutions",
+       "description": [
+        { "paragraph" : 
+          "Klein insulated tools combine excellent functionality along with the reduction of risk of injury where a tool might make contact with an energised source with voltage up to 1000 volts." },
+          {"paragraph" : "K-D213-9NE-INS High Leverage Side Cutting Pliers: These Klein Tools Side Cutting New England Insulated Pliers are insulated by two layers and pass both the IEC 60900 and ASTM F1505 standards. They are made of forged steel with induction-hardened knives for strength and durability and they have high-leverage design which provides 46-percent more cutting and gripping power than other plier designs. K-D2000-9NE-INS Heavy Duty version, also available, cuts ACSR, screws, nails and most hardened wire."},
+          {"paragraph" : "K-D2139NE-CR-INS Insulated High Leverage Side Cutting Pliers: These Klein Tools 9-Inch Insulated Side-Cutting Crimping Pliers offer protection against electric shock up to 1,000 volts. They offer maximum strength with their forged-steel construction and a crimping die helps provide increased leverage."},
+          {"paragraph" : "K-12098-INS High Leverage Universal Side Cutting Pliers: Be protected from up to 1,000 volts of electric current when working near energised sources with Klein’s 8-Inch Insulated Universal Combination Pliers. These pliers offer flame-retardant handles, a toothed pipe grip and a high-leverage crimping die. Quickly installs and removes spring-tension hose clamps. High-leverage design has 35-percent more cutting power. Grips with either side or end of jaws for work in confined areas. The durable, molded insulation meets or exceeds IEC 60900 and ASTM F1505 standards for insulated tools."},
+          {"paragraph" : "Insulated Long Nose Side Cutting Pliers: Klein Tools Insulated Long Nose Side-Cutting pliers are 1000V rated for safety on the job. The long nose is designed to grab and loop wire. Dual layer, orange-over-white insulation provides a warning sign that insulation may be compromised. The molded insulation meets or exceeds ASTM F1505-16 and IEC 60900:2012 standards for insulated tools. Cutting knives are induction hardened for long life. An 8″ version is also available with skinning hole."},
+          {"paragraph" : "K-D220-7-INS 7″ Insulated Heavy Duty Diagonal Cutting Tapered Nose Pliers: These Insulated Diagonal-Cutting pliers have dual layered grips that are flame retardant, impact resistant, and rated for 1000-volts. One-Inch deep jaws easily reach into confined spaces. They feature a heavy-duty tapered nose design with induction hardened cutting knives for durability. They are made of forged steel and have a hot-riveted joint for smooth action and no handle wobble."},
+          {"paragraph" : "Insulated High Leverage Diagonal Cutting Pliers: These Insulated Diagonal-Cutting pliers feature two layers of insulation to protect against electric shock. Clearly marked with the official 1000V symbol, these pliers meet or exceed ASTM F1505-16 and IEC 60900:2018 standards for insulated tools. Available with tapered or angled nose, while heavy duty versions employ greater cutting ability. The high-leverage design provides 36-percent greater cutting power than any other plier designs."},
+          {"paragraph" : "K-D502-10-INS Insulated Pump Pliers: Individually tested to exceed the IEC 60900 and ASTM F1505 standards, for insulated tools, and clearly marked with the official 1000-volt rating symbol. Two layers of insulation provide protection against electric shock. Thick, exceptionally tough, high-dielectric white inner coating is bonded to the tool. Wide range of versatile jaw positions. Secure tongue and groove design for non-slip grip – even with heavy pressure. A flame retardant, impact-resistant, bright orange outer coating. Integral guards help prevent hand contact with conductive parts."},
+          {"paragraph" : "Insulated Cutters"},
+          {"paragraph" : "K-1005-INS Insulated Crimping / Cutting Tool: Individually tested to exceed the IEC 60900 and ASTM F1505 standards, for insulated tools, and clearly marked with the official 1000-volt rating symbol. A flame retardant, impact-resistant, bright orange outer coating. Wire cutter in nose that is tapered for working in confined spaces. Induction hardened cutting knives for long life. Hot-riveted joint for smooth action and no handle wobble. Forged steel for maximum durability. Integral guards help prevent hand contact with conductive parts. Thick, exceptionally tough, high-dielectric white inner coating is bonded to the tool."},
+          {"paragraph" : "Insulated Wire Stripper/Cutter: This compact, lightweight wire-stripping, cutting tool cuts, strips, loops and gauges solid wire. 3 different versions strip from 0.75-6mm² solid wire, the largest version will also cut 0.5-2.5mm² stranded wire. Spring-loaded action for self-opening, while the narrow nose fits into tight places. Hardened spring steel with precision-ground stripping holes for easy removal of insulation."},
+          {"paragraph" : "K-63050-INS Insulated High Leverage Cable Cutter: Individually tested to exceed the IEC 60900 and ASTM F1505 standards, for insulated tools, and clearly marked with the official 1000-volt rating symbol. A flame retardant, impact-resistant, bright orange outer coating. High-leverage design for exceptional cutting ability. Cable-gripping shear-type jaws. Precision, one-hand shearing action perfect for working in confined spaces. NOT suitable for cutting steel or ACSR."},
+          {"paragraph" : "K-1571-INS Insulated Lineman Skinning Knife: The exclusive design features dual-layer insulation for safety. The high-dielectric white inner layer is bonded to the tool while the outer orange layer is flame retardant and serves as a visual warning if the tool has been compromised. The insulated handle is molded for comfort and also features marks on the back to help measure the stripping length of wire. The blade is made of stainless steel for durability and corrosion resistance."},
+          {"paragraph" : "Screwdrivers & Tool Kits"},
+          {"paragraph" : "Insulated Screwdriver – Round Shank: 4 different lengths with Phillips tips #1, 2 or 3. 8 different Cabinet lengths with tips sizes ranging from 2.4-9.5mm. 2 different lengths with either square tip #1 or 2. Clearly marked with the official 1000-volt rating symbol, Klein insulated tools exceed IEC 60900 and ASTM F1505 standards for insulated tools. Two layers of insulation provide protection against electric shock. Built to handle the tough jobs with ease."},
+          {"paragraph" : "K-33528 9 Piece Insulated Cushion Grip Screwdriver Set: This nine piece set features assorted Klein’s screwdrivers with three different tips. Each are individually tested to exceeed the IEC 60900 and ASTM F1505 standards for insulated tools. Two layers of insulation provide protection against electric shock. The highly durable, black nylon case features a zipper enclosure, custom-fitted tool pockets as well as an extra pocket for storage of papers and other items. Made in the USA."},
+          {"paragraph" : "K-33525 13 Piece Insulated Tool kit: This set of 13 professional, insulated tools includes 4 x assorted pliers, 6 x screwdrivers, a cable cutter, pump pliers and a skinning knife. Two layers of insulation provide protection against electric shock. Custom case includes 2 pallets with custom-made pockets for each tool, piano-hinged case cover has both combination lock and two key-locked latches for security and storage space behind pallets for important papers or accessories. Meets or exceeds IEC 60900: 2012, ASTM F1505-10 standards for insulated tools."},
+          {"paragraph" : "K-33527 General Purpose Insulated 22 Piece Tool Kit: This 22-piece tool kit includes the must-have insulated tools professional electricians need. The high-leverage design of the 8 x assorted side-cutting and diagonal-cutting pliers provides more cutting power while the pivot joint is hot-riveted for smooth action and no wobble. The Cushion-Grip on the 9 x round-shank screwdrivers provide greater torque and comfort. The 1 x each wire stripper/cutting tools, pump pliers and skinning knife provide excellent choices for any job. The custom case includes 3 pallets with custom-fitted pockets for each tool, piano-hinged cover has both a combination lock and two key-locked latches for security, storage space behind the pallets to keep important papers and accessory items. Made in the USA."},
+          {"paragraph" : "K-33526 Basic 8 Piece Insulated Tool Kit: This 8 piece set features an assortment of popular compact insulated tools, including 3 x pliers, 3 x screwdrivers a cable cutter and wire stripper/cutter. Each are individually tested to exceed the IEC 60900 and ASTM F1505 standards for insulated tools. The highly durable, black nylon case features a zipper closure, custom-fitted tool pockets plus an extra pocket for storage of papers and other items. Made in the USA."},
+          {"paragraph" : "K-33529 Premium 8 Piece Insulated Tool Kit: Contains the same as the basic kit but with heavy duty long nose pliers and side cutting pliers."}
+      ],
+      "img": [
+        { "image" : "kleintoolsinsulated.jpeg" },
+        { "image" : "kleintoolsi.jpeg" },
+        { "image" : "kleintoolsinsulated2.jpeg" },
+        { "image" : "kleintoolsinsulated4.jpeg" },
+        { "image" : "kleintoolsinsulated5.jpeg" },
+        { "image" : "kleintoolsinsulated6.jpeg" },
+        { "image" : "kleintoolsinsulated7.jpeg" },
+        { "image" : "kleintoolsinsulated8.jpeg" }
+      ],
+       "info" : "by Admin | 27, September, 2019 ",
+       "categories" : ["Klein Tools", "Overhead Line", "Storage", "Tools"]
+    }
 ]

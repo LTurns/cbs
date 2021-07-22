@@ -1,10 +1,14 @@
 import colors from 'vuetify/es5/util/colors'
 
 import productitems from './static/products.json'
+import blogStories from './static/blogstories.json'
 
 const dynamicRoutes = () => {
   return new Promise((resolve) => {
-    resolve(productitems.map((el) => `product/${el.id}`))
+    const product = resolve(productitems.map((el) => `product/${el.id}`))
+    const article = resolve(blogStories.map((el) => `article/${el.id}`))
+
+    return product && article
   })
 }
 

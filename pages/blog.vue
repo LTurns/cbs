@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :style="{ background: $vuetify.theme.themes['dark'].accent }">
     <v-row no-gutters>
       <v-col cols="12">
         <SectionsHeroAlt :hero-alt="heroAlt" />
@@ -18,28 +18,33 @@
               lg="4"
               xl="3"
             >
-              <v-card max-width="450" class="mx-auto" elevation="1">
-                <v-img height="200px" :src="`/${post.img}`"> </v-img>
-                <v-card-subtitle class="pb-0">
-                  <v-btn href="#" text small color="primary" class="px-0">{{
-                    post.author
-                  }}</v-btn>
-                  <v-btn text small disabled class="px-0">{{
-                    post.date
-                  }}</v-btn>
-                </v-card-subtitle>
-                <v-card-text
-                  class="title font-weight-bold mt-3 pb-0 text--primary"
-                  style="line-height: 1.8rem"
-                >
-                  {{ post.subtitle }}
-                </v-card-text>
-                <v-card-text class="text--primary">
-                  {{ post.description.slice(0, 105) }}...
-                  <v-btn href="#" small text color="primary">Read More</v-btn>
-                </v-card-text>
+              <nuxt-link
+                class="link"
+                :to="`../article/${post.id}`"
+                align-self="center"
+              >
+                <v-card max-width="450" class="mx-auto" elevation="1">
+                  <v-img height="200px" :src="`/blog/${post.img[0].image}`">
+                  </v-img>
+                  <v-card-subtitle class="pb-0">
+                    <!-- <p text small color="primary" class="px-0">
+                    {{ post.author }}
+                  </p> -->
+                    <p text small disabled class="px-0">
+                      {{ post.info }}
+                    </p>
+                  </v-card-subtitle>
+                  <v-card-text
+                    class="title font-weight-bold mt-3 pb-0 text--primary"
+                    style="line-height: 1.8rem"
+                  >
+                    {{ post.heading }}
+                  </v-card-text>
+                  <v-card-text
+                    >{{ post.description[0].paragraph.slice(0, 105) }}...
+                  </v-card-text>
 
-                <!-- <v-card-actions>
+                  <!-- <v-card-actions>
                   <v-btn icon color="yellow darken-1"
                     ><v-icon>mdi-comment</v-icon></v-btn
                   >
@@ -52,7 +57,8 @@
                   ><span class="text--disabled">25K</span>
                   <span class="mr-4"></span>
                 </v-card-actions> -->
-              </v-card>
+                </v-card>
+              </nuxt-link>
             </v-col>
           </v-row>
 
@@ -84,7 +90,7 @@
               outlined
               placeholder="Search..."
               append-icon="mdi-magnify"
-              class="mb-6"
+              class="mb-6 white--text"
               hide-details
             >
             </v-text-field>
@@ -101,7 +107,7 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'accelair.jpg',
+          src: '../accelair.jpg',
           heading: ' Blog ',
         },
       ],
