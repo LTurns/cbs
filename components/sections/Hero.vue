@@ -78,15 +78,16 @@ export default {
 
 <style>
 .gradient-fill .v-responsive__content {
-  background: rgb(223, 219, 219);
+  background: rgb(5, 5, 5);
   background: linear-gradient(
     to right,
-    rgba(3, 12, 41, 0.75),
-    rgba(5, 11, 31, 0.65)
+    rgba(15, 14, 14, 0.7),
+    rgba(0, 0, 0, 0.7)
   );
   color: white;
   text-decoration: none;
 }
+
 .learn {
   color: white;
   text-decoration: none;

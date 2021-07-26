@@ -32,7 +32,7 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'W1-TEW-50.jpeg',
+          src: '',
           heading: 'CLIENT TOOLS',
         },
       ],

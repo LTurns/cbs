@@ -93,7 +93,17 @@
                   Contact Us or
                 </div>
                 <div class="d-inline text-h4 font-weight-black">
-                  <a href="#team">Speak to the our team</a>
+                  <v-btn
+                    :x-large="$vuetify.breakpoint.smAndUp"
+                    text
+                    class="my-3"
+                    outlined
+                    white
+                    ><v-icon left large color="primary">mdi-play</v-icon
+                    ><a href="#team" class="learn"
+                      >Speak to the our team</a
+                    ></v-btn
+                  >
                 </div>
               </div>
               <p class="mb-10">

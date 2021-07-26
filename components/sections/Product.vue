@@ -27,12 +27,12 @@
     <!-- Large Text -->
     <section id="about" class="section-large-text">
       <!-- <div class="overlay"> -->
-      <v-tabs v-model="tab" black--text centered dark>
+      <v-tabs v-if="result" v-model="tab" black--text centered dark>
         <v-tabs-slider></v-tabs-slider>
 
         <v-tab href="#features"> Features </v-tab>
         <v-tab href="#more"> Images </v-tab>
-        <v-tab href="#accessories"> Accessories </v-tab>
+        <v-tab href="#accessories"> Accessories</v-tab>
         <v-tab href="#config"> Configuration </v-tab>
         <v-tab href="#video"> Video Tutorials </v-tab>
       </v-tabs>
@@ -244,10 +244,13 @@ export default {
   },
   data: () => ({
     tab: 'features',
+    result: true,
   }),
-  computed: {
-    featuredProducts() {
-      return this.$store.getters.fibreBlowing.slice(0, 3)
+  method: {
+    showAccessories() {
+      this.data.accesories === [] ? (this.result = false) : (this.result = true)
+
+      return this.result
     },
   },
 }

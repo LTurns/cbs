@@ -7,93 +7,21 @@
     </v-row>
     <v-container>
       <v-row>
-        <v-col cols="12" xl="10" lg="9" md="8" sm="8" class="py-16">
-          <v-row>
-            <v-col
-              v-for="post in BlogStories"
-              :key="post.id"
-              cols="12"
-              sm="6"
-              md="6"
-              lg="4"
-              xl="3"
-            >
-              <nuxt-link
-                class="link"
-                :to="`../article/${post.id}`"
-                align-self="center"
-              >
-                <v-card max-width="450" class="mx-auto" elevation="1">
-                  <v-img height="200px" :src="`/blog/${post.img[0].image}`">
-                  </v-img>
-                  <v-card-subtitle class="pb-0">
-                    <!-- <p text small color="primary" class="px-0">
-                    {{ post.author }}
-                  </p> -->
-                    <p text small disabled class="px-0">
-                      {{ post.info }}
-                    </p>
-                  </v-card-subtitle>
-                  <v-card-text
-                    class="title font-weight-bold mt-3 pb-0 text--primary"
-                    style="line-height: 1.8rem"
-                  >
-                    {{ post.heading }}
-                  </v-card-text>
-                  <v-card-text
-                    >{{ post.description[0].paragraph.slice(0, 105) }}...
-                  </v-card-text>
-
-                  <!-- <v-card-actions>
-                  <v-btn icon color="yellow darken-1"
-                    ><v-icon>mdi-comment</v-icon></v-btn
-                  >
-                  <span class="text--disabled">15</span>
-                  <v-spacer></v-spacer>
-                  <v-btn icon color="orange"> <v-icon>mdi-heart</v-icon> </v-btn
-                  ><span class="text--disabled mr-2">45K</span>
-                  <v-btn icon color="primary">
-                    <v-icon>mdi-share-variant</v-icon> </v-btn
-                  ><span class="text--disabled">25K</span>
-                  <span class="mr-4"></span>
-                </v-card-actions> -->
-                </v-card>
-              </nuxt-link>
-            </v-col>
-          </v-row>
-
-          <div class="text-center">
-            <div class="text-center">
-              <v-container>
-                <v-row justify="center">
-                  <v-col cols="8">
-                    <v-container class="max-width">
-                      <!-- <v-pagination
-                        v-model="page"
-                        circle
-                        class="my-4"
-                        :length="15"
-                      ></v-pagination> -->
-                    </v-container>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </div>
-          </div>
-        </v-col>
+        <SectionsBlogs :data="BlogStories" />
         <v-col cols="12" xl="2" lg="3" md="4" sm="4" class="py-16">
           <aside>
-            <v-text-field
-              clearable
-              dense
-              flat
-              outlined
-              placeholder="Search..."
-              append-icon="mdi-magnify"
-              class="mb-6 white--text"
-              hide-details
-            >
-            </v-text-field>
+            <div class="search">
+              <input
+                v-model="search"
+                type="text"
+                class="search__input"
+                aria-label="search"
+                placeholder="enter your search"
+              />
+              <button class="search__btn" aria-label="submit search">
+                <img src="/loupe.png" alt="" />
+              </button>
+            </div>
           </aside>
         </v-col>
       </v-row>
@@ -111,12 +39,106 @@ export default {
           heading: ' Blog ',
         },
       ],
+      search: '',
     }
   },
   computed: {
+    // BlogStories() {
+    //   return this.$store.getters.BlogStories
+    // },
+    // CableBlowingEquipment() {
+    //   return this.$store.getters.cableBlowingCategory;
+    // },
     BlogStories() {
+      if (this.search !== '') {
+        return this.$store.getters.BlogStories.filter((box) => {
+          return box.categories.filter((item) => {
+            return item.toLowerCase().includes(this.search.toLowerCase())
+          })
+        })
+      }
       return this.$store.getters.BlogStories
     },
   },
 }
 </script>
+
+<style lang="scss" scoped>
+$backgroundColor: rgb(14, 12, 24);
+$brandColor: #fde36d;
+.search {
+  // margin-left: 20%;
+  // margin-right: 20%;
+  display: flex;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  // border-radius: 100vh;
+  // heigth: 60px;
+  padding: 3px;
+  margin-bottom: 3%;
+  width: 90%;
+  position: relative;
+  transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  overflow: hidden;
+
+  &__input {
+    flex-grow: 1;
+    border: none;
+    // background: transparent;
+    padding: 0 0.5rem;
+    // font-size: 1.6rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    opacity: 0;
+    width: calc(100% - 10px);
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    // font-size: 1.3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 100vh;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    transition: background 150ms ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+
+  &:focus-within {
+    width: 100%;
+
+    .search__input {
+      opacity: 1;
+      cursor: initial;
+    }
+
+    .search__btn {
+      background: $brandColor;
+      color: black;
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        // transform: rotate(1turn);
+        // box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+      }
+    }
+  }
+}
+</style>

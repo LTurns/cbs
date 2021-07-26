@@ -15,7 +15,7 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'DSC_1421-1.jpeg',
+          src: '',
           heading: ' Product Categories ',
         },
       ],
