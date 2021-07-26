@@ -52,11 +52,12 @@ export default {
     BlogStories() {
       if (this.search !== '') {
         return this.$store.getters.BlogStories.filter((box) => {
-          return box.categories.filter((item) => {
-            return item.toLowerCase().includes(this.search.toLowerCase())
-          })
+          return box.description[0].paragraph
+            .toLowerCase()
+            .includes(this.search.toLowerCase())
         })
       }
+
       return this.$store.getters.BlogStories
     },
   },
