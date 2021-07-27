@@ -1,3 +1,9 @@
+/* eslint-disable vue/no-side-effects-in-computed-properties */ /*
+eslint-disable vue/no-side-effects-in-computed-properties */ /* eslint-disable
+vue/no-side-effects-in-computed-properties */ /* eslint-disable
+vue/no-side-effects-in-computed-properties */ /* eslint-disable
+vue/no-side-effects-in-computed-properties */ /* eslint-disable
+vue/no-side-effects-in-computed-properties */
 <template>
   <section id="hero">
     <section id="home" class="section-showcase">
@@ -27,14 +33,16 @@
     <!-- Large Text -->
     <section id="about" class="section-large-text">
       <!-- <div class="overlay"> -->
-      <v-tabs v-if="result" v-model="tab" black--text centered dark>
+      <v-tabs v-model="tab" black--text centered dark>
         <v-tabs-slider></v-tabs-slider>
 
         <v-tab href="#features"> Features </v-tab>
         <v-tab href="#more"> Images </v-tab>
-        <v-tab href="#accessories"> Accessories</v-tab>
-        <v-tab href="#config"> Configuration </v-tab>
-        <v-tab href="#video"> Video Tutorials </v-tab>
+        <v-tab v-show="data.accessories.length != 0" href="#accessories">
+          Accessories</v-tab
+        >
+        <v-tab v-show="areConfig" href="#config"> Configuration </v-tab>
+        <v-tab v-show="areVideos" href="#video"> Video Tutorials </v-tab>
       </v-tabs>
 
       <v-tabs-items v-model="tab">
@@ -244,13 +252,18 @@ export default {
   },
   data: () => ({
     tab: 'features',
-    result: true,
+    areFeatures: true,
+    areAccessories: true,
+    areConfig: true,
+    areVideos: true,
   }),
-  method: {
+  methods: {
     showAccessories() {
-      this.data.accesories === [] ? (this.result = false) : (this.result = true)
+      this.data.accesories === []
+        ? (this.areAccessories = false)
+        : (this.areAccessories = true)
 
-      return this.result
+      return this.areAccessories
     },
   },
 }

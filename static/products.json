@@ -1174,7 +1174,8 @@
                     "columns": [ "Product No", "Replacement Drive Belts (Supplied in pairs)"],
                     "image" : "airstream/airstream-config-6.jpeg"
                   }
-           ]
+           ],
+           "accessories" : []
          },
          {
           "id": "5",
@@ -1385,7 +1386,8 @@
                      "columns": [ "Product No", "Replacement Drive Belts (Supplied in pairs)"],
                      "image" : "airstream/airstream-config-6.jpeg"
                    }
-            ]
+            ],
+            "accessories" : []
            },
              {
               "id": "6",
@@ -1659,7 +1661,8 @@
                               "columns": [ "Product No", "Battery Pack"],
                               "image" : "accelair/accelair-config-8.png"
                             }
-                 ]
+                 ],
+                 "accessories" : []
                },
                {
                 "id": "7",
@@ -1930,7 +1933,8 @@
                     "configurationTitle": "Configuration for CABLE OVERBLOWING JUNCTION BOX",
                     "configurationIntro": "",
                     "configImage": "overblowing-junction-box/junction-box-config.jpeg",
-                    "tables" : []
+                    "tables" : [],
+                    "accessories" : []
                     },
                     {
                       "id": "10",
