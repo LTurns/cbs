@@ -1,14 +1,16 @@
 import colors from 'vuetify/es5/util/colors'
-
-import productitems from './static/products.json'
+import categories from './static/categories.json'
 import blogStories from './static/blogstories.json'
 
 const dynamicRoutes = () => {
   return new Promise((resolve) => {
-    const product = resolve(productitems.map((el) => `product/${el.id}`))
+    const product = resolve(categories.map((el) => `product/${el.id}`))
+    const subCategory = resolve(
+      categories.map((el) => `category/${el.subCategory}`)
+    )
     const article = resolve(blogStories.map((el) => `article/${el.id}`))
 
-    return product && article
+    return product && article && subCategory
   })
 }
 
@@ -78,7 +80,7 @@ export default {
         dark: {
           primary: colors.yellow.darken2,
           accent: colors.grey.darken4,
-          secondary: colors.blueGrey.darken4,
+          secondary: colors.grey.darken4,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
@@ -87,7 +89,7 @@ export default {
         light: {
           primary: colors.yellow.darken2,
           accent: colors.grey.darken1,
-          secondary: colors.amber.darken3,
+          secondary: colors.grey.darken2,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

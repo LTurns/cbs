@@ -16,10 +16,11 @@
           sm="12"
           ><v-hover v-slot="{ hover }" class="card">
             <v-card
-              :elevation="hover ? 12 : 2"
+              :elevation="hover ? 24 : 5"
               shaped
               class="pa-md-10 mx-lg-auto"
               :class="hover ? 'zoom' : 'notzoom'"
+              :style="{ background: $vuetify.theme.themes['dark'].secondary }"
             >
               <nuxt-link class="category" exact :to="card.link">
                 <v-row no-gutters>
@@ -30,12 +31,12 @@
                         style="max-width: 100px; height: auto"
                       />
                       <h3
-                        class="text-uppercase mt-1 mb-3"
+                        class="text-uppercase mt-1 mb-3 white--text"
                         style="letter-spacing: 0.15em"
                         v-text="card.title"
                       ></h3>
-                      <div class="yellow" v-text="card.subtitle"></div>
-                      <p v-text="card.text"></p>
+                      <div class="white--text" v-text="card.subtitle"></div>
+                      <p class="white--text" v-text="card.text"></p>
                     </div>
                   </v-col>
                 </v-row>
@@ -98,8 +99,10 @@ export default {
 .zoom {
   transform: scale(1.025) translate(0, -10px);
   transition: transform 0.2s;
+  box-shadow: 3px 1px 7px rgb(5, 5, 5) !important;
 }
 .notzoom {
   transition: transform 0.2s;
+  box-shadow: 3px 1px 7px rgb(10, 10, 10) !important;
 }
 </style>

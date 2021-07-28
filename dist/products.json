@@ -16,6 +16,7 @@
   ],
   "mainImg": "tornado.jpg",
   "category": "Fibre Blowing",
+  "subCategory": [],
   "item": [
     { "id" : 1,
       "main" :"Fully labelled control panel containing:", 
@@ -318,8 +319,9 @@
     "accessories": [
       {
         "name": "Tube Blowing Conversion Kits",
-        "elevation": 4,
         "color": "white",
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
         "id": "4",
         "productId": "C-1250-08",
         "intro": "The tube blowing conversion kits are initially used to convert an existing Tornado Cable Blowing Machine into a Tube Blowing Machine for installing micro tubes into ducts.",
@@ -327,18 +329,20 @@
      },
      {
         "name": "Compressed Air Cooler",
-        "elevation": 4,
         "color": "white",
         "id": "1",
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
         "productId": "C-1250-08",
         "intro": "The Compressor Aftercooler has been designed to cool compressed air and remove water droplets prior to entering a CBS Tornado Cable Blowing Machine.",
         "mainImg": "../tornado/tornado_accessory_2.jpeg"
      },
      {
         "name": "Hydraulic Power Pack",
-        "elevation": 4,
         "color": "white",
         "id": "15",
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
         "productId": "C-1203-F",
         "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
         "mainImg": "../tornado/tornado_accessory_3.jpeg"
@@ -348,6 +352,8 @@
       "elevation": 4,
       "color": "white",
       "id": "1",
+      "category" : "Fibre Blowing",
+        "subCategory" : "",
       "productId": "C-1203-F",
       "intro": "The CBS C-1240-F Cable Floating Water Pump has been designed to work in conjunction with the C-1250 Tornado to install fibre cables using water instead of air.",
       "mainImg": "../tornado/tornado_accessory_4.jpeg"
@@ -356,7 +362,7 @@
   },
   {
     "id": "2",
-     "name": "Jet Stream Cable Blowing Machine",
+     "name": "JetStream Cable Blowing Machine",
      "productId":"C-1900",
      "description": "The C-1900 has been designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive. The profiled double drive belt system is driven by single 32cc hydraulic motor, powered by the proven C-1203-F power pack. The electronic monitoring system provides read-out of speed and distance, gives protection against duct obstructions and includes emergency stop facility. The C-1900 is adjustable to suit a wide range of cable diameters 4-20mm, and duct diameters 12-50mm o/d.",
      "img": [
@@ -368,6 +374,7 @@
     ],
      "mainImg": "jetstream.jpg",
      "category": "Fibre Blowing",
+     "subCategory": [],
      "item": [
        { "id" : 1,
          "main" :"Main Features:", 
@@ -612,7 +619,8 @@
        "accessories": [
         {
           "name": "Hydraulic Power Pack",
-          "elevation": 4,
+          "category" : "Fibre Blowing",
+          "subCategory" : "",
           "color": "white",
           "id": "15",
           "productId": "C-1203-F",
@@ -638,6 +646,7 @@
       ],
        "mainImg": "hurricane.jpg",
        "category": "Fibre Blowing",
+       "subCategory": [],
        "item": [
          { "id" : 1,
            "main" :"Main Features:", 
@@ -905,7 +914,8 @@
                "accessories": [
       {
         "name": "Tornado Plus",
-        "elevation": 4,
+        "category" : "Fibre Blowing",
+          "subCategory" : "",
         "color": "white",
         "id": "1",
         "productId": "C-1250-08",
@@ -914,7 +924,8 @@
      },
      {
         "name": "Tornado Plus",
-        "elevation": 4,
+        "category" : "Fibre Blowing",
+          "subCategory" : "",
         "color": "white",
         "id": "1",
         "productId": "C-1250-08",
@@ -923,7 +934,8 @@
      },
      {
         "name": "Tornado Plus",
-        "elevation": 4,
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
         "color": "white",
         "id": "1",
         "productId": "C-1250-08",
@@ -950,6 +962,7 @@
         ],
          "mainImg": "airstream.jpg",
          "category": "Fibre Blowing",
+         "subCategory": [],
          "item": [
            { "id" : 1,
              "main" :"Main Features:", 
@@ -1174,7 +1187,8 @@
                     "columns": [ "Product No", "Replacement Drive Belts (Supplied in pairs)"],
                     "image" : "airstream/airstream-config-6.jpeg"
                   }
-           ]
+           ],
+           "accessories" : []
          },
          {
           "id": "5",
@@ -1184,6 +1198,7 @@
            "img": [  { "image" : "airstream-pneumatic.jpg" } ],
            "mainImg": "airstream-pneumatic.jpg",
            "category": "Fibre Blowing",
+           "subCategory": [],
            "item": [
              { "id" : 1,
                "main" :"Specifications:", 
@@ -1385,7 +1400,8 @@
                      "columns": [ "Product No", "Replacement Drive Belts (Supplied in pairs)"],
                      "image" : "airstream/airstream-config-6.jpeg"
                    }
-            ]
+            ],
+            "accessories" : []
            },
              {
               "id": "6",
@@ -1405,6 +1421,7 @@
               ],
                "mainImg": "accelair.jpg",
                "category": "Fibre Blowing",
+               "subCategory": [],
                "item": [
                  { "id" : 1,
                    "main" :"Specifications:", 
@@ -1659,7 +1676,8 @@
                               "columns": [ "Product No", "Battery Pack"],
                               "image" : "accelair/accelair-config-8.png"
                             }
-                 ]
+                 ],
+                 "accessories" : []
                },
                {
                 "id": "7",
@@ -1672,6 +1690,7 @@
                 ],
                 "mainImg": "whisper.jpg",
                 "category": "Fibre Blowing",
+                "subCategory": [],
                 "item": [
                   { "id" : 1,
                     "main" :"Main Features:", 
@@ -1779,7 +1798,8 @@
                   "accessories": [
                     {
                       "name": "Tripod Mount Kit",
-                      "elevation": 4,
+                      "category" : "Fibre Blowing",
+                      "subCategory" : "",
                       "color": "white",
                       "id": "4",
                       "productId": "G-GMP-89945",
@@ -1788,7 +1808,8 @@
                    },
                    {
                       "name": "Compressed Air Cooler",
-                      "elevation": 4,
+                      "category" : "Fibre Blowing",
+                      "subCategory" : "",
                       "color": "white",
                       "id": "1",
                       "productId": "G-GMP-89948",
@@ -1805,6 +1826,7 @@
                   "img": [ { "image" :  "gentl-air.jpeg"} ],
                   "mainImg": "gentl-air.jpeg",
                   "category": "Fibre Blowing",
+                  "subCategory": [],
                   "item": [
                     { "id" : 1,
                       "main" :"Main Features:", 
@@ -1882,7 +1904,8 @@
                     "accessories": [
                       {
                         "name": "Tripod Mount Kit",
-                        "elevation": 4,
+                        "category" : "Fibre Blowing",
+                        "subCategory" : "",
                         "color": "white",
                         "id": "4",
                         "productId": "G-GMP-89945",
@@ -1891,7 +1914,8 @@
                      },
                      {
                         "name": "Compressed Air Cooler",
-                        "elevation": 4,
+                        "category" : "Fibre Blowing",
+                        "subCategory" : "",
                         "color": "white",
                         "id": "1",
                         "productId": "G-GMP-89948",
@@ -1910,6 +1934,7 @@
                     ],
                     "mainImg": "cable-overblowing-junction-box.jpeg",
                     "category": "Fibre Blowing",
+                    "subCategory": [],
                     "item": [
                       { "id" : 1,
                         "main" :"Specifications:", 
@@ -1930,7 +1955,8 @@
                     "configurationTitle": "Configuration for CABLE OVERBLOWING JUNCTION BOX",
                     "configurationIntro": "",
                     "configImage": "overblowing-junction-box/junction-box-config.jpeg",
-                    "tables" : []
+                    "tables" : [],
+                    "accessories" : []
                     },
                     {
                       "id": "10",
@@ -1940,6 +1966,7 @@
                       "img": [],
                       "mainImg": "blown-fibre-compressor.jpeg",
                       "category": "Fibre Blowing",
+                      "subCategory": [],
                       "item": [
                         { "id" : 1,
                           "main": "Specifications",
@@ -1977,6 +2004,7 @@
                         ],
                         "mainImg": "cable-blowing-compressor/cable-blowing-compressor-1.jpg",
                         "category": "Fibre Blowing",
+                        "subCategory": [],
                         "item": [
                           { "id" : 1,
                             "main": "Main Features",
@@ -2024,6 +2052,7 @@
                           "img": [],
                           "mainImg": "kaeser-web.jpeg",
                           "category": "Fibre Blowing",
+                          "subCategory": [],
                           "item": [
                             { "id" : 1,
                               "main": "Main Features",
@@ -2047,7 +2076,7 @@
                             "accessories": []
                           },
                           {
-                            "id": "13",
+                            "id": "11",
                             "name": "Pull and Assist Winch",
                             "productId":"C-1045-001-R4",
                             "description": "The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable. The single capstan allows the winch to be placed at the mid point of a section to assist in the pull, thus enabling longer pulls to be achieved. The C-1045 has a rope take up drum, which is driven independently via a hydraulic motor. The take up drum has a detachable side, which allows the rope on the drum to be removed in a tidy coil and can be declutched from the drive to allow the rope to be pulled out manually when threading. The winch is powered by a 13hp petrol engine that drives a fixed displacement hydraulic pump, which in turn drives the low speed, high torque, hydraulic motor. The motor drives the capstan through an epicyclical gearbox. The pulling tension is mounted on a dial read out, allowing the operator to monitor the pull. Tension is adjustable from 0 – 500kg. The winch will stop pulling at the selected tension without stopping the engine, thereby protecting the cable. The C-1045 is built on a robust steel chassis. The trailer equipment complies with European Standards and has a single axle, overrun brakes and jockey wheel.",
@@ -2063,6 +2092,7 @@
                             ],
                             "mainImg": "winch/winch-2.jpeg",
                             "category": "Fibre Blowing",
+                            "subCategory": [],
                             "item": [
                               { "id" : 1,
                                 "main": "Specifications:",

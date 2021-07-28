@@ -1,0 +1,46 @@
+[
+ { "id": "5",
+    "name": "Pneumatic AirStream Cable Blowing Machine",
+    "productId":"C-1700-PNEU",
+    "mainImg": "airstream-pneumatic.jpg",
+    "category": "Fibre Blowing",
+    "subCategory": "airstream",
+    "intro": "The C-1700-PNEU Pneumatic AirStream has been designed to be a robust and simple to operate cable blowing machine."
+ },
+ {
+  "id": "6",
+   "name": "Accelair 2 Fibre Blowing Machine",
+   "productId":"C-1800",
+   "mainImg": "accelair.jpg",
+   "category": "Fibre Blowing",
+   "subCategory": "airstream",
+   "intro": "The C-1800 Accelair 2 Fibre Blowing Machine has been developed to provide a simple to use and reliable fibre blowing solution."
+   },
+   {
+    "id": "10",
+    "name": "Blown Fibre Compressor",
+    "productId":"C-1420-10",
+    "mainImg": "blown-fibre-compressor.jpeg",
+    "category": "Fibre Blowing",
+    "subCategory": "compressors",
+    "intro": "A compact 10 Bar compressor specifically for use with the CBS C-1800 Accelair2 Blown Fibre Unit."
+    },
+    {
+     "id": "11",
+     "name": "VRK20 Cable Blowing Machine Compressor",
+     "productId":"VRK20",
+     "mainImg": "cable-blowing-compressor/cable-blowing-compressor-1.jpg",
+     "category": "Fibre Blowing",
+     "subCategory": "compressors",
+     "intro": "The VRK20 is a portable compressor designed for cable blowing. Made With safety and efficiency in mind."
+     },
+     {
+       "id": "12",
+       "name": "Kaeser M17 Portable Compressor",
+       "productId":"VRK20",
+       "mainImg": "kaeser-web.jpeg",
+       "category": "Fibre Blowing",
+       "subCategory": "compressors",
+       "intro": "Versatile, reliable and easy to transport: This small compressor takes up minimal loading space and, with it's high-quality"
+       }
+]

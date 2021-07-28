@@ -9,10 +9,17 @@ vue/no-side-effects-in-computed-properties */
     <section id="home" class="section-showcase">
       <div class="container">
         <div>
-          <h1>{{ data.name.toUpperCase() }}</h1>
+          <h1 class="d-inline pa-2 mb-10">{{ data.name.toUpperCase() }}</h1>
           <p>
             {{ data.intro }}
           </p>
+          <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
+            Product ID
+          </div>
+          <div class="d-inline black white--text pa-2">
+            {{ data.productId }}
+          </div>
+          <br /><br />
           <a href="#about" class="btn">Read More</a>
           <nuxt-link exact :to="`/enquiry`" class="learn">
             <v-btn

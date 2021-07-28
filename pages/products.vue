@@ -2,7 +2,10 @@
   <section>
     <v-row>
       <v-col cols="12">
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :style="{ background: $vuetify.theme.themes['dark'].accent }"
+        />
         <SectionsIntro />
       </v-col>
     </v-row>

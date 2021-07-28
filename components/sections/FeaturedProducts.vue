@@ -7,49 +7,74 @@
     <v-container fluid>
       <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
         <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
+          <!-- <div v-show="plan.subCategory.length == 0"> -->
           <v-hover v-slot="{ hover }" class="card">
             <v-card
-              :elevation="hover ? 24 : plan.elevation"
+              :elevation="hover ? 24 : 4"
               :color="plan.color"
-              max-width="400"
-              min-height="550"
+              max-width="500"
+              height="610"
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
-              <nuxt-link class="link" :to="`/product/${plan.id}`">
-                <h4
-                  class="text-uppercase text-center black--text grey lighten-3 mt-5 pt-5 pl-5 pr-5 pb-5"
-                  style="letter-spacing: 0.15em"
-                  v-text="plan.name"
-                ></h4>
-                <v-img
-                  :src="plan.mainImg"
-                  width="250"
-                  :lazy-src="plan.mainImg"
-                  aspect-ratio="1"
-                  class="image grey lighten-2 rounded-lg"
-                ></v-img>
-                <!-- <img :src="plan.mainImg" width="250" /> -->
-                <v-card-text
-                  class="subtitle-1 black--text"
-                  v-text="plan.intro"
-                ></v-card-text>
-                <!-- <v-list>
+              <h4
+                class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                style="letter-spacing: 0.15em; font-size: 20px"
+                v-text="plan.name"
+              ></h4>
+              <v-img
+                :src="`/${plan.mainImg}`"
+                alt=""
+                width="250"
+                :lazy-src="plan.mainImg"
+                aspect-ratio="1"
+                class="image grey lighten-2 rounded-lg mt-5 mb-10"
+              ></v-img>
+              <!-- <img :src="plan.mainImg" width="250" /> -->
+              <v-card-text
+                class="subtitle-1 black--text"
+                v-text="plan.intro"
+              ></v-card-text>
+              <!-- <v-list>
                   <v-list-item> -->
-                <div
-                  class="text mx-auto text-right"
-                  style="position: absolute; bottom: 0; text-align: center"
-                >
-                  <div
-                    class="d-inline pa-2 mt-5 yellow accent-4 black--text mb-5"
-                  >
-                    Product ID
-                  </div>
-                  <div class="d-inline black white--text pa-2">
-                    {{ plan.productId }}
-                  </div>
+              <div style="position: absolute; bottom: 0; left: 35%">
+                <div v-if="plan.subCategory.length == 0">
+                  <nuxt-link class="link" :to="`/product/${plan.id}`">
+                    <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      text
+                      class="my-3"
+                      outlined
+                      black
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      >View</v-btn
+                    >
+                  </nuxt-link>
                 </div>
-                <!-- <v-btn
+                <div v-else>
+                  <nuxt-link
+                    class="link align-center"
+                    :to="`/category/${plan.subCategory}`"
+                  >
+                    <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      text
+                      class="my-3"
+                      outlined
+                      black
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      >View</v-btn
+                    >
+                  </nuxt-link>
+                </div>
+              </div>
+              <!-- Product ID -->
+              <!-- </div>
+                <div class="d-inline black white--text pa-2">
+                  <{{ plan.productId }} -->
+              <!-- </div> -->
+              <!-- </div> -->
+              <!-- <v-btn
                       color="primary"
                       large
                       block
@@ -58,11 +83,11 @@
                     >
                       View Now
                     </v-btn> -->
-                <!-- </v-list-item>
+              <!-- </v-list-item>
                 </v-list> -->
-              </nuxt-link>
             </v-card></v-hover
           >
+          <!-- </div> -->
         </v-col>
       </v-row>
     </v-container>
@@ -76,6 +101,9 @@ export default {
       type: Array,
       default: () => [],
     },
+  },
+  methods: {
+    link() {},
   },
 }
 </script>
@@ -101,5 +129,9 @@ export default {
 
 .link {
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100px;
 }
 </style>
