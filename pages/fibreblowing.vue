@@ -4,7 +4,7 @@
       <v-col
         cols="12"
         align="center"
-        :style="{ background: $vuetify.theme.themes['dark'].secondary }"
+        :style="{ background: $vuetify.theme.themes['dark'].primary }"
       >
         <SectionsHeroAlt :hero-alt="heroAlt" />
         <div class="search">

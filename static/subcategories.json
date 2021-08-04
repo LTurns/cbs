@@ -42,5 +42,59 @@
        "category": "Fibre Blowing",
        "subCategory": "compressors",
        "intro": "Versatile, reliable and easy to transport: This small compressor takes up minimal loading space and, with it's high-quality"
-       }
+       },
+       {
+         "id": "13",
+         "name": "Cable Fleeter",
+         "productId":"VRK20",
+         "mainImg": "cable-fleeter.jpeg",
+         "category": "Fibre Blowing",
+         "subCategory": "accessories",
+         "intro": "The Fleeter replaces the manual method of “figure of eighting” cable, and provides protection and security for the cable."
+         },
+         {
+            "id": "14",
+            "name": "Mini Cable Fleeting Device",
+            "productId":"C-1315-20-11",
+            "mainImg": "mini-cable-fleeting-device.jpeg",
+            "category": "Fibre Blowing",
+            "subCategory": "accessories",
+            "intro": "The Mini Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum."
+            },
+            {
+               "id": "15",
+               "name": "Micro Cable Fleeting Device",
+               "productId":"VRK20",
+               "mainImg": "micro-cable-fleeting.jpeg",
+               "category": "Fibre Blowing",
+               "subCategory": "accessories",
+               "intro": "The Micro Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum."
+               },
+               {
+                  "id": "16",
+                  "name": "Roll on Drum Stand",
+                  "productId":"VRK20",
+                  "mainImg": "roll-on-drum-stand.jpeg",
+                  "category": "Fibre Blowing",
+                  "subCategory": "accessories",
+                  "intro": "D-496-01 Roll on Drum Stand allows a range of drums to be accommodated to suit the majority of applications. Manufactured in steel, with ball bearings in the rollers, the stand is suitable for pulling off cable from the drum."
+                  },
+                  {
+                     "id": "20",
+                     "name": "Cable Drum Jacks",
+                     "productId":"VRK20",
+                     "mainImg": "cable-drum-jacks.jpeg",
+                     "category": "Fibre Blowing",
+                     "subCategory": "accessories",
+                     "intro": "Manufactured in a sturdy steel construction, with heavy-duty Acme screw threads to provide safe lifting. Lift 300mm."
+                     },
+                     {
+                        "id": "20",
+                        "name": "Breeze Cable Drum Stand",
+                        "productId":"VRK20",
+                        "mainImg": "breeze-cable.jpeg",
+                        "category": "Fibre Blowing",
+                        "subCategory": "accessories",
+                        "intro": "The Drum Stand has been designed in sections for ease of transportation and simply slots together to form a rigid and stable drum stand."
+                        }
 ]

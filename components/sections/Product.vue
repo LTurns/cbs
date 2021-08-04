@@ -33,7 +33,29 @@ vue/no-side-effects-in-computed-properties */
             ></nuxt-link
           >
         </div>
-        <img :src="`/${data.mainImg}`" alt="" />
+        <v-carousel class="carousel" show-arrows-on-hover draggable="true">
+          <v-carousel-item
+            v-for="image in data.img"
+            :key="image.id"
+            class="align-center"
+          >
+            <v-container>
+              <div>
+                <v-img
+                  style="
+                    max-width: 520px;
+                    display: block;
+                    margin-left: 15%;
+                    margin-right: 15%;
+                    margin-bottom: 10%;
+                  "
+                  :src="`../${image.image}`"
+                  lazy-src="`../${image.image}`"
+                />
+              </div>
+            </v-container>
+          </v-carousel-item>
+        </v-carousel>
       </div>
     </section>
 
@@ -44,7 +66,7 @@ vue/no-side-effects-in-computed-properties */
         <v-tabs-slider></v-tabs-slider>
 
         <v-tab href="#features"> Features </v-tab>
-        <v-tab href="#more"> Images </v-tab>
+        <!-- <v-tab href="#more"> Images </v-tab> -->
         <v-tab v-show="data.accessories.length != 0" href="#accessories">
           Accessories</v-tab
         >
@@ -59,16 +81,22 @@ vue/no-side-effects-in-computed-properties */
             mt="10"
             :style="{ background: $vuetify.theme.themes['dark'].accent }"
           >
-            <v-row class="mx-auto mt-7" style="max-width: 1200px">
+            <v-row class="mx-auto mt-7">
+              <div
+                :style="{ background: $vuetify.theme.themes['dark'].accent }"
+                class="white--text px-10 pb-10"
+                style="line-height: 30px; font-size: 15px"
+              >
+                {{ data.description }}
+              </div>
               <v-col
                 v-for="feature in data.item"
                 :key="feature.id"
                 cols="12"
-                md="4"
+                md="6"
                 ><v-hover>
                   <v-card
-                    max-width="400"
-                    min-height="600"
+                    style="min-height: 900px"
                     class="mx-auto transition-swing"
                     :elevation="hover ? 24 : 6"
                   >
@@ -109,35 +137,45 @@ vue/no-side-effects-in-computed-properties */
           value="config"
           :style="{ background: $vuetify.theme.themes['dark'].accent }"
         >
+          <v-card-text
+            class="white--text px-10 pb-10"
+            style="line-height: 30px; font-size: 15px"
+          >
+            {{ data.configurationIntro }}
+          </v-card-text>
           <v-card
             min-height="600"
             class="mx-auto transition-swing mt-10 ml-5 mr-5 mb-10"
             :elevation="hover ? 24 : 6"
           >
-            <h4
+            <!-- <h4
               class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
               style="letter-spacing: 0.15em"
               v-text="data.configurationTitle"
-            ></h4>
-            <v-card-text class="black--text mt-10 pl-10 pr-10">
-              {{ data.configurationIntro }}
-            </v-card-text>
-            <v-img
+            ></h4> -->
+            <!-- <v-img
               max-height="800"
               :src="`/${data.configImage}`"
               max-width="700"
               class="mx-auto mt-10"
               :lazy-src="`/${data.configImage}`"
-            />
+            /> -->
             <v-row
               v-for="table in data.tables"
               :key="table.id"
               no-gutters
-              class="flex-row pt-10 pb-10 mr-10 ml-10"
+              class="flex-row mr-10 ml-10"
             >
-              <v-col cols="12" md="6" align-self="center">
+              <v-col cols="12" md="12" align-self="center">
+                <h4
+                  class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
+                  style="letter-spacing: 0.15em"
+                  v-text="table.title"
+                ></h4>
+              </v-col>
+              <v-col cols="12" md="4" align-self="center">
                 <v-img
-                  max-height="800"
+                  max-height="500"
                   :src="`/${table.image}`"
                   max-width="300"
                   class="mx-auto"
@@ -145,14 +183,21 @@ vue/no-side-effects-in-computed-properties */
                 >
                 </v-img>
               </v-col>
-              <v-col cols="12" md="6" align-self="center">
-                <div class="pa-lg-1 pa-md-0 mt-10">
+              <v-col
+                cols="12"
+                md="8"
+                align-self="center"
+                class="mt-5 mb-5"
+                :style="{ background: $vuetify.theme.themes['dark'].accent }"
+              >
+                <div class="white--text">
                   <table>
                     <thead>
                       <tr>
                         <th
                           v-for="(column, index) in table.columns"
                           :key="index"
+                          class="white--text"
                         >
                           {{ column }}
                         </th>
@@ -164,6 +209,7 @@ vue/no-side-effects-in-computed-properties */
                         <td
                           v-for="(column, columnIndex) in table.columns"
                           :key="columnIndex"
+                          class="black--text"
                         >
                           {{ item[column] }}
                         </td>
@@ -236,16 +282,6 @@ vue/no-side-effects-in-computed-properties */
       <!-- </v-card> -->
       <!-- </div> -->
     </section>
-
-    <!-- Gallery -->
-    <section class="section-gallery"></section>
-    <div
-      :style="{ background: $vuetify.theme.themes['dark'].accent }"
-      class="white--text px-10 pt-10 pb-10"
-      style="line-height: 30px"
-    >
-      {{ data.description }}
-    </div>
   </section>
 </template>
 
@@ -304,18 +340,22 @@ export default {
 th {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: rgb(255, 210, 128);
-  font-size: 14px;
+  background-color: rgb(0, 0, 0);
   padding: 20px;
   text-transform: uppercase;
 }
 
 table tbody tr:nth-child(2n) td {
   background: rgb(243, 239, 239);
+  color: black;
 }
 
 td {
   padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
 } /* table td { */
 /* text-align: left;
   padding: 15px;
@@ -348,7 +388,6 @@ table tbody tr:nth-child(2n) td {
   th {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(255, 210, 128);
     font-size: 14px;
   }
 
@@ -695,7 +734,7 @@ img {
 }
 
 .section-showcase h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--primary-color);
 }
 
@@ -735,7 +774,7 @@ img {
   left: 0;
   background-color: var(--overlay-color);
 } */
-/* 
+/*
 .section-large-text-inner {
   color: #fff;
   height: 100%;
@@ -830,5 +869,64 @@ img {
   .section-footer div:nth-child(3) {
     display: none;
   }
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px #e1e5ee;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+}
+thead {
+  box-shadow: 0 5px 10px #e1e5ee;
+}
+
+th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+td {
+  padding: 1rem 2rem;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #2962ff;
+}
+
+.status {
+  border-radius: 0.2rem;
+  background-color: red;
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+.status-pending {
+  background-color: #fff0c2;
+  color: #a68b00;
+}
+
+.status-paid {
+  background-color: #c8e6c9;
+  color: #388e3c;
+}
+
+.status-unpaid {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.amount {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f6fb;
 }
 </style>
