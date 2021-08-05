@@ -8,7 +8,7 @@
           class="max-auto mx-auto text-center"
         >
           <h2
-            class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
+            class="text-h4 text-md-h4 text-center white--text text--darken-2 font-weight-black mt-10 mb-10"
           >
             PRODUCTS AND SERVICES
           </h2>
@@ -19,7 +19,7 @@
           class="max-auto mx-auto text-center"
         >
           <h2
-            class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
+            class="text-h4 text-md-h4 text-center white--text text--darken-2 font-weight-black mt-10 mb-5"
           >
             FEATURED PRODUCTS
           </h2>

@@ -5,8 +5,8 @@
   "productId":"C-1250-08",
   "description": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation. The system installs fibre optic cable of 6mm (0.25”) to 32mm (1.25”) overall diameter, at speeds up to 90m/min (300ft/min), into pre-installed ducts. The system operates on the viscous drag principle employing compressed air to install the cable, controlled and assisted by the belt drive system. The cable is propelled by compressed air, fed into the duct via a venturi principle, while the hydraulically powered belt drive system controls the fibre optic cable. The electronic monitoring system provides read out of speed and distance, gives protection against duct obstructions and includes an emergency stop facility. The system is mounted on an anti-corrosion treated, sturdy, height adjustable, wheeled, tubular steel trolley. This allows the unit to be wheeled around on site. The C-1203 hydraulic petrol driven power pack provides power. The unit is CE approved.",
   "img": [
-    { "image" :"tornado/tornado-1.jpeg" },
     { "image" :"tornado.jpg" },
+    { "image" :"tornado/tornado-1.jpeg" },
     { "image" :"tornado/tornado-2.jpeg" },
     { "image" :"tornado/tornado-3.jpeg" },
     { "image" :"tornado/tornado-4.jpeg" },
@@ -122,7 +122,8 @@
         }
     ],
     "columns": [ "Duct O.D", "Part No for A) Duct Clamp Collet"],
-    "image" : "tornado/duct-clamp-collet.jpg"
+    "image" : "tornado/duct-clamp-collet.jpg",
+    "title": "Hello"
     },
     {
       "items": [
@@ -148,7 +149,8 @@
         }
     ],
     "columns": [ "Duct O.D", "Part No for B) Duct Seal Collet"],
-    "image" : "tornado/duct-seal-collet.jpg"
+    "image" : "tornado/duct-seal-collet.jpg",
+    "title": "Hello"
     },
     {
       "items": [
@@ -189,7 +191,8 @@
         }
         ],
         "columns": [ "Cable Diameter", "Part No for Cable Collet Assy (C)", "Part No for In-Feed Cable Collet (D)"],
-        "image" : "tornado/collet-assy.jpg"
+        "image" : "tornado/collet-assy.jpg",
+        "title": "Hello"
       },
       {
         "items": [
@@ -251,7 +254,8 @@
           }
           ],
           "columns": [ "Cable Diameter", "Part No for E) Cable Seals (Supplied in packs of 10)"],
-          "image" : "tornado/cable-seals.jpg"
+          "image" : "tornado/cable-seals.jpg",
+          "title": "Hello"
         },
         {
           "items": [
@@ -313,7 +317,8 @@
             }
             ],
             "columns": [ "Cable Diameter", "Part No for F) Cable Seal Plugs"],
-            "image" : "tornado/cable-seals-plugs.jpg"
+            "image" : "tornado/cable-seals-plugs.jpg",
+            "title": "Hello"
           }
     ],
     "accessories": [
@@ -1409,15 +1414,15 @@
                "productId":"C-1800",
                "description": "The C-1800 Fibre Blowing Machine (Accelair 2) has been developed to provide a simple to use and reliable fibre blowing solution. The Accelair 2 is designed to fit a fibre range from 1 to 3mm diameter, thereby providing the complete range of blown fibre installation solutions from one machine. The Accelair 2 is a compact integrated fibre blowing machine benefiting from full automation and fibre management; sophisticated fibre protection is implemented to ensure the fibre mechanical and optical integrity is maintained. The machine only requires a single 24V D.C. electrical supply and compressed air to operate.",
                "img": [
-                { "image" : "accelair/accelaire-1.jpeg"},
-                { "image" : "accelair/accelair-2.jpeg"},
-                { "image" : "accelair/accelair-3.jpeg"},
-                { "image" : "accelair/accelair-4.jpeg"},
-                { "image" : "accelair/accelair-5.jpeg"},
-                { "image" : "accelair/accelair-6.jpeg"},
-                { "image" : "accelair/accelair-7.jpeg"},
-                { "image" : "accelair/accelair-8.jpeg"},
-                { "image" : "accelair/accelair-9.jpeg"}
+                { "image" : "accelair.jpg"},
+                { "image" : "../accelair/accelair-2.jpeg"},
+                { "image" : "../accelair/accelair-3.jpeg"},
+                { "image" : "../accelair/accelair-4.jpeg"},
+                { "image" : "../accelair/accelair-5.jpeg"},
+                { "image" : "../accelair/accelair-6.jpeg"},
+                { "image" : "../accelair/accelair-7.jpeg"},
+                { "image" : "../accelair/accelair-8.jpeg"},
+                { "image" : "../accelair/accelair-9.jpeg"}
               ],
                "mainImg": "accelair.jpg",
                "category": "Fibre Blowing",
@@ -1930,7 +1935,8 @@
                     "productId":"C-1253-JBOX",
                     "description": "The CBS Cable Overblowing Junction Box has been designed to install a new cable into an existing occupied sub-duct. The Cable Overblowing Junction Box comprises a robust aluminium base and lid that form a pressurised air chamber into which one end of an existing occupied sub-duct can be attached. The existing cable exits the Cable Overblowing Junction Box through an opening that has 3 cable seal slots, one of which will house the seal to suit the size of the existing cable. The third branch is then connected to a CBS Cable Blowing Machine via a short slave length of tube for the installation of the extra cable. A range of Overblowing junction box collets and seals are available to suit the outside diameter of the existing sub-duct, existing cable, cable to be installed and slave length of tube for cable to be installed. Air is fed into the Cable Overblowing Junction Box directly via a J-Mac coupling on the lid of the box. Other couplings and adaptors are available on request, speak to one of the sales team for more information.The CBS Cable Overblowing Junction Box has been designed to install a new cable into an existing occupied sub-duct. The Cable Overblowing Junction Box comprises a robust aluminium base and lid that form a pressurised air chamber into which one end of an existing occupied sub-duct can be attached. The existing cable exits the Cable Overblowing Junction Box through an opening that has 3 cable seal slots, one of which will house the seal to suit the size of the existing cable. The third branch is then connected to a CBS Cable Blowing Machine via a short slave length of tube for the installation of the extra cable. A range of Overblowing junction box collets and seals are available to suit the outside diameter of the existing sub-duct, existing cable, cable to be installed and slave length of tube for cable to be installed. Air is fed into the Cable Overblowing Junction Box directly via a J-Mac coupling on the lid of the box. Other couplings and adaptors are available on request, speak to one of the sales team for more information.",
                     "img": [
-                      { "image" : "cable-overblowing-junction-box.jpeg"}
+                      
+                      
                     ],
                     "mainImg": "cable-overblowing-junction-box.jpeg",
                     "category": "Fibre Blowing",
@@ -1963,7 +1969,9 @@
                       "name": "Blown Fibre Compressor",
                       "productId":"C-1420-10",
                       "description": "A compact 10 Bar compressor specifically for use with the CBS C-1800 Accelair2 Blown Fibre Unit. The compressor is fitted with aftercooling, filtration and air drying essential in providing the optimum viscous drag effect for maximum fibre blowing length.",
-                      "img": [],
+                      "img": [
+                        { "image" : "blown-fibre-compressor.jpeg"}
+                      ],
                       "mainImg": "blown-fibre-compressor.jpeg",
                       "category": "Fibre Blowing",
                       "subCategory": [],
@@ -1998,9 +2006,9 @@
                         "productId":"VRK20",
                         "description": "The VRK20 is a portable compressor designed for cable blowing. With safety and efficiency in mind, it is designed to meet the requirements for cable blowing installations",
                         "img": [
-                         { "image": "cable-blowing-compressor/cable-blowing-compressor-1.jpg"},
-                         { "image": "cable-blowing-compressor/cable-blowing-compressor-2.jpg"},
-                         { "image": "cable-blowing-compressor/cable-blowing-compressor-3.jpg"}
+                         { "image": "../cable-blowing-compressor/cable-blowing-compressor-1.jpg"},
+                         { "image": "../cable-blowing-compressor/cable-blowing-compressor-2.jpg"},
+                         { "image": "../cable-blowing-compressor/cable-blowing-compressor-3.jpg"}
                         ],
                         "mainImg": "cable-blowing-compressor/cable-blowing-compressor-1.jpg",
                         "category": "Fibre Blowing",
@@ -2049,7 +2057,8 @@
                           "name": "Kaeser M17 Portable Compressor",
                           "productId":"VRK20",
                           "description": "Versatile, reliable and easy to transport: This small compressor takes up minimal loading space and, with it's high-quality motor and extremely impact-resistant PE enclosure, it's ready for anything. The 15-bar version is the ideal choice for trenchless laying of glass fibre cables or for leakage tests. An external compressed air aftercooler can also be optionally connected to ensure a dependable supply of cool, condensate-free air at all times.",
-                          "img": [],
+                          "img": [
+                            { "image" : "../kaeser-web.jpeg"}],
                           "mainImg": "kaeser-web.jpeg",
                           "category": "Fibre Blowing",
                           "subCategory": [],
@@ -2076,7 +2085,7 @@
                             "accessories": []
                           },
                           {
-                            "id": "11",
+                            "id": "17",
                             "name": "Pull and Assist Winch",
                             "productId":"C-1045-001-R4",
                             "description": "The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable. The single capstan allows the winch to be placed at the mid point of a section to assist in the pull, thus enabling longer pulls to be achieved. The C-1045 has a rope take up drum, which is driven independently via a hydraulic motor. The take up drum has a detachable side, which allows the rope on the drum to be removed in a tidy coil and can be declutched from the drive to allow the rope to be pulled out manually when threading. The winch is powered by a 13hp petrol engine that drives a fixed displacement hydraulic pump, which in turn drives the low speed, high torque, hydraulic motor. The motor drives the capstan through an epicyclical gearbox. The pulling tension is mounted on a dial read out, allowing the operator to monitor the pull. Tension is adjustable from 0 – 500kg. The winch will stop pulling at the selected tension without stopping the engine, thereby protecting the cable. The C-1045 is built on a robust steel chassis. The trailer equipment complies with European Standards and has a single axle, overrun brakes and jockey wheel.",

@@ -27,7 +27,32 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+  async fetch() {
+    try {
+      const result = await axios.get(
+        'https://tranquil-basin-55259.herokuapp.com/product-categories',
+        {}
+      )
+      this.filteredList = result.data
+      if (this.search !== '') {
+        return this.filteredList.filter((box) => {
+          return box.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      }
+      return this.filteredList
+    } catch (error) {
+      if (this.search !== '') {
+        this.filteredList = this.$store.getters.fibreBlowing.filter((box) => {
+          return box.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      }
+      this.filteredList = this.$store.getters.fibreBlowing
+
+      return this.filteredList
+    }
+  },
   data() {
     return {
       heroAlt: [
@@ -37,34 +62,35 @@ export default {
         },
       ],
       search: '',
+      filteredList: '',
     }
   },
-  computed: {
-    // CableBlowingEquipment() {
-    //   return this.$store.getters.cableBlowingCategory;
-    // },
-    filteredList() {
-      if (this.search !== '') {
-        return this.$store.getters.fibreBlowing.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
-      }
-      return this.$store.getters.fibreBlowing
-    },
-  },
-  head() {
-    return {
-      title: 'Gallery',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
-        },
-      ],
-    }
-  },
+  // computed: {
+  //   // CableBlowingEquipment() {
+  //   //   return this.$store.getters.cableBlowingCategory;
+  //   // },
+  //   filteredList() {
+  //     if (this.search !== '') {
+  //       return this.$store.getters.fibreBlowing.filter((box) => {
+  //         return box.name.toLowerCase().includes(this.search.toLowerCase())
+  //       })
+  //     }
+  //     return this.$store.getters.fibreBlowing
+  //   },
+  // },
+  // head() {
+  //   return {
+  //     title: 'Gallery',
+  //     meta: [
+  //       {
+  //         hid: 'description',
+  //         name: 'description',
+  //         content:
+  //           'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
+  //       },
+  //     ],
+  //   }
+  // },
 }
 </script>
 

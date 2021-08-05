@@ -1,30 +1,37 @@
 <template>
   <div>
-    <SectionsSubCategoryList :data="subCategory" />
+    <SectionsSubCategoryList :data="productCategory" />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import axios from 'axios'
 
 export default {
+  async fetch() {
+    try {
+      const result = await axios.get(
+        'https://tranquil-basin-55259.herokuapp.com/product-sub-categories'
+      )
+      this.subProducts = result.data
+
+      this.subProducts.map((el) =>
+        el.subCategory === this.id ? this.productCategory.push(el) : ''
+      )
+
+      return this.productCategory
+    } catch (error) {
+      this.subProducts = this.$store.getters.SubCategories.map((el) =>
+        el.subCategory === this.id ? this.productCategory.push(el) : ''
+      )
+      return this.productCategory
+    }
+  },
   data() {
     return {
       id: this.$route.params.subCategory,
       productCategory: [],
     }
-  },
-
-  computed: {
-    ...mapState(['subCategories']),
-    subCategory() {
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.subCategories.map((el) =>
-        el.subCategory === this.id ? this.productCategory.push(el) : ''
-      )
-
-      return this.productCategory
-    },
   },
 }
 </script>

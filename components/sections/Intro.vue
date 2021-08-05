@@ -1,13 +1,12 @@
 <template>
   <section
     id="intro"
-    class="py-10 mb-20"
-    :style="{ background: $vuetify.theme.themes['dark'].accent }"
+    :style="{ background: $vuetify.theme.themes['light'].primary }"
   >
     <v-container>
       <v-row>
         <v-col
-          v-for="card in cards"
+          v-for="card in axiosCards"
           :key="card.title"
           v-hover
           class="column"
@@ -18,7 +17,7 @@
             <v-card
               :elevation="hover ? 24 : 5"
               shaped
-              class="pa-md-10 mx-lg-auto"
+              class="card pa-md-10 mx-lg-auto"
               :class="hover ? 'zoom' : 'notzoom'"
               :style="{ background: $vuetify.theme.themes['dark'].secondary }"
             >
@@ -33,7 +32,7 @@
                       <h3
                         class="text-uppercase mt-1 mb-3 white--text"
                         style="letter-spacing: 0.15em"
-                        v-text="card.title"
+                        v-text="card.name"
                       ></h3>
                       <div class="white--text" v-text="card.subtitle"></div>
                       <p class="white--text" v-text="card.text"></p>
@@ -50,33 +49,47 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+  async fetch() {
+    try {
+      const result = await axios.get(
+        'https://tranquil-basin-55259.herokuapp.com/main-categories',
+        {}
+      )
+      this.axiosCards = result.data
+      return this.axiosCards
+    } catch (error) {
+      this.axiosCards = this.cards
+    }
+  },
   data() {
     return {
+      axiosCards: '',
       cards: [
         {
-          title: 'UTILITIES',
+          name: 'UTILITIES',
           image: 'icon-cal.svg',
           text:
             'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
           link: '/utilities',
         },
         {
-          title: 'FIBRE BLOWING',
+          name: 'FIBRE BLOWING',
           image: 'icon-package.svg',
           text:
             'Our Fibre Blowing products contain Tornados, Jet Streams, Air Streams and more. We can even boast having some of the best Tornados in the industry.',
           link: '/fibreblowing',
         },
         {
-          title: 'CLIENT TOOLS',
+          name: 'CLIENT TOOLS',
           image: 'icon-package.svg',
           text:
             'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
           link: '/clienttools',
         },
         {
-          title: 'TELECOMS',
+          name: 'TELECOMS',
           image: 'icon-package.svg',
           text:
             'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
@@ -96,6 +109,10 @@ export default {
   text-align: center;
 }
 
+.card {
+  min-height: 330px;
+}
+
 .zoom {
   transform: scale(1.025) translate(0, -10px);
   transition: transform 0.2s;
@@ -104,5 +121,11 @@ export default {
 .notzoom {
   transition: transform 0.2s;
   box-shadow: 3px 1px 7px rgb(10, 10, 10) !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    min-height: 200px;
+  }
 }
 </style>

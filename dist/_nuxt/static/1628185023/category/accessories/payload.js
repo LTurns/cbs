@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/category/accessories", {data:[{}],fetch:{"0":{id:"accessories",productCategory:[]}},mutations:[]});
