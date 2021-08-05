@@ -32,7 +32,7 @@ export default {
   async fetch() {
     try {
       const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product-categories',
+        'https://tranquil-basin-55259.herokuapp.com/product-category',
         {}
       )
       this.filteredList = result.data
