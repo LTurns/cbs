@@ -62,16 +62,20 @@ vue/no-side-effects-in-computed-properties */
     <!-- Large Text -->
     <section id="about" class="section-large-text">
       <!-- <div class="overlay"> -->
-      <v-tabs v-model="tab" black--text centered dark>
+      <v-tabs v-model="tab" black--text left dark>
         <v-tabs-slider></v-tabs-slider>
 
-        <v-tab href="#features"> Features </v-tab>
+        <v-tab href="#features" class="ml-20"> Features </v-tab>
         <!-- <v-tab href="#more"> Images </v-tab> -->
         <v-tab v-show="data.accessories.length != 0" href="#accessories">
           Accessories</v-tab
         >
-        <v-tab v-show="areConfig" href="#config"> Configuration </v-tab>
-        <v-tab v-show="areVideos" href="#video"> Video Tutorials </v-tab>
+        <v-tab v-show="data.tables.length" href="#config">
+          Configuration
+        </v-tab>
+        <v-tab v-show="data.video.length != 0" href="#video">
+          Video Tutorials
+        </v-tab>
       </v-tabs>
 
       <v-tabs-items v-model="tab">

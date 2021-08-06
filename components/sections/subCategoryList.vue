@@ -49,7 +49,7 @@
                 </v-list> -->
               <nuxt-link
                 class="link"
-                :to="`/product/${plan.id}`"
+                :to="`/product/${plan.uid}`"
                 style="position: absolute; bottom: 0; left: 35%"
               >
                 <v-btn

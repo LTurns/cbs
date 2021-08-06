@@ -4,7 +4,7 @@ import blogStories from './static/blogstories.json'
 
 const dynamicRoutes = () => {
   return new Promise((resolve) => {
-    const product = resolve(categories.map((el) => `product/${el.id}`))
+    const product = resolve(categories.map((el) => `product/${el.uid}`))
     const subCategory = resolve(
       categories.map((el) => `category/${el.subCategory}`)
     )

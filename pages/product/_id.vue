@@ -19,7 +19,7 @@ export default {
     ...mapState(['productItems']),
     product() {
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.item = this.productItems.find((el) => el.id === this.id)
+      this.item = this.productItems.find((el) => el.uid === this.id)
 
       return this.item
     },
