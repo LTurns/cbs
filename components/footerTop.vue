@@ -49,8 +49,12 @@
 
                   <v-list-item-content>
                     <v-list-item-title>EMAIL</v-list-item-title>
-                    <v-list-item-subtitle
-                      >sales@cbsproducts.com</v-list-item-subtitle
+                    <v-list-item-subtitle class="email"
+                      ><a
+                        class="email black--text"
+                        href="mailto: sales@cbsproducts.com"
+                        >sales@cbsproducts.com</a
+                      ></v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item>
@@ -64,9 +68,11 @@
 
                   <v-list-item-content>
                     <v-list-item-title>PHONE</v-list-item-title>
-                    <v-list-item-subtitle>
-                      +44 (0) 1572 723 665</v-list-item-subtitle
-                    >
+                    <v-list-item-subtitle class="email black--text">
+                      <a class="email black--text" href="tel:01572723665"
+                        >+44 (0) 1572 723 665</a
+                      >
+                    </v-list-item-subtitle>
                   </v-list-item-content>
                 </v-list-item>
                 <v-divider></v-divider>
@@ -119,3 +125,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.email {
+  color: black;
+}
+</style>

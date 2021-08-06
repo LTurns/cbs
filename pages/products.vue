@@ -97,7 +97,7 @@ export default {
   computed: {
     productList() {
       if (this.search !== '') {
-        return this.$store.getters.Products.filter((box) => {
+        return this.$store.getters.Categories.filter((box) => {
           return box.name.toLowerCase().includes(this.search.toLowerCase())
         })
       }

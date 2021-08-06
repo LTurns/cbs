@@ -14,6 +14,7 @@ export const state = () => ({
 
 export const getters = {
   Products: (state) => state.productItems,
+  Categories: (state) => state.categories,
   SubCategories: (state) => state.subCategories,
   fibreBlowing: (state) =>
     state.categories.filter((el) => el.category === 'Fibre Blowing'),
