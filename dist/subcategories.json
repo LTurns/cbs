@@ -1,6 +1,7 @@
 [
  { "id": "5",
     "name": "Pneumatic AirStream Cable Blowing Machine",
+    "uid" : "+SNqIzGIUmO0+fyHoEOw",
     "productId":"C-1700-PNEU",
     "mainImg": "airstream-pneumatic.jpg",
     "category": "Fibre Blowing",
@@ -9,16 +10,18 @@
  },
  {
   "id": "6",
-   "name": "Accelair 2 Fibre Blowing Machine",
-   "productId":"C-1800",
-   "mainImg": "accelair.jpg",
+   "name": "AirStream Cable Blowing Machine",
+   "uid" : "XVnU4fnqZECjTGE5SIkx7A",
+   "productId":"C-1700",
+   "mainImg": "airstream.jpg",
    "category": "Fibre Blowing",
    "subCategory": "airstream",
-   "intro": "The C-1800 Accelair 2 Fibre Blowing Machine has been developed to provide a simple to use and reliable fibre blowing solution."
+   "intro": "The Airstream machine is designed by the latest technology in servo controls to provide precise control of torque and speed."
    },
    {
     "id": "10",
     "name": "Blown Fibre Compressor",
+    "uid" : "yq6gO5EwT0q39RD+kTjp9w",
     "productId":"C-1420-10",
     "mainImg": "blown-fibre-compressor.jpeg",
     "category": "Fibre Blowing",
@@ -27,7 +30,8 @@
     },
     {
      "id": "11",
-     "name": "VRK20 Cable Blowing Machine Compressor",
+     "name": "Cable Blowing Machine Compressor",
+     "uid" : "3hUe8bataU+gWxTBU10A+g",
      "productId":"VRK20",
      "mainImg": "cable-blowing-compressor/cable-blowing-compressor-1.jpg",
      "category": "Fibre Blowing",
@@ -37,6 +41,7 @@
      {
        "id": "12",
        "name": "Kaeser M17 Portable Compressor",
+       "uid" : "E511ciFj1EKns4bG7ygpkA",
        "productId":"VRK20",
        "mainImg": "kaeser-web.jpeg",
        "category": "Fibre Blowing",
@@ -46,6 +51,7 @@
        {
          "id": "13",
          "name": "Cable Fleeter",
+         "uid" : "IBAt+kCkeHtA7+xh+MA",
          "productId":"VRK20",
          "mainImg": "cable-fleeter.jpeg",
          "category": "Fibre Blowing",
@@ -55,6 +61,7 @@
          {
             "id": "14",
             "name": "Mini Cable Fleeting Device",
+            "uid" : "3df0kbiPukquArnSrjH8A",
             "productId":"C-1315-20-11",
             "mainImg": "mini-cable-fleeting-device.jpeg",
             "category": "Fibre Blowing",
@@ -64,6 +71,7 @@
             {
                "id": "15",
                "name": "Micro Cable Fleeting Device",
+               "uid" : "2XTEblFK5U6MGInDILWRPQ",
                "productId":"VRK20",
                "mainImg": "micro-cable-fleeting.jpeg",
                "category": "Fibre Blowing",
@@ -73,7 +81,8 @@
                {
                   "id": "16",
                   "name": "Roll on Drum Stand",
-                  "productId":"VRK20",
+                  "uid" : "638398XCEqhs4TjYlq6pQ",
+                  "productId":"D-496-01",
                   "mainImg": "roll-on-drum-stand.jpeg",
                   "category": "Fibre Blowing",
                   "subCategory": "accessories",
@@ -82,6 +91,7 @@
                   {
                      "id": "20",
                      "name": "Cable Drum Jacks",
+                     "uid" : "",
                      "productId":"VRK20",
                      "mainImg": "cable-drum-jacks.jpeg",
                      "category": "Fibre Blowing",
@@ -91,6 +101,7 @@
                      {
                         "id": "20",
                         "name": "Breeze Cable Drum Stand",
+                        "uid" : "",
                         "productId":"VRK20",
                         "mainImg": "breeze-cable.jpeg",
                         "category": "Fibre Blowing",
