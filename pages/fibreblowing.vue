@@ -20,7 +20,7 @@
           </button>
         </div>
 
-        <SectionsFeaturedProducts :data="filteredList" />
+        <SectionsFeaturedProducts :data="list" />
       </v-col>
     </v-row>
   </section>
@@ -32,16 +32,11 @@ export default {
   async fetch() {
     try {
       const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product-category',
+        'https://tranquil-basin-55259.herokuapp.com/product-categories',
         {}
       )
       this.filteredList = result.data
-      if (this.search !== '') {
-        return this.filteredList.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
-      }
-      return this.filteredList
+      return this.filteredList.data
     } catch (error) {
       if (this.search !== '') {
         this.filteredList = this.$store.getters.fibreBlowing.filter((box) => {
@@ -65,19 +60,19 @@ export default {
       filteredList: '',
     }
   },
-  // computed: {
-  //   // CableBlowingEquipment() {
-  //   //   return this.$store.getters.cableBlowingCategory;
-  //   // },
-  //   filteredList() {
-  //     if (this.search !== '') {
-  //       return this.$store.getters.fibreBlowing.filter((box) => {
-  //         return box.name.toLowerCase().includes(this.search.toLowerCase())
-  //       })
-  //     }
-  //     return this.$store.getters.fibreBlowing
-  //   },
-  // },
+  computed: {
+    // CableBlowingEquipment() {
+    //   return this.$store.getters.cableBlowingCategory;
+    // },
+    list() {
+      if (this.search !== '') {
+        return this.filteredList.filter((box) => {
+          return box.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      }
+      return this.filteredList
+    },
+  },
   // head() {
   //   return {
   //     title: 'Gallery',
