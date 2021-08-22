@@ -5,109 +5,112 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */
 <template>
-  <section id="hero">
-    <section id="home" class="section-showcase">
-      <div class="container">
-        <div>
-          <h1 class="d-inline pa-2 mb-10">{{ data.name.toUpperCase() }}</h1>
-          <p>
-            {{ data.intro }}
-          </p>
-          <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
-            Product ID
+  <section>
+    <div v-for="product in data" id="hero" :key="product.id">
+      <section id="home" class="section-showcase">
+        <div class="container">
+          <div>
+            <h1 class="d-inline pa-2 mb-10">
+              {{ product.name.toUpperCase() }}
+            </h1>
+            <p>
+              {{ product.intro }}
+            </p>
+            <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
+              Product ID
+            </div>
+            <div class="d-inline black white--text pa-2">
+              {{ product.productId }}
+            </div>
+            <br /><br />
+            <a href="#about" class="btn">Read More</a>
+            <nuxt-link exact :to="`/enquiry`" class="learn">
+              <v-btn
+                :x-large="$vuetify.breakpoint.smAndUp"
+                text
+                class="my-3"
+                outlined
+                white
+                ><v-icon left large color="primary">mdi-play</v-icon>Enquire
+                Now</v-btn
+              ></nuxt-link
+            >
           </div>
-          <div class="d-inline black white--text pa-2">
-            {{ data.productId }}
-          </div>
-          <br /><br />
-          <a href="#about" class="btn">Read More</a>
-          <nuxt-link exact :to="`/enquiry`" class="learn">
-            <v-btn
-              :x-large="$vuetify.breakpoint.smAndUp"
-              text
-              class="my-3"
-              outlined
-              white
-              ><v-icon left large color="primary">mdi-play</v-icon>Enquire
-              Now</v-btn
-            ></nuxt-link
-          >
+          <v-carousel class="carousel" show-arrows-on-hover draggable="true">
+            <v-carousel-item
+              v-for="img in product.img"
+              :key="img.id"
+              class="align-center"
+            >
+              <v-container>
+                <div>
+                  <v-img
+                    style="
+                      max-width: 520px;
+                      display: block;
+                      margin-left: 15%;
+                      margin-right: 15%;
+                      margin-bottom: 10%;
+                    "
+                    :src="`../${img.image}`"
+                    :lazy-src="`../${img.image}`"
+                  />
+                </div>
+              </v-container>
+            </v-carousel-item>
+          </v-carousel>
         </div>
-        <v-carousel class="carousel" show-arrows-on-hover draggable="true">
-          <v-carousel-item
-            v-for="image in data.img"
-            :key="image.id"
-            class="align-center"
+      </section>
+
+      <!-- Large Text -->
+      <section id="about" class="section-large-text">
+        <!-- <div class="overlay"> -->
+        <v-tabs v-model="tab" black--text left dark>
+          <v-tabs-slider></v-tabs-slider>
+
+          <v-tab href="#features" class="ml-20"> Features </v-tab>
+          <!-- <v-tab href="#more"> Images </v-tab> -->
+          <v-tab v-show="product.accessories.length != 0" href="#accessories">
+            Accessories</v-tab
           >
-            <v-container>
-              <div>
-                <v-img
-                  style="
-                    max-width: 520px;
-                    display: block;
-                    margin-left: 15%;
-                    margin-right: 15%;
-                    margin-bottom: 10%;
-                  "
-                  :src="`../${image.image}`"
-                  lazy-src="`../${image.image}`"
-                />
-              </div>
-            </v-container>
-          </v-carousel-item>
-        </v-carousel>
-      </div>
-    </section>
+          <v-tab v-show="product.tables.length" href="#config">
+            Configuration
+          </v-tab>
+          <v-tab v-show="product.video.length != 0" href="#video">
+            Video Tutorials
+          </v-tab>
+        </v-tabs>
 
-    <!-- Large Text -->
-    <section id="about" class="section-large-text">
-      <!-- <div class="overlay"> -->
-      <v-tabs v-model="tab" black--text left dark>
-        <v-tabs-slider></v-tabs-slider>
-
-        <v-tab href="#features" class="ml-20"> Features </v-tab>
-        <!-- <v-tab href="#more"> Images </v-tab> -->
-        <v-tab v-show="data.accessories.length != 0" href="#accessories">
-          Accessories</v-tab
-        >
-        <v-tab v-show="data.tables.length" href="#config">
-          Configuration
-        </v-tab>
-        <v-tab v-show="data.video.length != 0" href="#video">
-          Video Tutorials
-        </v-tab>
-      </v-tabs>
-
-      <v-tabs-items v-model="tab">
-        <v-tab-item :key="1" value="features" mt="10">
-          <v-container
-            fluid
-            mt="10"
-            :style="{ background: $vuetify.theme.themes['dark'].accent }"
-          >
-            <v-row class="mx-auto mt-7">
-              <div
-                :style="{ background: $vuetify.theme.themes['dark'].accent }"
-                class="white--text px-10 pb-10"
-                style="line-height: 30px; font-size: 15px"
-              >
-                {{ data.description }}
-              </div>
-              <v-col
-                v-for="feature in data.item"
-                :key="feature.id"
-                cols="12"
-                md="6"
-                ><v-hover>
+        <v-tabs-items v-model="tab">
+          <v-tab-item :key="1" value="features" mt="10">
+            <v-container
+              fluid
+              mt="10"
+              :style="{ background: $vuetify.theme.themes['dark'].accent }"
+            >
+              <v-row class="mx-auto mt-7">
+                <div
+                  :style="{ background: $vuetify.theme.themes['dark'].accent }"
+                  class="white--text px-2 pb-10"
+                  style="line-height: 30px; font-size: 15px"
+                >
+                  {{ product.description }}
+                </div>
+                <v-col
+                  v-for="feature in product.item"
+                  :key="feature.id"
+                  cols="12"
+                  md="6"
+                >
                   <v-card
-                    style="min-height: 900px"
+                    id="feature-card"
                     class="mx-auto transition-swing"
                     :elevation="hover ? 24 : 6"
                   >
                     <v-list-item-content>
                       <!-- <v-toolbar color="yellow" light> -->
                       <h4
-                        class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
+                        class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
                         style="letter-spacing: 0.15em"
                         v-text="feature.main"
                       ></h4>
@@ -121,106 +124,106 @@ vue/no-side-effects-in-computed-properties */
                       </v-list-item>
                     </v-list-item-content>
                   </v-card>
-                </v-hover>
-                <!-- <v-card-text>Features</v-card-text> -->
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-tab-item>
-        <v-tab-item
-          :key="2"
-          value="accessories"
-          :style="{ background: $vuetify.theme.themes['dark'].accent }"
-        >
-          <v-card flat>
-            <SectionsFeaturedProducts :data="data.accessories" />
-          </v-card>
-        </v-tab-item>
-        <v-tab-item
-          :key="3"
-          value="config"
-          :style="{ background: $vuetify.theme.themes['dark'].accent }"
-        >
-          <v-card-text
-            class="white--text px-10 pb-10"
-            style="line-height: 30px; font-size: 15px"
+                  <!-- </v-hover> -->
+                  <!-- <v-card-text>Features</v-card-text> -->
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-tab-item>
+          <v-tab-item
+            :key="2"
+            value="accessories"
+            :style="{ background: $vuetify.theme.themes['dark'].accent }"
           >
-            {{ data.configurationIntro }}
-          </v-card-text>
-          <v-card
-            min-height="600"
-            class="mx-auto transition-swing mt-10 ml-5 mr-5 mb-10"
-            :elevation="hover ? 24 : 6"
+            <v-card flat>
+              <SectionsFeaturedProducts :data="product.accessories" />
+            </v-card>
+          </v-tab-item>
+          <v-tab-item
+            :key="3"
+            value="config"
+            :style="{ background: $vuetify.theme.themes['dark'].accent }"
           >
-            <!-- <h4
+            <v-card-text
+              class="white--text pb-10"
+              style="line-height: 30px; font-size: 15px"
+            >
+              {{ product.configurationIntro }}
+            </v-card-text>
+            <v-card
+              min-height="600"
+              class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-10"
+              :elevation="hover ? 24 : 6"
+            >
+              <!-- <h4
               class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
               style="letter-spacing: 0.15em"
               v-text="data.configurationTitle"
             ></h4> -->
-            <!-- <v-img
+              <!-- <v-img
               max-height="800"
               :src="`/${data.configImage}`"
               max-width="700"
               class="mx-auto mt-10"
               :lazy-src="`/${data.configImage}`"
             /> -->
-            <v-row
-              v-for="table in data.tables"
-              :key="table.id"
-              no-gutters
-              class="flex-row mr-10 ml-10"
-            >
-              <v-col cols="12" md="12" align-self="center">
-                <h4
-                  class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
-                  style="letter-spacing: 0.15em"
-                  v-text="table.title"
-                ></h4>
-              </v-col>
-              <v-col cols="12" md="4" align-self="center">
-                <v-img
-                  max-height="500"
-                  :src="`/${table.image}`"
-                  max-width="300"
-                  class="mx-auto"
-                  :lazy-src="`/${table.image}`"
-                >
-                </v-img>
-              </v-col>
-              <v-col
-                cols="12"
-                md="8"
-                align-self="center"
-                class="mt-5 mb-5"
-                :style="{ background: $vuetify.theme.themes['dark'].accent }"
+              <v-row
+                v-for="table in product.tables"
+                :key="table.id"
+                no-gutters
+                class="flex-row mr-4 ml-4"
               >
-                <div class="white--text">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th
-                          v-for="(column, index) in table.columns"
-                          :key="index"
-                          class="white--text"
-                        >
-                          {{ column }}
-                        </th>
-                        <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="(item, index) in table.items" :key="index">
-                        <td
-                          v-for="(column, columnIndex) in table.columns"
-                          :key="columnIndex"
-                          class="black--text"
-                        >
-                          {{ item[column] }}
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
+                <v-col cols="12" md="12" align-self="center">
+                  <h4
+                    class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
+                    style="letter-spacing: 0.15em"
+                    v-text="table.title"
+                  ></h4>
+                </v-col>
+                <v-col cols="12" md="4" align-self="center">
+                  <v-img
+                    max-height="500"
+                    :src="`/${table.image}`"
+                    max-width="300"
+                    class="mx-auto"
+                    :lazy-src="`/${table.image}`"
+                  >
+                  </v-img>
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="8"
+                  align-self="center"
+                  class="mt-5 mb-5"
+                  :style="{ background: $vuetify.theme.themes['dark'].accent }"
+                >
+                  <div class="white--text">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th
+                            v-for="(column, index) in table.columns"
+                            :key="index"
+                            class="white--text"
+                          >
+                            {{ column }}
+                          </th>
+                          <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(item, index) in table.items" :key="index">
+                          <td
+                            v-for="(column, columnIndex) in table.columns"
+                            :key="columnIndex"
+                            class="black--text"
+                          >
+                            {{ item[column] }}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 </h3>
                 <p>
@@ -237,55 +240,56 @@ vue/no-side-effects-in-computed-properties */
                   aspernatur aut odit aut fugit, sed quia consequuntur magni
                   dolores eos
                 </p> -->
-                </div>
-              </v-col>
-            </v-row>
-          </v-card>
-        </v-tab-item>
-        <v-tab-item
-          :key="4"
-          value="video"
-          :style="{ background: $vuetify.theme.themes['dark'].accent }"
-        >
-          <v-card
-            flat
+                  </div>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-tab-item>
+          <v-tab-item
+            :key="4"
+            value="video"
             :style="{ background: $vuetify.theme.themes['dark'].accent }"
           >
-            <div>
-              <iframe
-                class="video"
-                style="background-color: white"
-                :src="`${data.video}`"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe></div
-          ></v-card>
-        </v-tab-item>
-        <v-tab-item :key="5" value="more">
-          <v-carousel class="carousel" show-arrows-on-hover draggable="true">
-            <v-carousel-item
-              v-for="image in data.img"
-              :key="image.id"
-              class="align-center"
+            <v-card
+              flat
+              :style="{ background: $vuetify.theme.themes['dark'].accent }"
             >
-              <v-container>
-                <div>
-                  <v-img
-                    style="max-width: 500px; height: auto"
-                    :src="`../${image.image}`"
-                    class="mx-auto"
-                  />
-                </div>
-              </v-container>
-            </v-carousel-item>
-          </v-carousel>
-        </v-tab-item>
-      </v-tabs-items>
-      <!-- </v-card> -->
-      <!-- </div> -->
-    </section>
+              <div v-for="video in product.video" :key="video.id">
+                <iframe
+                  class="video"
+                  style="background-color: white"
+                  :src="`${video.vid}`"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe></div
+            ></v-card>
+          </v-tab-item>
+          <v-tab-item :key="5" value="more">
+            <v-carousel class="carousel" show-arrows-on-hover draggable="true">
+              <v-carousel-item
+                v-for="image in product.img"
+                :key="image.id"
+                class="align-center"
+              >
+                <v-container>
+                  <div>
+                    <v-img
+                      style="max-width: 500px; height: auto"
+                      :src="`../${image.image}`"
+                      class="mx-auto"
+                    />
+                  </div>
+                </v-container>
+              </v-carousel-item>
+            </v-carousel>
+          </v-tab-item>
+        </v-tabs-items>
+        <!-- </v-card> -->
+        <!-- </div> -->
+      </section>
+    </div>
   </section>
 </template>
 
@@ -293,7 +297,7 @@ vue/no-side-effects-in-computed-properties */
 export default {
   props: {
     data: {
-      type: Object,
+      type: Array,
       default: () => [],
     },
   },
@@ -806,10 +810,18 @@ img {
   margin-top: 1rem;
 }
 
+#feature-card {
+  min-height: 800px;
+}
+
 @media (max-width: 768px) {
   .section-showcase .container {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  #feature-card {
+    min-height: 0px;
   }
 
   .section-showcase .container div:first-child {

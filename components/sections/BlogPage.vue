@@ -22,7 +22,7 @@
         </div>
       </v-col>
 
-      <v-col cols="12" md="6" class="mt-10 pt-10 pl-5 pb-10 mb-10">
+      <v-col cols="12" md="6" class="mt-10 pt-10 pb-10 mb-10">
         <div
           v-for="image in blog.img"
           :key="image.id"
