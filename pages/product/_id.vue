@@ -17,6 +17,7 @@ export default {
 
       this.item.push(this.products.find((el) => el.uid === this.id))
     } catch (error) {
+      console.log('heyyyy', this.$store.getters.Products[1].video.split(','))
       this.item.push(
         this.$store.getters.Products.find((el) => el.uid === this.id)
       )
@@ -28,6 +29,13 @@ export default {
       id: this.$route.params.id,
       item: [],
     }
+  },
+  computed: {
+    hello() {
+      console.log('heyyyy', this.item[0].video.split(''))
+
+      return 1
+    },
   },
 }
 </script>

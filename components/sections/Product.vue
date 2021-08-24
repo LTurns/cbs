@@ -254,17 +254,18 @@ vue/no-side-effects-in-computed-properties */
               flat
               :style="{ background: $vuetify.theme.themes['dark'].accent }"
             >
-              <div v-for="video in product.video" :key="video.id">
+              <div v-for="video in product.video.split(',')" :key="video.id">
                 <iframe
                   class="video"
                   style="background-color: white"
-                  :src="`${video.vid}`"
+                  :src="video"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
-                ></iframe></div
-            ></v-card>
+                ></iframe>
+              </div>
+            </v-card>
           </v-tab-item>
           <v-tab-item :key="5" value="more">
             <v-carousel class="carousel" show-arrows-on-hover draggable="true">
@@ -307,7 +308,14 @@ export default {
     areAccessories: true,
     areConfig: true,
     areVideos: true,
+    tutorials: '',
   }),
+  // computed: {
+  //   videos() {
+  //     // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+  //     return (this.tutorials = this.data.videos.split(' '))
+  //   },
+  // },
   methods: {
     showAccessories() {
       this.data.accesories === []
