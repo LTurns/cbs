@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/product/3df0kbiPukquArnSrjH8A", {data:[{}],fetch:{},mutations:[]});

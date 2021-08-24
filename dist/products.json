@@ -31,17 +31,8 @@
         { "listItem" : "Adjustable speed control for drive belts" },
         { "listItem" : "Air supply control on/off with automatic exhaust function" }
       ]
-    }, 
-    { "id" : 2,
-      "main" :"Chassis", 
-      "name": [
-        { "listItem" : "Front mounted wheels for ease of manoeuvrability" },
-        { "listItem" : "Lightweight anti-corrosion treated tubular steel frame" },
-        { "listItem" : "Adjustable frame allowing unit to be tilted up to 30°, reducing bending of duct and cable" },
-        { "listItem" : "Adjustable rear legs for uneven terrain" }
-      ]
     },
-    { "id" : 3,
+    { "id" : 2,
       "main" :"Air Box", 
       "name": [
         { "listItem" : "Manufactured in aluminium" },
@@ -53,6 +44,15 @@
         { "listItem" : "Upper section of air box is retained" },
         { "listItem" : "Air box aligned is adjustable for varying cable diameters" },
         { "listItem" : "On/off air control valve with automatic air exhaust from duct when in “off” position" }
+      ]
+    }, 
+    { "id" : 3,
+      "main" :"Chassis", 
+      "name": [
+        { "listItem" : "Front mounted wheels for ease of manoeuvrability" },
+        { "listItem" : "Lightweight anti-corrosion treated tubular steel frame" },
+        { "listItem" : "Adjustable frame allowing unit to be tilted up to 30°, reducing bending of duct and cable" },
+        { "listItem" : "Adjustable rear legs for uneven terrain" }
       ]
     },
     { "id" : 4,
@@ -76,9 +76,6 @@
     { "id" : 6,
       "main": "Tool Box",
       "name": [
-        { "listItem" : "3mm Allen Key" },
-        { "listItem" : "3mm Allen Key" },
-        { "listItem" : "3mm Allen Key" },
         { "listItem" : "3mm Allen Key" },
         { "listItem" : "3mm dia. Cord x 2.5 metres long" },
         { "listItem" : "Silicone Grease" },
@@ -177,7 +174,7 @@
         },
         {
           "Cable Diameter": "20-24mm",
-          "Part No C)": "C-1256-0103-20-24",
+          "Part No (C)": "C-1256-0103-20-24",
           "Part No (D)" : "C-1256-0103-20-24"
         },
         {
@@ -421,10 +418,10 @@
        }
     ],
      "intro": "Designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive.",
-     "video" : "",
+     "video" : "../jetstream/videos/cbs-basic-setup.mp4, ../jetstream/videos/belt-replacement.mp4, ../jetstream/videos/counter-programming.mp4, ../jetstream/videos/relief-valve.mp4",
      "configurationTitle": "JETSTREAM Configuration",
      "configurationIntro": "In order to configure your JetStream to your application, we ask that you pick one of each from the list below, the cable collet assembly (A), the duct clamp and seal collets (B) and cable seals (C).",
-     "configImage": "jetstream/jetstream-configuration.jpeg",
+     "configImage": "../jetstream/jetstream-configuration.jpeg",
      "tables" : [
        {
          "items": [
@@ -702,7 +699,7 @@
          }
       ],
        "intro": "Designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls.",
-       "video" : "",
+       "video" : "../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4",
        "configurationTitle": "TORNADO Configuration for Cable Blowing",
        "configurationIntro": "In order to customise your Hurricane to your application, please select one of each from the list below, (A) Duct Clamp and Seal Kits, (B) Cable Guides and (C) Cable Seals. When ordering, please have Tube and Cable dimensions available.",
        "configImage": "",
@@ -930,38 +927,7 @@
                  "title": "F) Cable Seal Plugs"
                }
               ],
-               "accessories": [
-      {
-        "name": "Tornado Plus",
-        "category" : "Fibre Blowing",
-          "subCategory" : "",
-        "color": "white",
-        "id": "1",
-        "productId": "C-1250-08",
-        "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
-        "mainImg": "../tornado.jpg"
-     },
-     {
-        "name": "Tornado Plus",
-        "category" : "Fibre Blowing",
-          "subCategory" : "",
-        "color": "white",
-        "id": "1",
-        "productId": "C-1250-08",
-        "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
-        "mainImg": "../tornado.jpg"
-     },
-     {
-        "name": "Tornado Plus",
-        "category" : "Fibre Blowing",
-        "subCategory" : "",
-        "color": "white",
-        "id": "1",
-        "productId": "C-1250-08",
-        "intro": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.",
-        "mainImg": "../tornado.jpg"
-     }
-    ]
+               "accessories": []
        },
        {
         "id": "4",
@@ -1022,7 +988,7 @@
            }
         ],
          "intro": "Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.",
-         "video" : "",
+         "video" : "../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4",
          "configurationTitle": "AirStream Configuration for Cable Blowing",
          "configurationIntro": "In order to customise your AirStream to your application, please select one of each from the list below, the Tube Collet Assembly, the Cable Guide Assembly and the Cable Collet Assembly. When ordering, please have Tube and Cable dimensions available.",
          "configImage": "",
@@ -1242,7 +1208,7 @@
              }
           ],
            "intro": "The C-1700-PNEU Pneumatic AirStream has been designed to be a robust and simple to operate cable blowing machine.",
-           "video" : "",
+           "video" : "../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4",
            "configurationTitle": "TORNADO Configuration for Cable Blowing",
            "configurationIntro": "In order to customise your new “Tornado” to your application, we ask that you pick one of each from the list below, the Duct Clamp Collet (A), the Duct Seal Collet (B), the Cable Collet Assy (C) and the In Feed Cable Collet (D), the Cable Seals (E) and the Cable Seal Plug (F). When ordering, please have Tube and Cable dimensions available. All imperial sizes are available on request.",
            "configImage": "",
@@ -2035,7 +2001,7 @@
                         }
                      ],
                       "intro": "A compact 10 Bar compressor specifically for use with the CBS C-1800 Accelair2 Blown Fibre Unit.",
-                      "video" : "",
+                      "video": "",
                       "configurationTitle": "",
                       "configurationIntro": "",
                       "configImage": "",
