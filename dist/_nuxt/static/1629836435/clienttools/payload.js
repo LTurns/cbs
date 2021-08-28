@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/clienttools", {data:[{}],fetch:{},mutations:[]});

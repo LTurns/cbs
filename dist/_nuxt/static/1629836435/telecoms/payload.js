@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/telecoms", {data:[{}],fetch:{},mutations:[]});

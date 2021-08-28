@@ -1,10 +1,20 @@
 <template>
-  <section>
-    <v-row no-gutters>
-      <v-col cols="12">
-        <SectionsHeroAlt :hero-alt="heroAlt" />
-      </v-col>
-    </v-row>
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+    <v-container>
+      <v-row no-gutters>
+        <v-col cols="12">
+          <SectionsHeroAlt :hero-alt="heroAlt" />
+          <div>
+            <v-icon left large color="primary">mdi-play</v-icon>
+            <a
+              href="http://www.cbsproducts.com/wp-content/uploads/2021/03/CBS-Main-Product-Catalogue.pdf"
+              class="learn black--text"
+              >Click Here to View Our Product Catalogue
+            </a>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
   </section>
 </template>
 
@@ -14,8 +24,9 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'DSC_0755-1.jpeg',
+          src: '',
           heading: ' DOWNLOAD OUR CATALOGUES ',
+          icon: 'mdi-folder-image',
         },
       ],
     }
@@ -35,3 +46,5 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped></style>

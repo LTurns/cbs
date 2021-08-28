@@ -1,8 +1,11 @@
 <template>
-  <section>
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
     <v-row no-gutters>
       <v-col cols="12">
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
+        />
         <v-container>
           <v-row class="py-16">
             <v-col md="5" cols="12">
@@ -122,8 +125,9 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'C-1350-2.jpeg',
-          heading: ' Contact Us ',
+          src: '',
+          heading: ' Enquiry',
+          icon: 'mdi-contacts',
         },
       ],
     }

@@ -1,8 +1,11 @@
 <template>
-  <section :style="{ background: $vuetify.theme.themes['dark'].accent }">
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
     <v-row no-gutters>
       <v-col cols="12">
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
+        />
       </v-col>
     </v-row>
     <div>
@@ -22,6 +25,7 @@ export default {
         {
           src: '',
           heading: ' WHERE TO BUY ',
+          icon: 'mdi-cash-usd',
         },
       ],
     }
@@ -29,7 +33,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .map {
   display: block;
   margin-left: auto;

@@ -1,8 +1,11 @@
 <template>
-  <section>
-    <v-row no-gutters>
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+    <v-row>
       <v-col cols="12">
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
+        />
         <v-container>
           <v-row class="py-16">
             <v-col md="5" cols="12">
@@ -114,7 +117,7 @@
             </v-col>
           </v-row>
         </v-container>
-        <SectionsSalesTeam id="team" :our-team="ourTeam" class="mb-10" />
+        <SectionsTeam id="team" :our-team="ourTeam" class="mb-10" />
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2418.8700203174435!2d-0.7338425846941268!3d52.68038493208387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487780f4ac1c42a7%3A0xa65da3dcfdd6588d!2sC%20B%20S%20Products%20(KT)%20Ltd!5e0!3m2!1sen!2suk!4v1626176078725!5m2!1sen!2suk"
           width="100%"
@@ -140,8 +143,9 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'C-1350-2.jpeg',
+          src: '',
           heading: ' Contact Us ',
+          icon: 'mdi-contacts',
         },
       ],
       ourTeam: [

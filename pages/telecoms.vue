@@ -1,12 +1,11 @@
 <template>
-  <section>
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
     <v-row no-gutters>
-      <v-col
-        cols="12"
-        align="center"
-        :style="{ background: $vuetify.theme.themes['dark'].primary }"
-      >
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+      <v-col cols="12" align="center">
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
+        />
         <div class="search">
           <input
             v-model="search"
@@ -27,43 +26,53 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+  async fetch() {
+    try {
+      const result = await axios.get(
+        'https://tranquil-basin-55259.herokuapp.com/product-categories',
+        {}
+      )
+      this.filteredList = result.data
+      return this.filteredList.data
+    } catch (error) {
+      if (this.search !== '') {
+        this.filteredList = this.$store.getters.fibreBlowing.filter((box) => {
+          return box.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      }
+      this.filteredList = this.$store.getters.fibreBlowing
+
+      return this.filteredList
+    }
+  },
   data() {
     return {
       heroAlt: [
         {
-          src: 'W1-TEW-50.jpeg',
+          src: '',
           heading: ' TELECOMS ',
+          icon: '',
+          image: 'telecoms.svg',
         },
       ],
       search: '',
+      filteredList: '',
     }
   },
   computed: {
     // CableBlowingEquipment() {
     //   return this.$store.getters.cableBlowingCategory;
     // },
-    filteredList() {
+    list() {
       if (this.search !== '') {
-        return this.$store.getters.fibreBlowing.filter((box) => {
+        return this.filteredList.filter((box) => {
           return box.name.toLowerCase().includes(this.search.toLowerCase())
         })
       }
-      return this.$store.getters.fibreBlowing
+      return this.filteredList
     },
-  },
-  head() {
-    return {
-      title: 'Gallery',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
-        },
-      ],
-    }
   },
 }
 </script>

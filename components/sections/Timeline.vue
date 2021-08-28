@@ -21,7 +21,7 @@
               >
                 {{ year.title }}
               </h2>
-              <div class="white--text">
+              <div class="black--text">
                 {{ year.info }}
               </div>
             </div>
@@ -38,7 +38,7 @@ export default {
     return {
       years: [
         {
-          color: 'yellow',
+          color: 'orange',
           year: '1971',
           title: 'CBS Is Established',
           info:
@@ -52,7 +52,7 @@ export default {
             'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
-          color: 'yellow',
+          color: 'orange',
           year: '1990',
           title: 'CBS gains big clients',
           info:

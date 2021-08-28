@@ -4,9 +4,12 @@
       <v-col
         cols="12"
         align="center"
-        :style="{ background: $vuetify.theme.themes['dark'].primary }"
+        :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
       >
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white lighten-4'"
+        />
         <div class="search">
           <input
             v-model="search"
@@ -52,7 +55,7 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'W1-TEW-50.jpeg',
+          src: '',
           heading: ' FIBRE BLOWING ',
         },
       ],

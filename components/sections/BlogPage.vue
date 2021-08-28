@@ -1,28 +1,43 @@
 <template>
   <section
     id="hero"
-    :style="{ background: $vuetify.theme.themes['dark'].accent }"
+    :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
   >
+    <hero-alt
+      :hero-alt="heroAlt"
+      :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
+    />
     <v-row no-gutters class="flex-row-reverse">
       <v-col cols="12" md="6">
         <div class="pa-lg-16 pa-md-10 px-4 py-15 mt-10">
-          <h2 class="text-h3 text-center white--text font-weight-black">
-            {{ blog.heading }}
-          </h2>
           <h3
-            class="text-h5 text-uppercase font-weight-thin text-center my-8 yellow--text"
+            :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
+            class="text-h4 text-center font-weight-light mb-xs-4 mb-5"
+            style="
+              border-bottom: 2px solid #fde36d;
+              width: 500px;
+              box-shadow: 0 4px 6px -6px #222;
+            "
+          >
+            {{ blog.heading }}
+          </h3>
+          <h3
+            class="text-h5 text-uppercase font-weight-thin text-center my-8 black--text"
           >
             {{ blog.subheading }}
           </h3>
           <div v-for="paragraph in blog.description" :key="paragraph.id">
-            <p class="white--text mt-5">
+            <p
+              class="black--text mt-5"
+              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+            >
               {{ paragraph.paragraph }}
             </p>
           </div>
         </div>
       </v-col>
 
-      <v-col cols="12" md="6" class="mt-10 pt-10 pb-10 mb-10">
+      <v-col cols="12" md="6">
         <div
           v-for="image in blog.img"
           :key="image.id"
@@ -41,12 +56,27 @@
 </template>
 
 <script>
+import HeroAlt from './HeroAlt.vue'
 export default {
+  components: {
+    HeroAlt,
+  },
   props: {
     blog: {
       type: Array,
       default: () => [],
     },
+  },
+  data() {
+    return {
+      heroAlt: [
+        {
+          src: '',
+          heading: 'BLOG',
+          icon: 'mdi-blogger',
+        },
+      ],
+    }
   },
 }
 </script>

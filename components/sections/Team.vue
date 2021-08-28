@@ -1,10 +1,16 @@
 <template>
-  <section :style="{ background: $vuetify.theme.themes['dark'].accent }">
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
     <v-container fluid class="text-center">
       <v-row>
-        <v-col v-for="(item, i) in ourTeam" :key="`person-${i}`">
-          <v-sheet class="py-12 px-6" outlined shaped>
-            <v-avatar size="240"
+        <v-col
+          v-for="(item, i) in ourTeam"
+          :key="`person-${i}`"
+          class="column"
+          cols="12"
+          md="4"
+        >
+          <v-sheet shaped class="py-4">
+            <v-avatar size="240" elevation="5"
               ><img
                 :src="`/team/${item.photo}`"
                 :lazy-src="`team/${item.photo}`"

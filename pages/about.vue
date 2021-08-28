@@ -1,23 +1,32 @@
 <template>
-  <section :style="{ background: $vuetify.theme.themes['dark'].accent }">
-    <v-row no-gutters>
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+    <v-row>
       <v-col cols="12">
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
+        />
         <v-container>
-          <v-row class="py-5">
+          <v-row>
             <v-col cols="12">
-              <h2
-                class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
+              <h3
+                :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
+                class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
+                style="
+                  border-bottom: 2px solid #fde36d;
+                  width: 500px;
+                  box-shadow: 0 4px 6px -6px #222;
+                "
               >
                 WHO ARE WE?
-              </h2>
-              <v-divider
-                inset
-                width="50"
-                class="text-center yellow--text"
-              ></v-divider>
+              </h3>
             </v-col>
-            <v-col cols="12" md="6" class="white--text">
+            <v-col
+              cols="12"
+              md="6"
+              class="black--text"
+              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+            >
               <p>
                 CBS Products (KT), Ltd. is a leading provider of specialised
                 equipment solutions for the construction of power transmission
@@ -33,14 +42,19 @@
                 blocks for high production cable placing.
               </p>
               <blockquote
-                class="text-h4 pa-5 my-4 font-weight-thin yellow--text"
+                class="text-h4 pa-5 my-4 font-weight-thin black--text"
               >
                 CBS has become the partner of choice in a number of high
                 profile, international fibre optic cable projects around the
-                globe
+                globe.
               </blockquote>
             </v-col>
-            <v-col cols="12" md="6" class="white--text">
+            <v-col
+              cols="12"
+              md="6"
+              class="black--text"
+              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+            >
               <p>
                 Our success in the UK telecoms market meant that the company’s
                 expertise and know-how rapidly came to the attention of the
@@ -75,9 +89,8 @@
                 planning your next cable deployment project: your bottom line.
               </p>
             </v-col>
-          </v-row>
-        </v-container>
-        <!-- <v-row no-gutters class="flex-row-reverse">
+
+            <!-- <v-row no-gutters class="flex-row-reverse">
           <v-col cols="12" md="6" align-self="center">
             <v-img
               max-height="800"
@@ -112,18 +125,32 @@
             </div>
           </v-col>
         </v-row> -->
-        <h2
-          class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
-        >
-          OUR JOURNEY
-        </h2>
-        <SectionsTimeline />
-        <h2
-          class="text-h4 text-md-h4 text-center yellow--text text--darken-2 font-weight-black mt-10 mb-5"
-        >
-          MEET THE TEAM
-        </h2>
-        <SectionsTeam :our-team="ourTeam" class="mb-10" />
+            <h3
+              :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
+              class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
+              style="
+                border-bottom: 2px solid #fde36d;
+                width: 500px;
+                box-shadow: 0 4px 6px -6px #222;
+              "
+            >
+              OUR JOURNEY
+            </h3>
+            <SectionsTimeline />
+            <h3
+              :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
+              class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
+              style="
+                border-bottom: 2px solid #fde36d;
+                width: 500px;
+                box-shadow: 0 4px 6px -6px #222;
+              "
+            >
+              MEET THE TEAM
+            </h3>
+            <SectionsTeam :our-team="ourTeam" class="mb-10" />
+          </v-row>
+        </v-container>
       </v-col>
     </v-row>
   </section>
@@ -135,8 +162,9 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'DSC_0850-2.jpeg',
+          src: '',
           heading: ' About Us ',
+          icon: 'mdi-account',
         },
       ],
       ourTeam: [

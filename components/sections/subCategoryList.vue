@@ -2,7 +2,7 @@
 <template>
   <section
     class="py-5"
-    :style="{ background: $vuetify.theme.themes['dark'].accent }"
+    :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
   >
     <v-container fluid>
       <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">

@@ -9,13 +9,19 @@
       class="gradient-fill"
     >
       <v-container fill-height>
-        <v-row>
-          <v-col>
+        <v-row class="text-center">
+          <v-col class="text-center" col="12">
             <h1
               class="text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
+              style="
+                border-bottom: 4px solid #fde36d;
+                box-shadow: 0 4px 6px -6px #222;
+              "
             >
+              <v-icon>{{ item.icon }}</v-icon>
               {{ item.heading.toUpperCase() }}
             </h1>
+            <!-- <v-icon>{{ item.icon }}</v-icon> -->
           </v-col>
         </v-row>
       </v-container>
@@ -36,7 +42,7 @@ export default {
 
 <style>
 .gradient-fill .v-responsive__content {
-  background: rgb(5, 5, 5);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  /* background: rgb(5, 5, 5);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
 }
 </style>

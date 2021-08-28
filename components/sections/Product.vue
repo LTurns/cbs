@@ -10,10 +10,12 @@ vue/no-side-effects-in-computed-properties */
       <section id="home" class="section-showcase">
         <div class="container">
           <div>
-            <h1 class="d-inline pa-2 mb-10">
+            <h1
+              class="d-inline pa-2 mt-10 mb-20 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
+            >
               {{ product.name.toUpperCase() }}
             </h1>
-            <p>
+            <p class="mt-10">
               {{ product.intro }}
             </p>
             <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
@@ -65,7 +67,7 @@ vue/no-side-effects-in-computed-properties */
       <!-- Large Text -->
       <section id="about" class="section-large-text">
         <!-- <div class="overlay"> -->
-        <v-tabs v-model="tab" black--text left dark>
+        <v-tabs v-model="tab" black--text center light class="pl-10">
           <v-tabs-slider></v-tabs-slider>
 
           <v-tab href="#features" class="ml-20"> Features </v-tab>
@@ -82,17 +84,22 @@ vue/no-side-effects-in-computed-properties */
         </v-tabs>
 
         <v-tabs-items v-model="tab">
-          <v-tab-item :key="1" value="features" mt="10">
+          <v-tab-item :key="1" value="features">
             <v-container
               fluid
               mt="10"
-              :style="{ background: $vuetify.theme.themes['dark'].accent }"
+              :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
             >
-              <v-row class="mx-auto mt-7">
+              <v-row class="mx-auto mb-7 mt-3">
                 <div
-                  :style="{ background: $vuetify.theme.themes['dark'].accent }"
-                  class="white--text px-2 pb-10"
-                  style="line-height: 30px; font-size: 15px"
+                  :class="
+                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                  "
+                  style="
+                    line-height: 30px;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                  "
                 >
                   {{ product.description }}
                 </div>
@@ -110,7 +117,7 @@ vue/no-side-effects-in-computed-properties */
                     <v-list-item-content>
                       <!-- <v-toolbar color="yellow" light> -->
                       <h4
-                        class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                        class="text-uppercase yellow lighten-4 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
                         style="letter-spacing: 0.15em"
                         v-text="feature.main"
                       ></h4>
@@ -130,11 +137,7 @@ vue/no-side-effects-in-computed-properties */
               </v-row>
             </v-container>
           </v-tab-item>
-          <v-tab-item
-            :key="2"
-            value="accessories"
-            :style="{ background: $vuetify.theme.themes['dark'].accent }"
-          >
+          <v-tab-item :key="2" value="accessories">
             <v-card flat>
               <SectionsFeaturedProducts :data="product.accessories" />
             </v-card>
@@ -142,11 +145,11 @@ vue/no-side-effects-in-computed-properties */
           <v-tab-item
             :key="3"
             value="config"
-            :style="{ background: $vuetify.theme.themes['dark'].accent }"
+            :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
           >
             <v-card-text
-              class="white--text pb-10"
-              style="line-height: 30px; font-size: 15px"
+              class="black--text pb-10"
+              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
             >
               {{ product.configurationIntro }}
             </v-card-text>
@@ -175,7 +178,7 @@ vue/no-side-effects-in-computed-properties */
               >
                 <v-col cols="12" md="12" align-self="center">
                   <h4
-                    class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
+                    class="text-uppercase yellow lighten-4 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
                     style="letter-spacing: 0.15em"
                     v-text="table.title"
                   ></h4>
@@ -190,13 +193,7 @@ vue/no-side-effects-in-computed-properties */
                   >
                   </v-img>
                 </v-col>
-                <v-col
-                  cols="12"
-                  md="8"
-                  align-self="center"
-                  class="mt-5 mb-5"
-                  :style="{ background: $vuetify.theme.themes['dark'].accent }"
-                >
+                <v-col cols="12" md="8" align-self="center" class="mt-5 mb-5">
                   <div class="white--text">
                     <table>
                       <thead>
@@ -245,27 +242,31 @@ vue/no-side-effects-in-computed-properties */
               </v-row>
             </v-card>
           </v-tab-item>
-          <v-tab-item
-            :key="4"
-            value="video"
-            :style="{ background: $vuetify.theme.themes['dark'].accent }"
-          >
-            <v-card
-              flat
-              :style="{ background: $vuetify.theme.themes['dark'].accent }"
+          <v-tab-item :key="4" value="video">
+            <v-container
+              fluid
+              mt="10"
+              :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
             >
-              <div v-for="video in product.video.split(',')" :key="video.id">
-                <iframe
-                  class="video"
-                  style="background-color: white"
-                  :src="video"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </v-card>
+              <v-card
+                flat
+                :class="
+                  $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                "
+              >
+                <div v-for="video in product.video.split(',')" :key="video.id">
+                  <iframe
+                    class="video"
+                    style="background-color: white"
+                    :src="video"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </v-card>
+            </v-container>
           </v-tab-item>
           <v-tab-item :key="5" value="more">
             <v-carousel class="carousel" show-arrows-on-hover draggable="true">
@@ -366,6 +367,11 @@ table tbody tr:nth-child(2n) td {
   color: black;
 }
 
+#about {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 td {
   padding: 10px;
   font-size: 14px;
@@ -421,6 +427,11 @@ table tbody tr:nth-child(2n) td {
   .video {
     max-width: 300px;
     max-height: 200px;
+  }
+
+  #about {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* .carousel {

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/utilities", {data:[{}],fetch:{},mutations:[]});

@@ -1,12 +1,11 @@
 <template>
-  <section>
+  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
     <v-row>
-      <v-col
-        cols="12"
-        align="center"
-        :style="{ background: $vuetify.theme.themes['light'].primary }"
-      >
-        <SectionsHeroAlt :hero-alt="heroAlt" />
+      <v-col cols="12" align="center">
+        <SectionsHeroAlt
+          :hero-alt="heroAlt"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white lighten-4'"
+        />
         <div class="search">
           <input
             v-model="search"
@@ -19,10 +18,7 @@
             <img src="/loupe.png" alt="" />
           </button>
         </div>
-        <SectionsFeaturedProducts
-          :style="{ background: $vuetify.theme.themes['light'].primary }"
-          :data="productList"
-        />
+        <SectionsFeaturedProducts :data="productList" />
 
         <SectionsIntro />
       </v-col>
@@ -57,8 +53,9 @@ export default {
     return {
       heroAlt: [
         {
-          src: 'W1-TEW-50.jpeg',
-          heading: ' Product Categories ',
+          src: '',
+          heading: ' Products',
+          icon: 'mdi-tools',
         },
       ],
       search: '',
@@ -119,7 +116,7 @@ $brandColor: #fde36d;
   // border-radius: 100vh;
   // heigth: 60px;
   padding: 3px;
-  margin-top: 3%;
+  margin-top: 1%;
   // margin-bottom: 3%;
   width: 50%;
   position: relative;
