@@ -17,7 +17,6 @@ export default {
       this.products = result.data
 
       this.item.push(this.products.find((el) => el.uid === this.id))
-      console.log('heyyy', this.item)
     } catch (error) {
       this.item.push(
         this.$store.getters.Products.find((el) => el.uid === this.id)
