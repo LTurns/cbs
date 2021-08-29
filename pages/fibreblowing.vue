@@ -10,6 +10,22 @@
           :hero-alt="heroAlt"
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'white lighten-4'"
         />
+        <v-responsive
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
+          class="max-auto mx-auto text-center"
+        >
+          <div
+            class="hero-text mt-20 mb-20"
+            style="margin-top: 50px; margin-bottom: 50px"
+          >
+            <blockquote>
+              Scroll down to view our Fibre Blowing Products. These include
+              Tornados and Hurricaines and much more. We also have numerous
+              compressors and accessories too. Please contact us if you have any
+              questions.
+            </blockquote>
+          </div>
+        </v-responsive>
         <div class="search">
           <input
             v-model="search"

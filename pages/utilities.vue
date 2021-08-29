@@ -6,6 +6,20 @@
           :hero-alt="heroAlt"
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
         />
+        <v-responsive
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
+          class="max-auto mx-auto text-center"
+        >
+          <div
+            class="hero-text mt-20 mb-20"
+            style="margin-top: 50px; margin-bottom: 50px"
+          >
+            <blockquote>
+              Utilties includes some of our most popular products. Please
+              contact us if you have any questions.
+            </blockquote>
+          </div>
+        </v-responsive>
         <div class="search">
           <input
             v-model="search"
