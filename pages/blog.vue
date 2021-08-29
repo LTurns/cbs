@@ -10,7 +10,6 @@
     </v-row>
     <v-container>
       <v-row>
-        <SectionsBlogs :data="BlogStories" />
         <v-col cols="12" xl="2" lg="3" md="4" sm="4" class="py-16">
           <aside>
             <div class="search">
@@ -40,6 +39,7 @@
             <nuxt-link exact to="/article/3" class="tag">Pole Bogie</nuxt-link>
           </aside>
         </v-col>
+        <SectionsBlogs :data="BlogStories" />
       </v-row>
     </v-container>
   </section>

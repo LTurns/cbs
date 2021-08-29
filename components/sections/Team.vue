@@ -7,10 +7,10 @@
           :key="`person-${i}`"
           class="column"
           cols="12"
-          md="4"
+          md="12"
         >
-          <v-sheet shaped class="py-4">
-            <v-avatar size="240" elevation="5"
+          <v-sheet shaped class="py-5 px-5">
+            <v-avatar size="150" elevation="5"
               ><img
                 :src="`/team/${item.photo}`"
                 :lazy-src="`team/${item.photo}`"
@@ -22,8 +22,16 @@
             <div class="text--disabled text-uppercase">
               {{ item.position }}
             </div>
-            <div class="text-h6 font-weight-black mt-8">{{ item.phone }}</div>
-            <div class="subtitle-1 mt-3">{{ item.email }}</div>
+            <div class="text-h6 mt-8">
+              <a class="email black--text" :href="`tel:${item.phone}`"
+                >Tel: {{ item.phone }}</a
+              >
+            </div>
+            <div class="subtitle-1 mt-3">
+              <a class="email black--text" :href="`mailto:${item.email}`"
+                >email: {{ item.email }}
+              </a>
+            </div>
           </v-sheet>
         </v-col>
       </v-row>

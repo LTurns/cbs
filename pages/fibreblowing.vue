@@ -20,9 +20,7 @@
           >
             <blockquote>
               Scroll down to view our Fibre Blowing Products. These include
-              Tornados and Hurricaines and much more. We also have numerous
-              compressors and accessories too. Please contact us if you have any
-              questions.
+              Tornados, Hurricaines and much more.
             </blockquote>
           </div>
         </v-responsive>

@@ -59,9 +59,9 @@ export default {
 
 <style>
 blockquote {
-  font-size: 18px;
+  font-size: 16px;
   width: 60%;
-  margin: 50px auto;
+  margin: 10px auto;
   font-style: italic;
   position: relative;
   border-bottom: 2px solid orange;
