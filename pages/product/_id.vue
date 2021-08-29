@@ -8,6 +8,7 @@
 import axios from 'axios'
 
 export default {
+  transition: 'productid',
   async fetch() {
     try {
       const result = await axios.get(
@@ -31,3 +32,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.productid-enter-active,
+.productid-leave-active {
+  transition: opacity 0.5s;
+}
+.productid-enter,
+.productid-leave-active {
+  opacity: 0;
+}
+</style>

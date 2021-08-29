@@ -15,7 +15,6 @@
             class="text-h4 text-center font-weight-light mb-xs-4 mb-5"
             style="
               border-bottom: 2px solid #fde36d;
-              width: 500px;
               box-shadow: 0 4px 6px -6px #222;
             "
           >

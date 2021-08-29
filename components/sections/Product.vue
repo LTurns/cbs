@@ -117,8 +117,12 @@ vue/no-side-effects-in-computed-properties */
                     <v-list-item-content>
                       <!-- <v-toolbar color="yellow" light> -->
                       <h4
-                        class="text-uppercase yellow lighten-4 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                        style="letter-spacing: 0.15em"
+                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                        style="
+                          letter-spacing: 0.15em;
+                          border-bottom: 2px solid #fde36d;
+                          box-shadow: 0 4px 6px -6px;
+                        "
                         v-text="feature.main"
                       ></h4>
                       <!-- </v-toolbar> -->
@@ -178,8 +182,12 @@ vue/no-side-effects-in-computed-properties */
               >
                 <v-col cols="12" md="12" align-self="center">
                   <h4
-                    class="text-uppercase yellow lighten-4 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
-                    style="letter-spacing: 0.15em"
+                    class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                    style="
+                      letter-spacing: 0.15em;
+                      border-bottom: 2px solid #fde36d;
+                      box-shadow: 0 4px 6px -6px;
+                    "
                     v-text="table.title"
                   ></h4>
                 </v-col>

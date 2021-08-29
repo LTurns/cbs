@@ -28,6 +28,7 @@
 <script>
 import axios from 'axios'
 export default {
+  transition: 'telecoms',
   async fetch() {
     try {
       const result = await axios.get(
@@ -35,6 +36,8 @@ export default {
         {}
       )
       this.filteredList = result.data
+        .filter((el) => el.main_category.name === 'Telecoms')
+        .reverse()
       return this.filteredList.data
     } catch (error) {
       if (this.search !== '') {
@@ -155,5 +158,13 @@ $brandColor: #fde36d;
       }
     }
   }
+}
+.telecoms-enter-active,
+.telecoms-leave-active {
+  transition: opacity 0.5s;
+}
+.telecoms-enter,
+.telecoms-leave-active {
+  opacity: 0;
 }
 </style>

@@ -25,6 +25,19 @@
                 <img src="/loupe.png" alt="" />
               </button>
             </div>
+            <p style="color: grey; margin-top: 20px; font-size: 15px">
+              Popular search results:
+            </p>
+            <nuxt-link exact to="article/11" class="tag"
+              >Klein Tools Insulated Range</nuxt-link
+            >
+            <nuxt-link exact to="article/5" class="tag"
+              >Tornado Blowing Machine</nuxt-link
+            >
+            <nuxt-link exact to="article/8" class="tag"
+              >Drum Handling</nuxt-link
+            >
+            <nuxt-link exact to="/article/3" class="tag">Pole Bogie</nuxt-link>
           </aside>
         </v-col>
       </v-row>
@@ -34,6 +47,7 @@
 
 <script>
 export default {
+  transition: 'blog',
   data() {
     return {
       heroAlt: [
@@ -145,5 +159,14 @@ $brandColor: #fde36d;
       }
     }
   }
+}
+
+.blog-enter-active,
+.blog-leave-active {
+  transition: opacity 0.5s;
+}
+.blog-enter,
+.blog-leave-active {
+  opacity: 0;
 }
 </style>

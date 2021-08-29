@@ -18,9 +18,24 @@
             <img src="/loupe.png" alt="" />
           </button>
         </div>
+        <p style="color: grey; margin-top: 20px; font-size: 15px">
+          Popular search results:
+        </p>
+        <nuxt-link exact to="category/compressors" class="tag"
+          >Compressors</nuxt-link
+        >
+        <nuxt-link exact to="product/tGGW0ov0fkKzK9ax7QYLHA" class="tag"
+          >Tornado</nuxt-link
+        >
+        <nuxt-link exact to="product/xS0KUwWdbEqPrt5pKjhfSA" class="tag"
+          >Hurricaine</nuxt-link
+        >
+        <nuxt-link exact to="category/accessories" class="tag"
+          >Fibre Blowing - Accessories</nuxt-link
+        >
         <SectionsFeaturedProducts :data="productList" />
 
-        <SectionsIntro />
+        <SectionsIntro style="margin-bottom: 30px" />
       </v-col>
     </v-row>
   </section>
@@ -29,6 +44,7 @@
 <script>
 // import axios from 'axios'
 export default {
+  transition: 'products',
   // async fetch() {
   //   try {
   //     const result = await axios.get(
@@ -182,5 +198,54 @@ $brandColor: #fde36d;
       }
     }
   }
+}
+
+.tag {
+  background: rgb(255, 255, 255);
+  border-radius: 3px 0 0 3px;
+  color: black;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: rgb(245, 214, 42);
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid rgb(245, 221, 5);
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover::after {
+  border-left-color: yellow;
+}
+
+.products-enter-active,
+.products-leave-active {
+  transition: opacity 0.5s;
+}
+.products-enter,
+.products-leave-active {
+  opacity: 0;
 }
 </style>

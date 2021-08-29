@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  transition: 'wheretobuy',
   data() {
     return {
       heroAlt: [
@@ -41,5 +42,14 @@ export default {
   width: 100vw;
   height: 80vh;
   border: 2px solid black;
+}
+
+.wheretobuy-enter-active,
+.wheretobuy-leave-active {
+  transition: opacity 0.5s;
+}
+.wheretobuy-enter,
+.wheretobuy-leave-active {
+  opacity: 0;
 }
 </style>

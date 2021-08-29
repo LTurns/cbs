@@ -118,6 +118,7 @@
 <script>
 import contactForm from '~/components/sections/contactForm.vue'
 export default {
+  transition: 'enquiry',
   components: {
     contactForm,
   },
@@ -151,5 +152,14 @@ export default {
 <style scoped>
 #footer-top {
   display: none !important;
+}
+
+.enquiry-enter-active,
+.enquiry-leave-active {
+  transition: opacity 0.5s;
+}
+.enquiry-enter,
+.enquiry-leave-active {
+  opacity: 0;
 }
 </style>

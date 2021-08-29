@@ -8,7 +8,7 @@
         />
         <v-container>
           <v-row>
-            <v-col cols="12">
+            <v-col cols="6">
               <h3
                 :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
                 class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
@@ -20,6 +20,19 @@
               >
                 WHO ARE WE?
               </h3>
+            </v-col>
+            <v-col cols="6">
+              <v-btn
+                :x-large="$vuetify.breakpoint.smAndUp"
+                text
+                class="my-3 mb-xs-4 mt-10 mb-5"
+                outlined
+                white
+                ><v-icon left large color="primary">mdi-play</v-icon
+                ><a href="#team" class="learn black--text"
+                  >Meet The Team</a
+                ></v-btn
+              >
             </v-col>
             <v-col
               cols="12"
@@ -41,13 +54,11 @@
                 develop and build a line of pullers, tensioners and running out
                 blocks for high production cable placing.
               </p>
-              <blockquote
-                class="text-h4 pa-5 my-4 font-weight-thin black--text"
-              >
+              <div class="text-h4 pa-5 my-4 font-weight-thin black--text">
                 CBS has become the partner of choice in a number of high
                 profile, international fibre optic cable projects around the
                 globe.
-              </blockquote>
+              </div>
             </v-col>
             <v-col
               cols="12"
@@ -138,6 +149,7 @@
             </h3>
             <SectionsTimeline />
             <h3
+              id="team"
               :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
               class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
               style="
@@ -158,6 +170,7 @@
 
 <script>
 export default {
+  transition: 'about',
   data() {
     return {
       heroAlt: [
@@ -173,13 +186,6 @@ export default {
           position: 'Technical Manager',
           phone: 'Tel: +44 (0) 1572 898515',
           email: 'andy.sibun@cbsproducts.com',
-          photo: '',
-        },
-        {
-          name: 'Carolyn Winn',
-          position: 'Logistics Manager',
-          phone: 'Tel: +44 (0) 1572 898512',
-          email: 'carolyn.winn@cbsproducts.com',
           photo: '',
         },
         {
@@ -221,3 +227,14 @@ export default {
   },
 }
 </script>
+
+<style>
+.about-enter-active,
+.about-leave-active {
+  transition: opacity 0.5s;
+}
+.about-enter,
+.about-leave-active {
+  opacity: 0;
+}
+</style>

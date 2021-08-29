@@ -32,6 +32,7 @@
 <script>
 import axios from 'axios'
 export default {
+  transition: 'fibreblowing',
   async fetch() {
     try {
       const result = await axios.get(
@@ -39,7 +40,9 @@ export default {
         {}
       )
       this.filteredList = result.data
-      return this.filteredList.data
+        .filter((el) => el.main_category.name === 'Fibre Blowing')
+        .reverse()
+      return this.filteredList
     } catch (error) {
       if (this.search !== '') {
         this.filteredList = this.$store.getters.fibreBlowing.filter((box) => {
@@ -170,5 +173,13 @@ $brandColor: #fde36d;
       }
     }
   }
+}
+.fibreblowing-enter-active,
+.fibreblowing-leave-active {
+  transition: opacity 0.5s;
+}
+.fibreblowing-enter,
+.fibreblowing-leave-active {
+  opacity: 0;
 }
 </style>

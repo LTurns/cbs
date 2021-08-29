@@ -20,6 +20,7 @@
 
 <script>
 export default {
+  transition: 'catalogues',
   data() {
     return {
       heroAlt: [
@@ -47,4 +48,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.catalogues-enter-active,
+.catalogues-leave-active {
+  transition: opacity 0.5s;
+}
+.catalogues-enter,
+.catalogues-leave-active {
+  opacity: 0;
+}
+</style>

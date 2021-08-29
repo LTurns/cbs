@@ -87,7 +87,7 @@ export default {
         },
         {
           name: 'TELECOMS',
-          image: 'telecoms3.svg',
+          image: 'telecoms6.svg',
           text:
             'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
           link: '/telecoms',

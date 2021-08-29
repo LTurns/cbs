@@ -27,6 +27,7 @@
 <script>
 import axios from 'axios'
 export default {
+  transition: 'utilities',
   async fetch() {
     try {
       const result = await axios.get(
@@ -34,11 +35,13 @@ export default {
         {}
       )
 
-      this.filteredList = result.data.main_category.includes('Utilities')
+      this.filteredList = result.data
+        .filter((el) => el.main_category.name === 'Utilities')
+        .reverse()
       return this.filteredList.data
     } catch (error) {
       if (this.search !== '') {
-        this.filteredList = this.$store.getters.fibreBlowing.filter((box) => {
+        this.filteredList = this.$store.getters.Utilities.filter((box) => {
           return box.name.toLowerCase().includes(this.search.toLowerCase())
         })
       }
@@ -151,5 +154,14 @@ $brandColor: #fde36d;
       }
     }
   }
+}
+
+.utilities-enter-active,
+.utilities-leave-active {
+  transition: opacity 0.5s;
+}
+.utilities-enter,
+.utilities-leave-active {
+  opacity: 0;
 }
 </style>

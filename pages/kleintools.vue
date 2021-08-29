@@ -28,6 +28,7 @@
 <script>
 import axios from 'axios'
 export default {
+  transition: 'kleintools',
   async fetch() {
     try {
       const result = await axios.get(
@@ -35,6 +36,8 @@ export default {
         {}
       )
       this.filteredList = result.data
+        .filter((el) => el.main_category.name === 'Klein Tools')
+        .reverse()
       return this.filteredList.data
     } catch (error) {
       if (this.search !== '') {
@@ -150,5 +153,14 @@ $brandColor: #fde36d;
       }
     }
   }
+}
+
+.kleintools-enter-active,
+.kleintools-leave-active {
+  transition: opacity 0.5s;
+}
+.kleintools-enter,
+.kleintools-leave-active {
+  opacity: 0;
 }
 </style>

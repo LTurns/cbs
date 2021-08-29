@@ -8,6 +8,7 @@
 import axios from 'axios'
 
 export default {
+  transition: 'subcategory',
   async fetch() {
     try {
       const result = await axios.get(
@@ -35,3 +36,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.subcategory-enter-active,
+.subcategory-leave-active {
+  transition: opacity 0.5s;
+}
+.subcategory-enter,
+.subcategory-leave-active {
+  opacity: 0;
+}
+</style>
