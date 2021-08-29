@@ -12,11 +12,12 @@ export default {
   async fetch() {
     try {
       const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product'
+        'https://tranquil-basin-55259.herokuapp.com/products'
       )
       this.products = result.data
 
       this.item.push(this.products.find((el) => el.uid === this.id))
+      console.log('heyyy', this.item)
     } catch (error) {
       this.item.push(
         this.$store.getters.Products.find((el) => el.uid === this.id)

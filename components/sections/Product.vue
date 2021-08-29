@@ -75,10 +75,10 @@ vue/no-side-effects-in-computed-properties */
           <v-tab v-show="product.accessories.length != 0" href="#accessories">
             Accessories</v-tab
           >
-          <v-tab v-show="product.tables.length" href="#config">
+          <v-tab v-show="product.tables.length != 0" href="#config">
             Configuration
           </v-tab>
-          <v-tab v-show="product.video.length != 0" href="#video">
+          <v-tab v-show="product.video.length != 2" href="#video">
             Video Tutorials
           </v-tab>
         </v-tabs>

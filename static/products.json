@@ -700,7 +700,7 @@
       ],
        "intro": "Designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls.",
        "video" : "../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4",
-       "configurationTitle": "TORNADO Configuration for Cable Blowing",
+       "configurationTitle": "",
        "configurationIntro": "In order to customise your Hurricane to your application, please select one of each from the list below, (A) Duct Clamp and Seal Kits, (B) Cable Guides and (C) Cable Seals. When ordering, please have Tube and Cable dimensions available.",
        "configImage": "",
        "tables" : [
