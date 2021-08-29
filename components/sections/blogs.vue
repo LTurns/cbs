@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" xl="10" lg="9" md="8" sm="8" class="py-16">
+  <v-col cols="12" xl="10" lg="9" md="8" sm="8">
     <v-row>
       <v-col
         v-for="post in data"

@@ -10,7 +10,7 @@
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
           class="max-auto mx-auto text-center"
         >
-          <div class="hero-text" style="margin-top: 10px; margin-bottom: 10px">
+          <div class="hero-text" style="margin-top: 5px; margin-bottom: 5px">
             <v-row>
               <v-col cols="12" md="6">
                 <blockquote>
@@ -239,5 +239,21 @@ export default {
 .contact-enter,
 .contact-leave-active {
   opacity: 0;
+}
+
+blockquote {
+  font-size: 15px;
+  width: 80%;
+  margin: 10px auto;
+  font-style: italic;
+  position: relative;
+  border-bottom: 2px solid orange;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-indent: 15px;
+  color: rgb(61, 60, 60);
+  border-bottom: 2px solid #f3e38a;
+  box-shadow: 0 4px 6px -6px #222;
 }
 </style>

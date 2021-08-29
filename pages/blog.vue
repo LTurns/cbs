@@ -10,7 +10,7 @@
     </v-row>
     <v-container>
       <v-row>
-        <v-col cols="12" xl="2" lg="3" md="4" sm="4" class="py-16">
+        <v-col cols="12" xl="2" lg="3" md="4" sm="4">
           <aside>
             <div class="search">
               <input
