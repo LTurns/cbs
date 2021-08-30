@@ -6,7 +6,7 @@
       backgroundSize: cover,
     }"
   >
-    <v-container fill-height>
+    <v-container>
       <v-row>
         <!-- <v-col cols="12" md="12" sm="12"> -->
         <v-col cols="12" md="6" sm="12" class="black--text">
@@ -16,40 +16,39 @@
             show-arrows-on-hover
             draggable="true"
             hide-delimiter-background
+            class="mt-8"
           >
             <v-carousel-item
               v-for="(carousel, carindex) in carouselsData"
               :key="carindex"
             >
-              <v-container fill-height>
-                <v-col cols="12" md="12" class="black--text">
-                  <div style="max-width: 800px">
-                    <div
-                      class="text-md-h2 mb-3 text-sm-h3 text-h5 font-weight-black"
-                    >
-                      {{ carousel.heading.toUpperCase() }}
-                    </div>
-                    <p class="mb-5">{{ carousel.subHeading }}</p>
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      class="my-3 primary"
-                      >With a new battery powered range</v-btn
-                    >
-                    <span class="mx-2 my-4"></span>
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      text
-                      class="my-3"
-                      outlined
-                      white
-                      ><v-icon left large color="primary">mdi-play</v-icon
-                      ><nuxt-link exact to="/about" class="learn black--text"
-                        >Learn More</nuxt-link
-                      ></v-btn
-                    >
+              <v-col cols="12" md="12" class="black--text">
+                <div style="">
+                  <div
+                    class="text-md-h2 mb-3 text-sm-h3 text-h5 font-weight-black"
+                  >
+                    {{ carousel.heading.toUpperCase() }}
                   </div>
-                </v-col>
-              </v-container>
+                  <p class="mb-5">{{ carousel.subHeading }}</p>
+                  <v-btn
+                    :x-large="$vuetify.breakpoint.smAndUp"
+                    class="my-3 primary"
+                    >With a new battery powered range</v-btn
+                  >
+                  <span class="mx-2 my-4"></span>
+                  <v-btn
+                    :x-large="$vuetify.breakpoint.smAndUp"
+                    text
+                    class="my-3"
+                    outlined
+                    white
+                    ><v-icon left large color="primary">mdi-play</v-icon
+                    ><nuxt-link exact to="/about" class="learn black--text"
+                      >Learn More</nuxt-link
+                    ></v-btn
+                  >
+                </div>
+              </v-col>
             </v-carousel-item>
           </v-carousel>
         </v-col>

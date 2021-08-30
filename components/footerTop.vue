@@ -9,13 +9,13 @@
   >
     <v-container>
       <v-row>
-        <v-col cols="12" md="5" class="py-12"
+        <v-col cols="12" md="5" sm="12" class="py-12"
           ><v-row no-gutters>
             <v-col cols="12">
               <Logo />
             </v-col>
-            <v-col cols="12">
-              <p class="mt-8 text-justify" style="max-width: 400px">
+            <v-col cols="12" sm="12">
+              <p class="mt-8 text-justify" style="">
                 CBS Products was established in 1971 in Oakham, Rutland,
                 England. Since entering the field of telecommunications, the
                 company has continued to be an important cornerstone in the
