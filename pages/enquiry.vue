@@ -37,7 +37,7 @@
               <p class="mb-10 ml-20 mr-20">
                 Thanks for your enquiry. We'll get back to you shortly.
               </p>
-              <contactForm />
+              <productsform />
             </v-col>
             <v-col md="3" cols="12">
               <div>
@@ -162,11 +162,12 @@
 </template>
 
 <script>
-import contactForm from '~/components/sections/contactForm.vue'
+import Productsform from '../components/sections/productsform.vue'
+// import contactForm from '~/components/sections/contactForm.vue'
 export default {
   transition: 'contact',
   components: {
-    contactForm,
+    Productsform,
   },
   data() {
     return {

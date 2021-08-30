@@ -34,36 +34,14 @@
         <v-container>
           <v-row class="py-16 ml-20">
             <v-col md="9" cols="12">
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                text
-                class="my-3 ml-20 mr-20"
-                outlined
-                white
-                ><v-icon left large color="primary">mdi-play</v-icon
-                ><nuxt-link exact to="/careers" class="learn black--text"
-                  >Careers</nuxt-link
-                ></v-btn
-              >
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                text
-                class="my-3"
-                outlined
-                white
-                ><v-icon left large color="primary">mdi-play</v-icon
-                ><nuxt-link exact to="/repairs" class="learn black--text"
-                  >Repairs</nuxt-link
-                ></v-btn
-              >
-              <p class="mb-10 ml-20 mr-20">
-                Please do not hesitate to get in touch. One of our team members
-                will get back to you shortly with your enquiry.
+              <p class="mb-10">
+                Thank you for showing interest in our company. Please send us
+                your CV below and someone will be in touch.
               </p>
               <contactForm />
             </v-col>
             <v-col md="3" cols="12">
-              <div>
+              <!-- <div>
                 <h3
                   class="text-h6 text-center font-weight-light mb-xs-4 mb-5"
                   style="
@@ -74,7 +52,7 @@
                   Chat to a Consultant:
                 </h3>
                 <SectionsTeam :our-team="ourTeam" class="mb-10" />
-              </div>
+              </div> -->
             </v-col>
           </v-row>
           <v-row>

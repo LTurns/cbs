@@ -29,38 +29,15 @@
                 </blockquote>
               </v-col>
             </v-row>
-          </div>
-        </v-responsive>
+          </div></v-responsive
+        >
         <v-container>
           <v-row class="py-16 ml-20">
             <v-col md="9" cols="12">
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                text
-                class="my-3 ml-20 mr-20"
-                outlined
-                white
-                ><v-icon left large color="primary">mdi-play</v-icon
-                ><nuxt-link exact to="/careers" class="learn black--text"
-                  >Careers</nuxt-link
-                ></v-btn
-              >
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                text
-                class="my-3"
-                outlined
-                white
-                ><v-icon left large color="primary">mdi-play</v-icon
-                ><nuxt-link exact to="/repairs" class="learn black--text"
-                  >Repairs</nuxt-link
-                ></v-btn
-              >
               <p class="mb-10 ml-20 mr-20">
-                Please do not hesitate to get in touch. One of our team members
-                will get back to you shortly with your enquiry.
+                Thanks for getting in touch. We will assist as soon as possible.
               </p>
-              <contactForm />
+              <productsform />
             </v-col>
             <v-col md="3" cols="12">
               <div>
@@ -185,18 +162,19 @@
 </template>
 
 <script>
-import contactForm from '~/components/sections/contactForm.vue'
+import Productsform from '../components/sections/productsform.vue'
+// import contactForm from '~/components/sections/contactForm.vue'
 export default {
   transition: 'contact',
   components: {
-    contactForm,
+    Productsform,
   },
   data() {
     return {
       heroAlt: [
         {
           src: '',
-          heading: ' Contact Us ',
+          heading: 'Repairs',
           icon: 'mdi-contacts',
         },
       ],
@@ -207,19 +185,6 @@ export default {
           phone: '01572898515',
           email: 'andy.sibun@cbsproducts.com',
           photo: '',
-        },
-      ],
-    }
-  },
-  head() {
-    return {
-      title: 'Contact Us',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Please do not hesitate to get in touch, either via this form or through phone or email. We will gladly assist with your enquiry.',
         },
       ],
     }
