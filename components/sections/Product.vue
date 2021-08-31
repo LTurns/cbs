@@ -6,10 +6,12 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */
 <template>
   <section>
-    <div v-for="product in data" id="hero" :key="product.id">
-      <section id="home" class="section-showcase">
-        <div class="container">
-          <div>
+    <div v-for="product in data" :key="product.id">
+      <v-row>
+        <v-col id="small-hero" cols="12" md="6" sm="12">
+          <section id="home" class="section-showcase">
+            <!-- <div class="container"> -->
+            <!-- <div> -->
             <h1
               class="d-inline pa-2 mt-10 mb-20 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
             >
@@ -18,41 +20,48 @@ vue/no-side-effects-in-computed-properties */
             <p class="mt-10">
               {{ product.intro }}
             </p>
-            <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
+            <!-- <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
               Product ID
             </div>
             <div class="d-inline black white--text pa-2">
               {{ product.productId }}
             </div>
             <br /><br />
-            <a href="#about" class="btn">Read More</a>
+            <a href="#about" class="btn">Read More</a> -->
             <nuxt-link exact :to="`/enquiry`" class="learn">
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                text
-                class="my-3"
-                outlined
-                white
+              <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
                 ><v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn
               ></nuxt-link
             >
-          </div>
-          <v-carousel class="carousel" show-arrows-on-hover draggable="true">
-            <v-carousel-item
-              v-for="img in product.img"
-              :key="img.id"
-              class="align-center"
-            >
+            <!-- </div> -->
+            <!-- </div> -->
+          </section>
+        </v-col>
+
+        <v-col
+          style="background-color: white; box-shadow: 1px 0px 30px #aaaaaa"
+          cols="12"
+          md="6"
+          sm="12"
+        >
+          <v-carousel
+            class="carousel"
+            show-arrows-on-hover
+            hide-delimiter-background
+            draggable="true"
+            cycle
+          >
+            <v-carousel-item v-for="img in product.img" :key="img.id">
               <v-container>
                 <div>
                   <v-img
                     style="
-                      max-width: 520px;
                       display: block;
-                      margin-left: 15%;
-                      margin-right: 15%;
-                      margin-bottom: 10%;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 60%;
+                      background: white;
                     "
                     :src="`../${img.image}`"
                     :lazy-src="`../${img.image}`"
@@ -61,13 +70,13 @@ vue/no-side-effects-in-computed-properties */
               </v-container>
             </v-carousel-item>
           </v-carousel>
-        </div>
-      </section>
+        </v-col>
+      </v-row>
 
       <!-- Large Text -->
-      <section id="about" class="section-large-text">
+      <section class="section-large-text">
         <!-- <div class="overlay"> -->
-        <v-tabs v-model="tab" black--text center light class="pl-10">
+        <v-tabs v-model="tab" black--text center light class="">
           <v-tabs-slider></v-tabs-slider>
 
           <v-tab href="#features" class="ml-20"> Features </v-tab>
@@ -277,7 +286,7 @@ vue/no-side-effects-in-computed-properties */
             </v-container>
           </v-tab-item>
           <v-tab-item :key="5" value="more">
-            <v-carousel class="carousel" show-arrows-on-hover draggable="true">
+            <!-- <v-carousel class="carousel" show-arrows-on-hover draggable="true">
               <v-carousel-item
                 v-for="image in product.img"
                 :key="image.id"
@@ -293,7 +302,7 @@ vue/no-side-effects-in-computed-properties */
                   </div>
                 </v-container>
               </v-carousel-item>
-            </v-carousel>
+            </v-carousel> -->
           </v-tab-item>
         </v-tabs-items>
         <!-- </v-card> -->
@@ -338,9 +347,9 @@ export default {
 </script>
 
 <style>
-.carousel {
+/* .carousel {
   height: '70vh';
-}
+} */
 .image {
   display: block;
   margin-left: auto;
@@ -376,8 +385,8 @@ table tbody tr:nth-child(2n) td {
 }
 
 #about {
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 td {
@@ -437,10 +446,10 @@ table tbody tr:nth-child(2n) td {
     max-height: 200px;
   }
 
-  #about {
+  /* #about {
     padding-left: 0;
     padding-right: 0;
-  }
+  } */
 
   /* .carousel {
     height: 80vh;
@@ -757,13 +766,13 @@ img {
 /* showcase section */
 
 .section-showcase {
-  margin: 0rem 0;
+  margin: 6rem 3rem;
 }
 
 .section-showcase .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1f;
+  gap: 0rem;
   align-items: center;
   justify-content: center;
 }
@@ -840,7 +849,7 @@ img {
 #feature-card {
   min-height: 800px;
 }
-
+/* 
 @media (max-width: 768px) {
   .section-showcase .container {
     grid-template-columns: 1fr;
@@ -866,9 +875,9 @@ img {
   .section-showcase img {
     width: 80%;
     margin: auto;
-  }
+  } */
 
-  .section-large-text-inner h2 {
+/* .section-large-text-inner h2 {
     font-size: 3rem;
   }
 
@@ -881,8 +890,8 @@ img {
   }
 
   .section-gallery .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid; */
+/* grid-template-columns: repeat(3, 1fr);
   }
 
   .section-gallery .gallery img:first-child {
@@ -897,9 +906,9 @@ img {
 
   .section-gallery .gallery img:last-child {
     display: none;
-  }
+  } */
 
-  .section-footer {
+/* .section-footer {
     padding: 2rem 0;
   }
 
@@ -912,7 +921,7 @@ img {
   .section-footer div:nth-child(3) {
     display: none;
   }
-}
+} */
 
 table {
   border-collapse: collapse;
@@ -971,5 +980,10 @@ a {
 
 tr:nth-child(even) {
   background-color: #f4f6fb;
+}
+
+#small-hero {
+  background-image: url('../../static/orangewireheader.jpg');
+  background-size: cover;
 }
 </style>

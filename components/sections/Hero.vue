@@ -1,22 +1,14 @@
 <template>
-  <section
-    id="hero"
-    :style="{
-      backgroundImage: 'url(orangeWire.png)',
-      backgroundSize: cover,
-    }"
-  >
-    <v-container>
+  <section id="hero">
+    <v-container class="apple">
       <v-row>
         <!-- <v-col cols="12" md="12" sm="12"> -->
-        <v-col cols="12" md="6" sm="12" class="black--text">
+        <v-col cols="12" md="6" sm="12" class="spin">
           <v-carousel
-            height="calc(100vh - 64px)"
             cycle
             show-arrows-on-hover
             draggable="true"
             hide-delimiter-background
-            class="mt-8"
           >
             <v-carousel-item
               v-for="(carousel, carindex) in carouselsData"
@@ -25,11 +17,13 @@
               <v-col cols="12" md="12" class="black--text">
                 <div style="">
                   <div
-                    class="text-md-h2 mb-3 text-sm-h3 text-h5 font-weight-black"
+                    class="text-md-h2 mb-3 text-sm-h3 text-h6 font-weight-black"
                   >
                     {{ carousel.heading.toUpperCase() }}
                   </div>
-                  <p class="mb-5">{{ carousel.subHeading }}</p>
+                  <p style="font-size: 17px">
+                    {{ carousel.subHeading }}
+                  </p>
                   <v-btn
                     :x-large="$vuetify.breakpoint.smAndUp"
                     class="my-3 primary"
@@ -53,7 +47,7 @@
           </v-carousel>
         </v-col>
         <v-col md="6" class="white--text mt-20">
-          <categories class="mt-8" />
+          <categories />
         </v-col>
         <!-- </v-col> -->
       </v-row>
@@ -115,5 +109,47 @@ export default {
 .learn {
   color: black;
   text-decoration: none;
+}
+
+.apple {
+  margin-top: 3%;
+}
+
+@media screen and (max-width: 800px) {
+  .apple {
+    margin-top: 10%;
+  }
+
+  .spin {
+    height: calc(100vh - 250px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .apple {
+    margin-top: 30%;
+  }
+  .spin {
+    height: calc(100vh - 250px);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .apple {
+    margin-top: 8%;
+  }
+
+  .spin {
+    height: calc(100vh - 250px);
+  }
+}
+
+.spin {
+  height: calc(100vh - 50px);
+}
+
+#hero {
+  background-image: url('../../static/orangeWire.png');
+  background-size: 100%;
 }
 </style>
