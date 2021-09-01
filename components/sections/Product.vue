@@ -8,26 +8,26 @@ vue/no-side-effects-in-computed-properties */
   <section>
     <div v-for="product in data" :key="product.id">
       <v-row>
-        <v-col id="small-hero" cols="12" md="6" sm="12">
-          <section id="home" class="section-showcase">
+        <v-col cols="12" md="6" sm="12">
+          <div id="home" class="section-showcase">
             <!-- <div class="container"> -->
             <!-- <div> -->
             <h1
-              class="d-inline pa-2 mt-10 mb-20 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
+              class="d-inline pa-2 mt-10 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
             >
               {{ product.name.toUpperCase() }}
             </h1>
             <p class="mt-10">
               {{ product.intro }}
             </p>
-            <!-- <div class="d-inline pa-2 mt-10 yellow accent-4 black--text mb-5">
+            <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
               Product ID
             </div>
             <div class="d-inline black white--text pa-2">
               {{ product.productId }}
             </div>
             <br /><br />
-            <a href="#about" class="btn">Read More</a> -->
+            <a href="#about" class="btn">Read More</a>
             <nuxt-link exact :to="`/enquiry`" class="learn">
               <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
                 ><v-icon left large color="primary">mdi-play</v-icon>Enquire
@@ -36,45 +36,36 @@ vue/no-side-effects-in-computed-properties */
             >
             <!-- </div> -->
             <!-- </div> -->
-          </section>
+          </div>
         </v-col>
 
-        <v-col
-          style="background-color: white; box-shadow: 1px 0px 30px #aaaaaa"
-          cols="12"
-          md="6"
-          sm="12"
-        >
+        <v-col cols="12" md="6" sm="12">
           <v-carousel
             class="carousel"
             show-arrows-on-hover
             hide-delimiter-background
             draggable="true"
+            light
             cycle
           >
-            <v-carousel-item v-for="img in product.img" :key="img.id">
-              <v-container>
-                <div>
-                  <v-img
-                    style="
-                      display: block;
-                      margin-left: auto;
-                      margin-right: auto;
-                      width: 60%;
-                      background: white;
-                    "
-                    :src="`../${img.image}`"
-                    :lazy-src="`../${img.image}`"
-                  />
-                </div>
-              </v-container>
+            <v-carousel-item
+              v-for="img in product.img"
+              :key="img.id"
+              style="
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 55%;
+              "
+            >
+              <v-img :src="`../${img.image}`" :lazy-src="`../${img.image}`" />
             </v-carousel-item>
           </v-carousel>
         </v-col>
       </v-row>
 
       <!-- Large Text -->
-      <section class="section-large-text">
+      <section id="about" class="section-large-text">
         <!-- <div class="overlay"> -->
         <v-tabs v-model="tab" black--text center light class="">
           <v-tabs-slider></v-tabs-slider>
@@ -385,8 +376,8 @@ table tbody tr:nth-child(2n) td {
 }
 
 #about {
-  /* padding-left: 20px;
-  padding-right: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 td {
@@ -766,36 +757,35 @@ img {
 /* showcase section */
 
 .section-showcase {
-  margin: 6rem 3rem;
+  margin: 4rem 3rem;
 }
 
-.section-showcase .container {
+/* .section-showcase .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1f;
   gap: 0rem;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .section-showcase h1 {
   font-size: 3rem;
   color: var(--primary-color);
 }
 
-.section-showcase p {
+/* .section-showcase p {
   margin: 1rem 0;
-}
+} */
 
-.btn {
+/* .btn {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 0.8rem 1.5rem;
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
   border-radius: 30px;
-}
+} */
 
 /* .btn:hover {
   background: var(--secondary-color);

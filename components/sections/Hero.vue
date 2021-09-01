@@ -3,7 +3,7 @@
     <v-container class="apple">
       <v-row>
         <!-- <v-col cols="12" md="12" sm="12"> -->
-        <v-col cols="12" md="6" sm="12" class="spin">
+        <v-col cols="12" md="6" sm="12" class="spin" center>
           <v-carousel
             cycle
             show-arrows-on-hover
@@ -15,7 +15,7 @@
               :key="carindex"
             >
               <v-col cols="12" md="12" class="black--text">
-                <div style="">
+                <v-container fill-height>
                   <div
                     class="text-md-h2 mb-3 text-sm-h3 text-h6 font-weight-black"
                   >
@@ -30,7 +30,7 @@
                     >With a new battery powered range</v-btn
                   >
                   <span class="mx-2 my-4"></span>
-                  <v-btn
+                  <!-- <v-btn
                     :x-large="$vuetify.breakpoint.smAndUp"
                     text
                     class="my-3"
@@ -40,14 +40,16 @@
                     ><nuxt-link exact to="/about" class="learn black--text"
                       >Learn More</nuxt-link
                     ></v-btn
-                  >
-                </div>
+                  > -->
+                </v-container>
               </v-col>
             </v-carousel-item>
           </v-carousel>
         </v-col>
         <v-col md="6" class="white--text mt-20">
-          <categories />
+          <v-container fill-height>
+            <categories />
+          </v-container>
         </v-col>
         <!-- </v-col> -->
       </v-row>
@@ -110,12 +112,12 @@ export default {
   color: black;
   text-decoration: none;
 }
-
+/* 
 .apple {
   margin-top: 3%;
-}
+} */
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .apple {
     margin-top: 10%;
   }
@@ -123,8 +125,8 @@ export default {
   .spin {
     height: calc(100vh - 250px);
   }
-}
-
+} */
+/* 
 @media screen and (max-width: 600px) {
   .apple {
     margin-top: 30%;
@@ -132,9 +134,9 @@ export default {
   .spin {
     height: calc(100vh - 250px);
   }
-}
+} */
 
-@media screen and (min-width: 1500px) {
+/* @media screen and (min-width: 1500px) {
   .apple {
     margin-top: 8%;
   }
@@ -142,14 +144,14 @@ export default {
   .spin {
     height: calc(100vh - 250px);
   }
-}
+} */
 
-.spin {
+/* .spin {
   height: calc(100vh - 50px);
-}
+} */
 
 #hero {
   background-image: url('../../static/orangeWire.png');
-  background-size: 100%;
+  background-size: cover;
 }
 </style>
