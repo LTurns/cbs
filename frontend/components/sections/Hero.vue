@@ -1,10 +1,11 @@
 <template>
   <section id="hero">
-    <v-container class="apple">
-      <v-row>
+    <v-container fill-height>
+      <v-row align="center" justify="center" align-center>
         <!-- <v-col cols="12" md="12" sm="12"> -->
-        <v-col cols="12" md="6" sm="12" class="spin" center>
+        <v-col cols="12" md="6" sm="12">
           <v-carousel
+            height="85vh"
             cycle
             show-arrows-on-hover
             draggable="true"
@@ -14,41 +15,50 @@
               v-for="(carousel, carindex) in carouselsData"
               :key="carindex"
             >
-              <v-col cols="12" md="12" class="black--text">
-                <v-container fill-height>
-                  <div
-                    class="text-md-h2 mb-3 text-sm-h3 text-h6 font-weight-black"
-                  >
-                    {{ carousel.heading.toUpperCase() }}
-                  </div>
-                  <p style="font-size: 17px">
-                    {{ carousel.subHeading }}
-                  </p>
-                  <v-btn
-                    :x-large="$vuetify.breakpoint.smAndUp"
-                    class="my-3 primary"
-                    >With a new battery powered range</v-btn
-                  >
-                  <span class="mx-2 my-4"></span>
-                  <!-- <v-btn
-                    :x-large="$vuetify.breakpoint.smAndUp"
-                    text
-                    class="my-3"
-                    outlined
-                    white
-                    ><v-icon left large color="primary">mdi-play</v-icon
-                    ><nuxt-link exact to="/about" class="learn black--text"
-                      >Learn More</nuxt-link
-                    ></v-btn
-                  > -->
-                </v-container>
-              </v-col>
+              <v-container fill-height>
+                <v-row align-center>
+                  <v-col>
+                    <!-- <v-container> -->
+                    <div
+                      class="carousel-title text-md-h2 text-sm-h3 text-h6 font-weight-black"
+                    >
+                      {{ carousel.heading.toUpperCase() }}
+                    </div>
+                    <p style="font-size: 17px">
+                      {{ carousel.subHeading }}
+                    </p>
+                    <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      class="my-3 primary"
+                      >With a new battery powered range</v-btn
+                    >
+                    <span class="mx-2 my-4"></span>
+                    <!-- <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      text
+                      class="my-3"
+                      outlined
+                      white
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      ><nuxt-link
+                        exact
+                        to="/about"
+                        class="learn black--text mb-20"
+                        >Learn More</nuxt-link
+                      ></v-btn
+                    > -->
+                    <!-- </v-container> -->
+                  </v-col>
+                </v-row>
+              </v-container>
             </v-carousel-item>
           </v-carousel>
         </v-col>
-        <v-col md="6" class="white--text mt-20">
+        <v-col cols="12" md="6" sm="12" class="white--text">
           <v-container fill-height>
-            <categories />
+            <v-row align="center" justify="center" align-center>
+              <categories height="100vh" class="categories" />
+            </v-row>
           </v-container>
         </v-col>
         <!-- </v-col> -->
@@ -112,7 +122,7 @@ export default {
   color: black;
   text-decoration: none;
 }
-/* 
+/*
 .apple {
   margin-top: 3%;
 } */
@@ -126,7 +136,7 @@ export default {
     height: calc(100vh - 250px);
   }
 } */
-/* 
+/*
 @media screen and (max-width: 600px) {
   .apple {
     margin-top: 30%;
@@ -153,5 +163,13 @@ export default {
 #hero {
   background-image: url('../../static/orangeWire.png');
   background-size: cover;
+}
+
+@media screen and (min-width: 1500px) {
+  .categories,
+  .carousel-title {
+    margin-top: 10%;
+    padding-top: 5%;
+  }
 }
 </style>

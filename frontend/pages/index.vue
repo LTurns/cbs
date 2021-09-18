@@ -14,20 +14,20 @@
           </h2>
         </v-responsive> -->
         <!-- <SectionsIntro /> -->
-        <v-responsive
+        <!-- <v-responsive
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
           class="max-auto mx-auto text-center"
-        >
-          <div
+        > -->
+        <!-- <div
             class="hero-text mt-20 mb-20"
             style="margin-top: 50px; margin-bottom: 50px"
-          >
-            <blockquote>
+          > -->
+        <!-- <blockquote>
               CBS has become the partner of choice in a number of high profile,
               international fibre optic cable projects around the globe.
-            </blockquote>
-          </div>
-        </v-responsive>
+            </blockquote> -->
+        <!-- </div> -->
+        <!-- </v-responsive> -->
         <v-responsive
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
           class="max-auto mx-auto text-center"
@@ -39,7 +39,7 @@
             FEATURED PRODUCTS
           </h3>
         </v-responsive>
-        <SectionsFeaturedProducts :data="featuredProducts" />
+        <SectionsFeaturedProducts :data="filteredList" />
         <SectionsBrands />
       </v-col>
     </v-row>
@@ -49,9 +49,38 @@
 <script>
 export default {
   transition: 'home',
-  computed: {
-    featuredProducts() {
-      return this.$store.getters.fibreBlowing.slice(0, 3)
+  data() {
+    return {
+      filteredList: '',
+    }
+  },
+  // computed: {
+  //   featuredProducts() {
+  //     return this.$store.getters.fibreBlowing.slice(0, 3)
+  //   },
+  // },
+  created() {
+    this.getAllMusics()
+  },
+  methods: {
+    async getAllMusics() {
+      this.listLoading = true
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const response = await this.$axios.get(
+          'http://localhost:5001/api/products',
+          config
+        )
+        this.filteredList = response.data.slice(0, 2)
+        this.listLoading = false
+      } catch (err) {
+        this.listLoading = false
+        throw new Error('Error Fetching Products')
+      }
     },
   },
 }

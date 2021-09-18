@@ -16,9 +16,9 @@ const dynamicRoutes = () => {
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
+  target: 'server',
   server: {
-    host: '0', // default: localhost
+    port: 5000, // default: 3000
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -50,6 +50,12 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
+  axios: {
+    baseURL: 'http://example.com',
+    browserBaseURL: 'http://localhost:3000',
+    // proxyHeaders: false
+  },
+  middleware: ['auth'],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
@@ -69,7 +75,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxtjs/axios'],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

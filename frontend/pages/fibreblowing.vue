@@ -18,10 +18,10 @@
             class="hero-text mt-20 mb-20"
             style="margin-top: 50px; margin-bottom: 50px"
           >
-            <blockquote>
+            <!-- <blockquote>
               Scroll down to view our Fibre Blowing Products. These include
               Tornados, Hurricaines and much more.
-            </blockquote>
+            </blockquote> -->
           </div>
         </v-responsive>
         <div class="search">
@@ -37,37 +37,24 @@
           </button>
         </div>
 
-        <SectionsFeaturedProducts :data="list" />
+        <SectionsFeaturedProducts :data="filteredList" />
       </v-col>
     </v-row>
   </section>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   transition: 'fibreblowing',
-  async fetch() {
-    try {
-      const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product-categories',
-        {}
-      )
-      this.filteredList = result.data
-        .filter((el) => el.main_category.name === 'Fibre Blowing')
-        .reverse()
-      return this.filteredList
-    } catch (error) {
-      if (this.search !== '') {
-        this.filteredList = this.$store.getters.fibreBlowing.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
-      }
-      this.filteredList = this.$store.getters.fibreBlowing
 
-      return this.filteredList
-    }
-  },
+  // async fetch() {
+  //   console.log(this.mountains)
+  //   this.mountains = await this.$axios.get('/products').then((res) => res.json)
+  // },
+  // async asyncData({ $axios }) {
+  //   const data = await $axios.$get('/products')
+  //   return { users: data }
+  // },
   data() {
     return {
       heroAlt: [
@@ -77,14 +64,44 @@ export default {
         },
       ],
       search: '',
-      filteredList: '',
+      filteredList: [],
+      listLoading: '',
     }
   },
-  computed: {
-    // CableBlowingEquipment() {
-    //   return this.$store.getters.cableBlowingCategory;
-    // },
-    list() {
+  // computed: {
+  //   list() {
+  //     if (this.search !== '') {
+  //       return this.filteredList.filter((box) => {
+  //         return box.name.toLowerCase().includes(this.search.toLowerCase())
+  //       })
+  //     }
+  //     return this.filteredList
+  //   },
+  // },
+  created() {
+    this.getAllMusics()
+  },
+  methods: {
+    async getAllMusics() {
+      this.listLoading = true
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const response = await this.$axios.get(
+          'http://localhost:5001/api/products',
+          config
+        )
+        this.filteredList = response.data
+        this.listLoading = false
+      } catch (err) {
+        this.listLoading = false
+        throw new Error('Error Fetching Products')
+      }
+    },
+    list(list) {
       if (this.search !== '') {
         return this.filteredList.filter((box) => {
           return box.name.toLowerCase().includes(this.search.toLowerCase())
@@ -93,19 +110,6 @@ export default {
       return this.filteredList
     },
   },
-  // head() {
-  //   return {
-  //     title: 'Gallery',
-  //     meta: [
-  //       {
-  //         hid: 'description',
-  //         name: 'description',
-  //         content:
-  //           'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem',
-  //       },
-  //     ],
-  //   }
-  // },
 }
 </script>
 

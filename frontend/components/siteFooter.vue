@@ -15,10 +15,10 @@
             class="d-flex flex-wrap justify-md-start justify-center justify-md-none"
           >
             <template v-for="(s, i) in menu">
-              <a
+              <nuxt-link
                 :key="i"
                 class="text--secondary pa-1 pa-md-0"
-                :href="s.link"
+                :to="s.link"
                 v-text="s.text"
               />
 
@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       menu: [
-        { text: 'Support', link: '#' },
+        { text: 'Admin', link: '/login' },
         { text: 'Contact Us', link: '#' },
         { text: 'Disclaimer', link: '#' },
         { text: 'Covid-19 Operation', link: '#' },

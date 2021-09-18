@@ -6,7 +6,7 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */
 <template>
   <section>
-    <div v-for="product in data" :key="product.id">
+    <div v-for="product in data" :key="product.productId">
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
@@ -78,7 +78,7 @@ vue/no-side-effects-in-computed-properties */
           <v-tab v-show="product.tables.length != 0" href="#config">
             Configuration
           </v-tab>
-          <v-tab v-show="product.video.length != 2" href="#video">
+          <v-tab v-show="product.videos.length > 0" href="#video">
             Video Tutorials
           </v-tab>
         </v-tabs>
@@ -101,10 +101,24 @@ vue/no-side-effects-in-computed-properties */
                     margin-bottom: 20px;
                   "
                 >
-                  {{ product.description }}
+                  <div
+                    v-for="paragraph in product.description"
+                    :key="paragraph.id"
+                  >
+                    <p
+                      class="black--text mt-5"
+                      style="
+                        line-height: 30px;
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                      "
+                    >
+                      {{ paragraph.paragraph }}
+                    </p>
+                  </div>
                 </div>
                 <v-col
-                  v-for="feature in product.item"
+                  v-for="feature in product.features"
                   :key="feature.id"
                   cols="12"
                   md="6"
@@ -123,11 +137,11 @@ vue/no-side-effects-in-computed-properties */
                           border-bottom: 2px solid #fde36d;
                           box-shadow: 0 4px 6px -6px;
                         "
-                        v-text="feature.main"
+                        v-text="feature.heading"
                       ></h4>
                       <!-- </v-toolbar> -->
                       <v-list-item
-                        v-for="item in feature.name"
+                        v-for="item in feature.list"
                         :key="item.listItem"
                         class="list pt-0"
                       >
@@ -155,7 +169,21 @@ vue/no-side-effects-in-computed-properties */
               class="black--text pb-10"
               style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
             >
-              {{ product.configurationIntro }}
+              <div
+                v-for="paragraph in product.configurationIntro"
+                :key="paragraph.id"
+              >
+                <p
+                  class="black--text mt-5"
+                  style="
+                    line-height: 30px;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  {{ paragraph.paragraph }}
+                </p>
+              </div>
             </v-card-text>
             <v-card
               min-height="600"
@@ -262,16 +290,32 @@ vue/no-side-effects-in-computed-properties */
                   $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
                 "
               >
-                <div v-for="video in product.video.split(',')" :key="video.id">
-                  <iframe
-                    class="video"
-                    style="background-color: white"
-                    :src="video"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                <div v-for="video in product.videos" :key="video.title">
+                  <v-col cols="12" md="12" align-self="center">
+                    <h4
+                      class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                      style="
+                        letter-spacing: 0.15em;
+                        border-bottom: 2px solid #fde36d;
+                        box-shadow: 0 4px 6px -6px;
+                      "
+                      v-text="video.title"
+                    ></h4>
+                    <!-- <div
+                      v-for="video in product.video.split(',')"
+                      :key="video.id"
+                    > -->
+                    <iframe
+                      class="video"
+                      style="background-color: white"
+                      :src="video.video"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <!-- </div> -->
+                  </v-col>
                 </div>
               </v-card>
             </v-container>
