@@ -74,6 +74,8 @@ const deleteProduct = asyncHandler(async (req, res) => {
 // @route   POST /api/products
 // @access  Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
+  console.log('hellooo', req)
+
   const product = new Product({
     user: req.user._id,
     name: 'Sample name',

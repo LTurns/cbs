@@ -2,33 +2,58 @@
 eslint-disable vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */
 <template>
   <section>
     <div v-for="product in data" :key="product.productId">
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
-            <!-- <div class="container"> -->
-            <!-- <div> -->
             <h1
               class="d-inline pa-2 mt-10 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
             >
-              {{ product.name.toUpperCase() }}
+              <input
+                type="text"
+                style="
+                  width: 100%;
+                  padding: 5px;
+                  margin: 0;
+                  -webkit-box-sizing: border-box;
+                "
+                :value="product.name.toUpperCase()"
+                class="input"
+              />
             </h1>
-            <p class="mt-10">
-              {{ product.intro }}
-            </p>
+            <textarea
+              id="text"
+              class="input"
+              :value="product.intro"
+              name="text"
+              rows="3"
+              cols="10"
+              style="
+                overflow: hidden;
+                word-wrap: break-word;
+                resize: none;
+                padding: 15px;
+                align-self: center;
+                min-width: 500px;
+                max-width: 600px;
+              "
+            ></textarea
+            ><br />
             <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
               Product ID
             </div>
             <div class="d-inline black white--text pa-2">
-              {{ product.productId }}
+              <input
+                type="text"
+                class="input white--text"
+                :value="product.productId"
+              />
             </div>
             <br /><br />
-            <a href="#about" class="btn">Read More</a>
-            <nuxt-link exact :to="`/enquiry`" class="learn">
+            <!-- <a href="#about" class="btn">Read More</a> -->
+            <nuxt-link to="#" class="learn">
               <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
                 ><v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn
@@ -40,27 +65,62 @@ vue/no-side-effects-in-computed-properties */
         </v-col>
 
         <v-col cols="12" md="6" sm="12">
-          <v-carousel
-            class="carousel"
-            show-arrows-on-hover
-            hide-delimiter-background
-            draggable="true"
-            light
-            cycle
+          <div
+            class="column2 mr-5"
+            :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
           >
-            <v-carousel-item
-              v-for="img in product.img"
-              :key="img.id"
+            <h4
+              class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
               style="
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 55%;
+                letter-spacing: 0.15em;
+                border-bottom: 2px solid #fde36d;
+                box-shadow: 0 4px 6px -6px;
               "
             >
-              <v-img :src="`../${img.image}`" :lazy-src="`../${img.image}`" />
-            </v-carousel-item>
-          </v-carousel>
+              Images
+            </h4>
+            <table>
+              <!-- <thead>
+                <th
+                  v-for="(heading, index) in headings"
+                  :key="heading[index]"
+                  class="table1"
+                  align-center
+                >
+                  {{ heading }}
+                </th>
+              </thead> -->
+
+              <tbody>
+                <tr v-for="item in product.img" :key="item.image">
+                  <td>
+                    <!-- <input
+                            type="text"
+                            class="form-control groupName pl-5 pr-5"
+                            :value="item.image"
+                          /> -->
+                    <img
+                      :src="`../${item.image}`"
+                      class="img-fluid"
+                      height="100px"
+                      width="auto"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      class="input"
+                      value="Add file name here"
+                    />
+                  </td>
+                  <td>
+                    <v-btn class="btn" @click="deleteGroup(index)"> X </v-btn>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <image-uploader />
+          </div>
         </v-col>
       </v-row>
 
@@ -106,53 +166,74 @@ vue/no-side-effects-in-computed-properties */
                       v-for="paragraph in product.description"
                       :key="paragraph.id"
                     >
-                      <p
-                        class="black--text mt-5"
-                        style="
-                          line-height: 30px;
-                          font-size: 15px;
-                          margin-bottom: 20px;
-                        "
-                      >
-                        {{ paragraph.paragraph }}
-                      </p>
+                      <v-row>
+                        <v-col cols="12" md="6" sm="12">
+                          <!-- <input
+                            class="black--text mt-5"
+                            type="text"
+                            style="
+                              line-height: 30px;
+                              font-size: 15px;
+                              margin-bottom: 20px;
+                            "
+                            :value="paragraph.paragraph"
+                          /> -->
+                          <textarea
+                            id="text"
+                            class="input"
+                            :value="paragraph.paragraph"
+                            name="text"
+                            rows="4"
+                            cols="12"
+                            style="
+                              overflow: hidden;
+                              word-wrap: break-word;
+                              resize: none;
+                              padding: 15px;
+                              align-self: center;
+                              width: 1000px;
+                            "
+                          ></textarea>
+                        </v-col>
+                      </v-row>
                     </div>
                   </div>
-                  <v-col
-                    v-for="feature in product.features"
-                    :key="feature.id"
-                    cols="12"
-                    md="6"
+                </v-col>
+                <v-col
+                  v-for="feature in product.features"
+                  :key="feature.id"
+                  cols="12"
+                  md="6"
+                >
+                  <v-card
+                    id="feature-card"
+                    class="mx-auto transition-swing"
+                    :elevation="hover ? 24 : 6"
                   >
-                    <v-card
-                      id="feature-card"
-                      class="mx-auto transition-swing"
-                      :elevation="hover ? 24 : 6"
-                    >
-                      <v-list-item-content>
-                        <!-- <v-toolbar color="yellow" light> -->
-                        <h4
-                          class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                          style="
-                            letter-spacing: 0.15em;
-                            border-bottom: 2px solid #fde36d;
-                            box-shadow: 0 4px 6px -6px;
-                          "
-                          v-text="feature.heading"
-                        ></h4>
-                        <!-- </v-toolbar> -->
-                        <v-list-item
-                          v-for="item in feature.list"
-                          :key="item.listItem"
-                          class="list pt-0"
-                        >
-                          {{ item.listItem }}
-                        </v-list-item>
-                      </v-list-item-content>
-                    </v-card>
-                    <!-- </v-hover> -->
-                    <!-- <v-card-text>Features</v-card-text> -->
-                  </v-col>
+                    <v-list-item-content>
+                      <!-- <v-toolbar color="yellow" light> -->
+                      <h4
+                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                        style="
+                          letter-spacing: 0.15em;
+                          border-bottom: 2px solid #fde36d;
+                          box-shadow: 0 4px 6px -6px;
+                        "
+                        v-text="feature.heading"
+                      ></h4>
+                      <!-- </v-toolbar> -->
+                      <v-list-item
+                        v-for="item in feature.list"
+                        :key="item.listItem"
+                        class="list pt-0"
+                      >
+                        <input type="text" :value="item.listItem" />
+                        <!-- {{ item.listItem }} -->
+                      </v-list-item>
+                    </v-list-item-content>
+                  </v-card>
+                  <!-- </v-hover> -->
+                  <!-- <v-card-text>Features</v-card-text> -->
                 </v-col>
               </v-row>
             </v-container>
@@ -175,16 +256,16 @@ vue/no-side-effects-in-computed-properties */
                 v-for="paragraph in product.configurationIntro"
                 :key="paragraph.id"
               >
-                <p
+                <input
                   class="black--text mt-5"
+                  type="text"
                   style="
                     line-height: 30px;
                     font-size: 15px;
                     margin-bottom: 20px;
                   "
-                >
-                  {{ paragraph.paragraph }}
-                </p>
+                  :value="paragraph.paragraph"
+                />
               </div>
             </v-card-text>
             <v-card
@@ -349,7 +430,9 @@ vue/no-side-effects-in-computed-properties */
 </template>
 
 <script>
+import ImageUploader from './ImageUploader.vue'
 export default {
+  components: { ImageUploader },
   props: {
     data: {
       type: Array,
@@ -386,6 +469,16 @@ export default {
 /* .carousel {
   height: '70vh';
 } */
+
+/* .column2 {
+  background: rgb(236, 229, 229);
+} */
+
+.input:focus {
+  outline: none !important;
+  border: 1px solid yellow;
+  box-shadow: 0 0 5px #dad9d6;
+}
 .image {
   display: block;
   margin-left: auto;
@@ -453,6 +546,17 @@ table tbody tr:nth-child(2n) td {
   width: 600px;
   height: 400px;
   margin-bottom: 5%;
+}
+
+.myGallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr 1fr 1fr));
+  /* grid-template-rows: auto; */
+}
+
+.myGallery img {
+  width: 30%;
 }
 
 @media screen and (max-width: 600px) {
@@ -885,7 +989,7 @@ img {
 #feature-card {
   min-height: 800px;
 }
-/* 
+/*
 @media (max-width: 768px) {
   .section-showcase .container {
     grid-template-columns: 1fr;

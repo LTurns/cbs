@@ -51,11 +51,10 @@ export default {
   css: [],
 
   axios: {
-    baseURL: 'http://example.com',
-    browserBaseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:5001',
     // proxyHeaders: false
   },
-  middleware: ['auth'],
+  middleware: ['auth-admin', 'auth-login'],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
@@ -75,7 +74,36 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/auth'],
+
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          global: true,
+          required: true,
+          type: 'Bearer',
+        },
+        user: {
+          property: 'user',
+          autoFetch: true,
+        },
+        endpoints: {
+          login: {
+            url: '/api/users/login',
+            method: 'post',
+            propertyName: 'token',
+          },
+          user: {
+            url: '/api/users/profile',
+            method: 'get',
+            propertyName: '',
+          },
+        },
+      },
+    },
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

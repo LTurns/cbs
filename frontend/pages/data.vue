@@ -20,81 +20,115 @@
             <div class="container-fluid">
               <div id="app" class="content">
                 <form @submit.prevent>
-                  <table class="">
-                    <!-- <thead>
-                      <tr class="table">
-                        <th>Group</th>
-                        <th>No</th>
-                        <th>Description</th>
-                        <th colspan="2">Time</th>
-                        <th>Delete</th>
-                      </tr>
-                    </thead> -->
+                  <table>
+                    <thead>
+                      <th
+                        v-for="(heading, index) in headings"
+                        :key="heading[index]"
+                        class="table1"
+                        align-center
+                      >
+                        {{ heading }}
+                      </th>
+                    </thead>
+
                     <tbody>
-                      <tr v-for="(item, index) in items" :key="item">
+                      <tr v-for="(item, index) in filteredList" :key="item">
                         <td>
                           <input
-                            v-model="item.groupName"
                             type="text"
-                            class="form-control groupName"
-                            value="item.groupName"
+                            class="form-control groupName pl-5 pr-5"
+                            :value="item.name"
                           />
                         </td>
                         <td>
                           <input
-                            v-model="item.equipmentNo"
-                            type="number"
-                            class="form-control"
-                            value="item.equipmentName"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            v-model="item.description"
                             type="text"
                             class="form-control"
-                            value="item.description"
+                            :value="item.productId"
                           />
                         </td>
                         <td>
-                          <select id="" name="" class="form-control">
-                            <option
-                              v-for="itemOption in item.timeStart"
-                              :key="itemOption.groupName"
-                              :value="itemOption"
-                            >
-                              {{ itemOption }}
-                            </option>
-                          </select>
+                          <v-img
+                            :src="`/${item.mainImg}`"
+                            alt=""
+                            width="50"
+                            :lazy-src="item.mainImg"
+                            aspect-ratio="1"
+                            class="image grey lighten-2 rounded-lg mt-5 mb-10"
+                          ></v-img>
                         </td>
                         <td>
-                          <select id="" name="" class="form-control">
-                            <option
-                              v-for="itemOption in item.timeFinish"
-                              :key="itemOption.groupName"
-                              :value="itemOption"
-                            >
-                              {{ itemOption }}
-                            </option>
-                          </select>
+                          <v-select
+                            :value="item.category"
+                            :items="categories"
+                            label="Category"
+                          ></v-select>
+                        </td>
+
+                        <td>
+                          <nuxt-link :to="`/edit/${item._id}`">
+                            Edit
+                          </nuxt-link>
                         </td>
                         <td>
-                          <button
-                            class="btn btn-danger"
-                            @click="deleteGroup(index)"
-                          >
-                            X
-                          </button>
+                          <div class="text-center">
+                            <v-dialog v-model="dialog" width="500">
+                              <template v-slot:activator="{ on, attrs }">
+                                <v-btn
+                                  color="red lighten-2"
+                                  dark
+                                  v-bind="attrs"
+                                  class="btn"
+                                  v-on="on"
+                                  @click="showGroup(index)"
+                                >
+                                  X
+                                </v-btn>
+                              </template>
+                              <v-card>
+                                <v-card-title class="text-h5 grey lighten-2">
+                                  Delete Product?
+                                </v-card-title>
+                                <v-card-text class="pt-10">
+                                  Are you sure you want to delete this product?
+                                </v-card-text>
+
+                                <v-divider></v-divider>
+
+                                <v-card-actions>
+                                  <v-spacer></v-spacer>
+                                  <v-btn
+                                    color="primary"
+                                    text
+                                    @click="deleteGroup()"
+                                    >YES
+                                  </v-btn>
+                                  <v-btn
+                                    color="primary"
+                                    text
+                                    @click="dialog = false"
+                                  >
+                                    NO
+                                  </v-btn>
+                                </v-card-actions>
+                              </v-card>
+                            </v-dialog>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                   <div>
-                    <button class="btn btn-info float-right" @click="addGroup">
-                      Add New Group with Vue.Js
-                    </button>
+                    <v-btn
+                      class="btn btn-info float-right mt-20"
+                      @click="addGroup"
+                    >
+                      Add Product
+                    </v-btn>
                   </div>
                 </form>
+                <div class="text-center"></div>
               </div>
             </div>
           </v-row>
@@ -106,7 +140,8 @@
 
 <script>
 export default {
-  transition: 'about',
+  transition: 'data',
+  middleware: ['auth-admin'],
   data() {
     return {
       heroAlt: [
@@ -116,47 +151,124 @@ export default {
           icon: 'mdi-account',
         },
       ],
-      filteredList: '',
-      items: [
-        {
-          groupName: 'Group Name',
-          equipmentNo: '123456789',
-          description: 'Description',
-          timeStart: {
-            option1: '09:00',
-            option2: '09:30',
-          },
-          timeFinish: {
-            option1: '18:00',
-            option2: '18:30',
-          },
-        },
+      filteredList: [],
+      dialog: false,
+      categories: ['Fibre Blowing', 'Klein Tools', 'Utilities', 'Telecoms'],
+      headings: [
+        'Name',
+        'ProductId',
+        'Main Image',
+        'Category',
+        'Edit',
+        'Delete',
       ],
+      items: [{}],
+      product: null,
+      element: '',
     }
   },
   created() {
     this.getAllMusics()
   },
   methods: {
-    addGroup() {
-      this.items.push({
-        groupName: 'New Group',
-        equipmentNo: '123456789',
-        description: 'New Description',
-        timeStart: {
-          option1: '09:00',
-          option2: '09:30',
-          option3: '10:00',
-        },
-        timeFinish: {
-          option1: '18:00',
-          option2: '18:30',
-          option3: '19:00',
-        },
-      })
+    // async addGroup() {
+    //   const config = {
+    //     headers: {
+    //       'Access-Control-Allow-Origin': '*',
+    //     },
+    //   }
+    //   const data = {
+    //     user: '',
+    //     name: 'Sample name',
+    //     productId: '',
+    //     description: [
+    //       {
+    //         paragraph: 'paragraph',
+    //       },
+    //     ],
+    //     img: [
+    //       {
+    //         image: 'image',
+    //       },
+    //     ],
+    //     mainImg: 'image',
+    //     category: 'string',
+    //     subCategory: [],
+    //     features: [
+    //       { id: 1 },
+    //       { heading: 'Title' },
+    //       { list: [{ listItem: 'item' }] },
+    //     ],
+    //     intro: 'intro',
+    //     videos: [
+    //       {
+    //         title: 'video-title',
+    //       },
+    //       { video: 'video' },
+    //     ],
+    //     configurationTitle: 'configTitle',
+    //     configurationIntro: [
+    //       {
+    //         paragraph: 'configurationIntro',
+    //       },
+    //     ],
+    //     configurationImage: 'string',
+    //     tables: [
+    //       {
+    //         columns: ['columntitleOne', 'columntitleTwo'],
+    //         image: 'table Image',
+    //         title: 'table heading',
+    //         items: [
+    //           {
+    //             'item Description': 'description',
+    //             partNo: 'part number',
+    //           },
+    //         ],
+    //       },
+    //     ],
+    //     countInStock: 100,
+    //     accessories: [
+    //       {
+    //         name: 'Product Accessory',
+    //         category: 'Product Category',
+    //         subCategory: 'P SubCat',
+    //         productId: 'id',
+    //         intro: 'product intro',
+    //         mainImg: 'mainImg',
+    //       },
+    //     ],
+    //   }
+    //   try {
+    //     await this.$axios.create(
+    //       'http://localhost:5001/api/products',
+    //       data,
+    //       config
+    //     )
+    //   } catch (err) {
+    //     throw new Error('Error creating Product')
+    //   }
+    // },
+    showGroup(index) {
+      this.product = index
+
+      console.log(this.product)
     },
-    deleteGroup(index) {
-      this.items.splice(index, 1)
+    async deleteGroup() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        await this.$axios.delete(
+          `http://localhost:5001/api/products/${
+            this.filteredList[this.product]._id
+          }`,
+          config
+        )
+      } catch (err) {
+        throw new Error('Error deleting Product')
+      }
     },
     async getAllMusics() {
       this.listLoading = true
@@ -171,19 +283,9 @@ export default {
           config
         )
         this.filteredList = response.data
-        this.listLoading = false
       } catch (err) {
-        this.listLoading = false
         throw new Error('Error Fetching Products')
       }
-    },
-    list(list) {
-      if (this.search !== '') {
-        return this.filteredList.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
-      }
-      return this.filteredList
     },
   },
 
@@ -204,32 +306,12 @@ export default {
 </script>
 
 <style>
-.about-enter-active,
-.about-leave-active {
+.data-enter-active,
+.data-leave-active {
   transition: opacity 0.5s;
 }
-.about-enter,
-.about-leave-active {
+.data-enter,
+.data-leave-active {
   opacity: 0;
 }
-
-/* .content {
-  max-width: calc(1000px);
-  padding: 20px;
-  border-radius: 2px;
-}
-.content td:first-of-type {
-  width: 120px;
-}
-.content .form-control {
-  font-size: 13px;
-}
-.groupName,
-.groupName:hover,
-.groupName:focus,
-.groupName:active {
-  color: #888;
-  border: none;
-  outline: 0;
-} */
 </style>

@@ -22,6 +22,12 @@
             class="hero-text mt-20 mb-20"
             style="margin-top: 50px; margin-bottom: 50px"
           > -->
+        <!-- <v-parallax src="wires.jpeg"> -->
+        <!-- <blockquote>
+          CBS has become the partner of choice in a number of high profile,
+          international fibre optic cable projects around the globe.
+        </blockquote> -->
+        <!-- </v-parallax> -->
         <!-- <blockquote>
               CBS has become the partner of choice in a number of high profile,
               international fibre optic cable projects around the globe.
@@ -90,7 +96,7 @@ export default {
 blockquote {
   font-size: 16px;
   width: 60%;
-  margin: 10px auto;
+  margin: 5px auto;
   font-style: italic;
   position: relative;
   border-bottom: 2px solid orange;

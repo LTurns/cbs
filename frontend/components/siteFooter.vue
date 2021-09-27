@@ -14,6 +14,15 @@
           ><div
             class="d-flex flex-wrap justify-md-start justify-center justify-md-none"
           >
+            <div v-if="$auth.loggedIn">
+              {{ $auth.user }}
+              <v-btn text>Logout</v-btn>
+              <!-- username -->
+              <!-- logout -->
+            </div>
+            <div v-else>
+              <v-btn text to="/login">Login</v-btn>
+            </div>
             <template v-for="(s, i) in menu">
               <nuxt-link
                 :key="i"
@@ -46,7 +55,6 @@ export default {
   data() {
     return {
       menu: [
-        { text: 'Admin', link: '/login' },
         { text: 'Contact Us', link: '#' },
         { text: 'Disclaimer', link: '#' },
         { text: 'Covid-19 Operation', link: '#' },
