@@ -74,8 +74,6 @@ const deleteProduct = asyncHandler(async (req, res) => {
 // @route   POST /api/products
 // @access  Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
-  console.log('hellooo', req)
-
   const product = new Product({
     user: req.user._id,
     name: 'Sample name',
@@ -87,11 +85,11 @@ const createProduct = asyncHandler(async (req, res) => {
     ],
     img: [
       { 
-        image: 'image'
+        image: 'tornado.jpg'
       }
     ],
-    mainImg: 'image',
-    category: 'string',
+    mainImg: 'tornado.jpg',
+    category: 'Fibre Blowing',
     subCategory: [],
     features: [
       { id: 1 },
@@ -107,7 +105,7 @@ const createProduct = asyncHandler(async (req, res) => {
       {
         title: 'video-title'
       },
-      { video: 'video' }
+      { video: '' }
     ],
     configurationTitle: 'configTitle',
     configurationIntro: [

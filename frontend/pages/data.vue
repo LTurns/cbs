@@ -171,87 +171,25 @@ export default {
     this.getAllMusics()
   },
   methods: {
-    // async addGroup() {
-    //   const config = {
-    //     headers: {
-    //       'Access-Control-Allow-Origin': '*',
-    //     },
-    //   }
-    //   const data = {
-    //     user: '',
-    //     name: 'Sample name',
-    //     productId: '',
-    //     description: [
-    //       {
-    //         paragraph: 'paragraph',
-    //       },
-    //     ],
-    //     img: [
-    //       {
-    //         image: 'image',
-    //       },
-    //     ],
-    //     mainImg: 'image',
-    //     category: 'string',
-    //     subCategory: [],
-    //     features: [
-    //       { id: 1 },
-    //       { heading: 'Title' },
-    //       { list: [{ listItem: 'item' }] },
-    //     ],
-    //     intro: 'intro',
-    //     videos: [
-    //       {
-    //         title: 'video-title',
-    //       },
-    //       { video: 'video' },
-    //     ],
-    //     configurationTitle: 'configTitle',
-    //     configurationIntro: [
-    //       {
-    //         paragraph: 'configurationIntro',
-    //       },
-    //     ],
-    //     configurationImage: 'string',
-    //     tables: [
-    //       {
-    //         columns: ['columntitleOne', 'columntitleTwo'],
-    //         image: 'table Image',
-    //         title: 'table heading',
-    //         items: [
-    //           {
-    //             'item Description': 'description',
-    //             partNo: 'part number',
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //     countInStock: 100,
-    //     accessories: [
-    //       {
-    //         name: 'Product Accessory',
-    //         category: 'Product Category',
-    //         subCategory: 'P SubCat',
-    //         productId: 'id',
-    //         intro: 'product intro',
-    //         mainImg: 'mainImg',
-    //       },
-    //     ],
-    //   }
-    //   try {
-    //     await this.$axios.create(
-    //       'http://localhost:5001/api/products',
-    //       data,
-    //       config
-    //     )
-    //   } catch (err) {
-    //     throw new Error('Error creating Product')
-    //   }
-    // },
+    async addGroup() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        await this.$axios.post(
+          'http://localhost:5001/api/products/',
+          this.$auth.user,
+          config
+        )
+        this.getAllMusics()
+      } catch (err) {
+        throw new Error('Error adding product')
+      }
+    },
     showGroup(index) {
       this.product = index
-
-      console.log(this.product)
     },
     async deleteGroup() {
       const config = {
@@ -269,6 +207,10 @@ export default {
       } catch (err) {
         throw new Error('Error deleting Product')
       }
+
+      this.dialog = false
+
+      this.getAllMusics()
     },
     async getAllMusics() {
       this.listLoading = true
