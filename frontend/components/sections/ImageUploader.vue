@@ -6,11 +6,7 @@
           <div class="form-group">
             <!-- <label for="my-file">Select Image</label> -->
             <v-btn>
-              <input
-                type="file"
-                accept="image/*"
-                multiple="multiple"
-                @change="previewMultiImage" /></v-btn
+              <input type="file" accept="image/*" @change="saveImages" /></v-btn
             ><br /><br />
             <div class="border p-2 mt-3">
               <template v-if="preview_list.length">
@@ -28,14 +24,16 @@
                     </thead>
 
                     <tbody>
-                      <tr v-for="(item, index) in preview_list" :key="index">
+                      <tr
+                        v-for="(item, index) in preview_list"
+                        :key="item.image"
+                      >
                         <td>
-                          <!-- <input
-                            type="text"
-                            class="form-control groupName pl-5 pr-5"
-                            :value="item.image"
-                          /> -->
-                          <img :src="item" class="img-fluid" width="50px" />
+                          <img
+                            :src="`../${item.image}`"
+                            class="img-fluid"
+                            width="50px"
+                          />
                         </td>
                         <td>
                           <input
@@ -55,6 +53,8 @@
                   <img :src="item" class="img-fluid" />
                 </div>
               </template>
+
+              <img :src="image" />
             </div>
           </div>
         </form>
@@ -65,11 +65,17 @@
 
 <script>
 export default {
+  props: {
+    previewList: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
+      preview_list: this.previewList,
       preview: null,
-      image: null,
-      preview_list: [],
+      image: '',
       image_list: [],
       headings: ['image', 'name', 'Remove'],
       image_names: [],
@@ -97,11 +103,57 @@ export default {
           reader.onload = (e) => {
             this.preview_list.push(e.target.result)
           }
-          this.image_list.push(input.files[index])
+          // this.image_list.push(input.files[index])
           reader.readAsDataURL(input.files[index])
           index++
         }
       }
+    },
+    async saveImages(event) {
+      const input = event.target.files[0]
+      // let count = input.files.length
+      // let index = 0
+      // if (input.files) {
+      //   while (count--) {
+      // const reader = new FileReader()
+      const formData = new FormData()
+
+      // reader.onload = (e) => {
+      //   this.preview_list.push(e.target.result)
+      // }
+      // this.image_list.push(input.files[index])
+      // reader.readAsDataURL(input)
+      // index++
+
+      formData.append('image', input)
+
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+
+        const { data } = await this.$axios.post(
+          'http://localhost:5001/api/upload',
+          formData,
+          config
+        )
+
+        this.image = data
+
+        console.log('hellooooo', this.image)
+
+        return this.image
+      } catch (error) {
+        console.log(error)
+      }
+      // reader.onload = (e) => {
+      //   this.preview_list.push(e.target.result)
+      // }
+      // this.image_list.push(input.files[index])
+      // reader.readAsDataURL(input.files[index])
+      // index++
     },
     previewImageName(event) {
       const input = event.target
@@ -113,10 +165,10 @@ export default {
       this.image = null
       this.preview = null
       this.image_list = []
-      this.preview_list = []
+      this.previewList = []
     },
     deleteGroup(index) {
-      this.preview_list.splice(index, 1)
+      this.previewList.splice(index, 1)
     },
   },
 }

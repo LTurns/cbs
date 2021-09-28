@@ -1,5 +1,5 @@
-import asyncHandler from 'express-async-handler'
-import Product from '../models/productModel.js'
+const asyncHandler = require('express-async-handler')
+const Product = require('../models/productModel.js')
 
         // product.features.forEach((obj, index) => {
     //   obj.id = features[index].id;
@@ -32,7 +32,7 @@ const getProducts = asyncHandler(async (req, res) => {
   //   .limit(pageSize)
   //   .skip(pageSize * (page - 1))
 
-  const products = await Product.find({ })
+const products = await Product.find({ })
     // .limit(pageSize)
     // .skip(pageSize * (page - 1))
 
@@ -248,12 +248,21 @@ const getTopProducts = asyncHandler(async (req, res) => {
   res.json(products)
 })
 
-export {
-  getProducts,
-  getProductById,
-  deleteProduct,
-  createProduct,
-  updateProduct,
-  createProductReview,
+module.exports = {
   getTopProducts,
+  getProductById,
+  getProducts,
+  createProduct,
+  deleteProduct, 
+  updateProduct 
 }
+
+// export {
+//   getProducts,
+//   getProductById,
+//   deleteProduct,
+//   createProduct,
+//   updateProduct,
+//   createProductReview,
+//   getTopProducts,
+// }

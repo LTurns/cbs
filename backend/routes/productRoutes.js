@@ -1,9 +1,9 @@
-import express from 'express'
-// import asyncHandler from 'express-async-handler';
+const express = require('express')
+// const asyncHandler = require('express-async-handler';
 const router = express.Router()
-// import Product from '../models/productModel.js';
-import { getProductById, getProducts, createProduct, deleteProduct, updateProduct } from '../controllers/productControllers.js';
-import { protect, admin } from '../middleware/authMiddleware.js'
+// const Product = require('../models/productModel.js';
+const { getProductById, getProducts, createProduct, deleteProduct, updateProduct } = require('../controllers/productControllers.js')
+const { protect, admin } = require('../middleware/authMiddleware.js')
 
 router.route('/').get(getProducts)
 router.route('/:id').get(getProductById)
@@ -16,4 +16,4 @@ router
   .delete(protect, admin, deleteProduct)
   .put(protect, admin, updateProduct)
 
-export default router
+module.exports = router;

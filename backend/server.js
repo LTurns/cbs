@@ -1,10 +1,12 @@
-import express from 'express'
-import cors from 'cors';
-import dotenv from 'dotenv'
-import connectDB from './config/db.js'
-import productRoutes from './routes/productRoutes.js';
-import userRoutes from './routes/userRoutes.js'
-import { notFound, errorHandler } from './middleware/errorMiddleware.js'
+const path = require('path')
+const express = require('express')
+const cors = require('cors')
+const dotenv = require('dotenv')
+const { connectDB } = require('./config/db.js')
+const productRoutes = require('./routes/productRoutes.js')
+const userRoutes = require('./routes/userRoutes.js')
+const uploadRoutes = require('./routes/uploadRoutes.js')
+const { notFound, errorHandler } = require('./middleware/errorMiddleware.js')
 
 dotenv.config()
 
@@ -20,6 +22,10 @@ app.get('/', (req, res) => {
 
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
+app.use('/api/upload', uploadRoutes)
+
+// const __dirname = path.resolve();
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 app.use(notFound)
 

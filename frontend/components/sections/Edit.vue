@@ -1,5 +1,6 @@
-/* eslint-disable vue/no-side-effects-in-computed-properties */ /*
-eslint-disable vue/no-side-effects-in-computed-properties */ /* eslint-disable
+/* eslint-disable vue/valid-v-model */ /* eslint-disable
+vue/no-side-effects-in-computed-properties */ /* eslint-disable
+vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */ /* eslint-disable
 vue/no-side-effects-in-computed-properties */ /* eslint-disable
 <template>
@@ -11,23 +12,28 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
             <h1
               class="d-inline pa-2 mt-10 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
             >
-              <input
+              <textarea
+                ref="title"
                 type="text"
-                style="
-                  width: 100%;
-                  padding: 5px;
-                  margin: 0;
-                  -webkit-box-sizing: border-box;
-                "
+                name="text"
                 :value="product.name.toUpperCase()"
+                rows="3"
+                cols="10"
+                style="
+                  overflow: hidden;
+                  word-wrap: break-word;
+                  resize: none;
+                  padding: 15px;
+                  align-self: center;
+                  min-width: 500px;
+                  max-width: 600px;
+                "
                 class="input"
+                @input="title = $event.target.value"
               />
             </h1>
             <textarea
-              id="text"
-              class="input"
               :value="product.intro"
-              name="text"
               rows="3"
               cols="10"
               style="
@@ -39,28 +45,36 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                 min-width: 500px;
                 max-width: 600px;
               "
+              @input="intro = $event.target.value"
             ></textarea
             ><br />
+            <v-btn
+              :x-large="$vuetify.breakpoint.smAndUp"
+              text
+              outlined
+              white
+              @click="save()"
+              >Save</v-btn
+            >
             <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
               Product ID
             </div>
             <div class="d-inline black white--text pa-2">
               <input
+                ref="productId"
                 type="text"
                 class="input white--text"
                 :value="product.productId"
+                @input="productId = $event.target.value"
               />
             </div>
             <br /><br />
-            <!-- <a href="#about" class="btn">Read More</a> -->
             <nuxt-link to="#" class="learn">
               <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
                 ><v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn
               ></nuxt-link
             >
-            <!-- </div> -->
-            <!-- </div> -->
           </div>
         </v-col>
 
@@ -79,47 +93,81 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
             >
               Images
             </h4>
-            <table>
-              <!-- <thead>
-                <th
-                  v-for="(heading, index) in headings"
-                  :key="heading[index]"
-                  class="table1"
-                  align-center
-                >
-                  {{ heading }}
-                </th>
-              </thead> -->
+            <div id="app" class="container">
+              <div class="row">
+                <div class="col-md-12" align="center" fill-height>
+                  <form>
+                    <div id="app" class="container">
+                      <div class="row">
+                        <div class="col-md-12" align="center" fill-height>
+                          <form>
+                            <div class="form-group">
+                              <v-btn>
+                                <input
+                                  type="file"
+                                  accept="image/*"
+                                  @change="saveImages" /></v-btn
+                              ><br /><br />
+                              <div class="border p-2 mt-3">
+                                <template v-if="product.img.length">
+                                  <div>
+                                    <table>
+                                      <thead>
+                                        <th
+                                          v-for="(heading, index) in headings"
+                                          :key="heading[index]"
+                                          class="table1"
+                                          align-center
+                                        >
+                                          {{ heading }}
+                                        </th>
+                                      </thead>
 
-              <tbody>
-                <tr v-for="item in product.img" :key="item.image">
-                  <td>
-                    <!-- <input
-                            type="text"
-                            class="form-control groupName pl-5 pr-5"
-                            :value="item.image"
-                          /> -->
-                    <img
-                      :src="`../${item.image}`"
-                      class="img-fluid"
-                      height="100px"
-                      width="auto"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      class="input"
-                      value="Add file name here"
-                    />
-                  </td>
-                  <td>
-                    <v-btn class="btn" @click="deleteGroup(index)"> X </v-btn>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <image-uploader />
+                                      <tbody>
+                                        <tr
+                                          v-for="(item, index) in product.img"
+                                          :key="item.image"
+                                        >
+                                          <td>
+                                            <img
+                                              :src="`../${item.image}`"
+                                              class="img-fluid"
+                                              width="50px"
+                                            />
+                                          </td>
+                                          <td>
+                                            <input
+                                              type="text"
+                                              class="input"
+                                              value="Add file name here"
+                                            />
+                                          </td>
+                                          <td>
+                                            <v-btn
+                                              class="btn"
+                                              @click="deleteGroup(index)"
+                                            >
+                                              X
+                                            </v-btn>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <img :src="item" class="img-fluid" />
+                                  </div>
+                                </template>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </v-col>
       </v-row>
@@ -163,23 +211,14 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                     "
                   >
                     <div
-                      v-for="paragraph in product.description"
+                      v-for="(paragraph, index) in product.description"
                       :key="paragraph.id"
                     >
                       <v-row>
                         <v-col cols="12" md="6" sm="12">
-                          <!-- <input
-                            class="black--text mt-5"
-                            type="text"
-                            style="
-                              line-height: 30px;
-                              font-size: 15px;
-                              margin-bottom: 20px;
-                            "
-                            :value="paragraph.paragraph"
-                          /> -->
                           <textarea
                             id="text"
+                            :ref="`paragraph-${index}`"
                             class="input"
                             :value="paragraph.paragraph"
                             name="text"
@@ -338,23 +377,6 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                         </tr>
                       </tbody>
                     </table>
-                    <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </h3>
-                <p>
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum. Sed ut perspiciatis unde omnis
-                  iste natus error sit voluptatem accusantium. Doloremque
-                  laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                  inventore veritatis et quasi architecto beatae vitae dicta
-                  sunt explicabo. emo enim ipsam voluptatem quia voluptas sit
-                  aspernatur aut odit aut fugit, sed quia consequuntur magni
-                  dolores eos
-                </p> -->
                   </div>
                 </v-col>
               </v-row>
@@ -383,10 +405,6 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                       "
                       v-text="video.title"
                     ></h4>
-                    <!-- <div
-                      v-for="video in product.video.split(',')"
-                      :key="video.id"
-                    > -->
                     <iframe
                       class="video"
                       style="background-color: white"
@@ -396,43 +414,33 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
                     ></iframe>
-                    <!-- </div> -->
                   </v-col>
                 </div>
               </v-card>
             </v-container>
           </v-tab-item>
-          <v-tab-item :key="5" value="more">
-            <!-- <v-carousel class="carousel" show-arrows-on-hover draggable="true">
-              <v-carousel-item
-                v-for="image in product.img"
-                :key="image.id"
-                class="align-center"
-              >
-                <v-container>
-                  <div>
-                    <v-img
-                      style="max-width: 500px; height: auto"
-                      :src="`../${image.image}`"
-                      class="mx-auto"
-                    />
-                  </div>
-                </v-container>
-              </v-carousel-item>
-            </v-carousel> -->
-          </v-tab-item>
         </v-tabs-items>
-        <!-- </v-card> -->
-        <!-- </div> -->
       </section>
     </div>
+    <v-container fill-width>
+      <v-col>
+        <div class="justify-center">
+          <nuxt-link to="#" class="learn text-center">
+            <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
+              ><v-icon left large color="primary">mdi-play</v-icon
+              >Preview</v-btn
+            ></nuxt-link
+          >
+        </div>
+      </v-col>
+    </v-container>
   </section>
 </template>
 
 <script>
-import ImageUploader from './ImageUploader.vue'
+// import ImageUploader from './ImageUploader.vue'
 export default {
-  components: { ImageUploader },
+  // components: { ImageUploader },
   props: {
     data: {
       type: Array,
@@ -446,13 +454,16 @@ export default {
     areConfig: true,
     areVideos: true,
     tutorials: '',
+    title: '',
+    intro: '',
+    productId: '',
+    images: [],
+    preview: null,
+    image: '',
+    image_list: [],
+    headings: ['image', 'name', 'Remove'],
+    image_names: [],
   }),
-  // computed: {
-  //   videos() {
-  //     // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-  //     return (this.tutorials = this.data.videos.split(' '))
-  //   },
-  // },
   methods: {
     showAccessories() {
       this.data.accesories === []
@@ -461,19 +472,137 @@ export default {
 
       return this.areAccessories
     },
+    saveDescription() {
+      this.description = []
+    },
+    async saveImages(event) {
+      const input = event.target.files[0]
+      const formData = new FormData()
+
+      formData.append('image', input)
+
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+
+        const { data } = await this.$axios.post(
+          'http://localhost:5001/api/upload',
+          formData,
+          config
+        )
+
+        this.image = data
+
+        console.log('hellooooo', this.image)
+
+        return this.image
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    save() {
+      this.title = this.$refs.title.value
+      // const product = {
+      //   name: 'his.$refs.title.value',
+      //   productId: 'this.$refs.productId.value',
+      //   description: [{ paragraph: 'This is the updated description' }],
+      //   img: [
+      //     { image: 'jetstream.jpg' },
+      //     { image: 'jetstream/jet-stream-2.jpeg' },
+      //   ],
+      //   mainImg: 'jetstream.jpg',
+      //   category: 'Fibre Blowing',
+      //   subCategory: [],
+      //   features: [
+      //     {
+      //       id: 1,
+      //       heading: 'Main Features:',
+      //       list: [
+      //         { listItem: 'Automatic Cable Centralisation' },
+      //         { listItem: 'Synchronous high grip profiled drive belts' },
+      //       ],
+      //     },
+      //     {
+      //       id: 2,
+      //       heading: 'Specifications:',
+      //       list: [
+      //         { listItem: 'Cable Range: 4-20mm' },
+      //         { listItem: 'Duct Range: 12-50mm' },
+      //         {
+      //           listItem: 'Cable Speed (Adjustable): (0-85m/min) (0-280 ft/min)',
+      //         },
+      //         { listItem: 'Max Air Pressure: 15 Bar (215 psi)' },
+      //       ],
+      //     },
+      //   ],
+      //   intro: this.$refs.intro.value,
+      //   videos: [
+      //     {
+      //       title: 'JetStream Basic set-up',
+      //       video: '../jetstream/videos/cbs-basic-setup.mp4',
+      //     },
+      //     {
+      //       title: 'Replacing the drive belts',
+      //       video: '../jetstream/videos/belt-replacement.mp4',
+      //     },
+      //   ],
+      //   configurationTitle: 'JETSTREAM Configuration',
+      //   configurationIntro: [
+      //     {
+      //       paragraph:
+      //         'In order to configure your JetStream to your application, we ask that you pick one of each from the list below:',
+      //     },
+      //     {
+      //       paragraph:
+      //         'The cable collet assembly (A), the duct clamp and seal collets (B) and cable seals (C).',
+      //     },
+      //   ],
+      //   configurationImage: '../jetstream/jetstream-configuration.jpeg',
+      //   tables: [
+      //     {
+      //       columns: ['Item Description', 'Part No'],
+      //       image: '',
+      //       title: 'A) Cable Collet Assembly',
+      //       items: [
+      //         {
+      //           'Item Description': 'yo',
+      //           'Part No': 'C-1900-C-0406',
+      //         },
+      //         {
+      //           'Item Description': 'yo',
+      //           'Part No': 'C-1900-C-0609',
+      //         },
+      //         {
+      //           'Item Description': 'yo',
+      //           'Part No': 'C-1900-C-0912',
+      //         },
+      //         {
+      //           'Item Description': 'yo',
+      //           'Part No': 'C-1900-C-1216',
+      //         },
+      //         {
+      //           'Item Description': '16-20mm',
+      //           'Part No': 'C-1900-C-1620',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   countInStock: 10,
+      //   accessories: [],
+      // }
+
+      console.log('this is the title', this.title)
+
+      // return product.intro
+    },
   },
 }
 </script>
 
 <style>
-/* .carousel {
-  height: '70vh';
-} */
-
-/* .column2 {
-  background: rgb(236, 229, 229);
-} */
-
 .input:focus {
   outline: none !important;
   border: 1px solid yellow;
