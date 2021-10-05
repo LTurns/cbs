@@ -77,6 +77,7 @@ const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
     user: req.user._id,
     name: 'Sample name',
+    id: '1',
     productId: '',
     description: [
       {
@@ -130,9 +131,22 @@ const createProduct = asyncHandler(async (req, res) => {
       }
     ],
     countInStock: 100,
+    enquiries: 0,
     accessories: [
       {
       name: 'Product Accessory',
+      id: '1',
+      category: 'Product Category',
+      subCategory: 'P SubCat',
+      productId: 'id',
+      intro: 'product intro',
+      mainImg: 'mainImg'
+      }
+    ],
+    recommendedProducts: [
+      {
+      name: 'Product Accessory',
+      id: '1',
       category: 'Product Category',
       subCategory: 'P SubCat',
       productId: 'id',
@@ -153,7 +167,7 @@ const updateProduct = asyncHandler(async (req, res) => {
   const {
     name,
     productId,
-    images,
+    img,
     mainImg,
     category,
     subCategory,
@@ -167,7 +181,11 @@ const updateProduct = asyncHandler(async (req, res) => {
     tables,
     accessories,
     countInStock,
+    recommendedProducts
   } = req.body
+
+  console.log('heyyyy', req.body)
+  console.log('heyyyyy', req.body.images)
 
   const product = await Product.findById(req.params.id)
 
@@ -182,19 +200,19 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.configurationTitle = configurationTitle
     product.configurationImage = configurationImage
     product.configurationIntro = configurationIntro
-    product.countInStock = countInStock
     product.description = description
     product.features = features
-    product.img = images
+    product.img = img
     product.videos = videos
     product.accessoris = accessories
+    product.recommendedProducts = recommendedProducts,
     product.countInStock = countInStock
 
     const updatedProduct = await product.save()
     res.json(updatedProduct)
   } else {
     res.status(404)
-    throw new Error('Product not found')
+    console.log(Error)
   }
 })
 

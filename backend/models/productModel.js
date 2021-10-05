@@ -11,6 +11,10 @@ const productSchema = mongoose.Schema(
      type: String,
      required: true,
    },
+   id: {
+    type: String,
+    required: true,
+   },
    productId: {
     type: String
    },
@@ -102,7 +106,7 @@ const productSchema = mongoose.Schema(
         "Item Description": {
          type: String
         },
-        "partNo": {
+        "Part No": {
           type: String
          },
        }
@@ -115,6 +119,10 @@ const productSchema = mongoose.Schema(
       default: 0,
     },
   accessories: [{
+    id: {
+      type: String,
+      required: true
+    },
    name: {
     type: String,
    },
@@ -135,10 +143,38 @@ const productSchema = mongoose.Schema(
    }
   }
   ],
+  recommendedProducts: [{
+    id: {
+      type: String,
+      required: true
+    },
+    name: {
+     type: String,
+    },
+    category: {
+     type: String,
+    },
+    subCategory: {
+     type: String,
+    },
+    productId: {
+     type: String,
+    },
+    intro: {
+     type: String
+    },
+    mainImg: {
+     type: String
+    }
+   }
+   ],
+   enquiries: {
+    type: Number
+  }
 },
  {
    timestamps: true,
- }
+ },
 )
 const Product = mongoose.model('Product', productSchema)
 

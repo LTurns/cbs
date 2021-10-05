@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <SectionsEdit :data="item" />
-  </div>
+  <div><SectionsEdit v-if="id" :id="id" /></div>
 </template>
 
 <script>
@@ -9,24 +7,10 @@
 
 export default {
   transition: 'productid',
-  // async fetch() {
-  //   this.listLoading = true
-  //   try {
-  //     const response = await axios.get(
-  //       `http://localhost:5001/api/products/${this.$route.params.productId}`,
-  //       {}
-  //     )
-  //     this.item = response.data
-  //     console.log('heyyyyyyyy', this.item)
-  //     return this.item
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // },
   data() {
     return {
       id: this.$route.params.id,
-      item: [],
+      item: null,
     }
   },
   created() {
@@ -45,7 +29,9 @@ export default {
           `http://localhost:5001/api/products/${this.$route.params.id}`,
           config
         )
+
         this.item.push(response.data)
+        // this.item.push(response.data)
         return this.item
       } catch (error) {
         console.log(error)

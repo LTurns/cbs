@@ -67,9 +67,7 @@
                         </td>
 
                         <td>
-                          <nuxt-link :to="`/edit/${item._id}`">
-                            Edit
-                          </nuxt-link>
+                          <nuxt-link :to="`/edit/${item.id}`"> Edit </nuxt-link>
                         </td>
                         <td>
                           <div class="text-center">
@@ -151,6 +149,7 @@ export default {
           icon: 'mdi-account',
         },
       ],
+      id: '',
       filteredList: [],
       dialog: false,
       categories: ['Fibre Blowing', 'Klein Tools', 'Utilities', 'Telecoms'],
@@ -178,11 +177,29 @@ export default {
         },
       }
       try {
-        await this.$axios.post(
+        const { data } = await this.$axios.post(
           'http://localhost:5001/api/products/',
           this.$auth.user,
           config
         )
+
+        this.id = data._id
+
+        const request = {
+          id: this.id,
+        }
+
+        try {
+          await this.$axios.put(
+            `http://localhost:5001/api/products/${this.item[0]._id}`,
+            request,
+            config
+          )
+          // this.getAllMusics()
+        } catch (err) {
+          throw new Error('Error updating product')
+        }
+
         this.getAllMusics()
       } catch (err) {
         throw new Error('Error adding product')

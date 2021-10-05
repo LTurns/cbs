@@ -3,6 +3,7 @@ const products = [
   "user" : "",
   "name": "Tornado Plus",
   "productId":"C-1250-08",
+  "id": '1',
   "description": [
     { "paragraph": "The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation." },
     { "paragraph": "The system installs fibre optic cable of 6mm (0.25”) to 32mm (1.25”) overall diameter, at speeds up to 90m/min (300ft/min), into pre-installed ducts. The system operates on the viscous drag principle employing compressed air to install the cable, controlled and assisted by the belt drive system. The cable is propelled by compressed air, fed into the duct via a venturi principle, while the hydraulically powered belt drive system controls the fibre optic cable."},
@@ -360,6 +361,7 @@ const products = [
     "accessories": [
       {
         "name": "Tube Blowing Conversion Kits",
+        "id": "3",
         "category" : "Fibre Blowing",
         "subCategory" : "",
         "productId": "C-1250-08",
@@ -397,12 +399,45 @@ const products = [
       "intro": "The CBS C-1240-F Cable Floating Water Pump has been designed to work in conjunction with the C-1250 Tornado to install fibre cables using water instead of air.",
       "mainImg": "../tornado/tornado_accessory_4.jpeg"
    }
-    ]
+    ],
+    "recommendedProducts": [
+      {
+        "name": "Tube Blowing Conversion Kits",
+        "category" : "Fibre Blowing",
+        "id": "1",
+        "subCategory" : "",
+        "productId": "C-1250-08",
+        "intro": "The tube blowing conversion kits are initially used to convert an existing Tornado Cable Blowing Machine into a Tube Blowing Machine for installing micro tubes into ducts.",
+        "mainImg": "../tornado/tornado_accessory_1.png"
+     },
+     {
+        "name": "Compressed Air Cooler",
+        "color": "white",
+        "id": "1",
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
+        "productId": "C-1250-08",
+        "intro": "The Compressor Aftercooler has been designed to cool compressed air and remove water droplets prior to entering a CBS Tornado Cable Blowing Machine.",
+        "mainImg": "../tornado/tornado_accessory_2.jpeg"
+     },
+     {
+        "name": "Hydraulic Power Pack",
+        "color": "white",
+        "id": "15",
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
+        "productId": "C-1203-F",
+        "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
+        "mainImg": "../tornado/tornado_accessory_3.jpeg"
+     }
+    ],
+    "enquiries": 0,
   },
   {
     "user" : "",
     "name": "JetStream Cable Blowing Machine",
     "productId":"C-1900",
+    "id": '2',
     "description": [
       { "paragraph": "The C-1900 has been designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive. The profiled double drive belt system is driven by single 32cc hydraulic motor, powered by the proven C-1203-F power pack." },
       { "paragraph": "The electronic monitoring system provides read-out of speed and distance, gives protection against duct obstructions and includes emergency stop facility. The C-1900 is adjustable to suit a wide range of cable diameters 4-20mm, and duct diameters 12-50mm o/d."}],
@@ -682,13 +717,44 @@ const products = [
         {
           "name": "Hydraulic Power Pack",
           "category" : "Fibre Blowing",
+          "id": "1",
           "subCategory" : "",
           "productId": "C-1203-F",
           "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
           "mainImg": "../tornado/tornado_accessory_3.jpeg"
        }
-      ]
-    }
+      ],
+      "recommendedProducts": [
+        {
+          "name": "Hydraulic Power Pack",
+          "category" : "Fibre Blowing",
+          "id": "1",
+          "subCategory" : "",
+          "productId": "C-1203-F",
+          "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
+          "mainImg": "../tornado/tornado_accessory_3.jpeg"
+       },
+       {
+        "name": "Hydraulic Power Pack",
+        "category" : "Fibre Blowing",
+        "subCategory" : "",
+        "id": "1",
+        "productId": "C-1203-F",
+        "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
+        "mainImg": "../tornado/tornado_accessory_3.jpeg"
+     },
+     {
+      "name": "Hydraulic Power Pack",
+      "category" : "Fibre Blowing",
+      "subCategory" : "",
+      "id": "1",
+      "productId": "C-1203-F",
+      "intro": "A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.",
+      "mainImg": "../tornado/tornado_accessory_3.jpeg"
+   }
+      ],
+      "enquiries": 0
+    },
 ]
 
-export default products;
+module.exports = products;

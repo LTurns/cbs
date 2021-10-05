@@ -4,7 +4,7 @@ const products = require('./data/productstest.js')
 const users = require('./data/users.js')
 const User = require('./models/userModel.js')
 const Product = require('./models/productModel.js')
-const connectDB = require('./config/db.js')
+const { connectDB } = require('./config/db.js')
 
 dotenv.config()
 

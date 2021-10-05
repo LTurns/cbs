@@ -1,26 +1,15 @@
-/* eslint-disable vue/valid-v-model */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
 <template>
   <section>
-    <div v-for="product in data" :key="product.productId">
+    <div v-for="(product, index) in item" :key="product.productId">
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
-            <h1
-              class="d-inline pa-2 mt-10 text-md-h2 text-sm-h3 text-h4 font-weight-black text-center"
-            >
+            <h1>
               <textarea
-                ref="title"
-                type="text"
-                name="text"
-                :value="product.name.toUpperCase()"
-                rows="3"
-                cols="10"
+                :value="title.toUpperCase()"
+                cols="12"
+                rows="2"
                 style="
-                  overflow: hidden;
                   word-wrap: break-word;
                   resize: none;
                   padding: 15px;
@@ -32,30 +21,23 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                 @input="title = $event.target.value"
               />
             </h1>
+
             <textarea
-              :value="product.intro"
+              :value="intro"
               rows="3"
-              cols="10"
+              cols="12"
               style="
                 overflow: hidden;
                 word-wrap: break-word;
                 resize: none;
                 padding: 15px;
-                align-self: center;
                 min-width: 500px;
                 max-width: 600px;
               "
+              class="input"
               @input="intro = $event.target.value"
             ></textarea
             ><br />
-            <v-btn
-              :x-large="$vuetify.breakpoint.smAndUp"
-              text
-              outlined
-              white
-              @click="save()"
-              >Save</v-btn
-            >
             <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
               Product ID
             </div>
@@ -64,7 +46,7 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
                 ref="productId"
                 type="text"
                 class="input white--text"
-                :value="product.productId"
+                :value="productId"
                 @input="productId = $event.target.value"
               />
             </div>
@@ -79,12 +61,127 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
         </v-col>
 
         <v-col cols="12" md="6" sm="12">
-          <div
-            class="column2 mr-5"
-            :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
+          <v-row
+            justify="center"
+            class="mx-auto pb-5"
+            style="max-width: 1200px"
+            mb="10"
           >
+            <v-col
+              v-for="(plan, index) in item"
+              :key="`plan-${index}`"
+              cols="12"
+              md="12"
+            >
+              <v-hover v-slot="{ hover }" class="card">
+                <v-card
+                  :elevation="hover ? 24 : 4"
+                  :color="plan.color"
+                  max-width="500"
+                  height="750"
+                  :class="hover ? 'zoom' : 'notzoom'"
+                  class="mx-auto transition-swing"
+                >
+                  <h4
+                    class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                    style="letter-spacing: 0.15em; font-size: 20px"
+                  >
+                    <textarea
+                      :value="title.toUpperCase()"
+                      cols="12"
+                      rows="2"
+                      style="
+                        word-wrap: break-word;
+                        resize: none;
+                        padding: 15px;
+                        text-align: center;
+                        max-width: 400px;
+                        min-width: 330px;
+                      "
+                      class="input"
+                      @input="title = $event.target.value"
+                    />
+                  </h4>
+
+                  <v-btn
+                    align="center"
+                    justify="center"
+                    style="
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 80%;
+                    "
+                  >
+                    <input
+                      justify="center"
+                      type="file"
+                      accept="image/*"
+                      @change="saveMainImage" /></v-btn
+                  ><br /><br />
+                  <v-img
+                    :src="mainImg"
+                    alt=""
+                    width="250"
+                    :lazy-src="mainImg"
+                    aspect-ratio="1"
+                    class="image grey lighten-2 rounded-lg mt-5 mb-10"
+                  ></v-img>
+                  <v-card-text
+                    class="subtitle-1 black--text mb-10"
+                    style="text-align: center"
+                  >
+                    <textarea
+                      :value="intro"
+                      cols="12"
+                      rows="4"
+                      style="
+                        max-width: 750px;
+                        text-align: center;
+                        min-width: 440px;
+                        overflow: hidden;
+                        word-wrap: break-word;
+                        resize: none;
+                        padding: 10px;
+                      "
+                      class="input"
+                      @input="intro = $event.target.value"
+                    />
+                  </v-card-text>
+                  <div
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      margin-top: 10%;
+                      left: 35%;
+                    "
+                  >
+                    <div v-if="plan.subCategory.length === 0">
+                      <nuxt-link class="link" :to="`/product/${plan._id}`">
+                        <v-btn
+                          :x-large="$vuetify.breakpoint.smAndUp"
+                          text
+                          class="my-3"
+                          outlined
+                          black
+                          ><v-icon left large color="primary">mdi-play</v-icon
+                          >View</v-btn
+                        >
+                      </nuxt-link>
+                    </div>
+                  </div>
+                </v-card></v-hover
+              >
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col cols="12" md="6" sm="12">
+          <div class="column2 mr-5 ml-5">
             <h4
-              class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+              class="text-uppercase text-center mb-3 pl-2 pr-2 pb-5"
               style="
                 letter-spacing: 0.15em;
                 border-bottom: 2px solid #fde36d;
@@ -93,368 +190,753 @@ vue/no-side-effects-in-computed-properties */ /* eslint-disable
             >
               Images
             </h4>
-            <div id="app" class="container">
-              <div class="row">
-                <div class="col-md-12" align="center" fill-height>
-                  <form>
-                    <div id="app" class="container">
-                      <div class="row">
-                        <div class="col-md-12" align="center" fill-height>
-                          <form>
-                            <div class="form-group">
-                              <v-btn>
-                                <input
-                                  type="file"
-                                  accept="image/*"
-                                  @change="saveImages" /></v-btn
-                              ><br /><br />
-                              <div class="border p-2 mt-3">
-                                <template v-if="product.img.length">
-                                  <div>
-                                    <table>
-                                      <thead>
-                                        <th
-                                          v-for="(heading, index) in headings"
-                                          :key="heading[index]"
-                                          class="table1"
-                                          align-center
-                                        >
-                                          {{ heading }}
-                                        </th>
-                                      </thead>
+            <form align="center">
+              <!-- <div class="form-group"> -->
+              <v-btn>
+                <input
+                  type="file"
+                  accept="image/*"
+                  @change="saveImages" /></v-btn
+              ><br /><br />
+              <div>
+                <table>
+                  <thead>
+                    <th
+                      v-for="(heading, index) in headings"
+                      :key="heading[index]"
+                      align-center
+                    >
+                      {{ heading }}
+                    </th>
+                  </thead>
 
-                                      <tbody>
-                                        <tr
-                                          v-for="(item, index) in product.img"
-                                          :key="item.image"
-                                        >
-                                          <td>
-                                            <img
-                                              :src="`../${item.image}`"
-                                              class="img-fluid"
-                                              width="50px"
-                                            />
-                                          </td>
-                                          <td>
-                                            <input
-                                              type="text"
-                                              class="input"
-                                              value="Add file name here"
-                                            />
-                                          </td>
-                                          <td>
-                                            <v-btn
-                                              class="btn"
-                                              @click="deleteGroup(index)"
-                                            >
-                                              X
-                                            </v-btn>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <img :src="item" class="img-fluid" />
-                                  </div>
-                                </template>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-group"></div>
-                  </form>
-                </div>
+                  <tbody>
+                    <tr v-for="(item, index) in images" :key="item.image">
+                      <td>
+                        <img
+                          :src="item.image"
+                          class="img-fluid"
+                          height="50px"
+                          width="auto"
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          class="input"
+                          value="Add file name here"
+                        />
+                      </td>
+                      <td>
+                        <v-btn
+                          class="btn orange lighten-2"
+                          dark
+                          @click="deleteImage(index)"
+                        >
+                          X
+                        </v-btn>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div>
+            </form>
           </div>
+        </v-col>
+
+        <v-col cols="12" md="6" sm="12">
+          <v-carousel
+            class="carousel"
+            show-arrows-on-hover
+            hide-delimiter-background
+            draggable="true"
+            light
+            cycle
+          >
+            <v-carousel-item
+              v-for="img in images"
+              :key="img.id"
+              style="
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 55%;
+              "
+            >
+              <v-img :src="img.image" :lazy-src="img.image" />
+            </v-carousel-item>
+          </v-carousel>
         </v-col>
       </v-row>
 
-      <!-- Large Text -->
-      <section id="about" class="section-large-text">
-        <!-- <div class="overlay"> -->
-        <v-tabs v-model="tab" black--text center light class="">
-          <v-tabs-slider></v-tabs-slider>
+      <v-row>
+        <v-col cols="12" md="12" sm="12">
+          <div id="about" class="section-large-text">
+            <v-tabs v-model="tab" black--text center light class="">
+              <v-tabs-slider></v-tabs-slider>
 
-          <v-tab href="#features" class="ml-20"> Features </v-tab>
-          <!-- <v-tab href="#more"> Images </v-tab> -->
-          <v-tab v-show="product.accessories.length != 0" href="#accessories">
-            Accessories</v-tab
-          >
-          <v-tab v-show="product.tables.length != 0" href="#config">
-            Configuration
-          </v-tab>
-          <v-tab v-show="product.videos.length > 0" href="#video">
-            Video Tutorials
-          </v-tab>
-        </v-tabs>
+              <v-tab href="#features" class="ml-20"> Features </v-tab>
+              <v-tab
+                v-show="product.accessories.length != 0"
+                href="#accessories"
+              >
+                Accessories</v-tab
+              >
+              <v-tab v-show="product.tables.length != 0" href="#config">
+                Configuration
+              </v-tab>
+              <v-tab v-show="product.videos.length > 0" href="#video">
+                Video Tutorials
+              </v-tab>
+            </v-tabs>
 
-        <v-tabs-items v-model="tab">
-          <v-tab-item :key="1" value="features">
-            <v-container
-              fluid
-              mt="10"
-              :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
-            >
-              <v-row class="mx-auto mb-7 mt-3">
-                <v-col cols="12" md="12" sm="12">
-                  <div
-                    :class="
-                      $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                    "
-                    style="
-                      line-height: 30px;
-                      font-size: 15px;
-                      margin-bottom: 20px;
-                    "
-                  >
-                    <div
-                      v-for="(paragraph, index) in product.description"
-                      :key="paragraph.id"
+            <v-tabs-items v-model="tab">
+              <v-tab-item :key="1" value="features">
+                <v-container
+                  fluid
+                  mt="10"
+                  :class="
+                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                  "
+                >
+                  <v-row class="mx-auto mb-7 mt-3">
+                    <v-col cols="12" md="12" sm="12">
+                      <div
+                        :class="
+                          $vuetify.theme.dark
+                            ? 'grey darken-4'
+                            : 'grey lighten-4'
+                        "
+                        style="
+                          line-height: 30px;
+                          font-size: 15px;
+                          margin-bottom: 20px;
+                        "
+                      >
+                        <div
+                          v-for="(paragraph, index) in description"
+                          :key="paragraph.id"
+                        >
+                          <v-row>
+                            <v-col cols="12" md="6" sm="12">
+                              <textarea
+                                id="text"
+                                :ref="`paragraph-${index}`"
+                                class="input"
+                                :value="paragraph.paragraph"
+                                name="text"
+                                rows="4"
+                                cols="12"
+                                style="
+                                  overflow: hidden;
+                                  word-wrap: break-word;
+                                  resize: none;
+                                  padding: 15px;
+                                  align-self: center;
+                                  width: 1000px;
+                                "
+                                @input="
+                                  description[index] = $event.target.value
+                                "
+                              ></textarea>
+                            </v-col>
+                          </v-row>
+                        </div>
+                      </div>
+                    </v-col>
+                    <v-col
+                      v-for="(feature, index) in features"
+                      :key="feature[index]"
+                      cols="12"
+                      md="6"
                     >
-                      <v-row>
-                        <v-col cols="12" md="6" sm="12">
-                          <textarea
-                            id="text"
-                            :ref="`paragraph-${index}`"
-                            class="input"
-                            :value="paragraph.paragraph"
-                            name="text"
-                            rows="4"
-                            cols="12"
+                      <v-card
+                        id="feature-card"
+                        class="mx-auto transition-swing"
+                        :elevation="hover ? 24 : 6"
+                      >
+                        <h4
+                          class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                          style="
+                            letter-spacing: 0.15em;
+                            border-bottom: 2px solid #fde36d;
+                            box-shadow: 0 4px 6px -6px;
+                          "
+                        >
+                          <input
+                            :value="feature.heading.toUpperCase()"
                             style="
                               overflow: hidden;
                               word-wrap: break-word;
                               resize: none;
                               padding: 15px;
                               align-self: center;
-                              width: 1000px;
+                              min-width: 500px;
+                              max-width: 600px;
                             "
-                          ></textarea>
-                        </v-col>
-                      </v-row>
-                    </div>
-                  </div>
-                </v-col>
-                <v-col
-                  v-for="feature in product.features"
-                  :key="feature.id"
-                  cols="12"
-                  md="6"
+                            class="input"
+                            @input="
+                              features[index].heading = $event.target.value
+                            "
+                          />
+                        </h4>
+                        <table>
+                          <tbody>
+                            <tr
+                              v-for="(item, i) in feature.list"
+                              :key="item.listItem"
+                            >
+                              <td>
+                                <textarea
+                                  class="input"
+                                  type="text"
+                                  style="
+                                    overflow: hidden;
+                                    padding: 15px;
+                                    word-wrap: break-word;
+                                    resize: none;
+                                    min-width: 350px;
+                                  "
+                                  :value="item.listItem"
+                                  @click="item.listItem = $event.target.value"
+                                />
+                              </td>
+                              <td>
+                                <v-btn
+                                  color="orange lighten-2"
+                                  dark
+                                  class="btn"
+                                  @click="deleteFeature(index, i)"
+                                >
+                                  X
+                                </v-btn>
+                              </td>
+                            </tr>
+                            <td>
+                              <v-btn
+                                class="btn btn-info float-right mt-20"
+                                @click="addFeature(index)"
+                              >
+                                +
+                              </v-btn>
+                            </td>
+                          </tbody>
+                        </table>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-tab-item>
+
+              <!-- Accessories  -->
+
+              <v-tab-item :key="2" value="accessories">
+                <v-card
+                  flat
+                  :class="
+                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                  "
                 >
-                  <v-card
-                    id="feature-card"
-                    class="mx-auto transition-swing"
-                    :elevation="hover ? 24 : 6"
-                  >
-                    <v-list-item-content>
-                      <!-- <v-toolbar color="yellow" light> -->
-                      <h4
-                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                        style="
-                          letter-spacing: 0.15em;
-                          border-bottom: 2px solid #fde36d;
-                          box-shadow: 0 4px 6px -6px;
-                        "
-                        v-text="feature.heading"
-                      ></h4>
-                      <!-- </v-toolbar> -->
-                      <v-list-item
-                        v-for="item in feature.list"
-                        :key="item.listItem"
-                        class="list pt-0"
-                      >
-                        <input type="text" :value="item.listItem" />
-                        <!-- {{ item.listItem }} -->
-                      </v-list-item>
-                    </v-list-item-content>
-                  </v-card>
-                  <!-- </v-hover> -->
-                  <!-- <v-card-text>Features</v-card-text> -->
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-tab-item>
-          <v-tab-item :key="2" value="accessories">
-            <v-card flat>
-              <SectionsFeaturedProducts :data="product.accessories" />
-            </v-card>
-          </v-tab-item>
-          <v-tab-item
-            :key="3"
-            value="config"
-            :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
-          >
-            <v-card-text
-              class="black--text pb-10"
-              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
-            >
-              <div
-                v-for="paragraph in product.configurationIntro"
-                :key="paragraph.id"
+                  <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
+                    <v-col
+                      v-for="(plan, index) in accessories"
+                      :key="`plan-${index}`"
+                      cols="12"
+                      md="4"
+                    >
+                      <v-hover v-slot="{ hover }" class="card">
+                        <v-card
+                          :elevation="hover ? 24 : 4"
+                          :color="plan.color"
+                          max-width="500"
+                          height="700"
+                          :class="hover ? 'zoom' : 'notzoom'"
+                          class="mx-auto transition-swing"
+                        >
+                          <h4
+                            class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                            style="letter-spacing: 0.15em; font-size: 20px"
+                          >
+                            <textarea
+                              :value="plan.name.toUpperCase()"
+                              cols="12"
+                              rows="2"
+                              style="
+                                word-wrap: break-word;
+                                resize: none;
+                                padding: 15px;
+                                text-align: center;
+                                max-width: 400px;
+                                min-width: 330px;
+                              "
+                              class="input"
+                              @input="
+                                accessories[index].name = $event.target.value
+                              "
+                            />
+                          </h4>
+                          <v-btn
+                            align="center"
+                            style="
+                              display: block;
+                              margin-left: auto;
+                              margin-right: auto;
+                              width: 80%;
+                            "
+                          >
+                            <input
+                              type="file"
+                              accept="image/*"
+                              @change="
+                                saveAccessoryImage($event, index)
+                              " /></v-btn
+                          ><br /><br />
+                          <v-img
+                            :src="plan.mainImg"
+                            alt=""
+                            width="250"
+                            :lazy-src="plan.mainImg"
+                            aspect-ratio="1"
+                            class="image grey lighten-2 rounded-lg mt-5 mb-10"
+                          ></v-img>
+                          <v-card-text class="subtitle-1 black--text mb-10">
+                            <textarea
+                              :value="plan.intro"
+                              cols="12"
+                              rows="4"
+                              style="
+                                max-width: 400px;
+                                min-width: 330px;
+                                overflow: hidden;
+                                word-wrap: break-word;
+                                resize: none;
+                                padding: 10px;
+                              "
+                              class="input"
+                              @input="
+                                accessories[index].intro = $event.target.value
+                              "
+                            />
+                          </v-card-text>
+                          <div
+                            style="
+                              position: absolute;
+                              bottom: 0;
+                              margin-top: 10%;
+                              left: 35%;
+                            "
+                          >
+                            <div v-if="plan.subCategory.length === 0">
+                              <nuxt-link
+                                class="link"
+                                :to="`/product/${plan.id}`"
+                              >
+                                <v-btn
+                                  :x-large="$vuetify.breakpoint.smAndUp"
+                                  text
+                                  class="my-3"
+                                  outlined
+                                  black
+                                  ><v-icon left large color="primary"
+                                    >mdi-play</v-icon
+                                  >View</v-btn
+                                >
+                              </nuxt-link>
+                            </div>
+                          </div>
+                        </v-card>
+                      </v-hover>
+                    </v-col>
+                  </v-row>
+                </v-card>
+              </v-tab-item>
+
+              <v-tab-item
+                :key="3"
+                value="config"
+                :class="
+                  $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                "
               >
-                <input
-                  class="black--text mt-5"
-                  type="text"
+                <v-card-text
+                  class="black--text pb-10"
                   style="
                     line-height: 30px;
                     font-size: 15px;
                     margin-bottom: 20px;
                   "
-                  :value="paragraph.paragraph"
-                />
-              </div>
-            </v-card-text>
-            <v-card
-              min-height="600"
-              class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-10"
-              :elevation="hover ? 24 : 6"
-            >
-              <!-- <h4
-              class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
-              style="letter-spacing: 0.15em"
-              v-text="data.configurationTitle"
-            ></h4> -->
-              <!-- <v-img
-              max-height="800"
-              :src="`/${data.configImage}`"
-              max-width="700"
-              class="mx-auto mt-10"
-              :lazy-src="`/${data.configImage}`"
-            /> -->
-              <v-row
-                v-for="table in product.tables"
-                :key="table.id"
-                no-gutters
-                class="flex-row mr-4 ml-4"
-              >
-                <v-col cols="12" md="12" align-self="center">
-                  <h4
-                    class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                    style="
-                      letter-spacing: 0.15em;
-                      border-bottom: 2px solid #fde36d;
-                      box-shadow: 0 4px 6px -6px;
-                    "
-                    v-text="table.title"
-                  ></h4>
-                </v-col>
-                <v-col cols="12" md="4" align-self="center">
-                  <v-img
-                    max-height="500"
-                    :src="`/${table.image}`"
-                    max-width="300"
-                    class="mx-auto"
-                    :lazy-src="`/${table.image}`"
+                >
+                  <div
+                    v-for="(paragraph, index) in configurationIntro"
+                    :key="paragraph[index]"
                   >
-                  </v-img>
-                </v-col>
-                <v-col cols="12" md="8" align-self="center" class="mt-5 mb-5">
-                  <div class="white--text">
+                    <textarea
+                      id="text"
+                      :ref="`paragraph-${index}`"
+                      class="input"
+                      :value="paragraph.paragraph"
+                      name="text"
+                      rows="2"
+                      cols="12"
+                      style="
+                        overflow: hidden;
+                        word-wrap: break-word;
+                        resize: none;
+                        padding: 15px;
+                        align-self: center;
+                        width: 1000px;
+                      "
+                      @input="configurationIntro[index] = $event.target.value"
+                    ></textarea>
+                  </div>
+                </v-card-text>
+                <v-card
+                  min-height="600"
+                  class="mx-auto transition-swing"
+                  :elevation="hover ? 24 : 6"
+                >
+                  <v-row
+                    v-for="(table, tableIndex) in tables"
+                    :key="table[tableIndex]"
+                  >
                     <table>
                       <thead>
-                        <tr>
-                          <th
-                            v-for="(column, index) in table.columns"
-                            :key="index"
-                          >
-                            {{ column }}
-                          </th>
-                          <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
-                        </tr>
+                        <th
+                          v-for="(heading, index) in configHeadings"
+                          :key="heading[index]"
+                          align-center
+                        >
+                          {{ heading }}
+                        </th>
                       </thead>
+
                       <tbody>
-                        <tr v-for="(item, index) in table.items" :key="index">
-                          <td
-                            v-for="(column, columnIndex) in table.columns"
-                            :key="columnIndex"
-                            class="black--text"
-                          >
-                            {{ item[column] }}
+                        <tr>
+                          <td>
+                            <input
+                              :value="table.title.toUpperCase()"
+                              cols="12"
+                              rows="1"
+                              style="
+                                word-wrap: break-word;
+                                resize: none;
+                                padding: 15px;
+                                align-self: center;
+                                margin: 10px;
+                              "
+                              class="input"
+                              @input="
+                                tables[tableIndex].title = $event.target.value
+                              "
+                            />
+                          </td>
+                          <td>
+                            <!-- <form align="center"> -->
+                            <!-- <div class="form-group"> -->
+                            <v-btn>
+                              <input
+                                type="file"
+                                accept="image/*"
+                                @change="
+                                  saveConfigImage($event, tableIndex)
+                                " /></v-btn
+                            ><br /><br />
+                            <!-- <template v-if="images.length"> -->
+                            <!-- <div> -->
+                            <table>
+                              <tbody>
+                                <td>
+                                  <v-img
+                                    max-height="50"
+                                    :src="table.image"
+                                    max-width="30"
+                                  >
+                                  </v-img>
+                                </td>
+                                <td>
+                                  <v-btn
+                                    class="btn"
+                                    @click="deleteConfigImage(tableIndex)"
+                                  >
+                                    X
+                                  </v-btn>
+                                </td>
+                              </tbody>
+                            </table>
+                            <!-- </div>
+                          </template> -->
+                            <!-- </form> -->
+                          </td>
+                          <td>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Item Description</th>
+                                  <th>Part No</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr
+                                  v-for="(item, i) in table.items"
+                                  :key="item[i]"
+                                >
+                                  <td>
+                                    <input
+                                      :value="item['Item Description']"
+                                      cols="12"
+                                      rows="1"
+                                      style="align-self: center"
+                                      class="input"
+                                      @input="
+                                        tables[tableIndex].items[i][
+                                          'Item Description'
+                                        ] = $event.target.value
+                                      "
+                                    />
+                                  </td>
+                                  <td>
+                                    <input
+                                      :value="item['Part No']"
+                                      cols="12"
+                                      rows="1"
+                                      style="align-self: center"
+                                      class="input"
+                                      @input="
+                                        tables[tableIndex].items[i]['Part No'] =
+                                          $event.target.value
+                                      "
+                                    />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td>
+                            <v-btn
+                              class="btn"
+                              @click="deleteConfigTable(index)"
+                            >
+                              X
+                            </v-btn>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-tab-item>
-          <v-tab-item :key="4" value="video">
-            <v-container
-              fluid
-              mt="10"
-              :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
+                  </v-row>
+                </v-card>
+              </v-tab-item>
+              <v-tab-item :key="4" value="video">
+                <v-container
+                  fluid
+                  mt="10"
+                  :class="
+                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                  "
+                >
+                  <v-card
+                    flat
+                    :class="
+                      $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                    "
+                  >
+                    <form align="center">
+                      <!-- <div class="form-group"> -->
+                      <!-- <v-btn> -->
+                      <input
+                        type="text"
+                        placeholder="Add YouTube Link Here"
+                        class="input mt-10"
+                        @change="saveVideos"
+                      /><br /><br />
+                      <template v-if="videos.length">
+                        <div>
+                          <table>
+                            <thead>
+                              <th
+                                v-for="(heading, index) in vidHeadings"
+                                :key="heading[index]"
+                                align-center
+                              >
+                                {{ heading }}
+                              </th>
+                            </thead>
+                            <tbody>
+                              <tr
+                                v-for="(video, index) in product.videos"
+                                :key="video[index]"
+                              >
+                                <td>
+                                  <iframe
+                                    class="video"
+                                    style="background-color: white"
+                                    :src="video.video"
+                                    allowfullscreen
+                                  ></iframe>
+                                </td>
+                                <td>
+                                  <input
+                                    type="text"
+                                    class="input"
+                                    :value="video.title"
+                                    @input="
+                                      videos[index].title = $event.target.value
+                                    "
+                                  />
+                                </td>
+                                <td>
+                                  <v-btn
+                                    class="btn"
+                                    @click="deleteVideo(index)"
+                                  >
+                                    X
+                                  </v-btn>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </template>
+                    </form>
+                  </v-card>
+                </v-container>
+              </v-tab-item>
+            </v-tabs-items>
+          </div>
+        </v-col>
+      </v-row>
+
+      <!-- RECOMMENDED products -->
+      <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
+        <v-col
+          v-for="(plan, index) in recommendedProducts"
+          :key="`plan-${index}`"
+          cols="12"
+          md="4"
+        >
+          <v-hover v-slot="{ hover }" class="card">
+            <v-card
+              :elevation="hover ? 24 : 4"
+              :color="plan.color"
+              max-width="500"
+              height="700"
+              :class="hover ? 'zoom' : 'notzoom'"
+              class="mx-auto transition-swing"
             >
-              <v-card
-                flat
-                :class="
-                  $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+              <h4
+                class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                style="letter-spacing: 0.15em; font-size: 20px"
+              >
+                <textarea
+                  :value="plan.name.toUpperCase()"
+                  cols="12"
+                  rows="2"
+                  style="
+                    word-wrap: break-word;
+                    resize: none;
+                    padding: 15px;
+                    text-align: center;
+                    max-width: 400px;
+                    min-width: 330px;
+                  "
+                  class="input"
+                  @input="recommendedProducts[index].name = $event.target.value"
+                />
+              </h4>
+              <v-btn
+                align="center"
+                style="
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 80%;
                 "
               >
-                <div v-for="video in product.videos" :key="video.title">
-                  <v-col cols="12" md="12" align-self="center">
-                    <h4
-                      class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                      style="
-                        letter-spacing: 0.15em;
-                        border-bottom: 2px solid #fde36d;
-                        box-shadow: 0 4px 6px -6px;
-                      "
-                      v-text="video.title"
-                    ></h4>
-                    <iframe
-                      class="video"
-                      style="background-color: white"
-                      :src="video.video"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </v-col>
+                <input
+                  type="file"
+                  accept="image/*"
+                  @change="saveRecommendedImages($event, index)" /></v-btn
+              ><br /><br />
+              <v-img
+                :src="plan.mainImg"
+                alt=""
+                width="250"
+                :lazy-src="plan.mainImg"
+                aspect-ratio="1"
+                class="image grey lighten-2 rounded-lg mt-5 mb-10"
+              ></v-img>
+              <v-card-text class="subtitle-1 black--text mb-10">
+                <textarea
+                  :value="plan.intro"
+                  cols="12"
+                  rows="4"
+                  style="
+                    max-width: 400px;
+                    min-width: 330px;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                    resize: none;
+                    padding: 10px;
+                  "
+                  class="input"
+                  @input="
+                    recommendedProducts[index].intro = $event.target.value
+                  "
+                />
+              </v-card-text>
+              <div
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  margin-top: 10%;
+                  left: 35%;
+                "
+              >
+                <div v-if="plan.subCategory.length === 0">
+                  <nuxt-link class="link" :to="`/product/${plan.id}`">
+                    <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      text
+                      class="my-3"
+                      outlined
+                      black
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      >View</v-btn
+                    >
+                  </nuxt-link>
                 </div>
-              </v-card>
-            </v-container>
-          </v-tab-item>
-        </v-tabs-items>
-      </section>
-    </div>
-    <v-container fill-width>
-      <v-col>
-        <div class="justify-center">
-          <nuxt-link to="#" class="learn text-center">
-            <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
-              ><v-icon left large color="primary">mdi-play</v-icon
-              >Preview</v-btn
-            ></nuxt-link
+              </div>
+            </v-card></v-hover
           >
-        </div>
-      </v-col>
-    </v-container>
+        </v-col>
+      </v-row>
+      <v-btn
+        :x-large="$vuetify.breakpoint.smAndUp"
+        text
+        outlined
+        white
+        @click="save()"
+        >Save</v-btn
+      >
+    </div>
   </section>
 </template>
 
 <script>
-// import ImageUploader from './ImageUploader.vue'
 export default {
-  // components: { ImageUploader },
   props: {
-    data: {
-      type: Array,
-      default: () => [],
+    id: {
+      required: true,
+      default: null,
+      type: String,
     },
   },
   data: () => ({
-    tab: 'features',
+    item: [],
     areFeatures: true,
     areAccessories: true,
     areConfig: true,
     areVideos: true,
     tutorials: '',
-    title: '',
     intro: '',
     productId: '',
     images: [],
@@ -462,8 +944,23 @@ export default {
     image: '',
     image_list: [],
     headings: ['image', 'name', 'Remove'],
-    image_names: [],
+    vidHeadings: ['video', 'name', 'Remove'],
+    configHeadings: ['title', 'image', 'table', 'Remove'],
+    title: '',
+    description: '',
+    features: '',
+    tab: '',
+    videos: '',
+    video: '',
+    videoTitle: '',
+    configImage: '',
+    recommendedProducts: '',
+    mainImg: '',
+    countInStock: 0,
   }),
+  created() {
+    this.getProduct()
+  },
   methods: {
     showAccessories() {
       this.data.accesories === []
@@ -472,8 +969,46 @@ export default {
 
       return this.areAccessories
     },
-    saveDescription() {
-      this.description = []
+    async getProduct() {
+      this.listLoading = true
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const response = await this.$axios.get(
+          `http://localhost:5001/api/products/${this.id}`,
+          config
+        )
+
+        this.item.push(response.data)
+
+        console.log(this.item)
+
+        this.title = this.item[0].name
+        this.productId = this.item[0].productId
+        this.intro = this.item[0].intro
+        this.images = this.item[0].img
+        this.description = this.item[0].description
+        this.features = this.item[0].features
+        this.mainImg = this.item[0].mainImg
+        this.videos = this.item[0].videos
+        this.configurationIntro = this.item[0].configurationIntro
+        this.configurationTitle = this.item[0].configurationTitle
+        this.configurationImage = this.item[0].configurationImage
+        this.tables = this.item[0].tables
+        this.accessories = this.item[0].accessories
+        this.recommendedProducts = this.item[0].recommendedProducts
+        this.mainImg = this.item[0].mainImg
+        this.countInStock = this.item[0].countInStock
+
+        console.log('heyyyyy', this.images)
+
+        return this.item
+      } catch (error) {
+        console.log(error)
+      }
     },
     async saveImages(event) {
       const input = event.target.files[0]
@@ -496,107 +1031,177 @@ export default {
 
         this.image = data
 
-        console.log('hellooooo', this.image)
+        this.images.push({ image: this.image })
+      } catch (error) {
+        throw new Error(error)
+      }
+    },
+    async saveAccessoryImage(event, index) {
+      const input = event.target.files[0]
+      const formData = new FormData()
 
-        return this.image
+      formData.append('image', input)
+
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+
+        const { data } = await this.$axios.post(
+          'http://localhost:5001/api/upload',
+          formData,
+          config
+        )
+
+        this.accessories[index].mainImg = data
       } catch (error) {
         console.log(error)
       }
     },
-    save() {
-      this.title = this.$refs.title.value
-      // const product = {
-      //   name: 'his.$refs.title.value',
-      //   productId: 'this.$refs.productId.value',
-      //   description: [{ paragraph: 'This is the updated description' }],
-      //   img: [
-      //     { image: 'jetstream.jpg' },
-      //     { image: 'jetstream/jet-stream-2.jpeg' },
-      //   ],
-      //   mainImg: 'jetstream.jpg',
-      //   category: 'Fibre Blowing',
-      //   subCategory: [],
-      //   features: [
-      //     {
-      //       id: 1,
-      //       heading: 'Main Features:',
-      //       list: [
-      //         { listItem: 'Automatic Cable Centralisation' },
-      //         { listItem: 'Synchronous high grip profiled drive belts' },
-      //       ],
-      //     },
-      //     {
-      //       id: 2,
-      //       heading: 'Specifications:',
-      //       list: [
-      //         { listItem: 'Cable Range: 4-20mm' },
-      //         { listItem: 'Duct Range: 12-50mm' },
-      //         {
-      //           listItem: 'Cable Speed (Adjustable): (0-85m/min) (0-280 ft/min)',
-      //         },
-      //         { listItem: 'Max Air Pressure: 15 Bar (215 psi)' },
-      //       ],
-      //     },
-      //   ],
-      //   intro: this.$refs.intro.value,
-      //   videos: [
-      //     {
-      //       title: 'JetStream Basic set-up',
-      //       video: '../jetstream/videos/cbs-basic-setup.mp4',
-      //     },
-      //     {
-      //       title: 'Replacing the drive belts',
-      //       video: '../jetstream/videos/belt-replacement.mp4',
-      //     },
-      //   ],
-      //   configurationTitle: 'JETSTREAM Configuration',
-      //   configurationIntro: [
-      //     {
-      //       paragraph:
-      //         'In order to configure your JetStream to your application, we ask that you pick one of each from the list below:',
-      //     },
-      //     {
-      //       paragraph:
-      //         'The cable collet assembly (A), the duct clamp and seal collets (B) and cable seals (C).',
-      //     },
-      //   ],
-      //   configurationImage: '../jetstream/jetstream-configuration.jpeg',
-      //   tables: [
-      //     {
-      //       columns: ['Item Description', 'Part No'],
-      //       image: '',
-      //       title: 'A) Cable Collet Assembly',
-      //       items: [
-      //         {
-      //           'Item Description': 'yo',
-      //           'Part No': 'C-1900-C-0406',
-      //         },
-      //         {
-      //           'Item Description': 'yo',
-      //           'Part No': 'C-1900-C-0609',
-      //         },
-      //         {
-      //           'Item Description': 'yo',
-      //           'Part No': 'C-1900-C-0912',
-      //         },
-      //         {
-      //           'Item Description': 'yo',
-      //           'Part No': 'C-1900-C-1216',
-      //         },
-      //         {
-      //           'Item Description': '16-20mm',
-      //           'Part No': 'C-1900-C-1620',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   countInStock: 10,
-      //   accessories: [],
-      // }
+    async saveRecommendedImages(event, index) {
+      const input = event.target.files[0]
+      const formData = new FormData()
 
-      console.log('this is the title', this.title)
+      formData.append('image', input)
 
-      // return product.intro
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+
+        const { data } = await this.$axios.post(
+          'http://localhost:5001/api/upload',
+          formData,
+          config
+        )
+
+        this.recommendedProducts[index].mainImg = data
+        this.recommendedProducts[index].id = '1'
+
+        console.log(this.mainImg)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async saveMainImage(event) {
+      const input = event.target.files[0]
+      const formData = new FormData()
+
+      formData.append('image', input)
+
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+
+        const { data } = await this.$axios.post(
+          'http://localhost:5001/api/upload',
+          formData,
+          config
+        )
+
+        this.mainImg = data
+
+        console.log(this.mainImg)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async saveConfigImage(event, index) {
+      const input = event.target.files[0]
+      const formData = new FormData()
+
+      formData.append('image', input)
+
+      try {
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        }
+
+        const { data } = await this.$axios.post(
+          'http://localhost:5001/api/upload',
+          formData,
+          config
+        )
+
+        this.configImage = data
+
+        console.log('helloooo', this.tables[index])
+
+        this.tables[index].image = this.configImage
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    saveVideos(event) {
+      this.video = event.target.value
+      this.videos.push({ video: this.video, title: this.videoTitle })
+    },
+    deleteImage(index) {
+      this.images.splice(index, 1)
+    },
+    deleteFeature(index, i) {
+      this.features[index].list.splice(i, 1)
+    },
+    addFeature(index) {
+      this.features[index].list.push({
+        listItem: 'Automatic Cable Centralisation',
+      })
+    },
+    deleteConfigImage(index) {
+      this.tables[index].image = ''
+    },
+    deleteConfigTable(index) {
+      this.tables.splice(index, 1)
+    },
+    deleteVideo(index) {
+      this.videos.splice(index, 1)
+    },
+    async save() {
+      const data = {
+        user: this.$auth.user,
+        name: this.title,
+        productId: this.productId,
+        description: this.description,
+        img: this.images,
+        mainImg: this.mainImg,
+        category: 'Fibre Blowing',
+        subCategory: [],
+        features: this.features,
+        intro: this.intro,
+        videos: this.videos,
+        configurationTitle: this.configurationTitle,
+        configurationIntro: this.configurationIntro,
+        configurationImage: this.configurationImage,
+        tables: this.tables,
+        countInStock: this.countInStock,
+        accessories: this.accessories,
+        recommendedProducts: this.recommendedProducts,
+      }
+
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        await this.$axios.put(
+          `http://localhost:5001/api/products/${this.item[0]._id}`,
+          data,
+          config
+        )
+        // this.getAllMusics()
+      } catch (err) {
+        throw new Error('Error updating product')
+      }
     },
   },
 }
@@ -625,21 +1230,11 @@ export default {
 }
 
 .table {
-  margin: 2%;
-  margin-bottom: 5%;
-}
-
-th {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: rgb(236, 229, 229);
-  padding: 20px;
-  text-transform: uppercase;
-  color: black;
+  margin: 5%;
 }
 
 table tbody tr:nth-child(2n) td {
-  background: rgb(243, 239, 239);
+  background: rgb(243, 243, 243);
   color: black;
 }
 
@@ -649,23 +1244,29 @@ table tbody tr:nth-child(2n) td {
 }
 
 td {
-  padding: 10px;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: black;
-} /* table td { */
-/* text-align: left;
-  padding: 15px;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card h3 {
   font-size: 14px;
-  border-right: 2px solid #ddd120;
 }
-table td:last-child {
-  border-right: none;
+
+.link {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100px;
 }
-table tbody tr:nth-child(2n) td {
-  background: rgb(243, 239, 239);
-} */
 
 .video {
   display: block;

@@ -90,71 +90,69 @@ vue/no-side-effects-in-computed-properties */
               mt="10"
               :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
             >
-              <v-row class="mx-auto mb-7 mt-3">
-                <v-col cols="12" md="12" sm="12">
+              <!-- <v-row class="mx-auto mb-7 mt-3"> -->
+              <v-col cols="12" md="12" sm="12">
+                <div
+                  :class="
+                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                  "
+                  style="
+                    line-height: 30px;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                  "
+                >
                   <div
-                    :class="
-                      $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                    "
-                    style="
-                      line-height: 30px;
-                      font-size: 15px;
-                      margin-bottom: 20px;
-                    "
+                    v-for="paragraph in product.description"
+                    :key="paragraph.id"
                   >
-                    <div
-                      v-for="paragraph in product.description"
-                      :key="paragraph.id"
+                    <p
+                      class="black--text mt-5"
+                      style="
+                        line-height: 30px;
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                      "
                     >
-                      <p
-                        class="black--text mt-5"
-                        style="
-                          line-height: 30px;
-                          font-size: 15px;
-                          margin-bottom: 20px;
-                        "
-                      >
-                        {{ paragraph.paragraph }}
-                      </p>
-                    </div>
+                      {{ paragraph.paragraph }}
+                    </p>
                   </div>
-                  <v-col
-                    v-for="feature in product.features"
-                    :key="feature.id"
-                    cols="12"
-                    md="6"
-                  >
-                    <v-card
-                      id="feature-card"
-                      class="mx-auto transition-swing"
-                      :elevation="hover ? 24 : 6"
-                    >
-                      <v-list-item-content>
-                        <!-- <v-toolbar color="yellow" light> -->
-                        <h4
-                          class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                          style="
-                            letter-spacing: 0.15em;
-                            border-bottom: 2px solid #fde36d;
-                            box-shadow: 0 4px 6px -6px;
-                          "
-                          v-text="feature.heading"
-                        ></h4>
-                        <!-- </v-toolbar> -->
-                        <v-list-item
-                          v-for="item in feature.list"
-                          :key="item.listItem"
-                          class="list pt-0"
-                        >
-                          {{ item.listItem }}
-                        </v-list-item>
-                      </v-list-item-content>
-                    </v-card>
-                    <!-- </v-hover> -->
-                    <!-- <v-card-text>Features</v-card-text> -->
-                  </v-col>
+                </div>
+                <v-col
+                  v-for="feature in product.features"
+                  :key="feature.id"
+                  cols="12"
+                  md="12"
+                  sm="12"
+                  align="center"
+                >
+                  <v-card>
+                    <v-list-item-content>
+                      <!-- <v-toolbar color="yellow" light> -->
+                      <h4
+                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                        style="
+                          letter-spacing: 0.15em;
+                          border-bottom: 2px solid #fde36d;
+                          box-shadow: 0 10px 10px -10px;
+                        "
+                        v-text="feature.heading"
+                      ></h4>
+                      <!-- </v-toolbar> -->
+                      <v-list-item
+                        v-for="item in feature.list"
+                        :key="item.listItem"
+                        class="list pt-0 lighten-2"
+                      >
+                        {{ item.listItem }}
+                      </v-list-item>
+                    </v-list-item-content>
+                  </v-card>
+                  <!-- </v-hover> -->
+                  <!-- <v-card-text>Features</v-card-text> -->
                 </v-col>
-              </v-row>
+              </v-col>
+              <!-- </v-row> -->
             </v-container>
           </v-tab-item>
           <v-tab-item :key="2" value="accessories">
@@ -344,6 +342,7 @@ vue/no-side-effects-in-computed-properties */
         <!-- </v-card> -->
         <!-- </div> -->
       </section>
+      <SectionsRecommendedProducts :data="product.recommendedProducts" />
     </div>
   </section>
 </template>
@@ -882,9 +881,9 @@ img {
   margin-top: 1rem;
 }
 
-#feature-card {
+/* #feature-card {
   min-height: 800px;
-}
+} */
 /* 
 @media (max-width: 768px) {
   .section-showcase .container {
