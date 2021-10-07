@@ -39,31 +39,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   transition: 'utilities',
-  async fetch() {
-    try {
-      const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product-categories',
-        {}
-      )
-
-      this.filteredList = result.data
-        .filter((el) => el.main_category.name === 'Utilities')
-        .reverse()
-      return this.filteredList.data
-    } catch (error) {
-      if (this.search !== '') {
-        this.filteredList = this.$store.getters.Utilities.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
-      }
-      this.filteredList = this.$store.getters.fibreBlowing
-
-      return this.filteredList
-    }
-  },
   data() {
     return {
       heroAlt: [
@@ -74,17 +51,53 @@ export default {
         },
       ],
       search: '',
-      filteredList: '',
+      filteredList: [],
     }
   },
-  computed: {
-    list() {
-      if (this.search !== '') {
-        return this.filteredList.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
+  // computed: {
+  //   list() {
+  //     if (this.search !== '') {
+  //       return this.filteredList.filter((box) => {
+  //         return box.name.toLowerCase().includes(this.search.toLowerCase())
+  //       })
+  //     }
+  //     return this.filteredList
+  //   },
+  // },
+  created() {
+    this.getAllMusics()
+  },
+  methods: {
+    async getAllMusics() {
+      this.listLoading = true
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
       }
-      return this.filteredList
+      try {
+        const { data } = await this.$axios.get(
+          'http://localhost:5001/api/products',
+          config
+        )
+
+        // console.log('here is the data', data)
+
+        data.forEach((product) => {
+          if (product.category === 'Utilities') {
+            this.filteredList.push(product)
+          }
+        })
+        // console.log('here is the category', data.forEach())
+
+        // this.filteredList.push(
+        //   data.filter((category) => category !== 'Fibre Blowing')
+        // )
+
+        return this.filteredList
+      } catch (err) {
+        throw new Error('Error Fetching Products')
+      }
     },
   },
 }

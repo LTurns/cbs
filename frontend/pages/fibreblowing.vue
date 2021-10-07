@@ -90,25 +90,37 @@ export default {
         },
       }
       try {
-        const response = await this.$axios.get(
+        const { data } = await this.$axios.get(
           'http://localhost:5001/api/products',
           config
         )
-        this.filteredList = response.data
-        this.listLoading = false
+
+        // console.log('here is the data', data)
+
+        data.forEach((product) => {
+          if (product.category === 'Fibre Blowing') {
+            this.filteredList.push(product)
+          }
+        })
+        // console.log('here is the category', data.forEach())
+
+        // this.filteredList.push(
+        //   data.filter((category) => category !== 'Fibre Blowing')
+        // )
+
+        return this.filteredList
       } catch (err) {
-        this.listLoading = false
         throw new Error('Error Fetching Products')
       }
     },
-    list(list) {
-      if (this.search !== '') {
-        return this.filteredList.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
-        })
-      }
-      return this.filteredList
-    },
+    // list(list) {
+    //   if (this.search !== '') {
+    //     return this.filteredList.filter((box) => {
+    //       return box.name.toLowerCase().includes(this.search.toLowerCase())
+    //     })
+    //   }
+    //   return this.filteredList
+    // },
   },
 }
 </script>

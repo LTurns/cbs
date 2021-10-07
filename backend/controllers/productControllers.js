@@ -55,6 +55,20 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 })
 
+const getProductByName = asyncHandler(async (req, res) => {
+  console.log(req.params.id)
+
+
+  const product = await Product.find({ 'name': req.params.id})
+
+  if (product) {
+    res.json(product)
+  } else {
+    res.status(404)
+    throw new Error('Product not found')
+  }
+})
+
 // @desc    Delete a product
 // @route   DELETE /api/products/:id
 // @access  Private/Admin
@@ -78,7 +92,7 @@ const createProduct = asyncHandler(async (req, res) => {
     user: req.user._id,
     name: 'Sample name',
     id: '1',
-    productId: '',
+    productId: '123',
     description: [
       {
         paragraph: 'paragraph'
@@ -90,7 +104,7 @@ const createProduct = asyncHandler(async (req, res) => {
       }
     ],
     mainImg: 'tornado.jpg',
-    category: 'Fibre Blowing',
+    category: 'category',
     subCategory: [],
     features: [
       { id: 1 },
@@ -272,7 +286,8 @@ module.exports = {
   getProducts,
   createProduct,
   deleteProduct, 
-  updateProduct 
+  updateProduct,
+  getProductByName
 }
 
 // export {

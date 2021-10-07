@@ -1,5 +1,5 @@
 <template>
-  <div><SectionsEdit v-if="id" :id="id" /></div>
+  <div><SectionsEdit :id="id" /></div>
 </template>
 
 <script>
@@ -10,34 +10,34 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      item: null,
+      // item: null,
     }
   },
-  created() {
-    this.getProduct()
-  },
-  methods: {
-    async getProduct() {
-      this.listLoading = true
-      const config = {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-      }
-      try {
-        const response = await this.$axios.get(
-          `http://localhost:5001/api/products/${this.$route.params.id}`,
-          config
-        )
+  // created() {
+  //   this.getProduct()
+  // },
+  // methods: {
+  //   async getProduct() {
+  //     // this.listLoading = true
+  //     const config = {
+  //       headers: {
+  //         'Access-Control-Allow-Origin': '*',
+  //       },
+  //     }
+  //     try {
+  //       const response = await this.$axios.get(
+  //         `http://localhost:5001/api/products/${this.$route.params.id}`,
+  //         config
+  //       )
 
-        this.item.push(response.data)
-        // this.item.push(response.data)
-        return this.item
-      } catch (error) {
-        console.log(error)
-      }
-    },
-  },
+  //       this.item.push(response.data)
+  //       // this.item.push(response.data)
+  //       return this.item
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   },
+  // },
   // created() {
   //   this.getAllMusics()
   // },

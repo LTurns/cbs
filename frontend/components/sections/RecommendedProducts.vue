@@ -36,7 +36,7 @@
                   <v-list-item> -->
               <div style="position: absolute; bottom: 0; left: 35%">
                 <div v-if="plan.subCategory.length === 0">
-                  <nuxt-link class="link" :to="`/product/${plan.id}`">
+                  <nuxt-link class="link" :to="`/product/${plan._id}`">
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
                       text

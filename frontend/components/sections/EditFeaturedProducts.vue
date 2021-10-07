@@ -4,7 +4,6 @@
     <v-container fluid>
       <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
         <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
-          <!-- <div v-show="plan.subCategory.length == 0"> -->
           <v-hover v-slot="{ hover }" class="card">
             <v-card
               :elevation="hover ? 24 : 4"
@@ -27,13 +26,10 @@
                 aspect-ratio="1"
                 class="image grey lighten-2 rounded-lg mt-5 mb-10"
               ></v-img>
-              <!-- <img :src="plan.mainImg" width="250" /> -->
               <v-card-text
                 class="subtitle-1 black--text"
                 v-text="plan.intro"
               ></v-card-text>
-              <!-- <v-list>
-                  <v-list-item> -->
               <div style="position: absolute; bottom: 0; left: 35%">
                 <div v-if="plan.subCategory.length === 0">
                   <nuxt-link class="link" :to="`/product/${plan._id}`">
@@ -65,25 +61,26 @@
                   </nuxt-link>
                 </div>
               </div>
-              <!-- Product ID -->
-              <!-- </div>
-                <div class="d-inline black white--text pa-2">
-                  <{{ plan.productId }} -->
-              <!-- </div> -->
-              <!-- </div> -->
-              <!-- <v-btn
-                      color="primary"
-                      large
-                      block
-                      rounded
-                      class="mx-auto my-3"
-                    >
-                      View Now
-                    </v-btn> -->
-              <!-- </v-list-item>
-                </v-list> -->
             </v-card></v-hover
           >
+          <v-btn
+            color="orange lighten-2"
+            align="center"
+            dark
+            v-bind="attrs"
+            class="btn"
+            style="
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 15%;
+              margin-top: 10%;
+            "
+            v-on="on"
+            @click="deleteAccessory(index)"
+          >
+            X
+          </v-btn>
           <!-- </div> -->
         </v-col>
       </v-row>
@@ -96,11 +93,14 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => [],
+      default: () => ['accessories'],
     },
   },
   methods: {
     link() {},
+    deleteAccessory(index) {
+      this.accessories.splice(index, 1)
+    },
   },
 }
 </script>

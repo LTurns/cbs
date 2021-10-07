@@ -35,22 +35,18 @@
                     <tbody>
                       <tr v-for="(item, index) in filteredList" :key="item">
                         <td>
-                          <input
-                            type="text"
-                            class="form-control groupName pl-5 pr-5"
-                            :value="item.name"
-                          />
+                          <p>{{ item.name.toUpperCase() }}</p>
                         </td>
                         <td>
-                          <input
-                            type="text"
-                            class="form-control"
-                            :value="item.productId"
-                          />
+                          <p>{{ item.productId }}</p>
+                        </td>
+
+                        <td>
+                          <p style="text-align: center">{{ item.enquiries }}</p>
                         </td>
                         <td>
                           <v-img
-                            :src="`/${item.mainImg}`"
+                            :src="item.mainImg"
                             alt=""
                             width="50"
                             :lazy-src="item.mainImg"
@@ -59,15 +55,13 @@
                           ></v-img>
                         </td>
                         <td>
-                          <v-select
-                            :value="item.category"
-                            :items="categories"
-                            label="Category"
-                          ></v-select>
+                          <p>{{ item.category }}</p>
                         </td>
 
                         <td>
-                          <nuxt-link :to="`/edit/${item.id}`"> Edit </nuxt-link>
+                          <nuxt-link :to="`/edit/${item._id}`">
+                            Edit
+                          </nuxt-link>
                         </td>
                         <td>
                           <div class="text-center">
@@ -118,12 +112,17 @@
                     </tbody>
                   </table>
                   <div>
-                    <v-btn
-                      class="btn btn-info float-right mt-20"
-                      @click="addGroup"
-                    >
-                      Add Product
-                    </v-btn>
+                    <v-row>
+                      <v-col cols="12" align="center">
+                        <v-btn
+                          class="btn btn-info yellow float-center mt-20"
+                          style="margin-top: 5%; margin-bottom: 5%"
+                          @click="addGroup"
+                        >
+                          Add Product
+                        </v-btn>
+                      </v-col>
+                    </v-row>
                   </div>
                 </form>
                 <div class="text-center"></div>
@@ -156,6 +155,7 @@ export default {
       headings: [
         'Name',
         'ProductId',
+        'Enquiries',
         'Main Image',
         'Category',
         'Edit',
@@ -183,24 +183,8 @@ export default {
           config
         )
 
-        this.id = data._id
-
-        const request = {
-          id: this.id,
-        }
-
-        try {
-          await this.$axios.put(
-            `http://localhost:5001/api/products/${this.item[0]._id}`,
-            request,
-            config
-          )
-          // this.getAllMusics()
-        } catch (err) {
-          throw new Error('Error updating product')
-        }
-
         this.getAllMusics()
+        return data
       } catch (err) {
         throw new Error('Error adding product')
       }

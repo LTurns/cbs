@@ -58,7 +58,7 @@ vue/no-side-effects-in-computed-properties */
                 width: 55%;
               "
             >
-              <v-img :src="`../${img.image}`" :lazy-src="`../${img.image}`" />
+              <v-img :src="img.image" :lazy-src="img.image" />
             </v-carousel-item>
           </v-carousel>
         </v-col>
@@ -222,10 +222,10 @@ vue/no-side-effects-in-computed-properties */
                 <v-col cols="12" md="4" align-self="center">
                   <v-img
                     max-height="500"
-                    :src="`/${table.image}`"
+                    :src="table.image"
                     max-width="300"
                     class="mx-auto"
-                    :lazy-src="`/${table.image}`"
+                    :lazy-src="table.image"
                   >
                   </v-img>
                 </v-col>

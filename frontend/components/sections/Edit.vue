@@ -38,14 +38,23 @@
               @input="intro = $event.target.value"
             ></textarea
             ><br />
+            <div>
+              <div class="d-inline white--text pa-2">
+                <v-select
+                  v-model="category"
+                  :items="categories"
+                  label="Category"
+                ></v-select>
+              </div>
+            </div>
             <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
               Product ID
             </div>
-            <div class="d-inline black white--text pa-2">
+            <div class="d-inline white--text pa-2">
               <input
                 ref="productId"
                 type="text"
-                class="input white--text"
+                class="input black--text"
                 :value="productId"
                 @input="productId = $event.target.value"
               />
@@ -437,10 +446,26 @@
                     $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
                   "
                 >
+                  <v-select
+                    v-model="accessoryName"
+                    :items="items"
+                    attach
+                    chips
+                    label="Select Products"
+                    style="
+                      width: 80%;
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                    "
+                    @change="addAccessory"
+                  ></v-select>
+                  <!-- <SectionsEditFeaturedProducts :data="accessories" /> -->
+
                   <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
                     <v-col
-                      v-for="(plan, index) in accessories"
-                      :key="`plan-${index}`"
+                      v-for="(plan, ix) in accessories"
+                      :key="`plan-${ix}`"
                       cols="12"
                       md="4"
                     >
@@ -449,48 +474,15 @@
                           :elevation="hover ? 24 : 4"
                           :color="plan.color"
                           max-width="500"
-                          height="700"
+                          height="610"
                           :class="hover ? 'zoom' : 'notzoom'"
                           class="mx-auto transition-swing"
                         >
                           <h4
                             class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
                             style="letter-spacing: 0.15em; font-size: 20px"
-                          >
-                            <textarea
-                              :value="plan.name.toUpperCase()"
-                              cols="12"
-                              rows="2"
-                              style="
-                                word-wrap: break-word;
-                                resize: none;
-                                padding: 15px;
-                                text-align: center;
-                                max-width: 400px;
-                                min-width: 330px;
-                              "
-                              class="input"
-                              @input="
-                                accessories[index].name = $event.target.value
-                              "
-                            />
-                          </h4>
-                          <v-btn
-                            align="center"
-                            style="
-                              display: block;
-                              margin-left: auto;
-                              margin-right: auto;
-                              width: 80%;
-                            "
-                          >
-                            <input
-                              type="file"
-                              accept="image/*"
-                              @change="
-                                saveAccessoryImage($event, index)
-                              " /></v-btn
-                          ><br /><br />
+                            v-text="plan.name"
+                          ></h4>
                           <v-img
                             :src="plan.mainImg"
                             alt=""
@@ -499,37 +491,32 @@
                             aspect-ratio="1"
                             class="image grey lighten-2 rounded-lg mt-5 mb-10"
                           ></v-img>
-                          <v-card-text class="subtitle-1 black--text mb-10">
-                            <textarea
-                              :value="plan.intro"
-                              cols="12"
-                              rows="4"
-                              style="
-                                max-width: 400px;
-                                min-width: 330px;
-                                overflow: hidden;
-                                word-wrap: break-word;
-                                resize: none;
-                                padding: 10px;
-                              "
-                              class="input"
-                              @input="
-                                accessories[index].intro = $event.target.value
-                              "
-                            />
-                          </v-card-text>
-                          <div
-                            style="
-                              position: absolute;
-                              bottom: 0;
-                              margin-top: 10%;
-                              left: 35%;
-                            "
-                          >
+                          <v-card-text
+                            class="subtitle-1 black--text"
+                            v-text="plan.intro"
+                          ></v-card-text>
+                          <div style="position: absolute; bottom: 0; left: 35%">
                             <div v-if="plan.subCategory.length === 0">
                               <nuxt-link
                                 class="link"
-                                :to="`/product/${plan.id}`"
+                                :to="`/product/${plan._id}`"
+                              >
+                                <v-btn
+                                  :x-large="$vuetify.breakpoint.smAndUp"
+                                  text
+                                  class="my-3"
+                                  outlined
+                                  black
+                                  ><v-icon left large color="primary"
+                                    >mdi-play</v-icon
+                                  >View</v-btn
+                                >
+                              </nuxt-link>
+                            </div>
+                            <div v-else>
+                              <nuxt-link
+                                class="link align-center"
+                                :to="`/category/${plan.subCategory}`"
                               >
                                 <v-btn
                                   :x-large="$vuetify.breakpoint.smAndUp"
@@ -544,8 +531,27 @@
                               </nuxt-link>
                             </div>
                           </div>
-                        </v-card>
-                      </v-hover>
+                        </v-card></v-hover
+                      >
+                      <v-btn
+                        color="orange lighten-2"
+                        align="center"
+                        dark
+                        v-bind="attrs"
+                        class="btn"
+                        style="
+                          display: block;
+                          margin-left: auto;
+                          margin-right: auto;
+                          width: 15%;
+                          margin-top: 10%;
+                        "
+                        v-on="on"
+                        @click="deleteAccessory(index)"
+                      >
+                        X
+                      </v-btn>
+                      <!-- </div> -->
                     </v-col>
                   </v-row>
                 </v-card>
@@ -806,10 +812,26 @@
       </v-row>
 
       <!-- RECOMMENDED products -->
+      <v-select
+        v-model="recommendedProductName"
+        :items="items"
+        attach
+        chips
+        label="Select Products"
+        style="
+          width: 80%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        "
+        @change="addRecommendedProducts"
+      ></v-select>
+      <!-- <SectionsEditFeaturedProducts :data="accessories" /> -->
+
       <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
         <v-col
-          v-for="(plan, index) in recommendedProducts"
-          :key="`plan-${index}`"
+          v-for="(plan, ix) in recommendedProducts"
+          :key="`plan-${ix}`"
           cols="12"
           md="4"
         >
@@ -818,44 +840,15 @@
               :elevation="hover ? 24 : 4"
               :color="plan.color"
               max-width="500"
-              height="700"
+              height="610"
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
               <h4
                 class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
                 style="letter-spacing: 0.15em; font-size: 20px"
-              >
-                <textarea
-                  :value="plan.name.toUpperCase()"
-                  cols="12"
-                  rows="2"
-                  style="
-                    word-wrap: break-word;
-                    resize: none;
-                    padding: 15px;
-                    text-align: center;
-                    max-width: 400px;
-                    min-width: 330px;
-                  "
-                  class="input"
-                  @input="recommendedProducts[index].name = $event.target.value"
-                />
-              </h4>
-              <v-btn
-                align="center"
-                style="
-                  display: block;
-                  margin-left: auto;
-                  margin-right: auto;
-                  width: 80%;
-                "
-              >
-                <input
-                  type="file"
-                  accept="image/*"
-                  @change="saveRecommendedImages($event, index)" /></v-btn
-              ><br /><br />
+                v-text="plan.name"
+              ></h4>
               <v-img
                 :src="plan.mainImg"
                 alt=""
@@ -864,35 +857,29 @@
                 aspect-ratio="1"
                 class="image grey lighten-2 rounded-lg mt-5 mb-10"
               ></v-img>
-              <v-card-text class="subtitle-1 black--text mb-10">
-                <textarea
-                  :value="plan.intro"
-                  cols="12"
-                  rows="4"
-                  style="
-                    max-width: 400px;
-                    min-width: 330px;
-                    overflow: hidden;
-                    word-wrap: break-word;
-                    resize: none;
-                    padding: 10px;
-                  "
-                  class="input"
-                  @input="
-                    recommendedProducts[index].intro = $event.target.value
-                  "
-                />
-              </v-card-text>
-              <div
-                style="
-                  position: absolute;
-                  bottom: 0;
-                  margin-top: 10%;
-                  left: 35%;
-                "
-              >
+              <v-card-text
+                class="subtitle-1 black--text"
+                v-text="plan.intro"
+              ></v-card-text>
+              <div style="position: absolute; bottom: 0; left: 35%">
                 <div v-if="plan.subCategory.length === 0">
-                  <nuxt-link class="link" :to="`/product/${plan.id}`">
+                  <nuxt-link class="link" :to="`/product/${plan._id}`">
+                    <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      text
+                      class="my-3"
+                      outlined
+                      black
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      >View</v-btn
+                    >
+                  </nuxt-link>
+                </div>
+                <div v-else>
+                  <nuxt-link
+                    class="link align-center"
+                    :to="`/category/${plan.subCategory}`"
+                  >
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
                       text
@@ -907,17 +894,41 @@
               </div>
             </v-card></v-hover
           >
+          <v-btn
+            color="orange lighten-2"
+            align="center"
+            dark
+            v-bind="attrs"
+            class="btn"
+            style="
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 15%;
+              margin-top: 10%;
+            "
+            v-on="on"
+            @click="deleteRecommendedProduct(index)"
+          >
+            X
+          </v-btn>
+          <!-- </div> -->
         </v-col>
       </v-row>
-      <v-btn
-        :x-large="$vuetify.breakpoint.smAndUp"
-        text
-        outlined
-        white
-        @click="save()"
-        >Save</v-btn
-      >
     </div>
+    <v-row>
+      <v-col cols="12" align="center">
+        <v-btn
+          :x-large="$vuetify.breakpoint.smAndUp"
+          text
+          outlined
+          class="yellow lighten --2"
+          style="display: block; margin-left: auto: margin-right: auto; width: 30%; margin-top: 5%; margin-bottom: 5%;"
+          @click="save()"
+          >Save</v-btn
+        >
+      </v-col>
+    </v-row>
   </section>
 </template>
 
@@ -932,6 +943,9 @@ export default {
   },
   data: () => ({
     item: [],
+    categories: ['Fibre Blowing', 'Klein Tools', 'Utilities', 'Telecoms'],
+    accessoryName: '',
+    items: [],
     areFeatures: true,
     areAccessories: true,
     areConfig: true,
@@ -957,9 +971,12 @@ export default {
     recommendedProducts: '',
     mainImg: '',
     countInStock: 0,
+    allProducts: '',
+    recommendedProductName: '',
   }),
   created() {
     this.getProduct()
+    this.getAllProducts()
   },
   methods: {
     showAccessories() {
@@ -968,6 +985,27 @@ export default {
         : (this.areAccessories = true)
 
       return this.areAccessories
+    },
+    async getAllProducts() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const response = await this.$axios.get(
+          'http://localhost:5001/api/products',
+          config
+        )
+
+        for (const product of response.data) {
+          this.items.push(product.name)
+        }
+
+        return this.items
+      } catch (err) {
+        throw new Error('Error Fetching Products')
+      }
     },
     async getProduct() {
       this.listLoading = true
@@ -987,6 +1025,7 @@ export default {
         console.log(this.item)
 
         this.title = this.item[0].name
+        this.category = this.item[0].category
         this.productId = this.item[0].productId
         this.intro = this.item[0].intro
         this.images = this.item[0].img
@@ -1036,6 +1075,42 @@ export default {
         throw new Error(error)
       }
     },
+    async addAccessory() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+
+      try {
+        const { data } = await this.$axios.get(
+          `http://localhost:5001/api/products/name/${this.accessoryName}`,
+          config
+        )
+
+        console.log('the data', data)
+
+        this.accessories.push({
+          id: data[0].id,
+          name: data[0].name,
+          category: data[0].category,
+          subCategory: data[0].subCategory,
+          productId: data[0].productId,
+          intro: data[0].intro,
+          mainImg: data[0].mainImg,
+          _id: data[0]._id,
+        })
+
+        console.log('heyyy', this.accessories)
+
+        return this.accessories
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    deleteAccessory(index) {
+      this.accessories.splice(index, 1)
+    },
     async saveAccessoryImage(event, index) {
       const input = event.target.files[0]
       const formData = new FormData()
@@ -1060,33 +1135,69 @@ export default {
         console.log(error)
       }
     },
-    async saveRecommendedImages(event, index) {
-      const input = event.target.files[0]
-      const formData = new FormData()
-
-      formData.append('image', input)
+    async addRecommendedProducts() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
 
       try {
-        const config = {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        }
-
-        const { data } = await this.$axios.post(
-          'http://localhost:5001/api/upload',
-          formData,
+        const { data } = await this.$axios.get(
+          `http://localhost:5001/api/products/name/${this.recommendedProductName}`,
           config
         )
 
-        this.recommendedProducts[index].mainImg = data
-        this.recommendedProducts[index].id = '1'
+        console.log('the data', data)
 
-        console.log(this.mainImg)
+        this.recommendedProducts.push({
+          id: data[0].id,
+          name: data[0].name,
+          category: data[0].category,
+          subCategory: data[0].subCategory.toString(),
+          productId: data[0].productId,
+          intro: data[0].intro,
+          mainImg: data[0].mainImg,
+          _id: data[0]._id,
+        })
+
+        console.log('heyyy', this.recommendedProducts)
+
+        return this.recommendedProducts
       } catch (error) {
         console.log(error)
       }
     },
+    deleteRecommendedProduct(index) {
+      this.recommendedProducts.splice(index, 1)
+    },
+    // async saveRecommendedImages(event, index) {
+    //   const input = event.target.files[0]
+    //   const formData = new FormData()
+
+    //   formData.append('image', input)
+
+    //   try {
+    //     const config = {
+    //       headers: {
+    //         'Content-Type': 'multipart/form-data',
+    //       },
+    //     }
+
+    //     const { data } = await this.$axios.post(
+    //       'http://localhost:5001/api/upload',
+    //       formData,
+    //       config
+    //     )
+
+    //     this.recommendedProducts[index].mainImg = data
+    //     this.recommendedProducts[index].id = '1'
+
+    //     console.log(this.mainImg)
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    // },
     async saveMainImage(event) {
       const input = event.target.files[0]
       const formData = new FormData()
@@ -1173,7 +1284,7 @@ export default {
         description: this.description,
         img: this.images,
         mainImg: this.mainImg,
-        category: 'Fibre Blowing',
+        category: this.category,
         subCategory: [],
         features: this.features,
         intro: this.intro,
