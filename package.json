@@ -1,40 +1,34 @@
 {
-  "name": "cbsapp",
+  "name": "modevue",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
-    "client": "npm run dev --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LTurns/cbs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LTurns/cbs/issues"
-  },
-  "homepage": "https://github.com/LTurns/cbs#readme",
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
-    "aws-sdk": "^2.996.0",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^6.2.1",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/strapi": "^0.3.1",
+    "axios": "^0.21.1",
+    "core-js": "^3.8.1",
     "express": "^4.17.1",
-    "express-async-handler": "^1.1.4",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.4",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.3",
-    "nodemon": "^2.0.12"
+    "nuxt": "^2.14.12"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.1.2"
   }
 }
