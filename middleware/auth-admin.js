@@ -2,7 +2,7 @@ export default function ({ $auth, redirect, store }) {
   const user = $auth.user
 
   if (user) {
-    redirect('/data')
+    redirect('/data').catch(() => {})
     // console.log(user)
     // let the user in
   } else {
@@ -12,7 +12,7 @@ export default function ({ $auth, redirect, store }) {
     // })
     // console.log($auth.data)
     // console.log(user)
-    redirect('/')
+    redirect('/').catch(() => {})
     // throw new Error('there is an error', Error)
   }
 }
