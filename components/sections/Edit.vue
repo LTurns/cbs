@@ -432,7 +432,27 @@
                           </tbody>
                         </table>
                       </v-card>
+                      <v-btn
+                        color="orange lighten-2"
+                        dark
+                        class="btn mt-10"
+                        @click="deleteFeatureBox(tableIndex, i)"
+                      >
+                        X
+                      </v-btn>
+                      <v-btn class="btn" @click="addFeatureBox(index)">
+                        +
+                      </v-btn>
                     </v-col>
+                    <v-btn
+                      color="orange lighten-2"
+                      dark
+                      class="btn mt-10"
+                      @click="deleteFeatureBox(tableIndex, i)"
+                    >
+                      X
+                    </v-btn>
+                    <v-btn class="btn" @click="addFeatureBox(index)"> + </v-btn>
                   </v-row>
                 </v-container>
               </v-tab-item>
@@ -679,6 +699,7 @@
                                 <tr>
                                   <th>Item Description</th>
                                   <th>Part No</th>
+                                  <th>Remove Item</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -713,9 +734,25 @@
                                       "
                                     />
                                   </td>
+                                  <td>
+                                    <v-btn
+                                      color="orange lighten-2"
+                                      dark
+                                      class="btn"
+                                      @click="deleteTableRow(tableIndex, i)"
+                                    >
+                                      X
+                                    </v-btn>
+                                  </td>
                                 </tr>
                               </tbody>
                             </table>
+                            <v-btn
+                              class="btn btn-info float-right mt-10"
+                              @click="addTableRow(index)"
+                            >
+                              +
+                            </v-btn>
                           </td>
                           <td>
                             <v-btn
@@ -1269,6 +1306,15 @@ export default {
     },
     deleteConfigImage(index) {
       this.tables[index].image = ''
+    },
+    deleteTableRow(tableIndex, i) {
+      this.tables[tableIndex].items.splice(i, 1)
+    },
+    addTableRow(tableIndex) {
+      this.tables[tableIndex].items.push({
+        'Item Description': '',
+        'Part No': '',
+      })
     },
     deleteConfigTable(index) {
       this.tables.splice(index, 1)

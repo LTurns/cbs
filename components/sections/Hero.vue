@@ -1,39 +1,40 @@
 <template>
   <section id="hero">
-    <v-container fill-height>
+    <v-container>
       <v-row align="center" justify="center" align-center>
         <!-- <v-col cols="12" md="12" sm="12"> -->
-        <v-col cols="12" md="6" sm="12">
-          <v-carousel
-            height="85vh"
-            cycle
-            show-arrows-on-hover
-            draggable="true"
-            hide-delimiter-background
-          >
-            <v-carousel-item
-              v-for="(carousel, carindex) in carouselsData"
-              :key="carindex"
+        <v-col cols="12" md="6" sm="12" class="mb-10 pb-10">
+          <v-container class="mb-10 pb-10">
+            <v-carousel
+              height="60vh"
+              cycle
+              show-arrows-on-hover
+              draggable="true"
+              hide-delimiter-background
             >
-              <v-container fill-height>
-                <v-row align-center>
-                  <v-col>
-                    <!-- <v-container> -->
-                    <div
-                      class="carousel-title text-md-h2 text-sm-h3 text-h6 font-weight-black"
-                    >
-                      {{ carousel.heading.toUpperCase() }}
-                    </div>
-                    <p style="font-size: 17px">
-                      {{ carousel.subHeading }}
-                    </p>
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      class="my-3 primary"
-                      >With a new battery powered range</v-btn
-                    >
-                    <span class="mx-2 my-4"></span>
-                    <!-- <v-btn
+              <v-carousel-item
+                v-for="(carousel, carindex) in carouselsData"
+                :key="carindex"
+              >
+                <v-container fill-height>
+                  <v-row align-center>
+                    <v-col>
+                      <!-- <v-container> -->
+                      <div
+                        class="white--text carousel-title text-md-h2 text-sm-h3 text-h6 font-weight-black"
+                      >
+                        {{ carousel.heading.toUpperCase() }}
+                      </div>
+                      <p style="font-size: 17px" class="white--text">
+                        {{ carousel.subHeading }}
+                      </p>
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        class="my-3 yellow darken-1"
+                        >With a new battery powered range</v-btn
+                      >
+                      <span class="mx-2 my-4"></span>
+                      <!-- <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
                       text
                       class="my-3"
@@ -47,15 +48,16 @@
                         >Learn More</nuxt-link
                       ></v-btn
                     > -->
-                    <!-- </v-container> -->
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-carousel-item>
-          </v-carousel>
+                      <!-- </v-container> -->
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-carousel-item>
+            </v-carousel>
+          </v-container>
         </v-col>
         <v-col cols="12" md="6" sm="12" class="white--text">
-          <v-container fill-height>
+          <v-container>
             <v-row align="center" justify="center" align-center>
               <categories height="100vh" class="categories" />
             </v-row>
@@ -159,11 +161,6 @@ export default {
 /* .spin {
   height: calc(100vh - 50px);
 } */
-
-#hero {
-  background-image: url('../../static/orangeWire.png');
-  background-size: cover;
-}
 
 @media screen and (min-width: 1500px) {
   .categories,

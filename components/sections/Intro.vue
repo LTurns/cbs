@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col
-          v-for="card in axiosCards"
+          v-for="card in cards"
           :key="card.title"
           v-hover
           class="column"
@@ -11,6 +11,7 @@
           md="6"
           ><v-hover v-slot="{ hover }" class="card">
             <v-card
+              :color="color"
               :style="{
                 height: '200px',
               }"
@@ -24,15 +25,13 @@
                     <div class="pr-2 mt-4">
                       <img
                         :src="card.image"
-                        style="max-width: 120px; height: auto"
+                        style="max-width: 130px; height: auto"
                       />
                       <h3
-                        class="text-uppercase black--text"
+                        :class="text"
                         style="letter-spacing: 0.15em"
                         v-text="card.name"
                       ></h3>
-                      <!-- <div class="white--text" v-text="card.subtitle"></div> -->
-                      <!-- <p class="white--text" v-text="card.text"></p> -->
                     </div>
                   </v-col>
                 </v-row>
@@ -46,19 +45,17 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
-  async fetch() {
-    try {
-      const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/main-categories',
-        {}
-      )
-      this.axiosCards = result.data
-      return this.axiosCards
-    } catch (error) {
-      this.axiosCards = this.cards
-    }
+  props: {
+    color: {
+      type: String,
+      default: () => 'rgb(255, 0, 0, 0)',
+    },
+    text: {
+      type: String,
+      default: () => 'text-uppercase white--text',
+    },
   },
   data() {
     return {
@@ -73,7 +70,7 @@ export default {
         },
         {
           name: 'FIBRE BLOWING',
-          image: 'fibreblowing.svg',
+          image: 'fibreblowing1.svg',
           text:
             'Our Fibre Blowing products contain Tornados, Jet Streams, Air Streams and more. We can even boast having some of the best Tornados in the industry.',
           link: '/fibreblowing',
@@ -95,6 +92,19 @@ export default {
       ],
     }
   },
+  // async fetch() {
+  //   try {
+  //     const result = await axios.get(
+  //       'https://tranquil-basin-55259.herokuapp.com/main-categories',
+  //       {}
+  //     )
+  //     this.axiosCards = result.data
+  //     return this.axiosCards
+  //   } catch (error) {
+  //     this.axiosCards = this.cards
+  //   }
+  // },
+  created() {},
 }
 </script>
 

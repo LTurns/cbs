@@ -26,7 +26,7 @@ export default {
         await this.$auth.loginWith('local', {
           data: loginInfo,
         })
-        // this.$router.push('/data')
+        this.$router.push('/data').catch(() => {})
       } catch (error) {
         throw new Error(error)
         // this.$store.dispatch('snackbar/setSnackbar', {

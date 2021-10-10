@@ -1,3 +1,4 @@
+export { default as SectionsBlockQuote } from '../../components/sections/BlockQuote.vue'
 export { default as SectionsBlogPage } from '../../components/sections/BlogPage.vue'
 export { default as SectionsBrands } from '../../components/sections/Brands.vue'
 export { default as SectionsCalloutBlock } from '../../components/sections/CalloutBlock.vue'
@@ -29,6 +30,7 @@ export { default as SiteHeader } from '../../components/siteHeader.vue'
 export { default as UserNav } from '../../components/userNav.vue'
 export { default as UtilsValidations } from '../../components/utils/validations.js'
 
+export const LazySectionsBlockQuote = import('../../components/sections/BlockQuote.vue' /* webpackChunkName: "components/sections-block-quote" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsBlogPage = import('../../components/sections/BlogPage.vue' /* webpackChunkName: "components/sections-blog-page" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsBrands = import('../../components/sections/Brands.vue' /* webpackChunkName: "components/sections-brands" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsCalloutBlock = import('../../components/sections/CalloutBlock.vue' /* webpackChunkName: "components/sections-callout-block" */).then(c => wrapFunctional(c.default || c))

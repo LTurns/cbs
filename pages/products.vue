@@ -1,41 +1,61 @@
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
-    <v-row>
+  <section class="white">
+    <v-row no-gutters>
       <v-col cols="12" align="center">
         <SectionsHeroAlt
           :hero-alt="heroAlt"
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white lighten-4'"
+          :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
         />
-        <div class="search">
-          <input
-            v-model="search"
-            type="text"
-            class="search__input"
-            aria-label="search"
-            placeholder="enter your search"
-          />
-          <button class="search__btn" aria-label="submit search">
-            <img src="/loupe.png" alt="" />
-          </button>
-        </div>
-        <p style="color: grey; margin-top: 20px; font-size: 15px">
-          Popular search results:
-        </p>
-        <nuxt-link exact to="category/compressors" class="tag"
-          >Compressors</nuxt-link
-        >
-        <nuxt-link exact to="product/tGGW0ov0fkKzK9ax7QYLHA" class="tag"
-          >Tornado</nuxt-link
-        >
-        <nuxt-link exact to="product/xS0KUwWdbEqPrt5pKjhfSA" class="tag"
-          >Hurricaine</nuxt-link
-        >
-        <nuxt-link exact to="category/accessories" class="tag"
-          >Fibre Blowing - Accessories</nuxt-link
-        >
-        <SectionsFeaturedProducts :data="productList" />
+        <section class="yellow darken-2">
+          <SectionsBlockQuote>
+            <slot>
+              We have had a really exciting 2021 turning 50 years old! Some
+              highlights of the last few years can be seen in our About page. In
+              the year 1971, 50 years ago, CBS was first established in Oakham.
+              Back then,it designed and manufacture cable jointing equipment.
+              Before this, the famous building was a food hall for the locals
+              during the war. Please check us out on LinkedIn for more
+              information.
+            </slot>
+            <div class="search">
+              <input
+                v-model="search"
+                type="text"
+                class="search__input"
+                aria-label="search"
+                placeholder="enter your search"
+              />
+              <button class="search__btn" aria-label="submit search">
+                <img src="/loupe.png" alt="" />
+              </button>
+            </div>
+          </SectionsBlockQuote>
+        </section>
 
-        <SectionsIntro style="margin-bottom: 30px" />
+        <div class="pt-10">
+          <nuxt-link exact to="category/compressors" class="tag"
+            >Compressors</nuxt-link
+          >
+          <nuxt-link exact to="product/tGGW0ov0fkKzK9ax7QYLHA" class="tag"
+            >Tornado</nuxt-link
+          >
+          <nuxt-link exact to="product/xS0KUwWdbEqPrt5pKjhfSA" class="tag"
+            >Hurricaine</nuxt-link
+          >
+          <nuxt-link exact to="category/accessories" class="tag"
+            >Fibre Blowing - Accessories</nuxt-link
+          >
+          <div v-show="search.length != 0">
+            <SectionsFeaturedProducts :data="productList" color="white" />
+          </div>
+        </div>
+
+        <SectionsIntro
+          class="pt-10 pb-10"
+          style="margin-bottom: 30px"
+          color="white"
+          text="text-uppercase black--text"
+        />
       </v-col>
     </v-row>
   </section>
@@ -201,9 +221,8 @@ $brandColor: #fde36d;
 }
 
 .tag {
-  background: rgb(255, 255, 255);
   border-radius: 3px 0 0 3px;
-  color: black;
+  color: black !important;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -215,7 +234,7 @@ $brandColor: #fde36d;
 }
 
 .tag::before {
-  background: rgb(245, 214, 42);
+  background: rgb(5, 7, 20);
   border-radius: 10px;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
   content: '';
@@ -228,7 +247,7 @@ $brandColor: #fde36d;
 
 .tag::after {
   border-bottom: 13px solid transparent;
-  border-left: 10px solid rgb(245, 221, 5);
+  border-left: 10px solid rgb(6, 12, 26);
   border-top: 13px solid transparent;
   content: '';
   position: absolute;

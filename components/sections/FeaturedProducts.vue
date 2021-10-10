@@ -1,6 +1,6 @@
 /* eslint-disable vue/require-prop-types */
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+  <section :class="color">
     <v-container fluid>
       <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
         <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
@@ -97,6 +97,10 @@ export default {
     data: {
       type: Array,
       default: () => [],
+    },
+    color: {
+      type: String,
+      default: () => 'feature',
     },
   },
   methods: {

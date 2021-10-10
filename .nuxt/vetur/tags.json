@@ -1,4 +1,7 @@
 {
+  "SectionsBlockQuote": {
+    "description": "Auto imported from components/sections/BlockQuote.vue"
+  },
   "SectionsBlogPage": {
     "description": "Auto imported from components/sections/BlogPage.vue"
   },

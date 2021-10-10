@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { wrapFunctional } from './index'
 
 const components = {
+  SectionsBlockQuote: () => import('../../components/sections/BlockQuote.vue' /* webpackChunkName: "components/sections-block-quote" */).then(c => wrapFunctional(c.default || c)),
   SectionsBlogPage: () => import('../../components/sections/BlogPage.vue' /* webpackChunkName: "components/sections-blog-page" */).then(c => wrapFunctional(c.default || c)),
   SectionsBrands: () => import('../../components/sections/Brands.vue' /* webpackChunkName: "components/sections-brands" */).then(c => wrapFunctional(c.default || c)),
   SectionsCalloutBlock: () => import('../../components/sections/CalloutBlock.vue' /* webpackChunkName: "components/sections-callout-block" */).then(c => wrapFunctional(c.default || c)),

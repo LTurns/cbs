@@ -6,6 +6,7 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
+- `<SectionsBlockQuote>` | `<sections-block-quote>` (components/sections/BlockQuote.vue)
 - `<SectionsBlogPage>` | `<sections-blog-page>` (components/sections/BlogPage.vue)
 - `<SectionsBrands>` | `<sections-brands>` (components/sections/Brands.vue)
 - `<SectionsCalloutBlock>` | `<sections-callout-block>` (components/sections/CalloutBlock.vue)
