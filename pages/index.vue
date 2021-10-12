@@ -38,17 +38,33 @@
       </v-col>
     </v-row>
     <v-row no-gutters>
-      <v-col class="yellow darken-1">
-        <SectionsBlockQuote>
+      <v-col class="blue-grey darken-4">
+        <SectionsBlockQuote text="white--text">
           <slot>
-            We have had a really exciting 2021 turning 50 years old! Some
-            highlights of the last few years can be seen in our About page. In
-            the year 1971, 50 years ago, CBS was first established in Oakham.
-            Back then,it designed and manufacture cable jointing equipment.
-            Before this, the famous building was a food hall for the locals
-            during the war. Please check us out on LinkedIn for more
-            information.
-          </slot>
+            <h3 class="mb-10">CORONAVIRUS UPDATE</h3>
+            <p>
+              CBS remains open and are working hard to provide essential
+              services to our telecommunications and electricity industries
+              during these difficult and uncertain times. We want to assure you
+              that we are taking the current situation very seriously, we have
+              staff working from home where possible and have implemented extra
+              precautions throughout the building to ensure the health and
+              safety of our staff, customers and suppliers. As you will be
+              aware, the situation is constantly changing, as is the advice
+              issued by the Government and the World Health Organisation.
+            </p>
+
+            <p>
+              As a company, we will be listening to the official advice and will
+              act in accordance with it, together with reacting to the
+              situations of both our customers and suppliers, many of which are
+              already operating at reduced levels. Our business may be disrupted
+              at some point in the future but, for now, it is business as usual.
+              Our thoughts are with those who have been affected by the spread
+              of COVID-19. Please, follow the advise issued by the Government
+              and W.H.O. Stay Safe.
+            </p></slot
+          >
         </SectionsBlockQuote>
       </v-col>
     </v-row>
@@ -78,7 +94,6 @@ export default {
   },
   methods: {
     async getAllMusics() {
-      this.listLoading = true
       const config = {
         headers: {
           'Access-Control-Allow-Origin': '*',
@@ -90,9 +105,7 @@ export default {
           config
         )
         this.filteredList = response.data.slice(0, 3)
-        this.listLoading = false
       } catch (err) {
-        this.listLoading = false
         throw new Error('Error Fetching Products')
       }
     },

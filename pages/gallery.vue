@@ -1,5 +1,5 @@
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+  <section class="grey lighten-4">
     <v-container>
       <v-row no-gutters>
         <v-col cols="12">

@@ -3,6 +3,7 @@ import { wrapFunctional } from './index'
 
 const components = {
   SectionsBlockQuote: () => import('../../components/sections/BlockQuote.vue' /* webpackChunkName: "components/sections-block-quote" */).then(c => wrapFunctional(c.default || c)),
+  SectionsBlogEdit: () => import('../../components/sections/BlogEdit.vue' /* webpackChunkName: "components/sections-blog-edit" */).then(c => wrapFunctional(c.default || c)),
   SectionsBlogPage: () => import('../../components/sections/BlogPage.vue' /* webpackChunkName: "components/sections-blog-page" */).then(c => wrapFunctional(c.default || c)),
   SectionsBrands: () => import('../../components/sections/Brands.vue' /* webpackChunkName: "components/sections-brands" */).then(c => wrapFunctional(c.default || c)),
   SectionsCalloutBlock: () => import('../../components/sections/CalloutBlock.vue' /* webpackChunkName: "components/sections-callout-block" */).then(c => wrapFunctional(c.default || c)),
@@ -18,6 +19,7 @@ const components = {
   SectionsProduct: () => import('../../components/sections/Product.vue' /* webpackChunkName: "components/sections-product" */).then(c => wrapFunctional(c.default || c)),
   SectionsRecommendedProducts: () => import('../../components/sections/RecommendedProducts.vue' /* webpackChunkName: "components/sections-recommended-products" */).then(c => wrapFunctional(c.default || c)),
   SectionsSalesTeam: () => import('../../components/sections/SalesTeam.vue' /* webpackChunkName: "components/sections-sales-team" */).then(c => wrapFunctional(c.default || c)),
+  SectionsSearch: () => import('../../components/sections/Search.vue' /* webpackChunkName: "components/sections-search" */).then(c => wrapFunctional(c.default || c)),
   SectionsTeam: () => import('../../components/sections/Team.vue' /* webpackChunkName: "components/sections-team" */).then(c => wrapFunctional(c.default || c)),
   SectionsTestimonials: () => import('../../components/sections/Testimonials.vue' /* webpackChunkName: "components/sections-testimonials" */).then(c => wrapFunctional(c.default || c)),
   SectionsTimeline: () => import('../../components/sections/Timeline.vue' /* webpackChunkName: "components/sections-timeline" */).then(c => wrapFunctional(c.default || c)),

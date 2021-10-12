@@ -18,14 +18,14 @@
               box-shadow: 0 4px 6px -6px #222;
             "
           >
-            {{ blog.heading }}
+            {{ blog[0].heading }}
           </h3>
           <h3
             class="text-h5 text-uppercase font-weight-thin text-center my-8 black--text"
           >
-            {{ blog.subheading }}
+            {{ blog[0].subheading }}
           </h3>
-          <div v-for="paragraph in blog.description" :key="paragraph.id">
+          <div v-for="paragraph in blog[0].description" :key="paragraph.id">
             <p
               class="black--text mt-5"
               style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
@@ -43,11 +43,7 @@
           max-height="400"
           class="align-center"
         >
-          <v-img
-            :src="`../blog/${image.image}`"
-            lazy-src="pexels-rfstudio-3810792.jpg"
-          >
-          </v-img>
+          <v-img :src="image.image" :lazy-src="image.image"> </v-img>
         </div>
       </v-col>
     </v-row>
@@ -61,9 +57,10 @@ export default {
     HeroAlt,
   },
   props: {
-    blog: {
-      type: Array,
-      default: () => [],
+    id: {
+      required: true,
+      default: null,
+      type: String,
     },
   },
   data() {
@@ -75,7 +72,30 @@ export default {
           icon: 'mdi-blogger',
         },
       ],
+      blog: [],
     }
+  },
+  created() {
+    this.getAllBlogs()
+  },
+  methods: {
+    async getAllBlogs() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const response = await this.$axios.get(
+          `https://cbsbackend.herokuapp.com/api/blogs/${this.id}`,
+          config
+        )
+        this.blog.push(response.data)
+        // console.log(this.blog)
+      } catch (err) {
+        throw new Error('Error Fetching Blogs')
+      }
+    },
   },
 }
 </script>

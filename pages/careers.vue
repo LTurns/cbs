@@ -40,20 +40,7 @@
               </p>
               <contactForm />
             </v-col>
-            <v-col md="3" cols="12">
-              <!-- <div>
-                <h3
-                  class="text-h6 text-center font-weight-light mb-xs-4 mb-5"
-                  style="
-                    border-bottom: 2px solid #fde36d;
-                    box-shadow: 0 4px 6px -6px #222;
-                  "
-                >
-                  Chat to a Consultant:
-                </h3>
-                <SectionsTeam :our-team="ourTeam" class="mb-10" />
-              </div> -->
-            </v-col>
+            <v-col md="3" cols="12"> </v-col>
           </v-row>
           <v-row>
             <v-col md="9" cols="12">

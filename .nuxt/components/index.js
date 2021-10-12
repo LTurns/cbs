@@ -1,4 +1,5 @@
 export { default as SectionsBlockQuote } from '../../components/sections/BlockQuote.vue'
+export { default as SectionsBlogEdit } from '../../components/sections/BlogEdit.vue'
 export { default as SectionsBlogPage } from '../../components/sections/BlogPage.vue'
 export { default as SectionsBrands } from '../../components/sections/Brands.vue'
 export { default as SectionsCalloutBlock } from '../../components/sections/CalloutBlock.vue'
@@ -14,6 +15,7 @@ export { default as SectionsPricing } from '../../components/sections/Pricing.vu
 export { default as SectionsProduct } from '../../components/sections/Product.vue'
 export { default as SectionsRecommendedProducts } from '../../components/sections/RecommendedProducts.vue'
 export { default as SectionsSalesTeam } from '../../components/sections/SalesTeam.vue'
+export { default as SectionsSearch } from '../../components/sections/Search.vue'
 export { default as SectionsTeam } from '../../components/sections/Team.vue'
 export { default as SectionsTestimonials } from '../../components/sections/Testimonials.vue'
 export { default as SectionsTimeline } from '../../components/sections/Timeline.vue'
@@ -31,6 +33,7 @@ export { default as UserNav } from '../../components/userNav.vue'
 export { default as UtilsValidations } from '../../components/utils/validations.js'
 
 export const LazySectionsBlockQuote = import('../../components/sections/BlockQuote.vue' /* webpackChunkName: "components/sections-block-quote" */).then(c => wrapFunctional(c.default || c))
+export const LazySectionsBlogEdit = import('../../components/sections/BlogEdit.vue' /* webpackChunkName: "components/sections-blog-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsBlogPage = import('../../components/sections/BlogPage.vue' /* webpackChunkName: "components/sections-blog-page" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsBrands = import('../../components/sections/Brands.vue' /* webpackChunkName: "components/sections-brands" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsCalloutBlock = import('../../components/sections/CalloutBlock.vue' /* webpackChunkName: "components/sections-callout-block" */).then(c => wrapFunctional(c.default || c))
@@ -46,6 +49,7 @@ export const LazySectionsPricing = import('../../components/sections/Pricing.vue
 export const LazySectionsProduct = import('../../components/sections/Product.vue' /* webpackChunkName: "components/sections-product" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsRecommendedProducts = import('../../components/sections/RecommendedProducts.vue' /* webpackChunkName: "components/sections-recommended-products" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsSalesTeam = import('../../components/sections/SalesTeam.vue' /* webpackChunkName: "components/sections-sales-team" */).then(c => wrapFunctional(c.default || c))
+export const LazySectionsSearch = import('../../components/sections/Search.vue' /* webpackChunkName: "components/sections-search" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsTeam = import('../../components/sections/Team.vue' /* webpackChunkName: "components/sections-team" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsTestimonials = import('../../components/sections/Testimonials.vue' /* webpackChunkName: "components/sections-testimonials" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionsTimeline = import('../../components/sections/Timeline.vue' /* webpackChunkName: "components/sections-timeline" */).then(c => wrapFunctional(c.default || c))

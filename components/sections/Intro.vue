@@ -1,51 +1,50 @@
 <template>
   <section>
-    <v-container>
-      <v-row>
-        <v-col
-          v-for="card in cards"
-          :key="card.title"
-          v-hover
-          class="column"
-          cols="12"
-          md="6"
-          ><v-hover v-slot="{ hover }" class="card">
-            <v-card
-              :color="color"
-              :style="{
-                height: '200px',
-              }"
-              :elevation="hover ? 24 : 5"
-              shaped
-              :class="'card pa-md-5 mx-lg-auto'"
-            >
-              <nuxt-link class="category" exact :to="card.link">
-                <v-row no-gutters>
-                  <v-col>
-                    <div class="pr-2 mt-4">
-                      <img
-                        :src="card.image"
-                        style="max-width: 130px; height: auto"
-                      />
-                      <h3
-                        :class="text"
-                        style="letter-spacing: 0.15em"
-                        v-text="card.name"
-                      ></h3>
-                    </div>
-                  </v-col>
-                </v-row>
-              </nuxt-link>
-            </v-card>
-          </v-hover>
-        </v-col>
-      </v-row>
-    </v-container>
+    <!-- <v-container> -->
+    <v-row fillheight>
+      <v-col
+        v-for="card in cards"
+        :key="card.title"
+        v-hover
+        class="column"
+        cols="12"
+        md="6"
+        ><v-hover v-slot="{ hover }" class="card">
+          <v-card
+            :color="color"
+            :style="{
+              height: '200px',
+            }"
+            :elevation="hover ? 24 : 5"
+            shaped
+            :class="'card pa-md-5 mx-lg-auto'"
+          >
+            <nuxt-link class="category" exact :to="card.link">
+              <v-row no-gutters>
+                <v-col>
+                  <div class="pr-2 mt-4">
+                    <img
+                      :src="card.image"
+                      style="max-width: 130px; height: auto"
+                    />
+                    <h3
+                      :class="text"
+                      style="letter-spacing: 0.15em"
+                      v-text="card.name"
+                    ></h3>
+                  </div>
+                </v-col>
+              </v-row>
+            </nuxt-link>
+          </v-card>
+        </v-hover>
+      </v-col>
+    </v-row>
+    <!-- </v-container> -->
   </section>
 </template>
 
 <script>
-// import axios from 'axios'
 export default {
   props: {
     color: {
@@ -62,32 +61,24 @@ export default {
       axiosCards: '',
       cards: [
         {
-          name: 'UTILITIES',
+          name: 'OVERHEAD LINE',
           image: 'utilities.svg',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          link: '/utilities',
+          link: '/overheadline',
         },
         {
-          name: 'FIBRE BLOWING',
+          name: 'FIBRE INSTALLATION',
           image: 'fibreblowing1.svg',
-          text:
-            'Our Fibre Blowing products contain Tornados, Jet Streams, Air Streams and more. We can even boast having some of the best Tornados in the industry.',
-          link: '/fibreblowing',
+          link: '/fibreinstallation',
         },
         {
-          name: 'CLIENT TOOLS',
+          name: 'KLEIN TOOLS',
           image: 'clienttools.svg',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          link: '/clienttools',
+          link: '/kleintools',
         },
         {
-          name: 'TELECOMS',
+          name: 'WINCHES AND TRAILERS',
           image: 'telecoms6.svg',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          link: '/telecoms',
+          link: '/winchesandtrailers',
         },
       ],
     }

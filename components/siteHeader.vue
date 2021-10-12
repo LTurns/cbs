@@ -33,6 +33,14 @@
         >
           {{ name.title }}
         </v-tab>
+        <v-tab>
+          <a
+            href="http://www.cbsproducts.com/wp-content/uploads/2021/03/CBS-Main-Product-Catalogue.pdf"
+            active-class="text--primary mt-10"
+            class="font-weight-bold"
+            >Download Catalogue
+          </a>
+        </v-tab>
       </v-tabs>
     </v-app-bar>
   </div>
@@ -57,18 +65,13 @@ export default {
         },
         {
           icon: 'mdi-account',
-          title: 'About',
+          title: 'About Us',
           to: '/about',
         },
         {
           icon: 'mdi-cash-usd',
           title: 'Where To Buy',
-          to: '/pricing',
-        },
-        {
-          icon: 'mdi-folder-image',
-          title: 'Download Catalogue',
-          to: '/gallery',
+          to: '/wheretobuy',
         },
         {
           icon: 'mdi-blogger',

@@ -5,7 +5,16 @@
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
             <h1>
-              <textarea
+              <v-textarea
+                :value="title.toUpperCase()"
+                label="heading"
+                dense
+                auto-grow
+                outlined
+                required
+                @input="title = $event"
+              ></v-textarea>
+              <!-- <textarea
                 :value="title.toUpperCase()"
                 cols="12"
                 rows="2"
@@ -19,10 +28,18 @@
                 "
                 class="input"
                 @input="title = $event.target.value"
-              />
+              /> -->
             </h1>
-
-            <textarea
+            <v-textarea
+              :value="intro"
+              label="intro"
+              dense
+              auto-grow
+              outlined
+              required
+              @input="intro = $event"
+            ></v-textarea>
+            <!-- <textarea
               :value="intro"
               rows="3"
               cols="12"
@@ -37,7 +54,7 @@
               class="input"
               @input="intro = $event.target.value"
             ></textarea
-            ><br />
+            ><br /> -->
             <div>
               <div class="d-inline white--text pa-2">
                 <v-select
@@ -328,7 +345,7 @@
                         >
                           <v-row>
                             <v-col cols="12" md="6" sm="12">
-                              <textarea
+                              <!-- <textarea
                                 id="text"
                                 :ref="`paragraph-${index}`"
                                 class="input"
@@ -347,7 +364,17 @@
                                 @input="
                                   description[index] = $event.target.value
                                 "
-                              ></textarea>
+                              ></textarea> -->
+                              <v-textarea
+                                label="paragraph"
+                                dense
+                                :value="paragraph.paragraph"
+                                auto-grow
+                                outlined
+                                rows="8"
+                                row-height="20"
+                                @input="description[index].paragraph = $event"
+                              ></v-textarea>
                             </v-col>
                           </v-row>
                         </div>
@@ -423,7 +450,7 @@
                             </tr>
                             <td>
                               <v-btn
-                                class="btn btn-info float-right mt-20"
+                                class="btn mt-10"
                                 @click="addFeature(index)"
                               >
                                 +
@@ -436,23 +463,14 @@
                         color="orange lighten-2"
                         dark
                         class="btn mt-10"
-                        @click="deleteFeatureBox(tableIndex, i)"
+                        @click="deleteFeatureBox(index)"
                       >
                         X
                       </v-btn>
-                      <v-btn class="btn" @click="addFeatureBox(index)">
+                      <v-btn class="btn mt-10" @click="addFeatureBox()">
                         +
                       </v-btn>
                     </v-col>
-                    <v-btn
-                      color="orange lighten-2"
-                      dark
-                      class="btn mt-10"
-                      @click="deleteFeatureBox(tableIndex, i)"
-                    >
-                      X
-                    </v-btn>
-                    <v-btn class="btn" @click="addFeatureBox(index)"> + </v-btn>
                   </v-row>
                 </v-container>
               </v-tab-item>
@@ -557,7 +575,6 @@
                         color="orange lighten-2"
                         align="center"
                         dark
-                        v-bind="attrs"
                         class="btn"
                         style="
                           display: block;
@@ -566,7 +583,6 @@
                           width: 15%;
                           margin-top: 10%;
                         "
-                        v-on="on"
                         @click="deleteAccessory(index)"
                       >
                         X
@@ -935,7 +951,6 @@
             color="orange lighten-2"
             align="center"
             dark
-            v-bind="attrs"
             class="btn"
             style="
               display: block;
@@ -944,7 +959,6 @@
               width: 15%;
               margin-top: 10%;
             "
-            v-on="on"
             @click="deleteRecommendedProduct(index)"
           >
             X
@@ -1045,7 +1059,6 @@ export default {
       }
     },
     async getProduct() {
-      this.listLoading = true
       const config = {
         headers: {
           'Access-Control-Allow-Origin': '*',
@@ -1121,6 +1134,7 @@ export default {
       }
 
       try {
+        // console.log(this.accessoryName)
         const { data } = await this.$axios.get(
           `https://cbsbackend.herokuapp.com/api/products/name/${this.accessoryName}`,
           config
@@ -1301,7 +1315,21 @@ export default {
     },
     addFeature(index) {
       this.features[index].list.push({
-        listItem: 'Automatic Cable Centralisation',
+        listItem: 'List point',
+      })
+    },
+    deleteFeatureBox(index) {
+      this.features.splice(index, 1)
+    },
+    addFeatureBox() {
+      this.features.push({
+        id: 1,
+        heading: 'Main Features',
+        list: [
+          {
+            listItem: 'List point',
+          },
+        ],
       })
     },
     deleteConfigImage(index) {

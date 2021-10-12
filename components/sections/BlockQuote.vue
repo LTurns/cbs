@@ -1,6 +1,6 @@
 <template>
   <section class="pt-10 pb-10 blockquote-section">
-    <blockquote :class="text">
+    <blockquote :class="`${text} classy-bq`">
       <slot> </slot>
     </blockquote>
   </section>
@@ -11,7 +11,7 @@ export default {
   props: {
     text: {
       type: String,
-      default: () => 'classy-bq black--text',
+      default: () => 'black--text',
     },
   },
 }
@@ -19,10 +19,9 @@ export default {
 
 <style>
 .classy-bq {
-  border-left: 5px solid rgb(11, 8, 27);
+  border-left: 5px solid rgb(240, 217, 11);
   margin: 1.5em 20px;
   padding: 0.7em 25px;
-  /* quotes: '\201C''\201D''\2018''\2019'; */
 }
 
 .blockquote-section {
@@ -30,6 +29,7 @@ export default {
   margin: 0 auto;
   opacity: 0.95;
   padding: 20px;
+  text-align: left;
 }
 
 @media screen and (max-width: 800px) {

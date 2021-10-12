@@ -1,12 +1,12 @@
 <template>
-  <section class="white">
+  <section class="blue-grey darken-4">
     <v-row no-gutters>
       <v-col cols="12" align="center">
         <SectionsHeroAlt
           :hero-alt="heroAlt"
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
         />
-        <section class="yellow darken-2">
+        <div class="yellow darken-2">
           <SectionsBlockQuote>
             <slot>
               We have had a really exciting 2021 turning 50 years old! Some
@@ -17,21 +17,12 @@
               during the war. Please check us out on LinkedIn for more
               information.
             </slot>
-            <div class="search">
-              <input
-                v-model="search"
-                type="text"
-                class="search__input"
-                aria-label="search"
-                placeholder="enter your search"
-              />
-              <button class="search__btn" aria-label="submit search">
-                <img src="/loupe.png" alt="" />
-              </button>
-            </div>
           </SectionsBlockQuote>
-        </section>
-
+          <SectionsSearch
+            v-show="productList.length != 0"
+            :data="productList"
+          />
+        </div>
         <div class="pt-10">
           <nuxt-link exact to="category/compressors" class="tag"
             >Compressors</nuxt-link
@@ -49,42 +40,23 @@
             <SectionsFeaturedProducts :data="productList" color="white" />
           </div>
         </div>
-
-        <SectionsIntro
-          class="pt-10 pb-10"
-          style="margin-bottom: 30px"
-          color="white"
-          text="text-uppercase black--text"
-        />
+        <v-container>
+          <SectionsIntro
+            class="pt-10 pb-10"
+            style="margin-bottom: 30px"
+            color="white"
+            text="text-uppercase black--text"
+          />
+        </v-container>
       </v-col>
     </v-row>
+    <!-- </v-container> -->
   </section>
 </template>
 
 <script>
-// import axios from 'axios'
 export default {
   transition: 'products',
-  // async fetch() {
-  //   try {
-  //     const result = await axios.get(
-  //       'https://tranquil-basin-55259.herokuapp.com/product-category',
-  //       {}
-  //     )
-  //     this.productList = result.data
-  //     if (this.search !== '') {
-  //       return this.productList.filter((box) => {
-  //         return box.name.toLowerCase().includes(this.search.toLowerCase())
-  //       })
-  //     }
-  //   } catch (error) {
-  //     if (this.search !== '') {
-  //       this.productList = this.$store.getters.Products.filter((box) => {
-  //         return box.name.toLowerCase().includes(this.search.toLowerCase())
-  //       })
-  //     }
-  //   }
-  // },
   data() {
     return {
       heroAlt: [
@@ -95,36 +67,6 @@ export default {
         },
       ],
       search: '',
-      cards: [
-        {
-          title: 'UTILITIES',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-material-design',
-          link: '/utilities',
-        },
-        {
-          title: 'CLIENT TOOLS',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-desktop-mac',
-          link: '/clienttools',
-        },
-        {
-          title: 'FIBRE BLOWING',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-eye',
-          link: '/fibreBlowing',
-        },
-        {
-          title: 'TELECOMS',
-          text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-          icon: 'mdi-speedometer',
-          link: '/telecoms',
-        },
-      ],
     }
   },
   computed: {
@@ -144,17 +86,12 @@ export default {
 $backgroundColor: rgb(14, 12, 24);
 $brandColor: #fde36d;
 .search {
-  // margin-left: 20%;
-  // margin-right: 20%;
+  width: 60%;
   display: flex;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
   background-color: white;
-  // border-radius: 100vh;
-  // heigth: 60px;
   padding: 3px;
   margin-top: 1%;
-  // margin-bottom: 3%;
-  width: 50%;
   position: relative;
   transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
   overflow: hidden;
@@ -162,9 +99,7 @@ $brandColor: #fde36d;
   &__input {
     flex-grow: 1;
     border: none;
-    // background: transparent;
     padding: 0 0.5rem;
-    // font-size: 1.6rem;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -222,7 +157,7 @@ $brandColor: #fde36d;
 
 .tag {
   border-radius: 3px 0 0 3px;
-  color: black !important;
+  color: white !important;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -234,7 +169,7 @@ $brandColor: #fde36d;
 }
 
 .tag::before {
-  background: rgb(5, 7, 20);
+  background: rgb(221, 163, 5);
   border-radius: 10px;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
   content: '';
@@ -247,7 +182,7 @@ $brandColor: #fde36d;
 
 .tag::after {
   border-bottom: 13px solid transparent;
-  border-left: 10px solid rgb(6, 12, 26);
+  border-left: 10px solid rgb(221, 163, 5);
   border-top: 13px solid transparent;
   content: '';
   position: absolute;

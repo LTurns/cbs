@@ -1,16 +1,19 @@
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+  <section class="blue-grey darken-4">
     <v-row no-gutters>
-      <v-col cols="12">
-        <SectionsHeroAlt
-          :hero-alt="heroAlt"
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
-        />
+      <v-col cols="12" class="yellow darken-2">
+        <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
+        <SectionsBlockQuote
+          ><slot
+            >Browse our latest blogs for all of our most recent products and
+            events.
+          </slot></SectionsBlockQuote
+        >
       </v-col>
     </v-row>
-    <v-container>
+    <v-container class="pt-10">
       <v-row>
-        <v-col cols="12" xl="2" lg="3" md="4" sm="4">
+        <v-col cols="12">
           <aside>
             <div class="search">
               <input
@@ -39,7 +42,7 @@
             <nuxt-link exact to="/article/3" class="tag">Pole Bogie</nuxt-link>
           </aside>
         </v-col>
-        <SectionsBlogs :data="BlogStories" />
+        <SectionsBlogs :data="blogList" />
       </v-row>
     </v-container>
   </section>
@@ -58,26 +61,40 @@ export default {
         },
       ],
       search: '',
+      blogList: [],
     }
   },
-  computed: {
+  created() {
+    this.getAllBlogs()
+  },
+  methods: {
+    async getAllBlogs() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const response = await this.$axios.get(
+          'https://cbsbackend.herokuapp.com/api/blogs',
+          config
+        )
+        this.blogList = response.data
+      } catch (err) {
+        throw new Error('Error Fetching Blogs')
+      }
+    },
     // BlogStories() {
+    //   if (this.search !== '') {
+    //     return this.$store.getters.BlogStories.filter((box) => {
+    //       return box.description[0].paragraph
+    //         .toLowerCase()
+    //         .includes(this.search.toLowerCase())
+    //     })
+    //   }
+
     //   return this.$store.getters.BlogStories
     // },
-    // CableBlowingEquipment() {
-    //   return this.$store.getters.cableBlowingCategory;
-    // },
-    BlogStories() {
-      if (this.search !== '') {
-        return this.$store.getters.BlogStories.filter((box) => {
-          return box.description[0].paragraph
-            .toLowerCase()
-            .includes(this.search.toLowerCase())
-        })
-      }
-
-      return this.$store.getters.BlogStories
-    },
   },
 }
 </script>

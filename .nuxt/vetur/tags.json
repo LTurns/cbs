@@ -2,6 +2,9 @@
   "SectionsBlockQuote": {
     "description": "Auto imported from components/sections/BlockQuote.vue"
   },
+  "SectionsBlogEdit": {
+    "description": "Auto imported from components/sections/BlogEdit.vue"
+  },
   "SectionsBlogPage": {
     "description": "Auto imported from components/sections/BlogPage.vue"
   },
@@ -46,6 +49,9 @@
   },
   "SectionsSalesTeam": {
     "description": "Auto imported from components/sections/SalesTeam.vue"
+  },
+  "SectionsSearch": {
+    "description": "Auto imported from components/sections/Search.vue"
   },
   "SectionsTeam": {
     "description": "Auto imported from components/sections/Team.vue"

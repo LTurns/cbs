@@ -20,7 +20,7 @@
                 v-text="plan.name"
               ></h4>
               <v-img
-                :src="`/${plan.mainImg}`"
+                :src="plan.mainImg"
                 alt=""
                 width="250"
                 :lazy-src="plan.mainImg"

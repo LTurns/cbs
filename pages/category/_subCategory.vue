@@ -5,34 +5,43 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   transition: 'subcategory',
-  async fetch() {
-    try {
-      const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product-sub-categories'
-      )
-      this.subProducts = result.data
-
-      this.subProducts.map((el) =>
-        el.subCategory === this.id ? this.productCategory.push(el) : ''
-      )
-
-      return this.productCategory
-    } catch (error) {
-      this.subProducts = this.$store.getters.SubCategories.map((el) =>
-        el.subCategory === this.id ? this.productCategory.push(el) : ''
-      )
-      return this.productCategory
-    }
-  },
   data() {
     return {
       id: this.$route.params.subCategory,
       productCategory: [],
     }
+  },
+  created() {
+    this.getSubCategory()
+  },
+  methods: {
+    async getSubCategory() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        const { data } = await this.$axios.get(
+          'https://cbsbackend.herokuapp.com/api/products',
+          config
+        )
+
+        // console.log(data)
+
+        data.forEach((product) => {
+          if (product.subCategory.toString().toLowerCase() === this.id) {
+            this.productCategory.push(product)
+          }
+        })
+
+        return this.productCategory
+      } catch (err) {
+        throw new Error('Error Fetching Products')
+      }
+    },
   },
 }
 </script>

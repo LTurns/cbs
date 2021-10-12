@@ -1,28 +1,17 @@
 <template>
   <div>
-    <SectionsBlogPage :blog="blog" />
+    <SectionsBlogPage :id="id" />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   transition: 'article',
   data() {
     return {
-      id: this.$route.params.id,
-      item: '',
+      id: this.$route.params._id,
+      blogList: [],
     }
-  },
-  computed: {
-    ...mapState(['blogStories']),
-    blog() {
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.item = this.blogStories.find((el) => el.id === this.id)
-
-      return this.item
-    },
   },
 }
 </script>

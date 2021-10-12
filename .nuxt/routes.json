@@ -42,11 +42,11 @@
     "_name": "_4f0894a6"
   },
   {
-    "name": "fibreblowing",
-    "path": "/fibreblowing",
-    "component": "/Users/elizabethturney/modevue/pages/fibreblowing.vue",
-    "chunkName": "pages/fibreblowing",
-    "_name": "_6a0123eb"
+    "name": "fibreinstallation",
+    "path": "/fibreinstallation",
+    "component": "/Users/elizabethturney/modevue/pages/fibreinstallation.vue",
+    "chunkName": "pages/fibreinstallation",
+    "_name": "_4844734f"
   },
   {
     "name": "gallery",
@@ -70,11 +70,11 @@
     "_name": "_42ee5b0c"
   },
   {
-    "name": "pricing",
-    "path": "/pricing",
-    "component": "/Users/elizabethturney/modevue/pages/pricing.vue",
-    "chunkName": "pages/pricing",
-    "_name": "_e38f43ae"
+    "name": "overheadline",
+    "path": "/overheadline",
+    "component": "/Users/elizabethturney/modevue/pages/overheadline.vue",
+    "chunkName": "pages/overheadline",
+    "_name": "_0ec0fd55"
   },
   {
     "name": "products",
@@ -91,18 +91,18 @@
     "_name": "_d43f9e2e"
   },
   {
-    "name": "telecoms",
-    "path": "/telecoms",
-    "component": "/Users/elizabethturney/modevue/pages/telecoms.vue",
-    "chunkName": "pages/telecoms",
-    "_name": "_be2c062e"
+    "name": "wheretobuy",
+    "path": "/wheretobuy",
+    "component": "/Users/elizabethturney/modevue/pages/wheretobuy.vue",
+    "chunkName": "pages/wheretobuy",
+    "_name": "_6cd63f91"
   },
   {
-    "name": "utilities",
-    "path": "/utilities",
-    "component": "/Users/elizabethturney/modevue/pages/utilities.vue",
-    "chunkName": "pages/utilities",
-    "_name": "_66c4acad"
+    "name": "winchesandtrailers",
+    "path": "/winchesandtrailers",
+    "component": "/Users/elizabethturney/modevue/pages/winchesandtrailers.vue",
+    "chunkName": "pages/winchesandtrailers",
+    "_name": "_a69a3b56"
   },
   {
     "name": "article-id",
@@ -110,6 +110,13 @@
     "component": "/Users/elizabethturney/modevue/pages/article/_id.vue",
     "chunkName": "pages/article/_id",
     "_name": "_0f536c84"
+  },
+  {
+    "name": "blogEdit-id",
+    "path": "/blogEdit/:id?",
+    "component": "/Users/elizabethturney/modevue/pages/blogEdit/_id.vue",
+    "chunkName": "pages/blogEdit/_id",
+    "_name": "_14f70124"
   },
   {
     "name": "category-subCategory",

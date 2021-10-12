@@ -35,7 +35,8 @@
           <v-row class="py-16 ml-20">
             <v-col md="9" cols="12">
               <p class="mb-10 ml-20 mr-20">
-                Thanks for your enquiry. We'll get back to you shortly.
+                Please enquire about a product using the form below.
+                Alternatively, our consultant would be glad to assist.
               </p>
               <productsform />
             </v-col>
@@ -48,7 +49,7 @@
                     box-shadow: 0 4px 6px -6px #222;
                   "
                 >
-                  Chat to a Consultant:
+                  Ring a Consultant:
                 </h3>
                 <SectionsTeam :our-team="ourTeam" class="mb-10" />
               </div>
@@ -180,10 +181,10 @@ export default {
       ],
       ourTeam: [
         {
-          name: 'Andy Sibun',
-          position: 'Technical Manager',
-          phone: '01572898515',
-          email: 'andy.sibun@cbsproducts.com',
+          name: 'Ray Gladwinfield',
+          position: 'Sales Manager',
+          phone: '01572898502',
+          email: 'ray.gladwinfield@cbsproducts.com',
           photo: '',
         },
       ],

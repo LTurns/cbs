@@ -1,7 +1,7 @@
-exports.ids = [14];
+exports.ids = [15];
 exports.modules = {
 
-/***/ 397:
+/***/ 405:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59,20 +59,20 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./pages/login.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_loginvue_type_script_lang_js_ = (loginvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
+var componentNormalizer = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
-var installComponents = __webpack_require__(8);
+var installComponents = __webpack_require__(7);
 var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VCol.js
-var VCol = __webpack_require__(311);
+var VCol = __webpack_require__(316);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VContainer.js + 1 modules
-var VContainer = __webpack_require__(324);
+var VContainer = __webpack_require__(328);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VRow.js
-var VRow = __webpack_require__(312);
+var VRow = __webpack_require__(317);
 
 // CONCATENATED MODULE: ./pages/login.vue
 
@@ -99,7 +99,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var login = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents_default()(component, {SectionsUserAuthForm: __webpack_require__(119).default})
+installComponents_default()(component, {SectionsUserAuthForm: __webpack_require__(123).default})
 
 
 /* vuetify-loader */

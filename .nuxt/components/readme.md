@@ -7,6 +7,7 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<SectionsBlockQuote>` | `<sections-block-quote>` (components/sections/BlockQuote.vue)
+- `<SectionsBlogEdit>` | `<sections-blog-edit>` (components/sections/BlogEdit.vue)
 - `<SectionsBlogPage>` | `<sections-blog-page>` (components/sections/BlogPage.vue)
 - `<SectionsBrands>` | `<sections-brands>` (components/sections/Brands.vue)
 - `<SectionsCalloutBlock>` | `<sections-callout-block>` (components/sections/CalloutBlock.vue)
@@ -22,6 +23,7 @@ You can directly use them in pages and other components without the need to impo
 - `<SectionsProduct>` | `<sections-product>` (components/sections/Product.vue)
 - `<SectionsRecommendedProducts>` | `<sections-recommended-products>` (components/sections/RecommendedProducts.vue)
 - `<SectionsSalesTeam>` | `<sections-sales-team>` (components/sections/SalesTeam.vue)
+- `<SectionsSearch>` | `<sections-search>` (components/sections/Search.vue)
 - `<SectionsTeam>` | `<sections-team>` (components/sections/Team.vue)
 - `<SectionsTestimonials>` | `<sections-testimonials>` (components/sections/Testimonials.vue)
 - `<SectionsTimeline>` | `<sections-timeline>` (components/sections/Timeline.vue)

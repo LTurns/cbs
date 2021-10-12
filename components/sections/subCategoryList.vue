@@ -23,7 +23,7 @@
                 v-text="plan.name"
               ></h4>
               <v-img
-                :src="`../${plan.mainImg}`"
+                :src="plan.mainImg"
                 width="250"
                 :lazy-src="plan.mainImg"
                 aspect-ratio="1"

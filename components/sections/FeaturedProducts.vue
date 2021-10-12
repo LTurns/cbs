@@ -35,7 +35,7 @@
               <!-- <v-list>
                   <v-list-item> -->
               <div style="position: absolute; bottom: 0; left: 35%">
-                <div v-if="plan.subCategory.length === 0">
+                <div v-show="!showSubCategory(plan.name)">
                   <nuxt-link class="link" :to="`/product/${plan._id}`">
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -48,10 +48,10 @@
                     >
                   </nuxt-link>
                 </div>
-                <div v-else>
+                <div v-show="showSubCategory(plan.name)">
                   <nuxt-link
                     class="link align-center"
-                    :to="`/category/${plan.subCategory}`"
+                    :to="`/category/${plan.subCategory[0]}`"
                   >
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -103,8 +103,25 @@ export default {
       default: () => 'feature',
     },
   },
+  data() {
+    return {
+      subCategories: ['accessories', 'compressors'],
+    }
+  },
   methods: {
-    link() {},
+    showSubCategory(name) {
+      if (this.subCategories.includes(name.toLowerCase())) {
+        return true
+      }
+    },
+    // categoryName() {
+    //   console.log('hellooooo', this.data)
+    //   this.data.map((product) => {
+    //     if (product.subCategory !== 0) {
+    //       return this.subCategories.push(product)
+    //     }
+    //   })
+    // },
   },
 }
 </script>
