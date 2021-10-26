@@ -27,12 +27,6 @@
           <nuxt-link exact to="category/compressors" class="tag"
             >Compressors</nuxt-link
           >
-          <nuxt-link exact to="product/tGGW0ov0fkKzK9ax7QYLHA" class="tag"
-            >Tornado</nuxt-link
-          >
-          <nuxt-link exact to="product/xS0KUwWdbEqPrt5pKjhfSA" class="tag"
-            >Hurricaine</nuxt-link
-          >
           <nuxt-link exact to="category/accessories" class="tag"
             >Fibre Blowing - Accessories</nuxt-link
           >

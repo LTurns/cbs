@@ -51,7 +51,10 @@ export default {
         )
 
         data.forEach((product) => {
-          if (product.category === 'Fibre Blowing') {
+          if (
+            product.category === 'Fibre Blowing' &&
+            product.subCategory.length === 0
+          ) {
             this.filteredList.push(product)
           }
         })

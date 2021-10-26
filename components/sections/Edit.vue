@@ -64,17 +64,70 @@
                 ></v-select>
               </div>
             </div>
-            <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
-              Product ID
+            <div>
+              <p>Will this be a category?</p>
+              <v-checkbox
+                v-model="checkbox"
+                :label="checkbox.toString()"
+              ></v-checkbox>
+
+              <div v-if="checkbox">
+                <p>Which items belong to this subcategory?</p>
+                <v-select
+                  v-model="subcategoryItems"
+                  :items="items"
+                  attach
+                  multiple
+                  chips
+                  style="
+                    width: 80%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                  @change="addItem"
+                ></v-select>
+              </div>
             </div>
-            <div class="d-inline white--text pa-2">
-              <input
-                ref="productId"
-                type="text"
-                class="input black--text"
-                :value="productId"
-                @input="productId = $event.target.value"
-              />
+
+            <!-- <p>Is this item a sub-category of another product?</p>
+              <v-checkbox
+                v-model="checkbox2"
+                :label="checkbox2.toString()"
+                @change="changeSubCategory"
+              ></v-checkbox>
+            </div>
+
+            <div v-if="checkbox2">
+              <p>What sub-category does this product belong to?</p>
+              <v-select
+                v-model="subCategoryNames"
+                :items="items"
+                attach
+                multiple
+                chips
+                style="
+                  width: 80%;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+                @change="addSubCategory"
+              ></v-select>
+            </div> -->
+            <div v-if="!checkbox">
+              <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
+                Product ID
+              </div>
+              <div class="d-inline white--text pa-2">
+                <input
+                  ref="productId"
+                  type="text"
+                  class="input black--text"
+                  :value="productId"
+                  @input="productId = $event.target.value"
+                />
+              </div>
             </div>
             <br /><br />
             <nuxt-link to="#" class="learn">
@@ -112,21 +165,15 @@
                     class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
                     style="letter-spacing: 0.15em; font-size: 20px"
                   >
-                    <textarea
+                    <v-textarea
                       :value="title.toUpperCase()"
-                      cols="12"
-                      rows="2"
-                      style="
-                        word-wrap: break-word;
-                        resize: none;
-                        padding: 15px;
-                        text-align: center;
-                        max-width: 400px;
-                        min-width: 330px;
-                      "
-                      class="input"
-                      @input="title = $event.target.value"
-                    />
+                      label="heading"
+                      dense
+                      auto-grow
+                      outlined
+                      required
+                      @input="title = $event"
+                    ></v-textarea>
                   </h4>
 
                   <v-btn
@@ -157,22 +204,14 @@
                     class="subtitle-1 black--text mb-10"
                     style="text-align: center"
                   >
-                    <textarea
+                    <v-textarea
                       :value="intro"
-                      cols="12"
-                      rows="4"
-                      style="
-                        max-width: 750px;
-                        text-align: center;
-                        min-width: 440px;
-                        overflow: hidden;
-                        word-wrap: break-word;
-                        resize: none;
-                        padding: 10px;
-                      "
-                      class="input"
-                      @input="intro = $event.target.value"
-                    />
+                      label="intro"
+                      auto-grow
+                      outlined
+                      class="mb-10"
+                      @input="intro = $event"
+                    ></v-textarea>
                   </v-card-text>
                   <div
                     style="
@@ -182,7 +221,7 @@
                       left: 35%;
                     "
                   >
-                    <div v-if="plan.subCategory.length === 0">
+                    <!-- <div v-if="plan.subCategory.length === 0">
                       <nuxt-link class="link" :to="`/product/${plan._id}`">
                         <v-btn
                           :x-large="$vuetify.breakpoint.smAndUp"
@@ -194,7 +233,7 @@
                           >View</v-btn
                         >
                       </nuxt-link>
-                    </div>
+                    </div> -->
                   </div>
                 </v-card></v-hover
               >
@@ -318,34 +357,29 @@
 
             <v-tabs-items v-model="tab">
               <v-tab-item :key="1" value="features">
-                <v-container
+                <!-- <v-container
                   fluid
                   mt="10"
                   :class="
                     $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
                   "
-                >
-                  <v-row class="mx-auto mb-7 mt-3">
-                    <v-col cols="12" md="12" sm="12">
+                > -->
+                <v-row :class="'grey lighten-4 pl-5 pr-5 mt-4 mb-4'">
+                  <v-col cols="12" md="12" sm="12">
+                    <div
+                      style="
+                        line-height: 30px;
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                      "
+                    >
                       <div
-                        :class="
-                          $vuetify.theme.dark
-                            ? 'grey darken-4'
-                            : 'grey lighten-4'
-                        "
-                        style="
-                          line-height: 30px;
-                          font-size: 15px;
-                          margin-bottom: 20px;
-                        "
+                        v-for="(paragraph, index) in description"
+                        :key="paragraph.id"
                       >
-                        <div
-                          v-for="(paragraph, index) in description"
-                          :key="paragraph.id"
-                        >
-                          <v-row>
-                            <v-col cols="12" md="6" sm="12">
-                              <!-- <textarea
+                        <v-row>
+                          <v-col cols="12" md="12" sm="12">
+                            <!-- <textarea
                                 id="text"
                                 :ref="`paragraph-${index}`"
                                 class="input"
@@ -365,41 +399,47 @@
                                   description[index] = $event.target.value
                                 "
                               ></textarea> -->
-                              <v-textarea
-                                label="paragraph"
-                                dense
-                                :value="paragraph.paragraph"
-                                auto-grow
-                                outlined
-                                rows="8"
-                                row-height="20"
-                                @input="description[index].paragraph = $event"
-                              ></v-textarea>
-                            </v-col>
-                          </v-row>
-                        </div>
+                            <v-textarea
+                              label="paragraph"
+                              dense
+                              :value="paragraph.paragraph"
+                              auto-grow
+                              outlined
+                              @input="description[index].paragraph = $event"
+                            ></v-textarea>
+                          </v-col>
+                        </v-row>
                       </div>
-                    </v-col>
-                    <v-col
-                      v-for="(feature, index) in features"
-                      :key="feature[index]"
-                      cols="12"
-                      md="6"
+                    </div>
+                  </v-col>
+                  <v-col
+                    v-for="(feature, index) in features"
+                    :key="feature[index]"
+                    cols="12"
+                    md="6"
+                  >
+                    <v-card
+                      id="feature-card"
+                      class="mx-auto"
+                      :elevation="hover ? 24 : 6"
                     >
-                      <v-card
-                        id="feature-card"
-                        class="mx-auto transition-swing"
-                        :elevation="hover ? 24 : 6"
+                      <h4
+                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                        style="
+                          letter-spacing: 0.15em;
+                          border-bottom: 2px solid #fde36d;
+                          box-shadow: 0 4px 6px -6px;
+                        "
                       >
-                        <h4
-                          class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                          style="
-                            letter-spacing: 0.15em;
-                            border-bottom: 2px solid #fde36d;
-                            box-shadow: 0 4px 6px -6px;
-                          "
-                        >
-                          <input
+                        <v-textarea
+                          label="heading"
+                          dense
+                          :value="feature.heading.toUpperCase()"
+                          auto-grow
+                          outlined
+                          @input="features[index].heading = $event"
+                        ></v-textarea>
+                        <!-- <input
                             :value="feature.heading.toUpperCase()"
                             style="
                               overflow: hidden;
@@ -414,65 +454,62 @@
                             @input="
                               features[index].heading = $event.target.value
                             "
-                          />
-                        </h4>
-                        <table>
-                          <tbody>
-                            <tr
-                              v-for="(item, i) in feature.list"
-                              :key="item.listItem"
-                            >
-                              <td>
-                                <textarea
-                                  class="input"
-                                  type="text"
-                                  style="
-                                    overflow: hidden;
-                                    padding: 15px;
-                                    word-wrap: break-word;
-                                    resize: none;
-                                    min-width: 350px;
-                                  "
-                                  :value="item.listItem"
-                                  @click="item.listItem = $event.target.value"
-                                />
-                              </td>
-                              <td>
-                                <v-btn
-                                  color="orange lighten-2"
-                                  dark
-                                  class="btn"
-                                  @click="deleteFeature(index, i)"
-                                >
-                                  X
-                                </v-btn>
-                              </td>
-                            </tr>
+                          /> -->
+                      </h4>
+                      <table>
+                        <tbody>
+                          <tr
+                            v-for="(item, i) in feature.list"
+                            :key="item.listItem"
+                          >
+                            <td>
+                              <textarea
+                                class="input"
+                                type="text"
+                                style="
+                                  overflow: hidden;
+                                  padding: 15px;
+                                  word-wrap: break-word;
+                                  resize: none;
+                                  min-width: 200px;
+                                "
+                                :value="item.listItem"
+                                @click="item.listItem = $event.target.value"
+                              />
+                            </td>
                             <td>
                               <v-btn
-                                class="btn mt-10"
-                                @click="addFeature(index)"
+                                color="orange lighten-2"
+                                dark
+                                class="btn"
+                                @click="deleteFeature(index, i)"
                               >
-                                +
+                                X
                               </v-btn>
                             </td>
-                          </tbody>
-                        </table>
-                      </v-card>
-                      <v-btn
-                        color="orange lighten-2"
-                        dark
-                        class="btn mt-10"
-                        @click="deleteFeatureBox(index)"
-                      >
-                        X
-                      </v-btn>
-                      <v-btn class="btn mt-10" @click="addFeatureBox()">
-                        +
-                      </v-btn>
-                    </v-col>
-                  </v-row>
-                </v-container>
+                          </tr>
+                          <td>
+                            <v-btn class="btn mt-10" @click="addFeature(index)">
+                              +
+                            </v-btn>
+                          </td>
+                        </tbody>
+                      </table>
+                    </v-card>
+                    <v-btn
+                      color="orange lighten-2"
+                      dark
+                      class="btn mt-10"
+                      @click="deleteFeatureBox(index)"
+                    >
+                      X
+                    </v-btn>
+                    <v-btn class="btn mt-10" @click="addFeatureBox()">
+                      +
+                    </v-btn>
+                  </v-col>
+                </v-row>
+                <!-- </v-container> -->
               </v-tab-item>
 
               <!-- Accessories  -->
@@ -612,7 +649,17 @@
                     v-for="(paragraph, index) in configurationIntro"
                     :key="paragraph[index]"
                   >
-                    <textarea
+                    <v-textarea
+                      label="paragraph"
+                      dense
+                      :value="paragraph.paragraph"
+                      auto-grow
+                      outlined
+                      rows="8"
+                      row-height="20"
+                      @input="configurationIntro[index].paragraph = $event"
+                    ></v-textarea>
+                    <!-- <textarea
                       id="text"
                       :ref="`paragraph-${index}`"
                       class="input"
@@ -629,7 +676,7 @@
                         width: 1000px;
                       "
                       @input="configurationIntro[index] = $event.target.value"
-                    ></textarea>
+                    ></textarea> -->
                   </div>
                 </v-card-text>
                 <v-card
@@ -637,151 +684,157 @@
                   class="mx-auto transition-swing"
                   :elevation="hover ? 24 : 6"
                 >
-                  <v-row
-                    v-for="(table, tableIndex) in tables"
-                    :key="table[tableIndex]"
-                  >
-                    <table>
-                      <thead>
-                        <th
-                          v-for="(heading, index) in configHeadings"
-                          :key="heading[index]"
-                          align-center
-                        >
-                          {{ heading }}
-                        </th>
-                      </thead>
+                  <div v-if="$device.isMobile">
+                    Please use a laptop to view and edit configuration tables
+                  </div>
+                  <div v-else>
+                    <v-row
+                      v-for="(table, tableIndex) in tables"
+                      :key="table[tableIndex]"
+                    >
+                      <table>
+                        <thead>
+                          <th
+                            v-for="(heading, index) in configHeadings"
+                            :key="heading[index]"
+                            align-center
+                          >
+                            {{ heading }}
+                          </th>
+                        </thead>
 
-                      <tbody>
-                        <tr>
-                          <td>
-                            <input
-                              :value="table.title.toUpperCase()"
-                              cols="12"
-                              rows="1"
-                              style="
-                                word-wrap: break-word;
-                                resize: none;
-                                padding: 15px;
-                                align-self: center;
-                                margin: 10px;
-                              "
-                              class="input"
-                              @input="
-                                tables[tableIndex].title = $event.target.value
-                              "
-                            />
-                          </td>
-                          <td>
-                            <!-- <form align="center"> -->
-                            <!-- <div class="form-group"> -->
-                            <v-btn>
+                        <tbody>
+                          <tr>
+                            <td>
                               <input
-                                type="file"
-                                accept="image/*"
-                                @change="
-                                  saveConfigImage($event, tableIndex)
-                                " /></v-btn
-                            ><br /><br />
-                            <!-- <template v-if="images.length"> -->
-                            <!-- <div> -->
-                            <table>
-                              <tbody>
-                                <td>
-                                  <v-img
-                                    max-height="50"
-                                    :src="table.image"
-                                    max-width="30"
-                                  >
-                                  </v-img>
-                                </td>
-                                <td>
-                                  <v-btn
-                                    class="btn"
-                                    @click="deleteConfigImage(tableIndex)"
-                                  >
-                                    X
-                                  </v-btn>
-                                </td>
-                              </tbody>
-                            </table>
-                            <!-- </div>
-                          </template> -->
-                            <!-- </form> -->
-                          </td>
-                          <td>
-                            <table>
-                              <thead>
-                                <tr>
-                                  <th>Item Description</th>
-                                  <th>Part No</th>
-                                  <th>Remove Item</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr
-                                  v-for="(item, i) in table.items"
-                                  :key="item[i]"
-                                >
+                                :value="table.title.toUpperCase()"
+                                cols="12"
+                                rows="1"
+                                style="
+                                  word-wrap: break-word;
+                                  resize: none;
+                                  padding: 15px;
+                                  align-self: center;
+                                  margin: 10px;
+                                "
+                                class="input"
+                                @input="
+                                  tables[tableIndex].title = $event.target.value
+                                "
+                              />
+                            </td>
+                            <td>
+                              <!-- <form align="center"> -->
+                              <!-- <div class="form-group"> -->
+                              <v-btn>
+                                <input
+                                  type="file"
+                                  accept="image/*"
+                                  @change="
+                                    saveConfigImage($event, tableIndex)
+                                  " /></v-btn
+                              ><br /><br />
+                              <!-- <template v-if="images.length"> -->
+                              <!-- <div> -->
+                              <table>
+                                <tbody>
                                   <td>
-                                    <input
-                                      :value="item['Item Description']"
-                                      cols="12"
-                                      rows="1"
-                                      style="align-self: center"
-                                      class="input"
-                                      @input="
-                                        tables[tableIndex].items[i][
-                                          'Item Description'
-                                        ] = $event.target.value
-                                      "
-                                    />
-                                  </td>
-                                  <td>
-                                    <input
-                                      :value="item['Part No']"
-                                      cols="12"
-                                      rows="1"
-                                      style="align-self: center"
-                                      class="input"
-                                      @input="
-                                        tables[tableIndex].items[i]['Part No'] =
-                                          $event.target.value
-                                      "
-                                    />
+                                    <v-img
+                                      max-height="50"
+                                      :src="table.image"
+                                      max-width="30"
+                                    >
+                                    </v-img>
                                   </td>
                                   <td>
                                     <v-btn
-                                      color="orange lighten-2"
-                                      dark
                                       class="btn"
-                                      @click="deleteTableRow(tableIndex, i)"
+                                      @click="deleteConfigImage(tableIndex)"
                                     >
                                       X
                                     </v-btn>
                                   </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <v-btn
-                              class="btn btn-info float-right mt-10"
-                              @click="addTableRow(index)"
-                            >
-                              +
-                            </v-btn>
-                          </td>
-                          <td>
-                            <v-btn
-                              class="btn"
-                              @click="deleteConfigTable(index)"
-                            >
-                              X
-                            </v-btn>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </v-row>
+                                </tbody>
+                              </table>
+                              <!-- </div>
+                          </template> -->
+                              <!-- </form> -->
+                            </td>
+                            <td>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Item Description</th>
+                                    <th>Part No</th>
+                                    <th>Remove Item</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr
+                                    v-for="(item, i) in table.items"
+                                    :key="item[i]"
+                                  >
+                                    <td>
+                                      <input
+                                        :value="item['Item Description']"
+                                        cols="12"
+                                        rows="1"
+                                        style="align-self: center"
+                                        class="input"
+                                        @input="
+                                          tables[tableIndex].items[i][
+                                            'Item Description'
+                                          ] = $event.target.value
+                                        "
+                                      />
+                                    </td>
+                                    <td>
+                                      <input
+                                        :value="item['Part No']"
+                                        cols="12"
+                                        rows="1"
+                                        style="align-self: center"
+                                        class="input"
+                                        @input="
+                                          tables[tableIndex].items[i][
+                                            'Part No'
+                                          ] = $event.target.value
+                                        "
+                                      />
+                                    </td>
+                                    <td>
+                                      <v-btn
+                                        color="orange lighten-2"
+                                        dark
+                                        class="btn"
+                                        @click="deleteTableRow(tableIndex, i)"
+                                      >
+                                        X
+                                      </v-btn>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <v-btn
+                                class="btn btn-info float-right mt-10"
+                                @click="addTableRow(index)"
+                              >
+                                +
+                              </v-btn>
+                            </td>
+                            <td>
+                              <v-btn
+                                class="btn"
+                                @click="deleteConfigTable(index)"
+                              >
+                                X
+                              </v-btn>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </v-row>
+                  </div>
                 </v-card>
               </v-tab-item>
               <v-tab-item :key="4" value="video">
@@ -870,6 +923,7 @@
         :items="items"
         attach
         chips
+        multiple
         label="Select Products"
         style="
           width: 80%;
@@ -993,10 +1047,14 @@ export default {
     },
   },
   data: () => ({
+    allProducts: '',
+    checkbox: '',
+    checkbox2: '',
     item: [],
     categories: ['Fibre Blowing', 'Klein Tools', 'Utilities', 'Telecoms'],
     accessoryName: '',
     items: [],
+    subCategory: [],
     areFeatures: true,
     areAccessories: true,
     areConfig: true,
@@ -1022,12 +1080,17 @@ export default {
     recommendedProducts: '',
     mainImg: '',
     countInStock: 0,
-    allProducts: '',
     recommendedProductName: '',
+    subCategoryNames: [],
+    subcategoryItems: [],
+    subcategoryItem: '',
   }),
   created() {
     this.getProduct()
-    this.getAllProducts()
+    console.log('yo mounted', this.subcategoryItems)
+    if (this.subcategoryItems.length === 0) {
+      this.checkbox = false
+    }
   },
   methods: {
     showAccessories() {
@@ -1049,13 +1112,30 @@ export default {
           config
         )
 
+        this.allProducts = response.data
+
         for (const product of response.data) {
           this.items.push(product.name)
+
+          if (product.subCategory.includes(this.title)) {
+            this.subcategoryItems.push(product.name)
+          }
+
+          if (this.subCategory.includes(product.name)) {
+            this.subCategoryNames.push(product.name)
+          }
         }
 
         return this.items
       } catch (err) {
         throw new Error('Error Fetching Products')
+      }
+    },
+    isMobile() {
+      if (screen.width <= 760) {
+        return true
+      } else {
+        return false
       }
     },
     async getProduct() {
@@ -1082,6 +1162,7 @@ export default {
         this.description = this.item[0].description
         this.features = this.item[0].features
         this.mainImg = this.item[0].mainImg
+        this.subCategory = this.item[0].subCategory
         this.videos = this.item[0].videos
         this.configurationIntro = this.item[0].configurationIntro
         this.configurationTitle = this.item[0].configurationTitle
@@ -1091,13 +1172,134 @@ export default {
         this.recommendedProducts = this.item[0].recommendedProducts
         this.mainImg = this.item[0].mainImg
         this.countInStock = this.item[0].countInStock
+        this.checkbox = this.item[0].hasSubCategories
 
-        // console.log('heyyyyy', this.images)
-
+        this.getAllProducts()
         return this.item
       } catch (error) {
         throw new Error(error)
       }
+    },
+    addItem() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+
+      if (this.checkbox) {
+        this.productId = ''
+      }
+
+      if (this.subcategoryItems.length === 0) {
+        this.checkbox = false
+      }
+
+      this.allProducts.forEach((item) => {
+        console.log('yesssss', this.title)
+        console.log('heyyyyyyyy', item.subCategory)
+        if (!this.subcategoryItems.includes(item.name)) {
+          item.subCategory.forEach(async (sub, index) => {
+            console.log('hellooooo', sub)
+            if (sub.toString() === this.title) {
+              const subCategory = item.subCategory.splice(index, 1)
+              console.log('yellowww', item.subCategory)
+              console.log('yoooooo', subCategory)
+
+              const { data } = await this.$axios.get(
+                `https://cbsbackend.herokuapp.com/api/products/name/${item.name}`,
+                config
+              )
+
+              const response = {
+                user: data[0].user,
+                name: data[0].name,
+                productId: data[0].productId,
+                description: data[0].description,
+                img: data[0].img,
+                mainImg: data[0].mainImg,
+                category: data[0].category,
+                subCategory: item.subCategory,
+                features: data[0].features,
+                intro: data[0].intro,
+                videos: data[0].videos,
+                configurationTitle: data[0].configurationTitle,
+                configurationIntro: data[0].configurationIntro,
+                configurationImage: data[0].configurationImage,
+                tables: data[0].tables,
+                countInStock: data[0].countInStock,
+                accessories: data[0].accessories,
+                recommendedProducts: data[0].recommendedProducts,
+                enquiries: data[0].enquiries,
+                hasSubCategories: false,
+              }
+
+              try {
+                await this.$axios.put(
+                  `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+                  response,
+                  config
+                )
+
+                console.log(response)
+
+                return response
+              } catch (error) {
+                throw new Error(error)
+              }
+            }
+          })
+        }
+      })
+
+      this.subcategoryItems.forEach(async (element) => {
+        try {
+          // console.log(this.accessoryName)
+          const { data } = await this.$axios.get(
+            `https://cbsbackend.herokuapp.com/api/products/name/${element}`,
+            config
+          )
+
+          const response = {
+            user: data[0].user,
+            name: data[0].name,
+            productId: data[0].productId,
+            description: data[0].description,
+            img: data[0].img,
+            mainImg: data[0].mainImg,
+            category: data[0].category,
+            subCategory: this.title,
+            features: data[0].features,
+            intro: data[0].intro,
+            videos: data[0].videos,
+            configurationTitle: data[0].configurationTitle,
+            configurationIntro: data[0].configurationIntro,
+            configurationImage: data[0].configurationImage,
+            tables: data[0].tables,
+            countInStock: data[0].countInStock,
+            accessories: data[0].accessories,
+            recommendedProducts: data[0].recommendedProducts,
+            enquiries: data[0].enquiries,
+            hasSubCategories: false,
+          }
+
+          try {
+            await this.$axios.put(
+              `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+              response,
+              config
+            )
+
+            console.log(response)
+
+            return response
+          } catch (error) {
+            throw new Error(error)
+          }
+        } catch (error) {
+          throw new Error(error)
+        }
+      })
     },
     async saveImages(event) {
       const input = event.target.files[0]
@@ -1159,31 +1361,185 @@ export default {
     deleteAccessory(index) {
       this.accessories.splice(index, 1)
     },
-    // async saveAccessoryImage(event, index) {
-    //   const input = event.target.files[0]
-    //   const formData = new FormData()
+    addSubCategory() {
+      if (this.checkbox2) {
+        this.subCategoryNames.forEach(async (subCategoryName) => {
+          this.subCategory.push(subCategoryName)
 
-    //   formData.append('image', input)
+          const config = {
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+            },
+          }
 
-    //   try {
-    //     const config = {
-    //       headers: {
-    //         'Content-Type': 'multipart/form-data',
-    //         'Access-Control-Allow-Origin': '*',
-    //       },
-    //     }
+          try {
+            const { data } = await this.$axios.get(
+              `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
+              config
+            )
 
-    //     const { data } = await this.$axios.post(
-    //       'https://cbsbackend.herokuapp.com/api/upload/',
-    //       formData,
-    //       config
-    //     )
+            this.subCategory.push(subCategoryName)
 
-    //     this.accessories[index].mainImg = data
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // },
+            const response = {
+              user: data[0].user,
+              name: data[0].name,
+              productId: data[0].productId,
+              description: data[0].description,
+              img: data[0].img,
+              mainImg: data[0].mainImg,
+              category: data[0].category,
+              subCategory: data[0].subCategory,
+              features: data[0].features,
+              intro: data[0].intro,
+              videos: data[0].videos,
+              configurationTitle: data[0].configurationTitle,
+              configurationIntro: data[0].configurationIntro,
+              configurationImage: data[0].configurationImage,
+              tables: data[0].tables,
+              countInStock: data[0].countInStock,
+              accessories: data[0].accessories,
+              recommendedProducts: data[0].recommendedProducts,
+              enquiries: data[0].enquiries,
+              hasSubCategories: true,
+            }
+
+            try {
+              await this.$axios.put(
+                `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+                response,
+                config
+              )
+
+              console.log(response)
+
+              return response
+            } catch (error) {
+              throw new Error(error)
+            }
+          } catch (error) {
+            throw new Error(error)
+          }
+        })
+      } else {
+        this.subCategoryNames.forEach(async (subCategoryName) => {
+          this.subCategory.push(subCategoryName)
+
+          const config = {
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+            },
+          }
+
+          try {
+            const { data } = await this.$axios.get(
+              `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
+              config
+            )
+
+            this.subCategory.push(subCategoryName)
+
+            const response = {
+              user: data[0].user,
+              name: data[0].name,
+              productId: data[0].productId,
+              description: data[0].description,
+              img: data[0].img,
+              mainImg: data[0].mainImg,
+              category: data[0].category,
+              subCategory: data[0].subCategory,
+              features: data[0].features,
+              intro: data[0].intro,
+              videos: data[0].videos,
+              configurationTitle: data[0].configurationTitle,
+              configurationIntro: data[0].configurationIntro,
+              configurationImage: data[0].configurationImage,
+              tables: data[0].tables,
+              countInStock: data[0].countInStock,
+              accessories: data[0].accessories,
+              recommendedProducts: data[0].recommendedProducts,
+              enquiries: data[0].enquiries,
+              hasSubCategories: true,
+            }
+
+            try {
+              await this.$axios.put(
+                `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+                response,
+                config
+              )
+
+              console.log(response)
+
+              return response
+            } catch (error) {
+              throw new Error(error)
+            }
+          } catch (error) {
+            throw new Error(error)
+          }
+        })
+      }
+    },
+    changeSubCategory() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+
+      if (this.checkbox2) {
+        this.addSubCategory()
+      } else {
+        this.subCategory.forEach(async (sub) => {
+          try {
+            const { data } = await this.$axios.get(
+              `https://cbsbackend.herokuapp.com/api/products/name/${sub}`,
+              config
+            )
+
+            const response = {
+              name: data[0].name,
+              productId: data[0].productId,
+              description: data[0].description,
+              img: data[0].img,
+              mainImg: data[0].mainImg,
+              category: data[0].category,
+              subCategory: data[0].subCategory,
+              features: data[0].features,
+              intro: data[0].intro,
+              videos: data[0].videos,
+              configurationTitle: data[0].configurationTitle,
+              configurationIntro: data[0].configurationIntro,
+              configurationImage: data[0].configurationImage,
+              tables: data[0].tables,
+              countInStock: data[0].countInStock,
+              accessories: data[0].accessories,
+              recommendedProducts: data[0].recommendedProducts,
+              enquiries: data[0].enquiries,
+              hasSubCategories: false,
+            }
+
+            this.subCategory = []
+
+            try {
+              await this.$axios.put(
+                `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+                response,
+                config
+              )
+
+              console.log(response)
+
+              return response
+            } catch (error) {
+              throw new Error(error)
+            }
+          } catch (error) {
+            throw new Error(error)
+          }
+        })
+      }
+    },
     async addRecommendedProducts() {
       const config = {
         headers: {
@@ -1351,6 +1707,8 @@ export default {
       this.videos.splice(index, 1)
     },
     async save() {
+      console.log(this.checkbox)
+
       const data = {
         user: this.$auth.user,
         name: this.title,
@@ -1359,7 +1717,7 @@ export default {
         img: this.images,
         mainImg: this.mainImg,
         category: this.category,
-        subCategory: [],
+        subCategory: this.subCategory,
         features: this.features,
         intro: this.intro,
         videos: this.videos,
@@ -1370,6 +1728,8 @@ export default {
         countInStock: this.countInStock,
         accessories: this.accessories,
         recommendedProducts: this.recommendedProducts,
+        enquiries: 0,
+        hasSubCategories: this.checkbox,
       }
 
       const config = {
@@ -1424,8 +1784,8 @@ table tbody tr:nth-child(2n) td {
 }
 
 #about {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 td {
@@ -1901,9 +2261,9 @@ img {
   margin-top: 1rem;
 }
 
-#feature-card {
+/* #feature-card {
   min-height: 800px;
-}
+} */
 /*
 @media (max-width: 768px) {
   .section-showcase .container {

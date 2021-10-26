@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SectionsSubCategoryList :data="productCategory" />
+    <SectionsFeaturedProducts :data="productCategory" />
   </div>
 </template>
 
@@ -17,6 +17,9 @@ export default {
     this.getSubCategory()
   },
   methods: {
+    capitalise(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+    },
     async getSubCategory() {
       const config = {
         headers: {
@@ -32,9 +35,11 @@ export default {
         // console.log(data)
 
         data.forEach((product) => {
-          if (product.subCategory.toString().toLowerCase() === this.id) {
-            this.productCategory.push(product)
-          }
+          product.subCategory.forEach((category) => {
+            if (category.toLowerCase() === this.id) {
+              this.productCategory.push(product)
+            }
+          })
         })
 
         return this.productCategory

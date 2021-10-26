@@ -1,9 +1,3 @@
-/* eslint-disable vue/no-side-effects-in-computed-properties */ /*
-eslint-disable vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */ /* eslint-disable
-vue/no-side-effects-in-computed-properties */
 <template>
   <section>
     <div v-for="product in data" :key="product.productId">
@@ -65,121 +59,107 @@ vue/no-side-effects-in-computed-properties */
       </v-row>
 
       <!-- Large Text -->
-      <section id="about" class="section-large-text">
-        <!-- <div class="overlay"> -->
-        <v-tabs v-model="tab" black--text center light class="">
-          <v-tabs-slider></v-tabs-slider>
+      <!-- <div
+        id="about"
+        class="section-large-text orange lighten-3 pt-5 pb-5 ml-0 mr-0"
+      > -->
+      <!-- <div class="overlay"> -->
+      <v-tabs v-model="tab" pb="20" black--text center dark>
+        <v-tabs-slider></v-tabs-slider>
 
-          <v-tab href="#features" class="ml-20"> Features </v-tab>
-          <!-- <v-tab href="#more"> Images </v-tab> -->
-          <v-tab v-show="product.accessories.length != 0" href="#accessories">
-            Accessories</v-tab
-          >
-          <v-tab v-show="product.tables.length != 0" href="#config">
-            Configuration
-          </v-tab>
-          <v-tab v-show="product.videos.length > 0" href="#video">
-            Video Tutorials
-          </v-tab>
-        </v-tabs>
+        <v-tab href="#features" class="ml-30"> Features </v-tab>
+        <!-- <v-tab href="#more"> Images </v-tab> -->
+        <v-tab v-show="product.accessories.length != 0" href="#accessories">
+          Accessories</v-tab
+        >
+        <v-tab v-show="product.tables.length != 0" href="#config">
+          Configuration
+        </v-tab>
+        <v-tab v-show="product.videos.length > 0" href="#video">
+          Video Tutorials
+        </v-tab>
+      </v-tabs>
 
-        <v-tabs-items v-model="tab">
-          <v-tab-item :key="1" value="features">
-            <v-container
-              fluid
-              mt="10"
-              :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
-            >
-              <!-- <v-row class="mx-auto mb-7 mt-3"> -->
-              <v-col cols="12" md="12" sm="12">
+      <v-tabs-items v-model="tab">
+        <v-tab-item :key="1" value="features">
+          <v-row fluid mt="10" pb="10" class="grey lighten-4">
+            <!-- <v-row class="mx-auto mb-7 mt-3"> -->
+            <v-col cols="12" md="12" sm="12">
+              <div
+                style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+              >
                 <div
-                  :class="
-                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                  "
-                  style="
-                    line-height: 30px;
-                    font-size: 15px;
-                    margin-bottom: 20px;
-                  "
+                  v-for="paragraph in product.description"
+                  :key="paragraph.id"
                 >
-                  <div
-                    v-for="paragraph in product.description"
-                    :key="paragraph.id"
+                  <p
+                    class="black--text mt-5 ml-5"
+                    style="
+                      line-height: 30px;
+                      font-size: 16px;
+                      margin-bottom: 20px;
+                    "
                   >
-                    <p
-                      class="black--text mt-5"
-                      style="
-                        line-height: 30px;
-                        font-size: 15px;
-                        margin-bottom: 20px;
-                      "
-                    >
-                      {{ paragraph.paragraph }}
-                    </p>
-                  </div>
+                    {{ paragraph.paragraph }}
+                  </p>
                 </div>
-                <v-col
-                  v-for="feature in product.features"
-                  :key="feature.id"
-                  cols="12"
-                  md="12"
-                  sm="12"
-                  align="center"
-                >
-                  <v-card>
-                    <v-list-item-content>
-                      <!-- <v-toolbar color="yellow" light> -->
-                      <h4
-                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                        style="
-                          letter-spacing: 0.15em;
-                          border-bottom: 2px solid #fde36d;
-                          box-shadow: 0 10px 10px -10px;
-                        "
-                        v-text="feature.heading"
-                      ></h4>
-                      <!-- </v-toolbar> -->
-                      <v-list-item
-                        v-for="item in feature.list"
-                        :key="item.listItem"
-                        class="list pt-0 lighten-2"
-                      >
-                        {{ item.listItem }}
-                      </v-list-item>
-                    </v-list-item-content>
-                  </v-card>
-                  <!-- </v-hover> -->
-                  <!-- <v-card-text>Features</v-card-text> -->
-                </v-col>
+              </div>
+              <v-col
+                v-for="feature in product.features"
+                :key="feature.id"
+                cols="12"
+                md="12"
+                sm="12"
+                align="center"
+              >
+                <v-card>
+                  <!-- <v-list-item-content> -->
+                  <!-- <v-toolbar color="yellow" light> -->
+                  <h4
+                    class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                    style="
+                      letter-spacing: 0.15em;
+                      border-bottom: 2px solid #fde36d;
+                      box-shadow: 0 10px 10px -10px;
+                    "
+                    v-text="feature.heading"
+                  ></h4>
+                  <!-- </v-toolbar> -->
+                  <v-list-item
+                    v-for="item in feature.list"
+                    :key="item.listItem"
+                    class="list pt-0 lighten-2"
+                    style="text-align: left"
+                  >
+                    {{ item.listItem }}
+                  </v-list-item>
+                  <!-- </v-list-item-content> -->
+                </v-card>
+                <!-- </v-hover> -->
+                <!-- <v-card-text>Features</v-card-text> -->
               </v-col>
-              <!-- </v-row> -->
-            </v-container>
-          </v-tab-item>
-          <v-tab-item :key="2" value="accessories">
-            <v-card flat>
-              <SectionsFeaturedProducts :data="product.accessories" />
-            </v-card>
-          </v-tab-item>
-          <v-tab-item
-            :key="3"
-            value="config"
-            :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
-          >
-            <v-card-text
-              class="black--text pb-10"
-              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
-            >
+            </v-col>
+            <!-- </v-row> -->
+          </v-row>
+        </v-tab-item>
+        <v-tab-item :key="2" value="accessories">
+          <v-card>
+            <SectionsFeaturedProducts
+              :color="'grey lighten-4'"
+              :data="product.accessories"
+            />
+          </v-card>
+        </v-tab-item>
+        <v-tab-item :key="3" value="config">
+          <v-card class="grey lighten-4">
+            <v-card-text>
               <div
                 v-for="paragraph in product.configurationIntro"
                 :key="paragraph.id"
               >
                 <p
                   class="black--text mt-5"
-                  style="
-                    line-height: 30px;
-                    font-size: 15px;
-                    margin-bottom: 20px;
-                  "
+                  style="line-height: 30px; font-size: 15px; margin-bottom: 5px"
                 >
                   {{ paragraph.paragraph }}
                 </p>
@@ -187,7 +167,7 @@ vue/no-side-effects-in-computed-properties */
             </v-card-text>
             <v-card
               min-height="600"
-              class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-10"
+              class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-3"
               :elevation="hover ? 24 : 6"
             >
               <!-- <h4
@@ -276,51 +256,43 @@ vue/no-side-effects-in-computed-properties */
                 </v-col>
               </v-row>
             </v-card>
-          </v-tab-item>
-          <v-tab-item :key="4" value="video">
-            <v-container
-              fluid
-              mt="10"
-              :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
-            >
-              <v-card
-                flat
-                :class="
-                  $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                "
-              >
-                <div v-for="video in product.videos" :key="video.title">
-                  <v-col cols="12" md="12" align-self="center">
-                    <h4
-                      class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                      style="
-                        letter-spacing: 0.15em;
-                        border-bottom: 2px solid #fde36d;
-                        box-shadow: 0 4px 6px -6px;
-                      "
-                      v-text="video.title"
-                    ></h4>
-                    <!-- <div
+          </v-card>
+        </v-tab-item>
+        <v-tab-item :key="4" value="video">
+          <!-- <v-container fluid mt="10"> -->
+          <v-card class="grey lighten-4">
+            <div v-for="video in product.videos" :key="video.title">
+              <v-col cols="12" md="12" align-self="center">
+                <h4
+                  class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                  style="
+                    letter-spacing: 0.15em;
+                    border-bottom: 2px solid #fde36d;
+                    box-shadow: 0 4px 6px -6px;
+                  "
+                  v-text="video.title"
+                ></h4>
+                <!-- <div
                       v-for="video in product.video.split(',')"
                       :key="video.id"
                     > -->
-                    <iframe
-                      class="video"
-                      style="background-color: white"
-                      :src="video.video"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                    <!-- </div> -->
-                  </v-col>
-                </div>
-              </v-card>
-            </v-container>
-          </v-tab-item>
-          <v-tab-item :key="5" value="more">
-            <!-- <v-carousel class="carousel" show-arrows-on-hover draggable="true">
+                <iframe
+                  class="video"
+                  style="background-color: white"
+                  :src="video.video"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+                <!-- </div> -->
+              </v-col>
+            </div>
+          </v-card>
+          <!-- </v-container> -->
+        </v-tab-item>
+        <v-tab-item :key="5" value="more">
+          <!-- <v-carousel class="carousel" show-arrows-on-hover draggable="true">
               <v-carousel-item
                 v-for="image in product.img"
                 :key="image.id"
@@ -337,11 +309,16 @@ vue/no-side-effects-in-computed-properties */
                 </v-container>
               </v-carousel-item>
             </v-carousel> -->
-          </v-tab-item>
-        </v-tabs-items>
-        <!-- </v-card> -->
-        <!-- </div> -->
-      </section>
+        </v-tab-item>
+      </v-tabs-items>
+      <!-- </v-card> -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <h4
+        class="text-h4 text-center font-weight-bold mb-xs-4 mt-10 mb-5 pl-5 pr-5"
+      >
+        SIMILAR PRODUCTS
+      </h4>
       <SectionsRecommendedProducts :data="product.recommendedProducts" />
     </div>
   </section>

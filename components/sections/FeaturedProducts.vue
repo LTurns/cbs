@@ -1,10 +1,9 @@
-/* eslint-disable vue/require-prop-types */
 <template>
   <section :class="color">
-    <v-container fluid>
-      <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
-        <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
-          <!-- <div v-show="plan.subCategory.length == 0"> -->
+    <v-container>
+      <!-- <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10"> -->
+      <v-row mb="10">
+        <v-col v-for="(plan, ix) in data" :key="ix" md="4">
           <v-hover v-slot="{ hover }" class="card">
             <v-card
               :elevation="hover ? 24 : 4"
@@ -30,12 +29,21 @@
               <!-- <img :src="plan.mainImg" width="250" /> -->
               <v-card-text
                 class="subtitle-1 black--text"
+                style="text-align: center; padding: 5%"
                 v-text="plan.intro"
               ></v-card-text>
               <!-- <v-list>
                   <v-list-item> -->
-              <div style="position: absolute; bottom: 0; left: 35%">
-                <div v-show="!showSubCategory(plan.name)">
+              <div
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  right: 10px;
+                  display: block;
+                  margin-right: 5%;
+                "
+              >
+                <div v-if="!plan.hasSubCategories">
                   <nuxt-link class="link" :to="`/product/${plan._id}`">
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -48,10 +56,10 @@
                     >
                   </nuxt-link>
                 </div>
-                <div v-show="showSubCategory(plan.name)">
+                <div v-if="plan.hasSubCategories">
                   <nuxt-link
                     class="link align-center"
-                    :to="`/category/${plan.subCategory[0]}`"
+                    :to="`/category/${plan.name.toLowerCase()}`"
                   >
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -66,11 +74,26 @@
                 </div>
               </div>
               <!-- Product ID -->
-              <!-- </div>
-                <div class="d-inline black white--text pa-2">
-                  <{{ plan.productId }} -->
-              <!-- </div> -->
-              <!-- </div> -->
+              <div v-if="plan.productId.length !== 0">
+                <div
+                  class="d-inline black--text pa-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    margin-left: 2%;
+                  "
+                >
+                  {{ plan.productId }}
+                </div>
+              </div>
+              <div v-else>
+                <div class="ribbon ribbon-bottom-left">
+                  <span>More Products</span>
+                </div>
+              </div>
+
               <!-- <v-btn
                       color="primary"
                       large
@@ -84,7 +107,6 @@
                 </v-list> -->
             </v-card></v-hover
           >
-          <!-- </div> -->
         </v-col>
       </v-row>
     </v-container>
@@ -105,12 +127,12 @@ export default {
   },
   data() {
     return {
-      subCategories: ['accessories', 'compressors'],
+      categories: ['Accessories', 'Compressors'],
     }
   },
   methods: {
     showSubCategory(name) {
-      if (this.subCategories.includes(name.toLowerCase())) {
+      if (this.subCategories.includes(name)) {
         return true
       }
     },
@@ -151,5 +173,58 @@ export default {
   margin-right: auto;
   display: block;
   width: 100px;
+}
+
+/* common */
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #f5773c;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #f5773c;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 600 13px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* bottom left*/
+.ribbon-bottom-left {
+  bottom: -10px;
+  left: -10px;
+}
+.ribbon-bottom-left::before,
+.ribbon-bottom-left::after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-bottom-left::before {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-bottom-left::after {
+  top: 0;
+  left: 0;
+}
+.ribbon-bottom-left span {
+  right: -25px;
+  bottom: 30px;
+  transform: rotate(45deg);
 }
 </style>
