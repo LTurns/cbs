@@ -59,183 +59,188 @@
       </v-row>
 
       <!-- Large Text -->
-      <!-- <div
-        id="about"
-        class="section-large-text orange lighten-3 pt-5 pb-5 ml-0 mr-0"
-      > -->
-      <!-- <div class="overlay"> -->
-      <v-tabs v-model="tab" pb="20" black--text center dark>
-        <v-tabs-slider></v-tabs-slider>
+      <div id="about" class="pt-5 pb-5 ml-0 mr-0">
+        <!-- <div class="overlay"> -->
+        <v-tabs v-model="tab" pb="20" black--text center dark>
+          <v-tabs-slider></v-tabs-slider>
 
-        <v-tab href="#features" class="ml-30"> Features </v-tab>
-        <!-- <v-tab href="#more"> Images </v-tab> -->
-        <v-tab v-show="product.accessories.length != 0" href="#accessories">
-          Accessories</v-tab
-        >
-        <v-tab v-show="product.tables.length != 0" href="#config">
-          Configuration
-        </v-tab>
-        <v-tab v-show="product.videos.length > 0" href="#video">
-          Video Tutorials
-        </v-tab>
-      </v-tabs>
+          <v-tab href="#features" class="ml-30"> Features </v-tab>
+          <!-- <v-tab href="#more"> Images </v-tab> -->
+          <v-tab v-show="product.accessories.length != 0" href="#accessories">
+            Accessories</v-tab
+          >
+          <v-tab v-show="product.tables.length != 0" href="#config">
+            Configuration
+          </v-tab>
+          <v-tab v-show="product.videos.length > 0" href="#video">
+            Video Tutorials
+          </v-tab>
+        </v-tabs>
 
-      <v-tabs-items v-model="tab">
-        <v-tab-item :key="1" value="features">
-          <v-row fluid mt="10" pb="10" class="grey lighten-4">
-            <!-- <v-row class="mx-auto mb-7 mt-3"> -->
-            <v-col cols="12" md="12" sm="12">
-              <div
-                style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
-              >
+        <v-tabs-items v-model="tab">
+          <v-tab-item :key="1" value="features">
+            <v-row fluid mt="10" pb="10" class="grey lighten-4">
+              <!-- <v-row class="mx-auto mb-7 mt-3"> -->
+              <v-col cols="12" md="12" sm="12">
                 <div
-                  v-for="paragraph in product.description"
+                  style="
+                    line-height: 30px;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div
+                    v-for="paragraph in product.description"
+                    :key="paragraph.id"
+                  >
+                    <p
+                      class="black--text mt-5 ml-5"
+                      style="
+                        line-height: 30px;
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                      "
+                    >
+                      {{ paragraph.paragraph }}
+                    </p>
+                  </div>
+                </div>
+                <v-col
+                  v-for="feature in product.features"
+                  :key="feature.id"
+                  cols="12"
+                  md="12"
+                  sm="12"
+                  align="center"
+                >
+                  <v-card>
+                    <!-- <v-list-item-content> -->
+                    <!-- <v-toolbar color="yellow" light> -->
+                    <h4
+                      class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                      style="
+                        letter-spacing: 0.15em;
+                        border-bottom: 2px solid #fde36d;
+                        box-shadow: 0 10px 10px -10px;
+                      "
+                      v-text="feature.heading"
+                    ></h4>
+                    <!-- </v-toolbar> -->
+                    <v-list-item
+                      v-for="item in feature.list"
+                      :key="item.listItem"
+                      class="list pt-0 lighten-2"
+                      style="text-align: left"
+                    >
+                      {{ item.listItem }}
+                    </v-list-item>
+                    <!-- </v-list-item-content> -->
+                  </v-card>
+                  <!-- </v-hover> -->
+                  <!-- <v-card-text>Features</v-card-text> -->
+                </v-col>
+              </v-col>
+              <!-- </v-row> -->
+            </v-row>
+          </v-tab-item>
+          <v-tab-item :key="2" value="accessories">
+            <v-card>
+              <SectionsFeaturedProducts
+                :color="'grey lighten-4'"
+                :data="product.accessories"
+              />
+            </v-card>
+          </v-tab-item>
+          <v-tab-item :key="3" value="config">
+            <v-card class="grey lighten-4">
+              <v-card-text>
+                <div
+                  v-for="paragraph in product.configurationIntro"
                   :key="paragraph.id"
                 >
                   <p
-                    class="black--text mt-5 ml-5"
+                    class="black--text mt-5"
                     style="
                       line-height: 30px;
-                      font-size: 16px;
-                      margin-bottom: 20px;
+                      font-size: 15px;
+                      margin-bottom: 5px;
                     "
                   >
                     {{ paragraph.paragraph }}
                   </p>
                 </div>
-              </div>
-              <v-col
-                v-for="feature in product.features"
-                :key="feature.id"
-                cols="12"
-                md="12"
-                sm="12"
-                align="center"
+              </v-card-text>
+              <v-card
+                min-height="600"
+                class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-3"
+                :elevation="hover ? 24 : 6"
               >
-                <v-card>
-                  <!-- <v-list-item-content> -->
-                  <!-- <v-toolbar color="yellow" light> -->
-                  <h4
-                    class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                    style="
-                      letter-spacing: 0.15em;
-                      border-bottom: 2px solid #fde36d;
-                      box-shadow: 0 10px 10px -10px;
-                    "
-                    v-text="feature.heading"
-                  ></h4>
-                  <!-- </v-toolbar> -->
-                  <v-list-item
-                    v-for="item in feature.list"
-                    :key="item.listItem"
-                    class="list pt-0 lighten-2"
-                    style="text-align: left"
-                  >
-                    {{ item.listItem }}
-                  </v-list-item>
-                  <!-- </v-list-item-content> -->
-                </v-card>
-                <!-- </v-hover> -->
-                <!-- <v-card-text>Features</v-card-text> -->
-              </v-col>
-            </v-col>
-            <!-- </v-row> -->
-          </v-row>
-        </v-tab-item>
-        <v-tab-item :key="2" value="accessories">
-          <v-card>
-            <SectionsFeaturedProducts
-              :color="'grey lighten-4'"
-              :data="product.accessories"
-            />
-          </v-card>
-        </v-tab-item>
-        <v-tab-item :key="3" value="config">
-          <v-card class="grey lighten-4">
-            <v-card-text>
-              <div
-                v-for="paragraph in product.configurationIntro"
-                :key="paragraph.id"
-              >
-                <p
-                  class="black--text mt-5"
-                  style="line-height: 30px; font-size: 15px; margin-bottom: 5px"
-                >
-                  {{ paragraph.paragraph }}
-                </p>
-              </div>
-            </v-card-text>
-            <v-card
-              min-height="600"
-              class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-3"
-              :elevation="hover ? 24 : 6"
-            >
-              <!-- <h4
+                <!-- <h4
               class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
               style="letter-spacing: 0.15em"
               v-text="data.configurationTitle"
             ></h4> -->
-              <!-- <v-img
+                <!-- <v-img
               max-height="800"
               :src="`/${data.configImage}`"
               max-width="700"
               class="mx-auto mt-10"
               :lazy-src="`/${data.configImage}`"
             /> -->
-              <v-row
-                v-for="table in product.tables"
-                :key="table.id"
-                no-gutters
-                class="flex-row mr-4 ml-4"
-              >
-                <v-col cols="12" md="12" align-self="center">
-                  <h4
-                    class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                    style="
-                      letter-spacing: 0.15em;
-                      border-bottom: 2px solid #fde36d;
-                      box-shadow: 0 4px 6px -6px;
-                    "
-                    v-text="table.title"
-                  ></h4>
-                </v-col>
-                <v-col cols="12" md="4" align-self="center">
-                  <v-img
-                    max-height="500"
-                    :src="table.image"
-                    max-width="300"
-                    class="mx-auto"
-                    :lazy-src="table.image"
-                  >
-                  </v-img>
-                </v-col>
-                <v-col cols="12" md="8" align-self="center" class="mt-5 mb-5">
-                  <div class="white--text">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th
-                            v-for="(column, index) in table.columns"
-                            :key="index"
-                          >
-                            {{ column }}
-                          </th>
-                          <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr v-for="(item, index) in table.items" :key="index">
-                          <td
-                            v-for="(column, columnIndex) in table.columns"
-                            :key="columnIndex"
-                            class="black--text"
-                          >
-                            {{ item[column] }}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
+                <v-row
+                  v-for="table in product.tables"
+                  :key="table.id"
+                  no-gutters
+                  class="flex-row mr-4 ml-4"
+                >
+                  <v-col cols="12" md="12" align-self="center">
+                    <h4
+                      class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                      style="
+                        letter-spacing: 0.15em;
+                        border-bottom: 2px solid #fde36d;
+                        box-shadow: 0 4px 6px -6px;
+                      "
+                      v-text="table.title"
+                    ></h4>
+                  </v-col>
+                  <v-col cols="12" md="4" align-self="center">
+                    <v-img
+                      max-height="500"
+                      :src="table.image"
+                      max-width="300"
+                      class="mx-auto"
+                      :lazy-src="table.image"
+                    >
+                    </v-img>
+                  </v-col>
+                  <v-col cols="12" md="8" align-self="center" class="mt-5 mb-5">
+                    <div class="white--text">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th
+                              v-for="(column, index) in table.columns"
+                              :key="index"
+                            >
+                              {{ column }}
+                            </th>
+                            <!-- <th v-for="heading in table.headings">{{heading}}</th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-for="(item, index) in table.items" :key="index">
+                            <td
+                              v-for="(column, columnIndex) in table.columns"
+                              :key="columnIndex"
+                              class="black--text"
+                            >
+                              {{ item[column] }}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- <h3 class="text-h5 text-uppercase font-weight-thin text-center">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 </h3>
                 <p>
@@ -252,68 +257,47 @@
                   aspernatur aut odit aut fugit, sed quia consequuntur magni
                   dolores eos
                 </p> -->
-                  </div>
-                </v-col>
-              </v-row>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-card>
-          </v-card>
-        </v-tab-item>
-        <v-tab-item :key="4" value="video">
-          <!-- <v-container fluid mt="10"> -->
-          <v-card class="grey lighten-4">
-            <div v-for="video in product.videos" :key="video.title">
-              <v-col cols="12" md="12" align-self="center">
-                <h4
-                  class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
-                  style="
-                    letter-spacing: 0.15em;
-                    border-bottom: 2px solid #fde36d;
-                    box-shadow: 0 4px 6px -6px;
-                  "
-                  v-text="video.title"
-                ></h4>
-                <!-- <div
+          </v-tab-item>
+          <v-tab-item :key="4" value="video">
+            <!-- <v-container fluid mt="10"> -->
+            <v-card class="grey lighten-4">
+              <div v-for="video in product.videos" :key="video.title">
+                <v-col cols="12" md="12" align-self="center">
+                  <h4
+                    class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                    style="
+                      letter-spacing: 0.15em;
+                      border-bottom: 2px solid #fde36d;
+                      box-shadow: 0 4px 6px -6px;
+                    "
+                    v-text="video.title"
+                  ></h4>
+                  <!-- <div
                       v-for="video in product.video.split(',')"
                       :key="video.id"
                     > -->
-                <iframe
-                  class="video"
-                  style="background-color: white"
-                  :src="video.video"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <!-- </div> -->
-              </v-col>
-            </div>
-          </v-card>
-          <!-- </v-container> -->
-        </v-tab-item>
-        <v-tab-item :key="5" value="more">
-          <!-- <v-carousel class="carousel" show-arrows-on-hover draggable="true">
-              <v-carousel-item
-                v-for="image in product.img"
-                :key="image.id"
-                class="align-center"
-              >
-                <v-container>
-                  <div>
-                    <v-img
-                      style="max-width: 500px; height: auto"
-                      :src="`../${image.image}`"
-                      class="mx-auto"
-                    />
-                  </div>
-                </v-container>
-              </v-carousel-item>
-            </v-carousel> -->
-        </v-tab-item>
-      </v-tabs-items>
-      <!-- </v-card> -->
-      <!-- </div> -->
-      <!-- </div> -->
+                  <iframe
+                    class="video"
+                    style="background-color: white"
+                    :src="video.video"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <!-- </div> -->
+                </v-col>
+              </div>
+            </v-card>
+          </v-tab-item>
+          <v-tab-item :key="5" value="more"> </v-tab-item>
+        </v-tabs-items>
+      </div>
       <h4
         class="text-h4 text-center font-weight-bold mb-xs-4 mt-10 mb-5 pl-5 pr-5"
       >

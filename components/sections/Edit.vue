@@ -1087,7 +1087,6 @@ export default {
   }),
   created() {
     this.getProduct()
-    console.log('yo mounted', this.subcategoryItems)
     if (this.subcategoryItems.length === 0) {
       this.checkbox = false
     }
@@ -1196,15 +1195,10 @@ export default {
       }
 
       this.allProducts.forEach((item) => {
-        console.log('yesssss', this.title)
-        console.log('heyyyyyyyy', item.subCategory)
         if (!this.subcategoryItems.includes(item.name)) {
           item.subCategory.forEach(async (sub, index) => {
-            console.log('hellooooo', sub)
             if (sub.toString() === this.title) {
-              const subCategory = item.subCategory.splice(index, 1)
-              console.log('yellowww', item.subCategory)
-              console.log('yoooooo', subCategory)
+              item.subCategory.splice(index, 1)
 
               const { data } = await this.$axios.get(
                 `https://cbsbackend.herokuapp.com/api/products/name/${item.name}`,
@@ -1240,8 +1234,6 @@ export default {
                   response,
                   config
                 )
-
-                console.log(response)
 
                 return response
               } catch (error) {
@@ -1289,8 +1281,6 @@ export default {
               response,
               config
             )
-
-            console.log(response)
 
             return response
           } catch (error) {
@@ -1410,8 +1400,6 @@ export default {
                 config
               )
 
-              console.log(response)
-
               return response
             } catch (error) {
               throw new Error(error)
@@ -1467,8 +1455,6 @@ export default {
                 response,
                 config
               )
-
-              console.log(response)
 
               return response
             } catch (error) {
@@ -1527,8 +1513,6 @@ export default {
                 response,
                 config
               )
-
-              console.log(response)
 
               return response
             } catch (error) {
@@ -1707,8 +1691,6 @@ export default {
       this.videos.splice(index, 1)
     },
     async save() {
-      console.log(this.checkbox)
-
       const data = {
         user: this.$auth.user,
         name: this.title,
