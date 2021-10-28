@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="search">
+    <div class="search yellow darken-1">
       <input
         v-model="search"
         type="text"
@@ -53,7 +53,6 @@ $brandColor: #fde36d;
   background-color: white;
   // border-radius: 100vh;
   // heigth: 60px;
-  padding: 3px;
   margin-top: 3%;
   margin-bottom: 3%;
   width: 50%;

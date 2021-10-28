@@ -43,4 +43,13 @@ export default {
 .site-footer a {
   text-decoration: none;
 }
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
 </style>

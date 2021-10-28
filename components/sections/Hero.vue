@@ -19,16 +19,21 @@
                   <v-row align-center>
                     <v-col>
                       <div
-                        class="white--text carousel-title text-md-h2 text-sm-h3 text-h6 font-weight-black"
+                        class="
+                          black--text
+                          carousel-title
+                          text-md-h2 text-sm-h3 text-h6
+                          font-weight-black
+                        "
                       >
                         {{ carousel.heading.toUpperCase() }}
                       </div>
-                      <p style="font-size: 17px" class="white--text">
+                      <p style="font-size: 17px" class="black--text">
                         {{ carousel.subHeading }}
                       </p>
                       <v-btn
                         :x-large="$vuetify.breakpoint.smAndUp"
-                        class="my-3 yellow darken-1"
+                        class="my-3 black--text yellow darken-1"
                         >With a new battery powered range</v-btn
                       >
                       <span class="mx-2 my-4"></span>
@@ -39,7 +44,7 @@
             </v-carousel>
           </div>
         </v-col>
-        <v-col cols="12" md="6" sm="12" class="white--text">
+        <v-col cols="12" md="6" sm="12" class="black--text">
           <div class="mb-10">
             <categories class="categories" />
           </div>

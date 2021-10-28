@@ -17,7 +17,7 @@
             }"
             :elevation="hover ? 24 : 5"
             shaped
-            :class="'card pa-md-5 mx-lg-auto'"
+            :class="'card white pa-md-5 mx-lg-auto'"
           >
             <nuxt-link class="category" exact :to="card.link">
               <v-row no-gutters>
@@ -53,7 +53,7 @@ export default {
     },
     text: {
       type: String,
-      default: () => 'text-uppercase white--text',
+      default: () => 'text-uppercase black--text',
     },
   },
   data() {

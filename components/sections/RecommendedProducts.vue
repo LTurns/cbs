@@ -15,7 +15,15 @@
               class="mx-auto transition-swing"
             >
               <h4
-                class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                class="
+                  text-uppercase text-center
+                  black--text
+                  mt-5
+                  pt-5
+                  pl-5
+                  pr-5
+                  pb-5
+                "
                 style="letter-spacing: 0.15em; font-size: 20px"
                 v-text="plan.name"
               ></h4>

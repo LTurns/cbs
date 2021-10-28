@@ -115,14 +115,14 @@ export default {
 
 <style>
 .hero {
-  background-image: url('../static/wires.jpeg');
-  background-size: cover;
-}
-
-.feature {
   background-image: url('../static/orangeWire.png');
   background-size: cover;
 }
+
+/* .feature {
+  background-image: url('../static/orangeWire.png');
+  background-size: cover;
+} */
 
 .home-enter-active,
 .home-leave-active {

@@ -14,7 +14,15 @@
               class="mx-auto transition-swing"
             >
               <h4
-                class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                class="
+                  text-uppercase text-center
+                  black--text
+                  mt-5
+                  pt-5
+                  pl-5
+                  pr-5
+                  pb-5
+                "
                 style="letter-spacing: 0.15em; font-size: 20px"
                 v-text="plan.name"
               ></h4>
@@ -22,7 +30,7 @@
                 :src="plan.mainImg"
                 alt=""
                 width="250"
-                :lazy-src="plan.mainImg"
+                :lazy-src="`../${plan.mainImg}`"
                 aspect-ratio="1"
                 class="image grey lighten-2 rounded-lg mt-5 mb-10"
               ></v-img>
@@ -124,26 +132,6 @@ export default {
       type: String,
       default: () => 'feature',
     },
-  },
-  data() {
-    return {
-      categories: ['Accessories', 'Compressors'],
-    }
-  },
-  methods: {
-    showSubCategory(name) {
-      if (this.subCategories.includes(name)) {
-        return true
-      }
-    },
-    // categoryName() {
-    //   console.log('hellooooo', this.data)
-    //   this.data.map((product) => {
-    //     if (product.subCategory !== 0) {
-    //       return this.subCategories.push(product)
-    //     }
-    //   })
-    // },
   },
 }
 </script>

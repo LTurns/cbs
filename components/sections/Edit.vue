@@ -162,7 +162,15 @@
                   class="mx-auto transition-swing"
                 >
                   <h4
-                    class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                    class="
+                      text-uppercase text-center
+                      black--text
+                      mt-5
+                      pt-5
+                      pl-5
+                      pr-5
+                      pb-5
+                    "
                     style="letter-spacing: 0.15em; font-size: 20px"
                   >
                     <v-textarea
@@ -424,7 +432,18 @@
                       :elevation="hover ? 24 : 6"
                     >
                       <h4
-                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
+                        class="
+                          text-uppercase
+                          yellow
+                          lighten-2
+                          text-center
+                          mt-10
+                          mb-3
+                          pt-5
+                          pl-2
+                          pr-2
+                          pb-5
+                        "
                         style="
                           letter-spacing: 0.15em;
                           border-bottom: 2px solid #fde36d;
@@ -554,7 +573,15 @@
                           class="mx-auto transition-swing"
                         >
                           <h4
-                            class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                            class="
+                              text-uppercase text-center
+                              black--text
+                              mt-5
+                              pt-5
+                              pl-5
+                              pr-5
+                              pb-5
+                            "
                             style="letter-spacing: 0.15em; font-size: 20px"
                             v-text="plan.name"
                           ></h4>
@@ -923,7 +950,6 @@
         :items="items"
         attach
         chips
-        multiple
         label="Select Products"
         style="
           width: 80%;
@@ -952,7 +978,15 @@
               class="mx-auto transition-swing"
             >
               <h4
-                class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
+                class="
+                  text-uppercase text-center
+                  black--text
+                  mt-5
+                  pt-5
+                  pl-5
+                  pr-5
+                  pb-5
+                "
                 style="letter-spacing: 0.15em; font-size: 20px"
                 v-text="plan.name"
               ></h4>
@@ -1013,7 +1047,7 @@
               width: 15%;
               margin-top: 10%;
             "
-            @click="deleteRecommendedProduct(index)"
+            @click="deleteRecommendedProduct(ix)"
           >
             X
           </v-btn>
@@ -1051,7 +1085,12 @@ export default {
     checkbox: '',
     checkbox2: '',
     item: [],
-    categories: ['Fibre Blowing', 'Klein Tools', 'Utilities', 'Telecoms'],
+    categories: [
+      'Fibre Installation',
+      'Klein Tools',
+      'Winches and Trailers',
+      'Overhead Line',
+    ],
     accessoryName: '',
     items: [],
     subCategory: [],
@@ -1077,10 +1116,11 @@ export default {
     video: '',
     videoTitle: '',
     configImage: '',
-    recommendedProducts: '',
+    recommendedProducts: [],
     mainImg: '',
     countInStock: 0,
     recommendedProductName: '',
+    accessories: '',
     subCategoryNames: [],
     subcategoryItems: [],
     subcategoryItem: '',
@@ -1326,7 +1366,6 @@ export default {
       }
 
       try {
-        // console.log(this.accessoryName)
         const { data } = await this.$axios.get(
           `https://cbsbackend.herokuapp.com/api/products/name/${this.accessoryName}`,
           config
@@ -1541,7 +1580,7 @@ export default {
           id: data[0].id,
           name: data[0].name,
           category: data[0].category,
-          subCategory: data[0].subCategory.toString(),
+          subCategory: data[0].subCategory,
           productId: data[0].productId,
           intro: data[0].intro,
           mainImg: data[0].mainImg,

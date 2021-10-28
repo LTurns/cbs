@@ -21,7 +21,13 @@
             {{ blog[0].heading }}
           </h3>
           <h3
-            class="text-h5 text-uppercase font-weight-thin text-center my-8 black--text"
+            class="
+              text-h5 text-uppercase
+              font-weight-thin
+              text-center
+              my-8
+              black--text
+            "
           >
             {{ blog[0].subheading }}
           </h3>
