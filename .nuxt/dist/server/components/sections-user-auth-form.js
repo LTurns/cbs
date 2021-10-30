@@ -1,7 +1,7 @@
 exports.ids = [26,28];
 exports.modules = {
 
-/***/ 287:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38,7 +38,7 @@ const emailFormat = () => {
 
 /***/ }),
 
-/***/ 332:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,7 +53,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/sections/UserAuthForm.vue?vue&type=template&id=1c2b582a&scoped=true&
 
 // EXTERNAL MODULE: ./components/utils/validations.js
-var validations = __webpack_require__(287);
+var validations = __webpack_require__(282);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/sections/UserAuthForm.vue?vue&type=script&lang=js&
 //
@@ -118,10 +118,10 @@ var installComponents_default = /*#__PURE__*/__webpack_require__.n(installCompon
 var VBtn = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VForm/VForm.js
-var VForm = __webpack_require__(216);
+var VForm = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VTextField/VTextField.js + 3 modules
-var VTextField = __webpack_require__(39);
+var VTextField = __webpack_require__(40);
 
 // CONCATENATED MODULE: ./components/sections/UserAuthForm.vue
 

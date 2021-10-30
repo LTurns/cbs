@@ -543,8 +543,6 @@
                   <v-select
                     v-model="accessoryName"
                     :items="items"
-                    attach
-                    chips
                     label="Select Products"
                     style="
                       width: 80%;
@@ -598,39 +596,69 @@
                             v-text="plan.intro"
                           ></v-card-text>
                           <div style="position: absolute; bottom: 0; left: 35%">
-                            <div v-if="plan.subCategory.length === 0">
-                              <nuxt-link
-                                class="link"
-                                :to="`/product/${plan._id}`"
-                              >
-                                <v-btn
-                                  :x-large="$vuetify.breakpoint.smAndUp"
-                                  text
-                                  class="my-3"
-                                  outlined
-                                  black
-                                  ><v-icon left large color="primary"
-                                    >mdi-play</v-icon
-                                  >View</v-btn
+                            <div
+                              style="
+                                position: absolute;
+                                bottom: 0;
+                                right: 10px;
+                                display: block;
+                                margin-right: 5%;
+                              "
+                            >
+                              <div v-if="!plan.hasSubCategories">
+                                <nuxt-link
+                                  class="link"
+                                  :to="`/product/${plan._id}`"
                                 >
-                              </nuxt-link>
+                                  <v-btn
+                                    :x-large="$vuetify.breakpoint.smAndUp"
+                                    text
+                                    class="my-3"
+                                    outlined
+                                    black
+                                    ><v-icon left large color="primary"
+                                      >mdi-play</v-icon
+                                    >View</v-btn
+                                  >
+                                </nuxt-link>
+                              </div>
+                              <div v-if="plan.hasSubCategories">
+                                <nuxt-link
+                                  class="link align-center"
+                                  :to="`/category/${plan.name.toLowerCase()}`"
+                                >
+                                  <v-btn
+                                    :x-large="$vuetify.breakpoint.smAndUp"
+                                    text
+                                    class="my-3"
+                                    outlined
+                                    black
+                                    ><v-icon left large color="primary"
+                                      >mdi-play</v-icon
+                                    >View</v-btn
+                                  >
+                                </nuxt-link>
+                              </div>
+                            </div>
+                            <!-- Product ID -->
+                            <div v-if="plan.productId.length !== 0">
+                              <div
+                                class="d-inline black--text pa-2"
+                                style="
+                                  position: absolute;
+                                  bottom: 0;
+                                  left: 0;
+                                  display: block;
+                                  margin-left: 2%;
+                                "
+                              >
+                                {{ plan.productId }}
+                              </div>
                             </div>
                             <div v-else>
-                              <nuxt-link
-                                class="link align-center"
-                                :to="`/category/${plan.subCategory}`"
-                              >
-                                <v-btn
-                                  :x-large="$vuetify.breakpoint.smAndUp"
-                                  text
-                                  class="my-3"
-                                  outlined
-                                  black
-                                  ><v-icon left large color="primary"
-                                    >mdi-play</v-icon
-                                  >View</v-btn
-                                >
-                              </nuxt-link>
+                              <div class="ribbon ribbon-bottom-left">
+                                <span>More Products</span>
+                              </div>
                             </div>
                           </div>
                         </v-card></v-hover
@@ -1003,34 +1031,182 @@
                 v-text="plan.intro"
               ></v-card-text>
               <div style="position: absolute; bottom: 0; left: 35%">
-                <div v-if="plan.subCategory.length === 0">
-                  <nuxt-link class="link" :to="`/product/${plan._id}`">
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      text
-                      class="my-3"
-                      outlined
-                      black
-                      ><v-icon left large color="primary">mdi-play</v-icon
-                      >View</v-btn
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    right: 10px;
+                    display: block;
+                    margin-right: 5%;
+                  "
+                >
+                  <div v-if="!plan.hasSubCategories">
+                    <nuxt-link class="link" :to="`/product/${plan._id}`">
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        text
+                        class="my-3"
+                        outlined
+                        black
+                        ><v-icon left large color="primary">mdi-play</v-icon
+                        >View</v-btn
+                      >
+                    </nuxt-link>
+                  </div>
+                  <div v-if="plan.hasSubCategories">
+                    <nuxt-link
+                      class="link align-center"
+                      :to="`/category/${plan.name.toLowerCase()}`"
                     >
-                  </nuxt-link>
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        text
+                        class="my-3"
+                        outlined
+                        black
+                        ><v-icon left large color="primary">mdi-play</v-icon
+                        >View</v-btn
+                      >
+                    </nuxt-link>
+                  </div>
+                </div>
+                <!-- Product ID -->
+                <div v-if="plan.productId.length !== 0">
+                  <div
+                    class="d-inline black--text pa-2"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      display: block;
+                      margin-left: 2%;
+                    "
+                  >
+                    {{ plan.productId }}
+                  </div>
                 </div>
                 <div v-else>
-                  <nuxt-link
-                    class="link align-center"
-                    :to="`/category/${plan.subCategory}`"
-                  >
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      text
-                      class="my-3"
-                      outlined
-                      black
-                      ><v-icon left large color="primary">mdi-play</v-icon
-                      >View</v-btn
+                  <div class="ribbon ribbon-bottom-left">
+                    <span>More Products</span>
+                  </div>
+                </div>
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    right: 10px;
+                    display: block;
+                    margin-right: 5%;
+                  "
+                >
+                  <div v-if="!plan.hasSubCategories">
+                    <nuxt-link class="link" :to="`/product/${plan._id}`">
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        text
+                        class="my-3"
+                        outlined
+                        black
+                        ><v-icon left large color="primary">mdi-play</v-icon
+                        >View</v-btn
+                      >
+                    </nuxt-link>
+                  </div>
+                  <div v-if="plan.hasSubCategories">
+                    <nuxt-link
+                      class="link align-center"
+                      :to="`/category/${plan.name.toLowerCase()}`"
                     >
-                  </nuxt-link>
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        text
+                        class="my-3"
+                        outlined
+                        black
+                        ><v-icon left large color="primary">mdi-play</v-icon
+                        >View</v-btn
+                      >
+                    </nuxt-link>
+                  </div>
+                </div>
+                <!-- Product ID -->
+                <div v-if="plan.productId.length !== 0">
+                  <div
+                    class="d-inline black--text pa-2"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      display: block;
+                      margin-left: 2%;
+                    "
+                  >
+                    {{ plan.productId }}
+                  </div>
+                </div>
+                <div v-else>
+                  <div class="ribbon ribbon-bottom-left">
+                    <span>More Products</span>
+                  </div>
+                </div>
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    right: 10px;
+                    display: block;
+                    margin-right: 5%;
+                  "
+                >
+                  <div v-if="!plan.hasSubCategories">
+                    <nuxt-link class="link" :to="`/product/${plan._id}`">
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        text
+                        class="my-3"
+                        outlined
+                        black
+                        ><v-icon left large color="primary">mdi-play</v-icon
+                        >View</v-btn
+                      >
+                    </nuxt-link>
+                  </div>
+                  <div v-if="plan.hasSubCategories">
+                    <nuxt-link
+                      class="link align-center"
+                      :to="`/category/${plan.name.toLowerCase()}`"
+                    >
+                      <v-btn
+                        :x-large="$vuetify.breakpoint.smAndUp"
+                        text
+                        class="my-3"
+                        outlined
+                        black
+                        ><v-icon left large color="primary">mdi-play</v-icon
+                        >View</v-btn
+                      >
+                    </nuxt-link>
+                  </div>
+                </div>
+                <!-- Product ID -->
+                <div v-if="plan.productId.length !== 0">
+                  <div
+                    class="d-inline black--text pa-2"
+                    style="
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      display: block;
+                      margin-left: 2%;
+                    "
+                  >
+                    {{ plan.productId }}
+                  </div>
+                </div>
+                <div v-else>
+                  <div class="ribbon ribbon-bottom-left">
+                    <span>More Products</span>
+                  </div>
                 </div>
               </div>
             </v-card></v-hover
@@ -1120,7 +1296,7 @@ export default {
     mainImg: '',
     countInStock: 0,
     recommendedProductName: '',
-    accessories: '',
+    accessories: [],
     subCategoryNames: [],
     subcategoryItems: [],
     subcategoryItem: '',

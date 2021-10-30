@@ -42,8 +42,16 @@
               ></v-card-text>
               <!-- <v-list>
                   <v-list-item> -->
-              <div style="position: absolute; bottom: 0; left: 35%">
-                <div v-if="plan.subCategory.length === 0">
+              <div
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  right: 10px;
+                  display: block;
+                  margin-right: 5%;
+                "
+              >
+                <div v-if="!plan.hasSubCategories">
                   <nuxt-link class="link" :to="`/product/${plan._id}`">
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -56,10 +64,10 @@
                     >
                   </nuxt-link>
                 </div>
-                <div v-else>
+                <div v-if="plan.hasSubCategories">
                   <nuxt-link
                     class="link align-center"
-                    :to="`/category/${plan.subCategory}`"
+                    :to="`/category/${plan.name.toLowerCase()}`"
                   >
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -71,6 +79,26 @@
                       >View</v-btn
                     >
                   </nuxt-link>
+                </div>
+              </div>
+              <!-- Product ID -->
+              <div v-if="plan.productId.length !== 0">
+                <div
+                  class="d-inline black--text pa-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    margin-left: 2%;
+                  "
+                >
+                  {{ plan.productId }}
+                </div>
+              </div>
+              <div v-else>
+                <div class="ribbon ribbon-bottom-left">
+                  <span>More Products</span>
                 </div>
               </div>
               <!-- Product ID -->

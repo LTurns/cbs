@@ -2,20 +2,14 @@
   <section>
     <div v-for="product in data" :key="product.productId">
       <v-row>
-        <v-col cols="12" md="6" sm="12" mt="10">
-          <v-carousel height="85vh" mt="10" hide-delimiter-background>
+        <v-col cols="12" md="6" sm="12">
+          <v-carousel class="carousel-height" hide-delimiter-background>
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
               reverse-transition="fade-transition"
               transition="fade-transition"
-              style="
-                margin-left: auto;
-                margin-right: auto;
-                height: auto;
-                width: 55%;
-                margin-top: 40px;
-              "
+              class="carousel-image"
             >
               <v-img :src="img.image" :lazy-src="img.image" />
             </v-carousel-item>
@@ -449,10 +443,36 @@ table tbody tr:nth-child(2n) td {
   margin-bottom: 5%;
 }
 
-@media screen and (max-width: 600px) {
+.carousel-image {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 50%;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 990px) {
+  .carousel-height {
+    height: '100vh';
+  }
+
+  .carousel-image {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 658px) {
   .table {
     margin: 2%;
     margin-bottom: 5%;
+  }
+
+  .carousel-height {
+    height: 20vh;
+  }
+
+  .carousel-image {
+    width: 75%;
   }
 
   th {
@@ -808,7 +828,7 @@ img {
 /* #feature-card {
   min-height: 800px;
 } */
-/* 
+/*
 @media (max-width: 768px) {
   .section-showcase .container {
     grid-template-columns: 1fr;

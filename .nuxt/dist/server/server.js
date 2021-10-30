@@ -115,7 +115,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 114);
+/******/ 	return __webpack_require__(__webpack_require__.s = 109);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1289,7 +1289,7 @@ var helpers = __webpack_require__(0);
 var VList = __webpack_require__(60);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VList/VListGroup.sass
-var VListGroup = __webpack_require__(153);
+var VListGroup = __webpack_require__(148);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VIcon/index.js
 var VIcon = __webpack_require__(15);
@@ -1298,7 +1298,7 @@ var VIcon = __webpack_require__(15);
 var VListItem = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VList/VListItemIcon.js
-var VListItemIcon = __webpack_require__(35);
+var VListItemIcon = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/binds-attrs/index.js
 var binds_attrs = __webpack_require__(20);
@@ -1789,12 +1789,12 @@ function mergeListeners(...args) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VSheet_VSheet_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(139);
+/* harmony import */ var _src_components_VSheet_VSheet_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(134);
 /* harmony import */ var _src_components_VSheet_VSheet_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VSheet_VSheet_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mixins_binds_attrs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var _mixins_elevatable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(52);
-/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33);
+/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(34);
 /* harmony import */ var _mixins_roundable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(47);
 /* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2);
@@ -1866,9 +1866,9 @@ function mergeListeners(...args) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseItemGroup; });
-/* harmony import */ var _src_components_VItemGroup_VItemGroup_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(159);
+/* harmony import */ var _src_components_VItemGroup_VItemGroup_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(154);
 /* harmony import */ var _src_components_VItemGroup_VItemGroup_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VItemGroup_VItemGroup_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mixins_proxyable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(36);
+/* harmony import */ var _mixins_proxyable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
 /* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2);
 /* harmony import */ var _util_console__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3);
@@ -2642,7 +2642,7 @@ function makeWatcher(property) {
 // UNUSED EXPORTS: VInput
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VInput/VInput.sass
-var VInput = __webpack_require__(172);
+var VInput = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VIcon/index.js
 var VIcon = __webpack_require__(15);
@@ -2651,7 +2651,7 @@ var VIcon = __webpack_require__(15);
 var VLabel = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VMessages/VMessages.sass
-var VMessages = __webpack_require__(176);
+var VMessages = __webpack_require__(171);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
 var colorable = __webpack_require__(7);
@@ -3079,7 +3079,7 @@ const Intersect = {
 
 "use strict";
 /* unused harmony export Ripple */
-/* harmony import */ var _src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(143);
+/* harmony import */ var _src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(138);
 /* harmony import */ var _src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 // Styles
@@ -3820,6 +3820,12 @@ const VExpandXTransition = createJavascriptTransition('expand-x-transition', exp
 
 /***/ }),
 /* 30 */
+/***/ (function(module, exports) {
+
+module.exports = require("vuex");
+
+/***/ }),
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3881,7 +3887,7 @@ const Groupable = factory('itemGroup');
 /* unused harmony default export */ var _unused_webpack_default_export = (Groupable);
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3992,7 +3998,7 @@ const Touch = {
 /* harmony default export */ __webpack_exports__["a"] = (Touch);
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4046,7 +4052,7 @@ let all = factory().extend({
 /**/
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4089,12 +4095,12 @@ let all = factory().extend({
 }));
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return applicationable; });
-/* harmony import */ var _positionable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var _positionable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
  // Util
 
@@ -4166,7 +4172,7 @@ function applicationable(value, events = []) {
 }
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4191,7 +4197,7 @@ function applicationable(value, events = []) {
 }));
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4246,7 +4252,7 @@ const Proxyable = factory();
 /* harmony default export */ __webpack_exports__["a"] = (Proxyable);
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4276,7 +4282,7 @@ function attachedRoot(node) {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4286,19 +4292,19 @@ function attachedRoot(node) {
 /* harmony default export */ __webpack_exports__["a"] = (_VBtn__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"]);
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VTextField/VTextField.sass
-var VTextField = __webpack_require__(111);
+var VTextField = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VInput/index.js + 3 modules
 var VInput = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCounter/VCounter.sass
-var VCounter = __webpack_require__(180);
+var VCounter = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
 var themeable = __webpack_require__(6);
@@ -4414,7 +4420,7 @@ var resize = __webpack_require__(26);
 var ripple = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/util/dom.js
-var dom = __webpack_require__(37);
+var dom = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
 var helpers = __webpack_require__(0);
@@ -4945,27 +4951,21 @@ const dirtyTypes = ['color', 'file', 'time', 'date', 'datetime-local', 'week', '
 }));
 
 /***/ }),
-/* 40 */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
 /* 41 */
 /***/ (function(module, exports) {
 
-module.exports = require("vuex");
+module.exports = require("axios");
 
 /***/ }),
 /* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VList_VListItem_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(151);
+/* harmony import */ var _src_components_VList_VListItem_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(146);
 /* harmony import */ var _src_components_VList_VListItem_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VList_VListItem_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 /* harmony import */ var _mixins_routable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19);
-/* harmony import */ var _mixins_groupable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(30);
+/* harmony import */ var _mixins_groupable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(31);
 /* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
 /* harmony import */ var _mixins_toggleable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(18);
 /* harmony import */ var _directives_ripple__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(25);
@@ -5134,13 +5134,13 @@ const baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_9__[/* default *
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBtn/VBtn.sass
-var VBtn = __webpack_require__(141);
+var VBtn = __webpack_require__(136);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/index.js
 var VSheet = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressCircular/VProgressCircular.sass
-var VProgressCircular = __webpack_require__(145);
+var VProgressCircular = __webpack_require__(140);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/intersect/index.js
 var intersect = __webpack_require__(24);
@@ -5314,7 +5314,7 @@ var helpers = __webpack_require__(0);
 
 /* harmony default export */ var components_VProgressCircular = (VProgressCircular_VProgressCircular);
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/groupable/index.js
-var groupable = __webpack_require__(30);
+var groupable = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
 var toggleable = __webpack_require__(18);
@@ -5323,7 +5323,7 @@ var toggleable = __webpack_require__(18);
 var elevatable = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/positionable/index.js
-var positionable = __webpack_require__(32);
+var positionable = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/routable/index.js
 var routable = __webpack_require__(19);
@@ -5662,7 +5662,7 @@ If you're seeing "$attrs is readonly", it's caused by this`);
   });
 }
 // EXTERNAL MODULE: ./node_modules/vuetify/src/styles/main.sass
-var main = __webpack_require__(129);
+var main = __webpack_require__(124);
 
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/locale/en.js
 /* harmony default export */ var en = ({
@@ -6025,7 +6025,7 @@ class breakpoint_Breakpoint extends service["a" /* Service */] {
 }
 breakpoint_Breakpoint.property = 'breakpoint';
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/services/goto/index.js + 2 modules
-var services_goto = __webpack_require__(205);
+var services_goto = __webpack_require__(200);
 
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/services/icons/presets/mdi-svg.js
 const icons = {
@@ -6811,14 +6811,14 @@ framework_Vuetify.config = {
 /* unused harmony export calculateUpdatedOffset */
 /* unused harmony export calculateCenteredOffset */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseSlideGroup; });
-/* harmony import */ var _src_components_VSlideGroup_VSlideGroup_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(167);
+/* harmony import */ var _src_components_VSlideGroup_VSlideGroup_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(162);
 /* harmony import */ var _src_components_VSlideGroup_VSlideGroup_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VSlideGroup_VSlideGroup_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _VIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
 /* harmony import */ var _transitions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(29);
 /* harmony import */ var _VItemGroup_VItemGroup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(16);
 /* harmony import */ var _mixins_mobile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(44);
 /* harmony import */ var _directives_resize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(26);
-/* harmony import */ var _directives_touch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
+/* harmony import */ var _directives_touch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(32);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2);
 /* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(0);
 // Styles
@@ -7358,7 +7358,7 @@ const BaseSlideGroup = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_7__[/* defau
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VImg_VImg_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(125);
+/* harmony import */ var _src_components_VImg_VImg_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(120);
 /* harmony import */ var _src_components_VImg_VImg_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VImg_VImg_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _directives_intersect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _VResponsive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(50);
@@ -7946,7 +7946,7 @@ const baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_5__[/* default *
 // UNUSED EXPORTS: VLabel
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VLabel/VLabel.sass
-var VLabel = __webpack_require__(174);
+var VLabel = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
 var colorable = __webpack_require__(7);
@@ -8039,10 +8039,10 @@ module.exports = require("vue-no-ssr");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VWindow_VWindow_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(169);
+/* harmony import */ var _src_components_VWindow_VWindow_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(164);
 /* harmony import */ var _src_components_VWindow_VWindow_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VWindow_VWindow_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _directives_touch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(31);
-/* harmony import */ var _VBtn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(38);
+/* harmony import */ var _directives_touch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(32);
+/* harmony import */ var _VBtn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(39);
 /* harmony import */ var _VIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
 /* harmony import */ var _VItemGroup_VItemGroup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
 // Styles
@@ -8322,7 +8322,7 @@ module.exports = require("vue-no-ssr");
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(123);
+var content = __webpack_require__(118);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -8333,9 +8333,9 @@ __webpack_require__(5).default("b9f570ac", content, true)
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VResponsive_VResponsive_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(127);
+/* harmony import */ var _src_components_VResponsive_VResponsive_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(122);
 /* harmony import */ var _src_components_VResponsive_VResponsive_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VResponsive_VResponsive_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(33);
+/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(34);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
  // Mixins
 
@@ -8395,7 +8395,7 @@ __webpack_require__(5).default("b9f570ac", content, true)
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VIcon_VIcon_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(147);
+/* harmony import */ var _src_components_VIcon_VIcon_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(142);
 /* harmony import */ var _src_components_VIcon_VIcon_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VIcon_VIcon_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mixins_binds_attrs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
@@ -8644,7 +8644,7 @@ const VIcon = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VList_VList_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(149);
+/* harmony import */ var _src_components_VList_VList_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(144);
 /* harmony import */ var _src_components_VList_VList_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VList_VList_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _VSheet_VSheet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 // Styles
@@ -8769,10 +8769,10 @@ const VIcon = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VAvatar_VAvatar_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(155);
+/* harmony import */ var _src_components_VAvatar_VAvatar_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(150);
 /* harmony import */ var _src_components_VAvatar_VAvatar_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VAvatar_VAvatar_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
-/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
+/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(34);
 /* harmony import */ var _mixins_roundable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(47);
 /* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(0);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2);
@@ -8831,7 +8831,7 @@ const VIcon = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VList_VListItemGroup_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(157);
+/* harmony import */ var _src_components_VList_VListItemGroup_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(152);
 /* harmony import */ var _src_components_VList_VListItemGroup_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VList_VListItemGroup_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _VItemGroup_VItemGroup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
 /* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
@@ -8990,10 +8990,10 @@ var installComponents = __webpack_require__(10);
 var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass
-var VAppBar = __webpack_require__(135);
+var VAppBar = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VToolbar/VToolbar.sass
-var VToolbar = __webpack_require__(137);
+var VToolbar = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js
 var VSheet = __webpack_require__(14);
@@ -9193,7 +9193,7 @@ const Scroll = {
 };
 /* harmony default export */ var directives_scroll = (Scroll);
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
-var applicationable = __webpack_require__(34);
+var applicationable = __webpack_require__(35);
 
 // EXTERNAL MODULE: external "vue"
 var external_vue_ = __webpack_require__(1);
@@ -9606,7 +9606,7 @@ var components_VList = __webpack_require__(9);
 var VListItemGroup = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VNavigationDrawer/VNavigationDrawer.sass
-var VNavigationDrawer = __webpack_require__(161);
+var VNavigationDrawer = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
 var colorable = __webpack_require__(7);
@@ -9630,7 +9630,7 @@ var click_outside = __webpack_require__(73);
 var resize = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/touch/index.js
-var touch = __webpack_require__(31);
+var touch = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VNavigationDrawer/VNavigationDrawer.js
 // Styles
@@ -10037,13 +10037,13 @@ const VNavigationDrawer_baseMixins = Object(mixins["a" /* default */])(Object(ap
 
 }));
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VSpacer.js
-var VSpacer = __webpack_require__(214);
+var VSpacer = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VTabs/VTab.js
-var VTab = __webpack_require__(215);
+var VTab = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VTabs/VTabs.js + 1 modules
-var VTabs = __webpack_require__(219);
+var VTabs = __webpack_require__(214);
 
 // CONCATENATED MODULE: ./components/siteHeader.vue
 
@@ -10153,22 +10153,22 @@ var installComponents_default = /*#__PURE__*/__webpack_require__.n(installCompon
 var VBtn = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VCol.js
-var VCol = __webpack_require__(212);
+var VCol = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VContainer.js + 1 modules
-var VContainer = __webpack_require__(218);
+var VContainer = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VDivider/VDivider.js
-var VDivider = __webpack_require__(200);
+var VDivider = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VFooter/VFooter.sass
-var VFooter = __webpack_require__(190);
+var VFooter = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js
 var VSheet = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
-var applicationable = __webpack_require__(34);
+var applicationable = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
 var ssr_bootable = __webpack_require__(21);
@@ -10269,7 +10269,7 @@ var helpers = __webpack_require__(0);
 
 }));
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VRow.js
-var VRow = __webpack_require__(213);
+var VRow = __webpack_require__(208);
 
 // CONCATENATED MODULE: ./components/siteFooter.vue
 
@@ -10277,7 +10277,7 @@ var VRow = __webpack_require__(213);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(188)
+  var style0 = __webpack_require__(183)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -10527,7 +10527,7 @@ function searchChildren(children) {
 
 "use strict";
 /* unused harmony export ClickOutside */
-/* harmony import */ var _util_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(37);
+/* harmony import */ var _util_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
 
 
 function defaultConditional() {
@@ -10704,7 +10704,7 @@ module.exports = require("core-js/modules/esnext.map.update.js");
 // UNUSED EXPORTS: VProgressLinear
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
-var VProgressLinear = __webpack_require__(178);
+var VProgressLinear = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/transitions/index.js + 2 modules
 var transitions = __webpack_require__(29);
@@ -10716,10 +10716,10 @@ var intersect = __webpack_require__(24);
 var colorable = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/positionable/index.js
-var positionable = __webpack_require__(32);
+var positionable = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
-var proxyable = __webpack_require__(36);
+var proxyable = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
 var themeable = __webpack_require__(6);
@@ -10992,7 +10992,7 @@ const baseMixins = Object(mixins["a" /* default */])(colorable["a" /* default */
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(120);
+var content = __webpack_require__(115);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11009,7 +11009,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(124);
+var content = __webpack_require__(119);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11022,7 +11022,7 @@ __webpack_require__(5).default("744bab4a", content, true)
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(132);
+var content = __webpack_require__(127);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11039,7 +11039,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(134);
+var content = __webpack_require__(129);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11056,7 +11056,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(185);
+var content = __webpack_require__(180);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11073,7 +11073,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(189);
+var content = __webpack_require__(184);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11090,7 +11090,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(193);
+var content = __webpack_require__(188);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -11123,7 +11123,7 @@ var componentNormalizer = __webpack_require__(8);
 var script = {}
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(133)
+  var style0 = __webpack_require__(128)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -11150,7 +11150,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VOverlay/VOverlay.sass
-var VOverlay = __webpack_require__(163);
+var VOverlay = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
 var colorable = __webpack_require__(7);
@@ -11526,42 +11526,12 @@ module.exports = require("vue-meta");
 
 /***/ }),
 /* 101 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"id\":\"1\",\"name\":\"Tornado Plus\",\"uid\":\"tGGW0ov0fkKzK9ax7QYLHA\",\"productId\":\"C-1250-08\",\"description\":\"The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation. The system installs fibre optic cable of 6mm (0.25”) to 32mm (1.25”) overall diameter, at speeds up to 90m/min (300ft/min), into pre-installed ducts. The system operates on the viscous drag principle employing compressed air to install the cable, controlled and assisted by the belt drive system. The cable is propelled by compressed air, fed into the duct via a venturi principle, while the hydraulically powered belt drive system controls the fibre optic cable. The electronic monitoring system provides read out of speed and distance, gives protection against duct obstructions and includes an emergency stop facility. The system is mounted on an anti-corrosion treated, sturdy, height adjustable, wheeled, tubular steel trolley. This allows the unit to be wheeled around on site. The C-1203 hydraulic petrol driven power pack provides power. The unit is CE approved.\",\"img\":[{\"image\":\"tornado.jpg\"},{\"image\":\"tornado/tornado-1.jpeg\"},{\"image\":\"tornado/tornado-2.jpeg\"},{\"image\":\"tornado/tornado-3.jpeg\"},{\"image\":\"tornado/tornado-4.jpeg\"},{\"image\":\"tornado/tornado-5.jpeg\"},{\"image\":\"tornado/tornado-6.jpeg\"},{\"image\":\"tornado/tornado-7.jpeg\"}],\"mainImg\":\"tornado.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Fully labelled control panel containing:\",\"name\":[{\"listItem\":\"Power on/off button\"},{\"listItem\":\"Emergency stop button\"},{\"listItem\":\"Reset button\"},{\"listItem\":\"Combined length counter recording in metres (feet) and cable speed read out in metres/min (feet/min)\"},{\"listItem\":\"Air pressure read out dial\"},{\"listItem\":\"Hydraulic on/off control valve\"},{\"listItem\":\"Adjustable speed control for drive belts\"},{\"listItem\":\"Air supply control on/off with automatic exhaust function\"}]},{\"id\":2,\"main\":\"Air Box\",\"name\":[{\"listItem\":\"Manufactured in aluminium\"},{\"listItem\":\"Range taking of cables from 6mm – 32mm (0.25”-1.25”) by means of interchangeable collets with double cable sealing arrangement\"},{\"listItem\":\"Duct sealing at mouth of air box\"},{\"listItem\":\"Duct gripping facility designed to obviate duct crushing and distortion\"},{\"listItem\":\"No tools are required to split air box for insertion of cable and duct\"},{\"listItem\":\"All seals, except cable seals, have a common diameter cord\"},{\"listItem\":\"Upper section of air box is retained\"},{\"listItem\":\"Air box aligned is adjustable for varying cable diameters\"},{\"listItem\":\"On/off air control valve with automatic air exhaust from duct when in “off” position\"}]},{\"id\":3,\"main\":\"Chassis\",\"name\":[{\"listItem\":\"Front mounted wheels for ease of manoeuvrability\"},{\"listItem\":\"Lightweight anti-corrosion treated tubular steel frame\"},{\"listItem\":\"Adjustable frame allowing unit to be tilted up to 30°, reducing bending of duct and cable\"},{\"listItem\":\"Adjustable rear legs for uneven terrain\"}]},{\"id\":4,\"main\":\"Storage Case Comprising Of:\",\"name\":[{\"listItem\":\"Operating Manual\"},{\"listItem\":\"Instructional Video\"}]},{\"id\":5,\"main\":\"Cable Feeder\",\"name\":[{\"listItem\":\"Manufactured in cast aluminium\"},{\"listItem\":\"Hydraulically powered\"},{\"listItem\":\"Unit lifts and splits to allow insertion of cable between drive belts\"},{\"listItem\":\"Drive belts are profiled polyurethane, moulded\"},{\"listItem\":\"Belt tension can be set by means of adjustable chain drive tensioners fitted to the side of the unit\"},{\"listItem\":\"System relief valve fitted as standard\"}]},{\"id\":6,\"main\":\"Tool Box\",\"name\":[{\"listItem\":\"3mm Allen Key\"},{\"listItem\":\"3mm dia. Cord x 2.5 metres long\"},{\"listItem\":\"Silicone Grease\"},{\"listItem\":\"Super Glue\"},{\"listItem\":\"Metaflux 70-88 Chain Spray\"},{\"listItem\":\"Pliers 150mm\"},{\"listItem\":\"Screwdriver 150mm (slot)\"},{\"listItem\":\"Knife\"},{\"listItem\":\"13-17mm A/F Spanner\"},{\"listItem\":\"Battery Charger\"},{\"listItem\":\"Battery Charge Indicator\"}]}],\"intro\":\"The Tornado comprises an air box and cable pusher and is designed to provide an effective and safe method of fibre optic cable installation.\",\"video\":\"https://www.youtube.com/embed/JMxLzd_RYDI\",\"configurationTitle\":\"TORNADO Configuration for Cable Blowing\",\"configurationIntro\":\"In order to customise your new “Tornado” to your application, we ask that you pick one of each from the list below, the Duct Clamp Collet (A), the Duct Seal Collet (B), the Cable Collet Assy (C) and the In Feed Cable Collet (D), the Cable Seals (E) and the Cable Seal Plug (F). When ordering, please have Tube and Cable dimensions available. All imperial sizes are available on request.\",\"configImage\":\"tornado/tornadoconfig.jpg\",\"tables\":[{\"items\":[{\"Duct O.D\":\"25mm\",\"Part No\":\"C-1258-0200-25\"},{\"Duct O.D\":\"32mm\",\"Part No\":\"C-1258-0200-32\"},{\"Duct O.D\":\"38mm\",\"Part No\":\"C-1258-0200-38\"},{\"Duct O.D\":\"40mm\",\"Part No\":\"C-1258-0200-40\"},{\"Duct O.D\":\"50mm\",\"Part No\":\"C-1258-0200-50\"}],\"columns\":[\"Duct O.D\",\"Part No\"],\"image\":\"tornado/duct-clamp-collet.jpg\",\"title\":\"A) Duct Clamp Collet\"},{\"items\":[{\"Duct O.D\":\"25mm\",\"Part No\":\"C-1257-0202-25\"},{\"Duct O.D\":\"32mm\",\"Part No\":\"C-1257-0202-32\"},{\"Duct O.D\":\"38mm\",\"Part No\":\"C-1257-0202-38\"},{\"Duct O.D\":\"40mm\",\"Part No\":\"C-1257-0202-40\"},{\"Duct O.D\":\"50mm\",\"Part No\":\"C-1257-0202-50\"}],\"columns\":[\"Duct O.D\",\"Part No\"],\"image\":\"tornado/duct-seal-collet.jpg\",\"title\":\"B) Duct Seal Collet\"},{\"items\":[{\"Cable Diameter\":\"6-9mm\",\"Part No (C)\":\"C-1256-0103-06-09\",\"Part No (D)\":\"C-1256-0104-06-09\"},{\"Cable Diameter\":\"9-12mm\",\"Part No (C)\":\"C-1256-0103-09-12\",\"Part No (D)\":\"C-1256-0104-09-12\"},{\"Cable Diameter\":\"12-16mm\",\"Part No (C)\":\"C-1256-0103-12-16\",\"Part No (D)\":\"C-1256-0103-12-16\"},{\"Cable Diameter\":\"16-20mm\",\"Part No (C)\":\"C-1256-0103-16-20\",\"Part No (D)\":\"C-1256-0103-16-20\"},{\"Cable Diameter\":\"20-24mm\",\"Part No (C)\":\"C-1256-0103-20-24\",\"Part No (D)\":\"C-1256-0103-20-24\"},{\"Cable Diameter\":\"24-28mm\",\"Part No (C)\":\"C-1256-0103-24-28\",\"Part No (D)\":\"C-1256-0103-24-28\"},{\"Cable Diameter\":\"28-32mm\",\"Part No (C)\":\"C-1256-0103-28-32\",\"Part No (D)\":\"C-1256-0103-28-32\"}],\"columns\":[\"Cable Diameter\",\"Part No (C)\",\"Part No (D)\"],\"image\":\"tornado/collet-assy.jpg\",\"title\":\"C) Cable Collet Assy & D) In-Feed Cable Collet\"},{\"items\":[{\"Cable Diameter\":\"6-7.5mm\",\"Part No\":\"C-1255-0208-06-07.5\"},{\"Cable Diameter\":\"7.5-9mm\",\"Part No\":\"C-1255-0208-07.5-09\"},{\"Cable Diameter\":\"9-10.5mm\",\"Part No\":\"C-1255-0208-09-10.5\"},{\"Cable Diameter\":\"10.5-12mm\",\"Part No\":\"C-1255-0208-10.5-12\"},{\"Cable Diameter\":\"12-14mm\",\"Part No\":\"C-1255-0208-12-14-F\"},{\"Cable Diameter\":\"14-16mm\",\"Part No\":\"C-1255-0208-14-16-F\"},{\"Cable Diameter\":\"16-18mm\",\"Part No\":\"C-1255-0208-16-18-F\"},{\"Cable Diameter\":\"18-20mm\",\"Part No\":\"C-1255-0208-18-20-F\"},{\"Cable Diameter\":\"20-22mm\",\"Part No\":\"C-1255-0208-20-22-F\"},{\"Cable Diameter\":\"22-24mm\",\"Part No\":\"C-1255-0208-22-24-F\"},{\"Cable Diameter\":\"24-26mm\",\"Part No\":\"C-1255-0208-24-26-F\"},{\"Cable Diameter\":\"26-28mm\",\"Part No\":\"C-1255-0208-26-28-F\"},{\"Cable Diameter\":\"28-30mm\",\"Part No\":\"C-1255-0208-28-30-F\"},{\"Cable Diameter\":\"30-32mm\",\"Part No\":\"C-1255-0208-30-32-F\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"tornado/cable-seals.jpg\",\"title\":\"E) Cable Seals (Supplied in packs of 10)\"},{\"items\":[{\"Cable Diameter\":\"6-7.5mm\",\"Part No\":\"C-1256-0206-07.5\"},{\"Cable Diameter\":\"7.5-9mm\",\"Part No\":\"C-1256-0206-09\"},{\"Cable Diameter\":\"9-10.5mm\",\"Part No\":\"C-1256-0206-10.5\"},{\"Cable Diameter\":\"10.5-12mm\",\"Part No\":\"C-1256-0206-12\"},{\"Cable Diameter\":\"12-14mm\",\"Part No\":\"C-1256-0206-14\"},{\"Cable Diameter\":\"14-16mm\",\"Part No\":\"C-1256-0206-16\"},{\"Cable Diameter\":\"16-18mm\",\"Part No\":\"C-1256-0206-18\"},{\"Cable Diameter\":\"18-20mm\",\"Part No\":\"C-1256-0206-20\"},{\"Cable Diameter\":\"20-22mm\",\"Part No\":\"C-1256-0206-22\"},{\"Cable Diameter\":\"22-24mm\",\"Part No\":\"C-1256-0206-24\"},{\"Cable Diameter\":\"24-26mm\",\"Part No\":\"C-1256-0206-26\"},{\"Cable Diameter\":\"26-28mm\",\"Part No\":\"C-1256-0206-28\"},{\"Cable Diameter\":\"28-30mm\",\"Part No\":\"C-1256-0206-30\"},{\"Cable Diameter\":\"30-32mm\",\"Part No\":\"C-1256-0206-32\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"tornado/cable-seals-plugs.jpg\",\"title\":\"F) Cable Seal Plugs\"}],\"accessories\":[{\"name\":\"Tube Blowing Conversion Kits\",\"color\":\"white\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"id\":\"4\",\"productId\":\"C-1250-08\",\"intro\":\"The tube blowing conversion kits are initially used to convert an existing Tornado Cable Blowing Machine into a Tube Blowing Machine for installing micro tubes into ducts.\",\"mainImg\":\"../tornado/tornado_accessory_1.png\"},{\"name\":\"Compressed Air Cooler\",\"color\":\"white\",\"id\":\"1\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"productId\":\"C-1250-08\",\"intro\":\"The Compressor Aftercooler has been designed to cool compressed air and remove water droplets prior to entering a CBS Tornado Cable Blowing Machine.\",\"mainImg\":\"../tornado/tornado_accessory_2.jpeg\"},{\"name\":\"Hydraulic Power Pack\",\"color\":\"white\",\"id\":\"15\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"productId\":\"C-1203-F\",\"intro\":\"A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.\",\"mainImg\":\"../tornado/tornado_accessory_3.jpeg\"},{\"name\":\"Cable Floating Water Pump\",\"elevation\":4,\"color\":\"white\",\"id\":\"1\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"productId\":\"C-1203-F\",\"intro\":\"The CBS C-1240-F Cable Floating Water Pump has been designed to work in conjunction with the C-1250 Tornado to install fibre cables using water instead of air.\",\"mainImg\":\"../tornado/tornado_accessory_4.jpeg\"}]},{\"id\":\"2\",\"name\":\"JetStream Cable Blowing Machine\",\"uid\":\"2kb6ZvdQskaW+KuVPpQQPg\",\"productId\":\"C-1900\",\"description\":\"The C-1900 has been designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive. The profiled double drive belt system is driven by single 32cc hydraulic motor, powered by the proven C-1203-F power pack. The electronic monitoring system provides read-out of speed and distance, gives protection against duct obstructions and includes emergency stop facility. The C-1900 is adjustable to suit a wide range of cable diameters 4-20mm, and duct diameters 12-50mm o/d.\",\"img\":[{\"image\":\"jetstream.jpg\"},{\"image\":\"jetstream/jet-stream-2.jpeg\"},{\"image\":\"jetstream/jet-stream-3.jpeg\"},{\"image\":\"jetstream/jet-stream-4.jpeg\"},{\"image\":\"jetstream/jet-stream-5.jpeg\"}],\"mainImg\":\"jetstream.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features:\",\"name\":[{\"listItem\":\"Automatic Cable Centralisation\"},{\"listItem\":\"Synchronous high grip profiled drive belts\"},{\"listItem\":\"Tabletop design\"},{\"listItem\":\"Variable speed control\"},{\"listItem\":\"Single person operation\"},{\"listItem\":\"Digital cable speed and length monitoring\"},{\"listItem\":\"Integral air valve and pressure gauge\"},{\"listItem\":\"Easy cable threading\"},{\"listItem\":\"Polycarbonate safety guarding\"},{\"listItem\":\"Low maintenance\"},{\"listItem\":\"Wheeled Travel case\"},{\"listItem\":\"Tool kit\"}]},{\"id\":2,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Cable Range: 4-20mm\"},{\"listItem\":\"Duct Range: 12-50mm\"},{\"listItem\":\"Cable Speed (Adjustable): (0-85m/min) (0-280 ft/min)\"},{\"listItem\":\"Max Air Pressure: 15 Bar (215 psi)\"},{\"listItem\":\"Pushing Force: 600N\"},{\"listItem\":\"Drive Media: Hydraulic\"},{\"listItem\":\"Drive Type: Profiled Belt\"},{\"listItem\":\"Drive Orientation: Horizontal\"},{\"listItem\":\"Cable Speed Measurement: Proximity Switch\"},{\"listItem\":\"Shipping Specification (In Transit Case)\"},{\"listItem\":\"Length: 700mm\"},{\"listItem\":\"Width:  590mm\"},{\"listItem\":\"Height: 550mm\"},{\"listItem\":\"Net Weight: 60kg\"}]}],\"intro\":\"Designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive.\",\"video\":\"../jetstream/videos/cbs-basic-setup.mp4, ../jetstream/videos/belt-replacement.mp4, ../jetstream/videos/counter-programming.mp4, ../jetstream/videos/relief-valve.mp4\",\"configurationTitle\":\"JETSTREAM Configuration\",\"configurationIntro\":\"In order to configure your JetStream to your application, we ask that you pick one of each from the list below, the cable collet assembly (A), the duct clamp and seal collets (B) and cable seals (C).\",\"configImage\":\"../jetstream/jetstream-configuration.jpeg\",\"tables\":[{\"items\":[{\"Cable Diameter\":\"4-6mm\",\"Part No\":\"C-1900-C-0406\"},{\"Cable Diameter\":\"6-9mm\",\"Part No\":\"C-1900-C-0609\"},{\"Cable Diameter\":\"9-12mm\",\"Part No\":\"C-1900-C-0912\"},{\"Cable Diameter\":\"12-16mm\",\"Part No\":\"C-1900-C-1216\"},{\"Cable Diameter\":\"16-20mm\",\"Part No\":\"C-1900-C-1620\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"jetstream/jetstream-config-1.jpeg\",\"title\":\"A) Cable Collet Assembly\"},{\"items\":[{\"Duct Dia (Outer)\":\"12mm\",\"Part No\":\"C-1900-D-12\"},{\"Duct Dia (Outer)\":\"14mm\",\"Part No\":\"C-1900-D-14\"},{\"Duct Dia (Outer)\":\"16mm\",\"Part No\":\"C-1900-D-16\"},{\"Duct Dia (Outer)\":\"18mm\",\"Part No\":\"C-1900-D-18\"},{\"Duct Dia (Outer)\":\"20mm\",\"Part No\":\"C-1900-D-20\"},{\"Duct Dia (Outer)\":\"25mm\",\"Part No\":\"C-1900-D-25\"},{\"Duct Dia (Outer)\":\"32mm\",\"Part No\":\"C-1900-D-32\"},{\"Duct Dia (Outer)\":\"40mm\",\"Part No\":\"C-1900-D-40\"},{\"Duct Dia (Outer)\":\"50mm\",\"Part No\":\"C-1900-D-50\"}],\"columns\":[\"Duct Dia (Outer)\",\"Part No\"],\"image\":\"jetstream/jetstream-config-2.jpeg\",\"title\":\"B) Duct Clamp & Seal Collets\"},{\"items\":[{\"Cable Diameter\":\"4-5mm\",\"Part No\":\"C-1255-0208-04-05\"},{\"Cable Diameter\":\"5-6mm\",\"Part No\":\"C-1255-0208-05-06-1\"},{\"Cable Diameter\":\"6-7.5mm\",\"Part No\":\"C-1255-0208-06-07.5\"},{\"Cable Diameter\":\"7.5-9mm\",\"Part No\":\"C-1255-0208-07.5-09\"},{\"Cable Diameter\":\"9-10.5mm\",\"Part No\":\"C-1255-0208-09-10.5\"},{\"Cable Diameter\":\"10.5-12mm\",\"Part No\":\"C-1255-0208-10.5-12\"},{\"Cable Diameter\":\"12-14mm\",\"Part No\":\"C-1255-0208-12-14-F\"},{\"Cable Diameter\":\"14-16mm\",\"Part No\":\"C-1255-0208-14-16-F\"},{\"Cable Diameter\":\"16-18mm\",\"Part No\":\"C-1255-0208-16-18-F\"},{\"Cable Diameter\":\"18-20mm\",\"Part No\":\"C-1255-0208-18-20-F\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"jetstream/jet-stream-config-3.jpeg\",\"title\":\"C) Cable Seals (Supplied in packs of 10)\"},{\"items\":[{\"Cable Diameter\":\"4-5mm\",\"Part No\":\"C-1256-0206-05\"},{\"Cable Diameter\":\"5-6mm\",\"Part No\":\"C-1256-0206-06\"},{\"Cable Diameter\":\"6-7.5mm\",\"Part No\":\"C-1256-0206-07.5\"},{\"Cable Diameter\":\"7.5-9mm\",\"Part No\":\"C-1256-0206-09\"},{\"Cable Diameter\":\"9-10.5mm\",\"Part No\":\"C-1256-0206-10.5\"},{\"Cable Diameter\":\"10.5-12mm\",\"Part No\":\"C-1256-0206-12\"},{\"Cable Diameter\":\"12-14mm\",\"Part No\":\"C-1256-0206-14\"},{\"Cable Diameter\":\"14-16mm\",\"Part No\":\"C-1256-0206-16\"},{\"Cable Diameter\":\"16-18mm\",\"Part No\":\"C-1256-0206-18\"},{\"Cable Diameter\":\"18-20mm\",\"Part No\":\"C-1256-0206-20\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"jetstream/jetstream-config-4.jpeg\",\"title\":\"D) Cable Seal Plug\"},{\"items\":[{\"Product No\":\"C-1900-DB\",\"Size\":\"Drive belt (pair) 6-20mm o/d cable\"},{\"Product No\":\"C-1900-DB-1\",\"Size\":\"Drive belt (pair) 4-16mm o/d cable\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"jetstream/jet-stream-config-5.jpeg\",\"title\":\"Drive Belts\"},{\"items\":[{\"Product No\":\"C-1300-TS-12-5\",\"Size\":\"12mm\"},{\"Product No\":\"C-1300-TS-14-5\",\"Size\":\"14mm\"},{\"Product No\":\"C-1300-TS-16-5\",\"Size\":\"16mm\"},{\"Product No\":\"C-1300-TS-18-5\",\"Size\":\"18mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"jetstream/jet-stream-config-6.jpeg\",\"title\":\"Tube Seal O Rings\"}],\"accessories\":[{\"name\":\"Hydraulic Power Pack\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"color\":\"white\",\"id\":\"15\",\"productId\":\"C-1203-F\",\"intro\":\"A lightweight, trolley mounted, hydraulic power pack, with pre-set internal system protection relief valve and quick release connectors.\",\"mainImg\":\"../tornado/tornado_accessory_3.jpeg\"}]},{\"id\":\"3\",\"name\":\"Hurricane Cable Blowing Machine\",\"uid\":\"xS0KUwWdbEqPrt5pKjhfSA\",\"productId\":\"C-1750\",\"description\":\"The C-1750 Hurricane has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls to provide precise control of torque and speed. Single person operation with safe, easy to operate ergonomic controls combines with low maintenance and high reliability to form the machine’s key features. The Hurricane is adjustable to suit a wide range of cable diameters 2.5-16mm.\",\"img\":[{\"image\":\"hurricane.jpg\"},{\"image\":\"hurricane/hurricane-1.jpeg\"},{\"image\":\"hurricane/hurricane-2.jpeg\"},{\"image\":\"hurricane/hurricane-3.jpeg\"},{\"image\":\"hurricane/hurricane-4.jpeg\"},{\"image\":\"hurricane/hurricane-5.jpeg\"},{\"image\":\"hurricane/hurricane-6.jpeg\"},{\"image\":\"hurricane/hurricane-7.jpeg\"}],\"mainImg\":\"hurricane.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features:\",\"name\":[{\"listItem\":\"Automatic Cable Centralisation\"},{\"listItem\":\"Synchronous high grip profiled drive belts\"},{\"listItem\":\"Verticle design with ergonomic controls for ease of operation\"},{\"listItem\":\"Forward and reverse\"},{\"listItem\":\"Variable torque and speed controls via remote\"},{\"listItem\":\"Digital servo motor drive system\"},{\"listItem\":\"Single person operation\"},{\"listItem\":\"Digital cable speed and length monitoring\"},{\"listItem\":\"Auto stop facility when air stone fitted\"},{\"listItem\":\"Integral air valve and pressure gauge\"},{\"listItem\":\"Advanced data logging system measures speed, force, distance, GPS location and environmental conditions\"},{\"listItem\":\"Easy cable threading\"},{\"listItem\":\"Polycarbonate safety guarding\"},{\"listItem\":\"Lightweight and compact\"},{\"listItem\":\"Low maintenance\"},{\"listItem\":\"Low noise levels\"},{\"listItem\":\"Travel case\"},{\"listItem\":\"Tool Kit\"}]},{\"id\":2,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Cable Diameter: 2.5 to 16mm\"},{\"listItem\":\"Tube Size (Outside Dia): 5 to 25mm\"},{\"listItem\":\"Cable Speed (Adjustable): (0-85m/min)\"},{\"listItem\":\"Pushing Force: 400N\"},{\"listItem\":\"Air Pressure: 15 Bar Max\"},{\"listItem\":\"Power Requirement: 110/220 Volt AC\"},{\"listItem\":\"Length: 550mm\"},{\"listItem\":\"Width: 310mm\"},{\"listItem\":\"Height: 350mm\"},{\"listItem\":\"Net Weight: 24kg, full kit inc case 51.5kg\"}]}],\"intro\":\"Designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls.\",\"video\":\"../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4\",\"configurationTitle\":\"\",\"configurationIntro\":\"In order to customise your Hurricane to your application, please select one of each from the list below, (A) Duct Clamp and Seal Kits, (B) Cable Guides and (C) Cable Seals. When ordering, please have Tube and Cable dimensions available.\",\"configImage\":\"\",\"tables\":[{\"items\":[{\"Duct O.D\":\"25mm\",\"Part No\":\"C-1258-0200-25\"},{\"Duct O.D\":\"32mm\",\"Part No\":\"C-1258-0200-32\"},{\"Duct O.D\":\"38mm\",\"Part No\":\"C-1258-0200-38\"},{\"Duct O.D\":\"40mm\",\"Part No\":\"C-1258-0200-40\"},{\"Duct O.D\":\"50mm\",\"Part No\":\"C-1258-0200-50\"}],\"columns\":[\"Duct O.D\",\"Part No\"],\"image\":\"hurricane/hurricane-config-1.jpeg\",\"title\":\"A) Duct Clamp Collet\"},{\"items\":[{\"Duct O.D\":\"25mm\",\"Part No\":\"C-1257-0202-25\"},{\"Duct O.D\":\"32mm\",\"Part No\":\"C-1257-0202-32\"},{\"Duct O.D\":\"38mm\",\"Part No\":\"C-1257-0202-38\"},{\"Duct O.D\":\"40mm\",\"Part No\":\"C-1257-0202-40\"},{\"Duct O.D\":\"50mm\",\"Part No\":\"C-1257-0202-50\"}],\"columns\":[\"Duct O.D\",\"Part No\"],\"image\":\"hurricane/hurricane-config-2.jpeg\",\"title\":\"B) Duct Seal Collet\"},{\"items\":[{\"Cable Diameter\":\"6-9mm\",\"Part No (C)\":\"C-1256-0103-06-09\",\"Part No (D)\":\"C-1256-0104-06-09\"},{\"Cable Diameter\":\"9-12mm\",\"Part No (C)\":\"C-1256-0103-09-12\",\"Part No (D)\":\"C-1256-0104-09-12\"},{\"Cable Diameter\":\"12-16mm\",\"Part No (C)\":\"C-1256-0103-12-16\",\"Part No (D)\":\"C-1256-0103-12-16\"},{\"Cable Diameter\":\"16-20mm\",\"Part No (C)\":\"C-1256-0103-16-20\",\"Part No (D)\":\"C-1256-0103-16-20\"},{\"Cable Diameter\":\"20-24mm\",\"Part No (C)\":\"C-1256-0103-20-24\",\"Part No (D)\":\"C-1256-0103-20-24\"},{\"Cable Diameter\":\"24-28mm\",\"Part No (C)\":\"C-1256-0103-24-28\",\"Part No (D)\":\"C-1256-0103-24-28\"},{\"Cable Diameter\":\"28-32mm\",\"Part No (C)\":\"C-1256-0103-28-32\",\"Part No (D)\":\"C-1256-0103-28-32\"}],\"columns\":[\"Cable Diameter\",\"Part No (C)\",\"Part No (D)\"],\"image\":\"hurricane/hurricane-config-3.jpeg\",\"title\":\"C) Cable Collet Assy & D) In-Feed Cable Collet \"},{\"items\":[{\"Cable Diameter\":\"6-7.5mm\",\"Part No\":\"C-1255-0208-06-07.5\"},{\"Cable Diameter\":\"7.5-9mm\",\"Part No\":\"C-1255-0208-07.5-09\"},{\"Cable Diameter\":\"9-10.5mm\",\"Part No\":\"C-1255-0208-09-10.5\"},{\"Cable Diameter\":\"10.5-12mm\",\"Part No\":\"C-1255-0208-10.5-12\"},{\"Cable Diameter\":\"12-14mm\",\"Part No\":\"C-1255-0208-12-14-F\"},{\"Cable Diameter\":\"14-16mm\",\"Part No\":\"C-1255-0208-14-16-F\"},{\"Cable Diameter\":\"16-18mm\",\"Part No\":\"C-1255-0208-16-18-F\"},{\"Cable Diameter\":\"18-20mm\",\"Part No\":\"C-1255-0208-18-20-F\"},{\"Cable Diameter\":\"20-22mm\",\"Part No\":\"C-1255-0208-20-22-F\"},{\"Cable Diameter\":\"22-24mm\",\"Part No\":\"C-1255-0208-22-24-F\"},{\"Cable Diameter\":\"24-26mm\",\"Part No\":\"C-1255-0208-24-26-F\"},{\"Cable Diameter\":\"26-28mm\",\"Part No\":\"C-1255-0208-26-28-F\"},{\"Cable Diameter\":\"28-30mm\",\"Part No\":\"C-1255-0208-28-30-F\"},{\"Cable Diameter\":\"30-32mm\",\"Part No\":\"C-1255-0208-30-32-F\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"hurricane/hurricane-config-4.jpeg\",\"title\":\"E) Cable Seals (Supplied in packs of 10)\"},{\"items\":[{\"Cable Diameter\":\"6-7.5mm\",\"Part No\":\"C-1256-0206-07.5\"},{\"Cable Diameter\":\"7.5-9mm\",\"Part No\":\"C-1256-0206-09\"},{\"Cable Diameter\":\"9-10.5mm\",\"Part No\":\"C-1256-0206-10.5\"},{\"Cable Diameter\":\"10.5-12mm\",\"Part No\":\"C-1256-0206-12\"},{\"Cable Diameter\":\"12-14mm\",\"Part No\":\"C-1256-0206-14\"},{\"Cable Diameter\":\"14-16mm\",\"Part No\":\"C-1256-0206-16\"},{\"Cable Diameter\":\"16-18mm\",\"Part No\":\"C-1256-0206-18\"},{\"Cable Diameter\":\"18-20mm\",\"Part No\":\"C-1256-0206-20\"},{\"Cable Diameter\":\"20-22mm\",\"Part No\":\"C-1256-0206-22\"},{\"Cable Diameter\":\"22-24mm\",\"Part No\":\"C-1256-0206-24\"},{\"Cable Diameter\":\"24-26mm\",\"Part No\":\"C-1256-0206-26\"},{\"Cable Diameter\":\"26-28mm\",\"Part No\":\"C-1256-0206-28\"},{\"Cable Diameter\":\"28-30mm\",\"Part No\":\"C-1256-0206-30\"},{\"Cable Diameter\":\"30-32mm\",\"Part No\":\"C-1256-0206-32\"}],\"columns\":[\"Cable Diameter\",\"Part No\"],\"image\":\"hurricane/hurricane-config-6.jpeg\",\"title\":\"F) Cable Seal Plugs\"}],\"accessories\":[]},{\"id\":\"4\",\"name\":\"AirStream Cable Blowing Machine\",\"productId\":\"C-1700\",\"uid\":\"XVnU4fnqZECjTGE5SIkx7A\",\"description\":\"The C-1700 AirStream cable blowing machine has been designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.\",\"img\":[{\"image\":\"airstream/airstream-1.jpeg\"},{\"image\":\"airstream/airstream-2.jpeg\"},{\"image\":\"airstream/airstream-3.jpeg\"},{\"image\":\"airstream/airstream-4.jpeg\"},{\"image\":\"airstream/airstream-5.jpeg\"},{\"image\":\"airstream/airstream-6.jpeg\"},{\"image\":\"airstream/airstream-7.jpeg\"},{\"image\":\"airstream/airstream-8.jpeg\"},{\"image\":\"airstream/airstream-9.jpeg\"}],\"mainImg\":\"airstream.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features:\",\"name\":[{\"listItem\":\"Automatic Cable Centralisation\"},{\"listItem\":\"Synchronous high grip profiled drive belts\"},{\"listItem\":\"Tabletop design with ergonomic controls for ease of operation\"},{\"listItem\":\"Forward and reverse\"},{\"listItem\":\"Variable torque and speed controls\"},{\"listItem\":\"Digital servo motor drive system\"},{\"listItem\":\"Single person operation\"},{\"listItem\":\"Digital cable speed and length monitoring\"},{\"listItem\":\"Auto stop facility when air stone fitted\"},{\"listItem\":\"Integral air valve and pressure gauge\"},{\"listItem\":\"Easy cable threading\"},{\"listItem\":\"Polycarbonate safety guarding\"},{\"listItem\":\"Lightweight and compact\"},{\"listItem\":\"Low maintenance\"},{\"listItem\":\"Low noise levels\"},{\"listItem\":\"Travel case\"},{\"listItem\":\"Tool kit\"}]},{\"id\":2,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Cable Diameter: 2.5 to 11mm\"},{\"listItem\":\"Tube Size (Outside Dia): 5 to 18mm\"},{\"listItem\":\"Cable Speed (Adjustable): (0-80m/min) (0-260 ft/min)\"},{\"listItem\":\"Air Pressure: 10-15 Bar (145-215 psi)\"},{\"listItem\":\"Power Requirement: 110/220 Volt AC\"},{\"listItem\":\"Width: 300mm (11.8”)\"},{\"listItem\":\"Length: 460mm (18”)\"},{\"listItem\":\"Height: 270mm (10.6”)\"},{\"listItem\":\"Net Weight: 14kg (31 lbs.)\"}]}],\"intro\":\"Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.\",\"video\":\"../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4\",\"configurationTitle\":\"AirStream Configuration for Cable Blowing\",\"configurationIntro\":\"In order to customise your AirStream to your application, please select one of each from the list below, the Tube Collet Assembly, the Cable Guide Assembly and the Cable Collet Assembly. When ordering, please have Tube and Cable dimensions available.\",\"configImage\":\"\",\"tables\":[{\"items\":[{\"Product No\":\"C-1700-TBC-05\",\"Size\":\"Tube Collet Assy - 05mm o/d\"},{\"Product No\":\"C-1700-TBC-07\",\"Size\":\"Tube Collet Assy - 07mm o/d\"},{\"Product No\":\"C-1700-TBC-08\",\"Size\":\"Tube Collet Assy - 08mm o/d\"},{\"Product No\":\"C-1700-TBC-10\",\"Size\":\"Tube Collet Assy - 10mm o/d\"},{\"Product No\":\"C-1700-TBC-12\",\"Size\":\"Tube Collet Assy - 12mm o/d\"},{\"Product No\":\"C-1700-TBC-14\",\"Size\":\"Tube Collet Assy - 14mm o/d\"},{\"Product No\":\"C-1700-TBC-16\",\"Size\":\"Tube Collet Assy - 16mm o/d\"},{\"Product No\":\"C-1700-TBC-18\",\"Size\":\"Tube Collet Assy - 18mm o/d\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-1.jpeg\",\"title\":\"Tube Collet & Clamp Assemblies\"},{\"items\":[{\"Product No\":\"C-1700-CG-02025\",\"Size\":\"2.5mm Dia\"},{\"Product No\":\"C-1700-CG-02503\",\"Size\":\"2.6 - 3.5mm Dia\"},{\"Product No\":\"C-1700-CG-0306\",\"Size\":\"3.0 - 6.4mm Dia\"},{\"Product No\":\"C-1700-CG-0685\",\"Size\":\"6.0 - 8.5mm Dia\"},{\"Product No\":\"C-1700-CG-8511\",\"Size\":\"8.5 - 11.0mm Dia\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-2.jpeg\",\"title\":\"Cable Guide Assemblies\"},{\"items\":[{\"Product No\":\"C-1700-CBL-2530\",\"Size (Collet)\":\"2.5 - 3.0mm\"},{\"Product No\":\"C-1700-CBL-3038\",\"Size (Collet)\":\"3.0 - 3.8mm\"},{\"Product No\":\"C-1700-CBL-3850\",\"Size (Collet)\":\"3.8 - 5.0mm\"},{\"Product No\":\"C-1700-CBL-5064\",\"Size (Collet)\":\"5.0 - 6.4mm\"},{\"Product No\":\"C-1700-CBL-6480\",\"Size (Collet)\":\"6.4 - 8.0mm\"},{\"Product No\":\"C-1700-CBL-8095\",\"Size (Collet)\":\"8.0 - 9.5mm\"},{\"Product No\":\"C-1700-CBL-9511\",\"Size (Collet)\":\"9.5 - 11.0mm\"}],\"columns\":[\"Product No\",\"Cable Seal Collet Assemblies\"],\"image\":\"airstream/airstream-config-3.jpeg\",\"title\":\"Cable Seal Collet Assemblies\"},{\"items\":[{\"Product No\":\"C-1300-CS-2530-5\",\"Size\":\"Cable Seals 2.5 – 3.0mm\"},{\"Product No\":\"C-1300-CS-3038-5\",\"Size\":\"Cable Seals 3.0 – 3.8mm\"},{\"Product No\":\"C-1300-CS-3850-5\",\"Size\":\"Cable Seals 3.8 – 5.0mm\"},{\"Product No\":\"C-1300-CS-5064-5\",\"Size\":\"Cable Seals 5.0 – 6.4mm\"},{\"Product No\":\"C-1300-CS-6480-5\",\"Size\":\"Cable Seals 6.4 – 8.0mm\"},{\"Product No\":\"C-1300-CS-8095-5\",\"Size\":\"Cable Seals 8.0 – 9.5mm\"},{\"Product No\":\"C-1300-CS-9511-5\",\"Size\":\"Cable Seals 9.5 – 11.0mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-4.jpeg\",\"title\":\"Cable Seals (supplied in packs of 5)\"},{\"items\":[{\"Product No\":\"C-1700-TBC-05\",\"Size\":\"05mm Dia\"},{\"Product No\":\"C-1700-TBC-07\",\"Size\":\"Tube Seal O Ring 07mm Dia\"},{\"Product No\":\"C-1700-TBC-08\",\"Size\":\"Tube Seal O Ring 08mm Dia\"},{\"Product No\":\"C-1700-TBC-10\",\"Size\":\"Tube Collet Assy - 10mm o/d\"},{\"Product No\":\"C-1700-TBC-12\",\"Size\":\"Tube Collet Assy - 12mm o/d\"},{\"Product No\":\"C-1700-TBC-14\",\"Size\":\"Tube Collet Assy - 14mm o/d\"},{\"Product No\":\"C-1700-TBC-16\",\"Size\":\"Tube Collet Assy - 16mm o/d\"},{\"Product No\":\"C-1700-TBC-18\",\"Size\":\"Tube Collet Assy - 18mm o/d\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-5.jpeg\",\"title\":\"Tube Seal O Ring\"},{\"items\":[{\"Product No\":\"C-1700-DB-0311\",\"Size\":\"Drive Belt, 2.5 - 11mm Cable Dia\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-6.jpeg\",\"title\":\"Replacement Drive Belts (Supplied in pairs)\"}],\"accessories\":[]},{\"id\":\"5\",\"name\":\"Pneumatic AirStream Cable Blowing Machine\",\"productId\":\"C-1700-PNEU\",\"uid\":\"+SNqIzGIUmO0+fyHoEOw\",\"description\":\"The C-1700-PNEU Pneumatic AirStream has been designed to be a robust and simple to operate cable blowing machine. The compliant double drive concept also provides the maximum protection for micro cables. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.\",\"img\":[{\"image\":\"airstream-pneumatic.jpg\"}],\"mainImg\":\"airstream-pneumatic.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Cable Diameter: 2.5 to 11mm\"},{\"listItem\":\"Tube Size (Outside Dia): 5 to 18mm\"},{\"listItem\":\"Cable Speed (Adjustable): 0-80m/min\"},{\"listItem\":\"Compressor: >1.5m3/min @ 10-15 Bar\"},{\"listItem\":\"Width: 300mm (11.8″)\"},{\"listItem\":\"Length: 460mm (18″)\"},{\"listItem\":\"Height: 240mm (9.4″)\"},{\"listItem\":\"Net Weight: 14kg (31 lbs.)\"}]}],\"intro\":\"The C-1700-PNEU Pneumatic AirStream has been designed to be a robust and simple to operate cable blowing machine.\",\"video\":\"../airstream/videos/airstream-basic-setup.mp4, ../airstream/videos/motor-drivebelt-replacement.mp4, ../airstream/videos/drive-belt-replacement.mp4\",\"configurationTitle\":\"TORNADO Configuration for Cable Blowing\",\"configurationIntro\":\"In order to customise your new “Tornado” to your application, we ask that you pick one of each from the list below, the Duct Clamp Collet (A), the Duct Seal Collet (B), the Cable Collet Assy (C) and the In Feed Cable Collet (D), the Cable Seals (E) and the Cable Seal Plug (F). When ordering, please have Tube and Cable dimensions available. All imperial sizes are available on request.\",\"configImage\":\"\",\"tables\":[{\"items\":[{\"Product No\":\"C-1700-TBC-05\",\"Size\":\"Tube Collet Assy - 05mm o/d\"},{\"Product No\":\"C-1700-TBC-07\",\"Size\":\"Tube Collet Assy - 07mm o/d\"},{\"Product No\":\"C-1700-TBC-08\",\"Size\":\"Tube Collet Assy - 08mm o/d\"},{\"Product No\":\"C-1700-TBC-10\",\"Size\":\"Tube Collet Assy - 10mm o/d\"},{\"Product No\":\"C-1700-TBC-12\",\"Size\":\"Tube Collet Assy - 12mm o/d\"},{\"Product No\":\"C-1700-TBC-14\",\"Size\":\"Tube Collet Assy - 14mm o/d\"},{\"Product No\":\"C-1700-TBC-16\",\"Size\":\"Tube Collet Assy - 16mm o/d\"},{\"Product No\":\"C-1700-TBC-18\",\"Size\":\"Tube Collet Assy - 18mm o/d\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-1.jpeg\",\"title\":\"Tube Collet & Clamp Assemblies\"},{\"items\":[{\"Product No\":\"C-1700-CG-02025\",\"Size\":\"Cable Guide, 2.5mm Dia\"},{\"Product No\":\"C-1700-CG-02503\",\"Size\":\"Cable Guide, 2.6 - 3.5mm Dia\"},{\"Product No\":\"C-1700-CG-0306\",\"Size\":\"Cable Guide, 3.0 - 6.4mm Dia\"},{\"Product No\":\"C-1700-CG-0685\",\"Size\":\"Cable Guide, 6.0 - 8.5mm Dia\"},{\"Product No\":\"C-1700-CG-8511\",\"Size\":\"Cable Guide, 8.5 - 11.0mm Dia\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-2.jpeg\",\"title\":\"Cable Guide Assemblies\"},{\"items\":[{\"Product No\":\"C-1700-CBL-2530\",\"Size\":\"Cable Seal Collet 2.5 - 3.0mm\"},{\"Product No\":\"C-1700-CBL-3038\",\"Size\":\"Cable Seal Collet 3.0 - 3.8mm\"},{\"Product No\":\"C-1700-CBL-3850\",\"Size\":\"Cable Seal Collet 3.8 - 5.0mm\"},{\"Product No\":\"C-1700-CBL-5064\",\"Size\":\"Cable Seal Collet 5.0 - 6.4mm\"},{\"Product No\":\"C-1700-CBL-6480\",\"Size\":\"Cable Seal Collet 6.4 - 8.0mm\"},{\"Product No\":\"C-1700-CBL-8095\",\"Size\":\"Cable Seal Collet 8.0 - 9.5mm\"},{\"Product No\":\"C-1700-CBL-9511\",\"Size\":\"Cable Seal Collet 9.5 - 11.0mm\"}],\"columns\":[\"Product No\",\"Cable Seal Collet Assemblies\"],\"image\":\"airstream/airstream-config-3.jpeg\",\"title\":\"Cable Seal Collet Assemblies\"},{\"items\":[{\"Product No\":\"C-1300-CS-2530-5\",\"Size\":\"Cable Seals 2.5 – 3.0mm\"},{\"Product No\":\"C-1300-CS-3038-5\",\"Size\":\"Cable Seals 3.0 – 3.8mm\"},{\"Product No\":\"C-1300-CS-3850-5\",\"Size\":\"Cable Seals 3.8 – 5.0mm\"},{\"Product No\":\"C-1300-CS-5064-5\",\"Size\":\"Cable Seals 5.0 – 6.4mm\"},{\"Product No\":\"C-1300-CS-6480-5\",\"Size\":\"Cable Seals 6.4 – 8.0mm\"},{\"Product No\":\"C-1300-CS-8095-5\",\"Size\":\"Cable Seals 8.0 – 9.5mm\"},{\"Product No\":\"C-1300-CS-9511-5\",\"Size\":\"Cable Seals 9.5 – 11.0mm\"}],\"columns\":[\"Product No\",\"Cable Seals (supplied in packs of 5)\"],\"image\":\"airstream/airstream-config-4.jpeg\",\"title\":\"Cable Seals (supplied in packs of 5)\"},{\"items\":[{\"Product No\":\"C-1700-TBC-05\",\"Size\":\"Tube Collet Assy - 5mm Dia\"},{\"Product No\":\"C-1700-TBC-07\",\"Size\":\"Tube Collet Assy - 7mm Dia\"},{\"Product No\":\"C-1700-TBC-08\",\"Size\":\"Tube Collet Assy - 8mm Dia\"},{\"Product No\":\"C-1700-TBC-10\",\"Size\":\"Tube Collet Assy - 10mm o/d\"},{\"Product No\":\"C-1700-TBC-12\",\"Size\":\"Tube Collet Assy - 12mm o/d\"},{\"Product No\":\"C-1700-TBC-14\",\"Size\":\"Tube Collet Assy - 14mm o/d\"},{\"Product No\":\"C-1700-TBC-16\",\"Size\":\"Tube Collet Assy - 16mm o/d\"},{\"Product No\":\"C-1700-TBC-18\",\"Size\":\"Tube Collet Assy - 18mm o/d\"}],\"columns\":[\"Product No\",\"Tube Seal O Ring\"],\"image\":\"airstream/airstream-config-5.jpeg\",\"title\":\"Tube Seal O Ring\"},{\"items\":[{\"Product No\":\"C-1700-DB-0311\",\"Size\":\"Drive Belt, 2.5 - 11mm Cable Dia\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"airstream/airstream-config-6.jpeg\",\"title\":\"Replacement Drive Belts (Supplied in pairs)\"}],\"accessories\":[]},{\"id\":\"6\",\"name\":\"Accelair 2 Fibre Blowing Machine\",\"uid\":\"vzP6ttWeY0eA7MaJIkSvDg\",\"productId\":\"C-1800\",\"description\":\"The C-1800 Fibre Blowing Machine (Accelair 2) has been developed to provide a simple to use and reliable fibre blowing solution. The Accelair 2 is designed to fit a fibre range from 1 to 3mm diameter, thereby providing the complete range of blown fibre installation solutions from one machine. The Accelair 2 is a compact integrated fibre blowing machine benefiting from full automation and fibre management; sophisticated fibre protection is implemented to ensure the fibre mechanical and optical integrity is maintained. The machine only requires a single 24V D.C. electrical supply and compressed air to operate.\",\"img\":[{\"image\":\"accelair.jpg\"},{\"image\":\"../accelair/accelair-2.jpeg\"},{\"image\":\"../accelair/accelair-3.jpeg\"},{\"image\":\"../accelair/accelair-4.jpeg\"},{\"image\":\"../accelair/accelair-5.jpeg\"},{\"image\":\"../accelair/accelair-6.jpeg\"},{\"image\":\"../accelair/accelair-7.jpeg\"},{\"image\":\"../accelair/accelair-8.jpeg\"},{\"image\":\"../accelair/accelair-9.jpeg\"}],\"mainImg\":\"accelair.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Fibre Compatibility: Up to 1.6 mm with buckle protection, up to 3 mm without buckle protection\"},{\"listItem\":\"Blowing Speed: 0-100 metres per minute without buckle detection & 0-50 metres per minute with buckle detection\"},{\"listItem\":\"Compatible Tubes: 3 mm to 10 mm\"},{\"listItem\":\"Automation: In buckle mode, the machine is self regulating\"},{\"listItem\":\"Air Supply:: 15 Bar max working pressure complete with suitable air conditioning (drying)\"},{\"listItem\":\"Electrical Supply: Universal mains power supply (supplied as standard): 85-265V AC 47/63Hz or 120-370V DC input, 24V DC 2.2A output. Battery pack and vehicle adaptor available upon request.\"},{\"listItem\":\"Control: Remote user interface with backlit screen provides all necessary information; including current distance, speed, torque setting and fibre status.\"},{\"listItem\":\"Machine size: L: 184mm, W: 120mm, H: 166mm, Weight: 3kg\"},{\"listItem\":\"Case Size: L: 520mm, W: 430mm, H: 220mm, Weight: 12kg\"}]}],\"intro\":\"The C-1800 Accelair 2 Fibre Blowing Machine has been developed to provide a simple to use and reliable fibre blowing solution.\",\"video\":\"\",\"configurationTitle\":\"AccelAir2 Configuration\",\"configurationIntro\":\"In order to customise your AccelAir2 to your application, please select one each from the list below, the infeed guide, tube clamp and fibre buckle plates. When ordering, please have tube and fibre dimensions available.\",\"configImage\":\"\",\"tables\":[{\"items\":[{\"Product No\":\"C-1800-CG-2\",\"Size\":\"Infeed Guide up to 2mm\"},{\"Product No\":\"C-1800-CG-3\",\"Size\":\"Infeed Guide from 2 to 3mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"accelair/accelair-config-1.jpeg\",\"title\":\"Infeed Guides\"},{\"items\":[{\"Product No\":\"C-1800-TBC-03\",\"Size\":\"3mm\"},{\"Product No\":\"C-1800-TBC-04\",\"Size\":\"4mm\"},{\"Product No\":\"C-1800-TBC-05\",\"Size\":\"5mm\"},{\"Product No\":\"C-1800-TBC-06\",\"Size\":\"6mm\"},{\"Product No\":\"C-1800-TBC-07\",\"Size\":\"7mm\"},{\"Product No\":\"C-1800-TBC-08\",\"Size\":\"8mm\"},{\"Product No\":\"C-1800-TBC-09\",\"Size\":\"9mm\"},{\"Product No\":\"C-1800-TBC-10\",\"Size\":\"10mm\"}],\"columns\":[\"Product No\",\"Tube Clamp and Seals\"],\"image\":\"accelair/accelair-config-2.jpeg\",\"title\":\"Tube Clamp and Seals\"},{\"items\":[{\"Product No\":\"C-1800-FBP-C0.9-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 0.9mm\"},{\"Product No\":\"C-1800-FBP-C1.0-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.0mm\"},{\"Product No\":\"C-1800-FBP-C1.1-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.1mm\"},{\"Product No\":\"C-1800-FBP-C1.2-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.2mm\"},{\"Product No\":\"C-1800-FBP-C1.3-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.3mm\"},{\"Product No\":\"C-1800-FBP-C1.4-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.4mm\"},{\"Product No\":\"C-1800-FBP-C1.5-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.5mm\"},{\"Product No\":\"C-1800-FBP-C1.6-SS\",\"Size (plates)\":\"Fibre Buckle Plates – 1.6mm\"}],\"columns\":[\"Product No\",\"Size (plates)\"],\"image\":\"accelair/accelair-config-3.jpeg\",\"title\":\"Fibre Buckle Plates (with Buckle Shuttles)\"},{\"items\":[{\"Product No\":\"C-1800-FBP-N1.6-SS\",\"Size (plates)\":\"1.6mm\"},{\"Product No\":\"C-1800-FBP-N1.7-SS\",\"Size (plates)\":\"1.7mm\"},{\"Product No\":\"C-1800-FBP-N1.8-SS\",\"Size (plates)\":\"1.8mm\"},{\"Product No\":\"C-1800-FBP-N1.9-SS\",\"Size (plates)\":\"1.9mm\"},{\"Product No\":\"C-1800-FBP-N2.0-SS\",\"Size (plates)\":\"2.0mm\"},{\"Product No\":\"C-1800-FBP-N2.1-SS\",\"Size (plates)\":\"2.1mm\"},{\"Product No\":\"C-1800-FBP-N2.2-SS\",\"Size (plates)\":\"2.2mm\"},{\"Product No\":\"C-1800-FBP-N2.3-SS\",\"Size (plates)\":\"2.3mm\"},{\"Product No\":\"C-1800-FBP-N2.4-SS\",\"Size (plates)\":\"2.4mm\"},{\"Product No\":\"C-1800-FBP-N2.5-SS\",\"Size (plates)\":\"2.5mm\"},{\"Product No\":\"C-1800-FBP-N2.6-SS\",\"Size (plates)\":\"2.6mm\"},{\"Product No\":\"C-1800-FBP-N2.7-SS\",\"Size (plates)\":\"2.7mm\"},{\"Product No\":\"C-1800-FBP-N2.8-SS\",\"Size (plates)\":\"2.8mm\"},{\"Product No\":\"C-1800-FBP-N2.9-SS\",\"Size (plates)\":\"2.9mm\"},{\"Product No\":\"C-1800-FBP-N3.0-SS\",\"Size (plates)\":\"3.0mm\"}],\"columns\":[\"Product No\",\"Size (plates)\"],\"image\":\"accelair/accelair-config-4.png\",\"title\":\"Fibre Blowing Plates (without Buckle Shuttle)\"},{\"items\":[{\"Product No\":\"C-1800-TS-03\",\"Size\":\"3mm\"},{\"Product No\":\"C-1800-TS-04\",\"Size\":\"4mm\"},{\"Product No\":\"C-1800-TS-05\",\"Size\":\"5mm\"},{\"Product No\":\"C-1800-TS-06\",\"Size\":\"6mm\"},{\"Product No\":\"C-1800-TS-07\",\"Size\":\"7mm\"},{\"Product No\":\"C-1800-TS-08\",\"Size\":\"8mm\"},{\"Product No\":\"C-1800-TS-09\",\"Size\":\"9mm\"},{\"Product No\":\"C-1800-TS-10\",\"Size\":\"10mm\"}],\"columns\":[\"Product No\",\"Tube Seals\"],\"image\":\"accelair/accelair-config-5.jpeg\",\"title\":\"Tube Seals\"},{\"items\":[{\"Product No\":\"C-1800-BS\",\"Buckle Shuttles\":\"pack of 5\"}],\"columns\":[\"Product No\",\"Buckle Shuttles\"],\"image\":\"accelair/accelair-config-6.png\",\"title\":\"Buckle Shuttles\"},{\"items\":[{\"Product No\":\"C-1800-T1\",\"Size\":\"Small – 5 Pairs 0.8 – 2.0mm Fibres\"},{\"Product No\":\"C-1800-T2\",\"Size\":\"Large – 5 Pairs 2.1 – 3.0mm Fibres\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"accelair/accelair-config-7.jpeg\",\"title\":\"Silicon Tyres (Drive Wheels)\"},{\"items\":[{\"Product No\":\"C-1800-DC-KIT\",\"Battery Pack\":\"Li-Po Battery Pack c/w vehicle adapter kit, 12-24v DC converter, 12v vehicle power outlet and mains charger(2x batteries supplied)\"},{\"Product No\":\"C-1800-BATT\",\"Battery Pack\":\"Additional Battery\"}],\"columns\":[\"Product No\",\"Battery Pack\"],\"image\":\"accelair/accelair-config-8.png\",\"title\":\"Battery Pack\"}],\"accessories\":[]},{\"id\":\"7\",\"name\":\"Whisper Cable Blowing Machine\",\"productId\":\"G-GMP-89910\",\"uid\":\"kMNrTq9k8Uum73P1oVm0Wg\",\"description\":\"The Whisper Cable Blowing Machine has been designed to provide a compact and portable cable installation system. Easy component changes allow for the installation of different cable sizes into pre-installed microducts. Cable drive comes from most types of cordless drill (not included) and an electronic display provides readouts of cable installation speed and distance.\",\"img\":[{\"image\":\"whisper.jpg\"},{\"image\":\"whisper/whisper-2.png\"}],\"mainImg\":\"whisper.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features:\",\"name\":[{\"listItem\":\"Installs cable diameters of 3-8.5mm\"},{\"listItem\":\"Accommodates microduct sizes of 4-18mm\"},{\"listItem\":\"Uses most variable speed drills as a power source\"},{\"listItem\":\"Lightweight, durable construction with precision machined parts\"},{\"listItem\":\"Single person operation\"},{\"listItem\":\"Digital cable speed and length monitoring\"},{\"listItem\":\"Integral air valve and pressure gauge\"},{\"listItem\":\"Low maintenance\"},{\"listItem\":\"Ideal for smaller installation jobs\"},{\"listItem\":\"Travel bag included\"},{\"listItem\":\"Tool kit\"}]},{\"id\":2,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Cable Diameter: 3.0 to 8.5mm\"},{\"listItem\":\"Tube Size (Outside Dia): 4 to 18mm\"},{\"listItem\":\"Cable Speed (Adjustable): (0-90m/min)\"},{\"listItem\":\"Air Pressure: 15 Bar\"},{\"listItem\":\"Power Requirement: Variable Speed Drill\"},{\"listItem\":\"Width: 206mm\"},{\"listItem\":\"Length: 246mm\"},{\"listItem\":\"Height: 216mm\"},{\"listItem\":\"Net Weight: 5.4kg\"},{\"listItem\":\"Recommended Compressor: C-COMP-15\"}]}],\"intro\":\"The Whisper Cable Blowing Machine has been designed to provide a compact and portable cable installation system.\",\"video\":\"\",\"configurationTitle\":\"Whisper Configuration for Cable Blowing\",\"configurationIntro\":\"In order to customize your new “Whisper” to your application, we ask that you pick one of each from the lists below, the Tube Collet Assembly and the Cable Seal Collet Assembly. When ordering, please have Tube and Cable dimensions available.\",\"configImage\":\"\",\"tables\":[{\"items\":[{\"Product No\":\"G-GMP-89918\",\"Size\":\"Tube collet assy 04mm\"},{\"Product No\":\"G-GMP-89919\",\"Size\":\"Tube collet assy 05mm\"},{\"Product No\":\"G-GMP-89926\",\"Size\":\"Tube collet assy 07mm\"},{\"Product No\":\"G-GMP-89927\",\"Size\":\"Tube collet assy 08mm\"},{\"Product No\":\"G-GMP-89922\",\"Size\":\"Tube collet assy 10mm\"},{\"Product No\":\"G-GMP-89923\",\"Size\":\"Tube collet assy 12mm\"},{\"Product No\":\"G-GMP-89928\",\"Size\":\"Tube collet assy 14mm\"},{\"Product No\":\"G-GMP-89925\",\"Size\":\"Tube collet assy 16mm\"},{\"Product No\":\"G-GMP-89924\",\"Size\":\"Tube collet assy 18mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"whisper/whisper-config-1.jpeg\",\"title\":\"Tube Collet & Clamp Assemblies\"},{\"items\":[{\"Product No\":\"G-GMP-89932\",\"Size\":\"Cable collet assy 3.0-3.8mm\"},{\"Product No\":\"G-GMP-89933\",\"Size\":\"Cable collet assy 3.8-5.0mm\"},{\"Product No\":\"G-GMP-89934\",\"Size\":\"Cable collet assy 5.0-6.4mm\"},{\"Product No\":\"G-GMP-89935\",\"Size\":\"Cable collet assy 6.4-8.5mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"whisper/whisper-config-2.jpeg\",\"title\":\"Cable Seal Collet Assemblies\"}],\"accessories\":[{\"name\":\"Tripod Mount Kit\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"color\":\"white\",\"id\":\"4\",\"productId\":\"G-GMP-89945\",\"intro\":\"A Lightweight and durable product, containing positive locking clamps, Aluminium alloy construction, Flat head design, Built-in shoulder straps and more. This kit is collapsible for storage, with a max working height of 1.6m\",\"mainImg\":\"../whisper/tripod-mount-kit.jpeg\"},{\"name\":\"Compressed Air Cooler\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"color\":\"white\",\"id\":\"1\",\"productId\":\"G-GMP-89948\",\"intro\":\"This option helps support the drill during longer installations.Attaches to the tripod and can be adjusted for most drills.\",\"mainImg\":\"../whisper/whisper-drill-stand.jpeg\"}]},{\"id\":\"8\",\"name\":\"GentL Air Fibre Blowing Machine\",\"productId\":\"G-GMP-89916\",\"uid\":\"h+lRu7W2q020wC9XeFbAKA\",\"description\":\"The GentL Air is a portable and affordable solution for pushing fibre in micro ducts using a battery operated drill and compressed air. It has been designed to install fibre sizes of 1-3mm into duct sizes of 4-7mm, with an adjustable clutch for cable protection.\",\"img\":[{\"image\":\"gentl-air.jpeg\"}],\"mainImg\":\"gentl-air.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features:\",\"name\":[{\"listItem\":\"Installs fibre diameters of 1-3mm\"},{\"listItem\":\"Accommodates duct sizes of 4-7mm\"},{\"listItem\":\"Uses most variable speed brushless 3/8″ drills as a power source\"},{\"listItem\":\"Precision, user adjustable clutch for cable protection\"},{\"listItem\":\"Lightweight, durable construction with precision machined parts\"},{\"listItem\":\"Single person operation\"},{\"listItem\":\"Digital cable speed and length monitoring\"},{\"listItem\":\"Low maintenance\"},{\"listItem\":\"Ideal for smaller jobs\"},{\"listItem\":\"Travel bag included\"}]},{\"id\":2,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Fibre Diameter: 1 - 3mm\"},{\"listItem\":\"Tube Size: 4 - 7mm\"},{\"listItem\":\"Cable Speed(adjustable): 0-90m/min (0-300ft/min)\"},{\"listItem\":\"Max Air Pressure: 15 Bar (220 psi)\"},{\"listItem\":\"Power Requirement: Variable Speed Brushless Drill\"},{\"listItem\":\"Length: 246mm\"},{\"listItem\":\"Width: 206mm\"},{\"listItem\":\"Height: 216mm\"},{\"listItem\":\"Weight: 5.4kg\"}]}],\"intro\":\"The GentL Air is a portable and affordable solution for pushing fibre in micro ducts using a battery operated drill and compressed air.\",\"video\":\"\",\"configurationTitle\":\"GentL Air Configuration\",\"configurationIntro\":\"In order to customize your new GentL Air to your application, we ask that you pick one of each from the lists below, the Tube Collet Assembly and the Cable Seal Collet Assembly. When ordering, please have Tube and Cable dimensions available.\",\"configImage\":\"\",\"tables\":[{\"items\":[{\"Product No\":\"G-GMP-89918\",\"Size\":\"Tube collet assy 04mm\"},{\"Product No\":\"G-GMP-89919\",\"Size\":\"Tube collet assy 05mm\"},{\"Product No\":\"G-GMP-89926\",\"Size\":\"Tube collet assy 07mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"gentlair/gentlair-config-1.jpeg\",\"title\":\"Tube Collet and Clamp Assemblies\"},{\"items\":[{\"Product No\":\"G-GMP-89929\",\"Size\":\"Cable collet assy 1.0-2.0mm\"},{\"Product No\":\"G-GMP-89898\",\"Size\":\"Cable collet assy 2.0-2.5mm\"},{\"Product No\":\"G-GMP-89899\",\"Size\":\"Cable collet assy 2.5-3.0mm\"}],\"columns\":[\"Product No\",\"Size\"],\"image\":\"gentlair/gentlair-config-2.jpeg\",\"title\":\"Cable Seal Collet Assemblies\"}],\"accessories\":[{\"name\":\"Tripod Mount Kit\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"color\":\"white\",\"id\":\"4\",\"productId\":\"G-GMP-89945\",\"intro\":\"A Lightweight and durable product, containing positive locking clamps, Aluminium alloy construction, Flat head design, Built-in shoulder straps and more. This kit is collapsible for storage, with a max working height of 1.6m\",\"mainImg\":\"../whisper/tripod-mount-kit.jpeg\"},{\"name\":\"Compressed Air Cooler\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"color\":\"white\",\"id\":\"1\",\"productId\":\"G-GMP-89948\",\"intro\":\"This option helps support the drill during longer installations.Attaches to the tripod and can be adjusted for most drills.\",\"mainImg\":\"../whisper/whisper-drill-stand.jpeg\"}]},{\"id\":\"9\",\"name\":\"Cable Overblowing Junction box\",\"productId\":\"C-1253-JBOX\",\"uid\":\"yR9n5C9fk0udW2W7Dn3Ktg\",\"description\":\"The CBS Cable Overblowing Junction Box has been designed to install a new cable into an existing occupied sub-duct. The Cable Overblowing Junction Box comprises a robust aluminium base and lid that form a pressurised air chamber into which one end of an existing occupied sub-duct can be attached. The existing cable exits the Cable Overblowing Junction Box through an opening that has 3 cable seal slots, one of which will house the seal to suit the size of the existing cable. The third branch is then connected to a CBS Cable Blowing Machine via a short slave length of tube for the installation of the extra cable. A range of Overblowing junction box collets and seals are available to suit the outside diameter of the existing sub-duct, existing cable, cable to be installed and slave length of tube for cable to be installed. Air is fed into the Cable Overblowing Junction Box directly via a J-Mac coupling on the lid of the box. Other couplings and adaptors are available on request, speak to one of the sales team for more information.The CBS Cable Overblowing Junction Box has been designed to install a new cable into an existing occupied sub-duct. The Cable Overblowing Junction Box comprises a robust aluminium base and lid that form a pressurised air chamber into which one end of an existing occupied sub-duct can be attached. The existing cable exits the Cable Overblowing Junction Box through an opening that has 3 cable seal slots, one of which will house the seal to suit the size of the existing cable. The third branch is then connected to a CBS Cable Blowing Machine via a short slave length of tube for the installation of the extra cable. A range of Overblowing junction box collets and seals are available to suit the outside diameter of the existing sub-duct, existing cable, cable to be installed and slave length of tube for cable to be installed. Air is fed into the Cable Overblowing Junction Box directly via a J-Mac coupling on the lid of the box. Other couplings and adaptors are available on request, speak to one of the sales team for more information.\",\"img\":[{\"image\":\"cable-overblowing-junction-box.jpeg\"}],\"mainImg\":\"cable-overblowing-junction-box.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"The maximum diameter of a new cable / tube(s) for installation is dependent on the diameter of the existing cable and duct bore.\"},{\"listItem\":\"It is the responsibility of the operator to ensure that the cable / tube(s) to be installed are compatible with the existing sub-duct and installed cable configuration.\"},{\"listItem\":\"Existing Cable Range:  9-20 mm O.D\"},{\"listItem\":\"Existing Duct Range:  25-50 mm O.D\"},{\"listItem\":\"Installing Cable Range: 5-11 mm O.D\"},{\"listItem\":\"Installing Tube Range: 5-18 mm O.D\"},{\"listItem\":\"Max operating pressure: 15 Bar\"},{\"listItem\":\"Please contact a member of the CBS Sales team for the additional interchangeable parts. Other sizes can be manufactured upon request.\"}]}],\"intro\":\"The CBS Cable Overblowing Junction Box has been designed to install a new cable into an existing occupied sub-duct.\",\"video\":\"\",\"configurationTitle\":\"Configuration for CABLE OVERBLOWING JUNCTION BOX\",\"configurationIntro\":\"\",\"configImage\":\"overblowing-junction-box/junction-box-config.jpeg\",\"tables\":[],\"accessories\":[]},{\"id\":\"10\",\"name\":\"Blown Fibre Compressor\",\"productId\":\"C-1420-10\",\"uid\":\"yq6gO5EwT0q39RD+kTjp9w\",\"description\":\"A compact 10 Bar compressor specifically for use with the CBS C-1800 Accelair2 Blown Fibre Unit. The compressor is fitted with aftercooling, filtration and air drying essential in providing the optimum viscous drag effect for maximum fibre blowing length.\",\"img\":[{\"image\":\"blown-fibre-compressor.jpeg\"}],\"mainImg\":\"blown-fibre-compressor.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications\",\"name\":[{\"listItem\":\"Power Source: Petrol air-cooled Honda GX160 engine, key start\"},{\"listItem\":\"Air Compressor: Hydrovane, Vane type delivering 200ltr/min @ 10 Bar\"},{\"listItem\":\"Electrical Output: For powering C-1800 Blown Fibre Unit.\"},{\"listItem\":\"Air Conditioning: Membrane dryer providing +1oC Pressure Dew Point based on +35oC inlet temperature and maximum flow. Filtration to 0.01μm particulate and oil removal.\"},{\"listItem\":\"Temperature Spec: Ambient range +5oC to +40oC. Cooling to maintain air temperature to within +3oC of ambient\"},{\"listItem\":\"Length: 875mm\"},{\"listItem\":\"Width: 680mm\"},{\"listItem\":\"Height: 605mm\"},{\"listItem\":\"Weight: 95kg\"}]}],\"intro\":\"A compact 10 Bar compressor specifically for use with the CBS C-1800 Accelair2 Blown Fibre Unit.\",\"video\":\"\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"11\",\"name\":\"Cable Blowing Machine Compressor\",\"productId\":\"VRK20\",\"uid\":\"3hUe8bataU+gWxTBU10A+g\",\"description\":\"The VRK20 is a portable compressor designed for cable blowing. With safety and efficiency in mind, it is designed to meet the requirements for cable blowing installations\",\"img\":[{\"image\":\"../cable-blowing-compressor/cable-blowing-compressor-1.jpg\"},{\"image\":\"../cable-blowing-compressor/cable-blowing-compressor-2.jpg\"},{\"image\":\"../cable-blowing-compressor/cable-blowing-compressor-3.jpg\"}],\"mainImg\":\"cable-blowing-compressor/cable-blowing-compressor-1.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features\",\"name\":[{\"listItem\":\"Built in aftercooler\"},{\"listItem\":\"Automatic optimum air flow delivery - the unit will automatically adjust the air flow to optimum volume, this reduces stress on the engine and improves fuel efficiency\"},{\"listItem\":\"Max operating pressure 15bar / 218psi\"},{\"listItem\":\"Working Pressure 13Bar / 188psi\"},{\"listItem\":\"Free air delivery 1000L/min / 35cfm\"},{\"listItem\":\"Minimum working pressure 5.5bar / 80ps1\"},{\"listItem\":\"Drive system engine-air end, belt drive XP2 over dimensioned\"},{\"listItem\":\"Compressor cooling system Air/Oil\"},{\"listItem\":\"Oil cooling capacity 5L / 1.33 gal\"},{\"listItem\":\"Air outlet temperature 20C + Ambient temperature\"},{\"listItem\":\"Hose Diameter 3/4\"},{\"listItem\":\"Outlet connector Claw\"}]},{\"id\":2,\"main\":\"Specifications\",\"name\":[{\"listItem\":\"Noise level EECno 2000/14 <98 LWA\"},{\"listItem\":\"Battery 12Vcc 300A-30Ah (EN)\"},{\"listItem\":\"Fuel tank capacity 15L / 4 gal\"},{\"listItem\":\"Weight 240Kg\"},{\"listItem\":\"Type: Petrol\"},{\"listItem\":\"Unit of Measure: Single\"}]}],\"intro\":\"The VRK20 is a portable compressor designed for cable blowing. Made With safety and efficiency in mind.\",\"video\":\"\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"12\",\"name\":\"Kaeser M17 Portable Compressor\",\"productId\":\"VRK20\",\"uid\":\"E511ciFj1EKns4bG7ygpkA\",\"description\":\"Versatile, reliable and easy to transport: This small compressor takes up minimal loading space and, with it's high-quality motor and extremely impact-resistant PE enclosure, it's ready for anything. The 15-bar version is the ideal choice for trenchless laying of glass fibre cables or for leakage tests. An external compressed air aftercooler can also be optionally connected to ensure a dependable supply of cool, condensate-free air at all times.\",\"img\":[{\"image\":\"../kaeser-web.jpeg\"}],\"mainImg\":\"kaeser-web.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Main Features\",\"name\":[{\"listItem\":\"Flow Rate: 1.0 m3/min or 35cfm\"},{\"listItem\":\"Operating Pressure: 15 bar or 215 PSI\"},{\"listItem\":\"Petrol Engine: Honda GX630\"},{\"listItem\":\"Engine Rated Power: 15.5 kW\"},{\"listItem\":\"Fuel Tank Capacity: 20 Litres\"},{\"listItem\":\"Operational Weight: 204 KG\"}]}],\"intro\":\"Versatile, reliable and easy to transport: This small compressor takes up minimal loading space and, with it's high-quality\",\"video\":\"\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"17\",\"name\":\"Pull and Assist Winch\",\"uid\":\"DNXxPH1ZWkCr9LJr5VFIZg\",\"productId\":\"C-1045-001-R4\",\"description\":\"The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable. The single capstan allows the winch to be placed at the mid point of a section to assist in the pull, thus enabling longer pulls to be achieved. The C-1045 has a rope take up drum, which is driven independently via a hydraulic motor. The take up drum has a detachable side, which allows the rope on the drum to be removed in a tidy coil and can be declutched from the drive to allow the rope to be pulled out manually when threading. The winch is powered by a 13hp petrol engine that drives a fixed displacement hydraulic pump, which in turn drives the low speed, high torque, hydraulic motor. The motor drives the capstan through an epicyclical gearbox. The pulling tension is mounted on a dial read out, allowing the operator to monitor the pull. Tension is adjustable from 0 – 500kg. The winch will stop pulling at the selected tension without stopping the engine, thereby protecting the cable. The C-1045 is built on a robust steel chassis. The trailer equipment complies with European Standards and has a single axle, overrun brakes and jockey wheel.\",\"img\":[{\"image\":\"winch/winch-1.jpeg\"},{\"image\":\"winch/winch-2.jpeg\"},{\"image\":\"winch/winch-3.jpeg\"},{\"image\":\"winch/winch-4.jpeg\"},{\"image\":\"winch/winch-5.jpeg\"},{\"image\":\"winch/winch-6.jpeg\"},{\"image\":\"winch/winch-7.jpeg\"},{\"image\":\"winch/winch-8.jpeg\"},{\"image\":\"winch/winch-9.jpeg\"}],\"mainImg\":\"winch/winch-2.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications:\",\"name\":[{\"listItem\":\"Engine: 13hp\"},{\"listItem\":\"Capacity: 500kg\"},{\"listItem\":\"Rope Speed (Max): 50m/min\"},{\"listItem\":\"Capstan Diameter: 813mm\"},{\"listItem\":\"Adjustable Tension: 0-500kg\"},{\"listItem\":\"Length (Min): 3200mm\"},{\"listItem\":\"Length (Max): 3436mm\"},{\"listItem\":\"Width: 1750mm\"},{\"listItem\":\"Height: 1440mm\"},{\"listItem\":\"Weight: 580kg\"}]}],\"intro\":\"The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable.\",\"video\":\"\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"22\",\"name\":\"Cable Fleeter\",\"productId\":\"C-1420-10\",\"uid\":\"IBAt+kCkeHtA7+xh+MA\",\"description\":\"The Fleeter replaces the manual method of “figure of eighting” cable, and provides protection and security for the cable. Following installation of the cable in the first leg of the duct route the balance of the cable is removed from the drum and fed into the Fleeter, thereby releasing the cable end ready for blowing into the second leg. The Fleeter provides a smooth and simple system whilst ensuring cable protection from pedestrians or vehicles and prevents contamination from mud, soil or dust. The Fleeter is designed to work in conjunction with the Cable Blowing Machine, which provides the cable feed in and out of the Fleeter. The unit accepts 3,000 metres of 13mm cable, allowing drum lengths of 6,000 metres to be utilised. The Fleeter consists of a road going trailer chassis upon which is mounted a cable storage cassette, rotating cable guide quadrant and duct clamp assembly.\",\"img\":[{\"image\":\"cable-fleeter.jpeg\"}],\"mainImg\":\"cable-fleeter.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications\",\"name\":[{\"listItem\":\"Dimensions: 3.42m long x 2.3m wide x 2.33m high\"},{\"listItem\":\"Tyre Size: 145R 10\"},{\"listItem\":\"Brakes: Inertia type brakes with auto reverse\"},{\"listItem\":\"Cassette: 2m x 0.85m high\"},{\"listItem\":\"Rear Corner Steadies: 2 off\"},{\"listItem\":\"Spirit Level Mounted: 1 off\"},{\"listItem\":\"Width: 680mm\"},{\"listItem\":\"Towing Hitch: Eye – 30mm, 40mm, Ball Type – 50mm, Specify at time of ordering\"},{\"listItem\":\"325kg\"}]}],\"intro\":\"The Fleeter replaces the manual method of “figure of eighting” cable, and provides protection and security for the cable.\",\"video\":\"https://www.youtube.com/embed/1wD6DOzn-Fg\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"23\",\"name\":\"Mini Cable Fleeting Device\",\"productId\":\"C-1420-10\",\"uid\":\"3df0kbiPukquArnSrjH8A\",\"description\":\"The Mini Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum. Employed when the cable needs to be removed from the cable drum, in preparation for blowing the second section.\",\"img\":[{\"image\":\"mini-cable-fleeting-device.jpeg\"}],\"mainImg\":\"mini-cable-fleeting-device.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications\",\"name\":[{\"listItem\":\"Cable Diameter: 5 - 11mm\"},{\"listItem\":\"Max Cable Length: 2000m\"},{\"listItem\":\"Microduct Size: 8-18mm\"},{\"listItem\":\"BASKET SIZE:\"},{\"listItem\":\"Diameter: 1555mm\"},{\"listItem\":\"Unit Height: 1420mm\"},{\"listItem\":\"Weight: 57kg\"}]}],\"intro\":\"The Mini Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum.\",\"video\":\"https://www.youtube.com/embed/7lPkWg-FytQ\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"24\",\"name\":\"Micro Cable Fleeting Device\",\"productId\":\"C-1420-10\",\"uid\":\"2XTEblFK5U6MGInDILWRPQ\",\"description\":\"The Micro Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum. Employed when the cable needs to be removed from the cable drum, in preparation for blowing the second section.\",\"img\":[{\"image\":\"micro-cable-fleeting.jpeg\"}],\"mainImg\":\"micro-cable-fleeting.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications\",\"name\":[{\"listItem\":\"Cable Diameter: 5 - 8mm\"},{\"listItem\":\"Max Cable Length: 2000m\"},{\"listItem\":\"Microduct Size: 8-18mm\"},{\"listItem\":\"BASKET SIZE:\"},{\"listItem\":\"Diameter: 1200mm\"},{\"listItem\":\"Unit Height: 1285mm\"},{\"listItem\":\"Unit Weight: 1420mm\"},{\"listItem\":\"Weight: 43.5kg\"}]}],\"intro\":\"The Micro Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum.\",\"video\":\"https://www.youtube.com/embed/7lPkWg-FytQ\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]},{\"id\":\"25\",\"name\":\"Roll on Drum Stand\",\"productId\":\"D-496-01\",\"uid\":\"638398XCEqhs4TjYlq6pQ\",\"description\":\"The Micro Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum. Employed when the cable needs to be removed from the cable drum, in preparation for blowing the second section.\",\"img\":[{\"image\":\"roll-on-drum-stand.jpeg\"}],\"mainImg\":\"roll-on-drum-stand.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":[],\"item\":[{\"id\":1,\"main\":\"Specifications\",\"name\":[{\"listItem\":\"Max Drum Weight: 1500kg\"},{\"listItem\":\"Max Drum Diameter: 1500mm\"},{\"listItem\":\"Minimum Drum Diameter: 300mm\"},{\"listItem\":\"Drum Width: Adjustable\"},{\"listItem\":\"Height: 100mm\"},{\"listItem\":\"Width: 200mm\"},{\"listItem\":\"Length: 900mm\"},{\"listItem\":\"Weight: 46kg\"}]}],\"intro\":\"Roll on Drum Stand allows a range of drums to be accommodated to suit the majority of applications. Manufactured in steel, with ball bearings in the rollers, the stand is suitable for pulling off cable from the drum\",\"video\":\"\",\"configurationTitle\":\"\",\"configurationIntro\":\"\",\"configImage\":\"\",\"tables\":[],\"accessories\":[]}]");
-
-/***/ }),
-/* 102 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"name\":\"Tornado Plus\",\"elevation\":4,\"color\":\"white\",\"id\":\"1\",\"productId\":\"C-1250-08\",\"intro\":\"Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.\",\"mainImg\":\"tornado.jpg\"},{\"name\":\"Tornado Plus\",\"elevation\":4,\"color\":\"white\",\"id\":\"1\",\"productId\":\"C-1250-08\",\"intro\":\"The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.\",\"mainImg\":\"tornado.jpg\"},{\"name\":\"Tornado Plus\",\"elevation\":4,\"color\":\"white\",\"id\":\"1\",\"productId\":\"C-1250-08\",\"intro\":\"The cable blowing machine (sometimes known as cable jetting), comprising an air box and cable pusher, has been designed to provide an effective and safe method of fibre optic cable installation.\",\"mainImg\":\"tornado.jpg\"}]");
-
-/***/ }),
-/* 103 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"id\":\"1\",\"heading\":\"C-1270-KIT\",\"subheading\":\"The CBS Duct Rod Pusher is now available in a kit\",\"description\":[{\"paragraph\":\"The CBS Duct Rod Pusher is now available in a kit, complete with powerpack and 14 x 300mm duct rod. What takes a team of engineers hours to do will take minutes with this kit and just one engineer, saving time, money and pain in their back. The Pusher will work in forward and reverse, is fitted with a counter, and will help identify any blockages in the route.\"}],\"info\":\"by Admin, Dec 23, 2020\",\"categories\":[\"Duct Rods\",\"Underground\"],\"img\":[{\"image\":\"ductrodpusher.jpeg\"},{\"image\":\"ductpusher2.jpeg\"}]},{\"id\":\"2\",\"heading\":\"The Perfect Fill Ratio for Cable Blowing\",\"subheading\":\"one of the key parameters to a successful installation\",\"description\":[{\"paragraph\":\"Fibre optic cable blowing isn’t a new technique for cable installation and, in fact, it has been in use since the late 1990’s. However, the cable blowing technique may be new to some installers. A range of CBS cable and fibre blowing machines  help get the job done with ease for both the seasoned installer or the novice. In this article, we discuss one of the key parameters to a successful installation, the fill ratio.\"},{\"paragraph\":\"The fill ratio can be calculated for a single fibre optic cable installed in an innerduct or microduct as: d² ÷ D² < 65% or d²  < 65% D². The lowercase “d” stands for the outer diameter of the cable, while the uppercase “D” stands for innerduct’s inside diameter.\"},{\"paragraph\":\"The lowercase “d” stands for the outer diameter of the cable, while the uppercase “D” stands for innerduct’s inside diameter.\"},{\"paragraph\":\"This means that when the cable outer diameter squared is divided by the innerduct inside diameter squared, the outcome should be less than 65% (or .65) for the most effective cable blowing. Also, the fill ratio should not fall below 35%, as the cable may have more of a tendency to “kink” in the innerduct due to excessive turbulence. Likewise, when the fill ratio is greater than 80% it becomes increasingly likely that there is insufficient space around the cable for the viscous drag principle of the air to act on the cable jacket.\"},{\"paragraph\":\"The fill ratio is one of the parameters determining how far a fibre cable can be blown. A larger fill ratio is preferred when the cables are relatively stiff and the duct run is straight. A smaller fill ratio is typically preferred when there are multiple bends in the duct run, allowing more room in the innerduct for the cable to navigate the route.\"},{\"paragraph\":\"The installer doesn’t specify the innerduct or the cable, but the installer can easily calculate the fill ratio and determine if the ratio is in the “sweet spot” or not. A fill ratio out of range may explain why the cable installation didn’t proceed as planned.\"}],\"img\":[{\"image\":\"fill-ratio.png\"}],\"info\":\"by Admin, 28 February, 2020\",\"categories\":[\"Fibre Blowing\"]},{\"id\":\"3\",\"heading\":\"D-710 Pole Bogie\",\"subheading\":\"for transporting poles across rough terrain\",\"description\":[{\"paragraph\":\"The AirStream Cable Blowing Machine is powered by the newest servo control technology making it a top-tier cable placement tool. This powerful, single operator machine is easily operated to allow for safe and easy cable threading. Highly reliable and requiring little maintenance the AirStream Cable Blowing Machine is suited to reach a wide selection of cables ranging from diameters of 2.5mm to 11mm to make a wide array of jobs easy to complete. \"},{\"paragraph\":\"This machine features a tabletop design giving it such user-friendly ergonomics. It also comes with variable torque and speed controls allowing you to adapt to what each job requires. And it engages a double belt drive that is powered by the latest servo technology giving the machine precise torque and speed controls to suit each job. Digital monitors allow for simple monitor readings of the cable speed and length, while an auto-stop facility can be employed with air stone fitting.\"},{\"paragraph\":\"An integral air valve and pressure gauge make cable threading easy. The AirStream is lightweight and compact making it able to be used in both outdoor and indoor work environments. It is a low maintenance machine that emits low noise levels making it a tool users will want to work with. The machine also comes with a polycarbonate safety guarding and a travel case for simple transportation.\"},{\"paragraph\":\"The AirStream Cable Blowing Machine was designed to make all jobs easy to complete for users.\"}],\"img\":[{\"image\":\"polebogie.jpeg\"},{\"image\":\"polebogie2.jpeg\"},{\"image\":\"polebogie3.jpeg\"},{\"image\":\"polebogie4.jpeg\"}],\"info\":\"by Admin 24, January, 2020\",\"categories\":[\"Overhead Line\",\"Pole Handling\"]},{\"id\":\"4\",\"heading\":\"Airstream\",\"subheading\":\"for transporting poles across rough terrain\",\"description\":[{\"paragraph\":\"Designed to be ideally suited for transporting poles across rough terrain or soft ground, the poles are secured with quick action retaining straps to hold poles in place during transport. Available with low pressure tyres for use when keeping damage to the land is required. Narrow versions available for when access is restricted as well as a towing eye and strap for when being towed by a vehicle (off-road towing only).\"}],\"img\":[{\"image\":\"airstream.jpeg\"},{\"image\":\"airstream1.jpeg\"}],\"info\":\"by Admin | 17, February, 2020 \",\"categories\":[\"Fibre Blowing\"]},{\"id\":\"5\",\"heading\":\"Tornado Cable Blowing Machine\",\"subheading\":\"CBS is the only UK company to manufacture and sell our own range of cable blowing machines\",\"description\":[{\"paragraph\":\"We are the only company here in the UK that manufacture and produce our own range of cable blowing machines, the largest of which is the Tornado. This machine has been designed to to provide a safe and effective method of installing cables ranging from 6-32mm (0.25-1.25″) into a pre-installed duct. The Tornado is fast and will install the cable at a speed of 90m/min (300 ft/min) to maximise job efficiency.\"},{\"paragraph\":\"An aluminium air box and cable pusher are the backbones allowing the Tornado Cable Blowing Machine to install the cable with or without an existing missile. While the machine is operating, hydraulically powered caterpillar belts controls the way the fibre optic cables are driven into the air ducts. An electronic monitoring system generates read-outs of the speed and distance of the cable, while also protecting the cable from any obstructions that may arise and being able to facilitate an emergency stop.\"},{\"paragraph\":\"An aluminium air box and cable pusher are the backbones allowing the Tornado Cable Blowing Machine to install the cable with or without an existing missile. While the machine is operating, hydraulically powered caterpillar belts controls the way the fibre optic cables are driven into the air ducts. An electronic monitoring system generates read-outs of the speed and distance of the cable, while also protecting the cable from any obstructions that may arise and being able to facilitate an emergency stop.\"}],\"img\":[{\"image\":\"tornado.jpeg\"},{\"image\":\"tornado1.jpeg\"}],\"info\":\"by Admin | 3, January, 2020 \",\"categories\":[\"Fibre Blowing\"]},{\"id\":\"6\",\"heading\":\"Running Out Blocks\",\"subheading\":\"CBS is the only UK company to manufacture and sell our own range of cable blowing machines\",\"description\":[{\"paragraph\":\"The CBS range of running out blocks have been designed to suit almost every application when it comes to working at height with poles, cross arms and conductors of any size.\"},{\"paragraph\":\"D-687 Double Sheave Running Out Block\"},{\"paragraph\":\"Designed to be strong but light, the D-687 is ideally suited for pole work. The aluminium sheaves are mounted on sealed ball bearings for low resistance. 500kg SWL.\"},{\"paragraph\":\"D-685 Single Offset Sheave Running Out Block\"},{\"paragraph\":\"The D-686 has a split frame and hooks to locate on to brackets. The aluminium sheave is mounted on sealed ball bearings while guide rings protect the conductor from damage. 300kg SWL.\"},{\"paragraph\":\"D-686 Intermediate Running Out Block\"},{\"paragraph\":\"The D-686 has a split frame and hooks to locate on to brackets. The aluminium sheave is mounted on sealed ball bearings while guide rings protect the conductor from damage. 300kg SWL.\"},{\"paragraph\":\"D-793 Rear Pole Roller Block\"},{\"paragraph\":\"The D-793 has been designed to be suitable for stringing conductors at the rear of an angle pole. 600kg SWL.\"},{\"paragraph\":\"D-798 Pole Traversing Block\"},{\"paragraph\":\"The D-798 block allows the stringing operation to be fed up or down poles, when access at the rear of the pole is not available. The block has a 260mm sheave with quick acting ratchet fixing and a conductor side gate. 1,200kg SWL.\"},{\"paragraph\":\"D-694-2 Straight Crossarm Running Out Block\"},{\"paragraph\":\"The D-694-2 has been designed to mount onto crossarms upto 100mm angle. Sheaves are fitted with sleeve bearings. Unit comes complete with uplift roller to prevent conductor lifting out. 350kg SWL.\"},{\"paragraph\":\"D-807 Crossarm Running Out Block\"},{\"paragraph\":\"The D-807 has been designed to mount onto angle crossarms up to 100mm. Sheaves are fitted with sleeve bearings. This design allows conductors to be strung around route deviations. 300kg SWL.\"},{\"paragraph\":\"D-861 Angle Crossarm Running Out Block\"},{\"paragraph\":\"TThe dual pin on the D-861 allows the nylon top roller to be opened from either side when inserting conductor. Suitable for crossarms up to 150mm angle. 300kg SWL.\"},{\"paragraph\":\"D-862-1 Crossarm Angle Roller\"},{\"paragraph\":\"The adjustable angle facility of the D-862-1 allows the sheave to position through 180º in 45º increments. Fits crossarms up to 150mm angle. Nylon roller fitted. 400kg SWL.\"},{\"paragraph\":\"D-683 Running Out Block\"},{\"paragraph\":\"The D-683 is ideally suited for mounting onto crossarms up to 150mm angle, conductor-retaining pin is provided. 300kg SWL.\"},{\"paragraph\":\"D-733 & D-917 Insulator Mounted Running Out Block\"},{\"paragraph\":\"The D-717 blocks are suitable for 33kV insulator, while smaller the D-917 is suitable for 11kV insulator. Each has two sheaves for stringing, which are lowered for making off onto insulator. The D-733 is designed to fit insulators from 115 – 135mm, whilst the D-917 is designed to fit insulators from 70 – 90mm. 150kg SWL.\"},{\"paragraph\":\"Single Sheave Aluminium Suspension Block\"},{\"paragraph\":\"TSingle sheave aluminium suspension blocks with spring-loaded safety gate & steel zinc plated side frames. Neoprene lining of groove is available on request. Available with either a Rotating Oval Eye or a Tongue Mounting (Clevis). There are 2 sizes available depending on what diameter conductor is being used, both 2,400kg SWL.\"},{\"paragraph\":\"Hole Mounted Single Sheave Suspension Block\"},{\"paragraph\":\"These aluminium suspension blocks have an automatic safety gate and steel side frames. They are hole mounted to fit insulator clevis with 2,400kg SWL. The D-691 is the smallest in the range, The D-736 will accommodate larger conductors, D-1061 comes with a shackle in the hole mounting.\"},{\"paragraph\":\"Sagging Blocks\"},{\"paragraph\":\"Designed to fit tower cross arm to accept wire rope for sagging conductor. The D-668 swivel block comes in 3 different sizes with SWL of 2,000kg, 3,500kg or 5,000kg. The D-670 straight block has 2,000kg SWL.\"},{\"paragraph\":\"D-717 Tandem Sheave Suspension Block\"},{\"paragraph\":\"The D-717 comes with an automatic safety gate and steel side frames. There is the option to add a slip ring for earthwire earthing. 4,000kg SWL.\"}],\"img\":[{\"image\":\"rollingoutblocks.jpeg\"},{\"image\":\"rollingoutblocks2.jpeg\"},{\"image\":\"rollingoutblocks3.jpeg\"},{\"image\":\"rollingoutblocks4.jpeg\"},{\"image\":\"rollingoutblocks5.jpeg\"}],\"info\":\"by Admin | 22, November, 2019\",\"categories\":[\"Overhead Line\",\"Running Out Blocks\"]},{\"id\":\"7\",\"heading\":\"Winches and Pushing Machines\",\"subheading\":\"Including trailer mounted winches and portable, lightweight capstans\",\"description\":[{\"paragraph\":\"Our range of winches are designed to offer reliable, efficient performance, enabling your team to install a wide range of cabling both overhead and underground. Each designed to suit specific requirements, including trailer mounted winches and portable, lightweight capstans.\"},{\"paragraph\":\"C-1045 Pull & Assist Winch\"},{\"paragraph\":\"The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable. The single capstan allows the winch to be placed at the mid point of a section to assist in the pull, thus enabling longer pulls to be achieved. The winch has a rope take up drum, which is driven independently via a hydraulic motor, and has a detachable side which allows the rope on the drum to be removed in a tidy coil. Maximum pulling capacity of 500kg. \"},{\"paragraph\":\"C-680 Bulldog Overhead Line Winch\"},{\"paragraph\":\"The CBS 680 Bulldog winch has been designed to provide a compact, transportable unit for overhead line stringing work. The self-contained winch is powered by an 11hp petrol engine and the precise control required is provided by the hydraulic circuit. There are drums for various applications and these are easily interchanged. The C-680 is a British Universal winch designed to meet the needs of overhead line engineers. The various options permit use on aerial bundle (ABC), Copper, Aluminium and ACSR Conductors.\"},{\"paragraph\":\"C-821 Hydraulic Universal Winch\"},{\"paragraph\":\"The CBS 821 Universal Winch offers the constant pulling tension of a double capstan drive and the flexibility of a direct drive drum in one machine. The winch employs a powerful petrol engine mounted with associated hydraulics on a sturdy trailer unit. The precise hydraulic controls allow easy operation through one fail-safe lever. Ideally suited for ABC erection, 11/33kV stringing work conductor recovery and underground cable handling.\"},{\"paragraph\":\"C-825 Portable Hydraulic Winch\"},{\"paragraph\":\"The CBS 825 is designed to provide a fully portable winching system, by breaking down into easily transportable modules. Ideally suited for overhead line stringing work such as ABC conductors, bare conductors or re-conductoring projects, it provides a flexible system suitable where access is restricted and ground disturbance is undesirable.\"},{\"paragraph\":\"C-780 Overhead Line Construction Winch\"},{\"paragraph\":\"The C-780 has been designed to give a reliable, flexible winching system to meet all 11/33kV work, together with some 66kV and 132kV maintenance requirements. The system employs a range of drums to suit particular applications. The powered hydraulic drum lifting device, together with hydraulic stabilising jacks provides safe drum handling. Hydraulic layering device fitted as standard. Available in 3 tonne or 4 tonne lifting capacity.\"},{\"paragraph\":\"W1-TEW25H-01 Tower Erection Winch\"},{\"paragraph\":\"The TEW25H-01 is a hydraulically driven self-powered drum winch, popular with power line and telecommunications contractors. The TEW25 winch has been designed to comply with all the relevant safety requirements for lifting loads. Two fully automatic, fail safe braking systems are incorporated into the unit. In the unlikely event that the chain fails the second braking system would automatically apply, holding the load securely. The winch has a maximum lifting capacity of 2.5 tonne.\"},{\"paragraph\":\"W1-TEW50H-01 Tower Erection Winch\"},{\"paragraph\":\"The TEW50 is a hydraulic winch designed to provide reliable and safe lifting operations for tower and mast erection for the electricity or telecommunications industries. Winching is controlled via a proportional hydraulic valve giving the operator precise control over the load when needed or high speed if necessary. The winch has a maximum lifting capacity of 5 tonne.\"},{\"paragraph\":\"C-1210 Single Capstan Winch\"},{\"paragraph\":\"The C-1210 Single Capstan Winch has been designed to provide a light and powerful universal winch. Ideally suited for hoisting loads up poles or transmission towers or for pulling cables and conductors. The rope locking device eliminates the need to tie off the rope. A remote foot control switch operates the 115 volt electrically powered winch. Has a maximum lifting capacity of 450kg.\"},{\"paragraph\":\"C-1210-500-1 Petrol Capstan Winch\"},{\"paragraph\":\"The C-1035 Lightweight Capstan is a highly reliable, low maintenance winch designed for use over manholes. Powered by a Honda Engine through a right angle gearbox. The C-1035 has a 5.5HP Engine. The C-1035-10 has an 8HP Honda Engine. The units have a pulling capacity of 500kg and 1000kg respectively.\"},{\"paragraph\":\"C-1350 Cable Pusher\"},{\"paragraph\":\"The C-1350 Cable Pusher has been designed to assist the laying of electrical cables or cylindrical elements. The unit has a profiled drive system to grip the cable, with a load applicator of adjustable upper rollers. The drive system is hydraulic, and is powered by a the lightweight C-1203-F portable trolley mounted hydraulic power pack, with pre-set internal system protection relief valve and quick release connections.\"}],\"img\":[{\"image\":\"winchesandpushingmachine.jpeg\"},{\"image\":\"winches2.jpeg\"},{\"image\":\"winches3.jpeg\"},{\"image\":\"winches4.jpeg\"},{\"image\":\"winches5.jpeg\"},{\"image\":\"winches6.jpeg\"},{\"image\":\"winches7.jpeg\"}],\"info\":\"by Admin | 18, November, 2019\",\"categories\":[\"Overhead Line\",\"Underground\",\" Winches\"]},{\"id\":\"8\",\"heading\":\"Drum Handling Equipment\",\"subheading\":\"A range of drum trailers and stands that offer robust and reliable solutions\",\"description\":[{\"paragraph\":\"Designed to make your life on site easier our range of drum trailers and stands offer robust and reliable solutions to a wide range of tasks, from trailers for transporting larger drums to the work site or stands of various sizes for smaller drums.\"},{\"paragraph\":\"C-751 Drum Trailer\"},{\"paragraph\":\"The C-751 Drum Trailer has been designed to be a compact and manoeuverable drum trailer, capable of handling cable drums from 1800mm to 2185mm in diameter and a maximum drum weight of 1000kg to 1630kg. Manufactured in strong steel sections, it incorporates manually operated hydraulic lifting of drums. There is also an optional drum braking arrangement, this is particularly useful when pulling the conductor during conductor stringing operations. Trailer braking is of the over-run type and is supplied to EC specification. All versions are IVA approved.\"},{\"paragraph\":\"C-1290 Triple Braked Drum Trailer\"},{\"paragraph\":\"The C-1290 Triple Braked Drum Trailer is a uniquely versatile tool, a single operator can independently control the tension of all three conductors. Ideally suited to the needs of cost conscious installation crews who require fast turnarounds and maximum productivity. Supplied with a full set of detachable stabilisers to maximise trailer stability during tensioning. Fitted with smooth operating disk brake for conductor control.\"},{\"paragraph\":\"D-684 Braked Drum Stand\"},{\"paragraph\":\"The CBS D-684 drum stand is compact in size and is available in up to either 2 or 4 tonne capacity. Each side is fitted with wheels to allow for easy transportation. Drum lifting is achieved with two hand operated hydraulic jacks. An adjustable band brake provides safe, controlled cable tensioning.\"},{\"paragraph\":\"D-711 Braked Drum Stand\"},{\"paragraph\":\"The CBS D-711 Braked Drum Stand has been designed in sections for ease of transportation and is simple to assemble without instructions. Accommodates drum weights of up to 1500kg. The stands incorporate a band brake to provide safe and smooth cable tensioning. Two hydraulic pumps provide drum lifting to the desired working height.\"},{\"paragraph\":\"D-1156-01 Cable Drum Stand\"},{\"paragraph\":\"The D-1156-01 Drum Stand has been designed in sections for ease of transportation and simply slots together to form a rigid and stable drum stand. Accommodates drum weights of up to 500kg. The shaft is fitted with bearings and drum location collars are also included. Two hydraulic jacks provide drum lifting.\"},{\"paragraph\":\"Roll on Drum Stands\"},{\"paragraph\":\"D-496-01 Roll on Drum Stand allows a range of drums up to 1500kg in weight to be accommodated to suit the majority of applications. Manufactured in steel, with ball bearings in the rollers, the stand is suitable for pulling off cable from the drum.\"},{\"paragraph\":\"Drum Jacks\"},{\"paragraph\":\"The CBS range of cable drum jacks are maunfactured in a sturdy steel construction with heavy duty Acme screw threads to provide safe lifting. Available in 3 different sizes to accommodate up to 3, 6 or 8 tonne capacity – 2 x stands required – with a variety of spindles available to suit different drum sizes. Jack steady bases are also available to provide extra stability.\"},{\"paragraph\":\"D-536 Hydraulic Drum Jacks, which are lightweight and almost indispensable for use in the cable yard. Versatile and easily adjustable within seconds to accommodate a vast range of drums. Excellent all-round stability, fitted with wheels to be easily moved by one person. Complete with spindle and collars. Available in 3 different sizes to accommodate up to 3, 6 or 10 tonne capacity.\"}],\"img\":[{\"image\":\"drumhandling.jpeg\"},{\"image\":\"drumhandling1.jpeg\"},{\"image\":\"drumhandling2.jpeg\"},{\"image\":\"drumhandling3.jpeg\"},{\"image\":\"drumhandling4.jpeg\"},{\"image\":\"drumhandling5.jpeg\"},{\"image\":\"drumhandling6.jpeg\"}],\"info\":\"by Admin | 18, November, 2019\",\"categories\":[\"Fibre Blowing\",\"Cable Drum Handling\",\"Drum Trailers\",\"Underground\"]},{\"id\":\"9\",\"heading\":\"Klein Tools Pole Climbing Irons\",\"subheading\":\"A range of drum trailers and stands that offer robust and reliable solutions\",\"description\":[{\"paragraph\":\" Klein Tools has been providing occupational protective equipment to linemen since the first telegraph poles were strung. Klein’s spur type adjustable climbers make easy work of pole climbing.\"},{\"paragraph\":\"Klein Tools has been providing occupational protective equipment to linemen since the first telegraph poles were strung. Klein’s Pole Climber set includes the pads, steel sleeves, leg irons, 1-1/2” gaffs, split rings and nylon calf and ankle straps. The secure sleeve and leg iron connections are adjustable in 1/4” (6 mm) increments. Contoured leg irons help position gaffs securely and comfortably. The replaceable gaffs firmly attach to the leg iron with a centre pin and two TORX® screws. High-grade leather climber pads are cushioned for maximum comfort. A complete range of spare parts and sharpening equipment are available. Klein components should not be interchanged with components made from other manufacturers.\"}],\"img\":[{\"image\":\"keintools.jpeg\"},{\"image\":\"kleintools1.jpeg\"},{\"image\":\"kleintools2.jpeg\"}],\"info\":\"by Admin | 5, November, 2019\",\"categories\":[\"Klein Tools\",\"Overhead Line\",\"Tools\"]},{\"id\":\"10\",\"heading\":\"Klein Canvas Lineman Tool Buckets\",\"subheading\":\"A range of drum trailers and stands that offer robust and reliable solutions\",\"description\":[{\"paragraph\":\"CBS offer a range of Klein Canvas Lineman Tool Buckets. Klein canvas buckets and accessories have been recognised for decades for their durability and dependability, they are built for strength to withstand even the harshest of conditions and handle professional wear and tear. Available in a wide range of sizes and and load ratings, with a choice of pockets, round or oval body or top closing for added security, Klein are bound to have the perfect bucket to suit your needs.\"},{\"paragraph\":\"Klein Tools has been providing occupational protective equipment to linemen since the first telegraph poles were strung. Klein’s Pole Climber set includes the pads, steel sleeves, leg irons, 1-1/2” gaffs, split rings and nylon calf and ankle straps. The secure sleeve and leg iron connections are adjustable in 1/4” (6 mm) increments. Contoured leg irons help position gaffs securely and comfortably. The replaceable gaffs firmly attach to the leg iron with a centre pin and two TORX® screws. High-grade leather climber pads are cushioned for maximum comfort. A complete range of spare parts and sharpening equipment are available. Klein components should not be interchanged with components made from other manufacturers.\"}],\"img\":[{\"image\":\"kleincanvas.jpeg\"},{\"image\":\"kleincanvas1.jpeg\"}],\"info\":\"by Admin | 27, September, 2019 \",\"categories\":[\"Klein Tools\",\"Overhead Line\",\"Storage\",\"Tools\"]},{\"id\":\"11\",\"heading\":\"Klein Tools Insulated Tool Range\",\"subheading\":\"A range of drum trailers and stands that offer robust and reliable solutions\",\"description\":[{\"paragraph\":\"Klein insulated tools combine excellent functionality along with the reduction of risk of injury where a tool might make contact with an energised source with voltage up to 1000 volts.\"},{\"paragraph\":\"K-D213-9NE-INS High Leverage Side Cutting Pliers: These Klein Tools Side Cutting New England Insulated Pliers are insulated by two layers and pass both the IEC 60900 and ASTM F1505 standards. They are made of forged steel with induction-hardened knives for strength and durability and they have high-leverage design which provides 46-percent more cutting and gripping power than other plier designs. K-D2000-9NE-INS Heavy Duty version, also available, cuts ACSR, screws, nails and most hardened wire.\"},{\"paragraph\":\"K-D2139NE-CR-INS Insulated High Leverage Side Cutting Pliers: These Klein Tools 9-Inch Insulated Side-Cutting Crimping Pliers offer protection against electric shock up to 1,000 volts. They offer maximum strength with their forged-steel construction and a crimping die helps provide increased leverage.\"},{\"paragraph\":\"K-12098-INS High Leverage Universal Side Cutting Pliers: Be protected from up to 1,000 volts of electric current when working near energised sources with Klein’s 8-Inch Insulated Universal Combination Pliers. These pliers offer flame-retardant handles, a toothed pipe grip and a high-leverage crimping die. Quickly installs and removes spring-tension hose clamps. High-leverage design has 35-percent more cutting power. Grips with either side or end of jaws for work in confined areas. The durable, molded insulation meets or exceeds IEC 60900 and ASTM F1505 standards for insulated tools.\"},{\"paragraph\":\"Insulated Long Nose Side Cutting Pliers: Klein Tools Insulated Long Nose Side-Cutting pliers are 1000V rated for safety on the job. The long nose is designed to grab and loop wire. Dual layer, orange-over-white insulation provides a warning sign that insulation may be compromised. The molded insulation meets or exceeds ASTM F1505-16 and IEC 60900:2012 standards for insulated tools. Cutting knives are induction hardened for long life. An 8″ version is also available with skinning hole.\"},{\"paragraph\":\"K-D220-7-INS 7″ Insulated Heavy Duty Diagonal Cutting Tapered Nose Pliers: These Insulated Diagonal-Cutting pliers have dual layered grips that are flame retardant, impact resistant, and rated for 1000-volts. One-Inch deep jaws easily reach into confined spaces. They feature a heavy-duty tapered nose design with induction hardened cutting knives for durability. They are made of forged steel and have a hot-riveted joint for smooth action and no handle wobble.\"},{\"paragraph\":\"Insulated High Leverage Diagonal Cutting Pliers: These Insulated Diagonal-Cutting pliers feature two layers of insulation to protect against electric shock. Clearly marked with the official 1000V symbol, these pliers meet or exceed ASTM F1505-16 and IEC 60900:2018 standards for insulated tools. Available with tapered or angled nose, while heavy duty versions employ greater cutting ability. The high-leverage design provides 36-percent greater cutting power than any other plier designs.\"},{\"paragraph\":\"K-D502-10-INS Insulated Pump Pliers: Individually tested to exceed the IEC 60900 and ASTM F1505 standards, for insulated tools, and clearly marked with the official 1000-volt rating symbol. Two layers of insulation provide protection against electric shock. Thick, exceptionally tough, high-dielectric white inner coating is bonded to the tool. Wide range of versatile jaw positions. Secure tongue and groove design for non-slip grip – even with heavy pressure. A flame retardant, impact-resistant, bright orange outer coating. Integral guards help prevent hand contact with conductive parts.\"},{\"paragraph\":\"Insulated Cutters\"},{\"paragraph\":\"K-1005-INS Insulated Crimping / Cutting Tool: Individually tested to exceed the IEC 60900 and ASTM F1505 standards, for insulated tools, and clearly marked with the official 1000-volt rating symbol. A flame retardant, impact-resistant, bright orange outer coating. Wire cutter in nose that is tapered for working in confined spaces. Induction hardened cutting knives for long life. Hot-riveted joint for smooth action and no handle wobble. Forged steel for maximum durability. Integral guards help prevent hand contact with conductive parts. Thick, exceptionally tough, high-dielectric white inner coating is bonded to the tool.\"},{\"paragraph\":\"Insulated Wire Stripper/Cutter: This compact, lightweight wire-stripping, cutting tool cuts, strips, loops and gauges solid wire. 3 different versions strip from 0.75-6mm² solid wire, the largest version will also cut 0.5-2.5mm² stranded wire. Spring-loaded action for self-opening, while the narrow nose fits into tight places. Hardened spring steel with precision-ground stripping holes for easy removal of insulation.\"},{\"paragraph\":\"K-63050-INS Insulated High Leverage Cable Cutter: Individually tested to exceed the IEC 60900 and ASTM F1505 standards, for insulated tools, and clearly marked with the official 1000-volt rating symbol. A flame retardant, impact-resistant, bright orange outer coating. High-leverage design for exceptional cutting ability. Cable-gripping shear-type jaws. Precision, one-hand shearing action perfect for working in confined spaces. NOT suitable for cutting steel or ACSR.\"},{\"paragraph\":\"K-1571-INS Insulated Lineman Skinning Knife: The exclusive design features dual-layer insulation for safety. The high-dielectric white inner layer is bonded to the tool while the outer orange layer is flame retardant and serves as a visual warning if the tool has been compromised. The insulated handle is molded for comfort and also features marks on the back to help measure the stripping length of wire. The blade is made of stainless steel for durability and corrosion resistance.\"},{\"paragraph\":\"Screwdrivers & Tool Kits\"},{\"paragraph\":\"Insulated Screwdriver – Round Shank: 4 different lengths with Phillips tips #1, 2 or 3. 8 different Cabinet lengths with tips sizes ranging from 2.4-9.5mm. 2 different lengths with either square tip #1 or 2. Clearly marked with the official 1000-volt rating symbol, Klein insulated tools exceed IEC 60900 and ASTM F1505 standards for insulated tools. Two layers of insulation provide protection against electric shock. Built to handle the tough jobs with ease.\"},{\"paragraph\":\"K-33528 9 Piece Insulated Cushion Grip Screwdriver Set: This nine piece set features assorted Klein’s screwdrivers with three different tips. Each are individually tested to exceeed the IEC 60900 and ASTM F1505 standards for insulated tools. Two layers of insulation provide protection against electric shock. The highly durable, black nylon case features a zipper enclosure, custom-fitted tool pockets as well as an extra pocket for storage of papers and other items. Made in the USA.\"},{\"paragraph\":\"K-33525 13 Piece Insulated Tool kit: This set of 13 professional, insulated tools includes 4 x assorted pliers, 6 x screwdrivers, a cable cutter, pump pliers and a skinning knife. Two layers of insulation provide protection against electric shock. Custom case includes 2 pallets with custom-made pockets for each tool, piano-hinged case cover has both combination lock and two key-locked latches for security and storage space behind pallets for important papers or accessories. Meets or exceeds IEC 60900: 2012, ASTM F1505-10 standards for insulated tools.\"},{\"paragraph\":\"K-33527 General Purpose Insulated 22 Piece Tool Kit: This 22-piece tool kit includes the must-have insulated tools professional electricians need. The high-leverage design of the 8 x assorted side-cutting and diagonal-cutting pliers provides more cutting power while the pivot joint is hot-riveted for smooth action and no wobble. The Cushion-Grip on the 9 x round-shank screwdrivers provide greater torque and comfort. The 1 x each wire stripper/cutting tools, pump pliers and skinning knife provide excellent choices for any job. The custom case includes 3 pallets with custom-fitted pockets for each tool, piano-hinged cover has both a combination lock and two key-locked latches for security, storage space behind the pallets to keep important papers and accessory items. Made in the USA.\"},{\"paragraph\":\"K-33526 Basic 8 Piece Insulated Tool Kit: This 8 piece set features an assortment of popular compact insulated tools, including 3 x pliers, 3 x screwdrivers a cable cutter and wire stripper/cutter. Each are individually tested to exceed the IEC 60900 and ASTM F1505 standards for insulated tools. The highly durable, black nylon case features a zipper closure, custom-fitted tool pockets plus an extra pocket for storage of papers and other items. Made in the USA.\"},{\"paragraph\":\"K-33529 Premium 8 Piece Insulated Tool Kit: Contains the same as the basic kit but with heavy duty long nose pliers and side cutting pliers.\"}],\"img\":[{\"image\":\"kleintoolsinsulated.jpeg\"},{\"image\":\"kleintoolsi.jpeg\"},{\"image\":\"kleintoolsinsulated2.jpeg\"},{\"image\":\"kleintoolsinsulated4.jpeg\"},{\"image\":\"kleintoolsinsulated5.jpeg\"},{\"image\":\"kleintoolsinsulated6.jpeg\"},{\"image\":\"kleintoolsinsulated7.jpeg\"},{\"image\":\"kleintoolsinsulated8.jpeg\"}],\"info\":\"by Admin | 27, September, 2019 \",\"categories\":[\"Klein Tools\",\"Overhead Line\",\"Storage\",\"Tools\"]}]");
-
-/***/ }),
-/* 104 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"id\":\"1\",\"name\":\"Tornado\",\"productId\":\"C-1250-08\",\"intro\":\"The Tornado comprises an air box and cable pusher and is designed to provide an effective and safe method of fibre optic cable installation.\",\"mainImg\":\"tornado.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"uid\":\"tGGW0ov0fkKzK9ax7QYLHA\"},{\"id\":\"2\",\"uid\":\"2kb6ZvdQskaW+KuVPpQQPg\",\"name\":\"Jetstream\",\"productId\":\"C-1900\",\"mainImg\":\"jetstream.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"Designed to provide maximum cable protection, combined with the performance and reliability of hydraulic drive.\"},{\"id\":\"3\",\"uid\":\"xS0KUwWdbEqPrt5pKjhfSA\",\"name\":\"Hurricane\",\"productId\":\"C-1750\",\"mainImg\":\"hurricane.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"Designed to maximise protection for micro cables with a compliant double drive concept, backed by the latest technology in servo controls.\"},{\"id\":\"4\",\"name\":\"Airstream\",\"uid\":\"\",\"productId\":\"C-1700\",\"mainImg\":\"airstream.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"airstream\",\"intro\":\"Backed by the latest technology in servo controls to provide precise control of torque and speed. Designed to install cable sizes of 2.5-11mm into tube sizes of 5-18mm.\"},{\"id\":\"19\",\"name\":\"Accelair 2\",\"uid\":\"vzP6ttWeY0eA7MaJIkSvDg\",\"productId\":\"C-1800\",\"mainImg\":\"accelair.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"The C-1800 Accelair 2 Fibre Blowing Machine has been developed to provide a simple to use and reliable fibre blowing solution.\"},{\"id\":\"7\",\"name\":\"Whisper\",\"productId\":\"G-GMP-89910\",\"mainImg\":\"whisper.jpg\",\"uid\":\"kMNrTq9k8Uum73P1oVm0Wg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"The Whisper Cable Blowing Machine has been designed to provide a compact and portable cable installation system.\"},{\"id\":\"8\",\"name\":\"GentL Air\",\"uid\":\"h+lRu7W2q020wC9XeFbAKA\",\"productId\":\"G-GMP-89916\",\"mainImg\":\"gentl-air.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"The GentL Air is a portable and affordable solution for pushing fibre in micro ducts using a battery operated drill and compressed air.\"},{\"id\":\"9\",\"name\":\"Overblowing\",\"productId\":\"C-1253-JBOX\",\"uid\":\"yR9n5C9fk0udW2W7Dn3Ktg\",\"mainImg\":\"cable-overblowing-junction-box.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"The CBS Cable Overblowing Junction Box has been designed to install a new cable into an existing occupied sub-duct.\"},{\"id\":\"10\",\"name\":\"Compressors\",\"productId\":\"C-1420-10\",\"uid\":\"\",\"mainImg\":\"blown-fibre-compressor.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"compressors\",\"intro\":\"A selection of compressors including the portable cable blowing machine compressor\"},{\"id\":\"17\",\"name\":\"Pull and Assist Winch\",\"uid\":\"DNXxPH1ZWkCr9LJr5VFIZg\",\"productId\":\"C-1045-001-R4\",\"mainImg\":\"winch/winch-2.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"\",\"intro\":\"The C-1045 winch has been designed to meet the requirements of installing telecommunication cables, employing an 813mm diameter single capstan to impact a controlled force to the pulling rope or cable.\"},{\"id\":\"18\",\"name\":\"Accessories\",\"uid\":\"\",\"productId\":\"G-GMP-89916\",\"mainImg\":\"fleeter.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"Accessories for all your fibre blowing needs\"}]");
-
-/***/ }),
-/* 105 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"id\":\"5\",\"name\":\"Pneumatic AirStream Cable Blowing Machine\",\"uid\":\"+SNqIzGIUmO0+fyHoEOw\",\"productId\":\"C-1700-PNEU\",\"mainImg\":\"airstream-pneumatic.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"airstream\",\"intro\":\"The C-1700-PNEU Pneumatic AirStream has been designed to be a robust and simple to operate cable blowing machine.\"},{\"id\":\"6\",\"name\":\"AirStream Cable Blowing Machine\",\"uid\":\"XVnU4fnqZECjTGE5SIkx7A\",\"productId\":\"C-1700\",\"mainImg\":\"airstream.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"airstream\",\"intro\":\"The Airstream machine is designed by the latest technology in servo controls to provide precise control of torque and speed.\"},{\"id\":\"10\",\"name\":\"Blown Fibre Compressor\",\"uid\":\"yq6gO5EwT0q39RD+kTjp9w\",\"productId\":\"C-1420-10\",\"mainImg\":\"blown-fibre-compressor.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"compressors\",\"intro\":\"A compact 10 Bar compressor specifically for use with the CBS C-1800 Accelair2 Blown Fibre Unit.\"},{\"id\":\"11\",\"name\":\"Cable Blowing Machine Compressor\",\"uid\":\"3hUe8bataU+gWxTBU10A+g\",\"productId\":\"VRK20\",\"mainImg\":\"cable-blowing-compressor/cable-blowing-compressor-1.jpg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"compressors\",\"intro\":\"The VRK20 is a portable compressor designed for cable blowing. Made With safety and efficiency in mind.\"},{\"id\":\"12\",\"name\":\"Kaeser M17 Portable Compressor\",\"uid\":\"E511ciFj1EKns4bG7ygpkA\",\"productId\":\"VRK20\",\"mainImg\":\"kaeser-web.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"compressors\",\"intro\":\"Versatile, reliable and easy to transport: This small compressor takes up minimal loading space and, with it's high-quality\"},{\"id\":\"13\",\"name\":\"Cable Fleeter\",\"uid\":\"IBAt+kCkeHtA7+xh+MA\",\"productId\":\"VRK20\",\"mainImg\":\"cable-fleeter.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"The Fleeter replaces the manual method of “figure of eighting” cable, and provides protection and security for the cable.\"},{\"id\":\"14\",\"name\":\"Mini Cable Fleeting Device\",\"uid\":\"3df0kbiPukquArnSrjH8A\",\"productId\":\"C-1315-20-11\",\"mainImg\":\"mini-cable-fleeting-device.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"The Mini Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum.\"},{\"id\":\"15\",\"name\":\"Micro Cable Fleeting Device\",\"uid\":\"2XTEblFK5U6MGInDILWRPQ\",\"productId\":\"VRK20\",\"mainImg\":\"micro-cable-fleeting.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"The Micro Cable Fleeting device has been developed to enable longer lengths of fibre optical cable to be laid from a single drum.\"},{\"id\":\"16\",\"name\":\"Roll on Drum Stand\",\"uid\":\"638398XCEqhs4TjYlq6pQ\",\"productId\":\"D-496-01\",\"mainImg\":\"roll-on-drum-stand.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"D-496-01 Roll on Drum Stand allows a range of drums to be accommodated to suit the majority of applications. Manufactured in steel, with ball bearings in the rollers, the stand is suitable for pulling off cable from the drum.\"},{\"id\":\"20\",\"name\":\"Cable Drum Jacks\",\"uid\":\"\",\"productId\":\"VRK20\",\"mainImg\":\"cable-drum-jacks.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"Manufactured in a sturdy steel construction, with heavy-duty Acme screw threads to provide safe lifting. Lift 300mm.\"},{\"id\":\"20\",\"name\":\"Breeze Cable Drum Stand\",\"uid\":\"\",\"productId\":\"VRK20\",\"mainImg\":\"breeze-cable.jpeg\",\"category\":\"Fibre Blowing\",\"subCategory\":\"accessories\",\"intro\":\"The Drum Stand has been designed in sections for ease of transportation and simply slots together to form a rigid and stable drum stand.\"}]");
-
-/***/ }),
-/* 106 */
 /***/ (function(module, exports) {
 
 module.exports = require("defu");
 
 /***/ }),
-/* 107 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11578,7 +11548,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/footerTop.vue?vue&type=template&id=73c9e2a7&
 
 // EXTERNAL MODULE: ./components/sections/footerContactForm.vue + 2 modules
-var footerContactForm = __webpack_require__(108);
+var footerContactForm = __webpack_require__(103);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/footerTop.vue?vue&type=script&lang=js&
 //
@@ -11719,13 +11689,13 @@ var installComponents_default = /*#__PURE__*/__webpack_require__.n(installCompon
 var VBtn = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VCol.js
-var VCol = __webpack_require__(212);
+var VCol = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VContainer.js + 1 modules
-var VContainer = __webpack_require__(218);
+var VContainer = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VDivider/VDivider.js
-var VDivider = __webpack_require__(200);
+var VDivider = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VIcon/VIcon.js
 var VIcon = __webpack_require__(59);
@@ -11740,10 +11710,10 @@ var VListItem = __webpack_require__(42);
 var components_VList = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VList/VListItemIcon.js
-var VListItemIcon = __webpack_require__(35);
+var VListItemIcon = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VRow.js
-var VRow = __webpack_require__(213);
+var VRow = __webpack_require__(208);
 
 // CONCATENATED MODULE: ./components/footerTop.vue
 
@@ -11751,7 +11721,7 @@ var VRow = __webpack_require__(213);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(184)
+  var style0 = __webpack_require__(179)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -11793,7 +11763,7 @@ installComponents_default()(component, {VBtn: VBtn["a" /* default */],VCol: VCol
 
 
 /***/ }),
-/* 108 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11818,13 +11788,13 @@ var installComponents_default = /*#__PURE__*/__webpack_require__.n(installCompon
 var VBtn = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VForm/VForm.js
-var VForm = __webpack_require__(216);
+var VForm = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VTextField/VTextField.js + 3 modules
-var VTextField = __webpack_require__(39);
+var VTextField = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VTextarea/VTextarea.js
-var VTextarea = __webpack_require__(217);
+var VTextarea = __webpack_require__(212);
 
 // CONCATENATED MODULE: ./components/sections/footerContactForm.vue
 
@@ -11856,32 +11826,32 @@ installComponents_default()(component, {VBtn: VBtn["a" /* default */],VForm: VFo
 
 
 /***/ }),
-/* 109 */,
-/* 110 */,
-/* 111 */
+/* 104 */,
+/* 105 */,
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(171);
+var content = __webpack_require__(166);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("4f4f805e", content, true)
 
 /***/ }),
-/* 112 */,
-/* 113 */,
-/* 114 */
+/* 107 */,
+/* 108 */,
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(115);
-module.exports = __webpack_require__(198);
+__webpack_require__(110);
+module.exports = __webpack_require__(193);
 
 
 /***/ }),
-/* 115 */
+/* 110 */
 /***/ (function(module, exports) {
 
 global.installComponents = function (component, components) {
@@ -11925,7 +11895,7 @@ function provideFunctionalComponents(component, components) {
 
 
 /***/ }),
-/* 116 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11953,7 +11923,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 117 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11971,7 +11941,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 118 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11984,7 +11954,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 119 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11995,7 +11965,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 120 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12008,20 +11978,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 121 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(122);
+var content = __webpack_require__(117);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("3d49e0e5", content, true)
 
 /***/ }),
-/* 122 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12034,7 +12004,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 123 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12047,7 +12017,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 124 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12060,20 +12030,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 125 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(126);
+var content = __webpack_require__(121);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("1cdf85c7", content, true)
 
 /***/ }),
-/* 126 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12086,20 +12056,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 127 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(128);
+var content = __webpack_require__(123);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("2fba213c", content, true)
 
 /***/ }),
-/* 128 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12112,20 +12082,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 129 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(130);
+var content = __webpack_require__(125);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("2840f874", content, true)
 
 /***/ }),
-/* 130 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12138,7 +12108,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 131 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12149,7 +12119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 132 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12162,7 +12132,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 133 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12173,7 +12143,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 134 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12186,20 +12156,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 135 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(136);
+var content = __webpack_require__(131);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("a9b20584", content, true)
 
 /***/ }),
-/* 136 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12212,20 +12182,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 137 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(138);
+var content = __webpack_require__(133);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("402355ff", content, true)
 
 /***/ }),
-/* 138 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12238,20 +12208,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 139 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(140);
+var content = __webpack_require__(135);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("63000ea3", content, true)
 
 /***/ }),
-/* 140 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12264,20 +12234,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 141 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(142);
+var content = __webpack_require__(137);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("549a5500", content, true)
 
 /***/ }),
-/* 142 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12290,20 +12260,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 143 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(144);
+var content = __webpack_require__(139);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("04604cc2", content, true)
 
 /***/ }),
-/* 144 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12316,20 +12286,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 145 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(146);
+var content = __webpack_require__(141);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("e003f1f8", content, true)
 
 /***/ }),
-/* 146 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12342,20 +12312,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 147 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(148);
+var content = __webpack_require__(143);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("6b715e77", content, true)
 
 /***/ }),
-/* 148 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12368,20 +12338,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 149 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(150);
+var content = __webpack_require__(145);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("cdf93b5c", content, true)
 
 /***/ }),
-/* 150 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12394,20 +12364,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 151 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(152);
+var content = __webpack_require__(147);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("0e36439c", content, true)
 
 /***/ }),
-/* 152 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12420,20 +12390,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 153 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(154);
+var content = __webpack_require__(149);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("5e8d0e9e", content, true)
 
 /***/ }),
-/* 154 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12446,20 +12416,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 155 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(156);
+var content = __webpack_require__(151);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("5ee2ef52", content, true)
 
 /***/ }),
-/* 156 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12472,20 +12442,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 157 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(158);
+var content = __webpack_require__(153);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("516f87f8", content, true)
 
 /***/ }),
-/* 158 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12498,20 +12468,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 159 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(160);
+var content = __webpack_require__(155);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("73707fd0", content, true)
 
 /***/ }),
-/* 160 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12524,20 +12494,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 161 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(162);
+var content = __webpack_require__(157);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("c82bbd6a", content, true)
 
 /***/ }),
-/* 162 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12550,20 +12520,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 163 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(164);
+var content = __webpack_require__(159);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("3f95a174", content, true)
 
 /***/ }),
-/* 164 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12576,17 +12546,82 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 165 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(166);
+var content = __webpack_require__(161);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("c176411c", content, true)
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".theme--light.v-tabs>.v-tabs-bar{background-color:#fff}.theme--light.v-tabs>.v-tabs-bar .v-tab--disabled,.theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active),.theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-btn,.theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-icon{color:rgba(0,0,0,.54)}.theme--light.v-tabs .v-tab:hover:before{opacity:.04}.theme--light.v-tabs .v-tab--active:before,.theme--light.v-tabs .v-tab--active:hover:before,.theme--light.v-tabs .v-tab:focus:before{opacity:.12}.theme--light.v-tabs .v-tab--active:focus:before{opacity:.16}.theme--dark.v-tabs>.v-tabs-bar{background-color:#1e1e1e}.theme--dark.v-tabs>.v-tabs-bar .v-tab--disabled,.theme--dark.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active),.theme--dark.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-btn,.theme--dark.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-icon{color:hsla(0,0%,100%,.6)}.theme--dark.v-tabs .v-tab:hover:before{opacity:.08}.theme--dark.v-tabs .v-tab--active:before,.theme--dark.v-tabs .v-tab--active:hover:before,.theme--dark.v-tabs .v-tab:focus:before{opacity:.24}.theme--dark.v-tabs .v-tab--active:focus:before{opacity:.32}.theme--light.v-tabs-items{background-color:#fff}.theme--dark.v-tabs-items{background-color:#1e1e1e}.v-tabs-bar.accent .v-tab,.v-tabs-bar.accent .v-tabs-slider,.v-tabs-bar.error .v-tab,.v-tabs-bar.error .v-tabs-slider,.v-tabs-bar.info .v-tab,.v-tabs-bar.info .v-tabs-slider,.v-tabs-bar.primary .v-tab,.v-tabs-bar.primary .v-tabs-slider,.v-tabs-bar.secondary .v-tab,.v-tabs-bar.secondary .v-tabs-slider,.v-tabs-bar.success .v-tab,.v-tabs-bar.success .v-tabs-slider,.v-tabs-bar.warning .v-tab,.v-tabs-bar.warning .v-tabs-slider{color:#fff}.v-tabs{flex:1 1 auto;width:100%}.v-tabs .v-menu__activator{height:100%}.v-tabs.v.tabs--vertical.v-tabs--right{flex-direction:row-reverse}.v-tabs:not(.v-tabs--vertical) .v-tab{white-space:normal}.v-tabs:not(.v-tabs--vertical).v-tabs--right>.v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__next,.v-tabs:not(.v-tabs--vertical):not(.v-tabs--right)>.v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev{display:inline;display:initial;visibility:hidden}.v-tabs-bar{border-radius:inherit;height:48px}.v-tabs-bar.v-item-group>*{cursor:auto}.v-tab{align-items:center;cursor:pointer;display:flex;flex:0 1 auto;font-size:.875rem;font-weight:500;justify-content:center;letter-spacing:.0892857143em;line-height:normal;min-width:90px;max-width:360px;outline:none;padding:0 16px;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;transition:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-tab.v-tab{color:inherit}.v-tab:before{bottom:0;content:\"\";left:0;opacity:0;pointer-events:none;position:absolute;right:0;top:0;transition:.3s cubic-bezier(.25,.8,.5,1)}.v-tab:before,.v-tabs-slider{background-color:currentColor}.v-tabs-slider{height:100%;width:100%}.v-tabs-slider-wrapper{bottom:0;margin:0!important;position:absolute;transition:.3s cubic-bezier(.25,.8,.5,1);z-index:1}.v-application--is-ltr .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tab:first-child,.v-application--is-ltr .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tabs-slider-wrapper+.v-tab{margin-left:42px}.v-application--is-rtl .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tab:first-child,.v-application--is-rtl .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tabs-slider-wrapper+.v-tab{margin-right:42px}.v-application--is-ltr .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:last-child,.v-application--is-ltr .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:last-child{margin-right:auto}.v-application--is-ltr .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-ltr .v-tabs--centered>.v-tabs-bar .v-tabs-slider-wrapper+*,.v-application--is-ltr .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-ltr .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-slider-wrapper+*,.v-application--is-rtl .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:last-child,.v-application--is-rtl .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:last-child{margin-left:auto}.v-application--is-rtl .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-rtl .v-tabs--centered>.v-tabs-bar .v-tabs-slider-wrapper+*,.v-application--is-rtl .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-rtl .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-slider-wrapper+*{margin-right:auto}.v-tabs--fixed-tabs>.v-tabs-bar .v-tab{flex:1 1 auto;width:100%}.v-tabs--grow>.v-tabs-bar .v-tab{flex:1 0 auto;max-width:none}.v-tabs--icons-and-text>.v-tabs-bar{height:72px}.v-tabs--icons-and-text>.v-tabs-bar .v-tab{flex-direction:column-reverse}.v-tabs--icons-and-text>.v-tabs-bar .v-tab>:first-child{margin-bottom:6px}.v-tabs--overflow>.v-tabs-bar .v-tab{flex:1 0 auto}.v-application--is-ltr .v-tabs--right>.v-tabs-bar .v-tab:first-child,.v-application--is-ltr .v-tabs--right>.v-tabs-bar .v-tabs-slider-wrapper+.v-tab{margin-left:auto}.v-application--is-rtl .v-tabs--right>.v-tabs-bar .v-tab:first-child,.v-application--is-rtl .v-tabs--right>.v-tabs-bar .v-tabs-slider-wrapper+.v-tab{margin-right:auto}.v-application--is-ltr .v-tabs--right>.v-tabs-bar .v-tab:last-child{margin-right:0}.v-application--is-rtl .v-tabs--right>.v-tabs-bar .v-tab:last-child{margin-left:0}.v-tabs--vertical{display:flex}.v-tabs--vertical>.v-tabs-bar{flex:1 0 auto;height:auto}.v-tabs--vertical>.v-tabs-bar .v-slide-group__next,.v-tabs--vertical>.v-tabs-bar .v-slide-group__prev{display:none}.v-tabs--vertical>.v-tabs-bar .v-tabs-bar__content{flex-direction:column}.v-tabs--vertical>.v-tabs-bar .v-tab{height:48px}.v-tabs--vertical>.v-tabs-bar .v-tabs-slider{height:100%}.v-tabs--vertical>.v-window{flex:0 1 100%}.v-tabs--vertical.v-tabs--icons-and-text>.v-tabs-bar .v-tab{height:72px}.v-tab--active{color:inherit}.v-tab--active.v-tab:not(:focus):before{opacity:0}.v-tab--active .v-btn.v-btn--flat,.v-tab--active .v-icon{color:inherit}.v-tab--disabled{pointer-events:none;opacity:.5}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(163);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(5).default("8f7a87bc", content, true)
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".v-slide-group{display:flex}.v-slide-group:not(.v-slide-group--has-affixes)>.v-slide-group__next,.v-slide-group:not(.v-slide-group--has-affixes)>.v-slide-group__prev{display:none}.v-slide-group.v-item-group>.v-slide-group__next,.v-slide-group.v-item-group>.v-slide-group__prev{cursor:pointer}.v-slide-item{display:inline-flex;flex:0 1 auto}.v-slide-group__next,.v-slide-group__prev{align-items:center;display:flex;flex:0 1 52px;justify-content:center;min-width:52px}.v-slide-group__content{display:flex;flex:1 0 auto;position:relative;transition:.3s cubic-bezier(.25,.8,.5,1);white-space:nowrap}.v-slide-group__wrapper{contain:content;display:flex;flex:1 1 auto;overflow:hidden}.v-slide-group__next--disabled,.v-slide-group__prev--disabled{pointer-events:none}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(165);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(5).default("0d135400", content, true)
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".v-window{overflow:hidden}.v-window__container{display:flex;flex-direction:column;height:inherit;position:relative;transition:.3s cubic-bezier(.25,.8,.5,1)}.v-window__container--is-active{overflow:hidden}.v-window__next,.v-window__prev{background:rgba(0,0,0,.3);border-radius:50%;position:absolute;margin:0 16px;top:calc(50% - 20px);z-index:1}.v-window__next .v-btn:hover,.v-window__prev .v-btn:hover{background:none}.v-application--is-ltr .v-window__prev{left:0}.v-application--is-ltr .v-window__next,.v-application--is-rtl .v-window__prev{right:0}.v-application--is-rtl .v-window__next{left:0}.v-window--show-arrows-on-hover{overflow:hidden}.v-window--show-arrows-on-hover .v-window__next,.v-window--show-arrows-on-hover .v-window__prev{transition:transform .2s cubic-bezier(.25,.8,.5,1)}.v-application--is-ltr .v-window--show-arrows-on-hover .v-window__prev{transform:translateX(-200%)}.v-application--is-ltr .v-window--show-arrows-on-hover .v-window__next,.v-application--is-rtl .v-window--show-arrows-on-hover .v-window__prev{transform:translateX(200%)}.v-application--is-rtl .v-window--show-arrows-on-hover .v-window__next{transform:translateX(-200%)}.v-window--show-arrows-on-hover:hover .v-window__next,.v-window--show-arrows-on-hover:hover .v-window__prev{transform:translateX(0)}.v-window-x-reverse-transition-enter-active,.v-window-x-reverse-transition-leave-active,.v-window-x-transition-enter-active,.v-window-x-transition-leave-active,.v-window-y-reverse-transition-enter-active,.v-window-y-reverse-transition-leave-active,.v-window-y-transition-enter-active,.v-window-y-transition-leave-active{transition:.3s cubic-bezier(.25,.8,.5,1)}.v-window-x-reverse-transition-leave,.v-window-x-reverse-transition-leave-to,.v-window-x-transition-leave,.v-window-x-transition-leave-to,.v-window-y-reverse-transition-leave,.v-window-y-reverse-transition-leave-to,.v-window-y-transition-leave,.v-window-y-transition-leave-to{position:absolute!important;top:0;width:100%}.v-window-x-transition-enter{transform:translateX(100%)}.v-window-x-reverse-transition-enter,.v-window-x-transition-leave-to{transform:translateX(-100%)}.v-window-x-reverse-transition-leave-to{transform:translateX(100%)}.v-window-y-transition-enter{transform:translateY(100%)}.v-window-y-reverse-transition-enter,.v-window-y-transition-leave-to{transform:translateY(-100%)}.v-window-y-reverse-transition-leave-to{transform:translateY(100%)}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
 
 /***/ }),
 /* 166 */
@@ -12596,7 +12631,7 @@ __webpack_require__(5).default("c176411c", content, true)
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".theme--light.v-tabs>.v-tabs-bar{background-color:#fff}.theme--light.v-tabs>.v-tabs-bar .v-tab--disabled,.theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active),.theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-btn,.theme--light.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-icon{color:rgba(0,0,0,.54)}.theme--light.v-tabs .v-tab:hover:before{opacity:.04}.theme--light.v-tabs .v-tab--active:before,.theme--light.v-tabs .v-tab--active:hover:before,.theme--light.v-tabs .v-tab:focus:before{opacity:.12}.theme--light.v-tabs .v-tab--active:focus:before{opacity:.16}.theme--dark.v-tabs>.v-tabs-bar{background-color:#1e1e1e}.theme--dark.v-tabs>.v-tabs-bar .v-tab--disabled,.theme--dark.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active),.theme--dark.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-btn,.theme--dark.v-tabs>.v-tabs-bar .v-tab:not(.v-tab--active)>.v-icon{color:hsla(0,0%,100%,.6)}.theme--dark.v-tabs .v-tab:hover:before{opacity:.08}.theme--dark.v-tabs .v-tab--active:before,.theme--dark.v-tabs .v-tab--active:hover:before,.theme--dark.v-tabs .v-tab:focus:before{opacity:.24}.theme--dark.v-tabs .v-tab--active:focus:before{opacity:.32}.theme--light.v-tabs-items{background-color:#fff}.theme--dark.v-tabs-items{background-color:#1e1e1e}.v-tabs-bar.accent .v-tab,.v-tabs-bar.accent .v-tabs-slider,.v-tabs-bar.error .v-tab,.v-tabs-bar.error .v-tabs-slider,.v-tabs-bar.info .v-tab,.v-tabs-bar.info .v-tabs-slider,.v-tabs-bar.primary .v-tab,.v-tabs-bar.primary .v-tabs-slider,.v-tabs-bar.secondary .v-tab,.v-tabs-bar.secondary .v-tabs-slider,.v-tabs-bar.success .v-tab,.v-tabs-bar.success .v-tabs-slider,.v-tabs-bar.warning .v-tab,.v-tabs-bar.warning .v-tabs-slider{color:#fff}.v-tabs{flex:1 1 auto;width:100%}.v-tabs .v-menu__activator{height:100%}.v-tabs.v.tabs--vertical.v-tabs--right{flex-direction:row-reverse}.v-tabs:not(.v-tabs--vertical) .v-tab{white-space:normal}.v-tabs:not(.v-tabs--vertical).v-tabs--right>.v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__next,.v-tabs:not(.v-tabs--vertical):not(.v-tabs--right)>.v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev{display:inline;display:initial;visibility:hidden}.v-tabs-bar{border-radius:inherit;height:48px}.v-tabs-bar.v-item-group>*{cursor:auto}.v-tab{align-items:center;cursor:pointer;display:flex;flex:0 1 auto;font-size:.875rem;font-weight:500;justify-content:center;letter-spacing:.0892857143em;line-height:normal;min-width:90px;max-width:360px;outline:none;padding:0 16px;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;transition:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-tab.v-tab{color:inherit}.v-tab:before{bottom:0;content:\"\";left:0;opacity:0;pointer-events:none;position:absolute;right:0;top:0;transition:.3s cubic-bezier(.25,.8,.5,1)}.v-tab:before,.v-tabs-slider{background-color:currentColor}.v-tabs-slider{height:100%;width:100%}.v-tabs-slider-wrapper{bottom:0;margin:0!important;position:absolute;transition:.3s cubic-bezier(.25,.8,.5,1);z-index:1}.v-application--is-ltr .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tab:first-child,.v-application--is-ltr .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tabs-slider-wrapper+.v-tab{margin-left:42px}.v-application--is-rtl .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tab:first-child,.v-application--is-rtl .v-tabs--align-with-title>.v-tabs-bar:not(.v-tabs-bar--show-arrows):not(.v-slide-group--is-overflowing)>.v-slide-group__wrapper>.v-tabs-bar__content>.v-tabs-slider-wrapper+.v-tab{margin-right:42px}.v-application--is-ltr .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:last-child,.v-application--is-ltr .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:last-child{margin-right:auto}.v-application--is-ltr .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-ltr .v-tabs--centered>.v-tabs-bar .v-tabs-slider-wrapper+*,.v-application--is-ltr .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-ltr .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-slider-wrapper+*,.v-application--is-rtl .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:last-child,.v-application--is-rtl .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:last-child{margin-left:auto}.v-application--is-rtl .v-tabs--centered>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-rtl .v-tabs--centered>.v-tabs-bar .v-tabs-slider-wrapper+*,.v-application--is-rtl .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-bar__content>:first-child:not(.v-tabs-slider-wrapper),.v-application--is-rtl .v-tabs--fixed-tabs>.v-tabs-bar .v-tabs-slider-wrapper+*{margin-right:auto}.v-tabs--fixed-tabs>.v-tabs-bar .v-tab{flex:1 1 auto;width:100%}.v-tabs--grow>.v-tabs-bar .v-tab{flex:1 0 auto;max-width:none}.v-tabs--icons-and-text>.v-tabs-bar{height:72px}.v-tabs--icons-and-text>.v-tabs-bar .v-tab{flex-direction:column-reverse}.v-tabs--icons-and-text>.v-tabs-bar .v-tab>:first-child{margin-bottom:6px}.v-tabs--overflow>.v-tabs-bar .v-tab{flex:1 0 auto}.v-application--is-ltr .v-tabs--right>.v-tabs-bar .v-tab:first-child,.v-application--is-ltr .v-tabs--right>.v-tabs-bar .v-tabs-slider-wrapper+.v-tab{margin-left:auto}.v-application--is-rtl .v-tabs--right>.v-tabs-bar .v-tab:first-child,.v-application--is-rtl .v-tabs--right>.v-tabs-bar .v-tabs-slider-wrapper+.v-tab{margin-right:auto}.v-application--is-ltr .v-tabs--right>.v-tabs-bar .v-tab:last-child{margin-right:0}.v-application--is-rtl .v-tabs--right>.v-tabs-bar .v-tab:last-child{margin-left:0}.v-tabs--vertical{display:flex}.v-tabs--vertical>.v-tabs-bar{flex:1 0 auto;height:auto}.v-tabs--vertical>.v-tabs-bar .v-slide-group__next,.v-tabs--vertical>.v-tabs-bar .v-slide-group__prev{display:none}.v-tabs--vertical>.v-tabs-bar .v-tabs-bar__content{flex-direction:column}.v-tabs--vertical>.v-tabs-bar .v-tab{height:48px}.v-tabs--vertical>.v-tabs-bar .v-tabs-slider{height:100%}.v-tabs--vertical>.v-window{flex:0 1 100%}.v-tabs--vertical.v-tabs--icons-and-text>.v-tabs-bar .v-tab{height:72px}.v-tab--active{color:inherit}.v-tab--active.v-tab:not(:focus):before{opacity:0}.v-tab--active .v-btn.v-btn--flat,.v-tab--active .v-icon{color:inherit}.v-tab--disabled{pointer-events:none;opacity:.5}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".theme--light.v-text-field>.v-input__control>.v-input__slot:before{border-color:rgba(0,0,0,.42)}.theme--light.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before{border-color:rgba(0,0,0,.87)}.theme--light.v-text-field.v-input--is-disabled .v-input__slot:before{-o-border-image:repeating-linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.38) 2px,transparent 0,transparent 4px) 1 repeat;border-image:repeating-linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.38) 2px,transparent 0,transparent 4px) 1 repeat}.theme--light.v-text-field--filled>.v-input__control>.v-input__slot{background:rgba(0,0,0,.06)}.theme--light.v-text-field--filled:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot:hover{background:rgba(0,0,0,.12)}.theme--light.v-text-field--solo>.v-input__control>.v-input__slot{background:#fff}.theme--light.v-text-field--solo-inverted>.v-input__control>.v-input__slot{background:rgba(0,0,0,.06)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot{background:#424242}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input{color:#fff}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::-moz-placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input:-ms-input-placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot .v-label{color:hsla(0,0%,100%,.7)}.theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset{color:rgba(0,0,0,.38)}.theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state):not(.v-input--is-disabled)>.v-input__control>.v-input__slot:hover fieldset{color:rgba(0,0,0,.86)}.theme--light.v-text-field--outlined:not(.v-input--is-focused).v-input--is-disabled>.v-input__control>.v-input__slot fieldset{color:rgba(0,0,0,.26)}.theme--dark.v-text-field>.v-input__control>.v-input__slot:before{border-color:hsla(0,0%,100%,.7)}.theme--dark.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before{border-color:#fff}.theme--dark.v-text-field.v-input--is-disabled .v-input__slot:before{-o-border-image:repeating-linear-gradient(90deg,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.5) 2px,transparent 0,transparent 4px) 1 repeat;border-image:repeating-linear-gradient(90deg,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.5) 2px,transparent 0,transparent 4px) 1 repeat}.theme--dark.v-text-field--filled>.v-input__control>.v-input__slot{background:hsla(0,0%,100%,.08)}.theme--dark.v-text-field--filled:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot:hover{background:hsla(0,0%,100%,.16)}.theme--dark.v-text-field--solo>.v-input__control>.v-input__slot{background:#1e1e1e}.theme--dark.v-text-field--solo-inverted>.v-input__control>.v-input__slot{background:hsla(0,0%,100%,.16)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot{background:#fff}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input{color:rgba(0,0,0,.87)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::-moz-placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input:-ms-input-placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot .v-label{color:rgba(0,0,0,.6)}.theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset{color:hsla(0,0%,100%,.24)}.theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state):not(.v-input--is-disabled)>.v-input__control>.v-input__slot:hover fieldset{color:#fff}.theme--dark.v-text-field--outlined:not(.v-input--is-focused).v-input--is-disabled>.v-input__control>.v-input__slot fieldset{color:hsla(0,0%,100%,.16)}.v-text-field{padding-top:12px;margin-top:4px}.v-text-field__prefix,.v-text-field__suffix{line-height:20px}.v-text-field input{flex:1 1 auto;line-height:20px;padding:8px 0;max-width:100%;min-width:0;width:100%}.v-text-field .v-input__control,.v-text-field .v-input__slot,.v-text-field fieldset{border-radius:inherit}.v-text-field.v-input--has-state .v-input__control>.v-text-field__details>.v-counter,.v-text-field.v-input--is-disabled .v-input__control>.v-text-field__details>.v-counter,.v-text-field.v-input--is-disabled .v-input__control>.v-text-field__details>.v-messages,.v-text-field .v-input__control,.v-text-field fieldset{color:currentColor}.v-text-field.v-input--dense{padding-top:0}.v-text-field.v-input--dense .v-label{top:4px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__prefix,.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__suffix,.v-text-field.v-input--dense:not(.v-text-field--outlined) input{padding:4px 0 2px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__prefix{padding-right:4px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__suffix{padding-left:4px}.v-text-field.v-input--dense[type=text]::-ms-clear{display:none}.v-text-field.v-input--dense .v-input__append-inner,.v-text-field.v-input--dense .v-input__prepend-inner{margin-top:0}.v-text-field .v-input__append-inner,.v-text-field .v-input__prepend-inner{align-self:flex-start;display:inline-flex;margin-top:4px;line-height:1;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-application--is-ltr .v-text-field .v-input__prepend-inner{margin-right:auto;padding-right:4px}.v-application--is-ltr .v-text-field .v-input__append-inner,.v-application--is-rtl .v-text-field .v-input__prepend-inner{margin-left:auto;padding-left:4px}.v-application--is-rtl .v-text-field .v-input__append-inner{margin-right:auto;padding-right:4px}.v-text-field .v-counter{white-space:nowrap}.v-application--is-ltr .v-text-field .v-counter{margin-left:8px}.v-application--is-rtl .v-text-field .v-counter{margin-right:8px}.v-text-field .v-label{max-width:90%;overflow:hidden;text-overflow:ellipsis;top:6px;white-space:nowrap;pointer-events:none}.v-application--is-ltr .v-text-field .v-label{transform-origin:top left}.v-application--is-rtl .v-text-field .v-label{transform-origin:top right}.v-text-field .v-label--active{max-width:133%;transform:translateY(-18px) scale(.75);pointer-events:auto}.v-text-field>.v-input__control>.v-input__slot{cursor:text}.v-text-field>.v-input__control>.v-input__slot:after,.v-text-field>.v-input__control>.v-input__slot:before{bottom:-1px;content:\"\";left:0;position:absolute;transition:.3s cubic-bezier(.25,.8,.5,1);width:100%}.v-text-field>.v-input__control>.v-input__slot:before{border-color:inherit;border-style:solid;border-width:thin 0 0}.v-text-field>.v-input__control>.v-input__slot:after{background-color:currentColor;border-color:currentcolor;border-style:solid;border-width:thin 0;transform:scaleX(0)}.v-text-field__details{display:flex;flex:1 0 auto;max-width:100%;min-height:14px;overflow:hidden}.v-text-field__prefix,.v-text-field__suffix{align-self:center;cursor:default;transition:color .3s cubic-bezier(.25,.8,.5,1);white-space:nowrap}.v-application--is-ltr .v-text-field__prefix{text-align:right;padding-right:4px}.v-application--is-rtl .v-text-field__prefix{text-align:left;padding-left:4px}.v-text-field__suffix{white-space:nowrap}.v-application--is-ltr .v-text-field__suffix{padding-left:4px}.v-application--is-rtl .v-text-field__suffix{padding-right:4px}.v-application--is-ltr .v-text-field--reverse .v-text-field__prefix{text-align:left;padding-right:0;padding-left:4px}.v-application--is-rtl .v-text-field--reverse .v-text-field__prefix{text-align:right;padding-right:4px;padding-left:0}.v-application--is-ltr .v-text-field--reverse .v-text-field__suffix{padding-left:0;padding-right:4px}.v-application--is-rtl .v-text-field--reverse .v-text-field__suffix{padding-left:4px;padding-right:0}.v-text-field>.v-input__control>.v-input__slot>.v-text-field__slot{display:flex;flex:1 1 auto;position:relative}.v-text-field:not(.v-text-field--is-booted) .v-label,.v-text-field:not(.v-text-field--is-booted) legend{transition:none}.v-text-field--filled,.v-text-field--full-width,.v-text-field--outlined{position:relative}.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--full-width>.v-input__control>.v-input__slot,.v-text-field--outlined>.v-input__control>.v-input__slot{align-items:stretch;min-height:56px}.v-text-field--filled.v-input--dense>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense>.v-input__control>.v-input__slot{min-height:52px}.v-text-field--filled.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--filled.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--filled.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot{min-height:40px}.v-text-field--outlined{border-radius:4px}.v-text-field--enclosed .v-input__append-inner,.v-text-field--enclosed .v-input__append-outer,.v-text-field--enclosed .v-input__prepend-inner,.v-text-field--enclosed .v-input__prepend-outer,.v-text-field--full-width .v-input__append-inner,.v-text-field--full-width .v-input__append-outer,.v-text-field--full-width .v-input__prepend-inner,.v-text-field--full-width .v-input__prepend-outer{margin-top:17px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__prepend-outer{margin-top:14px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-outer{margin-top:9px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer{margin-top:8px}.v-text-field--filled .v-label,.v-text-field--full-width .v-label{top:18px}.v-text-field--filled .v-label--active,.v-text-field--full-width .v-label--active{transform:translateY(-6px) scale(.75)}.v-text-field--filled.v-input--dense .v-label,.v-text-field--full-width.v-input--dense .v-label{top:17px}.v-text-field--filled.v-input--dense .v-label--active,.v-text-field--full-width.v-input--dense .v-label--active{transform:translateY(-10px) scale(.75)}.v-text-field--filled.v-input--dense.v-text-field--single-line .v-label,.v-text-field--full-width.v-input--dense.v-text-field--single-line .v-label{top:11px}.v-text-field--filled{border-radius:4px 4px 0 0}.v-text-field--filled:not(.v-text-field--single-line) input{margin-top:22px}.v-text-field--filled.v-input--dense:not(.v-text-field--single-line).v-text-field--outlined input{margin-top:0}.v-text-field--filled .v-text-field__prefix,.v-text-field--filled .v-text-field__suffix{max-height:32px;margin-top:20px}.v-text-field--full-width{border-radius:0}.v-text-field--outlined .v-text-field__slot,.v-text-field--single-line .v-text-field__slot{align-items:center}.v-text-field.v-text-field--enclosed{margin:0;padding:0}.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__prefix,.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__suffix{margin-top:0}.v-text-field.v-text-field--enclosed:not(.v-text-field--filled) .v-progress-linear__background{display:none}.v-text-field.v-text-field--enclosed .v-text-field__details,.v-text-field.v-text-field--enclosed:not(.v-text-field--rounded)>.v-input__control>.v-input__slot{padding:0 12px}.v-text-field.v-text-field--enclosed .v-text-field__details{padding-top:0;margin-bottom:8px}.v-application--is-ltr .v-text-field--reverse input{text-align:right}.v-application--is-rtl .v-text-field--reverse input{text-align:left}.v-application--is-ltr .v-text-field--reverse .v-label{transform-origin:top right}.v-application--is-rtl .v-text-field--reverse .v-label{transform-origin:top left}.v-text-field--reverse .v-text-field__slot,.v-text-field--reverse>.v-input__control>.v-input__slot{flex-direction:row-reverse}.v-text-field--outlined>.v-input__control>.v-input__slot:after,.v-text-field--outlined>.v-input__control>.v-input__slot:before,.v-text-field--rounded>.v-input__control>.v-input__slot:after,.v-text-field--rounded>.v-input__control>.v-input__slot:before,.v-text-field--solo>.v-input__control>.v-input__slot:after,.v-text-field--solo>.v-input__control>.v-input__slot:before{display:none}.v-text-field--outlined,.v-text-field--solo{border-radius:4px}.v-text-field--outlined{margin-bottom:16px;transition:border .3s cubic-bezier(.25,.8,.5,1)}.v-text-field--outlined .v-label{top:18px}.v-text-field--outlined .v-label--active{transform:translateY(-24px) scale(.75)}.v-text-field--outlined.v-input--dense .v-label{top:10px}.v-text-field--outlined.v-input--dense .v-label--active{transform:translateY(-16px) scale(.75)}.v-text-field--outlined fieldset{border-collapse:collapse;border:1px solid;bottom:0;left:0;pointer-events:none;position:absolute;right:0;top:-5px;transition-duration:.15s;transition-property:color;transition-timing-function:cubic-bezier(.25,.8,.25,1)}.v-application--is-ltr .v-text-field--outlined fieldset{padding-left:8px}.v-application--is-ltr .v-text-field--outlined.v-text-field--reverse fieldset,.v-application--is-rtl .v-text-field--outlined fieldset{padding-right:8px}.v-application--is-rtl .v-text-field--outlined.v-text-field--reverse fieldset{padding-left:8px}.v-text-field--outlined legend{line-height:11px;padding:0;transition:width .3s cubic-bezier(.25,.8,.5,1)}.v-application--is-ltr .v-text-field--outlined legend{text-align:left}.v-application--is-rtl .v-text-field--outlined legend{text-align:right}.v-application--is-ltr .v-text-field--outlined.v-text-field--reverse legend{margin-left:auto}.v-application--is-rtl .v-text-field--outlined.v-text-field--reverse legend{margin-right:auto}.v-application--is-ltr .v-text-field--outlined.v-text-field--rounded legend{margin-left:12px}.v-application--is-rtl .v-text-field--outlined.v-text-field--rounded legend{margin-right:12px}.v-text-field--outlined>.v-input__control>.v-input__slot{background:transparent}.v-text-field--outlined .v-text-field__prefix{max-height:32px}.v-text-field--outlined .v-input__append-outer,.v-text-field--outlined .v-input__prepend-outer{margin-top:18px}.v-text-field--outlined.v-input--has-state fieldset,.v-text-field--outlined.v-input--is-focused fieldset{border:2px solid}.v-text-field--rounded{border-radius:28px}.v-text-field--rounded>.v-input__control>.v-input__slot{padding:0 24px}.v-text-field--shaped{border-radius:16px 16px 0 0}.v-text-field.v-text-field--solo .v-label{top:calc(50% - 9px)}.v-text-field.v-text-field--solo .v-input__control{min-height:48px;padding:0}.v-text-field.v-text-field--solo .v-input__control input{caret-color:auto}.v-text-field.v-text-field--solo.v-input--dense>.v-input__control{min-height:38px}.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)>.v-input__control>.v-input__slot{box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.v-text-field.v-text-field--solo .v-input__append-inner,.v-text-field.v-text-field--solo .v-input__prepend-inner{align-self:center;margin-top:0}.v-text-field.v-text-field--solo .v-input__append-outer,.v-text-field.v-text-field--solo .v-input__prepend-outer{margin-top:12px}.v-text-field.v-text-field--solo.v-input--dense .v-input__append-outer,.v-text-field.v-text-field--solo.v-input--dense .v-input__prepend-outer{margin-top:7px}.v-text-field.v-input--is-focused>.v-input__control>.v-input__slot:after{transform:scaleX(1)}.v-text-field.v-input--has-state>.v-input__control>.v-input__slot:before{border-color:currentColor}", ""]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -12612,7 +12647,7 @@ var content = __webpack_require__(168);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
-__webpack_require__(5).default("8f7a87bc", content, true)
+__webpack_require__(5).default("22487aae", content, true)
 
 /***/ }),
 /* 168 */
@@ -12622,7 +12657,7 @@ __webpack_require__(5).default("8f7a87bc", content, true)
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".v-slide-group{display:flex}.v-slide-group:not(.v-slide-group--has-affixes)>.v-slide-group__next,.v-slide-group:not(.v-slide-group--has-affixes)>.v-slide-group__prev{display:none}.v-slide-group.v-item-group>.v-slide-group__next,.v-slide-group.v-item-group>.v-slide-group__prev{cursor:pointer}.v-slide-item{display:inline-flex;flex:0 1 auto}.v-slide-group__next,.v-slide-group__prev{align-items:center;display:flex;flex:0 1 52px;justify-content:center;min-width:52px}.v-slide-group__content{display:flex;flex:1 0 auto;position:relative;transition:.3s cubic-bezier(.25,.8,.5,1);white-space:nowrap}.v-slide-group__wrapper{contain:content;display:flex;flex:1 1 auto;overflow:hidden}.v-slide-group__next--disabled,.v-slide-group__prev--disabled{pointer-events:none}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, ".theme--light.v-input,.theme--light.v-input input,.theme--light.v-input textarea{color:rgba(0,0,0,.87)}.theme--light.v-input input::-moz-placeholder,.theme--light.v-input textarea::-moz-placeholder{color:rgba(0,0,0,.38)}.theme--light.v-input input:-ms-input-placeholder,.theme--light.v-input textarea:-ms-input-placeholder{color:rgba(0,0,0,.38)}.theme--light.v-input input::placeholder,.theme--light.v-input textarea::placeholder{color:rgba(0,0,0,.38)}.theme--light.v-input--is-disabled,.theme--light.v-input--is-disabled input,.theme--light.v-input--is-disabled textarea{color:rgba(0,0,0,.38)}.theme--dark.v-input,.theme--dark.v-input input,.theme--dark.v-input textarea{color:#fff}.theme--dark.v-input input::-moz-placeholder,.theme--dark.v-input textarea::-moz-placeholder{color:hsla(0,0%,100%,.5)}.theme--dark.v-input input:-ms-input-placeholder,.theme--dark.v-input textarea:-ms-input-placeholder{color:hsla(0,0%,100%,.5)}.theme--dark.v-input input::placeholder,.theme--dark.v-input textarea::placeholder{color:hsla(0,0%,100%,.5)}.theme--dark.v-input--is-disabled,.theme--dark.v-input--is-disabled input,.theme--dark.v-input--is-disabled textarea{color:hsla(0,0%,100%,.5)}.v-input{align-items:flex-start;display:flex;flex:1 1 auto;font-size:16px;letter-spacing:normal;max-width:100%;text-align:left}.v-input .v-progress-linear{top:calc(100% - 1px);left:0}.v-input input{max-height:32px}.v-input input:invalid,.v-input textarea:invalid{box-shadow:none}.v-input input:active,.v-input input:focus,.v-input textarea:active,.v-input textarea:focus{outline:none}.v-input .v-label{height:20px;line-height:20px;letter-spacing:normal}.v-input__append-outer,.v-input__prepend-outer{display:inline-flex;margin-bottom:4px;margin-top:4px;line-height:1}.v-input__append-outer .v-icon,.v-input__prepend-outer .v-icon{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-application--is-ltr .v-input__append-outer{margin-left:9px}.v-application--is-ltr .v-input__prepend-outer,.v-application--is-rtl .v-input__append-outer{margin-right:9px}.v-application--is-rtl .v-input__prepend-outer{margin-left:9px}.v-input__control{display:flex;flex-direction:column;height:auto;flex-grow:1;flex-wrap:wrap;min-width:0;width:100%}.v-input__icon{align-items:center;display:inline-flex;height:24px;flex:1 0 auto;justify-content:center;min-width:24px;width:24px}.v-input__icon--clear{border-radius:50%}.v-input__icon--clear .v-icon--disabled{visibility:hidden}.v-input__slot{align-items:center;color:inherit;display:flex;margin-bottom:8px;min-height:inherit;position:relative;transition:.3s cubic-bezier(.25,.8,.5,1);width:100%}.v-input--dense>.v-input__control>.v-input__slot{margin-bottom:4px}.v-input--is-disabled:not(.v-input--is-readonly){pointer-events:none}.v-input--is-loading>.v-input__control>.v-input__slot:after,.v-input--is-loading>.v-input__control>.v-input__slot:before{display:none}.v-input--hide-details>.v-input__control>.v-input__slot{margin-bottom:0}.v-input--has-state.error--text .v-label{-webkit-animation:v-shake .6s cubic-bezier(.25,.8,.5,1);animation:v-shake .6s cubic-bezier(.25,.8,.5,1)}", ""]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -12638,75 +12673,10 @@ var content = __webpack_require__(170);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
-__webpack_require__(5).default("0d135400", content, true)
-
-/***/ }),
-/* 170 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".v-window{overflow:hidden}.v-window__container{display:flex;flex-direction:column;height:inherit;position:relative;transition:.3s cubic-bezier(.25,.8,.5,1)}.v-window__container--is-active{overflow:hidden}.v-window__next,.v-window__prev{background:rgba(0,0,0,.3);border-radius:50%;position:absolute;margin:0 16px;top:calc(50% - 20px);z-index:1}.v-window__next .v-btn:hover,.v-window__prev .v-btn:hover{background:none}.v-application--is-ltr .v-window__prev{left:0}.v-application--is-ltr .v-window__next,.v-application--is-rtl .v-window__prev{right:0}.v-application--is-rtl .v-window__next{left:0}.v-window--show-arrows-on-hover{overflow:hidden}.v-window--show-arrows-on-hover .v-window__next,.v-window--show-arrows-on-hover .v-window__prev{transition:transform .2s cubic-bezier(.25,.8,.5,1)}.v-application--is-ltr .v-window--show-arrows-on-hover .v-window__prev{transform:translateX(-200%)}.v-application--is-ltr .v-window--show-arrows-on-hover .v-window__next,.v-application--is-rtl .v-window--show-arrows-on-hover .v-window__prev{transform:translateX(200%)}.v-application--is-rtl .v-window--show-arrows-on-hover .v-window__next{transform:translateX(-200%)}.v-window--show-arrows-on-hover:hover .v-window__next,.v-window--show-arrows-on-hover:hover .v-window__prev{transform:translateX(0)}.v-window-x-reverse-transition-enter-active,.v-window-x-reverse-transition-leave-active,.v-window-x-transition-enter-active,.v-window-x-transition-leave-active,.v-window-y-reverse-transition-enter-active,.v-window-y-reverse-transition-leave-active,.v-window-y-transition-enter-active,.v-window-y-transition-leave-active{transition:.3s cubic-bezier(.25,.8,.5,1)}.v-window-x-reverse-transition-leave,.v-window-x-reverse-transition-leave-to,.v-window-x-transition-leave,.v-window-x-transition-leave-to,.v-window-y-reverse-transition-leave,.v-window-y-reverse-transition-leave-to,.v-window-y-transition-leave,.v-window-y-transition-leave-to{position:absolute!important;top:0;width:100%}.v-window-x-transition-enter{transform:translateX(100%)}.v-window-x-reverse-transition-enter,.v-window-x-transition-leave-to{transform:translateX(-100%)}.v-window-x-reverse-transition-leave-to{transform:translateX(100%)}.v-window-y-transition-enter{transform:translateY(100%)}.v-window-y-reverse-transition-enter,.v-window-y-transition-leave-to{transform:translateY(-100%)}.v-window-y-reverse-transition-leave-to{transform:translateY(100%)}", ""]);
-// Exports
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-/* 171 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".theme--light.v-text-field>.v-input__control>.v-input__slot:before{border-color:rgba(0,0,0,.42)}.theme--light.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before{border-color:rgba(0,0,0,.87)}.theme--light.v-text-field.v-input--is-disabled .v-input__slot:before{-o-border-image:repeating-linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.38) 2px,transparent 0,transparent 4px) 1 repeat;border-image:repeating-linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.38) 2px,transparent 0,transparent 4px) 1 repeat}.theme--light.v-text-field--filled>.v-input__control>.v-input__slot{background:rgba(0,0,0,.06)}.theme--light.v-text-field--filled:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot:hover{background:rgba(0,0,0,.12)}.theme--light.v-text-field--solo>.v-input__control>.v-input__slot{background:#fff}.theme--light.v-text-field--solo-inverted>.v-input__control>.v-input__slot{background:rgba(0,0,0,.06)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot{background:#424242}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input{color:#fff}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::-moz-placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input:-ms-input-placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::placeholder{color:hsla(0,0%,100%,.5)}.theme--light.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot .v-label{color:hsla(0,0%,100%,.7)}.theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset{color:rgba(0,0,0,.38)}.theme--light.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state):not(.v-input--is-disabled)>.v-input__control>.v-input__slot:hover fieldset{color:rgba(0,0,0,.86)}.theme--light.v-text-field--outlined:not(.v-input--is-focused).v-input--is-disabled>.v-input__control>.v-input__slot fieldset{color:rgba(0,0,0,.26)}.theme--dark.v-text-field>.v-input__control>.v-input__slot:before{border-color:hsla(0,0%,100%,.7)}.theme--dark.v-text-field:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before{border-color:#fff}.theme--dark.v-text-field.v-input--is-disabled .v-input__slot:before{-o-border-image:repeating-linear-gradient(90deg,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.5) 2px,transparent 0,transparent 4px) 1 repeat;border-image:repeating-linear-gradient(90deg,hsla(0,0%,100%,.5) 0,hsla(0,0%,100%,.5) 2px,transparent 0,transparent 4px) 1 repeat}.theme--dark.v-text-field--filled>.v-input__control>.v-input__slot{background:hsla(0,0%,100%,.08)}.theme--dark.v-text-field--filled:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot:hover{background:hsla(0,0%,100%,.16)}.theme--dark.v-text-field--solo>.v-input__control>.v-input__slot{background:#1e1e1e}.theme--dark.v-text-field--solo-inverted>.v-input__control>.v-input__slot{background:hsla(0,0%,100%,.16)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot{background:#fff}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input{color:rgba(0,0,0,.87)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::-moz-placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input:-ms-input-placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot input::placeholder{color:rgba(0,0,0,.38)}.theme--dark.v-text-field--solo-inverted.v-input--is-focused>.v-input__control>.v-input__slot .v-label{color:rgba(0,0,0,.6)}.theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset{color:hsla(0,0%,100%,.24)}.theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state):not(.v-input--is-disabled)>.v-input__control>.v-input__slot:hover fieldset{color:#fff}.theme--dark.v-text-field--outlined:not(.v-input--is-focused).v-input--is-disabled>.v-input__control>.v-input__slot fieldset{color:hsla(0,0%,100%,.16)}.v-text-field{padding-top:12px;margin-top:4px}.v-text-field__prefix,.v-text-field__suffix{line-height:20px}.v-text-field input{flex:1 1 auto;line-height:20px;padding:8px 0;max-width:100%;min-width:0;width:100%}.v-text-field .v-input__control,.v-text-field .v-input__slot,.v-text-field fieldset{border-radius:inherit}.v-text-field.v-input--has-state .v-input__control>.v-text-field__details>.v-counter,.v-text-field.v-input--is-disabled .v-input__control>.v-text-field__details>.v-counter,.v-text-field.v-input--is-disabled .v-input__control>.v-text-field__details>.v-messages,.v-text-field .v-input__control,.v-text-field fieldset{color:currentColor}.v-text-field.v-input--dense{padding-top:0}.v-text-field.v-input--dense .v-label{top:4px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__prefix,.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__suffix,.v-text-field.v-input--dense:not(.v-text-field--outlined) input{padding:4px 0 2px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__prefix{padding-right:4px}.v-text-field.v-input--dense:not(.v-text-field--outlined) .v-text-field__suffix{padding-left:4px}.v-text-field.v-input--dense[type=text]::-ms-clear{display:none}.v-text-field.v-input--dense .v-input__append-inner,.v-text-field.v-input--dense .v-input__prepend-inner{margin-top:0}.v-text-field .v-input__append-inner,.v-text-field .v-input__prepend-inner{align-self:flex-start;display:inline-flex;margin-top:4px;line-height:1;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-application--is-ltr .v-text-field .v-input__prepend-inner{margin-right:auto;padding-right:4px}.v-application--is-ltr .v-text-field .v-input__append-inner,.v-application--is-rtl .v-text-field .v-input__prepend-inner{margin-left:auto;padding-left:4px}.v-application--is-rtl .v-text-field .v-input__append-inner{margin-right:auto;padding-right:4px}.v-text-field .v-counter{white-space:nowrap}.v-application--is-ltr .v-text-field .v-counter{margin-left:8px}.v-application--is-rtl .v-text-field .v-counter{margin-right:8px}.v-text-field .v-label{max-width:90%;overflow:hidden;text-overflow:ellipsis;top:6px;white-space:nowrap;pointer-events:none}.v-application--is-ltr .v-text-field .v-label{transform-origin:top left}.v-application--is-rtl .v-text-field .v-label{transform-origin:top right}.v-text-field .v-label--active{max-width:133%;transform:translateY(-18px) scale(.75);pointer-events:auto}.v-text-field>.v-input__control>.v-input__slot{cursor:text}.v-text-field>.v-input__control>.v-input__slot:after,.v-text-field>.v-input__control>.v-input__slot:before{bottom:-1px;content:\"\";left:0;position:absolute;transition:.3s cubic-bezier(.25,.8,.5,1);width:100%}.v-text-field>.v-input__control>.v-input__slot:before{border-color:inherit;border-style:solid;border-width:thin 0 0}.v-text-field>.v-input__control>.v-input__slot:after{background-color:currentColor;border-color:currentcolor;border-style:solid;border-width:thin 0;transform:scaleX(0)}.v-text-field__details{display:flex;flex:1 0 auto;max-width:100%;min-height:14px;overflow:hidden}.v-text-field__prefix,.v-text-field__suffix{align-self:center;cursor:default;transition:color .3s cubic-bezier(.25,.8,.5,1);white-space:nowrap}.v-application--is-ltr .v-text-field__prefix{text-align:right;padding-right:4px}.v-application--is-rtl .v-text-field__prefix{text-align:left;padding-left:4px}.v-text-field__suffix{white-space:nowrap}.v-application--is-ltr .v-text-field__suffix{padding-left:4px}.v-application--is-rtl .v-text-field__suffix{padding-right:4px}.v-application--is-ltr .v-text-field--reverse .v-text-field__prefix{text-align:left;padding-right:0;padding-left:4px}.v-application--is-rtl .v-text-field--reverse .v-text-field__prefix{text-align:right;padding-right:4px;padding-left:0}.v-application--is-ltr .v-text-field--reverse .v-text-field__suffix{padding-left:0;padding-right:4px}.v-application--is-rtl .v-text-field--reverse .v-text-field__suffix{padding-left:4px;padding-right:0}.v-text-field>.v-input__control>.v-input__slot>.v-text-field__slot{display:flex;flex:1 1 auto;position:relative}.v-text-field:not(.v-text-field--is-booted) .v-label,.v-text-field:not(.v-text-field--is-booted) legend{transition:none}.v-text-field--filled,.v-text-field--full-width,.v-text-field--outlined{position:relative}.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--full-width>.v-input__control>.v-input__slot,.v-text-field--outlined>.v-input__control>.v-input__slot{align-items:stretch;min-height:56px}.v-text-field--filled.v-input--dense>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense>.v-input__control>.v-input__slot{min-height:52px}.v-text-field--filled.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--filled.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--filled.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--full-width.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--outlined.v-text-field--filled>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--outlined>.v-input__control>.v-input__slot,.v-text-field--outlined.v-input--dense.v-text-field--single-line>.v-input__control>.v-input__slot{min-height:40px}.v-text-field--outlined{border-radius:4px}.v-text-field--enclosed .v-input__append-inner,.v-text-field--enclosed .v-input__append-outer,.v-text-field--enclosed .v-input__prepend-inner,.v-text-field--enclosed .v-input__prepend-outer,.v-text-field--full-width .v-input__append-inner,.v-text-field--full-width .v-input__append-outer,.v-text-field--full-width .v-input__prepend-inner,.v-text-field--full-width .v-input__prepend-outer{margin-top:17px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo) .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo) .v-input__prepend-outer{margin-top:14px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line .v-input__prepend-outer{margin-top:9px}.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer{margin-top:8px}.v-text-field--filled .v-label,.v-text-field--full-width .v-label{top:18px}.v-text-field--filled .v-label--active,.v-text-field--full-width .v-label--active{transform:translateY(-6px) scale(.75)}.v-text-field--filled.v-input--dense .v-label,.v-text-field--full-width.v-input--dense .v-label{top:17px}.v-text-field--filled.v-input--dense .v-label--active,.v-text-field--full-width.v-input--dense .v-label--active{transform:translateY(-10px) scale(.75)}.v-text-field--filled.v-input--dense.v-text-field--single-line .v-label,.v-text-field--full-width.v-input--dense.v-text-field--single-line .v-label{top:11px}.v-text-field--filled{border-radius:4px 4px 0 0}.v-text-field--filled:not(.v-text-field--single-line) input{margin-top:22px}.v-text-field--filled.v-input--dense:not(.v-text-field--single-line).v-text-field--outlined input{margin-top:0}.v-text-field--filled .v-text-field__prefix,.v-text-field--filled .v-text-field__suffix{max-height:32px;margin-top:20px}.v-text-field--full-width{border-radius:0}.v-text-field--outlined .v-text-field__slot,.v-text-field--single-line .v-text-field__slot{align-items:center}.v-text-field.v-text-field--enclosed{margin:0;padding:0}.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__prefix,.v-text-field.v-text-field--enclosed.v-text-field--single-line .v-text-field__suffix{margin-top:0}.v-text-field.v-text-field--enclosed:not(.v-text-field--filled) .v-progress-linear__background{display:none}.v-text-field.v-text-field--enclosed .v-text-field__details,.v-text-field.v-text-field--enclosed:not(.v-text-field--rounded)>.v-input__control>.v-input__slot{padding:0 12px}.v-text-field.v-text-field--enclosed .v-text-field__details{padding-top:0;margin-bottom:8px}.v-application--is-ltr .v-text-field--reverse input{text-align:right}.v-application--is-rtl .v-text-field--reverse input{text-align:left}.v-application--is-ltr .v-text-field--reverse .v-label{transform-origin:top right}.v-application--is-rtl .v-text-field--reverse .v-label{transform-origin:top left}.v-text-field--reverse .v-text-field__slot,.v-text-field--reverse>.v-input__control>.v-input__slot{flex-direction:row-reverse}.v-text-field--outlined>.v-input__control>.v-input__slot:after,.v-text-field--outlined>.v-input__control>.v-input__slot:before,.v-text-field--rounded>.v-input__control>.v-input__slot:after,.v-text-field--rounded>.v-input__control>.v-input__slot:before,.v-text-field--solo>.v-input__control>.v-input__slot:after,.v-text-field--solo>.v-input__control>.v-input__slot:before{display:none}.v-text-field--outlined,.v-text-field--solo{border-radius:4px}.v-text-field--outlined{margin-bottom:16px;transition:border .3s cubic-bezier(.25,.8,.5,1)}.v-text-field--outlined .v-label{top:18px}.v-text-field--outlined .v-label--active{transform:translateY(-24px) scale(.75)}.v-text-field--outlined.v-input--dense .v-label{top:10px}.v-text-field--outlined.v-input--dense .v-label--active{transform:translateY(-16px) scale(.75)}.v-text-field--outlined fieldset{border-collapse:collapse;border:1px solid;bottom:0;left:0;pointer-events:none;position:absolute;right:0;top:-5px;transition-duration:.15s;transition-property:color;transition-timing-function:cubic-bezier(.25,.8,.25,1)}.v-application--is-ltr .v-text-field--outlined fieldset{padding-left:8px}.v-application--is-ltr .v-text-field--outlined.v-text-field--reverse fieldset,.v-application--is-rtl .v-text-field--outlined fieldset{padding-right:8px}.v-application--is-rtl .v-text-field--outlined.v-text-field--reverse fieldset{padding-left:8px}.v-text-field--outlined legend{line-height:11px;padding:0;transition:width .3s cubic-bezier(.25,.8,.5,1)}.v-application--is-ltr .v-text-field--outlined legend{text-align:left}.v-application--is-rtl .v-text-field--outlined legend{text-align:right}.v-application--is-ltr .v-text-field--outlined.v-text-field--reverse legend{margin-left:auto}.v-application--is-rtl .v-text-field--outlined.v-text-field--reverse legend{margin-right:auto}.v-application--is-ltr .v-text-field--outlined.v-text-field--rounded legend{margin-left:12px}.v-application--is-rtl .v-text-field--outlined.v-text-field--rounded legend{margin-right:12px}.v-text-field--outlined>.v-input__control>.v-input__slot{background:transparent}.v-text-field--outlined .v-text-field__prefix{max-height:32px}.v-text-field--outlined .v-input__append-outer,.v-text-field--outlined .v-input__prepend-outer{margin-top:18px}.v-text-field--outlined.v-input--has-state fieldset,.v-text-field--outlined.v-input--is-focused fieldset{border:2px solid}.v-text-field--rounded{border-radius:28px}.v-text-field--rounded>.v-input__control>.v-input__slot{padding:0 24px}.v-text-field--shaped{border-radius:16px 16px 0 0}.v-text-field.v-text-field--solo .v-label{top:calc(50% - 9px)}.v-text-field.v-text-field--solo .v-input__control{min-height:48px;padding:0}.v-text-field.v-text-field--solo .v-input__control input{caret-color:auto}.v-text-field.v-text-field--solo.v-input--dense>.v-input__control{min-height:38px}.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)>.v-input__control>.v-input__slot{box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.v-text-field.v-text-field--solo .v-input__append-inner,.v-text-field.v-text-field--solo .v-input__prepend-inner{align-self:center;margin-top:0}.v-text-field.v-text-field--solo .v-input__append-outer,.v-text-field.v-text-field--solo .v-input__prepend-outer{margin-top:12px}.v-text-field.v-text-field--solo.v-input--dense .v-input__append-outer,.v-text-field.v-text-field--solo.v-input--dense .v-input__prepend-outer{margin-top:7px}.v-text-field.v-input--is-focused>.v-input__control>.v-input__slot:after{transform:scaleX(1)}.v-text-field.v-input--has-state>.v-input__control>.v-input__slot:before{border-color:currentColor}", ""]);
-// Exports
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-/* 172 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(173);
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-__webpack_require__(5).default("22487aae", content, true)
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".theme--light.v-input,.theme--light.v-input input,.theme--light.v-input textarea{color:rgba(0,0,0,.87)}.theme--light.v-input input::-moz-placeholder,.theme--light.v-input textarea::-moz-placeholder{color:rgba(0,0,0,.38)}.theme--light.v-input input:-ms-input-placeholder,.theme--light.v-input textarea:-ms-input-placeholder{color:rgba(0,0,0,.38)}.theme--light.v-input input::placeholder,.theme--light.v-input textarea::placeholder{color:rgba(0,0,0,.38)}.theme--light.v-input--is-disabled,.theme--light.v-input--is-disabled input,.theme--light.v-input--is-disabled textarea{color:rgba(0,0,0,.38)}.theme--dark.v-input,.theme--dark.v-input input,.theme--dark.v-input textarea{color:#fff}.theme--dark.v-input input::-moz-placeholder,.theme--dark.v-input textarea::-moz-placeholder{color:hsla(0,0%,100%,.5)}.theme--dark.v-input input:-ms-input-placeholder,.theme--dark.v-input textarea:-ms-input-placeholder{color:hsla(0,0%,100%,.5)}.theme--dark.v-input input::placeholder,.theme--dark.v-input textarea::placeholder{color:hsla(0,0%,100%,.5)}.theme--dark.v-input--is-disabled,.theme--dark.v-input--is-disabled input,.theme--dark.v-input--is-disabled textarea{color:hsla(0,0%,100%,.5)}.v-input{align-items:flex-start;display:flex;flex:1 1 auto;font-size:16px;letter-spacing:normal;max-width:100%;text-align:left}.v-input .v-progress-linear{top:calc(100% - 1px);left:0}.v-input input{max-height:32px}.v-input input:invalid,.v-input textarea:invalid{box-shadow:none}.v-input input:active,.v-input input:focus,.v-input textarea:active,.v-input textarea:focus{outline:none}.v-input .v-label{height:20px;line-height:20px;letter-spacing:normal}.v-input__append-outer,.v-input__prepend-outer{display:inline-flex;margin-bottom:4px;margin-top:4px;line-height:1}.v-input__append-outer .v-icon,.v-input__prepend-outer .v-icon{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-application--is-ltr .v-input__append-outer{margin-left:9px}.v-application--is-ltr .v-input__prepend-outer,.v-application--is-rtl .v-input__append-outer{margin-right:9px}.v-application--is-rtl .v-input__prepend-outer{margin-left:9px}.v-input__control{display:flex;flex-direction:column;height:auto;flex-grow:1;flex-wrap:wrap;min-width:0;width:100%}.v-input__icon{align-items:center;display:inline-flex;height:24px;flex:1 0 auto;justify-content:center;min-width:24px;width:24px}.v-input__icon--clear{border-radius:50%}.v-input__icon--clear .v-icon--disabled{visibility:hidden}.v-input__slot{align-items:center;color:inherit;display:flex;margin-bottom:8px;min-height:inherit;position:relative;transition:.3s cubic-bezier(.25,.8,.5,1);width:100%}.v-input--dense>.v-input__control>.v-input__slot{margin-bottom:4px}.v-input--is-disabled:not(.v-input--is-readonly){pointer-events:none}.v-input--is-loading>.v-input__control>.v-input__slot:after,.v-input--is-loading>.v-input__control>.v-input__slot:before{display:none}.v-input--hide-details>.v-input__control>.v-input__slot{margin-bottom:0}.v-input--has-state.error--text .v-label{-webkit-animation:v-shake .6s cubic-bezier(.25,.8,.5,1);animation:v-shake .6s cubic-bezier(.25,.8,.5,1)}", ""]);
-// Exports
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-/* 174 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(175);
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("371f82d0", content, true)
 
 /***/ }),
-/* 175 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12719,20 +12689,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 176 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(177);
+var content = __webpack_require__(172);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("2bb34da4", content, true)
 
 /***/ }),
-/* 177 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12745,20 +12715,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 178 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(179);
+var content = __webpack_require__(174);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("cf87dc84", content, true)
 
 /***/ }),
-/* 179 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12771,20 +12741,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 180 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(181);
+var content = __webpack_require__(176);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("3dc908a0", content, true)
 
 /***/ }),
-/* 181 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12797,20 +12767,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 182 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(183);
+var content = __webpack_require__(178);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("5c8fbe94", content, true)
 
 /***/ }),
-/* 183 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12823,7 +12793,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 184 */
+/* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12834,7 +12804,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 185 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12847,20 +12817,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 186 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(187);
+var content = __webpack_require__(182);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("7132a15d", content, true)
 
 /***/ }),
-/* 187 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12873,7 +12843,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 188 */
+/* 183 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12884,7 +12854,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 189 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12897,20 +12867,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 190 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(191);
+var content = __webpack_require__(186);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("bb35a8d6", content, true)
 
 /***/ }),
-/* 191 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12923,7 +12893,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 192 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12934,7 +12904,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 193 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12947,20 +12917,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 194 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(195);
+var content = __webpack_require__(190);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("424d9537", content, true)
 
 /***/ }),
-/* 195 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -12973,49 +12943,148 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 196 */
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
-/* harmony import */ var _static_products_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(101);
-var _static_products_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(101, 1);
-/* harmony import */ var _static_featuredProducts_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(102);
-var _static_featuredProducts_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(102, 1);
-/* harmony import */ var _static_blogstories_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(103);
-var _static_blogstories_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(103, 1);
-/* harmony import */ var _static_categories_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(104);
-var _static_categories_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(104, 1);
-/* harmony import */ var _static_subcategories_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(105);
-var _static_subcategories_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(105, 1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mutations", function() { return mutations; });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(30);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex__WEBPACK_IMPORTED_MODULE_1__);
+// // import products from '~/static/products.json'
+// // import featuredProducts from '~/static/featuredProducts.json'
+// // import blogStories from '~/static/blogstories.json'
+// // import categories from '~/static/categories.json'
+// // import subCategories from '~/static/subcategories.json'
+// export default {
+//   state: () => ({
+//     name: '',
+//     productId: '',
+//     img: [],
+//     mainImg: '',
+//     category: [],
+//     subCategory: [],
+//     description: [],
+//     features: [],
+//     intro: '',
+//     videos: [],
+//     configurationTitle: '',
+//     configurationIntro: [],
+//     configurationImage: '',
+//     tables: [],
+//     accessories: [],
+//     countInStock: 0,
+//     recommendedProducts: [],
+//     hasSubCategories: false,
+//     enquiries: 0,
+//   }),
+//   actions: {
+//     getAllProducts: async () => {
+//       const config = {
+//         headers: {
+//           'Access-Control-Allow-Origin': '*',
+//         },
+//       }
+//       const { data } = await this.$axios.get(
+//         'https://cbsbackend.herokuapp.com/api/products',
+//         config
+//       )
+//       return data
+//     },
+//     getProduct: async ({ id, timeout }) => {
+//       const config = {
+//         headers: {
+//           'Access-Control-Allow-Origin': '*',
+//         },
+//       }
+//       const { data } = await this.$axios.get(
+//         `https://cbsbackend.herokuapp.com/api/products/${id}`,
+//         config
+//       )
+//       this.mutations.update(data)
+//     },
+//     mutations: {
+//       update(data) {
+//         state.name = data[0].name
+//         state.category = data[0].category
+//         state.productId = data[0].productId
+//         state.intro = data[0].intro
+//         state.img = data[0].img
+//         state.mainImg = data[0].mainImg
+//         state.subCategory = data[0].subCategory
+//         state.description = data[0].description
+//         state.features = data[0].features
+//         state.videos = data[0].videos
+//         state.configurationTitle = data[0].configurationTitle
+//         state.configurationIntro = data[0].configurationIntro
+//         state.configurationImage = data[0].configurationImage
+//         state.tables = data[0].tables
+//         state.accessories = data[0].accessories
+//         state.countInStock = data[0].countInStock
+//         state.recommendedProducts = data[0].recommendedProducts
+//         state.hasSubCategories = data[0].hasSubCategories
+//         state.enquiries = data[0].hasSubCategories
+//       },
+//     },
+//   },
+// }
+// // export const getters = {
+// //   Products: (state) => state.productItems,
+// //   Categories: (state) => state.categories,
+// //   SubCategories: (state) => state.subCategories,
+// //   fibreBlowing: (state) =>
+// //     state.categories.filter((el) => el.category === 'Fibre Blowing'),
+// //   utilities: (state) =>
+// //     state.categories.filter((el) => el.category === 'Utilities'),
+// //   telecoms: (state) =>
+// //     state.categories.filter((el) => el.category === 'Telecoms'),
+// //   clientTools: (state) =>
+// //     state.categories.filter((el) => el.category === 'Client Tools'),
+// //   featuredItems: (state) => state.featuredProducts,
+// //   BlogStories: (state) => state.blogStories,
+// // }
+// import axios from 'axios'
 
 
-
-
-
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1___default.a);
 const state = () => ({
-  productItems: _static_products_json__WEBPACK_IMPORTED_MODULE_0__,
-  featuredProducts: _static_featuredProducts_json__WEBPACK_IMPORTED_MODULE_1__,
-  blogStories: _static_blogstories_json__WEBPACK_IMPORTED_MODULE_2__,
-  categories: _static_categories_json__WEBPACK_IMPORTED_MODULE_3__,
-  subCategories: _static_subcategories_json__WEBPACK_IMPORTED_MODULE_4__
+  product: []
 });
-const getters = {
-  Products: state => state.productItems,
-  Categories: state => state.categories,
-  SubCategories: state => state.subCategories,
-  fibreBlowing: state => state.categories.filter(el => el.category === 'Fibre Blowing'),
-  utilities: state => state.categories.filter(el => el.category === 'Utilities'),
-  telecoms: state => state.categories.filter(el => el.category === 'Telecoms'),
-  clientTools: state => state.categories.filter(el => el.category === 'Client Tools'),
-  featuredItems: state => state.featuredProducts,
-  BlogStories: state => state.blogStories
+const getters = {};
+const actions = {
+  async getProduct({
+    commit
+  }) {
+    const {
+      data
+    } = await this.$axios.$get(`https://cbsbackend.herokuapp.com/api/products/617596887b71833a0305c4df`);
+    commit('SET_PRODUCT', data);
+  } // getProduct({ commit }) {
+  //   axios
+  //     .get(
+  //       `https://cbsbackend.herokuapp.com/api/products/617596887b71833a0305c4df`
+  //     )
+  //     .then((response) => {
+  //       commit('SET_PRODUCT', response.data)
+  //     })
+  // },
+
+
+};
+const mutations = {
+  SET_PRODUCT(state, payload) {
+    state.product.push(payload);
+  }
+
 };
 
 /***/ }),
-/* 197 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13044,7 +13113,7 @@ const actions = {
 };
 
 /***/ }),
-/* 198 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13101,11 +13170,11 @@ var external_node_fetch_default = /*#__PURE__*/__webpack_require__.n(external_no
 
 // CONCATENATED MODULE: ./.nuxt/middleware.js
 const middleware = {};
-middleware['auth-admin'] = __webpack_require__(116);
+middleware['auth-admin'] = __webpack_require__(111);
 middleware['auth-admin'] = middleware['auth-admin'].default || middleware['auth-admin'];
-middleware['auth-login'] = __webpack_require__(117);
+middleware['auth-login'] = __webpack_require__(112);
 middleware['auth-login'] = middleware['auth-login'].default || middleware['auth-login'];
-middleware['auth'] = __webpack_require__(118);
+middleware['auth'] = __webpack_require__(113);
 middleware['auth'] = middleware['auth'].default || middleware['auth'];
 /* harmony default export */ var _nuxt_middleware = (middleware);
 // CONCATENATED MODULE: ./.nuxt/utils.js
@@ -13790,7 +13859,7 @@ async function serverPrefetch() {
 
 });
 // EXTERNAL MODULE: external "vuex"
-var external_vuex_ = __webpack_require__(41);
+var external_vuex_ = __webpack_require__(30);
 var external_vuex_default = /*#__PURE__*/__webpack_require__.n(external_vuex_);
 
 // EXTERNAL MODULE: external "vue-meta"
@@ -13886,47 +13955,47 @@ function shouldScrollToTop(route) {
 
 
 
-const _598edd30 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 29).then(__webpack_require__.bind(null, 390)));
+const _598edd30 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 29).then(__webpack_require__.bind(null, 385)));
 
-const _20084e4f = () => interopDefault(__webpack_require__.e(/* import() | pages/blog */ 31).then(__webpack_require__.bind(null, 391)));
+const _20084e4f = () => interopDefault(__webpack_require__.e(/* import() | pages/blog */ 31).then(__webpack_require__.bind(null, 386)));
 
-const _006ed0d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/careers */ 33).then(__webpack_require__.bind(null, 392)));
+const _006ed0d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/careers */ 33).then(__webpack_require__.bind(null, 387)));
 
-const _33c92583 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 35).then(__webpack_require__.bind(null, 393)));
+const _33c92583 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 35).then(__webpack_require__.bind(null, 388)));
 
-const _9bcc6b52 = () => interopDefault(__webpack_require__.e(/* import() | pages/data */ 36).then(__webpack_require__.bind(null, 388)));
+const _9bcc6b52 = () => interopDefault(__webpack_require__.e(/* import() | pages/data */ 36).then(__webpack_require__.bind(null, 383)));
 
-const _4f0894a6 = () => interopDefault(__webpack_require__.e(/* import() | pages/enquiry */ 38).then(__webpack_require__.bind(null, 394)));
+const _4f0894a6 = () => interopDefault(__webpack_require__.e(/* import() | pages/enquiry */ 38).then(__webpack_require__.bind(null, 389)));
 
-const _4844734f = () => interopDefault(__webpack_require__.e(/* import() | pages/fibreinstallation */ 39).then(__webpack_require__.bind(null, 395)));
+const _4844734f = () => interopDefault(__webpack_require__.e(/* import() | pages/fibreinstallation */ 39).then(__webpack_require__.bind(null, 390)));
 
-const _9d84e096 = () => interopDefault(__webpack_require__.e(/* import() | pages/gallery */ 40).then(__webpack_require__.bind(null, 396)));
+const _9d84e096 = () => interopDefault(__webpack_require__.e(/* import() | pages/gallery */ 40).then(__webpack_require__.bind(null, 391)));
 
-const _e9ef21c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/kleintools */ 42).then(__webpack_require__.bind(null, 397)));
+const _e9ef21c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/kleintools */ 42).then(__webpack_require__.bind(null, 392)));
 
-const _42ee5b0c = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 43).then(__webpack_require__.bind(null, 398)));
+const _42ee5b0c = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 43).then(__webpack_require__.bind(null, 393)));
 
-const _0ec0fd55 = () => interopDefault(__webpack_require__.e(/* import() | pages/overheadline */ 44).then(__webpack_require__.bind(null, 399)));
+const _0ec0fd55 = () => interopDefault(__webpack_require__.e(/* import() | pages/overheadline */ 44).then(__webpack_require__.bind(null, 394)));
 
-const _3954ac91 = () => interopDefault(__webpack_require__.e(/* import() | pages/products */ 46).then(__webpack_require__.bind(null, 400)));
+const _3954ac91 = () => interopDefault(__webpack_require__.e(/* import() | pages/products */ 46).then(__webpack_require__.bind(null, 395)));
 
-const _d43f9e2e = () => interopDefault(__webpack_require__.e(/* import() | pages/repairs */ 47).then(__webpack_require__.bind(null, 401)));
+const _d43f9e2e = () => interopDefault(__webpack_require__.e(/* import() | pages/repairs */ 47).then(__webpack_require__.bind(null, 396)));
 
-const _6cd63f91 = () => interopDefault(__webpack_require__.e(/* import() | pages/wheretobuy */ 48).then(__webpack_require__.bind(null, 402)));
+const _6cd63f91 = () => interopDefault(__webpack_require__.e(/* import() | pages/wheretobuy */ 48).then(__webpack_require__.bind(null, 397)));
 
-const _a69a3b56 = () => interopDefault(__webpack_require__.e(/* import() | pages/winchesandtrailers */ 49).then(__webpack_require__.bind(null, 403)));
+const _a69a3b56 = () => interopDefault(__webpack_require__.e(/* import() | pages/winchesandtrailers */ 49).then(__webpack_require__.bind(null, 398)));
 
-const _0f536c84 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 30).then(__webpack_require__.bind(null, 404)));
+const _0f536c84 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 30).then(__webpack_require__.bind(null, 399)));
 
-const _14f70124 = () => interopDefault(__webpack_require__.e(/* import() | pages/blogEdit/_id */ 32).then(__webpack_require__.bind(null, 405)));
+const _14f70124 = () => interopDefault(__webpack_require__.e(/* import() | pages/blogEdit/_id */ 32).then(__webpack_require__.bind(null, 400)));
 
-const _1b7fc933 = () => interopDefault(__webpack_require__.e(/* import() | pages/category/_subCategory */ 34).then(__webpack_require__.bind(null, 406)));
+const _1b7fc933 = () => interopDefault(__webpack_require__.e(/* import() | pages/category/_subCategory */ 34).then(__webpack_require__.bind(null, 401)));
 
-const _08099a3c = () => interopDefault(__webpack_require__.e(/* import() | pages/edit/_id */ 37).then(__webpack_require__.bind(null, 407)));
+const _08099a3c = () => interopDefault(__webpack_require__.e(/* import() | pages/edit/_id */ 37).then(__webpack_require__.bind(null, 402)));
 
-const _15a9637d = () => interopDefault(__webpack_require__.e(/* import() | pages/product/_id */ 45).then(__webpack_require__.bind(null, 408)));
+const _15a9637d = () => interopDefault(__webpack_require__.e(/* import() | pages/product/_id */ 45).then(__webpack_require__.bind(null, 403)));
 
-const _7946b7f5 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 41).then(__webpack_require__.bind(null, 409)));
+const _7946b7f5 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 41).then(__webpack_require__.bind(null, 404)));
 
 const emptyFn = () => {};
 
@@ -14229,7 +14298,7 @@ var installComponents = __webpack_require__(10);
 var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VApp/VApp.sass
-var VApp = __webpack_require__(121);
+var VApp = __webpack_require__(116);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
 var themeable = __webpack_require__(6);
@@ -14297,16 +14366,16 @@ var mixins = __webpack_require__(2);
 
 }));
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VCol.js
-var VCol = __webpack_require__(212);
+var VCol = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VContainer.js + 1 modules
-var VContainer = __webpack_require__(218);
+var VContainer = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VImg/VImg.js
 var VImg = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VGrid/VRow.js
-var VRow = __webpack_require__(213);
+var VRow = __webpack_require__(208);
 
 // CONCATENATED MODULE: ./layouts/error.vue
 
@@ -14314,7 +14383,7 @@ var VRow = __webpack_require__(213);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(119)
+  var style0 = __webpack_require__(114)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -14628,7 +14697,7 @@ var nuxt_loading_render, nuxt_loading_staticRenderFns
 
 function nuxt_loading_injectStyles (context) {
   
-  var style0 = __webpack_require__(131)
+  var style0 = __webpack_require__(126)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -14658,7 +14727,7 @@ var defaultvue_type_template_id_70adac17_staticRenderFns = []
 var siteHeader = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./components/footerTop.vue + 4 modules
-var footerTop = __webpack_require__(107);
+var footerTop = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./components/siteFooter.vue + 5 modules
 var siteFooter = __webpack_require__(65);
@@ -14709,7 +14778,7 @@ var siteFooter = __webpack_require__(65);
 // CONCATENATED MODULE: ./layouts/default.vue?vue&type=script&lang=js&
  /* harmony default export */ var layouts_defaultvue_type_script_lang_js_ = (defaultvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VMain/VMain.sass
-var VMain = __webpack_require__(194);
+var VMain = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
 var ssr_bootable = __webpack_require__(21);
@@ -14768,7 +14837,7 @@ var ssr_bootable = __webpack_require__(21);
 
 function default_injectStyles (context) {
   
-  var style0 = __webpack_require__(192)
+  var style0 = __webpack_require__(187)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -15018,11 +15087,11 @@ const VUEX_PROPERTIES = ['state', 'getters', 'actions', 'mutations'];
 let store_store = {};
 
 (function updateModules() {
-  store_store = normalizeRoot(__webpack_require__(196), 'store/index.js'); // If store is an exported method = classic mode (deprecated)
+  store_store = normalizeRoot(__webpack_require__(191), 'store/index.js'); // If store is an exported method = classic mode (deprecated)
   // Enforce store modules
 
   store_store.modules = store_store.modules || {};
-  resolveStoreModules(__webpack_require__(197), 'snackbar.js'); // If the environment supports hot reloading...
+  resolveStoreModules(__webpack_require__(192), 'snackbar.js'); // If the environment supports hot reloading...
 })(); // createStore
 
 
@@ -15137,39 +15206,39 @@ function mergeProperty(storeModule, moduleData, property) {
   }
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
-const SectionsBlockQuote = () => __webpack_require__.e(/* import() | components/sections-block-quote */ 1).then(__webpack_require__.bind(null, 246)).then(c => wrapFunctional(c.default || c));
-const SectionsBlogEdit = () => __webpack_require__.e(/* import() | components/sections-blog-edit */ 2).then(__webpack_require__.bind(null, 334)).then(c => wrapFunctional(c.default || c));
-const SectionsBlogPage = () => __webpack_require__.e(/* import() | components/sections-blog-page */ 3).then(__webpack_require__.bind(null, 333)).then(c => wrapFunctional(c.default || c));
-const SectionsBrands = () => __webpack_require__.e(/* import() | components/sections-brands */ 5).then(__webpack_require__.bind(null, 330)).then(c => wrapFunctional(c.default || c));
-const SectionsCalloutBlock = () => __webpack_require__.e(/* import() | components/sections-callout-block */ 6).then(__webpack_require__.bind(null, 417)).then(c => wrapFunctional(c.default || c));
-const SectionsEdit = () => __webpack_require__.e(/* import() | components/sections-edit */ 8).then(__webpack_require__.bind(null, 328)).then(c => wrapFunctional(c.default || c));
-const SectionsEditFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-edit-featured-products */ 9).then(__webpack_require__.bind(null, 410)).then(c => wrapFunctional(c.default || c));
-const SectionsFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-featured-products */ 10).then(__webpack_require__.bind(null, 233)).then(c => wrapFunctional(c.default || c));
-const SectionsFeatures = () => __webpack_require__.e(/* import() | components/sections-features */ 11).then(__webpack_require__.bind(null, 411)).then(c => wrapFunctional(c.default || c));
-const SectionsHero = () => __webpack_require__.e(/* import() | components/sections-hero */ 12).then(__webpack_require__.bind(null, 336)).then(c => wrapFunctional(c.default || c));
-const SectionsHeroAlt = () => __webpack_require__.e(/* import() | components/sections-hero-alt */ 13).then(__webpack_require__.bind(null, 229)).then(c => wrapFunctional(c.default || c));
-const SectionsIntro = () => __webpack_require__.e(/* import() | components/sections-intro */ 14).then(__webpack_require__.bind(null, 277)).then(c => wrapFunctional(c.default || c));
-const SectionsNotification = () => __webpack_require__.e(/* import() | components/sections-notification */ 15).then(__webpack_require__.bind(null, 412)).then(c => wrapFunctional(c.default || c));
-const SectionsPricing = () => __webpack_require__.e(/* import() | components/sections-pricing */ 16).then(__webpack_require__.bind(null, 389)).then(c => wrapFunctional(c.default || c));
-const SectionsProduct = () => __webpack_require__.e(/* import() | components/sections-product */ 17).then(__webpack_require__.bind(null, 335)).then(c => wrapFunctional(c.default || c));
-const SectionsRecommendedProducts = () => __webpack_require__.e(/* import() | components/sections-recommended-products */ 19).then(__webpack_require__.bind(null, 289)).then(c => wrapFunctional(c.default || c));
-const SectionsSalesTeam = () => __webpack_require__.e(/* import() | components/sections-sales-team */ 20).then(__webpack_require__.bind(null, 413)).then(c => wrapFunctional(c.default || c));
-const SectionsSearch = () => __webpack_require__.e(/* import() | components/sections-search */ 21).then(__webpack_require__.bind(null, 263)).then(c => wrapFunctional(c.default || c));
-const SectionsTeam = () => __webpack_require__.e(/* import() | components/sections-team */ 23).then(__webpack_require__.bind(null, 267)).then(c => wrapFunctional(c.default || c));
-const SectionsTestimonials = () => __webpack_require__.e(/* import() | components/sections-testimonials */ 24).then(__webpack_require__.bind(null, 414)).then(c => wrapFunctional(c.default || c));
-const SectionsTimeline = () => __webpack_require__.e(/* import() | components/sections-timeline */ 25).then(__webpack_require__.bind(null, 329)).then(c => wrapFunctional(c.default || c));
-const SectionsUserAuthForm = () => __webpack_require__.e(/* import() | components/sections-user-auth-form */ 26).then(__webpack_require__.bind(null, 332)).then(c => wrapFunctional(c.default || c));
-const SectionsBlogs = () => __webpack_require__.e(/* import() | components/sections-blogs */ 4).then(__webpack_require__.bind(null, 331)).then(c => wrapFunctional(c.default || c));
-const SectionsContactForm = () => __webpack_require__.e(/* import() | components/sections-contact-form */ 7).then(__webpack_require__.bind(null, 290)).then(c => wrapFunctional(c.default || c));
-const SectionsFooterContactForm = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 108)).then(c => wrapFunctional(c.default || c));
-const SectionsProductsform = () => __webpack_require__.e(/* import() | components/sections-productsform */ 18).then(__webpack_require__.bind(null, 288)).then(c => wrapFunctional(c.default || c));
-const SectionsSubCategoryList = () => __webpack_require__.e(/* import() | components/sections-sub-category-list */ 22).then(__webpack_require__.bind(null, 415)).then(c => wrapFunctional(c.default || c));
+const SectionsBlockQuote = () => __webpack_require__.e(/* import() | components/sections-block-quote */ 1).then(__webpack_require__.bind(null, 241)).then(c => wrapFunctional(c.default || c));
+const SectionsBlogEdit = () => __webpack_require__.e(/* import() | components/sections-blog-edit */ 2).then(__webpack_require__.bind(null, 329)).then(c => wrapFunctional(c.default || c));
+const SectionsBlogPage = () => __webpack_require__.e(/* import() | components/sections-blog-page */ 3).then(__webpack_require__.bind(null, 328)).then(c => wrapFunctional(c.default || c));
+const SectionsBrands = () => __webpack_require__.e(/* import() | components/sections-brands */ 5).then(__webpack_require__.bind(null, 325)).then(c => wrapFunctional(c.default || c));
+const SectionsCalloutBlock = () => __webpack_require__.e(/* import() | components/sections-callout-block */ 6).then(__webpack_require__.bind(null, 412)).then(c => wrapFunctional(c.default || c));
+const SectionsEdit = () => __webpack_require__.e(/* import() | components/sections-edit */ 8).then(__webpack_require__.bind(null, 323)).then(c => wrapFunctional(c.default || c));
+const SectionsEditFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-edit-featured-products */ 9).then(__webpack_require__.bind(null, 405)).then(c => wrapFunctional(c.default || c));
+const SectionsFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-featured-products */ 10).then(__webpack_require__.bind(null, 228)).then(c => wrapFunctional(c.default || c));
+const SectionsFeatures = () => __webpack_require__.e(/* import() | components/sections-features */ 11).then(__webpack_require__.bind(null, 406)).then(c => wrapFunctional(c.default || c));
+const SectionsHero = () => __webpack_require__.e(/* import() | components/sections-hero */ 12).then(__webpack_require__.bind(null, 331)).then(c => wrapFunctional(c.default || c));
+const SectionsHeroAlt = () => __webpack_require__.e(/* import() | components/sections-hero-alt */ 13).then(__webpack_require__.bind(null, 224)).then(c => wrapFunctional(c.default || c));
+const SectionsIntro = () => __webpack_require__.e(/* import() | components/sections-intro */ 14).then(__webpack_require__.bind(null, 272)).then(c => wrapFunctional(c.default || c));
+const SectionsNotification = () => __webpack_require__.e(/* import() | components/sections-notification */ 15).then(__webpack_require__.bind(null, 407)).then(c => wrapFunctional(c.default || c));
+const SectionsPricing = () => __webpack_require__.e(/* import() | components/sections-pricing */ 16).then(__webpack_require__.bind(null, 384)).then(c => wrapFunctional(c.default || c));
+const SectionsProduct = () => __webpack_require__.e(/* import() | components/sections-product */ 17).then(__webpack_require__.bind(null, 330)).then(c => wrapFunctional(c.default || c));
+const SectionsRecommendedProducts = () => __webpack_require__.e(/* import() | components/sections-recommended-products */ 19).then(__webpack_require__.bind(null, 284)).then(c => wrapFunctional(c.default || c));
+const SectionsSalesTeam = () => __webpack_require__.e(/* import() | components/sections-sales-team */ 20).then(__webpack_require__.bind(null, 408)).then(c => wrapFunctional(c.default || c));
+const SectionsSearch = () => __webpack_require__.e(/* import() | components/sections-search */ 21).then(__webpack_require__.bind(null, 258)).then(c => wrapFunctional(c.default || c));
+const SectionsTeam = () => __webpack_require__.e(/* import() | components/sections-team */ 23).then(__webpack_require__.bind(null, 262)).then(c => wrapFunctional(c.default || c));
+const SectionsTestimonials = () => __webpack_require__.e(/* import() | components/sections-testimonials */ 24).then(__webpack_require__.bind(null, 409)).then(c => wrapFunctional(c.default || c));
+const SectionsTimeline = () => __webpack_require__.e(/* import() | components/sections-timeline */ 25).then(__webpack_require__.bind(null, 324)).then(c => wrapFunctional(c.default || c));
+const SectionsUserAuthForm = () => __webpack_require__.e(/* import() | components/sections-user-auth-form */ 26).then(__webpack_require__.bind(null, 327)).then(c => wrapFunctional(c.default || c));
+const SectionsBlogs = () => __webpack_require__.e(/* import() | components/sections-blogs */ 4).then(__webpack_require__.bind(null, 326)).then(c => wrapFunctional(c.default || c));
+const SectionsContactForm = () => __webpack_require__.e(/* import() | components/sections-contact-form */ 7).then(__webpack_require__.bind(null, 285)).then(c => wrapFunctional(c.default || c));
+const SectionsFooterContactForm = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 103)).then(c => wrapFunctional(c.default || c));
+const SectionsProductsform = () => __webpack_require__.e(/* import() | components/sections-productsform */ 18).then(__webpack_require__.bind(null, 283)).then(c => wrapFunctional(c.default || c));
+const SectionsSubCategoryList = () => __webpack_require__.e(/* import() | components/sections-sub-category-list */ 22).then(__webpack_require__.bind(null, 410)).then(c => wrapFunctional(c.default || c));
 const Logo = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
-const FooterTop = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 107)).then(c => wrapFunctional(c.default || c));
+const FooterTop = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 102)).then(c => wrapFunctional(c.default || c));
 const SiteFooter = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 65)).then(c => wrapFunctional(c.default || c));
 const SiteHeader = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 64)).then(c => wrapFunctional(c.default || c));
-const UserNav = () => __webpack_require__.e(/* import() | components/user-nav */ 27).then(__webpack_require__.bind(null, 416)).then(c => wrapFunctional(c.default || c));
-const UtilsValidations = () => __webpack_require__.e(/* import() | components/utils-validations */ 28).then(__webpack_require__.bind(null, 287)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
+const UserNav = () => __webpack_require__.e(/* import() | components/user-nav */ 27).then(__webpack_require__.bind(null, 411)).then(c => wrapFunctional(c.default || c));
+const UtilsValidations = () => __webpack_require__.e(/* import() | components/utils-validations */ 28).then(__webpack_require__.bind(null, 282)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
 
 function wrapFunctional(options) {
   if (!options || !options.functional) {
@@ -15251,11 +15320,11 @@ external_vue_default.a.use(framework["a" /* default */], {});
   ctx.$vuetify = vuetify.framework;
 });
 // EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(40);
+var external_axios_ = __webpack_require__(41);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 
 // EXTERNAL MODULE: external "defu"
-var external_defu_ = __webpack_require__(106);
+var external_defu_ = __webpack_require__(101);
 var external_defu_default = /*#__PURE__*/__webpack_require__.n(external_defu_);
 
 // CONCATENATED MODULE: ./.nuxt/axios.js
@@ -17279,12 +17348,12 @@ const createNext = ssrContext => opts => {
 });
 
 /***/ }),
-/* 199 */,
-/* 200 */
+/* 194 */,
+/* 195 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VDivider_VDivider_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(186);
+/* harmony import */ var _src_components_VDivider_VDivider_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(181);
 /* harmony import */ var _src_components_VDivider_VDivider_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VDivider_VDivider_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 // Styles
@@ -17325,16 +17394,16 @@ const createNext = ssrContext => opts => {
 }));
 
 /***/ }),
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/modules/esnext.array.last-item.js");
 
 /***/ }),
-/* 205 */
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17511,13 +17580,13 @@ class goto_Goto extends service["a" /* Service */] {
 goto_Goto.property = 'goTo';
 
 /***/ }),
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
 /* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17713,7 +17782,7 @@ const cache = new Map();
 }));
 
 /***/ }),
-/* 213 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17906,7 +17975,7 @@ const cache = new Map();
 }));
 
 /***/ }),
-/* 214 */
+/* 209 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17918,11 +17987,11 @@ const cache = new Map();
 /* harmony default export */ __webpack_exports__["a"] = (Object(_util_helpers__WEBPACK_IMPORTED_MODULE_1__[/* createSimpleFunctional */ "h"])('spacer', 'div', 'v-spacer'));
 
 /***/ }),
-/* 215 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _mixins_groupable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
+/* harmony import */ var _mixins_groupable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(31);
 /* harmony import */ var _mixins_routable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(19);
 /* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(0);
@@ -18010,7 +18079,7 @@ Object(_mixins_groupable__WEBPACK_IMPORTED_MODULE_0__[/* factory */ "a"])('tabsB
 }));
 
 /***/ }),
-/* 216 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18152,13 +18221,13 @@ Object(_mixins_groupable__WEBPACK_IMPORTED_MODULE_0__[/* factory */ "a"])('tabsB
 }));
 
 /***/ }),
-/* 217 */
+/* 212 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_components_VTextarea_VTextarea_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(182);
+/* harmony import */ var _src_components_VTextarea_VTextarea_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(177);
 /* harmony import */ var _src_components_VTextarea_VTextarea_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VTextarea_VTextarea_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _VTextField_VTextField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(39);
+/* harmony import */ var _VTextField_VTextField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(40);
 /* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 // Styles
  // Extensions
@@ -18265,7 +18334,7 @@ const baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_2__[/* default *
 }));
 
 /***/ }),
-/* 218 */
+/* 213 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18406,13 +18475,13 @@ var mergeData = __webpack_require__(13);
 }));
 
 /***/ }),
-/* 219 */
+/* 214 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VTabs/VTabs.sass
-var VTabs = __webpack_require__(165);
+var VTabs = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSlideGroup/VSlideGroup.js
 var VSlideGroup = __webpack_require__(46);
@@ -18516,7 +18585,7 @@ var VTabsSlider = __webpack_require__(100);
 var colorable = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
-var proxyable = __webpack_require__(36);
+var proxyable = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/resize/index.js
 var resize = __webpack_require__(26);
