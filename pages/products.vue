@@ -7,6 +7,7 @@
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
         />
         <v-container>
+          <SectionsMainSearch :data="filteredList" category="general" />
           <SectionsIntro
             class="pt-10 pb-10"
             style="margin-bottom: 30px"
@@ -14,7 +15,6 @@
             text="text-uppercase black--text"
           />
         </v-container>
-        <SectionsSearch :data="filteredList" category="general" />
         <div class="yellow darken-2">
           <SectionsBlockQuote>
             <slot>

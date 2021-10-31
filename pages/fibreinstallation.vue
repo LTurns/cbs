@@ -13,7 +13,7 @@
           </SectionsBlockQuote>
         </v-col>
         <!-- <v-col class="yellow darken-2"> -->
-        <SectionsSearch :data="filteredList" category="fibreinstallation" />
+        <SectionsSearch :data="filteredList" />
         <!-- </v-col> -->
       </v-col>
     </v-row>
@@ -51,7 +51,10 @@ export default {
         )
 
         data.forEach((product) => {
-          if (product.category.includes('Fibre Blowing')) {
+          if (
+            product.category.includes('Fibre Installation') &&
+            !product.subCategory.length
+          ) {
             this.filteredList.push(product)
           }
         })
@@ -64,3 +67,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.fibreblowing-enter-active,
+.fibreblowing-leave-active {
+  transition: opacity 0.5s;
+}
+.fibreblowing-enter,
+.fibreblowing-leave-active {
+  opacity: 0;
+}
+</style>

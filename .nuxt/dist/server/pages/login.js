@@ -1,7 +1,7 @@
-exports.ids = [43,26,28];
+exports.ids = [44,27,29];
 exports.modules = {
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38,7 +38,7 @@ const emailFormat = () => {
 
 /***/ }),
 
-/***/ 327:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,7 +53,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/sections/UserAuthForm.vue?vue&type=template&id=1c2b582a&scoped=true&
 
 // EXTERNAL MODULE: ./components/utils/validations.js
-var validations = __webpack_require__(282);
+var validations = __webpack_require__(283);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/sections/UserAuthForm.vue?vue&type=script&lang=js&
 //
@@ -157,7 +157,7 @@ installComponents_default()(component, {VBtn: VBtn["a" /* default */],VForm: VFo
 
 /***/ }),
 
-/***/ 393:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -255,7 +255,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var login = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents_default()(component, {SectionsUserAuthForm: __webpack_require__(327).default})
+installComponents_default()(component, {SectionsUserAuthForm: __webpack_require__(331).default})
 
 
 /* vuetify-loader */

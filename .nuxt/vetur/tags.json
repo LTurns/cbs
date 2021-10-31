@@ -35,6 +35,9 @@
   "SectionsIntro": {
     "description": "Auto imported from components/sections/Intro.vue"
   },
+  "SectionsMainSearch": {
+    "description": "Auto imported from components/sections/MainSearch.vue"
+  },
   "SectionsNotification": {
     "description": "Auto imported from components/sections/Notification.vue"
   },

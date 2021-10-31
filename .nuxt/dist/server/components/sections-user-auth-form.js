@@ -1,7 +1,7 @@
-exports.ids = [26,28];
+exports.ids = [27,29];
 exports.modules = {
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38,7 +38,7 @@ const emailFormat = () => {
 
 /***/ }),
 
-/***/ 327:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,7 +53,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/sections/UserAuthForm.vue?vue&type=template&id=1c2b582a&scoped=true&
 
 // EXTERNAL MODULE: ./components/utils/validations.js
-var validations = __webpack_require__(282);
+var validations = __webpack_require__(283);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/sections/UserAuthForm.vue?vue&type=script&lang=js&
 //

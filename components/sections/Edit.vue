@@ -59,6 +59,9 @@
               <div class="d-inline white--text pa-2">
                 <v-select
                   v-model="category"
+                  attach
+                  multiple
+                  chips
                   :items="categories"
                   label="Category"
                 ></v-select>
@@ -675,7 +678,7 @@
                           width: 15%;
                           margin-top: 10%;
                         "
-                        @click="deleteAccessory(index)"
+                        @click="deleteAccessory(ix)"
                       >
                         X
                       </v-btn>
@@ -1258,6 +1261,7 @@ export default {
   },
   data: () => ({
     allProducts: '',
+    category: [],
     checkbox: '',
     checkbox2: '',
     item: [],
@@ -1300,6 +1304,7 @@ export default {
     subCategoryNames: [],
     subcategoryItems: [],
     subcategoryItem: '',
+    isDraft: '',
   }),
   created() {
     this.getProduct()
@@ -1388,6 +1393,7 @@ export default {
         this.mainImg = this.item[0].mainImg
         this.countInStock = this.item[0].countInStock
         this.checkbox = this.item[0].hasSubCategories
+        this.isDraft = this.item[0].isDraft
 
         this.getAllProducts()
         return this.item
@@ -1395,6 +1401,11 @@ export default {
         throw new Error(error)
       }
     },
+    // addCategory() {
+    //   this.categoryItems.forEach((item) => {
+    //     this.category.push(item)
+    //   })
+    // },
     addItem() {
       const config = {
         headers: {
@@ -1927,6 +1938,7 @@ export default {
         recommendedProducts: this.recommendedProducts,
         enquiries: 0,
         hasSubCategories: this.checkbox,
+        isDraft: this.isDraft,
       }
 
       const config = {

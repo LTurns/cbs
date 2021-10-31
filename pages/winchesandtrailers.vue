@@ -8,10 +8,7 @@
             <slot> Our Klein Tools are used for... </slot>
           </SectionsBlockQuote>
         </v-col>
-        <v-col class="yellow darken-2">
-          <SectionsSearch :data="filteredList" />
-        </v-col>
-        <SectionsFeaturedProducts :data="filteredList" />
+        <SectionsSearch :data="filteredList" />
       </v-col>
     </v-row>
   </section>
@@ -51,7 +48,7 @@ export default {
         )
 
         data.forEach((product) => {
-          if (product.category === 'Telecoms') {
+          if (product.category.includes('Winches and Trailers')) {
             this.filteredList.push(product)
           }
         })

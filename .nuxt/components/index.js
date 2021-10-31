@@ -10,6 +10,7 @@ export const SectionsFeatures = () => import('../../components/sections/Features
 export const SectionsHero = () => import('../../components/sections/Hero.vue' /* webpackChunkName: "components/sections-hero" */).then(c => wrapFunctional(c.default || c))
 export const SectionsHeroAlt = () => import('../../components/sections/HeroAlt.vue' /* webpackChunkName: "components/sections-hero-alt" */).then(c => wrapFunctional(c.default || c))
 export const SectionsIntro = () => import('../../components/sections/Intro.vue' /* webpackChunkName: "components/sections-intro" */).then(c => wrapFunctional(c.default || c))
+export const SectionsMainSearch = () => import('../../components/sections/MainSearch.vue' /* webpackChunkName: "components/sections-main-search" */).then(c => wrapFunctional(c.default || c))
 export const SectionsNotification = () => import('../../components/sections/Notification.vue' /* webpackChunkName: "components/sections-notification" */).then(c => wrapFunctional(c.default || c))
 export const SectionsPricing = () => import('../../components/sections/Pricing.vue' /* webpackChunkName: "components/sections-pricing" */).then(c => wrapFunctional(c.default || c))
 export const SectionsProduct = () => import('../../components/sections/Product.vue' /* webpackChunkName: "components/sections-product" */).then(c => wrapFunctional(c.default || c))

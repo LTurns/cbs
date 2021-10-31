@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"components/sections-block-quote","2":"components/sections-blog-edit","3":"components/sections-blog-page","4":"components/sections-blogs","5":"components/sections-brands","6":"components/sections-callout-block","7":"components/sections-contact-form","8":"components/sections-edit","9":"components/sections-edit-featured-products","10":"components/sections-featured-products","11":"components/sections-features","12":"components/sections-hero","13":"components/sections-hero-alt","14":"components/sections-intro","15":"components/sections-notification","16":"components/sections-pricing","17":"components/sections-product","18":"components/sections-productsform","19":"components/sections-recommended-products","20":"components/sections-sales-team","21":"components/sections-search","22":"components/sections-sub-category-list","23":"components/sections-team","24":"components/sections-testimonials","25":"components/sections-timeline","26":"components/sections-user-auth-form","27":"components/user-nav","28":"components/utils-validations","29":"pages/about","30":"pages/article/_id","31":"pages/blog","32":"pages/blogEdit/_id","33":"pages/careers","34":"pages/category/_subCategory","35":"pages/contact","36":"pages/data","37":"pages/edit/_id","38":"pages/enquiry","39":"pages/fibreinstallation","40":"pages/gallery","41":"pages/index","42":"pages/kleintools","43":"pages/login","44":"pages/overheadline","45":"pages/product/_id","46":"pages/products","47":"pages/repairs","48":"pages/wheretobuy","49":"pages/winchesandtrailers"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"components/sections-block-quote","2":"components/sections-blog-edit","3":"components/sections-blog-page","4":"components/sections-blogs","5":"components/sections-brands","6":"components/sections-callout-block","7":"components/sections-contact-form","8":"components/sections-edit","9":"components/sections-edit-featured-products","10":"components/sections-featured-products","11":"components/sections-features","12":"components/sections-hero","13":"components/sections-hero-alt","14":"components/sections-intro","15":"components/sections-main-search","16":"components/sections-notification","17":"components/sections-pricing","18":"components/sections-product","19":"components/sections-productsform","20":"components/sections-recommended-products","21":"components/sections-sales-team","22":"components/sections-search","23":"components/sections-sub-category-list","24":"components/sections-team","25":"components/sections-testimonials","26":"components/sections-timeline","27":"components/sections-user-auth-form","28":"components/user-nav","29":"components/utils-validations","30":"pages/about","31":"pages/article/_id","32":"pages/blog","33":"pages/blogEdit/_id","34":"pages/careers","35":"pages/category/_subCategory","36":"pages/contact","37":"pages/data","38":"pages/edit/_id","39":"pages/enquiry","40":"pages/fibreinstallation","41":"pages/gallery","42":"pages/index","43":"pages/kleintools","44":"pages/login","45":"pages/overheadline","46":"pages/product/_id","47":"pages/products","48":"pages/repairs","49":"pages/wheretobuy","50":"pages/winchesandtrailers"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -13135,6 +13135,7 @@ __webpack_require__.d(components_namespaceObject, "SectionsFeatures", function()
 __webpack_require__.d(components_namespaceObject, "SectionsHero", function() { return SectionsHero; });
 __webpack_require__.d(components_namespaceObject, "SectionsHeroAlt", function() { return SectionsHeroAlt; });
 __webpack_require__.d(components_namespaceObject, "SectionsIntro", function() { return SectionsIntro; });
+__webpack_require__.d(components_namespaceObject, "SectionsMainSearch", function() { return SectionsMainSearch; });
 __webpack_require__.d(components_namespaceObject, "SectionsNotification", function() { return SectionsNotification; });
 __webpack_require__.d(components_namespaceObject, "SectionsPricing", function() { return SectionsPricing; });
 __webpack_require__.d(components_namespaceObject, "SectionsProduct", function() { return SectionsProduct; });
@@ -13955,47 +13956,47 @@ function shouldScrollToTop(route) {
 
 
 
-const _598edd30 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 29).then(__webpack_require__.bind(null, 385)));
+const _598edd30 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 30).then(__webpack_require__.bind(null, 392)));
 
-const _20084e4f = () => interopDefault(__webpack_require__.e(/* import() | pages/blog */ 31).then(__webpack_require__.bind(null, 386)));
+const _20084e4f = () => interopDefault(__webpack_require__.e(/* import() | pages/blog */ 32).then(__webpack_require__.bind(null, 393)));
 
-const _006ed0d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/careers */ 33).then(__webpack_require__.bind(null, 387)));
+const _006ed0d0 = () => interopDefault(__webpack_require__.e(/* import() | pages/careers */ 34).then(__webpack_require__.bind(null, 394)));
 
-const _33c92583 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 35).then(__webpack_require__.bind(null, 388)));
+const _33c92583 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 36).then(__webpack_require__.bind(null, 395)));
 
-const _9bcc6b52 = () => interopDefault(__webpack_require__.e(/* import() | pages/data */ 36).then(__webpack_require__.bind(null, 383)));
+const _9bcc6b52 = () => interopDefault(__webpack_require__.e(/* import() | pages/data */ 37).then(__webpack_require__.bind(null, 390)));
 
-const _4f0894a6 = () => interopDefault(__webpack_require__.e(/* import() | pages/enquiry */ 38).then(__webpack_require__.bind(null, 389)));
+const _4f0894a6 = () => interopDefault(__webpack_require__.e(/* import() | pages/enquiry */ 39).then(__webpack_require__.bind(null, 396)));
 
-const _4844734f = () => interopDefault(__webpack_require__.e(/* import() | pages/fibreinstallation */ 39).then(__webpack_require__.bind(null, 390)));
+const _4844734f = () => interopDefault(__webpack_require__.e(/* import() | pages/fibreinstallation */ 40).then(__webpack_require__.bind(null, 397)));
 
-const _9d84e096 = () => interopDefault(__webpack_require__.e(/* import() | pages/gallery */ 40).then(__webpack_require__.bind(null, 391)));
+const _9d84e096 = () => interopDefault(__webpack_require__.e(/* import() | pages/gallery */ 41).then(__webpack_require__.bind(null, 398)));
 
-const _e9ef21c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/kleintools */ 42).then(__webpack_require__.bind(null, 392)));
+const _e9ef21c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/kleintools */ 43).then(__webpack_require__.bind(null, 399)));
 
-const _42ee5b0c = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 43).then(__webpack_require__.bind(null, 393)));
+const _42ee5b0c = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 44).then(__webpack_require__.bind(null, 400)));
 
-const _0ec0fd55 = () => interopDefault(__webpack_require__.e(/* import() | pages/overheadline */ 44).then(__webpack_require__.bind(null, 394)));
+const _0ec0fd55 = () => interopDefault(__webpack_require__.e(/* import() | pages/overheadline */ 45).then(__webpack_require__.bind(null, 401)));
 
-const _3954ac91 = () => interopDefault(__webpack_require__.e(/* import() | pages/products */ 46).then(__webpack_require__.bind(null, 395)));
+const _3954ac91 = () => interopDefault(__webpack_require__.e(/* import() | pages/products */ 47).then(__webpack_require__.bind(null, 402)));
 
-const _d43f9e2e = () => interopDefault(__webpack_require__.e(/* import() | pages/repairs */ 47).then(__webpack_require__.bind(null, 396)));
+const _d43f9e2e = () => interopDefault(__webpack_require__.e(/* import() | pages/repairs */ 48).then(__webpack_require__.bind(null, 403)));
 
-const _6cd63f91 = () => interopDefault(__webpack_require__.e(/* import() | pages/wheretobuy */ 48).then(__webpack_require__.bind(null, 397)));
+const _6cd63f91 = () => interopDefault(__webpack_require__.e(/* import() | pages/wheretobuy */ 49).then(__webpack_require__.bind(null, 404)));
 
-const _a69a3b56 = () => interopDefault(__webpack_require__.e(/* import() | pages/winchesandtrailers */ 49).then(__webpack_require__.bind(null, 398)));
+const _a69a3b56 = () => interopDefault(__webpack_require__.e(/* import() | pages/winchesandtrailers */ 50).then(__webpack_require__.bind(null, 405)));
 
-const _0f536c84 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 30).then(__webpack_require__.bind(null, 399)));
+const _0f536c84 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 31).then(__webpack_require__.bind(null, 406)));
 
-const _14f70124 = () => interopDefault(__webpack_require__.e(/* import() | pages/blogEdit/_id */ 32).then(__webpack_require__.bind(null, 400)));
+const _14f70124 = () => interopDefault(__webpack_require__.e(/* import() | pages/blogEdit/_id */ 33).then(__webpack_require__.bind(null, 407)));
 
-const _1b7fc933 = () => interopDefault(__webpack_require__.e(/* import() | pages/category/_subCategory */ 34).then(__webpack_require__.bind(null, 401)));
+const _1b7fc933 = () => interopDefault(__webpack_require__.e(/* import() | pages/category/_subCategory */ 35).then(__webpack_require__.bind(null, 408)));
 
-const _08099a3c = () => interopDefault(__webpack_require__.e(/* import() | pages/edit/_id */ 37).then(__webpack_require__.bind(null, 402)));
+const _08099a3c = () => interopDefault(__webpack_require__.e(/* import() | pages/edit/_id */ 38).then(__webpack_require__.bind(null, 409)));
 
-const _15a9637d = () => interopDefault(__webpack_require__.e(/* import() | pages/product/_id */ 45).then(__webpack_require__.bind(null, 403)));
+const _15a9637d = () => interopDefault(__webpack_require__.e(/* import() | pages/product/_id */ 46).then(__webpack_require__.bind(null, 410)));
 
-const _7946b7f5 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 41).then(__webpack_require__.bind(null, 404)));
+const _7946b7f5 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 42).then(__webpack_require__.bind(null, 411)));
 
 const emptyFn = () => {};
 
@@ -15207,38 +15208,39 @@ function mergeProperty(storeModule, moduleData, property) {
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 const SectionsBlockQuote = () => __webpack_require__.e(/* import() | components/sections-block-quote */ 1).then(__webpack_require__.bind(null, 241)).then(c => wrapFunctional(c.default || c));
-const SectionsBlogEdit = () => __webpack_require__.e(/* import() | components/sections-blog-edit */ 2).then(__webpack_require__.bind(null, 329)).then(c => wrapFunctional(c.default || c));
-const SectionsBlogPage = () => __webpack_require__.e(/* import() | components/sections-blog-page */ 3).then(__webpack_require__.bind(null, 328)).then(c => wrapFunctional(c.default || c));
-const SectionsBrands = () => __webpack_require__.e(/* import() | components/sections-brands */ 5).then(__webpack_require__.bind(null, 325)).then(c => wrapFunctional(c.default || c));
-const SectionsCalloutBlock = () => __webpack_require__.e(/* import() | components/sections-callout-block */ 6).then(__webpack_require__.bind(null, 412)).then(c => wrapFunctional(c.default || c));
-const SectionsEdit = () => __webpack_require__.e(/* import() | components/sections-edit */ 8).then(__webpack_require__.bind(null, 323)).then(c => wrapFunctional(c.default || c));
-const SectionsEditFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-edit-featured-products */ 9).then(__webpack_require__.bind(null, 405)).then(c => wrapFunctional(c.default || c));
-const SectionsFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-featured-products */ 10).then(__webpack_require__.bind(null, 228)).then(c => wrapFunctional(c.default || c));
-const SectionsFeatures = () => __webpack_require__.e(/* import() | components/sections-features */ 11).then(__webpack_require__.bind(null, 406)).then(c => wrapFunctional(c.default || c));
-const SectionsHero = () => __webpack_require__.e(/* import() | components/sections-hero */ 12).then(__webpack_require__.bind(null, 331)).then(c => wrapFunctional(c.default || c));
+const SectionsBlogEdit = () => __webpack_require__.e(/* import() | components/sections-blog-edit */ 2).then(__webpack_require__.bind(null, 334)).then(c => wrapFunctional(c.default || c));
+const SectionsBlogPage = () => __webpack_require__.e(/* import() | components/sections-blog-page */ 3).then(__webpack_require__.bind(null, 333)).then(c => wrapFunctional(c.default || c));
+const SectionsBrands = () => __webpack_require__.e(/* import() | components/sections-brands */ 5).then(__webpack_require__.bind(null, 329)).then(c => wrapFunctional(c.default || c));
+const SectionsCalloutBlock = () => __webpack_require__.e(/* import() | components/sections-callout-block */ 6).then(__webpack_require__.bind(null, 419)).then(c => wrapFunctional(c.default || c));
+const SectionsEdit = () => __webpack_require__.e(/* import() | components/sections-edit */ 8).then(__webpack_require__.bind(null, 327)).then(c => wrapFunctional(c.default || c));
+const SectionsEditFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-edit-featured-products */ 9).then(__webpack_require__.bind(null, 412)).then(c => wrapFunctional(c.default || c));
+const SectionsFeaturedProducts = () => __webpack_require__.e(/* import() | components/sections-featured-products */ 10).then(__webpack_require__.bind(null, 229)).then(c => wrapFunctional(c.default || c));
+const SectionsFeatures = () => __webpack_require__.e(/* import() | components/sections-features */ 11).then(__webpack_require__.bind(null, 413)).then(c => wrapFunctional(c.default || c));
+const SectionsHero = () => __webpack_require__.e(/* import() | components/sections-hero */ 12).then(__webpack_require__.bind(null, 336)).then(c => wrapFunctional(c.default || c));
 const SectionsHeroAlt = () => __webpack_require__.e(/* import() | components/sections-hero-alt */ 13).then(__webpack_require__.bind(null, 224)).then(c => wrapFunctional(c.default || c));
 const SectionsIntro = () => __webpack_require__.e(/* import() | components/sections-intro */ 14).then(__webpack_require__.bind(null, 272)).then(c => wrapFunctional(c.default || c));
-const SectionsNotification = () => __webpack_require__.e(/* import() | components/sections-notification */ 15).then(__webpack_require__.bind(null, 407)).then(c => wrapFunctional(c.default || c));
-const SectionsPricing = () => __webpack_require__.e(/* import() | components/sections-pricing */ 16).then(__webpack_require__.bind(null, 384)).then(c => wrapFunctional(c.default || c));
-const SectionsProduct = () => __webpack_require__.e(/* import() | components/sections-product */ 17).then(__webpack_require__.bind(null, 330)).then(c => wrapFunctional(c.default || c));
-const SectionsRecommendedProducts = () => __webpack_require__.e(/* import() | components/sections-recommended-products */ 19).then(__webpack_require__.bind(null, 284)).then(c => wrapFunctional(c.default || c));
-const SectionsSalesTeam = () => __webpack_require__.e(/* import() | components/sections-sales-team */ 20).then(__webpack_require__.bind(null, 408)).then(c => wrapFunctional(c.default || c));
-const SectionsSearch = () => __webpack_require__.e(/* import() | components/sections-search */ 21).then(__webpack_require__.bind(null, 258)).then(c => wrapFunctional(c.default || c));
-const SectionsTeam = () => __webpack_require__.e(/* import() | components/sections-team */ 23).then(__webpack_require__.bind(null, 262)).then(c => wrapFunctional(c.default || c));
-const SectionsTestimonials = () => __webpack_require__.e(/* import() | components/sections-testimonials */ 24).then(__webpack_require__.bind(null, 409)).then(c => wrapFunctional(c.default || c));
-const SectionsTimeline = () => __webpack_require__.e(/* import() | components/sections-timeline */ 25).then(__webpack_require__.bind(null, 324)).then(c => wrapFunctional(c.default || c));
-const SectionsUserAuthForm = () => __webpack_require__.e(/* import() | components/sections-user-auth-form */ 26).then(__webpack_require__.bind(null, 327)).then(c => wrapFunctional(c.default || c));
-const SectionsBlogs = () => __webpack_require__.e(/* import() | components/sections-blogs */ 4).then(__webpack_require__.bind(null, 326)).then(c => wrapFunctional(c.default || c));
-const SectionsContactForm = () => __webpack_require__.e(/* import() | components/sections-contact-form */ 7).then(__webpack_require__.bind(null, 285)).then(c => wrapFunctional(c.default || c));
+const SectionsMainSearch = () => __webpack_require__.e(/* import() | components/sections-main-search */ 15).then(__webpack_require__.bind(null, 332)).then(c => wrapFunctional(c.default || c));
+const SectionsNotification = () => __webpack_require__.e(/* import() | components/sections-notification */ 16).then(__webpack_require__.bind(null, 414)).then(c => wrapFunctional(c.default || c));
+const SectionsPricing = () => __webpack_require__.e(/* import() | components/sections-pricing */ 17).then(__webpack_require__.bind(null, 391)).then(c => wrapFunctional(c.default || c));
+const SectionsProduct = () => __webpack_require__.e(/* import() | components/sections-product */ 18).then(__webpack_require__.bind(null, 335)).then(c => wrapFunctional(c.default || c));
+const SectionsRecommendedProducts = () => __webpack_require__.e(/* import() | components/sections-recommended-products */ 20).then(__webpack_require__.bind(null, 285)).then(c => wrapFunctional(c.default || c));
+const SectionsSalesTeam = () => __webpack_require__.e(/* import() | components/sections-sales-team */ 21).then(__webpack_require__.bind(null, 415)).then(c => wrapFunctional(c.default || c));
+const SectionsSearch = () => __webpack_require__.e(/* import() | components/sections-search */ 22).then(__webpack_require__.bind(null, 262)).then(c => wrapFunctional(c.default || c));
+const SectionsTeam = () => __webpack_require__.e(/* import() | components/sections-team */ 24).then(__webpack_require__.bind(null, 261)).then(c => wrapFunctional(c.default || c));
+const SectionsTestimonials = () => __webpack_require__.e(/* import() | components/sections-testimonials */ 25).then(__webpack_require__.bind(null, 416)).then(c => wrapFunctional(c.default || c));
+const SectionsTimeline = () => __webpack_require__.e(/* import() | components/sections-timeline */ 26).then(__webpack_require__.bind(null, 328)).then(c => wrapFunctional(c.default || c));
+const SectionsUserAuthForm = () => __webpack_require__.e(/* import() | components/sections-user-auth-form */ 27).then(__webpack_require__.bind(null, 331)).then(c => wrapFunctional(c.default || c));
+const SectionsBlogs = () => __webpack_require__.e(/* import() | components/sections-blogs */ 4).then(__webpack_require__.bind(null, 330)).then(c => wrapFunctional(c.default || c));
+const SectionsContactForm = () => __webpack_require__.e(/* import() | components/sections-contact-form */ 7).then(__webpack_require__.bind(null, 286)).then(c => wrapFunctional(c.default || c));
 const SectionsFooterContactForm = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 103)).then(c => wrapFunctional(c.default || c));
-const SectionsProductsform = () => __webpack_require__.e(/* import() | components/sections-productsform */ 18).then(__webpack_require__.bind(null, 283)).then(c => wrapFunctional(c.default || c));
-const SectionsSubCategoryList = () => __webpack_require__.e(/* import() | components/sections-sub-category-list */ 22).then(__webpack_require__.bind(null, 410)).then(c => wrapFunctional(c.default || c));
+const SectionsProductsform = () => __webpack_require__.e(/* import() | components/sections-productsform */ 19).then(__webpack_require__.bind(null, 284)).then(c => wrapFunctional(c.default || c));
+const SectionsSubCategoryList = () => __webpack_require__.e(/* import() | components/sections-sub-category-list */ 23).then(__webpack_require__.bind(null, 417)).then(c => wrapFunctional(c.default || c));
 const Logo = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
 const FooterTop = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 102)).then(c => wrapFunctional(c.default || c));
 const SiteFooter = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 65)).then(c => wrapFunctional(c.default || c));
 const SiteHeader = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 64)).then(c => wrapFunctional(c.default || c));
-const UserNav = () => __webpack_require__.e(/* import() | components/user-nav */ 27).then(__webpack_require__.bind(null, 411)).then(c => wrapFunctional(c.default || c));
-const UtilsValidations = () => __webpack_require__.e(/* import() | components/utils-validations */ 28).then(__webpack_require__.bind(null, 282)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
+const UserNav = () => __webpack_require__.e(/* import() | components/user-nav */ 28).then(__webpack_require__.bind(null, 418)).then(c => wrapFunctional(c.default || c));
+const UtilsValidations = () => __webpack_require__.e(/* import() | components/utils-validations */ 29).then(__webpack_require__.bind(null, 283)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
 
 function wrapFunctional(options) {
   if (!options || !options.functional) {

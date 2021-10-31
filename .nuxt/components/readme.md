@@ -18,6 +18,7 @@ You can directly use them in pages and other components without the need to impo
 - `<SectionsHero>` | `<sections-hero>` (components/sections/Hero.vue)
 - `<SectionsHeroAlt>` | `<sections-hero-alt>` (components/sections/HeroAlt.vue)
 - `<SectionsIntro>` | `<sections-intro>` (components/sections/Intro.vue)
+- `<SectionsMainSearch>` | `<sections-main-search>` (components/sections/MainSearch.vue)
 - `<SectionsNotification>` | `<sections-notification>` (components/sections/Notification.vue)
 - `<SectionsPricing>` | `<sections-pricing>` (components/sections/Pricing.vue)
 - `<SectionsProduct>` | `<sections-product>` (components/sections/Product.vue)
