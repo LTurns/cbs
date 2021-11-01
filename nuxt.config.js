@@ -1,34 +1,31 @@
 import colors from 'vuetify/es5/util/colors'
-// import axios from 'axios'
+import axios from 'axios'
 
-// const dynamicRoutes = () => {
-//   return new Promise(() => {
-//     const product = axios
-//       .get('https://cbsbackend.herokuapp.com/api/products')
-//       .then((res) => {
-//         return res.data.map((product) => {
-//           return '/product/' + product._id
-//         })
-//       })
-//     // const product = resolve(categories.map((el) => `product/${el.uid}`))
-//     const subCategory = axios
-//       .get('https://cbsbackend.herokuapp.com/api/products')
-//       .then((res) => {
-//         return res.data.map((product) => {
-//           return '/product/' + product.subCategory
-//         })
-//       })
-//     const article = axios
-//       .get('https://cbsbackend.herokuapp.com/api/blogs/')
-//       .then((res) => {
-//         return res.data.map((blog) => {
-//           return '/product/' + blog._id
-//         })
-//       })
-
-//     return product && article && subCategory
-//   })
-// }
+const dynamicRoutes = () => {
+  const product = axios
+    .get('https://cbsbackend.herokuapp.com/api/products')
+    .then((res) => {
+      return res.data.map((product) => {
+        return '/product/' + product._id
+      })
+    })
+  // const product = resolve(categories.map((el) => `product/${el.uid}`))
+  const subCategory = axios
+    .get('https://cbsbackend.herokuapp.com/api/products')
+    .then((res) => {
+      return res.data.map((product) => {
+        return '/product/' + product.subCategory
+      })
+    })
+  const article = axios
+    .get('https://cbsbackend.herokuapp.com/api/blogs/')
+    .then((res) => {
+      return res.data.map((blog) => {
+        return '/product/' + blog._id
+      })
+    })
+  return product && article && subCategory
+}
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -60,9 +57,9 @@ export default {
       { rel: 'manifest', href: '/site.webmanifest' },
     ],
   },
-  // generate: {
-  //   routes: dynamicRoutes,
-  // },
+  generate: {
+    routes: dynamicRoutes,
+  },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
