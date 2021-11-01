@@ -1,25 +1,41 @@
 import colors from 'vuetify/es5/util/colors'
-import categories from './static/categories.json'
-import blogStories from './static/blogstories.json'
+// import axios from 'axios'
 
-const dynamicRoutes = () => {
-  return new Promise((resolve) => {
-    const product = resolve(categories.map((el) => `product/${el.uid}`))
-    const subCategory = resolve(
-      categories.map((el) => `category/${el.subCategory}`)
-    )
-    const article = resolve(blogStories.map((el) => `article/${el.id}`))
+// const dynamicRoutes = () => {
+//   return new Promise(() => {
+//     const product = axios
+//       .get('https://cbsbackend.herokuapp.com/api/products')
+//       .then((res) => {
+//         return res.data.map((product) => {
+//           return '/product/' + product._id
+//         })
+//       })
+//     // const product = resolve(categories.map((el) => `product/${el.uid}`))
+//     const subCategory = axios
+//       .get('https://cbsbackend.herokuapp.com/api/products')
+//       .then((res) => {
+//         return res.data.map((product) => {
+//           return '/product/' + product.subCategory
+//         })
+//       })
+//     const article = axios
+//       .get('https://cbsbackend.herokuapp.com/api/blogs/')
+//       .then((res) => {
+//         return res.data.map((blog) => {
+//           return '/product/' + blog._id
+//         })
+//       })
 
-    return product && article && subCategory
-  })
-}
+//     return product && article && subCategory
+//   })
+// }
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
-  target: 'server',
+  mode: 'universal',
   server: {
-      port: 8000, // default: 3000     
-      host: '0.0.0.0', // default: localhost   
+    port: 8000, // default: 3000
+    host: '0.0.0.0', // default: localhost
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -44,9 +60,9 @@ export default {
       { rel: 'manifest', href: '/site.webmanifest' },
     ],
   },
-  generate: {
-    routes: dynamicRoutes,
-  },
+  // generate: {
+  //   routes: dynamicRoutes,
+  // },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
