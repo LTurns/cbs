@@ -9,7 +9,6 @@ const dynamicRoutes = () => {
         return '/product/' + product._id
       })
     })
-  // const product = resolve(categories.map((el) => `product/${el.uid}`))
   const subCategory = axios
     .get('https://cbsbackend.herokuapp.com/api/products')
     .then((res) => {

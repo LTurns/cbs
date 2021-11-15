@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-for="product in data" :key="product.productId">
+    <div v-if="$store.state.product.length !== 0">
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <v-carousel class="carousel-height" hide-delimiter-background>
@@ -343,15 +343,17 @@
       </h4>
       <SectionsRecommendedProducts :data="product.recommendedProducts" />
     </div>
+    <div v-else>Product is loading</div>
   </section>
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
   props: {
-    data: {
-      type: Array,
-      default: () => [],
+    id: {
+      type: String,
+      default: () => '',
     },
   },
   data: () => ({
@@ -362,13 +364,20 @@ export default {
     areVideos: true,
     tutorials: '',
   }),
-  // computed: {
-  //   videos() {
-  //     // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-  //     return (this.tutorials = this.data.videos.split(' '))
-  //   },
-  // },
+  computed: {
+    ...mapState(['product']),
+    product() {
+      return this.$store.state.product
+    },
+  },
+  created() {
+    this.getIdProduct()
+  },
   methods: {
+    ...mapActions(['getProduct']),
+    getIdProduct() {
+      this.$store.dispatch('getProduct', this.id)
+    },
     showAccessories() {
       this.data.accesories === []
         ? (this.areAccessories = false)

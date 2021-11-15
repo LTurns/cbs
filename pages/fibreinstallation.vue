@@ -23,6 +23,9 @@
 <script>
 export default {
   transition: 'fibreblowing',
+  async fetch({ store }) {
+    return await store.dispatch('product/getProduct')
+  },
   data() {
     return {
       heroAlt: [
@@ -52,8 +55,10 @@ export default {
 
         data.forEach((product) => {
           if (
-            product.category.includes('Fibre Installation') &&
-            !product.subCategory.length
+            (product.category.includes('Fibre Installation') &&
+              !product.subCategory.length) ||
+            (product.subCategory.length === 1 &&
+              product.subCategory.includes('Sample Name'))
           ) {
             this.filteredList.push(product)
           }

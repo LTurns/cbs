@@ -1,64 +1,33 @@
 <template>
   <section>
-    <div v-for="(product, index) in item" :key="product.productId">
+    <div v-if="product.length !== 0">
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
             <h1>
               <v-textarea
-                :value="title.toUpperCase()"
+                :value="productArray.name.toUpperCase()"
                 label="heading"
                 dense
                 auto-grow
                 outlined
                 required
-                @input="title = $event"
+                @input="productArray.name = $event"
               ></v-textarea>
-              <!-- <textarea
-                :value="title.toUpperCase()"
-                cols="12"
-                rows="2"
-                style="
-                  word-wrap: break-word;
-                  resize: none;
-                  padding: 15px;
-                  align-self: center;
-                  min-width: 500px;
-                  max-width: 600px;
-                "
-                class="input"
-                @input="title = $event.target.value"
-              /> -->
             </h1>
             <v-textarea
-              :value="intro"
+              :value="productArray.intro"
               label="intro"
               dense
               auto-grow
               outlined
               required
-              @input="intro = $event"
+              @input="productArray.intro = $event"
             ></v-textarea>
-            <!-- <textarea
-              :value="intro"
-              rows="3"
-              cols="12"
-              style="
-                overflow: hidden;
-                word-wrap: break-word;
-                resize: none;
-                padding: 15px;
-                min-width: 500px;
-                max-width: 600px;
-              "
-              class="input"
-              @input="intro = $event.target.value"
-            ></textarea
-            ><br /> -->
             <div>
               <div class="d-inline white--text pa-2">
                 <v-select
-                  v-model="category"
+                  v-model="productArray.category"
                   attach
                   multiple
                   chips
@@ -68,56 +37,33 @@
               </div>
             </div>
             <div>
-              <p>Will this be a category?</p>
-              <v-checkbox
-                v-model="checkbox"
-                :label="checkbox.toString()"
-              ></v-checkbox>
+              <div v-if="allProducts.length !== 0">
+                <p>Will this be a subcategory?</p>
+                <v-checkbox
+                  v-model="checkbox"
+                  :label="checkbox.toString()"
+                  @change="changeProductId"
+                ></v-checkbox>
 
-              <div v-if="checkbox">
-                <p>Which items belong to this subcategory?</p>
-                <v-select
-                  v-model="subcategoryItems"
-                  :items="items"
-                  attach
-                  multiple
-                  chips
-                  style="
-                    width: 80%;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                  "
-                  @change="addItem"
-                ></v-select>
+                <div v-if="checkbox">
+                  <p>Which items belong to this subcategory?</p>
+                  <v-select
+                    v-model="subcategoryItems"
+                    :items="items"
+                    attach
+                    multiple
+                    chips
+                    style="
+                      width: 80%;
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                    "
+                    @change="addItem"
+                  ></v-select>
+                </div>
               </div>
             </div>
-
-            <!-- <p>Is this item a sub-category of another product?</p>
-              <v-checkbox
-                v-model="checkbox2"
-                :label="checkbox2.toString()"
-                @change="changeSubCategory"
-              ></v-checkbox>
-            </div>
-
-            <div v-if="checkbox2">
-              <p>What sub-category does this product belong to?</p>
-              <v-select
-                v-model="subCategoryNames"
-                :items="items"
-                attach
-                multiple
-                chips
-                style="
-                  width: 80%;
-                  display: block;
-                  margin-left: auto;
-                  margin-right: auto;
-                "
-                @change="addSubCategory"
-              ></v-select>
-            </div> -->
             <div v-if="!checkbox">
               <div class="d-inline pa-2 mt-10 yellow accent-4 black--text">
                 Product ID
@@ -127,8 +73,8 @@
                   ref="productId"
                   type="text"
                   class="input black--text"
-                  :value="productId"
-                  @input="productId = $event.target.value"
+                  :value="productArray.productId"
+                  @input="productArray.productId = $event.target.value"
                 />
               </div>
             </div>
@@ -155,84 +101,66 @@
               cols="12"
               md="12"
             >
-              <v-hover v-slot="{ hover }" class="card">
-                <v-card
-                  :elevation="hover ? 24 : 4"
-                  :color="plan.color"
-                  max-width="500"
-                  height="750"
-                  :class="hover ? 'zoom' : 'notzoom'"
-                  class="mx-auto transition-swing"
-                >
-                  <h4
-                    class="
-                      text-uppercase text-center
-                      black--text
-                      mt-5
-                      pt-5
-                      pl-5
-                      pr-5
-                      pb-5
-                    "
-                    style="letter-spacing: 0.15em; font-size: 20px"
-                  >
-                    <v-textarea
-                      :value="title.toUpperCase()"
-                      label="heading"
-                      dense
-                      auto-grow
-                      outlined
-                      required
-                      @input="title = $event"
-                    ></v-textarea>
-                  </h4>
+              <v-card
+                :color="plan.color"
+                max-width="500"
+                height="750"
+                :class="hover ? 'zoom' : 'notzoom'"
+                class="mx-auto transition-swing"
+              >
+                <h4
+                  class="
+                    text-uppercase text-center
+                    black--text
+                    mt-5
+                    pt-5
+                    pl-5
+                    pr-5
+                    pb-5
+                  "
+                  style="letter-spacing: 0.15em; font-size: 20px"
+                  :value="productArray.name.toUpperCase()"
+                ></h4>
 
-                  <v-btn
-                    align="center"
+                <v-btn
+                  align="center"
+                  justify="center"
+                  style="
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 80%;
+                  "
+                >
+                  <input
                     justify="center"
-                    style="
-                      display: block;
-                      margin-left: auto;
-                      margin-right: auto;
-                      width: 80%;
-                    "
-                  >
-                    <input
-                      justify="center"
-                      type="file"
-                      accept="image/*"
-                      @change="saveMainImage" /></v-btn
-                  ><br /><br />
-                  <v-img
-                    :src="mainImg"
-                    alt=""
-                    width="250"
-                    :lazy-src="mainImg"
-                    aspect-ratio="1"
-                    class="image grey lighten-2 rounded-lg mt-5 mb-10"
-                  ></v-img>
-                  <v-card-text
-                    class="subtitle-1 black--text mb-10"
-                    style="text-align: center"
-                  >
-                    <v-textarea
-                      :value="intro"
-                      label="intro"
-                      auto-grow
-                      outlined
-                      class="mb-10"
-                      @input="intro = $event"
-                    ></v-textarea>
-                  </v-card-text>
-                  <div
-                    style="
-                      position: absolute;
-                      bottom: 0;
-                      margin-top: 10%;
-                      left: 35%;
-                    "
-                  >
-                    <!-- <div v-if="plan.subCategory.length === 0">
+                    type="file"
+                    accept="image/*"
+                    @change="saveMainImage" /></v-btn
+                ><br /><br />
+                <v-img
+                  :src="productArray.mainImg"
+                  alt=""
+                  width="250"
+                  :lazy-src="productArray.mainImg"
+                  aspect-ratio="1"
+                  class="image grey lighten-2 rounded-lg mt-5 mb-10"
+                ></v-img>
+                <v-card-text
+                  class="subtitle-1 black--text mb-10"
+                  style="text-align: center"
+                  :value="productArray.intro"
+                >
+                </v-card-text>
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    margin-top: 10%;
+                    left: 35%;
+                  "
+                >
+                  <!-- <div v-if="plan.subCategory.length === 0">
                       <nuxt-link class="link" :to="`/product/${plan._id}`">
                         <v-btn
                           :x-large="$vuetify.breakpoint.smAndUp"
@@ -245,9 +173,8 @@
                         >
                       </nuxt-link>
                     </div> -->
-                  </div>
-                </v-card></v-hover
-              >
+                </div>
+              </v-card>
             </v-col>
           </v-row>
         </v-col>
@@ -287,7 +214,10 @@
                   </thead>
 
                   <tbody>
-                    <tr v-for="(item, index) in images" :key="item.image">
+                    <tr
+                      v-for="(item, index) in productArray.img"
+                      :key="item.image"
+                    >
                       <td>
                         <img
                           :src="item.image"
@@ -330,7 +260,7 @@
             cycle
           >
             <v-carousel-item
-              v-for="img in images"
+              v-for="img in productArray.img"
               :key="img.id"
               style="
                 display: block;
@@ -353,15 +283,15 @@
 
               <v-tab href="#features" class="ml-20"> Features </v-tab>
               <v-tab
-                v-show="product.accessories.length != 0"
+                v-show="productArray.accessories.length != 0"
                 href="#accessories"
               >
                 Accessories</v-tab
               >
-              <v-tab v-show="product.tables.length != 0" href="#config">
+              <v-tab v-show="productArray.tables.length != 0" href="#config">
                 Configuration
               </v-tab>
-              <v-tab v-show="product.videos.length > 0" href="#video">
+              <v-tab v-show="productArray.videos.length > 0" href="#video">
                 Video Tutorials
               </v-tab>
             </v-tabs>
@@ -385,7 +315,7 @@
                       "
                     >
                       <div
-                        v-for="(paragraph, index) in description"
+                        v-for="(paragraph, index) in productArray.description"
                         :key="paragraph.id"
                       >
                         <v-row>
@@ -416,7 +346,10 @@
                               :value="paragraph.paragraph"
                               auto-grow
                               outlined
-                              @input="description[index].paragraph = $event"
+                              @input="
+                                productArray.description[index].paragraph =
+                                  $event
+                              "
                             ></v-textarea>
                           </v-col>
                         </v-row>
@@ -424,7 +357,7 @@
                     </div>
                   </v-col>
                   <v-col
-                    v-for="(feature, index) in features"
+                    v-for="(feature, index) in productArray.features"
                     :key="feature[index]"
                     cols="12"
                     md="6"
@@ -559,7 +492,7 @@
 
                   <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
                     <v-col
-                      v-for="(plan, ix) in accessories"
+                      v-for="(plan, ix) in productArray.accessories"
                       :key="`plan-${ix}`"
                       cols="12"
                       md="4"
@@ -704,7 +637,9 @@
                   "
                 >
                   <div
-                    v-for="(paragraph, index) in configurationIntro"
+                    v-for="(
+                      paragraph, index
+                    ) in productArray.configurationIntro"
                     :key="paragraph[index]"
                   >
                     <v-textarea
@@ -747,7 +682,7 @@
                   </div>
                   <div v-else>
                     <v-row
-                      v-for="(table, tableIndex) in tables"
+                      v-for="(table, tableIndex) in productArray.tables"
                       :key="table[tableIndex]"
                     >
                       <table>
@@ -777,7 +712,8 @@
                                 "
                                 class="input"
                                 @input="
-                                  tables[tableIndex].title = $event.target.value
+                                  productArray.tables[tableIndex].title =
+                                    $event.target.value
                                 "
                               />
                             </td>
@@ -854,9 +790,9 @@
                                         style="align-self: center"
                                         class="input"
                                         @input="
-                                          tables[tableIndex].items[i][
-                                            'Part No'
-                                          ] = $event.target.value
+                                          productArray.tables[tableIndex].items[
+                                            i
+                                          ]['Part No'] = $event.target.value
                                         "
                                       />
                                     </td>
@@ -918,7 +854,7 @@
                         class="input mt-10"
                         @change="saveVideos"
                       /><br /><br />
-                      <template v-if="videos.length">
+                      <template v-if="productArray.videos.length">
                         <div>
                           <table>
                             <thead>
@@ -949,7 +885,8 @@
                                     class="input"
                                     :value="video.title"
                                     @input="
-                                      videos[index].title = $event.target.value
+                                      productArray.videos[index].title =
+                                        $event.target.value
                                     "
                                   />
                                 </td>
@@ -994,7 +931,7 @@
 
       <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
         <v-col
-          v-for="(plan, ix) in recommendedProducts"
+          v-for="(plan, ix) in productArray.recommendedProducts"
           :key="`plan-${ix}`"
           cols="12"
           md="4"
@@ -1234,6 +1171,7 @@
         </v-col>
       </v-row>
     </div>
+    <div v-else>loading product</div>
     <v-row>
       <v-col cols="12" align="center">
         <v-btn
@@ -1251,19 +1189,15 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
   props: {
     id: {
-      required: true,
-      default: null,
+      default: '',
       type: String,
     },
   },
   data: () => ({
-    allProducts: '',
-    category: [],
-    checkbox: '',
-    checkbox2: '',
     item: [],
     categories: [
       'Fibre Installation',
@@ -1271,85 +1205,73 @@ export default {
       'Winches and Trailers',
       'Overhead Line',
     ],
+    allProducts: [],
+    productArray: {
+      name: '',
+      id: '',
+      category: [],
+      productId: '',
+      intro: '',
+      img: [],
+      description: [],
+      features: [],
+      mainImg: '',
+      subCategory: [],
+      videos: [],
+      configurationIntro: [],
+      configurationTitle: '',
+      configurationImage: '',
+      tables: [],
+      accessories: [],
+      recommendedProducts: [],
+      countInStock: 0,
+      hasSubCategories: false,
+      isDraft: false,
+      enquiries: 0,
+    },
+    checkbox: false,
     accessoryName: '',
     items: [],
-    subCategory: [],
     areFeatures: true,
     areAccessories: true,
     areConfig: true,
     areVideos: true,
     tutorials: '',
-    intro: '',
-    productId: '',
-    images: [],
     preview: null,
     image: '',
     image_list: [],
     headings: ['image', 'name', 'Remove'],
     vidHeadings: ['video', 'name', 'Remove'],
     configHeadings: ['title', 'image', 'table', 'Remove'],
-    title: '',
-    description: '',
-    features: '',
     tab: '',
-    videos: '',
     video: '',
     videoTitle: '',
-    configImage: '',
-    recommendedProducts: [],
-    mainImg: '',
-    countInStock: 0,
     recommendedProductName: '',
-    accessories: [],
     subCategoryNames: [],
     subcategoryItems: [],
     subcategoryItem: '',
-    isDraft: '',
   }),
+  computed: {
+    ...mapState(['product']),
+    product() {
+      return this.$store.state.product
+    },
+  },
   created() {
-    this.getProduct()
+    this.getIdProduct()
+    this.getAllProducts()
     if (this.subcategoryItems.length === 0) {
-      this.checkbox = false
+      this.productArray.hasSubCategories = false
     }
   },
   methods: {
+    ...mapActions(['getProduct']),
     showAccessories() {
-      this.data.accesories === []
+      this.productArray.accesories === []
         ? (this.areAccessories = false)
         : (this.areAccessories = true)
 
       return this.areAccessories
-    },
-    async getAllProducts() {
-      const config = {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-      }
-      try {
-        const response = await this.$axios.get(
-          'https://cbsbackend.herokuapp.com/api/products',
-          config
-        )
-
-        this.allProducts = response.data
-
-        for (const product of response.data) {
-          this.items.push(product.name)
-
-          if (product.subCategory.includes(this.title)) {
-            this.subcategoryItems.push(product.name)
-          }
-
-          if (this.subCategory.includes(product.name)) {
-            this.subCategoryNames.push(product.name)
-          }
-        }
-
-        return this.items
-      } catch (err) {
-        throw new Error('Error Fetching Products')
-      }
     },
     isMobile() {
       if (screen.width <= 760) {
@@ -1358,74 +1280,90 @@ export default {
         return false
       }
     },
-    async getProduct() {
+    async getIdProduct() {
+      await this.$store.dispatch('getProduct', this.id)
+
+      this.productArray = {
+        _id: this.product._id,
+        name: this.product.name,
+        id: this.product.id,
+        category: this.product.category,
+        productId: this.product.productId,
+        intro: this.product.intro,
+        img: this.product.img,
+        description: this.product.description,
+        features: this.product.features,
+        mainImg: this.product.mainImg,
+        subCategory: this.product.subCategory,
+        videos: this.product.videos,
+        configurationIntro: this.product.configurationIntro,
+        configurationTitle: this.product.configurationTitle,
+        configurationImage: this.product.configurationImage,
+        tables: this.product.tables,
+        accessories: this.product.accessories,
+        recommendedProducts: this.product.recommendedProducts,
+        countInStock: this.product.countInStock,
+        hasSubCategories: this.product.hasSubCategories,
+        isDraft: this.product.isDraft,
+      }
+
+      this.checkbox = this.productArray.hasSubCategories
+
+      return this.productArray
+    },
+    async getAllProducts() {
       const config = {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
       }
+
       try {
-        const response = await this.$axios.get(
-          `https://cbsbackend.herokuapp.com/api/products/${this.id}`,
+        const { data } = await this.$axios.get(
+          'https://cbsbackend.herokuapp.com/api/products',
           config
         )
+        // eslint-disable-next-line no-undef
+        this.allProducts = data
 
-        this.item.push(response.data)
+        if (this.allProducts.length !== 0) {
+          this.allProducts.forEach((product) => {
+            this.items.push(product.name)
 
-        // console.log(this.item)
-
-        this.title = this.item[0].name
-        this.category = this.item[0].category
-        this.productId = this.item[0].productId
-        this.intro = this.item[0].intro
-        this.images = this.item[0].img
-        this.description = this.item[0].description
-        this.features = this.item[0].features
-        this.mainImg = this.item[0].mainImg
-        this.subCategory = this.item[0].subCategory
-        this.videos = this.item[0].videos
-        this.configurationIntro = this.item[0].configurationIntro
-        this.configurationTitle = this.item[0].configurationTitle
-        this.configurationImage = this.item[0].configurationImage
-        this.tables = this.item[0].tables
-        this.accessories = this.item[0].accessories
-        this.recommendedProducts = this.item[0].recommendedProducts
-        this.mainImg = this.item[0].mainImg
-        this.countInStock = this.item[0].countInStock
-        this.checkbox = this.item[0].hasSubCategories
-        this.isDraft = this.item[0].isDraft
-
-        this.getAllProducts()
-        return this.item
+            if (product.subCategory.includes(this.productArray.name)) {
+              this.subcategoryItems.push(product.name)
+            }
+          })
+        }
       } catch (error) {
         throw new Error(error)
       }
     },
-    // addCategory() {
-    //   this.categoryItems.forEach((item) => {
-    //     this.category.push(item)
-    //   })
-    // },
+    changeProductId() {
+      this.productArray.hasSubCategories = this.checkbox
+
+      if (this.checkbox) {
+        this.productArray.productId = ''
+      } else {
+        this.productArray.productId = '1'
+      }
+      // this.addItem()
+    },
     addItem() {
       const config = {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
       }
-
-      if (this.checkbox) {
-        this.productId = ''
-      }
-
-      if (this.subcategoryItems.length === 0) {
-        this.checkbox = false
-      }
-
       this.allProducts.forEach((item) => {
         if (!this.subcategoryItems.includes(item.name)) {
           item.subCategory.forEach(async (sub, index) => {
-            if (sub.toString() === this.title) {
-              item.subCategory.splice(index, 1)
+            console.log('here is the sub', sub)
+            console.log('here is the product nae', this.productArray.name)
+            if (sub === this.productArray.name) {
+              const subcat = item.subCategory.splice(1, index)
+
+              console.log('yoooo', subcat)
 
               const { data } = await this.$axios.get(
                 `https://cbsbackend.herokuapp.com/api/products/name/${item.name}`,
@@ -1433,26 +1371,8 @@ export default {
               )
 
               const response = {
-                user: data[0].user,
-                name: data[0].name,
-                productId: data[0].productId,
-                description: data[0].description,
-                img: data[0].img,
-                mainImg: data[0].mainImg,
-                category: data[0].category,
-                subCategory: item.subCategory,
-                features: data[0].features,
-                intro: data[0].intro,
-                videos: data[0].videos,
-                configurationTitle: data[0].configurationTitle,
-                configurationIntro: data[0].configurationIntro,
-                configurationImage: data[0].configurationImage,
-                tables: data[0].tables,
-                countInStock: data[0].countInStock,
-                accessories: data[0].accessories,
-                recommendedProducts: data[0].recommendedProducts,
-                enquiries: data[0].enquiries,
-                hasSubCategories: false,
+                ...data[0],
+                subCategory: subcat,
               }
 
               try {
@@ -1480,26 +1400,8 @@ export default {
           )
 
           const response = {
-            user: data[0].user,
-            name: data[0].name,
-            productId: data[0].productId,
-            description: data[0].description,
-            img: data[0].img,
-            mainImg: data[0].mainImg,
-            category: data[0].category,
-            subCategory: this.title,
-            features: data[0].features,
-            intro: data[0].intro,
-            videos: data[0].videos,
-            configurationTitle: data[0].configurationTitle,
-            configurationIntro: data[0].configurationIntro,
-            configurationImage: data[0].configurationImage,
-            tables: data[0].tables,
-            countInStock: data[0].countInStock,
-            accessories: data[0].accessories,
-            recommendedProducts: data[0].recommendedProducts,
-            enquiries: data[0].enquiries,
-            hasSubCategories: false,
+            ...data[0],
+            subCategory: this.productArray.name,
           }
 
           try {
@@ -1538,9 +1440,9 @@ export default {
           config.headers
         )
 
-        this.image = data
+        this.productArray.img = data
 
-        this.images.push({ image: this.image })
+        this.productArray.img.push({ image: this.image })
       } catch (error) {
         throw new Error(error)
       }
@@ -1577,179 +1479,179 @@ export default {
     deleteAccessory(index) {
       this.accessories.splice(index, 1)
     },
-    addSubCategory() {
-      if (this.checkbox2) {
-        this.subCategoryNames.forEach(async (subCategoryName) => {
-          this.subCategory.push(subCategoryName)
+    // addSubCategory() {
+    //   if (this.checkbox2) {
+    //     this.subCategoryNames.forEach(async (subCategoryName) => {
+    //       this.subCategory.push(subCategoryName)
 
-          const config = {
-            headers: {
-              'Access-Control-Allow-Origin': '*',
-            },
-          }
+    //       const config = {
+    //         headers: {
+    //           'Access-Control-Allow-Origin': '*',
+    //         },
+    //       }
 
-          try {
-            const { data } = await this.$axios.get(
-              `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
-              config
-            )
+    //       try {
+    //         const { data } = await this.$axios.get(
+    //           `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
+    //           config
+    //         )
 
-            this.subCategory.push(subCategoryName)
+    //         this.subCategory.push(subCategoryName)
 
-            const response = {
-              user: data[0].user,
-              name: data[0].name,
-              productId: data[0].productId,
-              description: data[0].description,
-              img: data[0].img,
-              mainImg: data[0].mainImg,
-              category: data[0].category,
-              subCategory: data[0].subCategory,
-              features: data[0].features,
-              intro: data[0].intro,
-              videos: data[0].videos,
-              configurationTitle: data[0].configurationTitle,
-              configurationIntro: data[0].configurationIntro,
-              configurationImage: data[0].configurationImage,
-              tables: data[0].tables,
-              countInStock: data[0].countInStock,
-              accessories: data[0].accessories,
-              recommendedProducts: data[0].recommendedProducts,
-              enquiries: data[0].enquiries,
-              hasSubCategories: true,
-            }
+    //         const response = {
+    //           user: data[0].user,
+    //           name: data[0].name,
+    //           productId: data[0].productId,
+    //           description: data[0].description,
+    //           img: data[0].img,
+    //           mainImg: data[0].mainImg,
+    //           category: data[0].category,
+    //           subCategory: data[0].subCategory,
+    //           features: data[0].features,
+    //           intro: data[0].intro,
+    //           videos: data[0].videos,
+    //           configurationTitle: data[0].configurationTitle,
+    //           configurationIntro: data[0].configurationIntro,
+    //           configurationImage: data[0].configurationImage,
+    //           tables: data[0].tables,
+    //           countInStock: data[0].countInStock,
+    //           accessories: data[0].accessories,
+    //           recommendedProducts: data[0].recommendedProducts,
+    //           enquiries: data[0].enquiries,
+    //           hasSubCategories: true,
+    //         }
 
-            try {
-              await this.$axios.put(
-                `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
-                response,
-                config
-              )
+    //         try {
+    //           await this.$axios.put(
+    //             `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+    //             response,
+    //             config
+    //           )
 
-              return response
-            } catch (error) {
-              throw new Error(error)
-            }
-          } catch (error) {
-            throw new Error(error)
-          }
-        })
-      } else {
-        this.subCategoryNames.forEach(async (subCategoryName) => {
-          this.subCategory.push(subCategoryName)
+    //           return response
+    //         } catch (error) {
+    //           throw new Error(error)
+    //         }
+    //       } catch (error) {
+    //         throw new Error(error)
+    //       }
+    //     })
+    //   } else {
+    //     this.subCategoryNames.forEach(async (subCategoryName) => {
+    //       this.subCategory.push(subCategoryName)
 
-          const config = {
-            headers: {
-              'Access-Control-Allow-Origin': '*',
-            },
-          }
+    //       const config = {
+    //         headers: {
+    //           'Access-Control-Allow-Origin': '*',
+    //         },
+    //       }
 
-          try {
-            const { data } = await this.$axios.get(
-              `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
-              config
-            )
+    //       try {
+    //         const { data } = await this.$axios.get(
+    //           `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
+    //           config
+    //         )
 
-            this.subCategory.push(subCategoryName)
+    //         this.subCategory.push(subCategoryName)
 
-            const response = {
-              user: data[0].user,
-              name: data[0].name,
-              productId: data[0].productId,
-              description: data[0].description,
-              img: data[0].img,
-              mainImg: data[0].mainImg,
-              category: data[0].category,
-              subCategory: data[0].subCategory,
-              features: data[0].features,
-              intro: data[0].intro,
-              videos: data[0].videos,
-              configurationTitle: data[0].configurationTitle,
-              configurationIntro: data[0].configurationIntro,
-              configurationImage: data[0].configurationImage,
-              tables: data[0].tables,
-              countInStock: data[0].countInStock,
-              accessories: data[0].accessories,
-              recommendedProducts: data[0].recommendedProducts,
-              enquiries: data[0].enquiries,
-              hasSubCategories: true,
-            }
+    //         const response = {
+    //           user: data[0].user,
+    //           name: data[0].name,
+    //           productId: data[0].productId,
+    //           description: data[0].description,
+    //           img: data[0].img,
+    //           mainImg: data[0].mainImg,
+    //           category: data[0].category,
+    //           subCategory: data[0].subCategory,
+    //           features: data[0].features,
+    //           intro: data[0].intro,
+    //           videos: data[0].videos,
+    //           configurationTitle: data[0].configurationTitle,
+    //           configurationIntro: data[0].configurationIntro,
+    //           configurationImage: data[0].configurationImage,
+    //           tables: data[0].tables,
+    //           countInStock: data[0].countInStock,
+    //           accessories: data[0].accessories,
+    //           recommendedProducts: data[0].recommendedProducts,
+    //           enquiries: data[0].enquiries,
+    //           hasSubCategories: true,
+    //         }
 
-            try {
-              await this.$axios.put(
-                `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
-                response,
-                config
-              )
+    //         try {
+    //           await this.$axios.put(
+    //             `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+    //             response,
+    //             config
+    //           )
 
-              return response
-            } catch (error) {
-              throw new Error(error)
-            }
-          } catch (error) {
-            throw new Error(error)
-          }
-        })
-      }
-    },
-    changeSubCategory() {
-      const config = {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-      }
+    //           return response
+    //         } catch (error) {
+    //           throw new Error(error)
+    //         }
+    //       } catch (error) {
+    //         throw new Error(error)
+    //       }
+    //     })
+    //   }
+    // },
+    // changeSubCategory() {
+    //   const config = {
+    //     headers: {
+    //       'Access-Control-Allow-Origin': '*',
+    //     },
+    //   }
 
-      if (this.checkbox2) {
-        this.addSubCategory()
-      } else {
-        this.subCategory.forEach(async (sub) => {
-          try {
-            const { data } = await this.$axios.get(
-              `https://cbsbackend.herokuapp.com/api/products/name/${sub}`,
-              config
-            )
+    //   if (this.checkbox2) {
+    //     this.addSubCategory()
+    //   } else {
+    //     this.subCategory.forEach(async (sub) => {
+    //       try {
+    //         const { data } = await this.$axios.get(
+    //           `https://cbsbackend.herokuapp.com/api/products/name/${sub}`,
+    //           config
+    //         )
 
-            const response = {
-              name: data[0].name,
-              productId: data[0].productId,
-              description: data[0].description,
-              img: data[0].img,
-              mainImg: data[0].mainImg,
-              category: data[0].category,
-              subCategory: data[0].subCategory,
-              features: data[0].features,
-              intro: data[0].intro,
-              videos: data[0].videos,
-              configurationTitle: data[0].configurationTitle,
-              configurationIntro: data[0].configurationIntro,
-              configurationImage: data[0].configurationImage,
-              tables: data[0].tables,
-              countInStock: data[0].countInStock,
-              accessories: data[0].accessories,
-              recommendedProducts: data[0].recommendedProducts,
-              enquiries: data[0].enquiries,
-              hasSubCategories: false,
-            }
+    //         const response = {
+    //           name: data[0].name,
+    //           productId: data[0].productId,
+    //           description: data[0].description,
+    //           img: data[0].img,
+    //           mainImg: data[0].mainImg,
+    //           category: data[0].category,
+    //           subCategory: data[0].subCategory,
+    //           features: data[0].features,
+    //           intro: data[0].intro,
+    //           videos: data[0].videos,
+    //           configurationTitle: data[0].configurationTitle,
+    //           configurationIntro: data[0].configurationIntro,
+    //           configurationImage: data[0].configurationImage,
+    //           tables: data[0].tables,
+    //           countInStock: data[0].countInStock,
+    //           accessories: data[0].accessories,
+    //           recommendedProducts: data[0].recommendedProducts,
+    //           enquiries: data[0].enquiries,
+    //           hasSubCategories: false,
+    //         }
 
-            this.subCategory = []
+    //         this.subCategory = []
 
-            try {
-              await this.$axios.put(
-                `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
-                response,
-                config
-              )
+    //         try {
+    //           await this.$axios.put(
+    //             `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
+    //             response,
+    //             config
+    //           )
 
-              return response
-            } catch (error) {
-              throw new Error(error)
-            }
-          } catch (error) {
-            throw new Error(error)
-          }
-        })
-      }
-    },
+    //           return response
+    //         } catch (error) {
+    //           throw new Error(error)
+    //         }
+    //       } catch (error) {
+    //         throw new Error(error)
+    //       }
+    //     })
+    //   }
+    // },
     async addRecommendedProducts() {
       const config = {
         headers: {
@@ -1874,7 +1776,7 @@ export default {
       this.videos.push({ video: this.video, title: this.videoTitle })
     },
     deleteImage(index) {
-      this.images.splice(index, 1)
+      this.productArray.img.splice(index, 1)
     },
     deleteFeature(index, i) {
       this.features[index].list.splice(i, 1)
@@ -1919,26 +1821,7 @@ export default {
     async save() {
       const data = {
         user: this.$auth.user,
-        name: this.title,
-        productId: this.productId,
-        description: this.description,
-        img: this.images,
-        mainImg: this.mainImg,
-        category: this.category,
-        subCategory: this.subCategory,
-        features: this.features,
-        intro: this.intro,
-        videos: this.videos,
-        configurationTitle: this.configurationTitle,
-        configurationIntro: this.configurationIntro,
-        configurationImage: this.configurationImage,
-        tables: this.tables,
-        countInStock: this.countInStock,
-        accessories: this.accessories,
-        recommendedProducts: this.recommendedProducts,
-        enquiries: 0,
-        hasSubCategories: this.checkbox,
-        isDraft: this.isDraft,
+        ...this.productArray,
       }
 
       const config = {
@@ -1948,7 +1831,7 @@ export default {
       }
       try {
         await this.$axios.put(
-          `https://cbsbackend.herokuapp.com/api/products/${this.item[0]._id}`,
+          `https://cbsbackend.herokuapp.com/api/products/${this.id}`,
           data,
           config
         )
