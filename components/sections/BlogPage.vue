@@ -7,52 +7,61 @@
       :hero-alt="heroAlt"
       :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
     />
-    <v-row no-gutters class="flex-row-reverse">
-      <v-col cols="12" md="6">
-        <div class="pa-lg-16 pa-md-10 px-4 py-15 mt-10">
-          <h3
-            :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
-            class="text-h4 text-center font-weight-light mb-xs-4 mb-5"
-            style="
-              border-bottom: 2px solid #fde36d;
-              box-shadow: 0 4px 6px -6px #222;
-            "
-          >
-            {{ blog[0].heading }}
-          </h3>
-          <h3
-            class="
-              text-h5 text-uppercase
-              font-weight-thin
-              text-center
-              my-8
-              black--text
-            "
-          >
-            {{ blog[0].subheading }}
-          </h3>
-          <div v-for="paragraph in blog[0].description" :key="paragraph.id">
-            <p
-              class="black--text mt-5"
-              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+    <div v-if="blogData.heading.length !== 0">
+      <v-row no-gutters class="flex-row-reverse">
+        <v-col cols="12" md="6">
+          <div class="pa-lg-16 pa-md-10 px-4 py-15 mt-10">
+            <h3
+              :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
+              class="text-h4 text-center font-weight-light mb-xs-4 mb-5"
+              style="
+                border-bottom: 2px solid #fde36d;
+                box-shadow: 0 4px 6px -6px #222;
+              "
             >
-              {{ paragraph.paragraph }}
-            </p>
+              {{ blogData.heading }}
+            </h3>
+            <h3
+              class="
+                text-h5 text-uppercase
+                font-weight-thin
+                text-center
+                my-8
+                black--text
+              "
+            >
+              {{ blogData.subheading }}
+            </h3>
+            <div v-for="paragraph in blogData.description" :key="paragraph.id">
+              <p
+                class="black--text mt-5"
+                style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+              >
+                {{ paragraph.paragraph }}
+              </p>
+            </div>
           </div>
-        </div>
-      </v-col>
+        </v-col>
 
-      <v-col cols="12" md="6">
-        <div
-          v-for="image in blog.img"
-          :key="image.id"
-          max-height="400"
-          class="align-center"
-        >
-          <v-img :src="image.image" :lazy-src="image.image"> </v-img>
-        </div>
-      </v-col>
-    </v-row>
+        <v-col cols="12" md="6">
+          <div
+            v-for="image in blogData.img"
+            :key="image.id"
+            max-height="400"
+            class="align-center"
+          >
+            <v-img :src="image.image" :lazy-src="image.image"> </v-img>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
+    <div v-else>
+      <v-progress-circular
+        class="text-center"
+        indeterminate
+        color="amber"
+      ></v-progress-circular>
+    </div>
   </section>
 </template>
 
@@ -64,8 +73,7 @@ export default {
   },
   props: {
     id: {
-      required: true,
-      default: null,
+      default: '',
       type: String,
     },
   },
@@ -78,25 +86,36 @@ export default {
           icon: 'mdi-blogger',
         },
       ],
-      blog: [],
+      blogData: {
+        heading: '',
+        subheading: '',
+        info: [],
+        categories: [],
+        description: [],
+        img: [],
+      },
     }
   },
   created() {
-    this.getAllBlogs()
+    this.getBlog()
   },
   methods: {
-    async getAllBlogs() {
+    async getBlog() {
       const config = {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
       }
       try {
-        const response = await this.$axios.get(
+        const { data } = await this.$axios.get(
           `https://cbsbackend.herokuapp.com/api/blogs/${this.id}`,
           config
         )
-        this.blog.push(response.data)
+
+        this.blogData = {
+          ...data,
+        }
+        // this.blog.push(response.data)
         // console.log(this.blog)
       } catch (err) {
         throw new Error('Error Fetching Blogs')

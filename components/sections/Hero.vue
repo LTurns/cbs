@@ -1,52 +1,33 @@
 <template>
   <section id="hero">
-    <v-container class="mt-10">
-      <v-row align="center" justify="center" align-center>
-        <v-col cols="12" md="6" sm="12">
-          <div class="heading mb-10">
-            <v-carousel
-              height="70vh"
-              cycle
-              show-arrows-on-hover
-              draggable="true"
-              hide-delimiter-background
-            >
-              <v-carousel-item
-                v-for="(carousel, carindex) in carouselsData"
-                :key="carindex"
-              >
-                <v-container>
-                  <v-row align-center>
-                    <v-col>
-                      <div
-                        class="
-                          black--text
-                          carousel-title
-                          text-md-h2 text-sm-h3 text-h6
-                          font-weight-black
-                        "
-                      >
-                        {{ carousel.heading.toUpperCase() }}
-                      </div>
-                      <p style="font-size: 17px" class="black--text">
-                        {{ carousel.subHeading }}
-                      </p>
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        class="my-3 black--text yellow darken-1"
-                        >With a new battery powered range</v-btn
-                      >
-                      <span class="mx-2 my-4"></span>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-carousel-item>
-            </v-carousel>
+    <v-container class="containerstyle">
+      <v-row align="center" justify="center" style="margin-top: 3%">
+        <v-col cols="12" md="6" sm="12" class="left">
+          <div
+            class="fonttitle black--text font-weight-black"
+            style="
+              border-bottom: 2px solid #fde36d;
+              box-shadow: 0 4px 6px -6px #222;
+              line-height: 1;
+            "
+          >
+            {{ carouselsData[0].heading.toUpperCase() }}
           </div>
+
+          <p style="font-size: 16px; margin-top: 5%" class="black--text">
+            {{ carouselsData[0].subHeading }}
+          </p>
+          <!-- <v-btn
+            :x-large="$vuetify.breakpoint.smAndUp"
+            class="black--text yellow darken-1 text-center"
+            >With a new battery powered range</v-btn
+          > -->
         </v-col>
-        <v-col cols="12" md="6" sm="12" class="black--text">
-          <div class="mb-10">
-            <categories class="categories" />
+        <!-- </v-row>
+      <v-row style="margin-bottom: 2%"> -->
+        <v-col cols="12" md="6" sm="12" class="right black--text">
+          <div>
+            <categories />
           </div>
         </v-col>
       </v-row>
@@ -94,17 +75,53 @@ export default {
 </script>
 
 <style>
-@media screen and (max-width: 1000px) {
-  .heading {
-    margin-top: 15%;
+@media screen and (min-width: 1000px) {
+  .fonttitle {
+    font-size: 3.6rem;
+    max-width: 16ch;
+    margin-bottom: 1%;
+  }
+  .containerstyle {
+    height: 90vh;
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .categories,
-  .carousel-title {
-    margin-top: 10%;
-    padding-top: 5%;
+  .fonttitle {
+    font-size: 5rem;
+    max-width: 16ch;
+    margin-bottom: 1%;
   }
+  .containerstyle {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .fonttitle {
+    font-size: 3rem;
+    margin-bottom: 5%;
+    max-width: 30ch;
+    margin-bottom: 5%;
+  }
+
+  .containerstyle {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fonttitle {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+}
+
+.left,
+.right {
+  display: inline-block;
+  /* width: 50%;
+  margin-right: -4px; */
+  vertical-align: top;
 }
 </style>

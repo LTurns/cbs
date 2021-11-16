@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/617d4266e3fadc2334d28ec2", {data:[{}],fetch:{},mutations:[]});

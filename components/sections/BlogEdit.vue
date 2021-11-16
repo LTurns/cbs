@@ -5,22 +5,22 @@
         <v-row class="mb-n6">
           <v-col>
             <v-textarea
-              :value="heading"
+              :value="blogData.heading"
               label="heading"
               dense
               auto-grow
               outlined
               required
-              @input="heading = $event"
+              @input="blogData.heading = $event"
             ></v-textarea>
             <v-textarea
               label="subheading"
-              :value="subheading"
+              :value="blogData.subheading"
               dense
               auto-grow
               outlined
               required
-              @input="subheading = $event"
+              @input="blogData.subheading = $event"
             ></v-textarea>
             <v-col>
               <v-select
@@ -43,7 +43,10 @@
                 </v-flex>
               </v-layout> -->
             </v-col>
-            <div v-for="(paragraph, index) in description" :key="paragraph.id">
+            <div
+              v-for="(paragraph, index) in blogData.description"
+              :key="paragraph.id"
+            >
               <v-textarea
                 label="paragraph"
                 dense
@@ -52,10 +55,10 @@
                 outlined
                 rows="8"
                 row-height="20"
-                @input="description[index].paragraph = $event"
+                @input="blogData.description[index].paragraph = $event"
               ></v-textarea>
             </div>
-            <form align="center">
+            <!-- <form align="center">
               <div class="form-group">
                 <v-btn>
                   <input
@@ -76,7 +79,10 @@
                     </thead>
 
                     <tbody>
-                      <tr v-for="(item, index) in img" :key="item.image">
+                      <tr
+                        v-for="(item, index) in blogData.img"
+                        :key="item.image"
+                      >
                         <td>
                           <img
                             :src="item.image"
@@ -99,7 +105,7 @@
                   </table>
                 </div>
               </div>
-            </form>
+            </form> -->
           </v-col>
         </v-row>
         <v-row>
@@ -124,7 +130,14 @@ export default {
     },
   },
   data: () => ({
-    blog: [],
+    blogData: {
+      heading: '',
+      subheading: '',
+      info: [],
+      categories: [],
+      description: [],
+      img: '',
+    },
     blogs: [],
     errorMessages: [],
     heading: '',
@@ -181,21 +194,16 @@ export default {
         },
       }
       try {
-        const response = await this.$axios.get(
+        const { data } = await this.$axios.get(
           `https://cbsbackend.herokuapp.com/api/blogs/${this.id}`,
           config
         )
 
-        this.blog.push(response.data)
+        this.blogData = {
+          ...data,
+        }
 
-        this.heading = this.blog[0].heading
-        this.subheading = this.blog[0].subheading
-        this.info = this.blog[0].info
-        this.categories = this.blog[0].categories
-        this.description = this.blog[0].description
-        this.img = this.blog[0].img
-
-        return this.blog
+        return this.blogData
       } catch (error) {
         throw new Error(error)
       }
@@ -203,12 +211,7 @@ export default {
     async saveBlog() {
       const data = {
         user: this.$auth.user,
-        heading: this.heading,
-        subheading: this.subheading,
-        description: this.description,
-        img: this.img,
-        categories: this.categories,
-        info: this.info,
+        ...this.blogData,
       }
 
       const config = {
@@ -218,7 +221,7 @@ export default {
       }
       try {
         await this.$axios.put(
-          `https://cbsbackend.herokuapp.com/api/blogs/${this.blog[0]._id}`,
+          `https://cbsbackend.herokuapp.com/api/blogs/${this.id}`,
           data,
           config
         )

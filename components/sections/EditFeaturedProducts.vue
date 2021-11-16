@@ -1,13 +1,13 @@
-/* eslint-disable vue/require-prop-types */
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
-    <v-container fluid>
-      <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
-        <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
+  <section :class="color">
+    <v-container>
+      <!-- <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10"> -->
+      <v-row mb="10">
+        <v-col>
           <v-hover v-slot="{ hover }" class="card">
             <v-card
               :elevation="hover ? 24 : 4"
-              :color="plan.color"
+              :color="data.color"
               max-width="500"
               height="610"
               :class="hover ? 'zoom' : 'notzoom'"
@@ -24,23 +24,35 @@
                   pb-5
                 "
                 style="letter-spacing: 0.15em; font-size: 20px"
-                v-text="plan.name"
+                v-text="data.name"
               ></h4>
               <v-img
-                :src="plan.mainImg"
+                :src="data.mainImg"
                 alt=""
                 width="250"
-                :lazy-src="plan.mainImg"
+                :lazy-src="data.mainImg"
                 aspect-ratio="1"
                 class="image grey lighten-2 rounded-lg mt-5 mb-10"
               ></v-img>
+              <!-- <img :src="data.mainImg" width="250" /> -->
               <v-card-text
                 class="subtitle-1 black--text"
-                v-text="plan.intro"
+                style="text-align: center; padding: 5%"
+                v-text="data.intro"
               ></v-card-text>
-              <div style="position: absolute; bottom: 0; left: 35%">
-                <div v-if="plan.subCategory.length === 0">
-                  <nuxt-link class="link" :to="`/product/${plan._id}`">
+              <!-- <v-list>
+                  <v-list-item> -->
+              <div
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  right: 10px;
+                  display: block;
+                  margin-right: 5%;
+                "
+              >
+                <div v-if="!data.hasSubCategories">
+                  <nuxt-link class="link" :to="`/product/${data._id}`">
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
                       text
@@ -52,10 +64,10 @@
                     >
                   </nuxt-link>
                 </div>
-                <div v-else>
+                <div v-if="data.hasSubCategories">
                   <nuxt-link
                     class="link align-center"
-                    :to="`/category/${plan.subCategory}`"
+                    :to="`/category/${data.name.toLowerCase()}`"
                   >
                     <v-btn
                       :x-large="$vuetify.breakpoint.smAndUp"
@@ -69,27 +81,40 @@
                   </nuxt-link>
                 </div>
               </div>
+              <!-- Product ID -->
+              <div v-if="data.productId.length">
+                <div
+                  class="d-inline black--text pa-2"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    margin-left: 2%;
+                  "
+                >
+                  {{ data.productId }}
+                </div>
+              </div>
+              <div v-else>
+                <div class="ribbon ribbon-bottom-left">
+                  <span>More Products</span>
+                </div>
+              </div>
+
+              <!-- <v-btn
+                      color="primary"
+                      large
+                      block
+                      rounded
+                      class="mx-auto my-3"
+                    >
+                      View Now
+                    </v-btn> -->
+              <!-- </v-list-item>
+                </v-list> -->
             </v-card></v-hover
           >
-          <v-btn
-            color="orange lighten-2"
-            align="center"
-            dark
-            v-bind="attrs"
-            class="btn"
-            style="
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              width: 15%;
-              margin-top: 10%;
-            "
-            v-on="on"
-            @click="deleteAccessory(index)"
-          >
-            X
-          </v-btn>
-          <!-- </div> -->
         </v-col>
       </v-row>
     </v-container>
@@ -100,14 +125,12 @@
 export default {
   props: {
     data: {
-      type: Array,
-      default: () => ['accessories'],
+      type: Object,
+      default: () => {},
     },
-  },
-  methods: {
-    link() {},
-    deleteAccessory(index) {
-      this.accessories.splice(index, 1)
+    color: {
+      type: String,
+      default: () => 'feature',
     },
   },
 }
@@ -138,5 +161,58 @@ export default {
   margin-right: auto;
   display: block;
   width: 100px;
+}
+
+/* common */
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #f5773c;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #f5773c;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 600 13px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* bottom left*/
+.ribbon-bottom-left {
+  bottom: -10px;
+  left: -10px;
+}
+.ribbon-bottom-left::before,
+.ribbon-bottom-left::after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-bottom-left::before {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-bottom-left::after {
+  top: 0;
+  left: 0;
+}
+.ribbon-bottom-left span {
+  right: -25px;
+  bottom: 30px;
+  transform: rotate(45deg);
 }
 </style>

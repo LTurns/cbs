@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-if="product.length !== 0">
+    <div v-if="productArray.name.length !== 0">
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
@@ -95,93 +95,15 @@
             style="max-width: 1200px"
             mb="10"
           >
-            <v-col
-              v-for="(plan, index) in item"
-              :key="`plan-${index}`"
-              cols="12"
-              md="12"
-            >
-              <v-card
-                :color="plan.color"
-                max-width="500"
-                height="750"
-                :class="hover ? 'zoom' : 'notzoom'"
-                class="mx-auto transition-swing"
-              >
-                <h4
-                  class="
-                    text-uppercase text-center
-                    black--text
-                    mt-5
-                    pt-5
-                    pl-5
-                    pr-5
-                    pb-5
-                  "
-                  style="letter-spacing: 0.15em; font-size: 20px"
-                  :value="productArray.name.toUpperCase()"
-                ></h4>
-
-                <v-btn
-                  align="center"
-                  justify="center"
-                  style="
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 80%;
-                  "
-                >
-                  <input
-                    justify="center"
-                    type="file"
-                    accept="image/*"
-                    @change="saveMainImage" /></v-btn
-                ><br /><br />
-                <v-img
-                  :src="productArray.mainImg"
-                  alt=""
-                  width="250"
-                  :lazy-src="productArray.mainImg"
-                  aspect-ratio="1"
-                  class="image grey lighten-2 rounded-lg mt-5 mb-10"
-                ></v-img>
-                <v-card-text
-                  class="subtitle-1 black--text mb-10"
-                  style="text-align: center"
-                  :value="productArray.intro"
-                >
-                </v-card-text>
-                <div
-                  style="
-                    position: absolute;
-                    bottom: 0;
-                    margin-top: 10%;
-                    left: 35%;
-                  "
-                >
-                  <!-- <div v-if="plan.subCategory.length === 0">
-                      <nuxt-link class="link" :to="`/product/${plan._id}`">
-                        <v-btn
-                          :x-large="$vuetify.breakpoint.smAndUp"
-                          text
-                          class="my-3"
-                          outlined
-                          black
-                          ><v-icon left large color="primary">mdi-play</v-icon
-                          >View</v-btn
-                        >
-                      </nuxt-link>
-                    </div> -->
-                </div>
-              </v-card>
+            <v-col cols="12" md="12">
+              <edit-featured-products :data="productArray" />
             </v-col>
           </v-row>
         </v-col>
       </v-row>
 
-      <v-row>
-        <v-col cols="12" md="6" sm="12">
+      <!-- <v-row> -->
+      <!-- <v-col cols="12" md="6" sm="12">
           <div class="column2 mr-5 ml-5">
             <h4
               class="text-uppercase text-center mb-3 pl-2 pr-2 pb-5"
@@ -194,7 +116,7 @@
               Images
             </h4>
             <form align="center">
-              <!-- <div class="form-group"> -->
+              <div class="form-group">
               <v-btn>
                 <input
                   type="file"
@@ -246,34 +168,41 @@
                   </tbody>
                 </table>
               </div>
+              </div>
             </form>
           </div>
-        </v-col>
+        </v-col> -->
 
-        <v-col cols="12" md="6" sm="12">
-          <v-carousel
-            class="carousel"
-            show-arrows-on-hover
+      <!-- <v-col cols="12" md="12" sm="12"> -->
+      <!-- <v-carousel
+            class="carousel-height"
             hide-delimiter-background
-            draggable="true"
             light
+            draggable="true"
             cycle
-          >
-            <v-carousel-item
+          > -->
+      <!-- <v-carousel-item
               v-for="img in productArray.img"
               :key="img.id"
-              style="
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 55%;
-              "
+              reverse-transition="fade-transition"
+              transition="fade-transition"
+              style="margin-top: 5%; margin-bottom: 10%"
             >
-              <v-img :src="img.image" :lazy-src="img.image" />
+              <v-img
+                width="50%"
+                :src="img.image"
+                :lazy-src="img.image"
+                style="
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-bottom: 10%;
+                "
+              />
             </v-carousel-item>
-          </v-carousel>
-        </v-col>
-      </v-row>
+          </v-carousel> -->
+      <!-- </v-col> -->
+      <!-- </v-row> -->
 
       <v-row>
         <v-col cols="12" md="12" sm="12">
@@ -315,41 +244,41 @@
                       "
                     >
                       <div
-                        v-for="(paragraph, index) in productArray.description"
-                        :key="paragraph.id"
+                        v-for="(
+                          paragraph, paraIndex
+                        ) in productArray.description"
+                        :key="paragraph._id"
                       >
                         <v-row>
                           <v-col cols="12" md="12" sm="12">
                             <!-- <textarea
-                                id="text"
-                                :ref="`paragraph-${index}`"
-                                class="input"
-                                :value="paragraph.paragraph"
-                                name="text"
-                                rows="4"
-                                cols="12"
-                                style="
-                                  overflow: hidden;
-                                  word-wrap: break-word;
-                                  resize: none;
-                                  padding: 15px;
-                                  align-self: center;
-                                  width: 1000px;
-                                "
-                                @input="
-                                  description[index] = $event.target.value
-                                "
-                              ></textarea> -->
+                              id="text"
+                              :ref="`paragraph-${paraIndex}`"
+                              class="input"
+                              :value="paragraph.paragraph"
+                              name="text"
+                              rows="4"
+                              cols="12"
+                              style="
+                                overflow: hidden;
+                                word-wrap: break-word;
+                                resize: none;
+                                padding: 15px;
+                                align-self: center;
+                                width: 1000px;
+                              "
+                              @input="
+                                productArray.description[paraIndex] =
+                                  $event.target.value
+                              "
+                            ></textarea> -->
                             <v-textarea
                               label="paragraph"
                               dense
                               :value="paragraph.paragraph"
                               auto-grow
                               outlined
-                              @input="
-                                productArray.description[index].paragraph =
-                                  $event
-                              "
+                              @input="changeDescription($event, paraIndex)"
                             ></v-textarea>
                           </v-col>
                         </v-row>
@@ -392,7 +321,7 @@
                           :value="feature.heading.toUpperCase()"
                           auto-grow
                           outlined
-                          @input="features[index].heading = $event"
+                          @input="productArray.features[index].heading = $event"
                         ></v-textarea>
                         <!-- <input
                             :value="feature.heading.toUpperCase()"
@@ -429,7 +358,11 @@
                                   min-width: 200px;
                                 "
                                 :value="item.listItem"
-                                @click="item.listItem = $event.target.value"
+                                @click="
+                                  productArray.features[index].list[
+                                    i
+                                  ].listItem = $event.target.value
+                                "
                               />
                             </td>
                             <td>
@@ -488,7 +421,6 @@
                     "
                     @change="addAccessory"
                   ></v-select>
-                  <!-- <SectionsEditFeaturedProducts :data="accessories" /> -->
 
                   <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
                     <v-col
@@ -502,7 +434,7 @@
                           :elevation="hover ? 24 : 4"
                           :color="plan.color"
                           max-width="500"
-                          height="610"
+                          height="630"
                           :class="hover ? 'zoom' : 'notzoom'"
                           class="mx-auto transition-swing"
                         >
@@ -531,70 +463,28 @@
                             class="subtitle-1 black--text"
                             v-text="plan.intro"
                           ></v-card-text>
-                          <div style="position: absolute; bottom: 0; left: 35%">
-                            <div
-                              style="
-                                position: absolute;
-                                bottom: 0;
-                                right: 10px;
-                                display: block;
-                                margin-right: 5%;
-                              "
-                            >
-                              <div v-if="!plan.hasSubCategories">
-                                <nuxt-link
-                                  class="link"
-                                  :to="`/product/${plan._id}`"
-                                >
-                                  <v-btn
-                                    :x-large="$vuetify.breakpoint.smAndUp"
-                                    text
-                                    class="my-3"
-                                    outlined
-                                    black
-                                    ><v-icon left large color="primary"
-                                      >mdi-play</v-icon
-                                    >View</v-btn
-                                  >
-                                </nuxt-link>
-                              </div>
-                              <div v-if="plan.hasSubCategories">
-                                <nuxt-link
-                                  class="link align-center"
-                                  :to="`/category/${plan.name.toLowerCase()}`"
-                                >
-                                  <v-btn
-                                    :x-large="$vuetify.breakpoint.smAndUp"
-                                    text
-                                    class="my-3"
-                                    outlined
-                                    black
-                                    ><v-icon left large color="primary"
-                                      >mdi-play</v-icon
-                                    >View</v-btn
-                                  >
-                                </nuxt-link>
-                              </div>
-                            </div>
-                            <!-- Product ID -->
-                            <div v-if="plan.productId.length !== 0">
-                              <div
-                                class="d-inline black--text pa-2"
-                                style="
-                                  position: absolute;
-                                  bottom: 0;
-                                  left: 0;
-                                  display: block;
-                                  margin-left: 2%;
-                                "
+                          <div
+                            style="
+                              position: absolute;
+                              bottom: 0;
+                              margin-left: 5px;
+                            "
+                          >
+                            <div>
+                              <nuxt-link
+                                :to="`/category/${plan.name.toLowerCase()}`"
                               >
-                                {{ plan.productId }}
-                              </div>
-                            </div>
-                            <div v-else>
-                              <div class="ribbon ribbon-bottom-left">
-                                <span>More Products</span>
-                              </div>
+                                <v-btn
+                                  :x-large="$vuetify.breakpoint.smAndUp"
+                                  text
+                                  class="my-3"
+                                  outlined
+                                  black
+                                  ><v-icon left large color="primary"
+                                    >mdi-play</v-icon
+                                  >View</v-btn
+                                >
+                              </nuxt-link>
                             </div>
                           </div>
                         </v-card></v-hover
@@ -650,7 +540,10 @@
                       outlined
                       rows="8"
                       row-height="20"
-                      @input="configurationIntro[index].paragraph = $event"
+                      @input="
+                        productArray.configurationIntro[index].paragraph =
+                          $event
+                      "
                     ></v-textarea>
                     <!-- <textarea
                       id="text"
@@ -776,9 +669,10 @@
                                         style="align-self: center"
                                         class="input"
                                         @input="
-                                          tables[tableIndex].items[i][
-                                            'Item Description'
-                                          ] = $event.target.value
+                                          productArray.tables[tableIndex].items[
+                                            i
+                                          ]['Item Description'] =
+                                            $event.target.value
                                         "
                                       />
                                     </td>
@@ -832,6 +726,9 @@
                 </v-card>
               </v-tab-item>
               <v-tab-item :key="4" value="video">
+                <div v-if="$device.isMobile">
+                  Please use a laptop to view and edit configuration tables
+                </div>
                 <v-container
                   fluid
                   mt="10"
@@ -868,7 +765,7 @@
                             </thead>
                             <tbody>
                               <tr
-                                v-for="(video, index) in product.videos"
+                                v-for="(video, index) in productArray.videos"
                                 :key="video[index]"
                               >
                                 <td>
@@ -970,183 +867,19 @@
                 class="subtitle-1 black--text"
                 v-text="plan.intro"
               ></v-card-text>
-              <div style="position: absolute; bottom: 0; left: 35%">
-                <div
-                  style="
-                    position: absolute;
-                    bottom: 0;
-                    right: 10px;
-                    display: block;
-                    margin-right: 5%;
-                  "
-                >
-                  <div v-if="!plan.hasSubCategories">
-                    <nuxt-link class="link" :to="`/product/${plan._id}`">
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        text
-                        class="my-3"
-                        outlined
-                        black
-                        ><v-icon left large color="primary">mdi-play</v-icon
-                        >View</v-btn
-                      >
-                    </nuxt-link>
-                  </div>
-                  <div v-if="plan.hasSubCategories">
-                    <nuxt-link
-                      class="link align-center"
-                      :to="`/category/${plan.name.toLowerCase()}`"
+              <div style="position: absolute; bottom: 0; margin-left: 5px">
+                <div>
+                  <nuxt-link :to="`/category/${plan.name.toLowerCase()}`">
+                    <v-btn
+                      :x-large="$vuetify.breakpoint.smAndUp"
+                      text
+                      class="my-3"
+                      outlined
+                      black
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      >View</v-btn
                     >
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        text
-                        class="my-3"
-                        outlined
-                        black
-                        ><v-icon left large color="primary">mdi-play</v-icon
-                        >View</v-btn
-                      >
-                    </nuxt-link>
-                  </div>
-                </div>
-                <!-- Product ID -->
-                <div v-if="plan.productId.length !== 0">
-                  <div
-                    class="d-inline black--text pa-2"
-                    style="
-                      position: absolute;
-                      bottom: 0;
-                      left: 0;
-                      display: block;
-                      margin-left: 2%;
-                    "
-                  >
-                    {{ plan.productId }}
-                  </div>
-                </div>
-                <div v-else>
-                  <div class="ribbon ribbon-bottom-left">
-                    <span>More Products</span>
-                  </div>
-                </div>
-                <div
-                  style="
-                    position: absolute;
-                    bottom: 0;
-                    right: 10px;
-                    display: block;
-                    margin-right: 5%;
-                  "
-                >
-                  <div v-if="!plan.hasSubCategories">
-                    <nuxt-link class="link" :to="`/product/${plan._id}`">
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        text
-                        class="my-3"
-                        outlined
-                        black
-                        ><v-icon left large color="primary">mdi-play</v-icon
-                        >View</v-btn
-                      >
-                    </nuxt-link>
-                  </div>
-                  <div v-if="plan.hasSubCategories">
-                    <nuxt-link
-                      class="link align-center"
-                      :to="`/category/${plan.name.toLowerCase()}`"
-                    >
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        text
-                        class="my-3"
-                        outlined
-                        black
-                        ><v-icon left large color="primary">mdi-play</v-icon
-                        >View</v-btn
-                      >
-                    </nuxt-link>
-                  </div>
-                </div>
-                <!-- Product ID -->
-                <div v-if="plan.productId.length !== 0">
-                  <div
-                    class="d-inline black--text pa-2"
-                    style="
-                      position: absolute;
-                      bottom: 0;
-                      left: 0;
-                      display: block;
-                      margin-left: 2%;
-                    "
-                  >
-                    {{ plan.productId }}
-                  </div>
-                </div>
-                <div v-else>
-                  <div class="ribbon ribbon-bottom-left">
-                    <span>More Products</span>
-                  </div>
-                </div>
-                <div
-                  style="
-                    position: absolute;
-                    bottom: 0;
-                    right: 10px;
-                    display: block;
-                    margin-right: 5%;
-                  "
-                >
-                  <div v-if="!plan.hasSubCategories">
-                    <nuxt-link class="link" :to="`/product/${plan._id}`">
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        text
-                        class="my-3"
-                        outlined
-                        black
-                        ><v-icon left large color="primary">mdi-play</v-icon
-                        >View</v-btn
-                      >
-                    </nuxt-link>
-                  </div>
-                  <div v-if="plan.hasSubCategories">
-                    <nuxt-link
-                      class="link align-center"
-                      :to="`/category/${plan.name.toLowerCase()}`"
-                    >
-                      <v-btn
-                        :x-large="$vuetify.breakpoint.smAndUp"
-                        text
-                        class="my-3"
-                        outlined
-                        black
-                        ><v-icon left large color="primary">mdi-play</v-icon
-                        >View</v-btn
-                      >
-                    </nuxt-link>
-                  </div>
-                </div>
-                <!-- Product ID -->
-                <div v-if="plan.productId.length !== 0">
-                  <div
-                    class="d-inline black--text pa-2"
-                    style="
-                      position: absolute;
-                      bottom: 0;
-                      left: 0;
-                      display: block;
-                      margin-left: 2%;
-                    "
-                  >
-                    {{ plan.productId }}
-                  </div>
-                </div>
-                <div v-else>
-                  <div class="ribbon ribbon-bottom-left">
-                    <span>More Products</span>
-                  </div>
+                  </nuxt-link>
                 </div>
               </div>
             </v-card></v-hover
@@ -1171,7 +904,13 @@
         </v-col>
       </v-row>
     </div>
-    <div v-else>loading product</div>
+    <div v-else>
+      <v-progress-circular
+        class="text-center"
+        indeterminate
+        color="amber"
+      ></v-progress-circular>
+    </div>
     <v-row>
       <v-col cols="12" align="center">
         <v-btn
@@ -1189,8 +928,10 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+// import { mapState, mapActions } from 'vuex'
+import EditFeaturedProducts from './EditFeaturedProducts.vue'
 export default {
+  components: { EditFeaturedProducts },
   props: {
     id: {
       default: '',
@@ -1251,12 +992,6 @@ export default {
     subcategoryItems: [],
     subcategoryItem: '',
   }),
-  computed: {
-    ...mapState(['product']),
-    product() {
-      return this.$store.state.product
-    },
-  },
   created() {
     this.getIdProduct()
     this.getAllProducts()
@@ -1265,13 +1000,18 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['getProduct']),
     showAccessories() {
       this.productArray.accesories === []
         ? (this.areAccessories = false)
         : (this.areAccessories = true)
 
       return this.areAccessories
+    },
+    changeDescription(e, index) {
+      this.productArray.description[index] = {
+        _id: this.productArray.description[index]._id,
+        paragraph: e,
+      }
     },
     isMobile() {
       if (screen.width <= 760) {
@@ -1281,35 +1021,30 @@ export default {
       }
     },
     async getIdProduct() {
-      await this.$store.dispatch('getProduct', this.id)
-
-      this.productArray = {
-        _id: this.product._id,
-        name: this.product.name,
-        id: this.product.id,
-        category: this.product.category,
-        productId: this.product.productId,
-        intro: this.product.intro,
-        img: this.product.img,
-        description: this.product.description,
-        features: this.product.features,
-        mainImg: this.product.mainImg,
-        subCategory: this.product.subCategory,
-        videos: this.product.videos,
-        configurationIntro: this.product.configurationIntro,
-        configurationTitle: this.product.configurationTitle,
-        configurationImage: this.product.configurationImage,
-        tables: this.product.tables,
-        accessories: this.product.accessories,
-        recommendedProducts: this.product.recommendedProducts,
-        countInStock: this.product.countInStock,
-        hasSubCategories: this.product.hasSubCategories,
-        isDraft: this.product.isDraft,
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
       }
 
-      this.checkbox = this.productArray.hasSubCategories
+      if (this.id !== '') {
+        try {
+          const { data } = await this.$axios.get(
+            `https://cbsbackend.herokuapp.com/api/products/${this.id}`,
+            config
+          )
 
-      return this.productArray
+          this.productArray = {
+            ...data,
+          }
+
+          this.checkbox = this.productArray.hasSubCategories
+
+          return this.productArray
+        } catch (error) {
+          throw new Error(error)
+        }
+      }
     },
     async getAllProducts() {
       const config = {
@@ -1455,7 +1190,7 @@ export default {
           config
         )
 
-        this.accessories.push({
+        this.productArray.accessories.push({
           id: data[0].id,
           name: data[0].name,
           category: data[0].category,
@@ -1472,181 +1207,8 @@ export default {
       }
     },
     deleteAccessory(index) {
-      this.accessories.splice(index, 1)
+      this.productArray.accessories.splice(index, 1)
     },
-    // addSubCategory() {
-    //   if (this.checkbox2) {
-    //     this.subCategoryNames.forEach(async (subCategoryName) => {
-    //       this.subCategory.push(subCategoryName)
-
-    //       const config = {
-    //         headers: {
-    //           'Access-Control-Allow-Origin': '*',
-    //         },
-    //       }
-
-    //       try {
-    //         const { data } = await this.$axios.get(
-    //           `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
-    //           config
-    //         )
-
-    //         this.subCategory.push(subCategoryName)
-
-    //         const response = {
-    //           user: data[0].user,
-    //           name: data[0].name,
-    //           productId: data[0].productId,
-    //           description: data[0].description,
-    //           img: data[0].img,
-    //           mainImg: data[0].mainImg,
-    //           category: data[0].category,
-    //           subCategory: data[0].subCategory,
-    //           features: data[0].features,
-    //           intro: data[0].intro,
-    //           videos: data[0].videos,
-    //           configurationTitle: data[0].configurationTitle,
-    //           configurationIntro: data[0].configurationIntro,
-    //           configurationImage: data[0].configurationImage,
-    //           tables: data[0].tables,
-    //           countInStock: data[0].countInStock,
-    //           accessories: data[0].accessories,
-    //           recommendedProducts: data[0].recommendedProducts,
-    //           enquiries: data[0].enquiries,
-    //           hasSubCategories: true,
-    //         }
-
-    //         try {
-    //           await this.$axios.put(
-    //             `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
-    //             response,
-    //             config
-    //           )
-
-    //           return response
-    //         } catch (error) {
-    //           throw new Error(error)
-    //         }
-    //       } catch (error) {
-    //         throw new Error(error)
-    //       }
-    //     })
-    //   } else {
-    //     this.subCategoryNames.forEach(async (subCategoryName) => {
-    //       this.subCategory.push(subCategoryName)
-
-    //       const config = {
-    //         headers: {
-    //           'Access-Control-Allow-Origin': '*',
-    //         },
-    //       }
-
-    //       try {
-    //         const { data } = await this.$axios.get(
-    //           `https://cbsbackend.herokuapp.com/api/products/name/${subCategoryName}`,
-    //           config
-    //         )
-
-    //         this.subCategory.push(subCategoryName)
-
-    //         const response = {
-    //           user: data[0].user,
-    //           name: data[0].name,
-    //           productId: data[0].productId,
-    //           description: data[0].description,
-    //           img: data[0].img,
-    //           mainImg: data[0].mainImg,
-    //           category: data[0].category,
-    //           subCategory: data[0].subCategory,
-    //           features: data[0].features,
-    //           intro: data[0].intro,
-    //           videos: data[0].videos,
-    //           configurationTitle: data[0].configurationTitle,
-    //           configurationIntro: data[0].configurationIntro,
-    //           configurationImage: data[0].configurationImage,
-    //           tables: data[0].tables,
-    //           countInStock: data[0].countInStock,
-    //           accessories: data[0].accessories,
-    //           recommendedProducts: data[0].recommendedProducts,
-    //           enquiries: data[0].enquiries,
-    //           hasSubCategories: true,
-    //         }
-
-    //         try {
-    //           await this.$axios.put(
-    //             `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
-    //             response,
-    //             config
-    //           )
-
-    //           return response
-    //         } catch (error) {
-    //           throw new Error(error)
-    //         }
-    //       } catch (error) {
-    //         throw new Error(error)
-    //       }
-    //     })
-    //   }
-    // },
-    // changeSubCategory() {
-    //   const config = {
-    //     headers: {
-    //       'Access-Control-Allow-Origin': '*',
-    //     },
-    //   }
-
-    //   if (this.checkbox2) {
-    //     this.addSubCategory()
-    //   } else {
-    //     this.subCategory.forEach(async (sub) => {
-    //       try {
-    //         const { data } = await this.$axios.get(
-    //           `https://cbsbackend.herokuapp.com/api/products/name/${sub}`,
-    //           config
-    //         )
-
-    //         const response = {
-    //           name: data[0].name,
-    //           productId: data[0].productId,
-    //           description: data[0].description,
-    //           img: data[0].img,
-    //           mainImg: data[0].mainImg,
-    //           category: data[0].category,
-    //           subCategory: data[0].subCategory,
-    //           features: data[0].features,
-    //           intro: data[0].intro,
-    //           videos: data[0].videos,
-    //           configurationTitle: data[0].configurationTitle,
-    //           configurationIntro: data[0].configurationIntro,
-    //           configurationImage: data[0].configurationImage,
-    //           tables: data[0].tables,
-    //           countInStock: data[0].countInStock,
-    //           accessories: data[0].accessories,
-    //           recommendedProducts: data[0].recommendedProducts,
-    //           enquiries: data[0].enquiries,
-    //           hasSubCategories: false,
-    //         }
-
-    //         this.subCategory = []
-
-    //         try {
-    //           await this.$axios.put(
-    //             `https://cbsbackend.herokuapp.com/api/products/${data[0]._id}`,
-    //             response,
-    //             config
-    //           )
-
-    //           return response
-    //         } catch (error) {
-    //           throw new Error(error)
-    //         }
-    //       } catch (error) {
-    //         throw new Error(error)
-    //       }
-    //     })
-    //   }
-    // },
     async addRecommendedProducts() {
       const config = {
         headers: {
@@ -1660,7 +1222,7 @@ export default {
           config
         )
 
-        this.recommendedProducts.push({
+        this.productArray.recommendedProducts.push({
           id: data[0].id,
           name: data[0].name,
           category: data[0].category,
@@ -1677,35 +1239,8 @@ export default {
       }
     },
     deleteRecommendedProduct(index) {
-      this.recommendedProducts.splice(index, 1)
+      this.productArray.recommendedProducts.splice(index, 1)
     },
-    // async saveRecommendedImages(event, index) {
-    //   const input = event.target.files[0]
-    //   const formData = new FormData()
-
-    //   formData.append('image', input)
-
-    //   try {
-    //     const config = {
-    //       headers: {
-    //         'Content-Type': 'multipart/form-data',
-    //       },
-    //     }
-
-    //     const { data } = await this.$axios.post(
-    //       'http://localhost:5001/api/upload',
-    //       formData,
-    //       config
-    //     )
-
-    //     this.recommendedProducts[index].mainImg = data
-    //     this.recommendedProducts[index].id = '1'
-
-    //     console.log(this.mainImg)
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // },
     async saveMainImage(event) {
       const input = event.target.files[0]
       const formData = new FormData()
@@ -1713,28 +1248,22 @@ export default {
       formData.append('image', input)
 
       try {
-        // const config = {
-        //   headers: {
-        //     'Content-Type': 'multipart/form-data',
-        //     'Access-Control-Allow-Origin': '*',
-        //   },
-        // }
+        const config = {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': true,
+            'Access-Control-Allow-Headers': '*',
+          },
+        }
 
         const { data } = await this.$axios.post(
-          // 'http://localhost:80/api/upload/',
           'https://cbsbackend.herokuapp.com/api/upload/',
           formData,
-          {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Credentials': true,
-              'Access-Control-Allow-Headers': '*',
-            },
-          }
+          config
         )
 
-        this.mainImg = data
+        this.productArray.mainImg = data
       } catch (error) {
         throw new Error(error)
       }
@@ -1761,31 +1290,34 @@ export default {
 
         this.configImage = data
 
-        this.tables[index].image = this.configImage
+        this.productArray.tables[index].image = this.configImage
       } catch (error) {
         throw new Error(error)
       }
     },
     saveVideos(event) {
       this.video = event.target.value
-      this.videos.push({ video: this.video, title: this.videoTitle })
+      this.productArray.videos.push({
+        video: this.video,
+        title: this.videoTitle,
+      })
     },
     deleteImage(index) {
       this.productArray.img.splice(index, 1)
     },
     deleteFeature(index, i) {
-      this.features[index].list.splice(i, 1)
+      this.productArray.features[index].list.splice(i, 1)
     },
     addFeature(index) {
-      this.features[index].list.push({
+      this.productArray.features[index].list.push({
         listItem: 'List point',
       })
     },
     deleteFeatureBox(index) {
-      this.features.splice(index, 1)
+      this.productArray.features.splice(index, 1)
     },
     addFeatureBox() {
-      this.features.push({
+      this.productArray.features.push({
         id: 1,
         heading: 'Main Features',
         list: [
@@ -1796,13 +1328,13 @@ export default {
       })
     },
     deleteConfigImage(index) {
-      this.tables[index].image = ''
+      this.productArray.tables[index].image = ''
     },
     deleteTableRow(tableIndex, i) {
-      this.tables[tableIndex].items.splice(i, 1)
+      this.productArray.tables[tableIndex].items.splice(i, 1)
     },
     addTableRow(tableIndex) {
-      this.tables[tableIndex].items.push({
+      this.productArray.tables[tableIndex].items.push({
         'Item Description': '',
         'Part No': '',
       })
@@ -1948,15 +1480,6 @@ td {
     max-width: 300px;
     max-height: 200px;
   }
-
-  /* #about {
-    padding-left: 0;
-    padding-right: 0;
-  } */
-
-  /* .carousel {
-    height: 80vh;
-  } */
 }
 
 .body {
@@ -2095,23 +1618,12 @@ td {
 .active-siz {
   background-color: #b2dfdb;
 }
-/* .buy-product {
-  margin-top: 15px;
-  padding: 15px 0px;
-  border-top: 1px dashed #ddd;
-} */
 
 .product-qty {
   display: inline-block;
   margin-top: 20px;
   width: 100%;
 }
-
-/* .product-qty button.items-count {
-  background-color: #fff;
-  border: 1px #ddd solid;
-  border-radius: 2px;
-} */
 
 .product-qty button.items-count {
   font-size: 18px;
@@ -2231,108 +1743,14 @@ img {
   width: 100%;
 }
 
-/* .container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
-} */
-
-/* navbar */
-
-/* .navbar {
-  font-size: 1.2rem;
-  padding: 0.3rem 0;
-} */
-
-/* .navbar .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.navbar ul {
-  display: flex;
-  justify-self: flex-end;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar a {
-  padding: 0 1rem;
-}
-
-.navbar a:hover {
-  color: var(--ternary-color);
-} */
-
-/* showcase section */
-
 .section-showcase {
   margin: 4rem 3rem;
 }
-
-/* .section-showcase .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1f;
-  gap: 0rem;
-  align-items: center;
-  justify-content: center;
-} */
 
 .section-showcase h1 {
   font-size: 3rem;
   color: var(--primary-color);
 }
-
-/* .section-showcase p {
-  margin: 1rem 0;
-} */
-
-/* .btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  border-radius: 30px;
-} */
-
-/* .btn:hover {
-  background: var(--secondary-color);
-} */
-
-/* large text section */
-
-/* .section-large-text {
-  position: relative;
-  background: url('https://i.ibb.co/1RS1dqC/section-b.jpg') bottom center/cover
-    no-repeat;
-  height: 600px;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--overlay-color);
-} */
-/*
-.section-large-text-inner {
-  color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  max-width: 860px;
-  padding: 5rem 0;
-} */
 
 .section-large-text-inner h2 {
   font-size: 5rem;
@@ -2347,83 +1765,6 @@ img {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
-
-/* #feature-card {
-  min-height: 800px;
-} */
-/*
-@media (max-width: 768px) {
-  .section-showcase .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  #feature-card {
-    min-height: 0px;
-  }
-
-  .section-showcase .container div:first-child {
-    order: 2;
-  }
-
-  .section-showcase .container div:nth-child(2) {
-    order: -1;
-  }
-
-  .section-showcase h1 {
-    font-size: 2rem;
-  }
-
-  .section-showcase img {
-    width: 80%;
-    margin: auto;
-  } */
-
-/* .section-large-text-inner h2 {
-    font-size: 3rem;
-  }
-
-  .section-large-text-inner h3 {
-    font-size: 1.5rem;
-  }
-
-  .section-large-text-inner p {
-    font-size: 1.25rem;
-  }
-
-  .section-gallery .gallery {
-    display: grid; */
-/* grid-template-columns: repeat(3, 1fr);
-  }
-
-  .section-gallery .gallery img:first-child {
-    grid-row: 1/1;
-    grid-column: 1/1;
-  }
-
-  .section-gallery .gallery img:nth-child(2) {
-    grid-row: 2/2;
-    grid-column: 2/4;
-  }
-
-  .section-gallery .gallery img:last-child {
-    display: none;
-  } */
-
-/* .section-footer {
-    padding: 2rem 0;
-  }
-
-  .section-footer .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .section-footer div:nth-child(2),
-  .section-footer div:nth-child(3) {
-    display: none;
-  }
-} */
 
 table {
   border-collapse: collapse;
@@ -2487,5 +1828,82 @@ tr:nth-child(even) {
 #small-hero {
   background-image: url('../../static/orangewireheader.jpg');
   background-size: cover;
+}
+
+/* common */
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #f5773c;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #f5773c;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 600 13px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+.zoom {
+  transform: scale(1.025) translate(0, -10px);
+  transition: transform 0.2s;
+}
+.notzoom {
+  transition: transform 0.2s;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card h3 {
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100px;
+}
+/* bottom left*/
+.ribbon-bottom-left {
+  bottom: -10px;
+  left: -10px;
+}
+.ribbon-bottom-left::before,
+.ribbon-bottom-left::after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-bottom-left::before {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-bottom-left::after {
+  top: 0;
+  left: 0;
+}
+.ribbon-bottom-left span {
+  right: -25px;
+  bottom: 30px;
+  transform: rotate(45deg);
 }
 </style>

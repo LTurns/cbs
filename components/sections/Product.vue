@@ -3,15 +3,23 @@
     <div v-if="$store.state.product.length !== 0">
       <v-row>
         <v-col cols="12" md="6" sm="12">
-          <v-carousel class="carousel-height" hide-delimiter-background>
+          <v-carousel
+            class="carouselheight"
+            height="80vh"
+            hide-delimiter-background
+          >
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
               reverse-transition="fade-transition"
               transition="fade-transition"
-              class="carousel-image"
+              style="margin-top: 5%; margin-bottom: 10%"
             >
-              <v-img :src="img.image" :lazy-src="img.image" />
+              <v-img
+                class="carouselimage"
+                :src="img.image"
+                :lazy-src="img.image"
+              />
             </v-carousel-item>
           </v-carousel>
         </v-col>
@@ -74,7 +82,7 @@
 
         <v-tabs-items v-model="tab">
           <v-tab-item :key="1" value="features">
-            <v-row fluid mt="10" pb="10" class="blue-grey darken-4">
+            <v-row mt="10" ml="10" mr="10" pb="10" class="blue-grey darken-4">
               <!-- <v-row class="mx-auto mb-7 mt-3"> -->
               <v-col cols="12" md="12" sm="12">
                 <div
@@ -343,7 +351,13 @@
       </h4>
       <SectionsRecommendedProducts :data="product.recommendedProducts" />
     </div>
-    <div v-else>Product is loading</div>
+    <div v-else>
+      <v-progress-circular
+        class="text-center"
+        indeterminate
+        color="amber"
+      ></v-progress-circular>
+    </div>
   </section>
 </template>
 
@@ -452,21 +466,33 @@ table tbody tr:nth-child(2n) td {
   margin-bottom: 5%;
 }
 
-.carousel-image {
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 50%;
-  margin-top: 40px;
+.v-progress-circular {
+  margin: 1rem;
 }
 
-@media screen and (max-width: 990px) {
-  .carousel-height {
-    height: '100vh';
+@media screen and (min-width: 1000px) {
+  .carouselheight {
+    height: 80vh;
   }
 
-  .carousel-image {
-    width: 35%;
+  .carouselimage {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .carouselimage {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 30%;
+  }
+
+  .carouselheight {
+    height: 100%;
   }
 }
 
@@ -476,12 +502,15 @@ table tbody tr:nth-child(2n) td {
     margin-bottom: 5%;
   }
 
-  .carousel-height {
-    height: 20vh;
+  .carouselheight {
+    height: 60vh;
   }
 
-  .carousel-image {
-    width: 75%;
+  .carouselimage {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 70%;
   }
 
   th {
@@ -505,20 +534,6 @@ table tbody tr:nth-child(2n) td {
     max-width: 300px;
     max-height: 200px;
   }
-
-  /* #about {
-    padding-left: 0;
-    padding-right: 0;
-  } */
-
-  /* .carousel {
-    height: 80vh;
-  } */
-}
-
-.product-img {
-  cursor: pointer;
-  margin-top: 10px;
 }
 
 .product-title {
@@ -528,388 +543,11 @@ table tbody tr:nth-child(2n) td {
   line-height: 1.2em;
 }
 
-.colors {
-  margin: 0px;
-  padding: 0px;
-  display: inline-block;
-  margin-top: 20px;
-  list-style: none;
-}
-.colors p {
-  float: left;
-  margin-top: 10px;
-  color: #000;
-  font-weight: 700;
-  padding-right: 20px;
-}
-.color-box {
-  height: 35px;
-  width: 35px;
-  margin: 5px;
-  display: inline-block;
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.active-col {
-  outline: 1px dashed black;
-}
-
-.size {
-  margin: 0px;
-  padding: 0px;
-  display: inline-block;
-  margin-top: 20px;
-  list-style: none;
-}
-.size p {
-  float: left;
-  margin-top: 10px;
-  color: #000;
-  font-weight: 700;
-  padding-right: 38px;
-}
-
-.size-box {
-  padding: 12px;
-  margin: 0px 5px;
-  display: inline-block;
-  cursor: pointer;
-  color: #000;
-  font-weight: 400;
-}
-.active-siz {
-  background-color: #b2dfdb;
-}
-/* .buy-product {
-  margin-top: 15px;
-  padding: 15px 0px;
-  border-top: 1px dashed #ddd;
-} */
-
-.product-qty {
-  display: inline-block;
-  margin-top: 20px;
-  width: 100%;
-}
-
-/* .product-qty button.items-count {
-  background-color: #fff;
-  border: 1px #ddd solid;
-  border-radius: 2px;
-} */
-
-.product-qty button.items-count {
-  font-size: 18px;
-  line-height: 12px;
-  height: 40px;
-  width: 40px;
-  color: #000;
-}
-
-.product-qty .qty {
-  height: 40px;
-  text-align: center;
-  width: 70px;
-  vertical-align: top;
-  color: #000;
-}
-
-.qty {
-  /* background-color: #ffffff; */
-  border: 1px #ced4da solid;
-  border-radius: 2px;
-  color: #666;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0 -5px;
-}
-
 .sub-title {
   color: #000;
   font-weight: 700;
   padding-right: 38px;
 }
-
-.cart-btn {
-  margin: 15px 0px;
-  border-bottom: 1px #e5e5e5 solid;
-}
-
-.cart-btn i {
-  padding: 0px 10px;
-}
-
-.socal-link {
-  margin: 0px;
-  padding: 0px;
-  margin-top: 20px;
-  list-style: none;
-  display: block;
-}
-.socal-link li {
-  list-style: none;
-  display: inline-block;
-  margin: 0px 8px;
-}
-
-.socal-link li a {
-  border: 1px #ddd solid;
-  color: #666;
-  font-size: 15px;
-  line-height: 36px;
-  padding: 8px 12px;
-}
-
-.socal-link li a:hover {
-  background: #ff5252;
-  color: #fff;
-}
-
-.activeimg {
-  border: 1px solid #000;
-}
-
-.overview {
-  margin-top: 30px;
-}
-
-:root {
-  --primary-color: #333;
-  --secondary-color: #444;
-  --ternary-color: #555;
-  --light-color: #ccc;
-  --light-secondary-color: #ddd;
-  --light-ternary-color: #eee;
-  --overlay-color: rgba(0, 0, 0, 0.7);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Catamaran', sans-serif;
-  line-height: 1.6;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.3;
-}
-
-a {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  width: 100%;
-}
-
-/* .container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
-} */
-
-/* navbar */
-
-/* .navbar {
-  font-size: 1.2rem;
-  padding: 0.3rem 0;
-} */
-
-/* .navbar .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.navbar ul {
-  display: flex;
-  justify-self: flex-end;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar a {
-  padding: 0 1rem;
-}
-
-.navbar a:hover {
-  color: var(--ternary-color);
-} */
-
-/* showcase section */
-
-.section-showcase {
-  margin: 4rem 3rem;
-}
-
-/* .section-showcase .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1f;
-  gap: 0rem;
-  align-items: center;
-  justify-content: center;
-} */
-
-.section-showcase h1 {
-  font-size: 3rem;
-  color: var(--primary-color);
-}
-
-/* .section-showcase p {
-  margin: 1rem 0;
-} */
-
-/* .btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  border-radius: 30px;
-} */
-
-/* .btn:hover {
-  background: var(--secondary-color);
-} */
-
-/* large text section */
-
-/* .section-large-text {
-  position: relative;
-  background: url('https://i.ibb.co/1RS1dqC/section-b.jpg') bottom center/cover
-    no-repeat;
-  height: 600px;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--overlay-color);
-} */
-/*
-.section-large-text-inner {
-  color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  max-width: 860px;
-  padding: 5rem 0;
-} */
-
-.section-large-text-inner h2 {
-  font-size: 5rem;
-  margin-top: 1rem;
-}
-
-.section-large-text-inner h3 {
-  font-size: 2rem;
-}
-
-.section-large-text-inner p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-/* #feature-card {
-  min-height: 800px;
-} */
-/*
-@media (max-width: 768px) {
-  .section-showcase .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  #feature-card {
-    min-height: 0px;
-  }
-
-  .section-showcase .container div:first-child {
-    order: 2;
-  }
-
-  .section-showcase .container div:nth-child(2) {
-    order: -1;
-  }
-
-  .section-showcase h1 {
-    font-size: 2rem;
-  }
-
-  .section-showcase img {
-    width: 80%;
-    margin: auto;
-  } */
-
-/* .section-large-text-inner h2 {
-    font-size: 3rem;
-  }
-
-  .section-large-text-inner h3 {
-    font-size: 1.5rem;
-  }
-
-  .section-large-text-inner p {
-    font-size: 1.25rem;
-  }
-
-  .section-gallery .gallery {
-    display: grid; */
-/* grid-template-columns: repeat(3, 1fr);
-  }
-
-  .section-gallery .gallery img:first-child {
-    grid-row: 1/1;
-    grid-column: 1/1;
-  }
-
-  .section-gallery .gallery img:nth-child(2) {
-    grid-row: 2/2;
-    grid-column: 2/4;
-  }
-
-  .section-gallery .gallery img:last-child {
-    display: none;
-  } */
-
-/* .section-footer {
-    padding: 2rem 0;
-  }
-
-  .section-footer .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .section-footer div:nth-child(2),
-  .section-footer div:nth-child(3) {
-    display: none;
-  }
-} */
 
 table {
   border-collapse: collapse;
@@ -934,44 +572,5 @@ th {
 td {
   padding: 1rem 2rem;
   color: black;
-}
-
-a {
-  text-decoration: none;
-  color: #2962ff;
-}
-
-.status {
-  border-radius: 0.2rem;
-  background-color: red;
-  padding: 0.2rem 1rem;
-  text-align: center;
-}
-.status-pending {
-  background-color: #fff0c2;
-  color: #a68b00;
-}
-
-.status-paid {
-  background-color: #c8e6c9;
-  color: #388e3c;
-}
-
-.status-unpaid {
-  background-color: #ffcdd2;
-  color: #c62828;
-}
-
-.amount {
-  text-align: right;
-}
-
-tr:nth-child(even) {
-  background-color: #f4f6fb;
-}
-
-#small-hero {
-  background-image: url('../../static/orangewireheader.jpg');
-  background-size: cover;
 }
 </style>

@@ -6,8 +6,8 @@
     </v-col>
     <!-- </v-row> -->
     <v-row no-gutters>
-      <v-col cols="12" class="yellow darken-2">
-        <SectionsBlockQuote>
+      <v-col cols="12" class="blue-grey darken-4">
+        <SectionsBlockQuote text="white--text">
           <slot>
             CBS Products (KT), Ltd. is a leading provider of specialised
             equipment solutions for the construction of power transmission lines
@@ -31,10 +31,7 @@
           FEATURED PRODUCTS
         </h3>
         <!-- </v-responsive> -->
-        <SectionsFeaturedProducts
-          class="yellow darken-1"
-          :data="filteredList"
-        />
+        <SectionsFeaturedProducts :data="filteredList" />
       </v-col>
     </v-row>
     <v-row no-gutters>

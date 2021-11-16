@@ -9,7 +9,7 @@
               :elevation="hover ? 24 : 4"
               :color="plan.color"
               max-width="500"
-              height="610"
+              height="630"
               :class="hover ? 'zoom' : 'notzoom'"
               class="mx-auto transition-swing"
             >
@@ -30,7 +30,7 @@
                 :src="plan.mainImg"
                 alt=""
                 width="250"
-                :lazy-src="`../${plan.mainImg}`"
+                :lazy-src="plan.mainImg"
                 aspect-ratio="1"
                 class="image grey lighten-2 rounded-lg mt-5 mb-10"
               ></v-img>
@@ -82,7 +82,7 @@
                 </div>
               </div>
               <!-- Product ID -->
-              <div v-if="plan.productId.length !== 0">
+              <div v-if="plan.productId.length">
                 <div
                   class="d-inline black--text pa-2"
                   style="

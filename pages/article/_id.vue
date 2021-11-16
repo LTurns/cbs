@@ -9,7 +9,7 @@ export default {
   transition: 'article',
   data() {
     return {
-      id: this.$route.params._id,
+      id: this.$route.params.id,
       blogList: [],
     }
   },
