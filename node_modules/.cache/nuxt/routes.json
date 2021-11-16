@@ -3,126 +3,147 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/elizabethturney/modevue/pages/about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_598edd30"
   },
   {
     "name": "blog",
     "path": "/blog",
     "component": "/Users/elizabethturney/modevue/pages/blog.vue",
-    "chunkName": "pages/blog"
+    "chunkName": "pages/blog",
+    "_name": "_20084e4f"
   },
   {
     "name": "careers",
     "path": "/careers",
     "component": "/Users/elizabethturney/modevue/pages/careers.vue",
-    "chunkName": "pages/careers"
+    "chunkName": "pages/careers",
+    "_name": "_006ed0d0"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "/Users/elizabethturney/modevue/pages/contact.vue",
-    "chunkName": "pages/contact"
+    "chunkName": "pages/contact",
+    "_name": "_33c92583"
   },
   {
     "name": "data",
     "path": "/data",
     "component": "/Users/elizabethturney/modevue/pages/data.vue",
-    "chunkName": "pages/data"
+    "chunkName": "pages/data",
+    "_name": "_9bcc6b52"
   },
   {
     "name": "enquiry",
     "path": "/enquiry",
     "component": "/Users/elizabethturney/modevue/pages/enquiry.vue",
-    "chunkName": "pages/enquiry"
+    "chunkName": "pages/enquiry",
+    "_name": "_4f0894a6"
   },
   {
     "name": "fibreinstallation",
     "path": "/fibreinstallation",
     "component": "/Users/elizabethturney/modevue/pages/fibreinstallation.vue",
-    "chunkName": "pages/fibreinstallation"
+    "chunkName": "pages/fibreinstallation",
+    "_name": "_4844734f"
   },
   {
     "name": "gallery",
     "path": "/gallery",
     "component": "/Users/elizabethturney/modevue/pages/gallery.vue",
-    "chunkName": "pages/gallery"
+    "chunkName": "pages/gallery",
+    "_name": "_9d84e096"
   },
   {
     "name": "kleintools",
     "path": "/kleintools",
     "component": "/Users/elizabethturney/modevue/pages/kleintools.vue",
-    "chunkName": "pages/kleintools"
+    "chunkName": "pages/kleintools",
+    "_name": "_e9ef21c2"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/elizabethturney/modevue/pages/login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_42ee5b0c"
   },
   {
     "name": "overheadline",
     "path": "/overheadline",
     "component": "/Users/elizabethturney/modevue/pages/overheadline.vue",
-    "chunkName": "pages/overheadline"
+    "chunkName": "pages/overheadline",
+    "_name": "_0ec0fd55"
   },
   {
     "name": "products",
     "path": "/products",
     "component": "/Users/elizabethturney/modevue/pages/products.vue",
-    "chunkName": "pages/products"
+    "chunkName": "pages/products",
+    "_name": "_3954ac91"
   },
   {
     "name": "repairs",
     "path": "/repairs",
     "component": "/Users/elizabethturney/modevue/pages/repairs.vue",
-    "chunkName": "pages/repairs"
+    "chunkName": "pages/repairs",
+    "_name": "_d43f9e2e"
   },
   {
     "name": "wheretobuy",
     "path": "/wheretobuy",
     "component": "/Users/elizabethturney/modevue/pages/wheretobuy.vue",
-    "chunkName": "pages/wheretobuy"
+    "chunkName": "pages/wheretobuy",
+    "_name": "_6cd63f91"
   },
   {
     "name": "winchesandtrailers",
     "path": "/winchesandtrailers",
     "component": "/Users/elizabethturney/modevue/pages/winchesandtrailers.vue",
-    "chunkName": "pages/winchesandtrailers"
+    "chunkName": "pages/winchesandtrailers",
+    "_name": "_a69a3b56"
   },
   {
     "name": "article-id",
     "path": "/article/:id?",
     "component": "/Users/elizabethturney/modevue/pages/article/_id.vue",
-    "chunkName": "pages/article/_id"
+    "chunkName": "pages/article/_id",
+    "_name": "_0f536c84"
   },
   {
     "name": "blogEdit-id",
     "path": "/blogEdit/:id?",
     "component": "/Users/elizabethturney/modevue/pages/blogEdit/_id.vue",
-    "chunkName": "pages/blogEdit/_id"
+    "chunkName": "pages/blogEdit/_id",
+    "_name": "_14f70124"
   },
   {
     "name": "category-subCategory",
     "path": "/category/:subCategory?",
     "component": "/Users/elizabethturney/modevue/pages/category/_subCategory.vue",
-    "chunkName": "pages/category/_subCategory"
+    "chunkName": "pages/category/_subCategory",
+    "_name": "_1b7fc933"
   },
   {
     "name": "edit-id",
     "path": "/edit/:id?",
     "component": "/Users/elizabethturney/modevue/pages/edit/_id.vue",
-    "chunkName": "pages/edit/_id"
+    "chunkName": "pages/edit/_id",
+    "_name": "_08099a3c"
   },
   {
     "name": "product-id",
     "path": "/product/:id?",
     "component": "/Users/elizabethturney/modevue/pages/product/_id.vue",
-    "chunkName": "pages/product/_id"
+    "chunkName": "pages/product/_id",
+    "_name": "_15a9637d"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/elizabethturney/modevue/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_7946b7f5"
   }
 ]

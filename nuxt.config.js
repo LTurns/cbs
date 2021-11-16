@@ -13,9 +13,7 @@ const dynamicRoutes = () => {
     .get('https://cbsbackend.herokuapp.com/api/products')
     .then((res) => {
       return res.data.map((product) => {
-        if (product.subCategory.length !== 0) {
-          return '/category/' + product.subCategory
-        }
+        return '/category/' + product.name.toLowerCase()
       })
     })
   const article = axios

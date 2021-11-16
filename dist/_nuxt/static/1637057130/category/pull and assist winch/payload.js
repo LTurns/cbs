@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/category/pull%20and%20assist%20winch", {data:[{}],fetch:{},mutations:[]});

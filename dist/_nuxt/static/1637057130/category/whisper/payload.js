@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/category/whisper", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/category/hurricane", {data:[{}],fetch:{},mutations:[]});
