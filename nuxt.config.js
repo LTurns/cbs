@@ -40,12 +40,16 @@ const dynamicRoutes = () => {
       })
     })
 
-  return product && article && subCategory && edit && blogEdit
+  return Promise.all([product, subCategory, article, edit, blogEdit]).then(
+    (values) => {
+      console.log('yoooo', values.join().split(','))
+      return values.join().split(',')
+    }
+  )
 }
 
 export default {
-  // Target (https://go.nuxtjs.dev/config-target)
-  mode: 'universal',
+  target: 'static',
   server: {
     port: 8000, // default: 3000
     host: '0.0.0.0', // default: localhost
