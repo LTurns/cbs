@@ -42,7 +42,6 @@ const dynamicRoutes = () => {
 
   return Promise.all([product, subCategory, article, edit, blogEdit]).then(
     (values) => {
-      console.log('yoooo', values.join().split(','))
       return values.join().split(',')
     }
   )
