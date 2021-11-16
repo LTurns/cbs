@@ -112,7 +112,7 @@ export default {
 
 @media screen and (max-width: 700px) {
   .fonttitle {
-    font-size: 3.5rem;
+    font-size: 3rem;
     /* max-width: 15ch; */
     margin-bottom: 5%;
     margin-top: 7%;
