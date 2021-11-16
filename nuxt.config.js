@@ -13,17 +13,34 @@ const dynamicRoutes = () => {
     .get('https://cbsbackend.herokuapp.com/api/products')
     .then((res) => {
       return res.data.map((product) => {
-        return '/product/' + product.subCategory
+        if (product.subCategory.length !== 0) {
+          return '/category/' + product.subCategory
+        }
       })
     })
   const article = axios
     .get('https://cbsbackend.herokuapp.com/api/blogs/')
     .then((res) => {
       return res.data.map((blog) => {
-        return '/product/' + blog._id
+        return '/article/' + blog._id
       })
     })
-  return product && article && subCategory
+  const edit = axios
+    .get('https://cbsbackend.herokuapp.com/api/products/')
+    .then((res) => {
+      return res.data.map((product) => {
+        return '/edit/' + product._id
+      })
+    })
+  const blogEdit = axios
+    .get('https://cbsbackend.herokuapp.com/api/blogs/')
+    .then((res) => {
+      return res.data.map((blog) => {
+        return '/blogEdit/' + blog._id
+      })
+    })
+
+  return product && article && subCategory && edit && blogEdit
 }
 
 export default {

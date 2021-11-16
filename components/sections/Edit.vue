@@ -1358,13 +1358,8 @@ export default {
       this.allProducts.forEach((item) => {
         if (!this.subcategoryItems.includes(item.name)) {
           item.subCategory.forEach(async (sub, index) => {
-            console.log('here is the sub', sub)
-            console.log('here is the product nae', this.productArray.name)
             if (sub === this.productArray.name) {
               const subcat = item.subCategory.splice(1, index)
-
-              console.log('yoooo', subcat)
-
               const { data } = await this.$axios.get(
                 `https://cbsbackend.herokuapp.com/api/products/name/${item.name}`,
                 config
