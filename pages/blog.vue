@@ -2,7 +2,7 @@
   <section class="blue-grey darken-4">
     <v-row no-gutters>
       <v-col cols="12" class="yellow darken-2">
-        <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
+        <SectionsHeroAlt :hero-alt="heroAlt" class="white" />
         <SectionsBlockQuote
           ><slot
             >Browse our latest blogs for all of our most recent products and

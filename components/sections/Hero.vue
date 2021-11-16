@@ -4,7 +4,7 @@
       <v-row align="center" justify="center" style="margin-top: 3%">
         <v-col cols="12" md="6" sm="12" class="left">
           <div
-            class="fonttitle black--text font-weight-black"
+            class="fonttitle grey--text text--lighten-4 font-weight-black"
             style="
               border-bottom: 2px solid #fde36d;
               box-shadow: 0 4px 6px -6px #222;
@@ -14,14 +14,14 @@
             {{ carouselsData[0].heading.toUpperCase() }}
           </div>
 
-          <p style="font-size: 16px; margin-top: 5%" class="black--text">
+          <p style="font-size: 16px; margin-top: 5%" class="white--text">
             {{ carouselsData[0].subHeading }}
           </p>
-          <!-- <v-btn
+          <v-btn
             :x-large="$vuetify.breakpoint.smAndUp"
             class="black--text yellow darken-1 text-center"
             >With a new battery powered range</v-btn
-          > -->
+          >
         </v-col>
         <!-- </v-row>
       <v-row style="margin-bottom: 2%"> -->
@@ -110,10 +110,12 @@ export default {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .fonttitle {
-    font-size: 2rem;
-    max-width: 100%;
+    font-size: 3.5rem;
+    /* max-width: 15ch; */
+    margin-bottom: 5%;
+    margin-top: 7%;
   }
 }
 

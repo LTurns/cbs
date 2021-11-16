@@ -2,10 +2,24 @@
   <section>
     <v-container fluid>
       <v-row>
-        <v-col v-for="post in data" :key="post.id" cols="12" md="3">
+        <v-col
+          v-for="post in data"
+          :key="post.id"
+          cols="12"
+          md="3"
+          align="center"
+          justify="center"
+        >
           <nuxt-link :to="`../article/${post._id}`">
-            <v-card max-width="450">
-              <v-img height="200px" :src="post.img[0].image"> </v-img>
+            <v-card class="blogheight">
+              <v-img
+                height="200px"
+                :src="
+                  'https://cbs-images.s3.amazonaws.com/blog/' +
+                  post.img[0].image
+                "
+              >
+              </v-img>
               <v-card-subtitle class="pb-0">
                 <p text small disabled class="px-0">
                   {{ post.info }}
@@ -38,3 +52,17 @@ export default {
   },
 }
 </script>
+
+<style>
+.blogheight {
+  height: 475px;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 700px) {
+  .blogheight {
+    height: 400px;
+    max-width: 400px;
+  }
+}
+</style>

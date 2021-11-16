@@ -51,28 +51,6 @@
                           <td>
                             <p>{{ item.name.toUpperCase() }}</p>
                           </td>
-                          <td v-show="!isMobile">
-                            <p>{{ item.productId }}</p>
-                          </td>
-
-                          <td v-show="!isMobile">
-                            <p style="text-align: center">
-                              {{ item.enquiries }}
-                            </p>
-                          </td>
-                          <td>
-                            <v-img
-                              :src="item.mainImg"
-                              alt=""
-                              width="50"
-                              :lazy-src="item.mainImg"
-                              aspect-ratio="1"
-                              class="image grey lighten-2 rounded-lg mt-5 mb-10"
-                            ></v-img>
-                          </td>
-                          <td v-show="!isMobile">
-                            <p>{{ item.category }}</p>
-                          </td>
 
                           <td>
                             <nuxt-link :to="`/edit/${item._id}`">
@@ -302,15 +280,7 @@ export default {
       blogList: [],
       dialog: false,
       categories: ['Fibre Blowing', 'Klein Tools', 'Utilities', 'Telecoms'],
-      headings: [
-        'Name',
-        'ProductId',
-        'Enquiries',
-        'Main Image',
-        'Category',
-        'Edit',
-        'Delete',
-      ],
+      headings: ['Name', 'Edit', 'Delete'],
       blogHeadings: ['Title', 'Date', 'Categories', 'Edit', 'Delete'],
       items: [{}],
       product: null,
@@ -355,7 +325,7 @@ export default {
       }
 
       if (this.isMobile) {
-        this.headings = ['Name', 'Main Image', 'Edit', 'Delete']
+        this.headings = ['Name', 'Edit', 'Delete']
         this.blogHeadings = ['Title', 'Edit', 'Delete']
       }
     },

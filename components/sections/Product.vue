@@ -15,11 +15,13 @@
               transition="fade-transition"
               style="margin-top: 5%; margin-bottom: 10%"
             >
-              <v-img
-                class="carouselimage"
-                :src="img.image"
-                :lazy-src="img.image"
-              />
+              <a target="_blank" :href="img.image">
+                <v-img
+                  class="carouselimage"
+                  :src="img.image"
+                  :lazy-src="img.image"
+                />
+              </a>
             </v-carousel-item>
           </v-carousel>
         </v-col>
@@ -468,6 +470,17 @@ table tbody tr:nth-child(2n) td {
 
 .v-progress-circular {
   margin: 1rem;
+}
+
+.carouselheight {
+  height: 80vh;
+}
+
+.carouselimage {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 50%;
 }
 
 @media screen and (min-width: 1000px) {

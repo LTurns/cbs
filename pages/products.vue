@@ -1,18 +1,15 @@
 <template>
-  <section class="blue-grey darken-4">
+  <section class="grey lighten-4">
     <v-row no-gutters>
       <v-col cols="12" align="center">
-        <SectionsHeroAlt
-          :hero-alt="heroAlt"
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
-        />
+        <SectionsHeroAlt :hero-alt="heroAlt" class="white" />
         <v-container>
           <SectionsMainSearch :data="filteredList" category="general" />
           <SectionsIntro
             class="pt-10 pb-10"
             style="margin-bottom: 30px"
             color="white"
-            text="text-uppercase black--text"
+            text="text-uppercase white--text"
           />
         </v-container>
         <div class="yellow darken-2">

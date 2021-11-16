@@ -6,8 +6,8 @@
     </v-col>
     <!-- </v-row> -->
     <v-row no-gutters>
-      <v-col cols="12" class="blue-grey darken-4">
-        <SectionsBlockQuote text="white--text">
+      <v-col cols="12" class="grey lighten-3">
+        <SectionsBlockQuote text="black--text">
           <slot>
             CBS Products (KT), Ltd. is a leading provider of specialised
             equipment solutions for the construction of power transmission lines
@@ -112,7 +112,7 @@ export default {
 
 <style>
 .hero {
-  background-image: url('../static/orangeWire.png');
+  background-image: url('../static/wires.jpeg');
   background-size: cover;
 }
 
