@@ -2,7 +2,7 @@
 <template>
   <section>
     <v-container fluid>
-      <v-row class="mx-auto pb-5" style="max-width: 1200px" mb="10">
+      <v-row class="mx-auto pb-5" mb="10">
         <v-col v-for="(plan, ix) in data" :key="`plan-${ix}`" cols="12" md="4">
           <!-- <div v-show="plan.subCategory.length == 0"> -->
           <v-hover v-slot="{ hover }" class="card">

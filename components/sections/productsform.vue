@@ -20,11 +20,13 @@
           </option>
         </select> -->
         <v-select
-          :items="items"
+          v-model="item"
           attach
-          chips
-          label="Select Products"
           multiple
+          chips
+          :items="items"
+          label="Select Products"
+          @change="showItems"
         ></v-select>
       </v-col>
     </v-row>
@@ -42,7 +44,8 @@
     </v-row>
     <v-row>
       <v-col
-        ><v-btn class="my-2" color="primary">SEND MESSAGE</v-btn
+        ><v-btn class="my-2" color="primary" @click="sendEmail"
+          >SEND MESSAGE</v-btn
         ><v-btn class="my-2 ml-3">clear</v-btn></v-col
       >
     </v-row>
@@ -50,44 +53,64 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   async fetch() {
+    const config = {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    }
+
     try {
-      const result = await axios.get(
-        'https://tranquil-basin-55259.herokuapp.com/product-categories',
-        {}
+      const { data } = await this.$axios.get(
+        'https://cbsbackend.herokuapp.com/api/products',
+        config
       )
-      // this.products
-      //   .push(result.data)
-      //   // .filter((el) => el.main_category.name === 'Fibre Blowing')
-      //   .reverse()
-      // result.data.map((el) => this.items.push(el.name))
 
-      for (const product of result.data) {
-        this.items.push(product.name)
+      if (data.length !== 0) {
+        data.forEach((product) => {
+          this.items.push(product.name)
+        })
       }
-
-      return this.items
     } catch (error) {
-      // if (this.search !== '') {
-      //   this.products = this.$store.getters.products.filter((box) => {
-      //     return box.name.toLowerCase().includes(this.search.toLowerCase())
-      //   })
-      // }
-      this.products = this.$store.getters.Products
-
-      return this.products
+      throw new Error(error)
     }
   },
   data() {
     return {
       products: [],
       items: [],
+      item: [],
     }
   },
-  methods() {},
+  methods: {
+    async sendEmail() {
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+
+      const data = {
+        name: 'heyyy',
+        email: 'lizzieturney@gmail.com',
+        message: 'yesss',
+        product: this.item,
+      }
+
+      try {
+        await this.$axios.post(
+          'https://cbsbackend.herokuapp.com/api/email/enquiry',
+          data,
+          config
+        )
+
+        return 'message successfully sent'
+      } catch (error) {
+        throw new Error(error)
+      }
+    },
+  },
 }
 </script>
 

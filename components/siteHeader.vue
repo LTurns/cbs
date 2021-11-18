@@ -16,7 +16,7 @@
     </v-navigation-drawer>
     <v-app-bar fixed app hide-on-scroll height="64" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
-      <nuxt-link to="/" class="d-flex">
+      <nuxt-link to="/">
         <Logo />
       </nuxt-link>
       <v-spacer />
@@ -69,7 +69,7 @@ export default {
           to: '/about',
         },
         {
-          icon: 'mdi-cash-usd',
+          icon: 'fas fa-list',
           title: 'Where To Buy',
           to: '/wheretobuy',
         },
@@ -97,3 +97,13 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media screen and (max-width: 658px) {
+  img {
+    display: block;
+    margin-left: auto;
+    float: right;
+  }
+}
+</style>

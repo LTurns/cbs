@@ -4,7 +4,7 @@
       <v-row align="center" justify="center" style="margin-top: 3%">
         <v-col cols="12" md="6" sm="12" class="left">
           <div
-            class="fonttitle grey--text text--lighten-4 font-weight-black"
+            class="mainfonttitle grey--text text--lighten-4 font-weight-black"
             style="
               border-bottom: 2px solid #fde36d;
               box-shadow: 0 4px 6px -6px #222;
@@ -76,7 +76,7 @@ export default {
 
 <style>
 @media screen and (min-width: 1000px) {
-  .fonttitle {
+  .mainfonttitle {
     font-size: 3.6rem;
     max-width: 16ch;
     margin-bottom: 1%;
@@ -87,7 +87,7 @@ export default {
 }
 
 @media screen and (min-width: 1500px) {
-  .fonttitle {
+  .mainfonttitle {
     font-size: 5rem;
     max-width: 16ch;
     margin-bottom: 1%;
@@ -98,7 +98,7 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-  .fonttitle {
+  .mainfonttitle {
     font-size: 3rem;
     margin-bottom: 5%;
     max-width: 30ch;
@@ -111,7 +111,7 @@ export default {
 }
 
 @media screen and (max-width: 700px) {
-  .fonttitle {
+  .mainfonttitle {
     font-size: 3rem;
     /* max-width: 15ch; */
     margin-bottom: 5%;

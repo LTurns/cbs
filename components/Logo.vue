@@ -1,5 +1,5 @@
 <template>
-  <img src="/Logo.svg" width="300" height="55" />
+  <img src="/Logo.svg" class="logo" width="300" height="55" />
 </template>
 
 <style scoped>

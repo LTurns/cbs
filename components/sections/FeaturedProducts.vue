@@ -53,12 +53,7 @@
               >
                 <div v-if="!plan.hasSubCategories">
                   <nuxt-link class="link" :to="`/product/${plan._id}`">
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      text
-                      class="my-3"
-                      outlined
-                      black
+                    <v-btn x-large text class="my-3" outlined black
                       ><v-icon left large color="primary">mdi-play</v-icon
                       >View</v-btn
                     >
@@ -73,7 +68,9 @@
                       :x-large="$vuetify.breakpoint.smAndUp"
                       text
                       class="my-3"
+                      color="success"
                       outlined
+                      bold
                       black
                       ><v-icon left large color="primary">mdi-play</v-icon
                       >View</v-btn
@@ -83,7 +80,7 @@
               </div>
               <!-- Product ID -->
               <div v-if="plan.productId.length">
-                <div
+                <!-- <div
                   class="d-inline black--text pa-2"
                   style="
                     position: absolute;
@@ -94,6 +91,25 @@
                   "
                 >
                   {{ plan.productId }}
+                </div> -->
+                <div
+                  class="pa-5"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    margin-left: 2%;
+                  "
+                >
+                  <div
+                    class="d-inline mt-10 pa-2 blue-grey darken-4 white--text"
+                  >
+                    Product ID
+                  </div>
+                  <div class="d-inline yellow darken-2 black--text pa-2">
+                    {{ plan.productId }}
+                  </div>
                 </div>
               </div>
               <div v-else>

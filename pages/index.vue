@@ -27,9 +27,21 @@
     </v-row>
     <v-row no-gutters>
       <v-col>
-        <h3 class="text-h3 text-center font-weight-bold mb-xs-4 mt-10 mb-5">
+        <div
+          class="fonttitle black--text text--lighten-4 font-weight-black"
+          align="center"
+          style="
+            border-bottom: 2px solid #fde36d;
+            box-shadow: 0 4px 6px -6px #222;
+            line-height: 1;
+            padding: 3%;
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-top: 3%;
+          "
+        >
           FEATURED PRODUCTS
-        </h3>
+        </div>
         <!-- </v-responsive> -->
         <SectionsFeaturedProducts :data="filteredList" />
       </v-col>
@@ -112,7 +124,7 @@ export default {
 
 <style>
 .hero {
-  background-image: url('../static/wires.jpeg');
+  background-image: url('https://cbs-images.s3.amazonaws.com/wires.jpeg');
   background-size: cover;
 }
 

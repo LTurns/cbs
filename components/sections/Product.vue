@@ -1,9 +1,9 @@
 <template>
   <section>
     <div v-if="$store.state.product.length !== 0">
-      <v-row>
+      <v-row class="carouselheight">
         <v-col cols="12" md="6" sm="12">
-          <v-carousel class="carouselheight" hide-delimiter-background>
+          <v-carousel hide-delimiter-background>
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
@@ -33,6 +33,7 @@
                 text-md-h2 text-sm-h3 text-h4
                 font-weight-black
                 text-center
+                black--text
               "
             >
               {{ product.name.toUpperCase() }}
@@ -41,15 +42,15 @@
               {{ product.intro }}
             </p>
             <div class="pa-5">
-              <div class="d-inline mt-10 pa-2 yellow accent-4 white--text">
+              <div class="d-inline mt-10 pa-2 blue-grey darken-4 white--text">
                 Product ID
               </div>
-              <div class="d-inline black white--text pa-2">
+              <div class="d-inline yellow darken-2 black--text pa-2">
                 {{ product.productId }}
               </div>
             </div>
             <br /><br />
-            <nuxt-link exact :to="`/enquiry`" class="learn pa-5">
+            <nuxt-link exact :to="`/enquiry`" class="learn pa-5 mr-10 mb-10">
               <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
                 ><v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn
@@ -83,84 +84,123 @@
         <v-tabs-items v-model="tab">
           <v-tab-item :key="1" value="features">
             <v-row mt="10" ml="10" mr="10" pb="10" class="blue-grey darken-4">
-              <!-- <v-row class="mx-auto mb-7 mt-3"> -->
-              <v-col cols="12" md="12" sm="12">
-                <div
-                  style="
-                    line-height: 30px;
-                    font-size: 15px;
-                    margin-bottom: 20px;
-                  "
-                >
+              <v-card-text>
+                <v-col cols="12" md="12" sm="12">
                   <div
-                    v-for="paragraph in product.description"
-                    :key="paragraph.id"
+                    class="
+                      fonttitle
+                      white--text
+                      text--lighten-4
+                      font-weight-black
+                    "
+                    style="
+                      border-bottom: 2px solid #fde36d;
+                      box-shadow: 0 4px 6px -6px #222;
+                      line-height: 1;
+                      padding: 3%;
+                      margin-left: 1%;
+                      margin-right: 1%;
+                    "
                   >
-                    <p
-                      class="white--text mt-10"
-                      style="
-                        line-height: 30px;
-                        font-size: 16px;
-                        margin-bottom: 20px;
-                        padding-left: 20px;
-                        padding-right: 20px;
-                      "
-                    >
-                      {{ paragraph.paragraph }}
-                    </p>
+                    FEATURES OF THE {{ product.name.toUpperCase() }}
                   </div>
-                </div>
-                <v-card class="ml-2 mr-2 mb-2">
-                  <v-col
-                    v-for="feature in product.features"
-                    :key="feature.id"
-                    cols="12"
-                    md="12"
-                    sm="12"
-                    align="center"
+                  <div
+                    style="
+                      line-height: 30px;
+                      font-size: 15px;
+                      margin-bottom: 20px;
+                    "
                   >
-                    <!-- <v-list-item-content> -->
-                    <!-- <v-toolbar color="yellow" light> -->
-                    <h4
-                      class="
-                        text-uppercase
-                        yellow
-                        lighten-2
-                        text-center
-                        mt-10
-                        mb-3
-                        pt-5
-                        pl-2
-                        pr-2
-                        pb-5
-                      "
-                      style="
-                        letter-spacing: 0.15em;
-                        border-bottom: 2px solid #fde36d;
-                        box-shadow: 0 10px 10px -10px;
-                      "
-                      v-text="feature.heading"
-                    ></h4>
-                    <!-- </v-toolbar> -->
-                    <v-list-item
-                      v-for="item in feature.list"
-                      :key="item.listItem"
-                      class="list pt-0 lighten-2"
-                      style="text-align: left"
+                    <div
+                      v-for="paragraph in product.description"
+                      :key="paragraph.id"
                     >
-                      {{ item.listItem }}
-                    </v-list-item>
-                    <!-- </v-list-item-content> -->
-                    <!-- </v-hover> -->
-                    <!-- <v-card-text>Features</v-card-text> -->
-                  </v-col>
-                </v-card>
-              </v-col>
+                      <p
+                        class="white--text mt-10"
+                        style="
+                          line-height: 30px;
+                          font-size: 16px;
+                          margin-bottom: 20px;
+                          padding-left: 20px;
+                          padding-right: 20px;
+                        "
+                      >
+                        {{ paragraph.paragraph }}
+                      </p>
+                    </div>
+                  </div>
+                  <v-card class="ml-2 mr-2 mb-2">
+                    <v-col
+                      v-for="feature in product.features"
+                      :key="feature.id"
+                      cols="12"
+                      md="12"
+                      sm="12"
+                      align="center"
+                    >
+                      <div
+                        class="
+                          fonttitle
+                          black--text
+                          text--lighten-4
+                          font-weight-black
+                        "
+                        style="
+                          border-bottom: 2px solid #fde36d;
+                          box-shadow: 0 4px 6px -6px #222;
+                          line-height: 1;
+                          padding: 3%;
+                        "
+                      >
+                        {{ feature.heading.toUpperCase() }}
+                      </div>
+                      <!-- </v-toolbar> -->
+                      <!-- <v-list> -->
+                      <div v-for="item in feature.list" :key="item.listItem">
+                        <!-- <v-list-tile> -->
+                        <ul>
+                          <li
+                            class="list pt-0 lighten-2"
+                            style="text-align: left"
+                          >
+                            {{ item.listItem }}
+                          </li>
+                        </ul>
+                        <!-- </v-list-tile> -->
+                      </div>
+                      <!-- </v-list> -->
+                      <!-- </v-list-item-content> -->
+                      <!-- </v-hover> -->
+                      <!-- <v-card-text>Features</v-card-text> -->
+                    </v-col>
+                  </v-card>
+                </v-col>
+              </v-card-text>
               <!-- </v-row> -->
             </v-row>
           </v-tab-item>
           <v-tab-item :key="2" value="accessories">
-            <v-card>
+            <v-card class="blue-grey darken-4">
+              <v-card-text>
+                <div
+                  class="
+                    fonttitle
+                    white--text
+                    text--lighten-4
+                    font-weight-black
+                  "
+                  style="
+                    border-bottom: 2px solid #fde36d;
+                    box-shadow: 0 4px 6px -6px #222;
+                    line-height: 1;
+                    padding: 3%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                  "
+                >
+                  ACCESSORIES OF THE {{ product.name.toUpperCase() }}
+                </div>
+              </v-card-text>
               <SectionsFeaturedProducts
                 :color="'blue-grey darken-4'"
                 :data="product.accessories"
@@ -170,6 +210,24 @@
           <v-tab-item :key="3" value="config">
             <v-card class="blue-grey darken-4">
               <v-card-text>
+                <div
+                  class="
+                    fonttitle
+                    white--text
+                    text--lighten-4
+                    font-weight-black
+                  "
+                  style="
+                    border-bottom: 2px solid #fde36d;
+                    box-shadow: 0 4px 6px -6px #222;
+                    line-height: 1;
+                    padding: 3%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                  "
+                >
+                  CONFIGURING THE {{ product.name.toUpperCase() }}
+                </div>
                 <div
                   v-for="paragraph in product.configurationIntro"
                   :key="paragraph.id"
@@ -210,7 +268,7 @@
                   class="flex-row mr-4 ml-4"
                 >
                   <v-col cols="12" md="12" align-self="center">
-                    <h4
+                    <!-- <h4
                       class="
                         text-uppercase
                         yellow
@@ -229,14 +287,29 @@
                         box-shadow: 0 4px 6px -6px;
                       "
                       v-text="table.title"
-                    ></h4>
+                    ></h4> -->
+                    <div
+                      class="
+                        fonttitle
+                        black--text
+                        text--lighten-4
+                        font-weight-black
+                      "
+                      style="
+                        border-bottom: 2px solid #fde36d;
+                        box-shadow: 0 4px 6px -6px #222;
+                        line-height: 1;
+                        padding: 3%;
+                      "
+                    >
+                      {{ table.title.toUpperCase() }}
+                    </div>
                   </v-col>
                   <v-col cols="12" md="4" align-self="center">
                     <v-img
                       max-height="450"
                       :src="table.image"
-                      max-width="300"
-                      class="mx-auto"
+                      class="configimage mx-auto"
                       :lazy-src="table.image"
                     >
                     </v-img>
@@ -295,26 +368,22 @@
             <v-card class="blue-grey darken-4">
               <div v-for="video in product.videos" :key="video.title">
                 <v-col cols="12" md="12" align-self="center">
-                  <h4
+                  <div
                     class="
-                      text-uppercase
-                      yellow
-                      lighten-2
-                      text-center
-                      mt-10
-                      mb-3
-                      pt-5
-                      pl-2
-                      pr-2
-                      pb-5
+                      fonttitle
+                      white--text
+                      text--lighten-4
+                      font-weight-black
                     "
                     style="
-                      letter-spacing: 0.15em;
                       border-bottom: 2px solid #fde36d;
-                      box-shadow: 0 4px 6px -6px;
+                      box-shadow: 0 4px 6px -6px #222;
+                      line-height: 1;
+                      padding: 3%;
                     "
-                    v-text="video.title"
-                  ></h4>
+                  >
+                    {{ video.title.toUpperCase() }}
+                  </div>
                   <!-- <div
                       v-for="video in product.video.split(',')"
                       :key="video.id"
@@ -403,9 +472,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .list {
   font-size: 14px;
+  border-bottom: 1px solid rgb(236, 235, 235);
+  &:before {
+    content: counter(fancy);
+    background: rgb(255, 221, 83);
+    border-radius: 50%;
+    color: rgb(255, 221, 83);
+    display: inline-block;
+    text-align: center;
+    padding: 0.1rem 0.5rem;
+    margin: 1rem;
+  }
 }
 
 .configInfo {
@@ -421,14 +501,14 @@ export default {
 th {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: rgb(236, 229, 229);
+  background-color: rgb(48, 55, 61);
   padding: 20px;
   text-transform: uppercase;
-  color: black;
+  color: white;
 }
 
 table tbody tr:nth-child(2n) td {
-  background: rgb(243, 239, 239);
+  background: rgb(253, 235, 181);
   color: black;
 }
 
@@ -470,81 +550,11 @@ table tbody tr:nth-child(2n) td {
   margin: 1rem;
 }
 
-.carouselheight {
-  height: 80vh;
-}
-
 .carouselimage {
   margin-left: auto;
   margin-right: auto;
   height: auto;
   width: 50%;
-}
-
-@media screen and (min-width: 1000px) {
-  .carouselheight {
-    height: 80vh;
-  }
-
-  .carouselimage {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .carouselimage {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 30%;
-  }
-
-  .carouselheight {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 658px) {
-  .table {
-    margin: 2%;
-    margin-bottom: 5%;
-  }
-
-  .carouselheight {
-    height: 60vh;
-  }
-
-  .carouselimage {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 70%;
-  }
-
-  th {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 14px;
-  }
-
-  table td {
-    text-align: left;
-    font-size: 11px;
-    padding: 10px;
-  }
-  table td:last-child {
-    border-right: none;
-  }
-  table tbody tr:nth-child(2n) td {
-    background: rgb(243, 239, 239);
-  }
-  .video {
-    max-width: 300px;
-    max-height: 200px;
-  }
 }
 
 .product-title {
@@ -583,5 +593,101 @@ th {
 td {
   padding: 1rem 2rem;
   color: black;
+}
+
+.fonttitle {
+  font-size: 2rem;
+  max-width: 100ch;
+  margin-bottom: 1%;
+}
+
+.configimage {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1500px) {
+  .carouselheight {
+    height: 80vh;
+  }
+
+  .carouselimage {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  /* .carouselheight {
+    height: 80vh;
+  } */
+
+  .carouselimage {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .carouselimage {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 30%;
+  }
+
+  .carouselheight {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 658px) {
+  .table {
+    margin: 2%;
+    margin-bottom: 5%;
+  }
+
+  .carouselheight {
+    height: 100%;
+  }
+
+  .carouselimage {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 60%;
+  }
+
+  th {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+
+  table td {
+    text-align: left;
+    font-size: 11px;
+    padding: 10px;
+  }
+  table td:last-child {
+    border-right: none;
+  }
+  table tbody tr:nth-child(2n) td {
+    background: rgb(243, 239, 239);
+  }
+  .video {
+    max-width: 300px;
+    max-height: 200px;
+  }
+
+  .configimage {
+    max-width: 100px;
+  }
+  .fonttitle {
+    font-size: 1.5rem;
+    max-width: 100ch;
+    margin-bottom: 1%;
+  }
 }
 </style>
