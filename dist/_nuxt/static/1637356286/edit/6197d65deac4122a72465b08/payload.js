@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/edit/6197d65deac4122a72465b08", {data:[{}],fetch:{},mutations:[]});

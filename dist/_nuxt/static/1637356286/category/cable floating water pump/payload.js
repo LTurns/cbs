@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/category/cable%20floating%20water%20pump", {data:[{}],fetch:{},mutations:[]});

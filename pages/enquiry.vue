@@ -6,7 +6,7 @@
           :hero-alt="heroAlt"
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
         />
-        <v-responsive
+        <!-- <v-responsive
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
           class="max-auto mx-auto text-center"
         >
@@ -30,7 +30,7 @@
               </v-col>
             </v-row>
           </div></v-responsive
-        >
+        > -->
         <v-container>
           <v-row class="py-16 ml-20">
             <v-col md="9" cols="12">

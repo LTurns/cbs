@@ -705,7 +705,7 @@
                               </table>
                               <v-btn
                                 class="btn btn-info float-right mt-10"
-                                @click="addTableRow(index)"
+                                @click="addTableRow(index, i)"
                               >
                                 +
                               </v-btn>
@@ -1333,17 +1333,17 @@ export default {
     deleteTableRow(tableIndex, i) {
       this.productArray.tables[tableIndex].items.splice(i, 1)
     },
-    addTableRow(tableIndex) {
-      this.productArray.tables[tableIndex].items.push({
+    addTableRow(tableIndex, i) {
+      this.productArray.tables[tableIndex].items[i].push({
         'Item Description': '',
         'Part No': '',
       })
     },
     deleteConfigTable(index) {
-      this.tables.splice(index, 1)
+      this.productArray.tables.splice(index, 1)
     },
     deleteVideo(index) {
-      this.videos.splice(index, 1)
+      this.productArray.videos.splice(index, 1)
     },
     async save() {
       const data = {

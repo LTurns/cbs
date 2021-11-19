@@ -1,21 +1,20 @@
 <template>
   <section>
     <div v-if="$store.state.product.length !== 0">
-      <v-row class="carouselheight">
-        <v-col cols="12" md="6" sm="12">
-          <v-carousel hide-delimiter-background>
+      <v-row align="center" justify="center" no-gutters>
+        <v-col cols="12" md="6" sm="12" class="white">
+          <v-carousel hide-delimiter-background height="100%">
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
               reverse-transition="fade-transition"
               transition="fade-transition"
-              style="margin-top: 5%; margin-bottom: 10%"
             >
               <a target="_blank" :href="img.image">
                 <v-img
-                  class="carouselimage"
                   :src="img.image"
                   :lazy-src="img.image"
+                  style="transform: scale(0.8)"
                 />
               </a>
             </v-carousel-item>
@@ -38,9 +37,28 @@
             >
               {{ product.name.toUpperCase() }}
             </h1>
-            <p class="mt-10 pa-5">
+            <!-- <p class="mt-10 pa-5">
               {{ product.intro }}
-            </p>
+            </p> -->
+
+            <div
+              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+            >
+              <div v-for="paragraph in product.description" :key="paragraph.id">
+                <p
+                  class="black--text mt-10"
+                  style="
+                    line-height: 30px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                  "
+                >
+                  {{ paragraph.paragraph }}
+                </p>
+              </div>
+            </div>
             <div class="pa-5">
               <div class="d-inline mt-10 pa-2 blue-grey darken-4 white--text">
                 Product ID
@@ -94,8 +112,6 @@
                       font-weight-black
                     "
                     style="
-                      border-bottom: 2px solid #fde36d;
-                      box-shadow: 0 4px 6px -6px #222;
                       line-height: 1;
                       padding: 3%;
                       margin-left: 1%;
@@ -104,7 +120,7 @@
                   >
                     FEATURES OF THE {{ product.name.toUpperCase() }}
                   </div>
-                  <div
+                  <!-- <div
                     style="
                       line-height: 30px;
                       font-size: 15px;
@@ -128,7 +144,7 @@
                         {{ paragraph.paragraph }}
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                   <v-card class="ml-2 mr-2 mb-2">
                     <v-col
                       v-for="feature in product.features"
@@ -158,11 +174,8 @@
                       <!-- <v-list> -->
                       <div v-for="item in feature.list" :key="item.listItem">
                         <!-- <v-list-tile> -->
-                        <ul>
-                          <li
-                            class="list pt-0 lighten-2"
-                            style="text-align: left"
-                          >
+                        <ul class="list">
+                          <li style="text-align: left">
                             {{ item.listItem }}
                           </li>
                         </ul>
@@ -190,8 +203,6 @@
                     font-weight-black
                   "
                   style="
-                    border-bottom: 2px solid #fde36d;
-                    box-shadow: 0 4px 6px -6px #222;
                     line-height: 1;
                     padding: 3%;
                     margin-left: 1%;
@@ -218,8 +229,6 @@
                     font-weight-black
                   "
                   style="
-                    border-bottom: 2px solid #fde36d;
-                    box-shadow: 0 4px 6px -6px #222;
                     line-height: 1;
                     padding: 3%;
                     margin-left: 1%;
@@ -375,12 +384,7 @@
                       text--lighten-4
                       font-weight-black
                     "
-                    style="
-                      border-bottom: 2px solid #fde36d;
-                      box-shadow: 0 4px 6px -6px #222;
-                      line-height: 1;
-                      padding: 3%;
-                    "
+                    style="line-height: 1; padding: 3%"
                   >
                     {{ video.title.toUpperCase() }}
                   </div>
@@ -474,18 +478,10 @@ export default {
 
 <style lang="scss">
 .list {
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 1px solid rgb(236, 235, 235);
-  &:before {
-    content: counter(fancy);
-    background: rgb(255, 221, 83);
-    border-radius: 50%;
-    color: rgb(255, 221, 83);
-    display: inline-block;
-    text-align: center;
-    padding: 0.1rem 0.5rem;
-    margin: 1rem;
-  }
+  list-style-type: square;
+  padding: 2%;
 }
 
 .configInfo {
@@ -519,7 +515,7 @@ table tbody tr:nth-child(2n) td {
 
 td {
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: black;
@@ -550,12 +546,12 @@ table tbody tr:nth-child(2n) td {
   margin: 1rem;
 }
 
-.carouselimage {
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 50%;
-}
+// .carouselimage {
+//   margin-left: auto;
+//   margin-right: auto;
+//   height: auto;
+//   width: 50%;
+// }
 
 .product-title {
   text-transform: uppercase;
@@ -605,41 +601,34 @@ td {
   max-width: 300px;
 }
 
-@media screen and (max-width: 1500px) {
+// .carouselimage {
+//   // display: block;
+//   object-fit: cover;
+// }
+
+@media screen and (min-width: 1500px) {
   .carouselheight {
-    height: 80vh;
-  }
-
-  .carouselimage {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50%;
+    height: 100vh;
   }
 }
 
-@media screen and (min-width: 1100px) {
-  /* .carouselheight {
-    height: 80vh;
-  } */
-
-  .carouselimage {
-    width: 50%;
-    height: auto;
-  }
-}
+// @media screen and (min-width: 1900px) {
+//   .carouselheight {
+//     height: 80vh;
+//   }
+// }
 
 @media screen and (max-width: 1100px) {
-  .carouselimage {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 30%;
-  }
+  // .carouselimage {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   height: auto;
+  //   width: 30%;
+  // }
 
-  .carouselheight {
-    height: 100%;
-  }
+  // .carouselheight {
+  //   height: 100%;
+  // }
 }
 
 @media screen and (max-width: 658px) {
@@ -648,16 +637,16 @@ td {
     margin-bottom: 5%;
   }
 
-  .carouselheight {
-    height: 100%;
-  }
+  // .carouselheight {
+  //   height: 100%;
+  // }
 
-  .carouselimage {
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 60%;
-  }
+  // .carouselimage {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   height: auto;
+  //   width: 60%;
+  // }
 
   th {
     padding-left: 10px;
@@ -689,5 +678,8 @@ td {
     max-width: 100ch;
     margin-bottom: 1%;
   }
+}
+
+.carousel {
 }
 </style>
