@@ -3,7 +3,7 @@
     <div v-if="$store.state.product.length !== 0">
       <v-row no-gutters>
         <v-col cols="12" md="6" sm="12" class="white">
-          <v-carousel hide-delimiter-background height="100%">
+          <v-carousel hide-delimiter-background height="100%" min-height="70vh">
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
@@ -32,6 +32,7 @@
                 mt-10
                 mb-10
                 mr-10
+                ml-15
               "
             >
               {{ product.name.toUpperCase() }}
@@ -39,7 +40,7 @@
             <!-- <p class="mt-10 pa-5">
               {{ product.intro }}
             </p> -->
-            <div>
+            <div class="ml-15">
               <div class="d-inline mt-10 pa-2 blue-grey darken-4 white--text">
                 ID
               </div>
@@ -48,7 +49,7 @@
               </div>
             </div>
             <br /><br />
-            <nuxt-link exact :to="`/enquiry`" class="learn">
+            <nuxt-link exact :to="`/enquiry`" class="learn ml-15">
               <v-btn
                 :x-large="$vuetify.breakpoint.smAndUp"
                 color="green darken-2"
@@ -62,6 +63,7 @@
 
             <div
               style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
+              class="ml-10 mr-10"
             >
               <div v-for="paragraph in product.description" :key="paragraph.id">
                 <p
