@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-10 pb-10 blockquote-section">
+  <section class="pt-5 pb-5 blockquote-section">
     <blockquote :class="`${text} classy-bq`">
       <slot> </slot>
     </blockquote>
@@ -19,13 +19,14 @@ export default {
 
 <style>
 .classy-bq {
-  border-left: 5px solid rgb(240, 217, 11);
-  margin: 1.5em 20px;
+  border-left: 2px solid #fde36d;
+  box-shadow: 4px 0px 6px -6px #222;
+  margin: 1rem 20px;
   padding: 0.7em 25px;
 }
 
 .blockquote-section {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   opacity: 0.95;
   padding: 20px;

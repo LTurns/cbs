@@ -26,7 +26,7 @@ export default {
         {
           src: '',
           heading: ' WHERE TO BUY ',
-          icon: 'mdi-cash-usd',
+          icon: 'mdi-call-split',
         },
       ],
     }

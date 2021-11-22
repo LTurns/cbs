@@ -33,14 +33,14 @@
         > -->
         <v-container>
           <v-row class="py-16 ml-20">
-            <v-col md="9" cols="12">
+            <v-col md="8" cols="12">
               <p class="mb-10 ml-20 mr-20">
                 Please enquire about a product using the form below.
                 Alternatively, our consultant would be glad to assist.
               </p>
               <productsform />
             </v-col>
-            <v-col md="3" cols="12">
+            <v-col md="4" cols="12">
               <div>
                 <h3
                   class="text-h6 text-center font-weight-light mb-xs-4 mb-5"

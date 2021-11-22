@@ -6,52 +6,26 @@
           :hero-alt="heroAlt"
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
         />
-        <v-responsive
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
-          class="max-auto mx-auto text-center"
-        >
-          <div class="hero-text" style="margin-top: 5px; margin-bottom: 5px">
-            <v-row>
-              <v-col cols="12" md="6">
-                <blockquote>
-                  <a class="email black--text" href="tel:01572723665"
-                    >Tel: +44 (0) 1572 723 665</a
-                  >
-                </blockquote>
-              </v-col>
-              <v-col cols="12" md="6">
-                <blockquote>
-                  <a
-                    class="email black--text"
-                    href="mailto: sales@cbsproducts.com"
-                    >Email: sales@cbsproducts.com</a
-                  >
-                </blockquote>
-              </v-col>
-            </v-row>
-          </div></v-responsive
-        >
         <v-container>
           <v-row class="py-16 ml-20">
-            <v-col md="9" cols="12">
+            <v-col md="12" cols="12">
               <p class="mb-10 ml-20 mr-20">
-                Thanks for getting in touch. We will assist as soon as possible.
-              </p>
-              <productsform />
-            </v-col>
-            <v-col md="3" cols="12">
-              <div>
-                <h3
-                  class="text-h6 text-center font-weight-light mb-xs-4 mb-5"
-                  style="
-                    border-bottom: 2px solid #fde36d;
-                    box-shadow: 0 4px 6px -6px #222;
-                  "
+                Please ring one of our consultants below or email directly to:
+                <a
+                  class="email orange--text"
+                  href="mailto: sales@cbsproducts.com"
+                  >sales@cbsproducts.com</a
                 >
-                  Chat to a Consultant:
-                </h3>
-                <SectionsTeam :our-team="ourTeam" class="mb-10" />
-              </div>
+                to enquire about a product.
+              </p>
+              <v-col cols="12" align="center">
+                <div>
+                  <SectionsTeam :our-team="ourTeam" class="mb-10" />
+                </div>
+              </v-col>
+
+              <p>Alternatively you can contact us using this form.</p>
+              <productsform />
             </v-col>
           </v-row>
           <v-row>
@@ -184,6 +158,20 @@ export default {
           position: 'Technical Manager',
           phone: '01572898515',
           email: 'andy.sibun@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Robert Davidson',
+          position: 'Managing Director',
+          phone: '01572 898501',
+          email: 'robert.davidson@cbsproducts.com',
+          photo: '',
+        },
+        {
+          name: 'Mike Turney',
+          position: 'Finance Director',
+          phone: '01572 898522',
+          email: 'mike.turney@cbsproducts.com',
           photo: '',
         },
       ],

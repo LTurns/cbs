@@ -69,12 +69,12 @@ export default {
           to: '/about',
         },
         {
-          icon: 'fas fa-list',
+          icon: 'mdi-call-split',
           title: 'Where To Buy',
           to: '/wheretobuy',
         },
         {
-          icon: 'mdi-blogger',
+          icon: 'mdi-message-text',
           title: 'Blog',
           to: '/blog',
         },

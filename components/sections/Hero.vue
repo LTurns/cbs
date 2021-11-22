@@ -2,7 +2,7 @@
   <section id="hero">
     <v-container class="containerstyle">
       <v-row align="center" justify="center" style="margin-top: 3%">
-        <v-col cols="12" md="6" sm="12" class="left">
+        <v-col cols="12" md="6" sm="12">
           <div
             class="mainfonttitle grey--text text--lighten-4 font-weight-black"
             style="
@@ -14,12 +14,15 @@
             {{ carouselsData[0].heading.toUpperCase() }}
           </div>
 
-          <p style="font-size: 16px; margin-top: 5%" class="white--text">
+          <p
+            style="font-size: 17px; font-weight: bold; margin-top: 5%"
+            class="grey--text text--lighten-4"
+          >
             {{ carouselsData[0].subHeading }}
           </p>
           <v-btn
             :x-large="$vuetify.breakpoint.smAndUp"
-            class="black--text yellow darken-1 text-center"
+            class="yellow darken-1 text-center bold"
             >With a new battery powered range</v-btn
           >
         </v-col>
@@ -82,18 +85,22 @@ export default {
     margin-bottom: 1%;
   }
   .containerstyle {
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
-@media screen and (min-width: 1500px) {
-  .mainfonttitle {
-    font-size: 5rem;
-    max-width: 16ch;
-    margin-bottom: 1%;
-  }
+@media screen and (min-width: 1300px) {
   .containerstyle {
-    height: 70vh;
+    height: 72vh;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .mainfonttitle {
+    font-size: 4.5rem;
+    /* max-width: 16ch; */
+    margin-bottom: 1%;
   }
 }
 
@@ -105,9 +112,9 @@ export default {
     margin-bottom: 5%;
   }
 
-  .containerstyle {
+  /* .containerstyle {
     height: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 700px) {
@@ -117,13 +124,5 @@ export default {
     margin-bottom: 5%;
     margin-top: 7%;
   }
-}
-
-.left,
-.right {
-  display: inline-block;
-  /* width: 50%;
-  margin-right: -4px; */
-  vertical-align: top;
 }
 </style>

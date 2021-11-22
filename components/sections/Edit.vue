@@ -1,6 +1,18 @@
 <template>
   <section>
     <div v-if="productArray.name.length !== 0">
+      <div v-if="!productArray.isDraft">
+        <v-btn class="ma-2" color="green" dark>
+          Published
+          <v-icon dark right> mdi-checkbox-marked-circle </v-icon>
+        </v-btn>
+      </div>
+      <div v-else>
+        <v-btn class="ma-2" color="red" dark>
+          Draft
+          <v-icon dark right> mdi-checkbox-marked-circle </v-icon>
+        </v-btn>
+      </div>
       <v-row>
         <v-col cols="12" md="6" sm="12">
           <div id="home" class="section-showcase">
@@ -206,52 +218,22 @@
 
       <v-row>
         <v-col cols="12" md="12" sm="12">
-          <div id="about" class="section-large-text">
-            <v-tabs v-model="tab" black--text center light class="">
-              <v-tabs-slider></v-tabs-slider>
-
-              <v-tab href="#features" class="ml-20"> Features </v-tab>
-              <v-tab
-                v-show="productArray.accessories.length != 0"
-                href="#accessories"
-              >
-                Accessories</v-tab
-              >
-              <v-tab v-show="productArray.tables.length != 0" href="#config">
-                Configuration
-              </v-tab>
-              <v-tab v-show="productArray.videos.length > 0" href="#video">
-                Video Tutorials
-              </v-tab>
-            </v-tabs>
-
-            <v-tabs-items v-model="tab">
-              <v-tab-item :key="1" value="features">
-                <!-- <v-container
-                  fluid
-                  mt="10"
-                  :class="
-                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                  "
-                > -->
-                <v-row :class="'grey lighten-4 pl-5 pr-5 mt-4 mb-4'">
-                  <v-col cols="12" md="12" sm="12">
-                    <div
-                      style="
-                        line-height: 30px;
-                        font-size: 15px;
-                        margin-bottom: 20px;
-                      "
-                    >
-                      <div
-                        v-for="(
-                          paragraph, paraIndex
-                        ) in productArray.description"
-                        :key="paragraph._id"
-                      >
-                        <v-row>
-                          <v-col cols="12" md="12" sm="12">
-                            <!-- <textarea
+          <div
+            style="
+              line-height: 30px;
+              font-size: 15px;
+              margin-bottom: 5px;
+              margin-left: 10px;
+              margin-right: 10px;
+            "
+          >
+            <div
+              v-for="(paragraph, paraIndex) in productArray.description"
+              :key="paragraph._id"
+            >
+              <v-row>
+                <v-col cols="12" md="12" sm="12">
+                  <!-- <textarea
                               id="text"
                               :ref="`paragraph-${paraIndex}`"
                               class="input"
@@ -272,30 +254,67 @@
                                   $event.target.value
                               "
                             ></textarea> -->
-                            <v-textarea
-                              label="paragraph"
-                              dense
-                              :value="paragraph.paragraph"
-                              auto-grow
-                              outlined
-                              @input="changeDescription($event, paraIndex)"
-                            ></v-textarea>
-                          </v-col>
-                        </v-row>
-                      </div>
-                    </div>
-                  </v-col>
+                  <v-textarea
+                    label="paragraph"
+                    dense
+                    :value="paragraph.paragraph"
+                    auto-grow
+                    outlined
+                    @input="changeDescription($event, paraIndex)"
+                  ></v-textarea>
+                  <v-btn
+                    color="orange lighten-2"
+                    dark
+                    class="btn"
+                    @click="deleteParagraph(paraIndex)"
+                  >
+                    X
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </div>
+            <v-btn
+              color="grey lighten-3"
+              light
+              class="btn"
+              @click="addParagraph()"
+            >
+              +
+            </v-btn>
+          </div>
+        </v-col>
+        <v-col cols="12" md="12" sm="12">
+          <div id="about" class="section-large-text">
+            <v-tabs v-model="tab" black--text center light class="">
+              <v-tabs-slider></v-tabs-slider>
+
+              <v-tab href="#features" class="ml-20"> Features </v-tab>
+              <v-tab href="#accessories"> Accessories</v-tab>
+              <v-tab v-show="productArray.tables.length != 0" href="#config">
+                Configuration
+              </v-tab>
+              <v-tab v-show="productArray.videos.length > 0" href="#video">
+                Video Tutorials
+              </v-tab>
+            </v-tabs>
+
+            <v-tabs-items v-model="tab">
+              <v-tab-item :key="1" value="features">
+                <!-- <v-container
+                  fluid
+                  mt="10"
+                  :class="
+                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
+                  "
+                > -->
+                <v-row :class="'grey lighten-4 pl-5 pr-5 mt-4 mb-4'">
                   <v-col
                     v-for="(feature, index) in productArray.features"
                     :key="feature[index]"
                     cols="12"
                     md="6"
                   >
-                    <v-card
-                      id="feature-card"
-                      class="mx-auto"
-                      :elevation="hover ? 24 : 6"
-                    >
+                    <v-card id="feature-card" class="mx-auto">
                       <h4
                         class="
                           text-uppercase
@@ -358,10 +377,8 @@
                                   min-width: 200px;
                                 "
                                 :value="item.listItem"
-                                @click="
-                                  productArray.features[index].list[
-                                    i
-                                  ].listItem = $event.target.value
+                                @input="
+                                  changeListItem($event.target.value, index, i)
                                 "
                               />
                             </td>
@@ -514,9 +531,7 @@
               <v-tab-item
                 :key="3"
                 value="config"
-                :class="
-                  $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                "
+                class="grey lighten-4 pb-10 mb-10"
               >
                 <v-card-text
                   class="black--text pb-10"
@@ -578,7 +593,7 @@
                       v-for="(table, tableIndex) in productArray.tables"
                       :key="table[tableIndex]"
                     >
-                      <table>
+                      <table class="ml-4 mr-4">
                         <thead>
                           <th
                             v-for="(heading, index) in configHeadings"
@@ -609,43 +624,12 @@
                                     $event.target.value
                                 "
                               />
-                            </td>
-                            <td>
-                              <!-- <form align="center"> -->
-                              <!-- <div class="form-group"> -->
-                              <v-btn>
-                                <input
-                                  type="file"
-                                  accept="image/*"
-                                  @change="
-                                    saveConfigImage($event, tableIndex)
-                                  " /></v-btn
-                              ><br /><br />
-                              <!-- <template v-if="images.length"> -->
-                              <!-- <div> -->
-                              <table>
-                                <tbody>
-                                  <td>
-                                    <v-img
-                                      max-height="50"
-                                      :src="table.image"
-                                      max-width="30"
-                                    >
-                                    </v-img>
-                                  </td>
-                                  <td>
-                                    <v-btn
-                                      class="btn"
-                                      @click="deleteConfigImage(tableIndex)"
-                                    >
-                                      X
-                                    </v-btn>
-                                  </td>
-                                </tbody>
-                              </table>
-                              <!-- </div>
-                          </template> -->
-                              <!-- </form> -->
+                              <v-img
+                                max-height="50"
+                                :src="table.image"
+                                max-width="30"
+                              >
+                              </v-img>
                             </td>
                             <td>
                               <table>
@@ -705,7 +689,7 @@
                               </table>
                               <v-btn
                                 class="btn btn-info float-right mt-10"
-                                @click="addTableRow(index, i)"
+                                @click="addTableRow(tableIndex, i)"
                               >
                                 +
                               </v-btn>
@@ -713,7 +697,7 @@
                             <td>
                               <v-btn
                                 class="btn"
-                                @click="deleteConfigTable(index)"
+                                @click="deleteConfigTable(tableIndex)"
                               >
                                 X
                               </v-btn>
@@ -725,91 +709,91 @@
                   </div>
                 </v-card>
               </v-tab-item>
-              <v-tab-item :key="4" value="video">
-                <div v-if="$device.isMobile">
-                  Please use a laptop to view and edit configuration tables
-                </div>
-                <v-container
-                  fluid
-                  mt="10"
-                  :class="
-                    $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                  "
-                >
-                  <v-card
-                    flat
-                    :class="
-                      $vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'
-                    "
-                  >
-                    <form align="center">
-                      <!-- <div class="form-group"> -->
-                      <!-- <v-btn> -->
-                      <input
-                        type="text"
-                        placeholder="Add YouTube Link Here"
-                        class="input mt-10"
-                        @change="saveVideos"
-                      /><br /><br />
-                      <template v-if="productArray.videos.length">
-                        <div>
-                          <table>
-                            <thead>
-                              <th
-                                v-for="(heading, index) in vidHeadings"
-                                :key="heading[index]"
-                                align-center
-                              >
-                                {{ heading }}
-                              </th>
-                            </thead>
-                            <tbody>
-                              <tr
-                                v-for="(video, index) in productArray.videos"
-                                :key="video[index]"
-                              >
-                                <td>
-                                  <iframe
-                                    class="video"
-                                    style="background-color: white"
-                                    :src="video.video"
-                                    allowfullscreen
-                                  ></iframe>
-                                </td>
-                                <td>
-                                  <input
-                                    type="text"
-                                    class="input"
-                                    :value="video.title"
-                                    @input="
-                                      productArray.videos[index].title =
-                                        $event.target.value
-                                    "
-                                  />
-                                </td>
-                                <td>
-                                  <v-btn
-                                    class="btn"
-                                    @click="deleteVideo(index)"
-                                  >
-                                    X
-                                  </v-btn>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </template>
-                    </form>
-                  </v-card>
-                </v-container>
+              <v-tab-item :key="4" value="video" class="grey lighten-4">
+                <!-- <v-container mt="10" class="grey lighten-4"> -->
+                <v-card class="grey lighten-4 mb-10" mt="10" ml="4" mr="4">
+                  <div v-if="$device.isMobile">
+                    <p class="mt-10 mb-10 ml-10 mr-10 pt-10 pl-10 pr-10 pb-10">
+                      Please use a laptop to view and edit configuration tables
+                    </p>
+                  </div>
+                  <form align="center">
+                    <!-- <div class="form-group"> -->
+                    <!-- <v-btn> -->
+                    <input
+                      type="text"
+                      placeholder="Add YouTube Link Here"
+                      class="input mt-10"
+                      @change="saveVideos"
+                    /><br /><br />
+                    <template v-if="productArray.videos.length">
+                      <div>
+                        <table>
+                          <thead>
+                            <th
+                              v-for="(heading, index) in vidHeadings"
+                              :key="heading[index]"
+                              align-center
+                            >
+                              {{ heading }}
+                            </th>
+                          </thead>
+                          <tbody>
+                            <tr
+                              v-for="(video, index) in productArray.videos"
+                              :key="video[index]"
+                            >
+                              <td>
+                                <iframe
+                                  class="video"
+                                  style="background-color: white"
+                                  :src="video.video"
+                                  allowfullscreen
+                                ></iframe>
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  class="input"
+                                  :value="video.title"
+                                  @input="
+                                    productArray.videos[index].title =
+                                      $event.target.value
+                                  "
+                                />
+                              </td>
+                              <td>
+                                <v-btn class="btn" @click="deleteVideo(index)">
+                                  X
+                                </v-btn>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </template>
+                  </form>
+                </v-card>
+                <!-- </v-container> -->
               </v-tab-item>
             </v-tabs-items>
           </div>
         </v-col>
       </v-row>
 
-      <!-- RECOMMENDED products -->
+      <h4
+        class="
+          text-h4 text-center
+          font-weight-bold
+          mb-xs-4
+          mt-10
+          mb-5
+          pl-5
+          pr-5
+        "
+      >
+        SIMILAR PRODUCTS
+      </h4>
       <v-select
         v-model="recommendedProductName"
         :items="items"
@@ -913,14 +897,29 @@
     </div>
     <v-row>
       <v-col cols="12" align="center">
+        <div v-if="productArray.isDraft">
+          <v-btn
+            :x-large="$vuetify.breakpoint.smAndUp"
+            text
+            outlined
+            class="yellow lighten --2"
+            style="display: block; margin-left: auto: margin-right: auto; width: 30%; margin-top: 2%; margin-bottom: 2%;"
+            @click="save()"
+            >Save Draft</v-btn
+          >
+        </div>
+      </v-col>
+      <!-- </v-row>
+    <v-row> -->
+      <v-col cols="12" align="center">
         <v-btn
           :x-large="$vuetify.breakpoint.smAndUp"
           text
           outlined
-          class="yellow lighten --2"
-          style="display: block; margin-left: auto: margin-right: auto; width: 30%; margin-top: 5%; margin-bottom: 5%;"
-          @click="save()"
-          >Save</v-btn
+          class="green lighten --2"
+          style="display: block; margin-left: auto: margin-right: auto; width: 30%; margin-top: 2%; margin-bottom: 2%;"
+          @click="publish()"
+          >Publish</v-btn
         >
       </v-col>
     </v-row>
@@ -983,7 +982,7 @@ export default {
     image_list: [],
     headings: ['image', 'name', 'Remove'],
     vidHeadings: ['video', 'name', 'Remove'],
-    configHeadings: ['title', 'image', 'table', 'Remove'],
+    configHeadings: ['title', 'table', 'Remove'],
     tab: '',
     video: '',
     videoTitle: '',
@@ -1011,6 +1010,12 @@ export default {
       this.productArray.description[index] = {
         _id: this.productArray.description[index]._id,
         paragraph: e,
+      }
+    },
+    changeListItem(e, index, i) {
+      this.productArray.features[index].list[i] = {
+        listItem: e,
+        _id: this.productArray.features[index].list[i]._id,
       }
     },
     isMobile() {
@@ -1083,6 +1088,15 @@ export default {
         this.productArray.productId = '1'
       }
       // this.addItem()
+    },
+    deleteParagraph(index) {
+      this.productArray.description.splice(index, 1)
+    },
+    addParagraph() {
+      this.productArray.description.push({
+        paragraph: 'New Paragraph',
+        _id: '1',
+      })
     },
     addItem() {
       const config = {
@@ -1334,7 +1348,7 @@ export default {
       this.productArray.tables[tableIndex].items.splice(i, 1)
     },
     addTableRow(tableIndex, i) {
-      this.productArray.tables[tableIndex].items[i].push({
+      this.productArray.tables[tableIndex].items.push({
         'Item Description': '',
         'Part No': '',
       })
@@ -1349,6 +1363,29 @@ export default {
       const data = {
         user: this.$auth.user,
         ...this.productArray,
+      }
+
+      const config = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+      try {
+        await this.$axios.put(
+          `https://cbsbackend.herokuapp.com/api/products/${this.id}`,
+          data,
+          config
+        )
+        // this.getAllMusics()
+      } catch (err) {
+        throw new Error('Error updating product')
+      }
+    },
+    async publish() {
+      const data = {
+        user: this.$auth.user,
+        ...this.productArray,
+        isDraft: false,
       }
 
       const config = {

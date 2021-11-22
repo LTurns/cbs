@@ -1,70 +1,72 @@
 <template>
-  <section id="hero" class="blue-grey darken-4">
-    <hero-alt :hero-alt="heroAlt" class="white" />
+  <section id="hero">
+    <!-- <hero-alt :hero-alt="heroAlt" class="white" /> -->
     <div v-if="blogData.heading.length !== 0">
-      <v-row no-gutters justify="center" align="center">
+      <v-row>
         <v-col cols="12" md="12">
           <div>
-            <div class="yellow darken-4">
-              <h3
-                class="
-                  text-h4 text-center
-                  black--text
-                  font-weight-bold
-                  pt-5
-                  pb-5
-                  pl-5
-                  pr-5
-                "
-              >
-                {{ blogData.heading.toUpperCase() }}
-              </h3>
-            </div>
-            <h3
-              class="text-h5 text-uppercase text-center white--text"
-              style="padding: 5%"
+            <div
+              class="fonttitle black--text text--lighten-4 font-weight-black"
+              align="center"
+              style="
+                border-bottom: 2px solid #fde36d;
+                box-shadow: 0 4px 6px -6px #222;
+                line-height: 1;
+                padding: 2%;
+                margin-top: 20px;
+                margin-bottom: 10px;
+              "
             >
-              {{ blogData.subheading }}
-            </h3>
-            <v-col cols="12" md="12">
-              <v-carousel
-                hide-delimiter-background
-                light
-                draggable="true"
-                cycle
+              {{ blogData.heading.toUpperCase() }}
+            </div>
+            <div class="white">
+              <h3
+                class="text-h5 text-uppercase text-center black--text"
+                style="padding: 5%"
               >
-                <v-carousel-item
-                  v-for="image in blogData.img"
-                  :key="image.id"
-                  reverse-transition="fade-transition"
-                  transition="fade-transition"
-                  ><a
-                    target="_blank"
-                    :href="
-                      'https://cbs-images.s3.amazonaws.com/blog/' + image.image
-                    "
+                {{ blogData.subheading }}
+              </h3>
+              <v-col cols="12" md="12">
+                <v-carousel hide-delimiter-background height="100%">
+                  <v-carousel-item
+                    v-for="image in blogData.img"
+                    :key="image.id"
+                    reverse-transition="fade-transition"
+                    transition="fade-transition"
                   >
-                    <v-img
-                      class="imagewidth"
-                      :src="
+                    <a
+                      target="_blank"
+                      :href="
                         'https://cbs-images.s3.amazonaws.com/blog/' +
                         image.image
                       "
-                      :lazy-src="
-                        'https://cbs-images.s3.amazonaws.com/blog/' +
-                        image.image
-                      "
-                      style="
-                        display: block;
-                        margin-left: auto;
-                        margin-right: auto;
-                      "
-                    />
-                  </a>
-                </v-carousel-item>
-              </v-carousel>
-            </v-col>
-            <div v-for="paragraph in blogData.description" :key="paragraph.id">
+                    >
+                      <v-img
+                        class="imagewidth"
+                        :src="
+                          'https://cbs-images.s3.amazonaws.com/blog/' +
+                          image.image
+                        "
+                        :lazy-src="
+                          'https://cbs-images.s3.amazonaws.com/blog/' +
+                          image.image
+                        "
+                        style="
+                          display: block;
+                          margin-left: auto;
+                          margin-right: auto;
+                        "
+                      />
+                    </a>
+                  </v-carousel-item>
+                </v-carousel>
+              </v-col>
+            </div>
+            <div
+              v-for="paragraph in blogData.description"
+              :key="paragraph.id"
+              class="blue-grey darken-4"
+            >
               <block-quote text="white--text">
                 {{ paragraph.paragraph }}
               </block-quote>
@@ -85,10 +87,10 @@
 
 <script>
 import BlockQuote from './BlockQuote.vue'
-import HeroAlt from './HeroAlt.vue'
+// import HeroAlt from './HeroAlt.vue'
 export default {
   components: {
-    HeroAlt,
+    // HeroAlt,
     BlockQuote,
   },
   props: {
@@ -103,7 +105,7 @@ export default {
         {
           src: '',
           heading: 'BLOG',
-          icon: 'mdi-blogger',
+          icon: 'mdi-message-text',
         },
       ],
       blogData: {

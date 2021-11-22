@@ -56,9 +56,11 @@ export default {
         data.forEach((product) => {
           if (
             (product.category.includes('Fibre Installation') &&
-              !product.subCategory.length) ||
+              !product.subCategory.length &&
+              !product.isDraft) ||
             (product.subCategory.length === 1 &&
-              product.subCategory.includes('Sample Name'))
+              product.subCategory.includes('Sample Name') &&
+              !product.isDraft)
           ) {
             this.filteredList.push(product)
           }

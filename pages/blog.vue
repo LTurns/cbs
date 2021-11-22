@@ -57,7 +57,7 @@ export default {
         {
           src: '',
           heading: ' Blog ',
-          icon: 'mdi-blogger',
+          icon: 'mdi-message-text',
         },
       ],
       search: '',

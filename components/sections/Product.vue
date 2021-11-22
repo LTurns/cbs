@@ -1,7 +1,7 @@
 <template>
   <section>
     <div v-if="$store.state.product.length !== 0">
-      <v-row align="center" justify="center" no-gutters>
+      <v-row no-gutters>
         <v-col cols="12" md="6" sm="12" class="white">
           <v-carousel hide-delimiter-background height="100%">
             <v-carousel-item
@@ -10,29 +10,28 @@
               reverse-transition="fade-transition"
               transition="fade-transition"
             >
-              <a target="_blank" :href="img.image">
-                <v-img
-                  :src="img.image"
-                  :lazy-src="img.image"
-                  style="transform: scale(0.8)"
-                />
-              </a>
+              <!-- <a target="_blank" :href="img.image"> -->
+              <v-img
+                :src="img.image"
+                :lazy-src="img.image"
+                style="transform: scale(0.7)"
+              />
+              <!-- </a> -->
             </v-carousel-item>
           </v-carousel>
         </v-col>
         <v-col cols="12" md="6" sm="12" class="grey lighten-4">
-          <div id="home" class="section-showcase">
+          <div id="home" class="section-showcase" cla>
             <!-- <div class="container"> -->
             <!-- <div> -->
             <h1
               class="
-                d-inline
-                pa-5
-                mt-10
-                text-md-h2 text-sm-h3 text-h4
+                text-md-h3 text-sm-h3 text-h4
                 font-weight-black
-                text-center
                 black--text
+                mt-10
+                mb-10
+                mr-10
               "
             >
               {{ product.name.toUpperCase() }}
@@ -40,6 +39,26 @@
             <!-- <p class="mt-10 pa-5">
               {{ product.intro }}
             </p> -->
+            <div>
+              <div class="d-inline mt-10 pa-2 blue-grey darken-4 white--text">
+                ID
+              </div>
+              <div class="d-inline yellow darken-2 black--text pa-2">
+                {{ product.productId }}
+              </div>
+            </div>
+            <br /><br />
+            <nuxt-link exact :to="`/enquiry`" class="learn">
+              <v-btn
+                :x-large="$vuetify.breakpoint.smAndUp"
+                color="green darken-2"
+                text
+                outlined
+                white
+                ><v-icon left large color="primary">mdi-play</v-icon>Enquire
+                Now</v-btn
+              ></nuxt-link
+            >
 
             <div
               style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
@@ -51,31 +70,12 @@
                     line-height: 30px;
                     font-size: 16px;
                     margin-bottom: 20px;
-                    padding-left: 20px;
-                    padding-right: 20px;
                   "
                 >
                   {{ paragraph.paragraph }}
                 </p>
               </div>
             </div>
-            <div class="pa-5">
-              <div class="d-inline mt-10 pa-2 blue-grey darken-4 white--text">
-                Product ID
-              </div>
-              <div class="d-inline yellow darken-2 black--text pa-2">
-                {{ product.productId }}
-              </div>
-            </div>
-            <br /><br />
-            <nuxt-link exact :to="`/enquiry`" class="learn pa-5 mr-10 mb-10">
-              <v-btn :x-large="$vuetify.breakpoint.smAndUp" text outlined white
-                ><v-icon left large color="primary">mdi-play</v-icon>Enquire
-                Now</v-btn
-              ></nuxt-link
-            >
-            <!-- </div> -->
-            <!-- </div> -->
           </div>
         </v-col>
       </v-row>
@@ -83,7 +83,7 @@
       <!-- Large Text -->
       <!-- <div id="about" class="pt-5 pb-5 ml-0 mr-0"> -->
       <div class="overlay yellow darken-2">
-        <v-tabs v-model="tab" pb="20" black--text class="yellow darken-2">
+        <v-tabs v-model="tab" pb="20" black--text light class="yellow darken-2">
           <v-tabs-slider class="yellow darken-2"></v-tabs-slider>
 
           <v-tab href="#features"> Features </v-tab>
@@ -101,10 +101,10 @@
 
         <v-tabs-items v-model="tab">
           <v-tab-item :key="1" value="features">
-            <v-row mt="10" ml="10" mr="10" pb="10" class="blue-grey darken-4">
+            <v-row mt="10" ml="10" mr="10" pb="10" class="grey lighten-4">
               <v-card-text>
                 <v-col cols="12" md="12" sm="12">
-                  <div
+                  <!-- <div
                     class="
                       fonttitle
                       white--text
@@ -116,42 +116,19 @@
                       padding: 3%;
                       margin-left: 1%;
                       margin-right: 1%;
+                      margin-bottom: 4%;
                     "
                   >
                     FEATURES OF THE {{ product.name.toUpperCase() }}
-                  </div>
-                  <!-- <div
-                    style="
-                      line-height: 30px;
-                      font-size: 15px;
-                      margin-bottom: 20px;
-                    "
-                  >
-                    <div
-                      v-for="paragraph in product.description"
-                      :key="paragraph.id"
-                    >
-                      <p
-                        class="white--text mt-10"
-                        style="
-                          line-height: 30px;
-                          font-size: 16px;
-                          margin-bottom: 20px;
-                          padding-left: 20px;
-                          padding-right: 20px;
-                        "
-                      >
-                        {{ paragraph.paragraph }}
-                      </p>
-                    </div>
                   </div> -->
-                  <v-card class="ml-2 mr-2 mb-2">
+                  <v-card>
                     <v-col
                       v-for="feature in product.features"
                       :key="feature.id"
                       cols="12"
                       md="12"
                       sm="12"
+                      class="mt-7"
                       align="center"
                     >
                       <div
@@ -193,9 +170,9 @@
             </v-row>
           </v-tab-item>
           <v-tab-item :key="2" value="accessories">
-            <v-card class="blue-grey darken-4">
-              <v-card-text>
-                <div
+            <v-card class="grey lighten-4">
+              <!-- <v-card-text> -->
+              <!-- <div
                   class="
                     fonttitle
                     white--text
@@ -207,21 +184,23 @@
                     padding: 3%;
                     margin-left: 1%;
                     margin-right: 1%;
+                    margin-bottom: 4%;
                   "
                 >
                   ACCESSORIES OF THE {{ product.name.toUpperCase() }}
-                </div>
-              </v-card-text>
+                </div> -->
+              <!-- </v-card-text> -->
               <SectionsFeaturedProducts
-                :color="'blue-grey darken-4'"
+                :color="'grey lighten-4'"
                 :data="product.accessories"
               />
+              <!-- </v-card-text> -->
             </v-card>
           </v-tab-item>
           <v-tab-item :key="3" value="config">
-            <v-card class="blue-grey darken-4">
+            <v-card class="grey lighten-4" align="center">
               <v-card-text>
-                <div
+                <!-- <div
                   class="
                     fonttitle
                     white--text
@@ -236,13 +215,13 @@
                   "
                 >
                   CONFIGURING THE {{ product.name.toUpperCase() }}
-                </div>
+                </div> -->
                 <div
                   v-for="paragraph in product.configurationIntro"
                   :key="paragraph.id"
                 >
                   <p
-                    class="white--text mt-5"
+                    class="black--text mt-5"
                     style="
                       line-height: 30px;
                       font-size: 15px;
@@ -255,48 +234,14 @@
               </v-card-text>
               <v-card
                 min-height="600"
-                class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-2"
-                :elevation="hover ? 24 : 6"
+                class="mx-auto transition-swing mt-10 ml-2 mr-2 mb-10"
               >
-                <!-- <h4
-              class="text-uppercase yellow darken-1 text-center mt-10 mb-3 pt-5 pl-5 pr-5 pb-5"
-              style="letter-spacing: 0.15em"
-              v-text="data.configurationTitle"
-            ></h4> -->
-                <!-- <v-img
-              max-height="800"
-              :src="`/${data.configImage}`"
-              max-width="700"
-              class="mx-auto mt-10"
-              :lazy-src="`/${data.configImage}`"
-            /> -->
                 <v-row
                   v-for="table in product.tables"
                   :key="table.id"
-                  no-gutters
                   class="flex-row mr-4 ml-4"
                 >
-                  <v-col cols="12" md="12" align-self="center">
-                    <!-- <h4
-                      class="
-                        text-uppercase
-                        yellow
-                        lighten-2
-                        text-center
-                        mt-10
-                        mb-3
-                        pt-5
-                        pl-2
-                        pr-2
-                        pb-5
-                      "
-                      style="
-                        letter-spacing: 0.15em;
-                        border-bottom: 2px solid #fde36d;
-                        box-shadow: 0 4px 6px -6px;
-                      "
-                      v-text="table.title"
-                    ></h4> -->
+                  <v-col cols="12" md="12" align="center">
                     <div
                       class="
                         fonttitle
@@ -309,12 +254,14 @@
                         box-shadow: 0 4px 6px -6px #222;
                         line-height: 1;
                         padding: 3%;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
                       "
                     >
                       {{ table.title.toUpperCase() }}
                     </div>
                   </v-col>
-                  <v-col cols="12" md="4" align-self="center">
+                  <v-col cols="12" md="4" align="center" justify="center">
                     <v-img
                       max-height="450"
                       :src="table.image"
@@ -372,19 +319,23 @@
               </v-card>
             </v-card>
           </v-tab-item>
-          <v-tab-item :key="4" value="video">
-            <!-- <v-container fluid mt="10"> -->
-            <v-card class="blue-grey darken-4">
+          <v-tab-item :key="4" value="video" class="grey lighten-4">
+            <v-card class="mt-10 mb-10 ml-4 mr-4 white">
               <div v-for="video in product.videos" :key="video.title">
-                <v-col cols="12" md="12" align-self="center">
+                <v-col cols="12" md="12" align="center">
                   <div
                     class="
                       fonttitle
-                      white--text
+                      black--text
                       text--lighten-4
                       font-weight-black
                     "
-                    style="line-height: 1; padding: 3%"
+                    style="
+                      border-bottom: 2px solid #fde36d;
+                      box-shadow: 0 4px 6px -6px #222;
+                      line-height: 1;
+                      padding: 3%;
+                    "
                   >
                     {{ video.title.toUpperCase() }}
                   </div>
@@ -429,6 +380,8 @@
         class="text-center"
         indeterminate
         color="amber"
+        align="center"
+        justify="center"
       ></v-progress-circular>
     </div>
   </section>
@@ -479,10 +432,21 @@ export default {
 <style lang="scss">
 .list {
   font-size: 16px;
-  border-bottom: 1px solid rgb(236, 235, 235);
+  // border-bottom: 0.5px solid rgb(247, 215, 113);
+  box-shadow: 0 0px 1px 0px #dddcd6;
   list-style-type: square;
   padding: 2%;
 }
+
+@media screen and (max-width: 800px) {
+  .list {
+    padding: 6%;
+  }
+}
+
+// .section-showcase {
+//   padding: 5%;
+// }
 
 .configInfo {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
@@ -597,20 +561,10 @@ td {
   margin-bottom: 1%;
 }
 
-.configimage {
-  max-width: 300px;
-}
-
 // .carouselimage {
 //   // display: block;
 //   object-fit: cover;
 // }
-
-@media screen and (min-width: 1500px) {
-  .carouselheight {
-    height: 100vh;
-  }
-}
 
 // @media screen and (min-width: 1900px) {
 //   .carouselheight {
@@ -671,15 +625,14 @@ td {
   }
 
   .configimage {
-    max-width: 100px;
+    max-width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .fonttitle {
     font-size: 1.5rem;
     max-width: 100ch;
-    margin-bottom: 1%;
+    margin-bottom: 10%;
   }
-}
-
-.carousel {
 }
 </style>

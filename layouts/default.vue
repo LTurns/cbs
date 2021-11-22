@@ -52,4 +52,8 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
+a {
+  text-decoration: none;
+}
 </style>
