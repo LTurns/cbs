@@ -15,15 +15,32 @@
           </div>
 
           <p
-            style="font-size: 17px; font-weight: bold; margin-top: 5%"
+            style="font-size: 17px; font-weight: bold"
             class="grey--text text--lighten-4"
           >
             {{ carouselsData[0].subHeading }}
           </p>
+
           <v-btn
             :x-large="$vuetify.breakpoint.smAndUp"
-            class="yellow darken-1 text-center bold"
+            class="yellow darken-1 text-center bold mb-5"
             >With a new battery powered range</v-btn
+          >
+          <a
+            href="http://www.cbsproducts.com/wp-content/uploads/2021/03/CBS-Main-Product-Catalogue.pdf"
+            active-class="text--primary"
+            class="font-weight-bold"
+          >
+            <v-btn
+              :x-large="$vuetify.breakpoint.smAndUp"
+              color="white"
+              class="black"
+              text
+              outlined
+              white
+              ><v-icon left large color="primary">mdi-play</v-icon> Download
+              Catalogue</v-btn
+            ></a
           >
         </v-col>
         <!-- </v-row>

@@ -33,7 +33,10 @@ export default {
     list() {
       if (this.search !== '') {
         return this.data.filter((box) => {
-          return box.name.toLowerCase().includes(this.search.toLowerCase())
+          return (
+            box.name.toLowerCase().includes(this.search.toLowerCase()) ||
+            box.productId.toLowerCase().includes(this.search.toLowerCase())
+          )
         })
       }
       return this.data

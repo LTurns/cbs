@@ -3,20 +3,17 @@
     <div v-if="$store.state.product.length !== 0">
       <v-row no-gutters>
         <v-col cols="12" md="6" sm="12" class="white">
-          <v-carousel hide-delimiter-background height="100%" min-height="70vh">
+          <v-carousel hide-delimiter-background height="100%">
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
-              reverse-transition="fade-transition"
-              transition="fade-transition"
+              reverse-transition="fade"
+              transition="fade"
+              height="600px"
             >
-              <!-- <a target="_blank" :href="img.image"> -->
-              <v-img
-                :src="img.image"
-                :lazy-src="img.image"
-                style="transform: scale(0.7)"
-              />
-              <!-- </a> -->
+              <a target="_blank" :href="img.image">
+                <v-img :src="img.image" style="transform: scale(0.7)" />
+              </a>
             </v-carousel-item>
           </v-carousel>
         </v-col>
@@ -76,6 +73,7 @@
                 >
                   {{ paragraph.paragraph }}
                 </p>
+                <team :our-team="ourTeam" />
               </div>
             </div>
           </div>
@@ -391,7 +389,11 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import Team from './Team.vue'
 export default {
+  comonents: {
+    Team,
+  },
   props: {
     id: {
       type: String,
@@ -405,6 +407,15 @@ export default {
     areConfig: true,
     areVideos: true,
     tutorials: '',
+    ourTeam: [
+      {
+        name: 'Andy Sibun',
+        position: 'Technical Manager',
+        phone: '01572 898515',
+        email: 'andy.sibun@cbsproducts.com',
+        photo: '',
+      },
+    ],
   }),
   computed: {
     ...mapState(['product']),

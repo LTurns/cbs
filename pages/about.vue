@@ -152,13 +152,6 @@ export default {
           photo: '',
         },
         {
-          name: 'Lawrence Green',
-          position: 'Production Manager',
-          phone: '01572 898513',
-          email: 'lawrence.green@cbsproducts.com',
-          photo: '',
-        },
-        {
           name: 'Robert Davidson',
           position: 'Managing Director',
           phone: '01572 898501',
