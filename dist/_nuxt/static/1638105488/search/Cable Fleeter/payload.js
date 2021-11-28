@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/search/Cable%20Fleeter", {data:[{}],fetch:{},mutations:[]});

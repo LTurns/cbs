@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/search/Mini%20Cable%20Fleeting%20Device", {data:[{}],fetch:{},mutations:[]});

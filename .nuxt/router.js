@@ -24,6 +24,7 @@ const _14f70124 = () => interopDefault(import('../pages/blogEdit/_id.vue' /* web
 const _1b7fc933 = () => interopDefault(import('../pages/category/_subCategory.vue' /* webpackChunkName: "pages/category/_subCategory" */))
 const _08099a3c = () => interopDefault(import('../pages/edit/_id.vue' /* webpackChunkName: "pages/edit/_id" */))
 const _15a9637d = () => interopDefault(import('../pages/product/_id.vue' /* webpackChunkName: "pages/product/_id" */))
+const _39628170 = () => interopDefault(import('../pages/search/_name.vue' /* webpackChunkName: "pages/search/_name" */))
 const _7946b7f5 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -117,6 +118,10 @@ export const routerOptions = {
     path: "/product/:id?",
     component: _15a9637d,
     name: "product-id"
+  }, {
+    path: "/search/:name?",
+    component: _39628170,
+    name: "search-name"
   }, {
     path: "/",
     component: _7946b7f5,

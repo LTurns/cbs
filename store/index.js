@@ -3,6 +3,7 @@ import axios from 'axios'
 export const state = () => ({
   products: [],
   product: [],
+  search: '',
 })
 
 export const getters = {}
@@ -51,6 +52,9 @@ export const actions = {
 export const mutations = {
   getProduct(state, product) {
     state.product = product
+  },
+  updateSearch(state, data) {
+    state.search = data
   },
   // getProducts(state, products) {
   //   state.products = products

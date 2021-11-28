@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/search/GentL%20Air", {data:[{}],fetch:{},mutations:[]});

@@ -140,6 +140,13 @@
     "_name": "_15a9637d"
   },
   {
+    "name": "search-name",
+    "path": "/search/:name?",
+    "component": "/Users/elizabethturney/modevue/pages/search/_name.vue",
+    "chunkName": "pages/search/_name",
+    "_name": "_39628170"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/elizabethturney/modevue/pages/index.vue",

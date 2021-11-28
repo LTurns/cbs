@@ -16,6 +16,13 @@ const dynamicRoutes = () => {
         return '/category/' + product.name.toLowerCase()
       })
     })
+  const search = axios
+    .get('https://cbsbackend.herokuapp.com/api/products')
+    .then((res) => {
+      return res.data.map((product) => {
+        return '/search/' + product.name
+      })
+    })
   const article = axios
     .get('https://cbsbackend.herokuapp.com/api/blogs/')
     .then((res) => {
@@ -38,11 +45,16 @@ const dynamicRoutes = () => {
       })
     })
 
-  return Promise.all([product, subCategory, article, edit, blogEdit]).then(
-    (values) => {
-      return values.join().split(',')
-    }
-  )
+  return Promise.all([
+    product,
+    subCategory,
+    article,
+    edit,
+    blogEdit,
+    search,
+  ]).then((values) => {
+    return values.join().split(',')
+  })
 }
 
 export default {
