@@ -2,6 +2,7 @@
   <div>
     <v-navigation-drawer v-model="drawer" fixed app temporary>
       <v-list dense>
+        <Logo class="logo-mobile ml-10" />
         <v-list-item-group color="primary">
           <v-list-item v-for="(item, i) in items" :key="i" :to="item.to">
             <v-list-item-action>
@@ -17,7 +18,7 @@
     <v-app-bar fixed app hide-on-scroll height="74">
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
       <nuxt-link to="/">
-        <Logo class="logo" />
+        <Logo class="logo-web" />
       </nuxt-link>
       <!-- <div> -->
       <v-form
@@ -184,9 +185,17 @@ $brandColor: #fde36d;
   display: none;
 }
 
-@media screen and (max-width: 758px) {
-  .logo {
-    width: 70%;
+.logo-mobile {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 700px) {
+  .logo-web {
+    display: none;
+  }
+
+  .logo-mobile {
+    width: 50%;
   }
 
   // .search {

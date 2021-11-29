@@ -21,7 +21,7 @@
           </v-carousel>
         </v-col>
         <v-col cols="12" md="6" sm="12" class="grey lighten-4">
-          <div id="home" class="section-showcase" cla>
+          <div id="home" class="section-showcase">
             <!-- <div class="container"> -->
             <!-- <div> -->
             <h1
@@ -440,9 +440,9 @@ export default {
     },
     isMobile() {
       if (screen.width <= 760) {
-        return '650px'
+        return '60vh'
       } else {
-        return '1000px'
+        return '100vh'
       }
     },
     showAccessories() {
@@ -502,6 +502,9 @@ table tbody tr:nth-child(2n) td {
 #about {
   padding-left: 20px;
   padding-right: 20px;
+}
+#home {
+  top: 20%;
 }
 
 td {
