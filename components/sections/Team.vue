@@ -7,7 +7,7 @@
           :key="`person-${i}`"
           class="column"
           cols="12"
-          md="4"
+          :md="`${size}`"
         >
           <v-sheet shaped class="py-5 px-5" max-width="400px">
             <!-- <v-avatar size="150" elevation="5"
@@ -45,6 +45,10 @@ export default {
     ourTeam: {
       type: Array,
       default: () => [],
+    },
+    size: {
+      type: String,
+      default: '4',
     },
   },
 }

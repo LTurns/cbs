@@ -6,57 +6,32 @@
           :hero-alt="heroAlt"
           :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
         />
-        <!-- <v-responsive
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'yellow darken-1'"
-          class="max-auto mx-auto text-center"
-        >
-          <div class="hero-text" style="margin-top: 5px; margin-bottom: 5px">
-            <v-row>
-              <v-col cols="12" md="6">
-                <blockquote>
-                  <a class="email black--text" href="tel:01572723665"
-                    >Tel: +44 (0) 1572 723 665</a
-                  >
-                </blockquote>
-              </v-col>
-              <v-col cols="12" md="6">
-                <blockquote>
-                  <a
-                    class="email black--text"
-                    href="mailto: sales@cbsproducts.com"
-                    >Email: sales@cbsproducts.com</a
-                  >
-                </blockquote>
-              </v-col>
-            </v-row>
-          </div></v-responsive
-        > -->
+        <v-col md="12" cols="12">
+          <p class="mb-10 ml-20 mr-20" style="text-align: center">
+            Please ring or email one of our consultant below or email directly
+            to:
+            <a class="email orange--text" href="mailto: sales@cbsproducts.com"
+              >sales@cbsproducts.com</a
+            >
+            to enquire about a product.
+          </p>
+          <v-col cols="12" align="center">
+            <div>
+              <SectionsTeam :our-team="ourTeam" class="mb-10" />
+            </div>
+          </v-col>
+        </v-col>
         <v-container>
           <v-row class="py-16 ml-20">
-            <v-col md="8" cols="12">
-              <p class="mb-10 ml-20 mr-20">
-                Please enquire about a product using the form below.
-                Alternatively, our consultant would be glad to assist.
+            <v-col md="12" cols="12">
+              <p class="mb-12 ml-20 mr-20">
+                Alternatively, please enquire using the form below.
               </p>
               <productsform />
             </v-col>
-            <v-col md="4" cols="12">
-              <div>
-                <h3
-                  class="text-h6 text-center font-weight-light mb-xs-4 mb-5"
-                  style="
-                    border-bottom: 2px solid #fde36d;
-                    box-shadow: 0 4px 6px -6px #222;
-                  "
-                >
-                  Ring a Consultant:
-                </h3>
-                <SectionsTeam :our-team="ourTeam" class="mb-10" />
-              </div>
-            </v-col>
           </v-row>
           <v-row>
-            <v-col md="9" cols="12">
+            <v-col md="10" cols="12">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2418.8700203174435!2d-0.7338425846941268!3d52.68038493208387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487780f4ac1c42a7%3A0xa65da3dcfdd6588d!2sC%20B%20S%20Products%20(KT)%20Ltd!5e0!3m2!1sen!2suk!4v1626176078725!5m2!1sen!2suk"
                 width="100%"

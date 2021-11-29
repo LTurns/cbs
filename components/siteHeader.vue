@@ -19,8 +19,9 @@
       <nuxt-link to="/">
         <Logo class="logo" />
       </nuxt-link>
+      <!-- <div> -->
       <v-form
-        class="searchbar-mobile font-weight-bold mt-5 ml-5 mr-5"
+        class="searchbar-mobile font-weight-bold mt-5"
         active-class="text--primary"
         @submit.prevent="selectQuery"
       >
@@ -40,6 +41,7 @@
           ><v-icon>mdi-magnify</v-icon></v-btn
         >
       </v-tab>
+      <!-- </div> -->
       <!-- <v-spacer /> -->
       <v-tabs class="hidden-sm-and-down mx-auto" optional centered>
         <v-tab
@@ -184,7 +186,7 @@ $brandColor: #fde36d;
 
 @media screen and (max-width: 758px) {
   .logo {
-    width: 80%;
+    width: 70%;
   }
 
   // .search {
@@ -198,7 +200,9 @@ $brandColor: #fde36d;
   // .mobile-search {
   //   display: unset;
   // }
-
+  .searchbar-mobile {
+    width: 350px;
+  }
   .searchbar-mobile,
   .searchbutton-mobile {
     display: block;

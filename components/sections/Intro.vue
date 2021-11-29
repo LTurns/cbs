@@ -18,23 +18,25 @@
             :elevation="hover ? 24 : 5"
             shaped
             :class="'card blue-grey darken-4 pa-md-5 mx-lg-auto'"
+            justify="center"
+            align="center"
           >
             <nuxt-link class="category" exact :to="card.link">
-              <v-row no-gutters>
+              <!-- <v-row no-gutters>
                 <v-col>
-                  <div class="pr-2 mt-4">
-                    <img
-                      :src="card.image"
-                      style="max-width: 130px; height: auto"
-                    />
-                    <h3
-                      :class="text"
-                      style="letter-spacing: 0.15em"
-                      v-text="card.name"
-                    ></h3>
-                  </div>
+                  <div class="pr-2"> -->
+              <img
+                :src="card.image"
+                :style="`width: 125px; height: auto; margin-top: ${card.margin}%`"
+              />
+              <h3
+                :class="text"
+                style="letter-spacing: 0.15em"
+                v-text="card.name"
+              ></h3>
+              <!-- </div>
                 </v-col>
-              </v-row>
+              </v-row> -->
             </nuxt-link>
           </v-card>
         </v-hover>
@@ -62,23 +64,27 @@ export default {
       cards: [
         {
           name: 'OVERHEAD LINE',
-          image: 'utilities.svg',
+          image: 'running-out-blocks.png',
           link: '/overheadline',
+          margin: '5',
         },
         {
           name: 'FIBRE INSTALLATION',
-          image: 'fibreblowing1.svg',
+          image: 'hurricane-4.png',
           link: '/fibreinstallation',
+          margin: '5',
         },
         {
           name: 'KLEIN TOOLS',
-          image: 'clienttools.svg',
+          image: 'klein-tools.png',
           link: '/kleintools',
+          margin: '15',
         },
         {
           name: 'WINCHES AND TRAILERS',
-          image: 'telecoms6.svg',
+          image: 'winch-2.png',
           link: '/winchesandtrailers',
+          margin: '0',
         },
       ],
     }
