@@ -1,38 +1,38 @@
 <template>
   <section>
     <div v-if="$store.state.product.length !== 0">
-      <v-row no-gutters>
+      <v-row>
         <v-col cols="12" md="6" sm="12" class="white">
-          <div v-if="isMobile">
-            <v-carousel hide-delimiter-background height="70vh">
+          <div>
+            <v-carousel
+              hide-delimiter-background
+              min-height="70vh"
+              height="100%"
+            >
               <v-carousel-item v-for="img in product.img" :key="img.id">
-                <a target="_blank" :href="img.image">
-                  <v-img
-                    :src="img.image"
-                    :lazy-src="img.image"
-                    style="transform: scale(0.6)"
-                    class="mb-10"
-                  />
-                </a>
-              </v-carousel-item>
-            </v-carousel>
-          </div>
-          <div v-else>
-            <v-carousel hide-delimiter-background height="100vh + 50px">
-              <v-carousel-item v-for="img in product.img" :key="img.id">
-                <a target="_blank" :href="img.image">
-                  <v-img
-                    :src="img.image"
-                    :lazy-src="img.image"
-                    style="transform: scale(0.6)"
-                    class="mb-10"
-                  />
-                </a>
+                <!-- <a target="_blank" :href="img.image"> -->
+                <v-img
+                  :src="img.image"
+                  :lazy-src="img.image"
+                  style="
+                    transform: scale(0.7);
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+                <!-- </a> -->
               </v-carousel-item>
             </v-carousel>
           </div>
         </v-col>
-        <v-col cols="12" md="6" sm="12" class="grey lighten-4">
+        <v-col
+          align-content="center"
+          cols="12"
+          md="6"
+          sm="12"
+          class="grey lighten-4"
+        >
           <div id="home" class="section-showcase">
             <!-- <div class="container"> -->
             <!-- <div> -->
@@ -41,7 +41,7 @@
                 text-md-h3 text-sm-h3 text-h4
                 font-weight-black
                 black--text
-                mt-10
+                mt-20
                 mb-10
                 mr-10
                 ml-15
@@ -61,7 +61,7 @@
               </div>
             </div>
             <br /><br />
-            <nuxt-link exact :to="`/enquiry`" class="learn ml-15 mb-10">
+            <nuxt-link exact :to="`/enquiry`" class="learn ml-15 mb-10 pb-10">
               <v-btn
                 :x-large="$vuetify.breakpoint.smAndUp"
                 color="green darken-2"
@@ -452,9 +452,9 @@ export default {
     },
     isMobile() {
       if (screen.width <= 760) {
-        return '60vh'
+        return true
       } else {
-        return '100vh'
+        return false
       }
     },
     showAccessories() {
@@ -516,7 +516,7 @@ table tbody tr:nth-child(2n) td {
   padding-right: 20px;
 }
 #home {
-  top: 40%;
+  top: 50%;
 }
 
 td {
