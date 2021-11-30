@@ -186,16 +186,12 @@ $brandColor: #fde36d;
 }
 
 .logo-mobile {
-  visibility: hidden;
+  width: 50%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .logo-web {
     display: none;
-  }
-
-  .logo-mobile {
-    width: 50%;
   }
 
   // .search {

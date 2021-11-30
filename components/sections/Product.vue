@@ -1,24 +1,36 @@
 <template>
   <section>
     <div v-if="$store.state.product.length !== 0">
-      <v-row>
+      <v-row no-gutters>
         <v-col cols="12" md="6" sm="12" class="white">
-          <v-carousel hide-delimiter-background :height="isMobile">
-            <v-carousel-item
-              v-for="img in product.img"
-              :key="img.id"
-              reverse-transition="fade-transition"
-              transition="fade-transition"
-            >
-              <a target="_blank" :href="img.image">
-                <v-img
-                  :src="img.image"
-                  :lazy-src="img.image"
-                  style="transform: scale(0.7)"
-                />
-              </a>
-            </v-carousel-item>
-          </v-carousel>
+          <div v-if="isMobile">
+            <v-carousel hide-delimiter-background height="70vh">
+              <v-carousel-item v-for="img in product.img" :key="img.id">
+                <a target="_blank" :href="img.image">
+                  <v-img
+                    :src="img.image"
+                    :lazy-src="img.image"
+                    style="transform: scale(0.6)"
+                    class="mb-10"
+                  />
+                </a>
+              </v-carousel-item>
+            </v-carousel>
+          </div>
+          <div v-else>
+            <v-carousel hide-delimiter-background height="100vh + 50px">
+              <v-carousel-item v-for="img in product.img" :key="img.id">
+                <a target="_blank" :href="img.image">
+                  <v-img
+                    :src="img.image"
+                    :lazy-src="img.image"
+                    style="transform: scale(0.6)"
+                    class="mb-10"
+                  />
+                </a>
+              </v-carousel-item>
+            </v-carousel>
+          </div>
         </v-col>
         <v-col cols="12" md="6" sm="12" class="grey lighten-4">
           <div id="home" class="section-showcase">
@@ -37,7 +49,7 @@
             >
               {{ product.name.toUpperCase() }}
             </h1>
-            <p class="ml-15 mt-10 pb-10">
+            <p class="ml-15 mt-10 pb-10 mr-10">
               {{ product.intro }}
             </p>
             <div class="ml-15">
@@ -49,7 +61,7 @@
               </div>
             </div>
             <br /><br />
-            <nuxt-link exact :to="`/enquiry`" class="learn ml-15">
+            <nuxt-link exact :to="`/enquiry`" class="learn ml-15 mb-10">
               <v-btn
                 :x-large="$vuetify.breakpoint.smAndUp"
                 color="green darken-2"
@@ -504,7 +516,7 @@ table tbody tr:nth-child(2n) td {
   padding-right: 20px;
 }
 #home {
-  top: 20%;
+  top: 40%;
 }
 
 td {
@@ -591,6 +603,9 @@ td {
   margin-bottom: 1%;
 }
 
+.carousel {
+  height: 100vh;
+}
 // .carouselimage {
 //   // display: block;
 //   object-fit: cover;
@@ -621,6 +636,9 @@ td {
     margin-bottom: 5%;
   }
 
+  #home {
+    top: 20%;
+  }
   // .carouselheight {
   //   height: 100%;
   // }

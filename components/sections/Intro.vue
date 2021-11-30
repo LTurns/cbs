@@ -78,7 +78,7 @@ export default {
           name: 'KLEIN TOOLS',
           image: 'klein-tools.png',
           link: '/kleintools',
-          margin: '15',
+          margin: '10',
         },
         {
           name: 'WINCHES AND TRAILERS',
