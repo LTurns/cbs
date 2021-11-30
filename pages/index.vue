@@ -6,7 +6,7 @@
     </v-col>
     <!-- </v-row> -->
     <v-row no-gutters>
-      <v-col cols="12" class="grey lighten-3">
+      <v-col cols="12" class="grey lighten-4">
         <SectionsBlockQuote text="black--text">
           <slot>
             CBS Products (KT), Ltd. is a leading provider of specialised
@@ -47,8 +47,8 @@
       </v-col>
     </v-row>
     <v-row no-gutters>
-      <v-col class="blue-grey darken-4">
-        <SectionsBlockQuote text="white--text">
+      <v-col class="grey lighten-3">
+        <SectionsBlockQuote text="black--text">
           <slot>
             <h3 class="mb-10">CORONAVIRUS UPDATE</h3>
             <p>
@@ -124,7 +124,7 @@ export default {
 
 <style>
 .hero {
-  background-image: url('https://cbs-images.s3.amazonaws.com/wires.jpeg');
+  background-image: url('https://cbs-images.s3.amazonaws.com/orangeWire.png');
   background-size: cover;
 }
 

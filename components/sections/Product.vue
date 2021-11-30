@@ -1,30 +1,31 @@
 <template>
   <section>
     <div v-if="$store.state.product.length !== 0">
-      <v-row>
+      <SectionsHeroAlt
+        :hero-alt="[
+          {
+            src: '',
+            heading: product.name,
+            icon: '',
+          },
+        ]"
+        class="grey lighten-3"
+      />
+      <v-row no-gutters align="center" justify="center">
         <v-col cols="12" md="6" sm="12" class="white">
-          <div>
-            <v-carousel
-              hide-delimiter-background
-              min-height="70vh"
-              height="100%"
+          <v-carousel hide-delimiter-background class="white">
+            <v-carousel-item
+              v-for="img in product.img"
+              :key="img.id"
+              :src="img.image"
+              contain
             >
-              <v-carousel-item v-for="img in product.img" :key="img.id">
-                <!-- <a target="_blank" :href="img.image"> -->
-                <v-img
+              <!-- <v-img
                   :src="img.image"
                   :lazy-src="img.image"
-                  style="
-                    transform: scale(0.7);
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                  "
-                />
-                <!-- </a> -->
-              </v-carousel-item>
-            </v-carousel>
-          </div>
+                /> -->
+            </v-carousel-item>
+          </v-carousel>
         </v-col>
         <v-col
           align-content="center"
@@ -36,50 +37,52 @@
           <div id="home" class="section-showcase">
             <!-- <div class="container"> -->
             <!-- <div> -->
-            <h1
+
+            <h5
               class="
-                text-md-h3 text-sm-h3 text-h4
+                text-md-h5 text-sm-h5 text-h5
                 font-weight-black
                 black--text
-                mt-20
+                mt-10
+                pt-10
                 mb-10
-                mr-10
-                ml-15
               "
             >
-              {{ product.name.toUpperCase() }}
-            </h1>
-            <p class="ml-15 mt-10 pb-10 mr-10">
-              {{ product.intro }}
-            </p>
-            <div class="ml-15">
-              <div class="d-inline mt-10 pa-2 blue-grey darken-4 white--text">
-                ID
-              </div>
-              <div class="d-inline yellow darken-2 black--text pa-2">
-                {{ product.productId }}
-              </div>
+              PRODUCT INFORMATION
+              <!-- <div> -->
+              <!-- </div> -->
+            </h5>
+            <!-- <div
+              style="
+                border-bottom: 5px solid orange;
+                box-shadow: 0 4px 6px -6px #222;
+                line-height: 1;
+                padding-top: 2%;
+                text-align: center;
+              "
+            ></div> -->
+            <div class="d-inline mt-10 pa-2 blue-grey lighten-4 black--text">
+              ID
             </div>
-            <br /><br />
-            <nuxt-link exact :to="`/enquiry`" class="learn ml-15 mb-10 pb-10">
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                color="green darken-2"
-                text
-                outlined
-                white
-                ><v-icon left large color="primary">mdi-play</v-icon>Enquire
+            <div class="d-inline yellow darken-2 black--text pa-2">
+              {{ product.productId }}
+            </div>
+          </div>
+          <div v-for="paragraph in product.description" :key="paragraph.id">
+            <p
+              class="black--text mt-10 px-10"
+              style="line-height: 30px; font-size: 16px; margin-bottom: 20px"
+            >
+              {{ paragraph.paragraph }}
+            </p>
+          </div>
+          <div class="mb-10 mt-10">
+            <nuxt-link exact :to="`/contact`" class="mb-10 px-10 pb-10">
+              <v-btn x-large color="green" dark>
+                <v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn
               ></nuxt-link
             >
-
-            <!-- <div
-              style="line-height: 30px; font-size: 15px; margin-bottom: 20px"
-              class="ml-10 mr-10"
-            >
-              <p>Scroll down for specifications or contact:</p>
-              <SectionsTeam :our-team="ourTeam" size="12" class="mb-10" />
-            </div> -->
           </div>
         </v-col>
       </v-row>
@@ -87,7 +90,7 @@
       <!-- Large Text -->
       <!-- <div id="about" class="pt-5 pb-5 ml-0 mr-0"> -->
       <div class="overlay yellow darken-2">
-        <v-tabs v-model="tab" pb="20" black--text light class="yellow darken-2">
+        <v-tabs v-model="tab" black--text>
           <v-tabs-slider class="yellow darken-2"></v-tabs-slider>
 
           <v-tab href="#features"> Features </v-tab>
@@ -108,21 +111,6 @@
             <v-row mt="10" ml="10" mr="10" pb="10" class="grey lighten-4">
               <v-card-text>
                 <v-col cols="12" md="12" sm="12">
-                  <div
-                    v-for="paragraph in product.description"
-                    :key="paragraph.id"
-                  >
-                    <p
-                      class="black--text mt-10"
-                      style="
-                        line-height: 30px;
-                        font-size: 16px;
-                        margin-bottom: 20px;
-                      "
-                    >
-                      {{ paragraph.paragraph }}
-                    </p>
-                  </div>
                   <!-- <div
                     class="
                       fonttitle

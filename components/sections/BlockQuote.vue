@@ -23,6 +23,7 @@ export default {
   box-shadow: 4px 0px 6px -6px #222;
   margin: 1rem 20px;
   padding: 0.7em 25px;
+  font-size: 16px;
 }
 
 .blockquote-section {

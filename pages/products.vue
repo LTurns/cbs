@@ -1,18 +1,18 @@
 <template>
-  <section class="grey lighten-4">
+  <section class="white">
     <v-row no-gutters>
       <v-col cols="12" align="center">
-        <SectionsHeroAlt :hero-alt="heroAlt" class="white" />
+        <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
         <v-container>
           <SectionsMainSearch :data="filteredList" category="general" />
           <SectionsIntro
             class="pt-10 pb-10"
             style="margin-bottom: 30px"
-            color="white"
-            text="text-uppercase white--text"
+            color="black"
+            text="text-uppercase black--text"
           />
         </v-container>
-        <div class="yellow darken-2">
+        <div class="grey lighten-4">
           <SectionsBlockQuote>
             <slot>
               We have had a really exciting 2021 turning 50 years old! Some

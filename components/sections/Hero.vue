@@ -4,7 +4,7 @@
       <v-row align="center" justify="center" style="margin-top: 3%">
         <v-col cols="12" md="6" sm="12">
           <div
-            class="mainfonttitle grey--text text--lighten-4 font-weight-black"
+            class="mainfonttitle black--text text--lighten-4 font-weight-black"
             style="
               border-bottom: 2px solid #fde36d;
               box-shadow: 0 4px 6px -6px #222;
@@ -15,8 +15,8 @@
           </div>
 
           <p
-            style="font-size: 17px; font-weight: bold"
-            class="grey--text text--lighten-4"
+            style="font-size: 16px; margin-top: 5%; margin-bottom: 5%"
+            class="dark--text"
           >
             {{ carouselsData[0].subHeading }}
           </p>
@@ -25,7 +25,7 @@
             :x-large="$vuetify.breakpoint.smAndUp"
             class="yellow darken-1 text-center bold mb-5"
             >With a new battery powered range</v-btn
-          >
+          ><br />
           <a
             href="http://www.cbsproducts.com/wp-content/uploads/2021/03/CBS-Main-Product-Catalogue.pdf"
             active-class="text--primary"
@@ -33,8 +33,8 @@
           >
             <v-btn
               :x-large="$vuetify.breakpoint.smAndUp"
-              color="white"
-              class="black"
+              color="black"
+              class="white"
               text
               outlined
               white

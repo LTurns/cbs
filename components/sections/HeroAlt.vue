@@ -16,10 +16,13 @@
                 text-md-h2 text-sm-h3 text-h4
                 font-weight-black
                 text-center
+                black--text
+                text--lighten-4
               "
               style="
-                border-bottom: 4px solid #fde36d;
+                border-bottom: 2px solid #fde36d;
                 box-shadow: 0 4px 6px -6px #222;
+                line-height: 1;
               "
             >
               <v-icon>{{ item.icon }}</v-icon>

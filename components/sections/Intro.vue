@@ -14,10 +14,11 @@
             :color="color"
             :style="{
               height: '200px',
+              maxWidth: '800px',
             }"
             :elevation="hover ? 24 : 5"
             shaped
-            :class="'card blue-grey darken-4 pa-md-5 mx-lg-auto'"
+            :class="'card grey lighten-4 pa-md-5 mx-lg-auto'"
             justify="center"
             align="center"
           >
@@ -27,11 +28,17 @@
                   <div class="pr-2"> -->
               <img
                 :src="card.image"
-                :style="`width: 125px; height: auto; margin-top: ${card.margin}%`"
+                :style="`width: 130px; height: auto; margin-top: ${card.margin}%`"
               />
               <h3
                 :class="text"
-                style="letter-spacing: 0.15em"
+                style="
+                  letter-spacing: 0.15em;
+                  bottom: 10%;
+                  position: absolute;
+                  margin-left: 5%;
+                  margin-right: auto;
+                "
                 v-text="card.name"
               ></h3>
               <!-- </div>
@@ -55,7 +62,7 @@ export default {
     },
     text: {
       type: String,
-      default: () => 'text-uppercase white--text',
+      default: () => 'text-uppercase black--text',
     },
   },
   data() {
@@ -125,6 +132,12 @@ export default {
 .notzoom {
   transition: transform 0.2s;
   box-shadow: 3px 1px 7px rgb(10, 10, 10) !important;
+}
+
+@media screen and (min-width: 1500px) {
+  h3 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 1000px) {

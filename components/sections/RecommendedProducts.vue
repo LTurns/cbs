@@ -75,8 +75,9 @@
                       class="my-3"
                       outlined
                       black
-                      ><v-icon left large color="primary">mdi-play</v-icon
-                      >View</v-btn
+                      bold
+                      color="green darken-2"
+                      ><v-icon left large>mdi-play</v-icon>View</v-btn
                     >
                   </nuxt-link>
                 </div>
@@ -84,7 +85,7 @@
               <!-- Product ID -->
               <div v-if="plan.productId.length !== 0">
                 <div
-                  class="d-inline black--text pa-2"
+                  class="pa-5"
                   style="
                     position: absolute;
                     bottom: 0;
@@ -93,7 +94,14 @@
                     margin-left: 2%;
                   "
                 >
-                  {{ plan.productId }}
+                  <div
+                    class="d-inline mt-10 pa-2 blue-grey darken-4 white--text"
+                  >
+                    ID
+                  </div>
+                  <div class="d-inline yellow darken-2 black--text pa-2">
+                    {{ plan.productId }}
+                  </div>
                 </div>
               </div>
               <div v-else>

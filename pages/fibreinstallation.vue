@@ -3,8 +3,8 @@
     <v-row no-gutters>
       <v-col cols="12" align="center">
         <SectionsHeroAlt :hero-alt="heroAlt" />
-        <v-col class="blue-grey darken-4">
-          <SectionsBlockQuote text="white--text">
+        <v-col class="grey lighten-2">
+          <SectionsBlockQuote text="black--text">
             <slot>
               Our Fibre Blowing products include Tornado, Jetstream and
               Hurricane Cable Blowing Machine. We are known particularly for

@@ -5,11 +5,27 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
   data() {
     return {
       id: this.$route.params.id,
     }
+  },
+  computed: {
+    ...mapState(['product']),
+    product() {
+      return this.$store.state.product
+    },
+  },
+  created() {
+    this.getIdProduct()
+  },
+  methods: {
+    ...mapActions(['getProduct']),
+    getIdProduct() {
+      this.$store.dispatch('getProduct', this.id)
+    },
   },
   transition: 'productid',
 }
