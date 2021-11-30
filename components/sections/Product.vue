@@ -44,8 +44,8 @@
                 font-weight-black
                 black--text
                 mt-10
-                pt-10
                 mb-10
+                px-10
               "
             >
               PRODUCT INFORMATION
@@ -61,11 +61,13 @@
                 text-align: center;
               "
             ></div> -->
-            <div class="d-inline mt-10 pa-2 blue-grey lighten-4 black--text">
-              ID
-            </div>
-            <div class="d-inline yellow darken-2 black--text pa-2">
-              {{ product.productId }}
+            <div class="px-10">
+              <div class="d-inline mt-10 pa-2 blue-grey lighten-4 black--text">
+                ID
+              </div>
+              <div class="d-inline yellow darken-2 black--text pa-2">
+                {{ product.productId }}
+              </div>
             </div>
           </div>
           <div v-for="paragraph in product.description" :key="paragraph.id">
@@ -502,9 +504,6 @@ table tbody tr:nth-child(2n) td {
 #about {
   padding-left: 20px;
   padding-right: 20px;
-}
-#home {
-  top: 50%;
 }
 
 td {
