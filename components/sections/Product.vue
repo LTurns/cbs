@@ -27,13 +27,7 @@
             </v-carousel-item>
           </v-carousel>
         </v-col>
-        <v-col
-          align-content="center"
-          cols="12"
-          md="6"
-          sm="12"
-          class="grey lighten-4"
-        >
+        <v-col align-content="center" cols="12" md="6" sm="12" class="white">
           <div id="home" class="section-showcase">
             <!-- <div class="container"> -->
             <!-- <div> -->

@@ -1,52 +1,122 @@
 <template>
   <section>
     <!-- <v-container> -->
-    <v-row fillheight>
-      <v-col
-        v-for="card in cards"
-        :key="card.title"
-        v-hover
-        class="column"
-        cols="12"
-        md="6"
-        ><v-hover v-slot="{ hover }" class="card">
-          <v-card
-            :color="color"
-            :style="{
-              height: '200px',
-              maxWidth: '800px',
-            }"
-            :elevation="hover ? 24 : 5"
-            shaped
-            :class="'card grey lighten-4 pa-md-5 mx-lg-auto'"
-            justify="center"
-            align="center"
-          >
-            <nuxt-link class="category" exact :to="card.link">
-              <!-- <v-row no-gutters>
-                <v-col>
-                  <div class="pr-2"> -->
-              <img
-                :src="card.image"
-                :style="`width: 130px; height: auto; margin-top: ${card.margin}%`"
-              />
-              <h3
-                :class="text"
-                style="
-                  letter-spacing: 0.15em;
-                  bottom: 10%;
-                  position: absolute;
-                  margin-left: 5%;
-                  margin-right: auto;
-                "
-                v-text="card.name"
-              ></h3>
-              <!-- </div>
-                </v-col>
-              </v-row> -->
-            </nuxt-link>
-          </v-card>
-        </v-hover>
+    <v-row fillheight no-gutters align="center" justify="center">
+      <v-col v-hover class="column" cols="12" md="6">
+        <v-card class="mx-2 mb-5" max-width="400">
+          <v-img contain src="hurricane-4.png" height="100px"></v-img>
+          <v-card-title>FIBRE INSTALLATION</v-card-title>
+          <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
+          <v-card-actions>
+            <v-btn x-large
+              ><nuxt-link class="category" exact to="/fibreinstallation"
+                >View</nuxt-link
+              ></v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-btn icon @click="showFI = !showFI">
+              <v-icon>{{
+                showFI ? 'mdi-chevron-up' : 'mdi-chevron-down'
+              }}</v-icon>
+            </v-btn>
+          </v-card-actions>
+
+          <v-expand-transition>
+            <div v-show="showFI">
+              <v-divider></v-divider>
+
+              <v-card-text
+                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              >
+            </div>
+          </v-expand-transition>
+        </v-card>
+        <v-card class="mx-2 mb-5" max-width="400">
+          <v-img contain src="klein-tools.png" height="100px"></v-img>
+          <v-card-title>KLEIN TOOLS</v-card-title>
+          <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
+          <v-card-actions>
+            <v-btn x-large
+              ><nuxt-link class="category" exact to="/kleintools"
+                >View</nuxt-link
+              ></v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-btn icon @click="showKT = !showKT">
+              <v-icon>{{
+                showKT ? 'mdi-chevron-up' : 'mdi-chevron-down'
+              }}</v-icon>
+            </v-btn>
+          </v-card-actions>
+
+          <v-expand-transition>
+            <div v-show="showKT">
+              <v-divider></v-divider>
+
+              <v-card-text
+                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              >
+            </div>
+          </v-expand-transition>
+        </v-card>
+      </v-col>
+      <v-col v-hover class="column" cols="12" md="6">
+        <v-card class="mx-2 mb-5" max-width="400">
+          <v-img contain src="running-out-blocks.png" height="100px"></v-img>
+          <v-card-title>OVERHEAD LINE</v-card-title>
+          <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
+          <v-card-actions>
+            <v-btn x-large
+              ><nuxt-link class="category" exact to="/overheadline"
+                >View</nuxt-link
+              ></v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-btn icon @click="showOL = !showOL">
+              <v-icon>{{
+                showOL ? 'mdi-chevron-up' : 'mdi-chevron-down'
+              }}</v-icon>
+            </v-btn>
+          </v-card-actions>
+
+          <v-expand-transition>
+            <div v-show="showOL">
+              <v-divider></v-divider>
+
+              <v-card-text
+                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              >
+            </div>
+          </v-expand-transition>
+        </v-card>
+        <v-card class="mx-2 mb-5" max-width="400">
+          <v-img contain src="winch-2.png" height="100px"></v-img>
+          <v-card-title>WINCHES AND TRAILERS</v-card-title>
+          <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
+          <v-card-actions>
+            <v-btn x-large
+              ><nuxt-link class="category" exact to="/winchesandtrailers"
+                >View</nuxt-link
+              ></v-btn
+            >
+            <v-spacer></v-spacer>
+            <v-btn icon @click="showWT = !showWT">
+              <v-icon>{{
+                showWT ? 'mdi-chevron-up' : 'mdi-chevron-down'
+              }}</v-icon>
+            </v-btn>
+          </v-card-actions>
+
+          <v-expand-transition>
+            <div v-show="showWT">
+              <v-divider></v-divider>
+
+              <v-card-text
+                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              >
+            </div>
+          </v-expand-transition>
+        </v-card>
       </v-col>
     </v-row>
     <!-- </v-container> -->
@@ -67,6 +137,10 @@ export default {
   },
   data() {
     return {
+      showFI: false,
+      showKT: false,
+      showOL: false,
+      showWT: false,
       axiosCards: '',
       cards: [
         {
