@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/search/HURRICANE", {data:[{}],fetch:{},mutations:[]});

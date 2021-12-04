@@ -2,23 +2,23 @@
   <section>
     <!-- <v-container> -->
     <v-row fillheight no-gutters align="center" justify="center">
-      <v-col v-hover class="column" cols="12" md="6">
+      <v-col v-hover class="column" cols="12" md="6" align="center">
         <v-card class="mx-2 mb-5" max-width="400">
           <v-img contain src="hurricane-4.png" height="100px"></v-img>
           <v-card-title>FIBRE INSTALLATION</v-card-title>
           <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
           <v-card-actions>
-            <v-btn x-large
-              ><nuxt-link class="category" exact to="/fibreinstallation"
-                >View</nuxt-link
-              ></v-btn
-            >
-            <v-spacer></v-spacer>
             <v-btn icon @click="showFI = !showFI">
               <v-icon>{{
                 showFI ? 'mdi-chevron-up' : 'mdi-chevron-down'
               }}</v-icon>
             </v-btn>
+            <v-spacer></v-spacer>
+            <nuxt-link class="category" exact to="/fibreinstallation"
+              ><v-btn x-large
+                ><v-icon left large color="primary">mdi-play</v-icon>View</v-btn
+              ></nuxt-link
+            >
           </v-card-actions>
 
           <v-expand-transition>
@@ -36,17 +36,17 @@
           <v-card-title>KLEIN TOOLS</v-card-title>
           <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
           <v-card-actions>
-            <v-btn x-large
-              ><nuxt-link class="category" exact to="/kleintools"
-                >View</nuxt-link
-              ></v-btn
-            >
-            <v-spacer></v-spacer>
             <v-btn icon @click="showKT = !showKT">
               <v-icon>{{
                 showKT ? 'mdi-chevron-up' : 'mdi-chevron-down'
               }}</v-icon>
             </v-btn>
+            <v-spacer></v-spacer>
+            <nuxt-link class="category" exact to="/kleintools"
+              ><v-btn x-large
+                ><v-icon left large color="primary">mdi-play</v-icon>View</v-btn
+              ></nuxt-link
+            >
           </v-card-actions>
 
           <v-expand-transition>
@@ -60,23 +60,23 @@
           </v-expand-transition>
         </v-card>
       </v-col>
-      <v-col v-hover class="column" cols="12" md="6">
+      <v-col v-hover class="column" cols="12" md="6" align="center">
         <v-card class="mx-2 mb-5" max-width="400">
           <v-img contain src="running-out-blocks.png" height="100px"></v-img>
           <v-card-title>OVERHEAD LINE</v-card-title>
           <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
           <v-card-actions>
-            <v-btn x-large
-              ><nuxt-link class="category" exact to="/overheadline"
-                >View</nuxt-link
-              ></v-btn
-            >
-            <v-spacer></v-spacer>
             <v-btn icon @click="showOL = !showOL">
               <v-icon>{{
                 showOL ? 'mdi-chevron-up' : 'mdi-chevron-down'
               }}</v-icon>
             </v-btn>
+            <v-spacer></v-spacer>
+            <nuxt-link class="category" exact to="/overheadline"
+              ><v-btn x-large
+                ><v-icon left large color="primary">mdi-play</v-icon>View</v-btn
+              ></nuxt-link
+            >
           </v-card-actions>
 
           <v-expand-transition>
@@ -94,17 +94,17 @@
           <v-card-title>WINCHES AND TRAILERS</v-card-title>
           <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
           <v-card-actions>
-            <v-btn x-large
-              ><nuxt-link class="category" exact to="/winchesandtrailers"
-                >View</nuxt-link
-              ></v-btn
-            >
-            <v-spacer></v-spacer>
             <v-btn icon @click="showWT = !showWT">
               <v-icon>{{
                 showWT ? 'mdi-chevron-up' : 'mdi-chevron-down'
               }}</v-icon>
             </v-btn>
+            <v-spacer></v-spacer>
+            <nuxt-link class="category" exact to="/winchesandtrailers"
+              ><v-btn x-large
+                ><v-icon left large color="primary">mdi-play</v-icon>View</v-btn
+              ></nuxt-link
+            >
           </v-card-actions>
 
           <v-expand-transition>

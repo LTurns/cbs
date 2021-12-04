@@ -123,10 +123,10 @@ export default {
 </script>
 
 <style>
-.hero {
+/* .hero {
   background-image: url('https://cbs-images.s3.amazonaws.com/orangeWire.png');
   background-size: cover;
-}
+} */
 
 /* .feature {
   background-image: url('../static/orangeWire.png');

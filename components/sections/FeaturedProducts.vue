@@ -53,13 +53,7 @@
               >
                 <div v-if="!plan.hasSubCategories">
                   <nuxt-link class="link" :to="`/product/${plan._id}`">
-                    <v-btn
-                      x-large
-                      text
-                      class="my-3"
-                      color="green darken-3"
-                      outlined
-                      black
+                    <v-btn x-large class="my-3"
                       ><v-icon left large color="primary">mdi-play</v-icon
                       >View</v-btn
                     >
@@ -70,15 +64,9 @@
                     class="link align-center"
                     :to="`/category/${plan.name.toLowerCase()}`"
                   >
-                    <v-btn
-                      :x-large="$vuetify.breakpoint.smAndUp"
-                      text
-                      class="my-3"
-                      color="green darken-2"
-                      outlined
-                      bold
-                      black
-                      ><v-icon left large>mdi-play</v-icon>View</v-btn
+                    <v-btn x-large class="my-3"
+                      ><v-icon left large color="primary">mdi-play</v-icon
+                      >View</v-btn
                     >
                   </nuxt-link>
                 </div>

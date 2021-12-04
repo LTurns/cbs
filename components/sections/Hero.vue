@@ -1,7 +1,7 @@
 <template>
   <section id="hero">
     <v-container class="containerstyle">
-      <v-row align="center" justify="center" style="margin-top: 3%">
+      <v-row align="center" justify="center" style="margin-top: 2%" fillheight>
         <v-col cols="12" md="6" sm="12">
           <div
             class="mainfonttitle black--text text--lighten-4 font-weight-black"
@@ -28,16 +28,8 @@
           ><br />
           <a
             href="http://www.cbsproducts.com/wp-content/uploads/2021/03/CBS-Main-Product-Catalogue.pdf"
-            active-class="text--primary"
-            class="font-weight-bold"
           >
-            <v-btn
-              :x-large="$vuetify.breakpoint.smAndUp"
-              color="black"
-              class="white"
-              text
-              outlined
-              white
+            <v-btn x-large
               ><v-icon left large color="primary">mdi-play</v-icon> Download
               Catalogue</v-btn
             ></a

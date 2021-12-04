@@ -4,13 +4,30 @@
       <v-col cols="12" align="center">
         <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
         <v-container>
-          <SectionsMainSearch :data="filteredList" category="general" />
+          <SectionsMainSearch :data="filteredList" />
           <SectionsIntro
             class="pt-10 pb-10"
             style="margin-bottom: 30px"
             color="black"
             text="text-uppercase black--text"
           />
+
+          <div
+            class="fonttitle black--text text--lighten-4 font-weight-black"
+            align="center"
+            style="
+              border-bottom: 2px solid #fde36d;
+              box-shadow: 0 4px 6px -6px #222;
+              line-height: 1;
+              padding: 3%;
+              margin-left: 1%;
+              margin-right: 1%;
+              margin-top: 3%;
+            "
+          >
+            POPULAR SEARCHES
+          </div>
+          <SectionsFeaturedProducts :data="filteredList.slice(0, 3)" />
         </v-container>
         <div class="grey lighten-4">
           <SectionsBlockQuote>

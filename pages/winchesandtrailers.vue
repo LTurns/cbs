@@ -3,12 +3,12 @@
     <v-row no-gutters>
       <v-col cols="12" align="center">
         <SectionsHeroAlt :hero-alt="heroAlt" />
-        <v-col class="blue-grey darken-4">
-          <SectionsBlockQuote text="white--text">
-            <slot> Our Klein Tools are used for... </slot>
+        <v-col class="white">
+          <SectionsBlockQuote text="black--text">
+            <slot> Our Winches and Trailers are used for... </slot>
           </SectionsBlockQuote>
         </v-col>
-        <SectionsSearch :data="filteredList" />
+        <SectionsSearch :data="filteredList" category="Winches and Trailers" />
       </v-col>
     </v-row>
   </section>

@@ -3,7 +3,7 @@
     <v-row no-gutters>
       <v-col cols="12" align="center">
         <SectionsHeroAlt :hero-alt="heroAlt" />
-        <v-col class="grey lighten-2">
+        <v-col class="white">
           <SectionsBlockQuote text="black--text">
             <slot>
               Our Fibre Blowing products include Tornado, Jetstream and
@@ -13,7 +13,7 @@
           </SectionsBlockQuote>
         </v-col>
         <!-- <v-col class="yellow darken-2"> -->
-        <SectionsSearch :data="filteredList" />
+        <SectionsSearch :data="filteredList" category="Fibre Installation" />
         <!-- </v-col> -->
       </v-col>
     </v-row>

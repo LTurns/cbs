@@ -13,7 +13,7 @@
       />
       <v-row no-gutters align="center" justify="center">
         <v-col cols="12" md="6" sm="12" class="white">
-          <v-carousel hide-delimiter-background class="white">
+          <v-carousel hide-delimiter-background class="white" cycle>
             <v-carousel-item
               v-for="img in product.img"
               :key="img.id"
@@ -27,7 +27,7 @@
             </v-carousel-item>
           </v-carousel>
         </v-col>
-        <v-col align-content="center" cols="12" md="6" sm="12" class="white">
+        <v-col cols="12" md="6" sm="12" class="white">
           <div id="home" class="section-showcase">
             <!-- <div class="container"> -->
             <!-- <div> -->
@@ -39,7 +39,6 @@
                 black--text
                 mt-10
                 mb-10
-                px-10
               "
             >
               PRODUCT INFORMATION
@@ -55,7 +54,7 @@
                 text-align: center;
               "
             ></div> -->
-            <div class="px-10">
+            <div>
               <div class="d-inline mt-10 pa-2 blue-grey lighten-4 black--text">
                 ID
               </div>

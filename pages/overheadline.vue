@@ -3,15 +3,12 @@
     <v-row no-gutters>
       <v-col cols="12" align="center">
         <SectionsHeroAlt :hero-alt="heroAlt" />
-        <v-col class="blue-grey darken-4">
-          <SectionsBlockQuote text="white--text">
-            <slot> Our Utilities are used for... </slot>
+        <v-col class="white">
+          <SectionsBlockQuote text="black--text">
+            <slot> Our Overhead Line products are used for... </slot>
           </SectionsBlockQuote>
         </v-col>
-        <v-col class="yellow darken-2">
-          <SectionsSearch :data="filteredList" />
-        </v-col>
-        <SectionsFeaturedProducts :data="filteredList" />
+        <SectionsSearch :data="filteredList" category="Overhead Line" />
       </v-col>
     </v-row>
   </section>
@@ -50,7 +47,7 @@ export default {
         )
 
         data.forEach((product) => {
-          if (product.category === 'Utilities') {
+          if (product.category.includes('Overhead Line')) {
             this.filteredList.push(product)
           }
         })
