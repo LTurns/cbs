@@ -1,7 +1,7 @@
 <template>
-  <section id="hero">
+  <section id="hero" class="position: absolute">
     <v-container class="containerstyle">
-      <v-row align="center" justify="center" style="margin-top: 2%" fillheight>
+      <v-row align="center" fillheight>
         <v-col cols="12" md="6" sm="12">
           <div
             class="mainfonttitle black--text text--lighten-4 font-weight-black"
@@ -11,14 +11,23 @@
               line-height: 1;
             "
           >
-            {{ carouselsData[0].heading.toUpperCase() }}
+            LEADERS IN ADVANCED CABLE INSTALLATION
           </div>
 
           <p
             style="font-size: 16px; margin-top: 5%; margin-bottom: 5%"
             class="dark--text"
           >
-            {{ carouselsData[0].subHeading }}
+            CBS Products has been at the forefront of cabling technology for
+            <span class="orange--text font-weight-black" style="font-size: 20px"
+              >50</span
+            >
+            years. Specialising in the design and manufacture of installation
+            equipment for HV Transmission towers, LV Distribution lines, Railway
+            Tracksides and underground CATV / Telecommunication networks,
+            including the handling of Fibre Optic Cables, for projects around
+            the world. We also offer a comprehensive range of standard
+            equipment.
           </p>
 
           <v-btn
@@ -37,7 +46,7 @@
         </v-col>
         <!-- </v-row>
       <v-row style="margin-bottom: 2%"> -->
-        <v-col cols="12" md="6" sm="12" class="right black--text">
+        <v-col cols="12" md="6" sm="12" class="right black--text mt-10">
           <div>
             <categories />
           </div>

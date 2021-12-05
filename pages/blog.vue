@@ -1,8 +1,8 @@
 <template>
-  <section class="blue-grey darken-4">
+  <section class="white">
     <v-row no-gutters>
-      <v-col cols="12" class="yellow darken-2">
-        <SectionsHeroAlt :hero-alt="heroAlt" class="white" />
+      <v-col cols="12" class="grey lighten-3" align="center">
+        <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
         <SectionsBlockQuote
           ><slot
             >Browse our latest blogs for all of our most recent products and
@@ -13,7 +13,7 @@
     </v-row>
     <v-container class="pt-10">
       <v-row>
-        <v-col cols="12">
+        <v-col cols="12" align="center">
           <aside>
             <div class="search">
               <input
@@ -27,19 +27,6 @@
                 <img src="/loupe.png" alt="" />
               </button>
             </div>
-            <p style="color: grey; margin-top: 20px; font-size: 15px">
-              Popular search results:
-            </p>
-            <nuxt-link exact to="article/11" class="tag"
-              >Klein Tools Insulated Range</nuxt-link
-            >
-            <nuxt-link exact to="article/5" class="tag"
-              >Tornado Blowing Machine</nuxt-link
-            >
-            <nuxt-link exact to="article/8" class="tag"
-              >Drum Handling</nuxt-link
-            >
-            <nuxt-link exact to="/article/3" class="tag">Pole Bogie</nuxt-link>
           </aside>
         </v-col>
         <SectionsBlogs :data="blogList" />
@@ -138,7 +125,7 @@ $brandColor: #fde36d;
 
   &__btn {
     // font-size: 1.3rem;
-    background: transparent;
+    background: $brandColor;
     border: none;
     cursor: pointer;
     border-radius: 100vh;

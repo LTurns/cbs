@@ -28,7 +28,7 @@
           </v-carousel>
         </v-col>
         <v-col cols="12" md="6" sm="12" class="white">
-          <div id="home" class="section-showcase">
+          <div id="home" class="px-10">
             <!-- <div class="container"> -->
             <!-- <div> -->
 
@@ -54,13 +54,11 @@
                 text-align: center;
               "
             ></div> -->
-            <div>
-              <div class="d-inline mt-10 pa-2 blue-grey lighten-4 black--text">
-                ID
-              </div>
-              <div class="d-inline yellow darken-2 black--text pa-2">
-                {{ product.productId }}
-              </div>
+            <div class="d-inline mt-10 pa-2 blue-grey lighten-4 black--text">
+              ID
+            </div>
+            <div class="d-inline yellow darken-2 black--text pa-2">
+              {{ product.productId }}
             </div>
           </div>
           <div v-for="paragraph in product.description" :key="paragraph.id">
@@ -73,7 +71,7 @@
           </div>
           <div class="mb-10 mt-10">
             <nuxt-link exact :to="`/contact`" class="mb-10 px-10 pb-10">
-              <v-btn x-large color="green" dark>
+              <v-btn x-large>
                 <v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn
               ></nuxt-link

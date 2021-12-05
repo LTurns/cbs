@@ -43,7 +43,7 @@
           FEATURED PRODUCTS
         </div>
         <!-- </v-responsive> -->
-        <SectionsFeaturedProducts :data="filteredList" />
+        <SectionsFeaturedProducts :data="filteredList" class="mb-10" />
       </v-col>
     </v-row>
     <v-row no-gutters>

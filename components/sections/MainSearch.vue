@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <div class="search yellow darken-1">
+    <div class="search white">
       <input
         v-model="search"
         type="text"
@@ -11,25 +11,7 @@
       <button class="search__btn" aria-label="submit search">
         <img src="/loupe.png" alt="" />
       </button>
-    </div> -->
-
-    <v-form
-      class="searchbar-mobile font-weight-bold mt-5 mx-5 my-5 white px-5 py-5"
-      active-class="text--primary"
-    >
-      <v-autocomplete
-        v-model="search"
-        class="bar"
-        color="yellow darken-1"
-        label="SEARCH"
-        :items="products"
-        prepend-icon="mdi-magnify"
-        append-icon="mdi-window-close"
-        @click:append="() => (search = '')"
-      >
-        <!-- <v-btn @click="clearSearch"><v-icon>mdi-window-close</v-icon></v-btn> -->
-      </v-autocomplete>
-    </v-form>
+    </div>
     <SectionsFeaturedProducts :data="list" />
   </section>
 </template>
@@ -45,52 +27,16 @@ export default {
   data() {
     return {
       search: '',
-      products: [],
     }
   },
   computed: {
     list() {
-      this.getProducts()
       if (this.search !== '') {
         return this.data.filter((box) => {
-          return (
-            box.name.toLowerCase().includes(this.search.toLowerCase()) ||
-            box.productId.toLowerCase().includes(this.search.toLowerCase())
-          )
+          return box.name.toLowerCase().includes(this.search.toLowerCase())
         })
       }
       return ''
-    },
-  },
-  methods: {
-    getProducts(data) {
-      // const config = {
-      //   headers: {
-      //     'Access-Control-Allow-Origin': '*',
-      //   },
-      // }
-      // try {
-      //   const { data } = await this.$axios.get(
-      //     'https://cbsbackend.herokuapp.com/api/products',
-      //     config
-      //   )
-      if (this.data.length) {
-        this.data.filter((product) => {
-          this.products.push(product.name)
-          this.products.push(product.productId)
-        })
-      }
-      // }
-
-      return this.products
-
-      // return (this.filteredList = data)
-      // } catch (err) {
-      //   throw new Error('Error Fetching Products')
-      // }
-    },
-    clearSearch() {
-      this.search = ''
     },
   },
 }
@@ -104,7 +50,7 @@ $brandColor: #fde36d;
   // margin-right: 20%;
   display: flex;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
-  background-color: white;
+  background-color: rgb(253, 222, 136);
   // border-radius: 100vh;
   // heigth: 60px;
   margin-top: 3%;
@@ -135,7 +81,7 @@ $brandColor: #fde36d;
 
   &__btn {
     // font-size: 1.3rem;
-    background: transparent;
+    background: $brandColor;
     border: none;
     cursor: pointer;
     border-radius: 100vh;

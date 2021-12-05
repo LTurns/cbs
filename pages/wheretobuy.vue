@@ -1,11 +1,8 @@
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+  <section class="white">
     <v-row no-gutters>
       <v-col cols="12">
-        <SectionsHeroAlt
-          :hero-alt="heroAlt"
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
-        />
+        <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
       </v-col>
     </v-row>
     <div>
@@ -41,7 +38,6 @@ export default {
   margin-right: auto;
   width: 100vw;
   height: 80vh;
-  border: 2px solid black;
 }
 
 .wheretobuy-enter-active,

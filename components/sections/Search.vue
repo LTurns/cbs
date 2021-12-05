@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <div class="search yellow darken-1">
+    <div class="search white">
       <input
         v-model="search"
         type="text"
@@ -11,23 +11,7 @@
       <button class="search__btn" aria-label="submit search">
         <img src="/loupe.png" alt="" />
       </button>
-    </div> -->
-    <v-form
-      class="searchbar-mobile font-weight-bold mt-5 mx-5 my-5 white px-5 py-5"
-      active-class="text--primary"
-    >
-      <v-autocomplete
-        v-model="search"
-        class="bar"
-        color="yellow darken-1"
-        label="SEARCH"
-        :items="products"
-        prepend-icon="mdi-magnify"
-        @submit.prevent
-      >
-        <v-icon>mdi-magnify</v-icon>
-      </v-autocomplete>
-    </v-form>
+    </div>
     <SectionsFeaturedProducts :data="list" />
   </section>
 </template>
@@ -39,62 +23,20 @@ export default {
       type: Array,
       default: null,
     },
-    category: {
-      type: Array,
-      default: null,
-    },
   },
   data() {
     return {
       search: '',
-      productSearch: '',
-      products: [],
     }
   },
   computed: {
     list() {
-      this.getProducts()
-      if (this.search !== '' || this.search !== null) {
+      if (this.search !== '') {
         return this.data.filter((box) => {
-          return (
-            box.name.toLowerCase().includes(this.search.toLowerCase()) ||
-            box.productId.toLowerCase().includes(this.search.toLowerCase())
-          )
+          return box.name.toLowerCase().includes(this.search.toLowerCase())
         })
       }
       return this.data
-    },
-  },
-  // created() {
-  //   this.getProducts()
-  // },
-  methods: {
-    getProducts() {
-      // const config = {
-      //   headers: {
-      //     'Access-Control-Allow-Origin': '*',
-      //   },
-      // }
-      // try {
-      //   const { data } = await this.$axios.get(
-      //     'https://cbsbackend.herokuapp.com/api/products',
-      //     config
-      //   )
-      // if (this.category !== null && this.data !== null) {
-      this.data.filter((product) => {
-        if (product.category.includes(this.category)) {
-          this.products.push(product.name)
-          this.products.push(product.productId)
-        }
-      })
-      // }
-
-      return this.products
-
-      // return (this.filteredList = data)
-      // } catch (err) {
-      //   throw new Error('Error Fetching Products')
-      // }
     },
   },
 }

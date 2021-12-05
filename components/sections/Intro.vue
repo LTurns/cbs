@@ -25,36 +25,43 @@
             <div v-show="showFI">
               <v-divider></v-divider>
 
-              <v-card-text
-                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              <v-card align="left">
+                <v-card-text
+                  >Includes a multitude of cable blowing machines, from
+                  Hurricanes to Tornados and Acelairs.</v-card-text
+                ></v-card
               >
             </div>
           </v-expand-transition>
         </v-card>
         <v-card class="mx-2 mb-5" max-width="400">
-          <v-img contain src="klein-tools.png" height="100px"></v-img>
-          <v-card-title>KLEIN TOOLS</v-card-title>
+          <v-img contain src="winch-2.png" height="100px"></v-img>
+          <v-card-title>WINCHES AND TRAILERS</v-card-title>
           <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
           <v-card-actions>
-            <v-btn icon @click="showKT = !showKT">
+            <v-btn icon @click="showWT = !showWT">
               <v-icon>{{
-                showKT ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                showWT ? 'mdi-chevron-up' : 'mdi-chevron-down'
               }}</v-icon>
             </v-btn>
             <v-spacer></v-spacer>
-            <nuxt-link class="category" exact to="/kleintools"
+            <nuxt-link class="category" exact to="/winchesandtrailers"
               ><v-btn x-large
                 ><v-icon left large color="primary">mdi-play</v-icon>View</v-btn
               ></nuxt-link
             >
           </v-card-actions>
 
-          <v-expand-transition>
-            <div v-show="showKT">
+          <v-expand-transition margin="auto">
+            <div v-show="showWT">
               <v-divider></v-divider>
 
-              <v-card-text
-                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              <v-card align="left">
+                <v-card-text
+                  >Enabling your team to transport equipment to the work site
+                  and install a wide range of cabling both overhead and
+                  underground.</v-card-text
+                ></v-card
               >
             </div>
           </v-expand-transition>
@@ -83,24 +90,26 @@
             <div v-show="showOL">
               <v-divider></v-divider>
 
-              <v-card-text
-                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              <v-card align="left">
+                <v-card-text
+                  >Includes a multitude of overheadline equipment</v-card-text
+                ></v-card
               >
             </div>
           </v-expand-transition>
         </v-card>
         <v-card class="mx-2 mb-5" max-width="400">
-          <v-img contain src="winch-2.png" height="100px"></v-img>
-          <v-card-title>WINCHES AND TRAILERS</v-card-title>
+          <v-img contain src="kleintoolss.jpeg" height="100px"></v-img>
+          <v-card-title>KLEIN TOOLS</v-card-title>
           <!-- <v-card-subtitle>This is the product</v-card-subtitle> -->
           <v-card-actions>
-            <v-btn icon @click="showWT = !showWT">
+            <v-btn icon @click="showKT = !showKT">
               <v-icon>{{
-                showWT ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                showKT ? 'mdi-chevron-up' : 'mdi-chevron-down'
               }}</v-icon>
             </v-btn>
             <v-spacer></v-spacer>
-            <nuxt-link class="category" exact to="/winchesandtrailers"
+            <nuxt-link class="category" exact to="/kleintools"
               ><v-btn x-large
                 ><v-icon left large color="primary">mdi-play</v-icon>View</v-btn
               ></nuxt-link
@@ -108,11 +117,13 @@
           </v-card-actions>
 
           <v-expand-transition>
-            <div v-show="showWT">
+            <div v-show="showKT">
               <v-divider></v-divider>
 
-              <v-card-text
-                >heloobefjbjf hfkehfHkhfhjhFKH HIHFHFHHF HIHDHHDH</v-card-text
+              <v-card align="left">
+                <v-card-text
+                  >Includes a multitude of klein tools...</v-card-text
+                ></v-card
               >
             </div>
           </v-expand-transition>
@@ -157,7 +168,7 @@ export default {
         },
         {
           name: 'KLEIN TOOLS',
-          image: 'klein-tools.png',
+          image: 'kleintoolss.jpg',
           link: '/kleintools',
           margin: '10',
         },

@@ -1,36 +1,38 @@
 <template>
-  <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'">
+  <section class="white">
     <v-row>
       <v-col cols="12">
-        <SectionsHeroAlt
-          :hero-alt="heroAlt"
-          :class="$vuetify.theme.dark ? 'grey darken-4' : 'white'"
-        />
+        <SectionsHeroAlt :hero-alt="heroAlt" class="grey lighten-4" />
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
-              <h3
-                :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
-                class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
+              <div
+                class="fonttitle black--text text--lighten-4 font-weight-black"
+                align="center"
                 style="
                   border-bottom: 2px solid #fde36d;
                   box-shadow: 0 4px 6px -6px #222;
+                  line-height: 1;
+                  padding: 3%;
+                  margin-left: 1%;
+                  margin-right: 1%;
+                  margin-top: 3%;
                 "
               >
                 WHO ARE WE?
-              </h3>
+              </div>
             </v-col>
             <v-col cols="12" md="6">
-              <v-btn
-                :x-large="$vuetify.breakpoint.smAndUp"
-                text
-                class="my-3 mb-xs-4 mt-10 mb-5"
-                outlined
-                white
-                ><v-icon left large color="primary">mdi-play</v-icon
-                ><a href="#team" class="learn black--text"
-                  >Meet The Team</a
-                ></v-btn
+              <a href="#team" class="learn black--text">
+                <v-btn
+                  :x-large="$vuetify.breakpoint.smAndUp"
+                  text
+                  class="my-3 mb-xs-4 mt-10 mb-5"
+                  outlined
+                  white
+                  ><v-icon left large color="primary">mdi-play</v-icon>Meet The
+                  Team</v-btn
+                ></a
               >
             </v-col>
             <v-col
@@ -99,30 +101,38 @@
                 planning your next cable deployment project: your bottom line.
               </p>
             </v-col>
-            <h3
-              :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
-              class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
+            <div
+              class="fonttitle black--text text--lighten-4 font-weight-black"
+              align="center"
               style="
                 border-bottom: 2px solid #fde36d;
-                width: 500px;
                 box-shadow: 0 4px 6px -6px #222;
+                line-height: 1;
+                padding: 3%;
+                margin-left: 1%;
+                margin-right: 1%;
+                margin-top: 3%;
               "
             >
               OUR JOURNEY
-            </h3>
+            </div>
             <SectionsTimeline />
-            <h3
-              id="team"
-              :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
-              class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
+            <div
+              class="fonttitle black--text text--lighten-4 font-weight-black"
+              align="center"
               style="
                 border-bottom: 2px solid #fde36d;
-                width: 500px;
                 box-shadow: 0 4px 6px -6px #222;
+                line-height: 1;
+                padding: 3%;
+                margin-left: 1%;
+                margin-right: 1%;
+                margin-top: 3%;
+                margin-bottom: 2%;
               "
             >
               MEET THE TEAM
-            </h3>
+            </div>
             <SectionsTeam :our-team="ourTeam" class="mb-10" />
           </v-row>
         </v-container>
