@@ -12,13 +12,7 @@
         <v-row class="text-center">
           <v-col class="text-center" col="12">
             <h1
-              class="
-                text-md-h2 text-sm-h3 text-h4
-                font-weight-black
-                text-center
-                black--text
-                text--lighten-4
-              "
+              class="text-md-h2 text-sm-h3 text-h4 font-weight-black text-center black--text text--lighten-4"
               style="
                 border-bottom: 2px solid #fde36d;
                 box-shadow: 0 4px 6px -6px #222;

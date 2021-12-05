@@ -15,13 +15,7 @@
               <v-col cols="12" md="12">
                 <h3
                   :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
-                  class="
-                    text-h4 text-center
-                    font-weight-light
-                    mb-xs-4
-                    mt-10
-                    mb-5
-                  "
+                  class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
                   style="
                     border-bottom: 2px solid #fde36d;
                     box-shadow: 0 4px 6px -6px #222;
@@ -131,13 +125,7 @@
               <v-col cols="12" md="12">
                 <h3
                   :class="$vuetify.theme.dark ? 'black--text' : 'black--text'"
-                  class="
-                    text-h4 text-center
-                    font-weight-light
-                    mb-xs-4
-                    mt-10
-                    mb-5
-                  "
+                  class="text-h4 text-center font-weight-light mb-xs-4 mt-10 mb-5"
                   style="
                     border-bottom: 2px solid #fde36d;
                     box-shadow: 0 4px 6px -6px #222;

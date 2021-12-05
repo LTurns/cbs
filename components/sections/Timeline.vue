@@ -41,25 +41,29 @@ export default {
           color: 'orange',
           year: '1971',
           title: 'CBS Is Established',
-          info: 'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
           color: 'orange',
           year: '1980',
           title: 'CBS Diversifies',
-          info: 'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
           color: 'orange',
           year: '1990',
           title: 'CBS gains big clients',
-          info: 'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
         {
           color: 'orange',
           year: '2000',
           title: 'Where we are Now',
-          info: 'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
+          info:
+            'In the year 1971, 50 years ago, CBS was first established in Oakham. Back then,it designed and manufacture cable jointing equipment. Before this, the famous building was a food hall for the locals during the war.',
         },
       ],
     }

@@ -316,18 +316,7 @@
                   >
                     <v-card id="feature-card" class="mx-auto">
                       <h4
-                        class="
-                          text-uppercase
-                          yellow
-                          lighten-2
-                          text-center
-                          mt-10
-                          mb-3
-                          pt-5
-                          pl-2
-                          pr-2
-                          pb-5
-                        "
+                        class="text-uppercase yellow lighten-2 text-center mt-10 mb-3 pt-5 pl-2 pr-2 pb-5"
                         style="
                           letter-spacing: 0.15em;
                           border-bottom: 2px solid #fde36d;
@@ -456,15 +445,7 @@
                           class="mx-auto transition-swing"
                         >
                           <h4
-                            class="
-                              text-uppercase text-center
-                              black--text
-                              mt-5
-                              pt-5
-                              pl-5
-                              pr-5
-                              pb-5
-                            "
+                            class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
                             style="letter-spacing: 0.15em; font-size: 20px"
                             v-text="plan.name"
                           ></h4>
@@ -556,8 +537,9 @@
                       rows="8"
                       row-height="20"
                       @input="
-                        productArray.configurationIntro[index].paragraph =
-                          $event
+                        productArray.configurationIntro[
+                          index
+                        ].paragraph = $event
                       "
                     ></v-textarea>
                     <!-- <textarea
@@ -782,15 +764,7 @@
       </v-row>
 
       <h4
-        class="
-          text-h4 text-center
-          font-weight-bold
-          mb-xs-4
-          mt-10
-          mb-5
-          pl-5
-          pr-5
-        "
+        class="text-h4 text-center font-weight-bold mb-xs-4 mt-10 mb-5 pl-5 pr-5"
       >
         SIMILAR PRODUCTS
       </h4>
@@ -827,15 +801,7 @@
               class="mx-auto transition-swing"
             >
               <h4
-                class="
-                  text-uppercase text-center
-                  black--text
-                  mt-5
-                  pt-5
-                  pl-5
-                  pr-5
-                  pb-5
-                "
+                class="text-uppercase text-center black--text mt-5 pt-5 pl-5 pr-5 pb-5"
                 style="letter-spacing: 0.15em; font-size: 20px"
                 v-text="plan.name"
               ></h4>

@@ -97,17 +97,18 @@
             <v-divider></v-divider>
           </v-list>
         </v-col>
+        <footer-contact-form />
       </v-row>
     </v-container>
   </section>
 </template>
 
 <script>
-// import footerContactForm from '~/components/sections/footerContactForm.vue'
+import footerContactForm from '~/components/sections/footerContactForm.vue'
 export default {
-  // components: {
-  //   footerContactForm,
-  // },
+  components: {
+    footerContactForm,
+  },
   data() {
     return {
       social: [

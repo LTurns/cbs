@@ -33,13 +33,7 @@
             <!-- <div> -->
 
             <h5
-              class="
-                text-md-h5 text-sm-h5 text-h5
-                font-weight-black
-                black--text
-                mt-10
-                mb-10
-              "
+              class="text-md-h5 text-sm-h5 text-h5 font-weight-black black--text mt-10 mb-10"
             >
               PRODUCT INFORMATION
               <!-- <div> -->
@@ -132,12 +126,7 @@
                       align="center"
                     >
                       <div
-                        class="
-                          fonttitle
-                          black--text
-                          text--lighten-4
-                          font-weight-black
-                        "
+                        class="fonttitle black--text text--lighten-4 font-weight-black"
                         style="
                           border-bottom: 2px solid #fde36d;
                           box-shadow: 0 4px 6px -6px #222;
@@ -243,12 +232,7 @@
                 >
                   <v-col cols="12" md="12" align="center">
                     <div
-                      class="
-                        fonttitle
-                        black--text
-                        text--lighten-4
-                        font-weight-black
-                      "
+                      class="fonttitle black--text text--lighten-4 font-weight-black"
                       style="
                         border-bottom: 2px solid #fde36d;
                         box-shadow: 0 4px 6px -6px #222;
@@ -324,12 +308,7 @@
               <div v-for="video in product.videos" :key="video.title">
                 <v-col cols="12" md="12" align="center">
                   <div
-                    class="
-                      fonttitle
-                      black--text
-                      text--lighten-4
-                      font-weight-black
-                    "
+                    class="fonttitle black--text text--lighten-4 font-weight-black"
                     style="
                       border-bottom: 2px solid #fde36d;
                       box-shadow: 0 4px 6px -6px #222;
@@ -361,15 +340,7 @@
         </v-tabs-items>
       </div>
       <h4
-        class="
-          text-h4 text-center
-          font-weight-bold
-          mb-xs-4
-          mt-10
-          mb-5
-          pl-5
-          pr-5
-        "
+        class="text-h4 text-center font-weight-bold mb-xs-4 mt-10 mb-5 pl-5 pr-5"
       >
         SIMILAR PRODUCTS
       </h4>
