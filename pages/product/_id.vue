@@ -5,26 +5,26 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   data() {
     return {
       id: this.$route.params.id,
     }
   },
-  computed: {
-    ...mapState(['product']),
-    product() {
-      return this.$store.state.product
-    },
-  },
+  // computed: {
+  //   // ...mapState(['product']),
+  //   product() {
+  //     return this.$store.dispatch('resetProduct')
+  //   },
+  // },
   created() {
-    this.getIdProduct()
+    this.refreshProduct()
   },
   methods: {
-    ...mapActions(['getProduct']),
-    getIdProduct() {
-      this.$store.dispatch('getProduct', this.id)
+    ...mapActions(['resetProduct']),
+    refreshProduct() {
+      this.$store.dispatch('refreshProduct')
     },
   },
   transition: 'productid',

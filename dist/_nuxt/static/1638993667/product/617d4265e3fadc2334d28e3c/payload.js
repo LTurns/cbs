@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/product/617d4265e3fadc2334d28e3c", {data:[{}],fetch:{},mutations:[["resetProduct",void 0]]});

@@ -64,7 +64,7 @@
             </p>
           </div>
           <div class="mb-10 mt-10">
-            <nuxt-link exact :to="`/contact`" class="mb-10 px-10 pb-10">
+            <nuxt-link exact :to="`/enquiry`" class="mb-10 px-10 pb-10">
               <v-btn x-large>
                 <v-icon left large color="primary">mdi-play</v-icon>Enquire
                 Now</v-btn

@@ -27,6 +27,9 @@ export const actions = {
       throw new Error(error)
     }
   },
+  refreshProduct(context) {
+    context.commit('resetProduct')
+  },
   // async getProducts(context) {
   //   const config = {
   //     headers: {
@@ -56,7 +59,7 @@ export const mutations = {
   updateSearch(state, data) {
     state.search = data
   },
-  // getProducts(state, products) {
-  //   state.products = products
-  // },
+  resetProduct(state) {
+    state.product = []
+  },
 }
